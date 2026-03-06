@@ -74,8 +74,8 @@ fun PersonaDetailScreen(
 
             if (persona.skills.isNotEmpty()) {
                 item { SectionHeader("Skills") }
-                items(persona.skills.toList()) { (skillName, level) ->
-                    SkillRow(skillName, level, series.color)
+                items(persona.skills.toList()) { skillEntry ->
+                    SkillRow(skillEntry.first, skillEntry.second, series.color)
                 }
             }
 
@@ -102,8 +102,8 @@ private fun HeroSection(persona: Persona, accentColor: Color) {
         Column {
             Text(text = persona.name, style = MaterialTheme.typography.headlineMedium, color = TextPrimary)
             Text(text = "${persona.arcana} Arcana", style = MaterialTheme.typography.bodyMedium, color = TextSecondary)
-            persona.trait?.let {
-                Text(text = "Trait: $it", style = MaterialTheme.typography.labelSmall, color = accentColor)
+            if (persona.trait != null) {
+                Text(text = "Trait: ${persona.trait}", style = MaterialTheme.typography.labelSmall, color = accentColor)
             }
         }
     }
@@ -118,14 +118,15 @@ private fun DescriptionSection(description: String) {
 
 @Composable
 private fun StatsSection(persona: Persona, accentColor: Color) {
-    if (persona.stats.size < 5) return
+    val statsList = persona.stats
+    if (statsList.size < 5) return
     Column(modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(SurfaceCard).padding(16.dp)) {
         SectionHeader("Base Stats")
         Spacer(Modifier.height(12.dp))
         val labels = listOf("STR", "MAG", "END", "AGI", "LUK")
-        val maxStat = persona.stats.maxOrNull()?.coerceAtLeast(1) ?: 1
+        val maxStat = statsList.maxOrNull()?.coerceAtLeast(1) ?: 1
         labels.forEachIndexed { i, label ->
-            StatBar(label, persona.stats[i], maxStat, accentColor)
+            StatBar(label, statsList[i], maxStat, accentColor)
             Spacer(Modifier.height(8.dp))
         }
     }
