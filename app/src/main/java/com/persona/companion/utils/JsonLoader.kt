@@ -15,14 +15,12 @@ object JsonLoader {
         return try {
             val json = context.assets.open(path).bufferedReader().use { it.readText() }
             
-            // Parse as a Map because your JSON keys are the Persona names
             val type = object : TypeToken<Map<String, Persona>>() {}.type
             val personaMap: Map<String, Persona> = gson.fromJson(json, type) ?: emptyMap()
             
-            // Convert to List and inject the name from the key
             personaMap.map { (name, persona) ->
                 persona.copy(name = name)
-            }.sortedBy { it.level }
+            }.sortedBy { it.level ?: 0 }
         } catch (e: Exception) {
             Log.w(TAG, "Could not load personas from '$path': ${e.message}")
             emptyList()
