@@ -1,33 +1,22 @@
 package com.persona.companion.models
 
-import com.google.gson.annotations.SerializedName
+import androidx.compose.ui.graphics.Color
 
 /**
- * Core Persona model updated to match your JSON schema.
+ * A single game release within a series.
  */
-data class Persona(
-    val name: String = "",
-    @SerializedName("race") val arcana: String,
-    @SerializedName("lvl") val level: Int,
-    val stats: List<Int> = emptyList(),
-    // JSON skills are "Name": Level (e.g. "Mabufudyne": 0.1)
-    val skills: Map<String, Double> = emptyMap(),
-    @SerializedName("resists") val resistsString: String = "",
-    val trait: String? = null,
-    val description: String = "",
-    @SerializedName("special") val specialFusion: Boolean = false
-) {
-    // Helper properties to satisfy the existing UI AffinityRow logic
-    val weaknesses: List<String> get() = parseElements('w')
-    val resistances: List<String> get() = parseElements('s')
-    val nullifies: List<String> get() = parseElements('n')
-    val repels: List<String> get() = parseElements('r')
-    val absorbs: List<String> get() = parseElements('d')
+data class Game(
+    val id: String,
+    val title: String,
+    val dataPath: String
+)
 
-    private fun parseElements(type: Char): List<String> {
-        val elements = listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
-        return resistsString.mapIndexedNotNull { index, char ->
-            if (char == type && index < elements.size) elements[index] else null
-        }
-    }
-}
+/**
+ * One of the main Persona series (P3, P4, P5).
+ */
+data class PersonaSeries(
+    val id: String,
+    val title: String,
+    val color: Color,
+    val games: List<Game>
+)
