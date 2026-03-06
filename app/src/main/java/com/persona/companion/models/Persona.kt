@@ -3,42 +3,30 @@ package com.persona.companion.models
 import com.google.gson.annotations.SerializedName
 
 /**
- * Represents a single Persona's stats.
- * All values are base stats as they appear at the Persona's base level.
- */
-data class PersonaStats(
-    @SerializedName("strength")  val strength: Int = 0,
-    @SerializedName("magic")     val magic: Int = 0,
-    @SerializedName("endurance") val endurance: Int = 0,
-    @SerializedName("agility")   val agility: Int = 0,
-    @SerializedName("luck")      val luck: Int = 0
-)
-
-/**
- * A single skill entry — name plus the level it's learned at (0 = innate).
- */
-data class SkillEntry(
-    @SerializedName("name")  val name: String,
-    @SerializedName("level") val level: Int = 0
-)
-
-/**
- * Core Persona model. Matches the JSON schema used in assets/data/.
- *
- * Fields are nullable where the data may be incomplete so the app
- * doesn't crash if a contributor only fills in partial info.
+ * Core Persona model updated to match your JSON schema.
  */
 data class Persona(
-    @SerializedName("name")          val name: String,
-    @SerializedName("arcana")        val arcana: String,
-    @SerializedName("level")         val level: Int,
-    @SerializedName("stats")         val stats: PersonaStats = PersonaStats(),
-    @SerializedName("skills")        val skills: List<SkillEntry> = emptyList(),
-    @SerializedName("description")   val description: String = "",
-    @SerializedName("weaknesses")    val weaknesses: List<String> = emptyList(),
-    @SerializedName("resistances")   val resistances: List<String> = emptyList(),
-    @SerializedName("nullifies")     val nullifies: List<String> = emptyList(),
-    @SerializedName("repels")        val repels: List<String> = emptyList(),
-    @SerializedName("absorbs")       val absorbs: List<String> = emptyList(),
-    @SerializedName("special_fusion") val specialFusion: Boolean = false
-)
+    val name: String = "",
+    @SerializedName("race") val arcana: String,
+    @SerializedName("lvl") val level: Int,
+    val stats: List<Int> = emptyList(),
+    // JSON skills are "Name": Level (e.g. "Mabufudyne": 0.1)
+    val skills: Map<String, Double> = emptyMap(),
+    @SerializedName("resists") val resistsString: String = "",
+    val trait: String? = null,
+    val description: String = "",
+    @SerializedName("special") val specialFusion: Boolean = false
+) {
+    val weaknesses: List<String> get() = parseElements('w')
+    val resistances: List<String> get() = parseElements('s')
+    val nullifies: List<String> get() = parseElements('n')
+    val repels: List<String> get() = parseElements('r')
+    val absorbs: List<String> get() = parseElements('d')
+
+    private fun parseElements(type: Char): List<String> {
+        val elements = listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+        return resistsString.mapIndexedNotNull { index, char ->
+            if (char == type && index < elements.size) elements[index] else null
+        }
+    }
+}
