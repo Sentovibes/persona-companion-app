@@ -8,27 +8,21 @@ import com.persona.companion.models.Persona
 
 private const val TAG = "JsonLoader"
 
-/**
- * Loads Persona data from JSON files stored in the app's assets folder.
- *
- * All JSON files live under: assets/data/<series>/<file>.json
- *
- * To add new data simply drop a properly formatted JSON file in that directory
- * and reference its path in [SeriesData].
- */
 object JsonLoader {
-
     private val gson = Gson()
 
-    /**
-     * Loads a list of [Persona] objects from a JSON file at [path] inside assets.
-     * Returns an empty list if the file doesn't exist or is malformed.
-     */
     fun loadPersonas(context: Context, path: String): List<Persona> {
         return try {
             val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = object : TypeToken<List<Persona>>() {}.type
-            gson.fromJson(json, type) ?: emptyList()
+            
+            // Parse as a Map because your JSON keys are the Persona names
+            val type = object : TypeToken<Map<String, Persona>>() {}.type
+            val personaMap: Map<String, Persona> = gson.fromJson(json, type) ?: emptyMap()
+            
+            // Convert to List and inject the name from the key
+            personaMap.map { (name, persona) ->
+                persona.copy(name = name)
+            }.sortedBy { it.level }
         } catch (e: Exception) {
             Log.w(TAG, "Could not load personas from '$path': ${e.message}")
             emptyList()
