@@ -5,7 +5,7 @@ on:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
-  workflow_dispatch: # Allows you to run the build manually from the GitHub UI
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,7 +21,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
+
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
