@@ -10,7 +10,6 @@ data class Persona(
     @SerializedName("race") val arcana: String,
     @SerializedName("lvl") val level: Int,
     val stats: List<Int> = emptyList(),
-    // JSON skills are "Name": Level (e.g. "Mabufudyne": 0.1)
     val skills: Map<String, Double> = emptyMap(),
     @SerializedName("resists") val resistsString: String = "",
     val trait: String? = null,
@@ -25,6 +24,7 @@ data class Persona(
 
     private fun parseElements(type: Char): List<String> {
         val elements = listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+        if (resistsString.isEmpty()) return emptyList()
         return resistsString.mapIndexedNotNull { index, char ->
             if (char == type && index < elements.size) elements[index] else null
         }
