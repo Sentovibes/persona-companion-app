@@ -1,31 +1,33 @@
 package com.persona.companion.models
 
-import androidx.compose.ui.graphics.Color
+import com.google.gson.annotations.SerializedName
 
 /**
- * A single game release within a series (e.g. "Persona 5 Royal").
- *
- * @param id        Stable identifier used in navigation routes.
- * @param title     Human-readable display name.
- * @param dataPath  Path inside assets/ pointing to the personas JSON file.
+ * Core Persona model updated to match your JSON schema.
  */
-data class Game(
-    val id: String,
-    val title: String,
-    val dataPath: String
-)
+data class Persona(
+    val name: String = "",
+    @SerializedName("race") val arcana: String,
+    @SerializedName("lvl") val level: Int,
+    val stats: List<Int> = emptyList(),
+    // JSON skills are "Name": Level (e.g. "Mabufudyne": 0.1)
+    val skills: Map<String, Double> = emptyMap(),
+    @SerializedName("resists") val resistsString: String = "",
+    val trait: String? = null,
+    val description: String = "",
+    @SerializedName("special") val specialFusion: Boolean = false
+) {
+    // Helper properties to satisfy the existing UI AffinityRow logic
+    val weaknesses: List<String> get() = parseElements('w')
+    val resistances: List<String> get() = parseElements('s')
+    val nullifies: List<String> get() = parseElements('n')
+    val repels: List<String> get() = parseElements('r')
+    val absorbs: List<String> get() = parseElements('d')
 
-/**
- * One of the three main Persona series (P3, P4, P5).
- *
- * @param id       Stable identifier — "p3", "p4", or "p5".
- * @param title    Display name shown on the home screen.
- * @param color    Accent color associated with this series.
- * @param games    All game releases that belong to this series.
- */
-data class PersonaSeries(
-    val id: String,
-    val title: String,
-    val color: Color,
-    val games: List<Game>
-)
+    private fun parseElements(type: Char): List<String> {
+        val elements = listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+        return resistsString.mapIndexedNotNull { index, char ->
+            if (char == type && index < elements.size) elements[index] else null
+        }
+    }
+}
