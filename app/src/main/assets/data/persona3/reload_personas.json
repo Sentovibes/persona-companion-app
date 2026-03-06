@@ -1,0 +1,5549 @@
+[
+  {
+    "id": 1,
+    "name": "Orpheus",
+    "arcana": "Fool",
+    "level": 1,
+    "description": "A poet of Greek mythology skilled with the lyre. He tried to retrieve his wife from Hades, but she vanished when he looked upon her before reaching the surface.",
+    "image": "https://megatenwiki.com/images/b/b3/P3_Orpheus_Artwork.png",
+    "strength": 3,
+    "magic": 1,
+    "endurance": 2,
+    "agility": 3,
+    "luck": 1,
+    "weak": [
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "orpheus"
+  },
+  {
+    "id": 2,
+    "name": "Slime",
+    "arcana": "Fool",
+    "level": 12,
+    "description": "A primitive monster with a viscous body. There are various theories as to its origin, but it is still under debate. Said to compulsively collect shiny objects.",
+    "image": "https://megatenwiki.com/images/7/70/P5X_Slime_Artwork.png",
+    "strength": 10,
+    "magic": 6,
+    "endurance": 14,
+    "agility": 6,
+    "luck": 7,
+    "weak": [
+      "Fire",
+      "Wind"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "slime"
+  },
+  {
+    "id": 3,
+    "name": "Arsène",
+    "arcana": "Fool",
+    "level": 23,
+    "description": "A Persona that granted power to a hero in another story. He is a being based off the main character of Maurice Leblanc's novels, Arsène Lupin. He appears everywhere and is a master of disguise.",
+    "image": "https://megatenwiki.com/images/0/0e/P5X_Ars%C3%A8ne_Artwork.png",
+    "strength": 17,
+    "magic": 17,
+    "endurance": 14,
+    "agility": 18,
+    "luck": 11,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "arsene"
+  },
+  {
+    "id": 4,
+    "name": "Legion",
+    "arcana": "Fool",
+    "level": 26,
+    "description": "The spirit who said in ancient scripture, ''For we are many.'' The name comes from the Roman military term for an army unit of 3,000 to 6,000 men.",
+    "image": "https://megatenwiki.com/images/c/cf/P3_Legion_Artwork.png",
+    "strength": 16,
+    "magic": 14,
+    "endurance": 26,
+    "agility": 9,
+    "luck": 20,
+    "weak": [
+      "Pierce",
+      "Light"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "legion"
+  },
+  {
+    "id": 5,
+    "name": "Black Frost",
+    "arcana": "Fool",
+    "level": 37,
+    "description": "A Jack Frost that wished for evil powers. This powerful demon is born when a cute Jack Frost remembers its nature as a demon.",
+    "image": "https://megatenwiki.com/images/0/0f/P5X_Black_Frost_Artwork.png",
+    "strength": 22,
+    "magic": 34,
+    "endurance": 23,
+    "agility": 25,
+    "luck": 20,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [
+      "Ice"
+    ],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "black-frost"
+  },
+  {
+    "id": 6,
+    "name": "Ose",
+    "arcana": "Fool",
+    "level": 41,
+    "description": "One of the 72 demons of the Goetia, he is known as the President of Hell. He can shape-shift from leopard to human and reveal the truth behind divine mysteries. ",
+    "image": "https://megatenwiki.com/images/1/10/P5X_Ose_Artwork.png",
+    "strength": 32,
+    "magic": 23,
+    "endurance": 28,
+    "agility": 25,
+    "luck": 22,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "ose"
+  },
+  {
+    "id": 7,
+    "name": "Izanagi",
+    "arcana": "Fool",
+    "level": 46,
+    "description": "A Persona that granted power to a hero in another story. He is one of the gods who existed before Japan was formed. He created the Oyashima from chaos, then birthed countless children and laid the foundation of soil and nature.",
+    "image": "https://megatenwiki.com/images/5/59/P4_Izanagi_Artwork.png",
+    "strength": 31,
+    "magic": 30,
+    "endurance": 25,
+    "agility": 31,
+    "luck": 28,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 1,
+    "query": "izanagi"
+  },
+  {
+    "id": 8,
+    "name": "Decarabia",
+    "arcana": "Fool",
+    "level": 54,
+    "description": "One of the 72 demons of the Goetia, this demon appears as a pentacle. Keeper of jewels and herbal lore, Decarabia is said to have the ability to shape-shift at will.",
+    "image": "https://megatenwiki.com/images/2/24/P5X_Decarabia_Artwork.png",
+    "strength": 35,
+    "magic": 35,
+    "endurance": 35,
+    "agility": 35,
+    "luck": 35,
+    "weak": [
+      "Slash"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "decarabia"
+  },
+  {
+    "id": 9,
+    "name": "Loki",
+    "arcana": "Fool",
+    "level": 69,
+    "description": "A malignant god of Norse mythology. Impulsive and devious, but not always driven by malice. He had an uneasy peace with Odin and the gods, but his part in Baldr's death drove them to finally punish him.",
+    "image": "https://megatenwiki.com/images/9/96/SH1_Loki_Artwork.png",
+    "strength": 48,
+    "magic": 60,
+    "endurance": 45,
+    "agility": 42,
+    "luck": 28,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Wind"
+    ],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "loki"
+  },
+  {
+    "id": 10,
+    "name": "Susano-o",
+    "arcana": "Fool",
+    "level": 77,
+    "description": "A god of Japanese legend, born along with Amaterasu and Tsukuyomi. He was cast out for lewd behavior, but redeemed himself with heroic deeds like slaying Yamata-no-Orochi.",
+    "image": "https://megatenwiki.com/images/b/ba/SH1_Susano-o_Artwork.png",
+    "strength": 71,
+    "magic": 35,
+    "endurance": 43,
+    "agility": 49,
+    "luck": 55,
+    "weak": [
+      "Electric",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Pierce"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "susano-o"
+  },
+  {
+    "id": 11,
+    "name": "Satanael",
+    "arcana": "Fool",
+    "level": 89,
+    "description": "A Persona of another story. An archangel who is said to be the form of Satan before he fell from Heaven. The second son of God, he rebelled against Him for freedom and bestowed free will and chaos upon humanity.",
+    "image": "https://megatenwiki.com/images/8/8e/P5_Satanael_Render.png",
+    "strength": 63,
+    "magic": 60,
+    "endurance": 57,
+    "agility": 56,
+    "luck": 56,
+    "weak": [],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 1,
+    "query": "satanael"
+  },
+  {
+    "id": 12,
+    "name": "Orpheus Telos",
+    "arcana": "Fool",
+    "level": 91,
+    "description": "By bonding with many people, Orpheus was once again born from the sea of the soul. He has awakened to a power that holds infinite possibilities.",
+    "image": "https://megatenwiki.com/images/2/26/P3_Orpheus_Telos_Artwork.png",
+    "strength": 63,
+    "magic": 63,
+    "endurance": 63,
+    "agility": 63,
+    "luck": 63,
+    "weak": [],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Pierce",
+      "Fire",
+      "Ice",
+      "Electric",
+      "Wind",
+      "Light",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "orpheus-telos"
+  },
+  {
+    "id": 13,
+    "name": "Hermes",
+    "arcana": "Magician",
+    "level": 1,
+    "description": "A messenger god who served Zeus. His winged sandals allow him to fly, and he was worshiped as a god of travel and commerce. He was also known as a trickster, being able to freely cross between the mortal and godly realms. ",
+    "image": "https://megatenwiki.com/images/a/a7/P3R_Hermes_Artwork.png",
+    "strength": 3,
+    "magic": 1,
+    "endurance": 2,
+    "agility": 3,
+    "luck": 1,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hermes"
+  },
+  {
+    "id": 14,
+    "name": "Trismegistus",
+    "arcana": "Magician",
+    "level": 1,
+    "description": "A Hellenistic figure who represents a blending of the Greek god Hermes and the Egyptian god Thoth. His full name, Hermes Trismegistus, means ''Hermes, thrice greatest,'' and he is thought to be the author of the Corpus Hermeticum. ",
+    "image": "https://megatenwiki.com/images/e/e2/P3_Trismegistus_Artwork.png",
+    "strength": 3,
+    "magic": 1,
+    "endurance": 2,
+    "agility": 3,
+    "luck": 1,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "trismegistus"
+  },
+  {
+    "id": 15,
+    "name": "Nekomata",
+    "arcana": "Magician",
+    "level": 3,
+    "description": "Incarnations of long-lived cats in Japanese mythology. They have various powers, including human speech and control over the dead.",
+    "image": "https://megatenwiki.com/images/f/ff/P5X_Nekomata_Artwork.png",
+    "strength": 4,
+    "magic": 4,
+    "endurance": 2,
+    "agility": 5,
+    "luck": 2,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "nekomata"
+  },
+  {
+    "id": 16,
+    "name": "Jack Frost",
+    "arcana": "Magician",
+    "level": 8,
+    "description": "A winter fairy of European descent. He leaves ice patterns on windows and nips people's noses. Though normally an innocent creature, he will freeze his victims to death if provoked.",
+    "image": "https://megatenwiki.com/images/3/3a/P5X_Jack_Frost_Artwork.png",
+    "strength": 5,
+    "magic": 9,
+    "endurance": 8,
+    "agility": 6,
+    "luck": 4,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "jack-frost"
+  },
+  {
+    "id": 17,
+    "name": "Jack-o'-Lantern",
+    "arcana": "Magician",
+    "level": 15,
+    "description": "A drunkard who tricked the Devil out of taking him to Hell. When refused entry to Heaven, he was forced to wander the earth with only an ember as a light.",
+    "image": "https://megatenwiki.com/images/2/2e/P5X_Jack-o-Lantern_Artwork.png",
+    "strength": 8,
+    "magic": 15,
+    "endurance": 9,
+    "agility": 9,
+    "luck": 11,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "jack-o-lantern"
+  },
+  {
+    "id": 18,
+    "name": "Hua Po",
+    "arcana": "Magician",
+    "level": 19,
+    "description": "A spirit of Chinese folklore who dwells in trees once used for hangings. She is smaller than a human and cannot speak, but her voice is said to be as clear and as beautiful as a bird's song.",
+    "image": "https://megatenwiki.com/images/2/2d/P5X_Hua_Po_Artwork.png",
+    "strength": 8,
+    "magic": 21,
+    "endurance": 13,
+    "agility": 17,
+    "luck": 11,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "hua-po"
+  },
+  {
+    "id": 19,
+    "name": "Zorro",
+    "arcana": "Magician",
+    "level": 22,
+    "description": "A Persona of another story. He was a masked swordsman of justice who fought in California against corrupt officials during the era of Spanish rule. He always left his ''Z'' mark wherever he appeared.",
+    "image": "https://megatenwiki.com/images/7/7a/P5X_Zorro_Artwork.png",
+    "strength": 13,
+    "magic": 17,
+    "endurance": 13,
+    "agility": 15,
+    "luck": 15,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "zorro"
+  },
+  {
+    "id": 20,
+    "name": "Sati",
+    "arcana": "Magician",
+    "level": 29,
+    "description": "Shiva's first consort in Hindu myth, she threw herself into a sacrificial fire in protest of her father's treatment of Shiva. Reborn as Parvati, she was reunited with Shiva.",
+    "image": "https://megatenwiki.com/images/2/29/P3_Sati_Artwork.png",
+    "strength": 13,
+    "magic": 27,
+    "endurance": 13,
+    "agility": 21,
+    "luck": 20,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "sati"
+  },
+  {
+    "id": 21,
+    "name": "Orobas",
+    "arcana": "Magician",
+    "level": 39,
+    "description": "One of the 72 demons of the Goetia. Known as the Prince of Hell, he appears as a horse and answers questions of the past, present, and future. He is faithful to his conjurer.",
+    "image": "https://megatenwiki.com/images/9/92/P5X_Orobas_Artwork.png",
+    "strength": 22,
+    "magic": 33,
+    "endurance": 22,
+    "agility": 28,
+    "luck": 19,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "orobas"
+  },
+  {
+    "id": 22,
+    "name": "Mercurius",
+    "arcana": "Magician",
+    "level": 43,
+    "description": "A Persona of another story. He is the Roman god of travelers and thieves. He is seen as a symbol of human unconscious and the mental world. He is equated with the philosopher's stone, the ultimate mystery in alchemy.",
+    "image": "https://megatenwiki.com/images/7/71/P3R_Mercurius_Render.png",
+    "strength": 23,
+    "magic": 31,
+    "endurance": 22,
+    "agility": 33,
+    "luck": 27,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 1,
+    "query": "mercurius"
+  },
+  {
+    "id": 23,
+    "name": "Rangda",
+    "arcana": "Magician",
+    "level": 50,
+    "description": "A wicked witch of Balinese lore, she represents evil and is Barong's eternal rival. Even if defeated, she will come back to life, and their battle will have no end.",
+    "image": "https://megatenwiki.com/images/a/a3/P5X_Rangda_Artwork.png",
+    "strength": 33,
+    "magic": 39,
+    "endurance": 28,
+    "agility": 30,
+    "luck": 30,
+    "weak": [
+      "Ice",
+      "Electric"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [
+      "Strike"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "rangda"
+  },
+  {
+    "id": 24,
+    "name": "Surt",
+    "arcana": "Magician",
+    "level": 60,
+    "description": "A fire giant in Norse mythology. He rules the fire realm, Muspelheim, and brandishes a burning sword. At Ragnarok, he will set the world ablaze.",
+    "image": "https://megatenwiki.com/images/a/ab/P5X_Surt_Artwork.png",
+    "strength": 43,
+    "magic": 51,
+    "endurance": 40,
+    "agility": 28,
+    "luck": 34,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "surt"
+  },
+  {
+    "id": 25,
+    "name": "Futsunushi",
+    "arcana": "Magician",
+    "level": 74,
+    "description": "The Nihonshoki sword deity who pacified Ashihara-no-Nakatsukuni. His name comes from ''futsu,'' the fashion in which things are cut, and ''nushi,'' his nature as a god.",
+    "image": "https://megatenwiki.com/images/0/06/SH1_Futsunushi_Artwork.png",
+    "strength": 62,
+    "magic": 49,
+    "endurance": 50,
+    "agility": 42,
+    "luck": 35,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Strike",
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Slash"
+    ],
+    "dlc": 0,
+    "query": "futsunushi"
+  },
+  {
+    "id": 26,
+    "name": "Apsaras",
+    "arcana": "Priestess",
+    "level": 2,
+    "description": "Hindu water spirits, they are beautiful young women who dance for the gods. They also guide heroes fallen in battle to paradise. ",
+    "image": "https://megatenwiki.com/images/5/58/P5X_Apsaras_Artwork.png",
+    "strength": 2,
+    "magic": 4,
+    "endurance": 2,
+    "agility": 3,
+    "luck": 2,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "apsaras"
+  },
+  {
+    "id": 27,
+    "name": "Unicorn",
+    "arcana": "Priestess",
+    "level": 11,
+    "description": "A legendary white horse with a single spiral horn. It can only be tamed by a pure maiden, and its horn supposedly has miraculous healing capabilities.",
+    "image": "https://megatenwiki.com/images/5/54/P5X_Unicorn_Artwork.png",
+    "strength": 5,
+    "magic": 10,
+    "endurance": 12,
+    "agility": 8,
+    "luck": 7,
+    "weak": [
+      "Wind",
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "unicorn"
+  },
+  {
+    "id": 28,
+    "name": "Lucia",
+    "arcana": "Priestess",
+    "level": 18,
+    "description": "A saint who was martyred during the persecution of Christianity in the time of the Roman Empire. She was tortured and had her eyes gouged out, but a miracle restored her sight. She is revered as the patron saint of the blind. ",
+    "image": "https://megatenwiki.com/images/5/53/P3R_Lucia_Artwork.png",
+    "strength": 9,
+    "magic": 15,
+    "endurance": 12,
+    "agility": 13,
+    "luck": 12,
+    "weak": [],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "lucia"
+  },
+  {
+    "id": 29,
+    "name": "Juno",
+    "arcana": "Priestess",
+    "level": 18,
+    "description": "The goddess of family and marriage, and wife to the Roman god Jupiter. She is often equated with the Greek goddess Hera. Though she is kind, she is also vengeful, seeking to punish women who have affairs with her husband. ",
+    "image": "https://megatenwiki.com/images/e/eb/P3_Juno_Artwork.png",
+    "strength": 9,
+    "magic": 15,
+    "endurance": 12,
+    "agility": 13,
+    "luck": 12,
+    "weak": [],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "juno"
+  },
+  {
+    "id": 30,
+    "name": "High Pixie",
+    "arcana": "Priestess",
+    "level": 20,
+    "description": "The leader of a swarm of pixies. Any pixie in a leadership role or with remarkable power is called by this name.",
+    "image": "https://megatenwiki.com/images/c/c9/P5X_High_Pixie_Artwork.png",
+    "strength": 11,
+    "magic": 20,
+    "endurance": 10,
+    "agility": 13,
+    "luck": 13,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "high-pixie"
+  },
+  {
+    "id": 31,
+    "name": "Johanna",
+    "arcana": "Priestess",
+    "level": 28,
+    "description": "A Persona of another story. She is the mysterious female pope of the Middle Ages. She posed as a man and eventually made it all the way up to pope due to her unrivaled intellect.",
+    "image": "https://megatenwiki.com/images/4/44/P5X_Johanna_Artwork.png",
+    "strength": 19,
+    "magic": 19,
+    "endurance": 17,
+    "agility": 21,
+    "luck": 15,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Strike"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "johanna"
+  },
+  {
+    "id": 32,
+    "name": "Sarasvati",
+    "arcana": "Priestess",
+    "level": 32,
+    "description": "The Hindu goddess of rivers, and patron of speech, writing, learning, the arts, and sciences. Brahma is her husband.",
+    "image": "https://megatenwiki.com/images/b/b9/P5X_Sarasvati_Artwork.png",
+    "strength": 17,
+    "magic": 26,
+    "endurance": 16,
+    "agility": 24,
+    "luck": 22,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "sarasvati"
+  },
+  {
+    "id": 33,
+    "name": "Ganga",
+    "arcana": "Priestess",
+    "level": 41,
+    "description": "The personification of the Ganges river. Originally from the heavens, she came to earth to clean the souls of the people as a result of the prayers of Bhagiratha.",
+    "image": "https://megatenwiki.com/images/e/e0/P3_Ganga_Artwork.png",
+    "strength": 24,
+    "magic": 30,
+    "endurance": 26,
+    "agility": 22,
+    "luck": 28,
+    "weak": [
+      "Fire",
+      "Dark"
+    ],
+    "resists": [
+      "Pierce",
+      "Ice",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "ganga"
+  },
+  {
+    "id": 34,
+    "name": "Parvati",
+    "arcana": "Priestess",
+    "level": 48,
+    "description": "A beautiful Hindu goddess of love and one of Shiva's wives. Always by his side, she played a role in opening his third eye. She can turn into Durga or Kali when angered.",
+    "image": "https://megatenwiki.com/images/f/fd/P5X_Parvati_Artwork.png",
+    "strength": 26,
+    "magic": 40,
+    "endurance": 26,
+    "agility": 31,
+    "luck": 31,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "parvati"
+  },
+  {
+    "id": 35,
+    "name": "Anat",
+    "arcana": "Priestess",
+    "level": 53,
+    "description": "A Persona of another story. She is the daughter of Ugaritic's highest god El. She is the goddess of fertility, as well as hunting and war.",
+    "image": "https://megatenwiki.com/images/f/f7/P3R_Anat_Render.png",
+    "strength": 36,
+    "magic": 39,
+    "endurance": 33,
+    "agility": 37,
+    "luck": 23,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Strike"
+    ],
+    "dlc": 1,
+    "query": "anat"
+  },
+  {
+    "id": 36,
+    "name": "Kikuri-Hime",
+    "arcana": "Priestess",
+    "level": 61,
+    "description": "The goddess of life in Shinto myth. She once mediated between Izanagi and Izanami during their confrontation in Yomi, the land of the dead.",
+    "image": "https://megatenwiki.com/images/5/58/P5X_Kikuri-Hime_Artwork.png",
+    "strength": 29,
+    "magic": 50,
+    "endurance": 34,
+    "agility": 41,
+    "luck": 39,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "kikuri-hime"
+  },
+  {
+    "id": 37,
+    "name": "Scathach",
+    "arcana": "Priestess",
+    "level": 75,
+    "description": "A warrior woman of the Land of Shadows in Celtic lore. She taught the hero, Cu Chulainn, the art of war and gave him the spear, Gae Bolg.",
+    "image": "https://megatenwiki.com/images/0/08/P5X_Scathach_Artwork.png",
+    "strength": 55,
+    "magic": 58,
+    "endurance": 40,
+    "agility": 49,
+    "luck": 42,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce",
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "scathach"
+  },
+  {
+    "id": 38,
+    "name": "Penthesilea",
+    "arcana": "Empress",
+    "level": 20,
+    "description": "A queen of the Amazons in Greek mythology. She fought for the Trojans during the Trojan War, but was slain by Achilles. When Achilles took off her helmet and saw her beautiful face, he felt great remorse for killing her. ",
+    "image": "https://megatenwiki.com/images/a/a7/P3R_Penthesilea_Artwork.png",
+    "strength": 13,
+    "magic": 17,
+    "endurance": 11,
+    "agility": 15,
+    "luck": 11,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "penthesilea"
+  },
+  {
+    "id": 39,
+    "name": "Artemisia",
+    "arcana": "Empress",
+    "level": 20,
+    "description": "The heroic queen of Halicarnassus mentioned in Herodotus's The Histories. During the Persian Wars between the Greek states and Persia, she was the only woman to take command in the Persian fleet. ",
+    "image": "https://megatenwiki.com/images/0/03/P3_Artemisia_Artwork.png",
+    "strength": 13,
+    "magic": 17,
+    "endurance": 11,
+    "agility": 15,
+    "luck": 11,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "artemisia"
+  },
+  {
+    "id": 40,
+    "name": "Leanan Sidhe",
+    "arcana": "Empress",
+    "level": 21,
+    "description": "A beautiful fairy of Irish lore that yearns for the love of a human man. She drains the life of her lovers in return for granting them artistic inspiration.",
+    "image": "https://megatenwiki.com/images/d/d9/P5X_Leanan_Sidhe_Artwork.png",
+    "strength": 12,
+    "magic": 22,
+    "endurance": 13,
+    "agility": 15,
+    "luck": 14,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "leanan-sidhe"
+  },
+  {
+    "id": 41,
+    "name": "Yakshini",
+    "arcana": "Empress",
+    "level": 32,
+    "description": "A female demon in Hindu lore. Though originally a Dravidian fertility goddess, the spread of Hinduism changed perception of her to a demonic figure. Usually depicted as a nude, voluptuous, female.",
+    "image": "https://megatenwiki.com/images/8/89/P5X_Yakshini_Artwork.png",
+    "strength": 33,
+    "magic": 16,
+    "endurance": 13,
+    "agility": 25,
+    "luck": 18,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "yakshini"
+  },
+  {
+    "id": 42,
+    "name": "Milady",
+    "arcana": "Empress",
+    "level": 36,
+    "description": "A Persona of another story. She is the beautiful woman that appears in Dumas's The Three Musketeers. Branded with a fleur-de-lis symbol, she used many aliases to control nobility and get her vengeance.",
+    "image": "https://megatenwiki.com/images/8/8f/P5X_Milady_Artwork.png",
+    "strength": 27,
+    "magic": 24,
+    "endurance": 22,
+    "agility": 22,
+    "luck": 20,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "milady"
+  },
+  {
+    "id": 43,
+    "name": "Hariti",
+    "arcana": "Empress",
+    "level": 48,
+    "description": "Also known as Kishimojin, she once ate children, but stopped after Buddha changed her ways. She now eats pomegranates and is a goddess of parenting.",
+    "image": "https://megatenwiki.com/images/1/1f/P5X_Hariti_Artwork.png",
+    "strength": 24,
+    "magic": 42,
+    "endurance": 31,
+    "agility": 28,
+    "luck": 33,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Ice",
+      "Light"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hariti"
+  },
+  {
+    "id": 44,
+    "name": "Astarte",
+    "arcana": "Empress",
+    "level": 54,
+    "description": "A Persona of another story. A Middle Eastern goddess of fertility. Many scriptures note her folklore, and there is even a mention of her as the ''Queen of Heaven'' in the Bible.",
+    "image": "https://megatenwiki.com/images/d/d8/P3R_Astarte_Render.png",
+    "strength": 42,
+    "magic": 36,
+    "endurance": 33,
+    "agility": 33,
+    "luck": 31,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce"
+    ],
+    "dlc": 1,
+    "query": "astarte"
+  },
+  {
+    "id": 45,
+    "name": "Gabriel",
+    "arcana": "Empress",
+    "level": 62,
+    "description": "One of the four major archangels. She is also the only female angel at this rank. Her name comes from the Sumerian word for ''governor.'' She is the angel who told Mary of her pregnancy.",
+    "image": "https://megatenwiki.com/images/d/dd/P5X_Gabriel_Artwork.png",
+    "strength": 40,
+    "magic": 52,
+    "endurance": 35,
+    "agility": 41,
+    "luck": 37,
+    "weak": [
+      "Wind",
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Ice"
+    ],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "gabriel"
+  },
+  {
+    "id": 46,
+    "name": "Skadi",
+    "arcana": "Empress",
+    "level": 68,
+    "description": "A Norse giantess called the ''snow-shoe goddess'' and the embodiment of winter. According to legend, all the gods will return to her at the end of Ragnarok.",
+    "image": "https://megatenwiki.com/images/c/c7/P5X_Skadi_Artwork.png",
+    "strength": 52,
+    "magic": 58,
+    "endurance": 33,
+    "agility": 40,
+    "luck": 40,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Ice"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "skadi"
+  },
+  {
+    "id": 47,
+    "name": "Mother Harlot",
+    "arcana": "Empress",
+    "level": 77,
+    "description": "The fiend known as the ''Whore of Babylon,'' riding a beast with seven heads and ten horns, she carries a golden cup of abominations and the filth of her acts.",
+    "image": "https://megatenwiki.com/images/3/37/SMT3_Mother_Harlot_Artwork.png",
+    "strength": 44,
+    "magic": 65,
+    "endurance": 60,
+    "agility": 36,
+    "luck": 42,
+    "weak": [
+      "Fire",
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Strike",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "mother-harlot"
+  },
+  {
+    "id": 48,
+    "name": "Alilat",
+    "arcana": "Empress",
+    "level": 84,
+    "description": "The Arabian mother goddess, also known as Allat. The Black Stone at the Kaaba was thought to be her residence. She and her son, Dushara, were worshiped there by desert nomads.",
+    "image": "https://megatenwiki.com/images/a/a1/SH1_Alilat_Artwork.png",
+    "strength": 51,
+    "magic": 70,
+    "endurance": 60,
+    "agility": 51,
+    "luck": 51,
+    "weak": [
+      "Fire",
+      "Dark"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [
+      "Slash",
+      "Strike"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "alilat"
+  },
+  {
+    "id": 49,
+    "name": "Forneus",
+    "arcana": "Emperor",
+    "level": 7,
+    "description": "One of the 72 demons of the Goetia, he appears as a great sea monster. Known as the great Marquis of Hell, he is skilled linguistically, and is a master of rhetoric.",
+    "image": "https://megatenwiki.com/images/e/e1/SMT1_PS_Forneus_Artwork.png",
+    "strength": 5,
+    "magic": 6,
+    "endurance": 7,
+    "agility": 6,
+    "luck": 4,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "forneus"
+  },
+  {
+    "id": 50,
+    "name": "Polydeuces",
+    "arcana": "Emperor",
+    "level": 14,
+    "description": "A hero in Greek mythology. As the son of Zeus and the mortal Leda, he inherited his father's immortality. He and his half-brother Castor were famed fighters, and both became stars in the constellation Gemini. ",
+    "image": "https://megatenwiki.com/images/9/92/P3R_Polydeuces_Artwork.png",
+    "strength": 12,
+    "magic": 10,
+    "endurance": 9,
+    "agility": 11,
+    "luck": 7,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "polydeuces"
+  },
+  {
+    "id": 51,
+    "name": "Caesar",
+    "arcana": "Emperor",
+    "level": 14,
+    "description": "A statesman, general, and author known for his rule over the Roman Republic. His full name was Gaius Julius Caesar. His many accomplishments led to his name being used as a title for later Roman emperors. ",
+    "image": "https://megatenwiki.com/images/5/5d/P3_Caesar_Artwork.png",
+    "strength": 12,
+    "magic": 10,
+    "endurance": 9,
+    "agility": 11,
+    "luck": 7,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "caesar"
+  },
+  {
+    "id": 52,
+    "name": "Oberon",
+    "arcana": "Emperor",
+    "level": 16,
+    "description": "The king of the fairies and Titania's husband. He is quite old but, due to a curse, his looks are that of a young boy. He often flirts with human women, ending in a scolding from his wife.",
+    "image": "https://megatenwiki.com/images/8/85/P5X_Oberon_Artwork.png",
+    "strength": 11,
+    "magic": 15,
+    "endurance": 9,
+    "agility": 12,
+    "luck": 8,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Light",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "oberon"
+  },
+  {
+    "id": 53,
+    "name": "Take-Mikazuchi",
+    "arcana": "Emperor",
+    "level": 23,
+    "description": "The Japanese god of thunder. He carries the divine sword Totsuka-no-Tsurugi and is said to be the founder of ancient sumo wrestling.",
+    "image": "https://megatenwiki.com/images/1/16/SMT1_Take-Mikazuchi_Artwork.png",
+    "strength": 18,
+    "magic": 17,
+    "endurance": 13,
+    "agility": 15,
+    "luck": 14,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Slash"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "take-mikazuchi"
+  },
+  {
+    "id": 54,
+    "name": "Goemon",
+    "arcana": "Emperor",
+    "level": 27,
+    "description": "A Persona of another story. Ishikawa Goemon was a thief who stole from the rich and gave to the poor in Japan during the Azuchi-Momoyama period. The kabuki scene of him sitting on the gate of Nanzen-ji is famous.",
+    "image": "https://megatenwiki.com/images/a/a4/P5X_Goemon_Artwork.png",
+    "strength": 24,
+    "magic": 16,
+    "endurance": 18,
+    "agility": 17,
+    "luck": 13,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "goemon"
+  },
+  {
+    "id": 55,
+    "name": "King Frost",
+    "arcana": "Emperor",
+    "level": 34,
+    "description": "The king of snow who rules over an infinite number of Jack Frosts. He has the power to freeze the entire world, but is unaware of it due to his naive personality.",
+    "image": "https://megatenwiki.com/images/4/40/P5X_King_Frost_Artwork.png",
+    "strength": 18,
+    "magic": 31,
+    "endurance": 26,
+    "agility": 14,
+    "luck": 20,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Ice"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "king-frost"
+  },
+  {
+    "id": 56,
+    "name": "Naga Raja",
+    "arcana": "Emperor",
+    "level": 43,
+    "description": "The king of the Naga, a half-man, half-snake tribe in Hindu lore. The dragon kings Nanda and Takshaka of Buddhist myth fall into this royal category.",
+    "image": "https://megatenwiki.com/images/3/33/P5X_Raja_Naga_Artwork.png",
+    "strength": 33,
+    "magic": 31,
+    "endurance": 22,
+    "agility": 27,
+    "luck": 23,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "naga-raja"
+  },
+  {
+    "id": 57,
+    "name": "Kamu Susano-o",
+    "arcana": "Emperor",
+    "level": 47,
+    "description": "A Persona of another story. He was a Japanese god found in the Izumo Fudoki, and was one of the three gods born from Izanagi. He was violent, but also had a sensitive side, showing love for his mother and reading poems.",
+    "image": "https://megatenwiki.com/images/7/78/P3R_Kamu_Susano-o_Render.png",
+    "strength": 40,
+    "magic": 25,
+    "endurance": 30,
+    "agility": 30,
+    "luck": 23,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 1,
+    "query": "kamu-susano-o"
+  },
+  {
+    "id": 58,
+    "name": "Belphegor",
+    "arcana": "Emperor",
+    "level": 53,
+    "description": "Demonic governor of the deadly sin of sloth. He also excels at invention and discovery. May derive from Ba'al Pe'or, Syrian god of abundant crops.",
+    "image": "https://megatenwiki.com/images/7/73/P5X_Belphegor_Artwork.png",
+    "strength": 34,
+    "magic": 43,
+    "endurance": 38,
+    "agility": 28,
+    "luck": 29,
+    "weak": [
+      "Fire",
+      "Light"
+    ],
+    "resists": [
+      "Ice",
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "belphegor"
+  },
+  {
+    "id": 59,
+    "name": "Barong",
+    "arcana": "Emperor",
+    "level": 63,
+    "description": "A mystical creature in Balinese lore, it represents good and is Rangda's eternal rival. Even if defeated, it will be reborn. The result is a never-ending struggle.",
+    "image": "https://megatenwiki.com/images/b/bb/P5X_Barong_Artwork.png",
+    "strength": 43,
+    "magic": 55,
+    "endurance": 41,
+    "agility": 31,
+    "luck": 32,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "barong"
+  },
+  {
+    "id": 60,
+    "name": "Odin",
+    "arcana": "Emperor",
+    "level": 74,
+    "description": "The father of all gods in Norse legend. He willingly sacrificed one eye to gain wisdom. In preparation for Ragnarok, he gathers the souls of fallen warriors to his hall, Valhalla. ",
+    "image": "https://megatenwiki.com/images/f/fe/SMT1_Odin_Artwork.png",
+    "strength": 44,
+    "magic": 63,
+    "endurance": 42,
+    "agility": 46,
+    "luck": 49,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Electric"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "odin"
+  },
+  {
+    "id": 61,
+    "name": "Omoikane",
+    "arcana": "Hierophant",
+    "level": 7,
+    "description": "A deity of knowledge in Japanese myth. He conceived the plan to draw Amaterasu from the Amato-Iwato, the cave she was hiding in.",
+    "image": "https://megatenwiki.com/images/b/bd/P3_Omoikane_Artwork.png",
+    "strength": 4,
+    "magic": 8,
+    "endurance": 6,
+    "agility": 4,
+    "luck": 6,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "omoikane"
+  },
+  {
+    "id": 62,
+    "name": "Berith",
+    "arcana": "Hierophant",
+    "level": 13,
+    "description": "One of the 72 demons of the Goetia. Known as the Duke of Hell, he rides a gigantic horse and burns those without manners.",
+    "image": "https://megatenwiki.com/images/c/c5/P5X_Berith_Artwork.png",
+    "strength": 12,
+    "magic": 7,
+    "endurance": 10,
+    "agility": 11,
+    "luck": 6,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Fire",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "berith"
+  },
+  {
+    "id": 63,
+    "name": "Shiisaa",
+    "arcana": "Hierophant",
+    "level": 23,
+    "description": "A holy beast said to protect houses from evil and bring good fortune. They look similar to Shinto guardian dogs, but are actually modeled after a lion. There are many stories about it in Ryukyu lore.",
+    "image": "https://megatenwiki.com/images/0/00/P5X_Shiisaa_Artwork.png",
+    "strength": 15,
+    "magic": 15,
+    "endurance": 19,
+    "agility": 16,
+    "luck": 11,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Strike",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "shiisaa"
+  },
+  {
+    "id": 64,
+    "name": "Flauros",
+    "arcana": "Hierophant",
+    "level": 33,
+    "description": "One of the 72 demons of the Goetia. He appears as a leopard and can see the past and future. He can control fire and burn all his adversaries to death.",
+    "image": "https://megatenwiki.com/images/d/df/P5X_Flauros_Artwork.png",
+    "strength": 27,
+    "magic": 25,
+    "endurance": 20,
+    "agility": 18,
+    "luck": 16,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "flauros"
+  },
+  {
+    "id": 65,
+    "name": "Castor",
+    "arcana": "Hierophant",
+    "level": 39,
+    "description": "A hero in Greek mythology. He is Polydeuces's half-brother, but doesn't share his brother's immortality. He was struck and killed by an arrow, after which he and his brother became stars in the constellation Gemini. ",
+    "image": "https://megatenwiki.com/images/6/6b/P3R_Castor_Artwork.png",
+    "strength": 42,
+    "magic": 18,
+    "endurance": 37,
+    "agility": 23,
+    "luck": 17,
+    "weak": [],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "castor"
+  },
+  {
+    "id": 66,
+    "name": "Thoth",
+    "arcana": "Hierophant",
+    "level": 40,
+    "description": "Egyptian moon god that takes the form of a baboon, he is the one who measures time. He gave Isis the power to resurrect Osiris after he was killed by the evil god Seth.",
+    "image": "https://megatenwiki.com/images/2/23/P5X_Thoth_Artwork.png",
+    "strength": 20,
+    "magic": 40,
+    "endurance": 20,
+    "agility": 25,
+    "luck": 25,
+    "weak": [
+      "Strike",
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "thoth"
+  },
+  {
+    "id": 67,
+    "name": "Mishaguji",
+    "arcana": "Hierophant",
+    "level": 48,
+    "description": "An indigenous god of the Shinano region from before the forces of Yamato occupied the land. Said to be born from the belief that divine spirits dwelled in rocks and stones.",
+    "image": "https://megatenwiki.com/images/0/0c/SH1_Mishaguji_Artwork.png",
+    "strength": 36,
+    "magic": 35,
+    "endurance": 30,
+    "agility": 24,
+    "luck": 26,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "mishaguji"
+  },
+  {
+    "id": 68,
+    "name": "Daisoujou",
+    "arcana": "Hierophant",
+    "level": 59,
+    "description": "A monk who died while fasting. His spiritual power allows his body to continue to exist without rotting. It is said that he will appear before people on the day of salvation.",
+    "image": "https://megatenwiki.com/images/3/3a/P5X_Daisoujou_Artwork.png",
+    "strength": 33,
+    "magic": 49,
+    "endurance": 38,
+    "agility": 31,
+    "luck": 42,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "daisoujou"
+  },
+  {
+    "id": 69,
+    "name": "Kohryu",
+    "arcana": "Hierophant",
+    "level": 71,
+    "description": "Known as the Yellow Dragon and renowned as the most benevolent of the dragons. It reigns over the Ssu-Ling, celestial creatures in Chinese myth. It is located in the center of the four beasts.",
+    "image": "https://megatenwiki.com/images/f/f2/P5X_Kohryu_Artwork.png",
+    "strength": 44,
+    "magic": 53,
+    "endurance": 58,
+    "agility": 31,
+    "luck": 40,
+    "weak": [],
+    "resists": [],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "kohryu"
+  },
+  {
+    "id": 70,
+    "name": "Io",
+    "arcana": "Lovers",
+    "level": 1,
+    "description": "A priestess in service of the goddess Hera. When Zeus fell in love with her, he transformed her into a cow to hide her from Hera, but Hera saw through the ruse. She was rescued by Hermes, and escaped across the sea to safety.",
+    "image": "https://megatenwiki.com/images/d/df/P3R_Io_Artwork.png",
+    "strength": 2,
+    "magic": 3,
+    "endurance": 1,
+    "agility": 2,
+    "luck": 2,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "io"
+  },
+  {
+    "id": 71,
+    "name": "Isis",
+    "arcana": "Lovers",
+    "level": 1,
+    "description": "Osiris's wife as well as his younger sister. Upon the death of her husband at the hands of Seth, she traveled all over Egypt to recover the pieces of his body, and revived him with her incredible magic power. ",
+    "image": "https://megatenwiki.com/images/1/16/P3_Isis_Artwork.png",
+    "strength": 2,
+    "magic": 3,
+    "endurance": 1,
+    "agility": 2,
+    "luck": 2,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "isis"
+  },
+  {
+    "id": 72,
+    "name": "Pixie",
+    "arcana": "Lovers",
+    "level": 2,
+    "description": "Friendly fairies of the forest that tend to hide from humans. They like to play tricks on lazy people. It is said they are the souls of dead, unbaptized children.",
+    "image": "https://megatenwiki.com/images/e/ed/P5X_Pixie_Artwork.png",
+    "strength": 2,
+    "magic": 2,
+    "endurance": 2,
+    "agility": 4,
+    "luck": 3,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "pixie"
+  },
+  {
+    "id": 73,
+    "name": "Silky",
+    "arcana": "Lovers",
+    "level": 5,
+    "description": "A fairy of England and Scotland. She carries out household chores while everyone sleeps and is a welcome spirit. It is said you can hear her silk skirt rustle as she works.",
+    "image": "https://megatenwiki.com/images/5/59/P5X_Silky_Artwork.png",
+    "strength": 3,
+    "magic": 7,
+    "endurance": 3,
+    "agility": 4,
+    "luck": 5,
+    "weak": [
+      "Fire",
+      "Electric"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "silky"
+  },
+  {
+    "id": 74,
+    "name": "Tam Lin",
+    "arcana": "Lovers",
+    "level": 13,
+    "description": "A fae knight of the Seelie Court, said to protect the forest of Carterhaugh. After being kidnapped by the faeries at the tender age of nine, he lived much of his life among them.",
+    "image": "https://megatenwiki.com/images/f/f4/SMT1_Tam_Lin_Artwork.png",
+    "strength": 12,
+    "magic": 11,
+    "endurance": 8,
+    "agility": 10,
+    "luck": 5,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Slash",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "tam-lin"
+  },
+  {
+    "id": 75,
+    "name": "Carmen",
+    "arcana": "Lovers",
+    "level": 19,
+    "description": "A Persona of another story. She is a gypsy thief from the novel by Merimee, which became famous through the opera by Bizet. She is a femme fatale who is beautiful but very capricious.",
+    "image": "https://megatenwiki.com/images/7/77/P5X_Carmen_Artwork.png",
+    "strength": 8,
+    "magic": 18,
+    "endurance": 12,
+    "agility": 14,
+    "luck": 12,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "carmen"
+  },
+  {
+    "id": 76,
+    "name": "Narcissus",
+    "arcana": "Lovers",
+    "level": 23,
+    "description": "A young man of Greek myth. He rejected the nymph Echo, who faded to a whisper out of despair. Cursed by Nemesis, he fell in love with his own reflection and wasted away.",
+    "image": "https://megatenwiki.com/images/8/82/P5X_Narcissus_Artwork.png",
+    "strength": 12,
+    "magic": 18,
+    "endurance": 10,
+    "agility": 17,
+    "luck": 20,
+    "weak": [
+      "Slash"
+    ],
+    "resists": [
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "narcissus"
+  },
+  {
+    "id": 77,
+    "name": "Queen Medb",
+    "arcana": "Lovers",
+    "level": 28,
+    "description": "The fairy queen in Celtic myth. Often identified with Titania, Oberon's wife. She would offer mead mixed with her blood to her many consorts.",
+    "image": "https://megatenwiki.com/images/c/c3/P5X_Queen_Mab_Artwork.png",
+    "strength": 14,
+    "magic": 26,
+    "endurance": 15,
+    "agility": 19,
+    "luck": 17,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "queen-medb"
+  },
+  {
+    "id": 78,
+    "name": "Saki Mitama",
+    "arcana": "Lovers",
+    "level": 36,
+    "description": "One of the four aspects of Shinto thought, it brings great bounty from the hunt. It is said to aid in love, profit, and growth, and can create new paths.",
+    "image": "https://megatenwiki.com/images/0/0b/P5X_Saki_Mitama_Artwork.png",
+    "strength": 16,
+    "magic": 30,
+    "endurance": 20,
+    "agility": 22,
+    "luck": 28,
+    "weak": [
+      "Strike"
+    ],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "saki-mitama"
+  },
+  {
+    "id": 79,
+    "name": "Hecate",
+    "arcana": "Lovers",
+    "level": 42,
+    "description": "A Persona of another story. She is a Greek goddess of crossroads, ghosts and witchcraft, and is commonly attended to by dogs. She is also known to be the chief of the witches that appears in the play Macbeth.",
+    "image": "https://megatenwiki.com/images/4/40/P3R_Hecate_Render.png",
+    "strength": 22,
+    "magic": 35,
+    "endurance": 24,
+    "agility": 26,
+    "luck": 26,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 1,
+    "query": "hecate"
+  },
+  {
+    "id": 80,
+    "name": "Titania",
+    "arcana": "Lovers",
+    "level": 49,
+    "description": "The queen of the fairies and Oberon's wife. She is derived from the Roman goddess Diana. She was later immortalized in Shakespeare's play A Midsummer Night's Dream.",
+    "image": "https://megatenwiki.com/images/5/50/P5X_Titania_Artwork.png",
+    "strength": 19,
+    "magic": 45,
+    "endurance": 23,
+    "agility": 34,
+    "luck": 36,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "titania"
+  },
+  {
+    "id": 81,
+    "name": "Raphael",
+    "arcana": "Lovers",
+    "level": 60,
+    "description": "One of the four major archangels, his name means ''healer.'' He recites the history of the fallen angels and the creation of Adam and Eve.",
+    "image": "https://megatenwiki.com/images/7/7a/SMT2_Raphael_Artwork.png",
+    "strength": 46,
+    "magic": 42,
+    "endurance": 37,
+    "agility": 31,
+    "luck": 40,
+    "weak": [
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "raphael"
+  },
+  {
+    "id": 82,
+    "name": "Cybele",
+    "arcana": "Lovers",
+    "level": 67,
+    "description": "The Phrygian mother goddess of the earth, she is often depicted with wild animals, and lions in particular. She had her priest, Attis, as a lover, but drove him insane when he was forced to marry another.",
+    "image": "https://megatenwiki.com/images/5/53/SH1_Cybele_Artwork.png",
+    "strength": 39,
+    "magic": 54,
+    "endurance": 40,
+    "agility": 42,
+    "luck": 45,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Fire",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "cybele"
+  },
+  {
+    "id": 83,
+    "name": "Ara Mitama",
+    "arcana": "Chariot",
+    "level": 6,
+    "description": "One of the four aspects of Shinto thought, it has the power to grant ferocity. It is said to aid in one's bravery, growth, and endeavors, though it can lead in a negative direction.",
+    "image": "https://megatenwiki.com/images/e/e6/P5X_Ara_Mitama_Artwork.png",
+    "strength": 8,
+    "magic": 3,
+    "endurance": 4,
+    "agility": 5,
+    "luck": 5,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Strike",
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "ara-mitama"
+  },
+  {
+    "id": 84,
+    "name": "Chimera",
+    "arcana": "Chariot",
+    "level": 9,
+    "description": "The offspring of Typhon and Echidna, this monster of Greek myth is part lion, part goat, and part dragon.",
+    "image": "https://megatenwiki.com/images/a/ab/DeSum_Chimera_Artwork.png",
+    "strength": 8,
+    "magic": 4,
+    "endurance": 12,
+    "agility": 4,
+    "luck": 6,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Strike",
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "chimera"
+  },
+  {
+    "id": 85,
+    "name": "Zouchouten",
+    "arcana": "Chariot",
+    "level": 14,
+    "description": "Also known as Virudhaka, he is the protector of the South and is one of the four Heavenly Kings of Buddhist origin. He is the god of the five grains, and was once the chief of the gods.",
+    "image": "https://megatenwiki.com/images/3/33/P5X_Zouchouten_Artwork.png",
+    "strength": 14,
+    "magic": 7,
+    "endurance": 13,
+    "agility": 6,
+    "luck": 10,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Strike"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "zouchouten"
+  },
+  {
+    "id": 86,
+    "name": "Captain Kidd",
+    "arcana": "Chariot",
+    "level": 18,
+    "description": "A Persona of another story. He was a 17th-century privateer who eventually became a world-renowned pirate. At his execution, he declared he had a hidden treasure, leaving behind many legends.",
+    "image": "https://megatenwiki.com/images/5/51/P5X_Captain_Kidd_Artwork.png",
+    "strength": 14,
+    "magic": 8,
+    "endurance": 16,
+    "agility": 12,
+    "luck": 11,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "captain-kidd"
+  },
+  {
+    "id": 87,
+    "name": "Mithras",
+    "arcana": "Chariot",
+    "level": 24,
+    "description": "A sun deity who was worshiped in the Roman Empire from the 1st to the 4th century AD. He was said to be reborn after death, and a festival was held on the winter solstice for him.",
+    "image": "https://megatenwiki.com/images/b/b8/P5X_Mithras_Artwork.png",
+    "strength": 16,
+    "magic": 19,
+    "endurance": 15,
+    "agility": 14,
+    "luck": 15,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Slash"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "mithras"
+  },
+  {
+    "id": 88,
+    "name": "Palladion",
+    "arcana": "Chariot",
+    "level": 27,
+    "description": "A guardian statue in ancient Greece, stolen from Troy, that protected the city in which it was enshrined. It is said that Athena was so saddened by the death of her friend, Pallas, that she had the wooden statue made in her image. ",
+    "image": "https://megatenwiki.com/images/3/39/P3R_Palladion_Artwork.png",
+    "strength": 21,
+    "magic": 15,
+    "endurance": 24,
+    "agility": 15,
+    "luck": 13,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "palladion"
+  },
+  {
+    "id": 89,
+    "name": "Athena",
+    "arcana": "Chariot",
+    "level": 27,
+    "description": "Daughter of Zeus, and a goddess of great martial ability. She fights to protect her land or family, but never for sheer bloodlust. Her symbol is the olive tree.",
+    "image": "https://megatenwiki.com/images/f/f2/P3_Athena_Artwork.png",
+    "strength": 21,
+    "magic": 15,
+    "endurance": 24,
+    "agility": 15,
+    "luck": 13,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce"
+    ],
+    "dlc": 0,
+    "query": "athena"
+  },
+  {
+    "id": 90,
+    "name": "Oni",
+    "arcana": "Chariot",
+    "level": 31,
+    "description": "An evil monster from Japanese lore known for its hideous appearance and brute strength. They loot and plunder villages, massacring the townspeople with their iron clubs. ",
+    "image": "https://megatenwiki.com/images/c/c0/P5X_Oni_Artwork.png",
+    "strength": 30,
+    "magic": 13,
+    "endurance": 26,
+    "agility": 21,
+    "luck": 19,
+    "weak": [],
+    "resists": [
+      "Strike"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "oni"
+  },
+  {
+    "id": 91,
+    "name": "Seiten Taisei",
+    "arcana": "Chariot",
+    "level": 40,
+    "description": "A Persona of another story. This is a title Sun Wukong had given himself. After wreaking havoc, he was punished by Buddha, who imprisoned him under a mountain. Eventually, he was saved by a monk named Xuanzang.",
+    "image": "https://megatenwiki.com/images/e/ec/P3R_Seiten_Taisei_Render.png",
+    "strength": 30,
+    "magic": 20,
+    "endurance": 33,
+    "agility": 24,
+    "luck": 20,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 1,
+    "query": "seiten-taisei"
+  },
+  {
+    "id": 92,
+    "name": "Shiki-Ouji",
+    "arcana": "Chariot",
+    "level": 45,
+    "description": "An exceptionally powerful shikigami. Only the most elite onmyoji are able to summon it and bind it to paper. It can ward off disaster or cure illness, but its ordinary temperament is quite vicious.",
+    "image": "https://megatenwiki.com/images/5/52/P5X_Shiki-Ouji_Artwork.png",
+    "strength": 33,
+    "magic": 28,
+    "endurance": 28,
+    "agility": 25,
+    "luck": 28,
+    "weak": [
+      "Fire",
+      "Wind"
+    ],
+    "resists": [
+      "Light",
+      "Dark"
+    ],
+    "reflects": [
+      "Strike"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce"
+    ],
+    "dlc": 0,
+    "query": "shiki-ouji"
+  },
+  {
+    "id": 93,
+    "name": "Koumokuten ",
+    "arcana": "Chariot",
+    "level": 52,
+    "description": "Also known as Virupaksha, he is the protector of the West, and is one of the four Heavenly Kings of Buddhist origin. He keeps a close watch on the world with his sharp gaze.",
+    "image": "https://megatenwiki.com/images/e/e4/P5X_Koumokuten_Artwork.png",
+    "strength": 40,
+    "magic": 35,
+    "endurance": 40,
+    "agility": 25,
+    "luck": 29,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Strike",
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "koumokuten"
+  },
+  {
+    "id": 94,
+    "name": "Thor",
+    "arcana": "Chariot",
+    "level": 64,
+    "description": "The Norse thunder god and son of Odin. He owns the power-enhancing belt, Megingjard, and wields Mjolnir, a hammer that causes lightning to strike and returns to its owner if thrown.",
+    "image": "https://megatenwiki.com/images/d/dd/P5X_Thor_Artwork.png",
+    "strength": 54,
+    "magic": 50,
+    "endurance": 42,
+    "agility": 30,
+    "luck": 35,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Strike",
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "thor"
+  },
+  {
+    "id": 95,
+    "name": "Angel",
+    "arcana": "Justice",
+    "level": 4,
+    "description": "Ninth of the nine orders of angels. The ''watchers'' who never sleep. Among these are the guardian angels who are assigned to every human at birth. ",
+    "image": "https://megatenwiki.com/images/5/5f/P5X_Angel_Artwork.png",
+    "strength": 4,
+    "magic": 5,
+    "endurance": 3,
+    "agility": 4,
+    "luck": 3,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Electric",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "angel"
+  },
+  {
+    "id": 96,
+    "name": "Archangel",
+    "arcana": "Justice",
+    "level": 10,
+    "description": "Eighth of the nine orders of angels. Their duty is to minister to humans and deliver messages. They are warriors of Heaven and lead Heaven's forces during battle with the armies of evil. ",
+    "image": "https://megatenwiki.com/images/9/95/P5X_Archangel_Artwork.png",
+    "strength": 8,
+    "magic": 8,
+    "endurance": 8,
+    "agility": 7,
+    "luck": 6,
+    "weak": [
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Slash"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "archangel"
+  },
+  {
+    "id": 97,
+    "name": "Principality",
+    "arcana": "Justice",
+    "level": 16,
+    "description": "The seventh of the nine orders of angels. They guard cities and nations, and protect various religious figures.",
+    "image": "https://megatenwiki.com/images/9/96/P5X_Principality_Artwork.png",
+    "strength": 11,
+    "magic": 13,
+    "endurance": 7,
+    "agility": 12,
+    "luck": 12,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "principality"
+  },
+  {
+    "id": 98,
+    "name": "Power",
+    "arcana": "Justice",
+    "level": 25,
+    "description": "The sixth of the nine orders of angels. It is said that they were the first order to be created. Their duty is to protect human souls from demons.",
+    "image": "https://megatenwiki.com/images/d/d8/P5X_Power_Artwork.png",
+    "strength": 20,
+    "magic": 16,
+    "endurance": 15,
+    "agility": 16,
+    "luck": 15,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Pierce",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "power"
+  },
+  {
+    "id": 99,
+    "name": "Virtue",
+    "arcana": "Justice",
+    "level": 32,
+    "description": "The fifth of the nine orders of angels, also known as ''The Shining Ones.'' They work miracles and support those struggling with their faith.",
+    "image": "https://megatenwiki.com/images/d/d8/DeSum_Virtue_Artwork.png",
+    "strength": 21,
+    "magic": 24,
+    "endurance": 15,
+    "agility": 22,
+    "luck": 22,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "virtue"
+  },
+  {
+    "id": 100,
+    "name": "Robin Hood",
+    "arcana": "Justice",
+    "level": 37,
+    "description": "A Persona of another story. He is a noble thief that made waves in England during the Middle Ages. He is an expert archer and leader of the Merry Men, outlaws of justice who made Sherwood Forest their home.",
+    "image": "https://megatenwiki.com/images/7/74/P5X_Robin_Hood_Artwork.png",
+    "strength": 25,
+    "magic": 27,
+    "endurance": 22,
+    "agility": 24,
+    "luck": 20,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "robin-hood"
+  },
+  {
+    "id": 101,
+    "name": "Nemesis",
+    "arcana": "Justice",
+    "level": 37,
+    "description": "A Greek goddess that was the personification of the gods' wrath, or ''divine retribution.'' While known to administer vengeance, she was also perceived as fair and balanced, punishing only those that deserved it. ",
+    "image": "https://megatenwiki.com/images/5/5d/P3R_Nemesis_Artwork.png",
+    "strength": 19,
+    "magic": 28,
+    "endurance": 23,
+    "agility": 25,
+    "luck": 23,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "nemesis"
+  },
+  {
+    "id": 102,
+    "name": "Kala-Nemi",
+    "arcana": "Justice",
+    "level": 37,
+    "description": "A Hindu goddess whose name means ''edge of the wheel of time.'' The ''wheel'' refers to samsara, the cycle of death and rebirth, meaning she is a goddess who has transcended life itself. ",
+    "image": "https://megatenwiki.com/images/8/82/P3_Kala-Nemi_Artwork.png",
+    "strength": 19,
+    "magic": 28,
+    "endurance": 23,
+    "agility": 25,
+    "luck": 23,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "kala-nemi"
+  },
+  {
+    "id": 103,
+    "name": "Dominion",
+    "arcana": "Justice",
+    "level": 42,
+    "description": "The fourth of the nine orders of angels. Their duty is to oversee the other angels. Their actions are the manifestation of God's will.",
+    "image": "https://megatenwiki.com/images/b/b3/P5X_Dominion_Artwork.png",
+    "strength": 25,
+    "magic": 32,
+    "endurance": 24,
+    "agility": 26,
+    "luck": 26,
+    "weak": [
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "dominion"
+  },
+  {
+    "id": 104,
+    "name": "Throne",
+    "arcana": "Justice",
+    "level": 52,
+    "description": "The third of the nine orders of angels. They are the angels of dignity and justice who carry God's throne and govern thought. They are angels of knowledge.",
+    "image": "https://megatenwiki.com/images/b/b9/DeSum_Throne_Artwork.png",
+    "strength": 39,
+    "magic": 35,
+    "endurance": 30,
+    "agility": 30,
+    "luck": 33,
+    "weak": [
+      "Strike",
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "throne"
+  },
+  {
+    "id": 105,
+    "name": "Loki A",
+    "arcana": "Justice",
+    "level": 60,
+    "description": "A Persona of another story. He is a malevolent god of Norse mythology. He can be capricious and is quite cunning. Despite being a blood brother to Odin, he was punished for the murder of Odin's child, Baldur.",
+    "image": "https://megatenwiki.com/images/0/0d/P5_Loki_Concept_Artwork.png",
+    "strength": 44,
+    "magic": 42,
+    "endurance": 33,
+    "agility": 38,
+    "luck": 33,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Fire",
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 1,
+    "query": "loki-a"
+  },
+  {
+    "id": 106,
+    "name": "Melchizedek",
+    "arcana": "Justice",
+    "level": 66,
+    "description": "An angel of Gnosticism, governing over peace and righteousness. Though said to be the savior of the angels, he used to be a human, the king of Salem.",
+    "image": "https://megatenwiki.com/images/e/e2/P5X_Melchizedek_Artwork.png",
+    "strength": 54,
+    "magic": 47,
+    "endurance": 47,
+    "agility": 35,
+    "luck": 31,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [
+      "Strike",
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "melchizedek"
+  },
+  {
+    "id": 107,
+    "name": "Onmoraki",
+    "arcana": "Hermit",
+    "level": 8,
+    "description": "A monstrous, fire-spitting, Japanese bird with a man's face. It is actually a corpse that was not given a proper memorial service. They appear before monks who neglect their duties.",
+    "image": "https://megatenwiki.com/images/9/95/P5X_Onmoraki_Artwork.png",
+    "strength": 4,
+    "magic": 7,
+    "endurance": 6,
+    "agility": 10,
+    "luck": 4,
+    "weak": [
+      "Slash",
+      "Light"
+    ],
+    "resists": [
+      "Fire",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "onmoraki"
+  },
+  {
+    "id": 108,
+    "name": "Naga",
+    "arcana": "Hermit",
+    "level": 17,
+    "description": "Half-snake, half-human, they are divine beings in Hindu mythology. Worshiped as bringers of fertility.",
+    "image": "https://megatenwiki.com/images/d/dc/P5X_Naga_Artwork.png",
+    "strength": 14,
+    "magic": 10,
+    "endurance": 11,
+    "agility": 14,
+    "luck": 9,
+    "weak": [
+      "Strike"
+    ],
+    "resists": [
+      "Electric",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "naga"
+  },
+  {
+    "id": 109,
+    "name": "Lamia",
+    "arcana": "Hermit",
+    "level": 25,
+    "description": "A serpentine woman of Greek myth, she was once the queen of Libya. Zeus's jealous wife, Hera, killed her children, causing her to go mad and transform into a monster.",
+    "image": "https://megatenwiki.com/images/f/fd/P5X_Lamia_Artwork.png",
+    "strength": 15,
+    "magic": 20,
+    "endurance": 16,
+    "agility": 14,
+    "luck": 17,
+    "weak": [
+      "Strike"
+    ],
+    "resists": [
+      "Electric",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "lamia"
+  },
+  {
+    "id": 110,
+    "name": "Mothman",
+    "arcana": "Hermit",
+    "level": 31,
+    "description": "A cryptid sighted between the 60s and 80s in West Virginia. It has shining red eyes and is named for the fin-like appendages on its sides. It uses its keen sense for blood to track down the source and feed on it.",
+    "image": "https://megatenwiki.com/images/d/d3/P5X_Mothman_Artwork.png",
+    "strength": 15,
+    "magic": 25,
+    "endurance": 18,
+    "agility": 27,
+    "luck": 22,
+    "weak": [
+      "Pierce",
+      "Ice"
+    ],
+    "resists": [
+      "Fire",
+      "Dark"
+    ],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "mothman"
+  },
+  {
+    "id": 111,
+    "name": "Dakini",
+    "arcana": "Hermit",
+    "level": 38,
+    "description": "Hindu deities of passion and relations. They are Kali's attendants. They eat human flesh and gather at graveyards and crematories each night. Their name means ''sky dancer.''",
+    "image": "https://megatenwiki.com/images/8/86/P5X_Dakini_Artwork.png",
+    "strength": 36,
+    "magic": 22,
+    "endurance": 16,
+    "agility": 29,
+    "luck": 18,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Strike",
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "dakini"
+  },
+  {
+    "id": 112,
+    "name": "Kurama Tengu",
+    "arcana": "Hermit",
+    "level": 46,
+    "description": "A type of tengu said to have lived on Mt. Kurama in Kyoto. The most powerful and well-known of the tengu, they have the power to fend off disease and bring good fortune.",
+    "image": "https://megatenwiki.com/images/3/3d/P5X_Kurama_Tengu_Artwork.png",
+    "strength": 26,
+    "magic": 32,
+    "endurance": 25,
+    "agility": 37,
+    "luck": 25,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Wind"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "kurama-tengu"
+  },
+  {
+    "id": 113,
+    "name": "Nebiros",
+    "arcana": "Hermit",
+    "level": 52,
+    "description": "The general of Hell, he keeps watch over other demons. One of the greatest necromancers in Hell, he can control souls and corpses.",
+    "image": "https://megatenwiki.com/images/d/d6/P5X_Nebiros_Artwork.png",
+    "strength": 28,
+    "magic": 42,
+    "endurance": 31,
+    "agility": 31,
+    "luck": 37,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Ice"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "nebiros"
+  },
+  {
+    "id": 114,
+    "name": "Kumbhanda",
+    "arcana": "Hermit",
+    "level": 61,
+    "description": "A demon of Buddhist myth said to drain human life energy. He has dark skin, stands three meters tall, and sometimes changes his shape to a gourd. Known to have once served Rudra, the god of storms.",
+    "image": "https://megatenwiki.com/images/9/96/P5X_Kumbhanda_Artwork.png",
+    "strength": 48,
+    "magic": 44,
+    "endurance": 39,
+    "agility": 45,
+    "luck": 20,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "kumbhanda"
+  },
+  {
+    "id": 115,
+    "name": "Arahabaki",
+    "arcana": "Hermit",
+    "level": 68,
+    "description": "A mysterious god of ancient Japan. Most famously worshiped by Nagasunehiko, who was defeated in battle against Emperor Jinmu, Arahabaki came to be treated as a symbol of rebellion and defiance.",
+    "image": "https://megatenwiki.com/images/a/a6/P5X_Arahabaki_Artwork.png",
+    "strength": 47,
+    "magic": 52,
+    "endurance": 53,
+    "agility": 32,
+    "luck": 36,
+    "weak": [
+      "Strike",
+      "Ice",
+      "Dark"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [
+      "Slash",
+      "Pierce"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "arahabaki"
+  },
+  {
+    "id": 116,
+    "name": "Fortuna",
+    "arcana": "Fortune",
+    "level": 15,
+    "description": "The Roman goddess of luck, she spins the Wheel of Fortune. She is believed to have originally been a fertility goddess. Her Greek counterpart is Tyche.",
+    "image": "https://megatenwiki.com/images/b/bf/SH1_Fortuna_Artwork.png",
+    "strength": 7,
+    "magic": 17,
+    "endurance": 10,
+    "agility": 13,
+    "luck": 11,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire",
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "fortuna"
+  },
+  {
+    "id": 117,
+    "name": "Sandman",
+    "arcana": "Fortune",
+    "level": 20,
+    "description": "A fairy in German folklore who carries a bag of magical sand, which puts humans to sleep when thrown into their eyes. If the victim resists, the Sandman will sit on their eyelids.",
+    "image": "https://megatenwiki.com/images/d/d4/P5X_Sandman_Artwork.png",
+    "strength": 13,
+    "magic": 13,
+    "endurance": 15,
+    "agility": 15,
+    "luck": 20,
+    "weak": [
+      "Ice",
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire",
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "sandman"
+  },
+  {
+    "id": 118,
+    "name": "Kushi Mitama",
+    "arcana": "Fortune",
+    "level": 28,
+    "description": "One of the four aspects of Shinto thought, it uses its power to bring good omens. It is said to aid in one's wisdom, observation, and skill, and can mend fractured paths.",
+    "image": "https://megatenwiki.com/images/5/52/P5X_Kushi_Mitama_Artwork.png",
+    "strength": 16,
+    "magic": 22,
+    "endurance": 18,
+    "agility": 13,
+    "luck": 22,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "kushi-mitama"
+  },
+  {
+    "id": 119,
+    "name": "Clotho",
+    "arcana": "Fortune",
+    "level": 37,
+    "description": "One of the three Moirae Sisters in Greek mythology. She spins the threads of fate.",
+    "image": "https://megatenwiki.com/images/d/d2/P5X_Clotho_Artwork.png",
+    "strength": 20,
+    "magic": 29,
+    "endurance": 22,
+    "agility": 24,
+    "luck": 26,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "clotho"
+  },
+  {
+    "id": 120,
+    "name": "Lachesis",
+    "arcana": "Fortune",
+    "level": 44,
+    "description": "The middle sister of the three Moirae Sisters of Greek legend. She is the apportioner, measuring the thread which determines each person's lifespan.",
+    "image": "https://megatenwiki.com/images/9/91/P5X_Lachesis_Artwork.png",
+    "strength": 22,
+    "magic": 37,
+    "endurance": 23,
+    "agility": 30,
+    "luck": 29,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "lachesis"
+  },
+  {
+    "id": 121,
+    "name": "Atropos",
+    "arcana": "Fortune",
+    "level": 56,
+    "description": "One of the three Moirae Sisters in Greek mythology. She cuts the life threads of those whose time has come.  ",
+    "image": "https://megatenwiki.com/images/7/7e/P5X_Atropos_Artwork.png",
+    "strength": 26,
+    "magic": 45,
+    "endurance": 32,
+    "agility": 36,
+    "luck": 40,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Light",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "atropos"
+  },
+  {
+    "id": 122,
+    "name": "Hypnos",
+    "arcana": "Fortune",
+    "level": 56,
+    "description": "No description (Strega Only)",
+    "image": "https://megatenwiki.com/images/e/e8/P3_Hypnos_Artwork.png",
+    "strength": 50,
+    "magic": 55,
+    "endurance": 45,
+    "agility": 40,
+    "luck": 30,
+    "weak": [],
+    "resists": [],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hypnos"
+  },
+  {
+    "id": 123,
+    "name": "Moros",
+    "arcana": "Fortune",
+    "level": 56,
+    "description": "No description (Strega Only)",
+    "image": "https://megatenwiki.com/images/4/4a/P3_Moros_Artwork.png",
+    "strength": 46,
+    "magic": 50,
+    "endurance": 42,
+    "agility": 45,
+    "luck": 35,
+    "weak": [],
+    "resists": [],
+    "reflects": [
+      "Fire",
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "moros"
+  },
+  {
+    "id": 124,
+    "name": "Norn",
+    "arcana": "Fortune",
+    "level": 65,
+    "description": "Goddesses of fate in Norse myth. They live below the roots of Yggdrasil and weave the threads of fate, which even the gods are bound by.",
+    "image": "https://megatenwiki.com/images/8/88/P5X_Norn_Artwork.png",
+    "strength": 37,
+    "magic": 60,
+    "endurance": 40,
+    "agility": 37,
+    "luck": 40,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [
+      "Ice"
+    ],
+    "absorbs": [
+      "Wind"
+    ],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "norn"
+  },
+  {
+    "id": 125,
+    "name": "Lakshmi",
+    "arcana": "Fortune",
+    "level": 73,
+    "description": "The Hindu goddess of beauty and good fortune, Vishnu's wife, and Kama's mother. She is the goddess of love, believed to have been born from an ocean of milk.",
+    "image": "https://megatenwiki.com/images/1/11/P5X_Lakshmi_Artwork.png",
+    "strength": 39,
+    "magic": 61,
+    "endurance": 38,
+    "agility": 45,
+    "luck": 52,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "lakshmi"
+  },
+  {
+    "id": 126,
+    "name": "Valkyrie",
+    "arcana": "Strength",
+    "level": 10,
+    "description": "'Choosers of the slain'' in Norse lore. Armed with shining armor and swords, they look for brave warriors to take to Valhalla, so that they may fight in Ragnarok. ",
+    "image": "https://megatenwiki.com/images/7/79/P5X_Valkyrie_Artwork.png",
+    "strength": 11,
+    "magic": 7,
+    "endurance": 6,
+    "agility": 8,
+    "luck": 5,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Pierce",
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "valkyrie"
+  },
+  {
+    "id": 127,
+    "name": "Rakshasa",
+    "arcana": "Strength",
+    "level": 15,
+    "description": "Demon of Hindu myth. He is an enemy of the gods, and attacks humans to feed on them. His hideous appearance strikes fear into those who see him. Can shift his shape to deceive his enemies.",
+    "image": "https://megatenwiki.com/images/d/d1/P5X_Rakshasa_Artwork.png",
+    "strength": 17,
+    "magic": 8,
+    "endurance": 13,
+    "agility": 11,
+    "luck": 6,
+    "weak": [
+      "Wind",
+      "Light"
+    ],
+    "resists": [
+      "Slash",
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "rakshasa"
+  },
+  {
+    "id": 128,
+    "name": "Matador",
+    "arcana": "Strength",
+    "level": 22,
+    "description": "A master sportsman who entertains the audience in exchange for his own life: one mistake can mean death. Some believe that matadors who die while performing remain in this world.",
+    "image": "https://megatenwiki.com/images/8/8c/P5X_Matador_Artwork.png",
+    "strength": 17,
+    "magic": 14,
+    "endurance": 12,
+    "agility": 23,
+    "luck": 10,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "matador"
+  },
+  {
+    "id": 129,
+    "name": "Jikokuten",
+    "arcana": "Strength",
+    "level": 29,
+    "description": "Also known as Dhritarashtra, he is the protector of the East, and is one of the four Heavenly Kings of Buddhist origin. He helps maintain the security of the nation.",
+    "image": "https://megatenwiki.com/images/b/ba/P5X_Jikokuten_Artwork.png",
+    "strength": 27,
+    "magic": 13,
+    "endurance": 25,
+    "agility": 12,
+    "luck": 17,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Slash",
+      "Light"
+    ],
+    "reflects": [
+      "Ice"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "jikokuten"
+  },
+  {
+    "id": 130,
+    "name": "Cerberus",
+    "arcana": "Strength",
+    "level": 35,
+    "description": "The giant hound that guards the great abyss, Tartarus. He answers to Hades, the lord of the underworld, and keeps watch for both intruders and escapees. He was born from Typhon and Echidna, and is the older brother of Orthrus. ",
+    "image": "https://megatenwiki.com/images/9/92/P3R_Cerberus_Artwork.png",
+    "strength": 25,
+    "magic": 24,
+    "endurance": 21,
+    "agility": 29,
+    "luck": 19,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "cerberus"
+  },
+  {
+    "id": 131,
+    "name": "Hanuman",
+    "arcana": "Strength",
+    "level": 36,
+    "description": "A monkey god of Hindu descent. His father is Vayu, the wind god. Extremely nimble, he performed many heroic deeds in the Ramayana. He is powerful, can fly, and can change his shape into many forms.",
+    "image": "https://megatenwiki.com/images/2/2a/SMT1_Hanuman_Artwork.png",
+    "strength": 30,
+    "magic": 17,
+    "endurance": 24,
+    "agility": 22,
+    "luck": 22,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Slash",
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hanuman"
+  },
+  {
+    "id": 132,
+    "name": "White Rider",
+    "arcana": "Strength",
+    "level": 46,
+    "description": "One of the Four Horsemen of the Apocalypse, he rides a white horse with a bow in hand. A crown was granted to him, and he promises victory.",
+    "image": "https://megatenwiki.com/images/d/db/P5X_White_Rider_Censored_Artwork.png",
+    "strength": 36,
+    "magic": 27,
+    "endurance": 30,
+    "agility": 27,
+    "luck": 25,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "white-rider"
+  },
+  {
+    "id": 133,
+    "name": "Siegfried",
+    "arcana": "Strength",
+    "level": 54,
+    "description": "The German name of the hero in the epic poem of the Nibelungenlied. The dragon Fafnir's blood made him invincible, but a single leaf on his back resulted in a weak spot.",
+    "image": "https://megatenwiki.com/images/9/91/SH1_Siegfried_Artwork.png",
+    "strength": 44,
+    "magic": 29,
+    "endurance": 38,
+    "agility": 36,
+    "luck": 25,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Strike"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Slash",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "siegfried"
+  },
+  {
+    "id": 134,
+    "name": "Kali",
+    "arcana": "Strength",
+    "level": 63,
+    "description": "A goddess of death and destruction. She is said to be another face of Parvati. She is violent, bloodthirsty, wears a string of skulls, and carries bloody weapons, but she also blesses her followers.",
+    "image": "https://megatenwiki.com/images/4/42/SH1_Kali_Artwork.png",
+    "strength": 53,
+    "magic": 30,
+    "endurance": 34,
+    "agility": 48,
+    "luck": 34,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [
+      "Slash"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "kali"
+  },
+  {
+    "id": 135,
+    "name": "Atavaka",
+    "arcana": "Strength",
+    "level": 72,
+    "description": "One of the eight Yashaou. His domain is war and protection. Once a child-eating demon, he became one of the greatest of the Wisdom Kings after the Buddha converted him to good. ",
+    "image": "https://megatenwiki.com/images/7/7c/SMT2_Atavaka_Artwork.png",
+    "strength": 63,
+    "magic": 37,
+    "endurance": 64,
+    "agility": 39,
+    "luck": 35,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "atavaka"
+  },
+  {
+    "id": 136,
+    "name": "Inugami",
+    "arcana": "Hanged",
+    "level": 10,
+    "description": "Spirits of dogs said to possess humans in Japanese lore. Those possessed go crazy. Onmyoji, or Japanese sorcerers, summon them to do their will.",
+    "image": "https://megatenwiki.com/images/5/58/P5X_Inugami_Artwork.png",
+    "strength": 4,
+    "magic": 8,
+    "endurance": 7,
+    "agility": 7,
+    "luck": 11,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "inugami"
+  },
+  {
+    "id": 137,
+    "name": "Take-Minakata",
+    "arcana": "Hanged",
+    "level": 20,
+    "description": "A Japanese god of war, hunting and fertility. He fought Take-Mikazuchi for control of Japan and lost. He escaped to Suwa, but was prohibited to leave since.",
+    "image": "https://megatenwiki.com/images/0/00/SMT3_Take-Minakata_Artwork.png",
+    "strength": 14,
+    "magic": 14,
+    "endurance": 21,
+    "agility": 10,
+    "luck": 10,
+    "weak": [
+      "Light",
+      "Dark"
+    ],
+    "resists": [
+      "Pierce",
+      "Fire",
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "take-minakata"
+  },
+  {
+    "id": 138,
+    "name": "Orthrus",
+    "arcana": "Hanged",
+    "level": 27,
+    "description": "The two-headed pet dog belonging to the giant, Geryon, in Greek myth. He guarded a herd of red oxen, but was killed by Hercules during one of his twelve labors.",
+    "image": "https://megatenwiki.com/images/6/66/P5X_Orthrus_Artwork.png",
+    "strength": 22,
+    "magic": 14,
+    "endurance": 20,
+    "agility": 18,
+    "luck": 15,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "orthrus"
+  },
+  {
+    "id": 139,
+    "name": "Vasuki",
+    "arcana": "Hanged",
+    "level": 38,
+    "description": "A giant serpent of Hindu legend. It is said the gods and demons used him to churn the sea of milk. The strain caused him to exhale incredibly potent venom, but Shiva swallowed it. ",
+    "image": "https://megatenwiki.com/images/a/a7/DeSum_Vasuki_Artwork.png",
+    "strength": 27,
+    "magic": 27,
+    "endurance": 35,
+    "agility": 15,
+    "luck": 17,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Ice",
+      "Electric"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "vasuki"
+  },
+  {
+    "id": 140,
+    "name": "Hecatoncheires",
+    "arcana": "Hanged",
+    "level": 47,
+    "description": "A giant in Greek mythology, born from Uranus and Gaia. His name means ''hundred-handed.'' Enlisted by Zeus in the war against the Titans; thanks to his help, the gods were victorious.",
+    "image": "https://megatenwiki.com/images/5/52/P5X_Hecatoncheires_Artwork.png",
+    "strength": 37,
+    "magic": 24,
+    "endurance": 48,
+    "agility": 20,
+    "luck": 25,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Strike",
+      "Pierce",
+      "Ice",
+      "Electric",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hecatoncheires"
+  },
+  {
+    "id": 141,
+    "name": "Mada",
+    "arcana": "Hanged",
+    "level": 57,
+    "description": "A giant Hindu monster. Its mouth is so enormous it, can swallow the Earth and the heavens in one bite. Its name means, ''he who intoxicates.''",
+    "image": "https://megatenwiki.com/images/6/67/P5X_Mada_Artwork.png",
+    "strength": 42,
+    "magic": 48,
+    "endurance": 45,
+    "agility": 33,
+    "luck": 28,
+    "weak": [
+      "Ice",
+      "Wind",
+      "Light"
+    ],
+    "resists": [
+      "Strike",
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "mada"
+  },
+  {
+    "id": 142,
+    "name": "Medea",
+    "arcana": "Hanged",
+    "level": 63,
+    "description": "No description (Strega Only)",
+    "image": "https://megatenwiki.com/images/e/e6/P3_Medea_Artwork.png",
+    "strength": 53,
+    "magic": 65,
+    "endurance": 42,
+    "agility": 46,
+    "luck": 30,
+    "weak": [],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "medea"
+  },
+  {
+    "id": 143,
+    "name": "Hell Biker",
+    "arcana": "Hanged",
+    "level": 65,
+    "description": "A motorcyclist whose violent nature turned him into a demon. His anger at himself and the world causes him to lash out, so that everyone else will suffer as well.",
+    "image": "https://megatenwiki.com/images/c/c6/P5X_Hell_Biker_Artwork.png",
+    "strength": 48,
+    "magic": 51,
+    "endurance": 50,
+    "agility": 40,
+    "luck": 22,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Fire",
+      "Wind"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "hell-biker"
+  },
+  {
+    "id": 144,
+    "name": "Attis",
+    "arcana": "Hanged",
+    "level": 73,
+    "description": "A Phrygian god who symbolizes life, death, and revival. He rejected Cybele's love and was driven mad, dying after he castrated himself. Cybele then resurrected him. ",
+    "image": "https://megatenwiki.com/images/a/ac/SH1_Attis_Artwork.png",
+    "strength": 45,
+    "magic": 53,
+    "endurance": 51,
+    "agility": 57,
+    "luck": 32,
+    "weak": [
+      "Light",
+      "Dark"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Pierce"
+    ],
+    "reflects": [
+      "Wind"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "attis"
+  },
+  {
+    "id": 145,
+    "name": "Pisaca",
+    "arcana": "Death",
+    "level": 15,
+    "description": "A type of preta, or ''hungry ghost,'' in Hindu lore that eats human corpses. It enters a human through the mouth and causes harm. Those who see one are said to die within nine months.",
+    "image": "https://megatenwiki.com/images/a/a6/P3R_Pisaca_Model.png",
+    "strength": 10,
+    "magic": 13,
+    "endurance": 16,
+    "agility": 9,
+    "luck": 7,
+    "weak": [
+      "Pierce",
+      "Fire",
+      "Light"
+    ],
+    "resists": [
+      "Strike",
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "pisaca"
+  },
+  {
+    "id": 146,
+    "name": "Pale Rider",
+    "arcana": "Death",
+    "level": 23,
+    "description": "One of the Four Horsemen of the Apocalypse, he rides a pale horse and represents death. He has the power to destroy life.",
+    "image": "https://megatenwiki.com/images/c/c3/P5X_Pale_Rider_Artwork.png",
+    "strength": 20,
+    "magic": 18,
+    "endurance": 13,
+    "agility": 17,
+    "luck": 11,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "pale-rider"
+  },
+  {
+    "id": 147,
+    "name": "Loa",
+    "arcana": "Death",
+    "level": 33,
+    "description": "A group of deities worshiped in voodoo. They control the forces of nature and influence human activities. Some also have powerful magic used to curse others.",
+    "image": "https://megatenwiki.com/images/6/69/P3_Loa_Artwork.png",
+    "strength": 21,
+    "magic": 26,
+    "endurance": 24,
+    "agility": 19,
+    "luck": 18,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Electric",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "loa"
+  },
+  {
+    "id": 148,
+    "name": "Samael",
+    "arcana": "Death",
+    "level": 41,
+    "description": "A mysterious angel with the name ''Poison of God.'' He is often shown as a serpent. Opinions differ on whether he is fallen or not, but either way, he is linked with death.",
+    "image": "https://megatenwiki.com/images/e/e1/SMT1_PS_Samael_Artwork.png",
+    "strength": 26,
+    "magic": 31,
+    "endurance": 27,
+    "agility": 21,
+    "luck": 25,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "samael"
+  },
+  {
+    "id": 149,
+    "name": "Mot",
+    "arcana": "Death",
+    "level": 58,
+    "description": "The Canaanite god of death. Every year, Mot attempts to kill Baal, the god of fertility, only to see him raised from the dead with the help of his sister, Anat.",
+    "image": "https://megatenwiki.com/images/2/27/DeSum_Mot_Artwork.png",
+    "strength": 37,
+    "magic": 42,
+    "endurance": 44,
+    "agility": 29,
+    "luck": 33,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "mot"
+  },
+  {
+    "id": 150,
+    "name": "Alice",
+    "arcana": "Death",
+    "level": 68,
+    "description": "A ghost who appears as a young blonde girl. She seems young, but has formidable magic powers. Some say she's the ghost of a poor English girl who died an unfortunate death.",
+    "image": "https://megatenwiki.com/images/3/3b/P5X_Alice_Artwork.png",
+    "strength": 35,
+    "magic": 62,
+    "endurance": 31,
+    "agility": 51,
+    "luck": 44,
+    "weak": [
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "alice"
+  },
+  {
+    "id": 151,
+    "name": "Thanatos",
+    "arcana": "Death",
+    "level": 78,
+    "description": "The Greek god of death, he is the son of Nyx and the brother of Hypnos. He is depicted as a young man with an inverted torch and a wreath or butterfly in his hands.",
+    "image": "https://megatenwiki.com/images/3/36/P3_Thanatos_Artwork.png",
+    "strength": 52,
+    "magic": 66,
+    "endurance": 53,
+    "agility": 45,
+    "luck": 40,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "thanatos"
+  },
+  {
+    "id": 152,
+    "name": "Nigi Mitama",
+    "arcana": "Temperance",
+    "level": 12,
+    "description": "One of the four aspects of Shinto thought, it works gently to help maintain a calm mind. It is said to aid in one's relations and sociability, and can lead one in a positive direction.",
+    "image": "https://megatenwiki.com/images/1/1c/P5X_Nigi_Mitama_Artwork.png",
+    "strength": 6,
+    "magic": 10,
+    "endurance": 9,
+    "agility": 10,
+    "luck": 8,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Light",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "nigi-mitama"
+  },
+  {
+    "id": 153,
+    "name": "Mitra",
+    "arcana": "Temperance",
+    "level": 22,
+    "description": "An ancient Persian god of contracts, who was also revered as a sun god who brought harvests when he was introduced to the Zoroastrian religion.",
+    "image": "https://megatenwiki.com/images/0/04/P5X_Mitra_Artwork.png",
+    "strength": 13,
+    "magic": 19,
+    "endurance": 16,
+    "agility": 10,
+    "luck": 15,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "mitra"
+  },
+  {
+    "id": 154,
+    "name": "Genbu",
+    "arcana": "Temperance",
+    "level": 30,
+    "description": "One of the Ssu-Ling, celestial creatures of Chinese myth. It represents the direction north, the season of winter, and the element of water. Known to be a great warrior, it supports the earth from below.",
+    "image": "https://megatenwiki.com/images/9/9b/P5X_Genbu_Artwork.png",
+    "strength": 18,
+    "magic": 17,
+    "endurance": 30,
+    "agility": 12,
+    "luck": 20,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "genbu"
+  },
+  {
+    "id": 155,
+    "name": "Seiryu",
+    "arcana": "Temperance",
+    "level": 38,
+    "description": "The noblest of the Ssu-Ling creatures of Chinese myth. It represents the direction east, the season of spring, and the element of wood. He dwells in a palace at the bottom of the ocean.",
+    "image": "https://megatenwiki.com/images/6/6f/P5X_Seiryu_Artwork.png",
+    "strength": 24,
+    "magic": 31,
+    "endurance": 27,
+    "agility": 21,
+    "luck": 18,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "seiryu"
+  },
+  {
+    "id": 156,
+    "name": "Okuninushi",
+    "arcana": "Temperance",
+    "level": 44,
+    "description": "A Kunitsu deity of Japanese mythology that governs agriculture and medicine. Said to have built the country of Izumo with Susano-o's daughter, Suseri-Hime. ",
+    "image": "https://megatenwiki.com/images/d/da/P5X_Okuninushi_Artwork.png",
+    "strength": 35,
+    "magic": 32,
+    "endurance": 29,
+    "agility": 24,
+    "luck": 19,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "okuninushi"
+  },
+  {
+    "id": 157,
+    "name": "Suzaku",
+    "arcana": "Temperance",
+    "level": 55,
+    "description": "One of the Ssu-Ling, celestial creatures of Chinese myth. It is a giant bird that is said to chirp in five beautiful voices. It represents the direction south, the season of summer, and the element of fire.",
+    "image": "https://megatenwiki.com/images/1/1e/P5X_Suzaku_Artwork.png",
+    "strength": 31,
+    "magic": 40,
+    "endurance": 32,
+    "agility": 42,
+    "luck": 31,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [
+      "Fire"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "suzaku"
+  },
+  {
+    "id": 158,
+    "name": "Byakko",
+    "arcana": "Temperance",
+    "level": 63,
+    "description": "One of the Ssu-Ling, celestial creatures of Chinese myth. It represents the direction west, the season of autumn, and the element of metal. He is believed to be the king of all beasts.",
+    "image": "https://megatenwiki.com/images/e/e2/P5X_Byakko_Artwork.png",
+    "strength": 45,
+    "magic": 44,
+    "endurance": 50,
+    "agility": 39,
+    "luck": 30,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Ice"
+    ],
+    "dlc": 0,
+    "query": "byakko"
+  },
+  {
+    "id": 159,
+    "name": "Yurlungur",
+    "arcana": "Temperance",
+    "level": 71,
+    "description": "A snake with a rainbow body from Murngin lore. He is a fertility deity who controls the weather and resides in a holy pond filled with rainbow-colored water.",
+    "image": "https://megatenwiki.com/images/7/7e/P5X_Yurlungur_Artwork.png",
+    "strength": 41,
+    "magic": 45,
+    "endurance": 63,
+    "agility": 42,
+    "luck": 38,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Fire",
+      "Electric",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "yurlungur"
+  },
+  {
+    "id": 160,
+    "name": "Lilim",
+    "arcana": "Devil",
+    "level": 8,
+    "description": "A demon who tempts sleeping men and attacks infants. She is the daughter of the demoness, Lilith. Like her mother, she drains men of their essence.",
+    "image": "https://megatenwiki.com/images/c/c3/P5X_Lilim_Artwork.png",
+    "strength": 4,
+    "magic": 10,
+    "endurance": 4,
+    "agility": 6,
+    "luck": 7,
+    "weak": [
+      "Light"
+    ],
+    "resists": [
+      "Electric",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "lilim"
+  },
+  {
+    "id": 161,
+    "name": "Mokoi",
+    "arcana": "Devil",
+    "level": 18,
+    "description": "Evil spirits of Murngin lore believed to be reborn shadows. They kidnap and eat children, and strike down any sorcerer who uses black magic.",
+    "image": "https://megatenwiki.com/images/a/ae/P5X_Mokoi_Artwork.png",
+    "strength": 7,
+    "magic": 7,
+    "endurance": 12,
+    "agility": 16,
+    "luck": 22,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "mokoi"
+  },
+  {
+    "id": 162,
+    "name": "Baphomet",
+    "arcana": "Devil",
+    "level": 30,
+    "description": "A goat-headed demon that is worshiped in Black Sabbaths. His name is sometimes used as a generic name for any demon. He would become an object of worship for witches.",
+    "image": "https://megatenwiki.com/images/8/82/P5X_Baphomet_Artwork.png",
+    "strength": 20,
+    "magic": 25,
+    "endurance": 22,
+    "agility": 16,
+    "luck": 19,
+    "weak": [
+      "Wind",
+      "Light"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "baphomet"
+  },
+  {
+    "id": 163,
+    "name": "Incubus",
+    "arcana": "Devil",
+    "level": 37,
+    "description": "A male demon of European lore in medieval times. They visit sleeping women and have sexual intercourse with them. The resulting children become witches or wizards.",
+    "image": "https://megatenwiki.com/images/5/5f/P5X_Incubus_Artwork.png",
+    "strength": 22,
+    "magic": 30,
+    "endurance": 20,
+    "agility": 21,
+    "luck": 28,
+    "weak": [
+      "Slash",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "incubus"
+  },
+  {
+    "id": 164,
+    "name": "Succubus",
+    "arcana": "Devil",
+    "level": 47,
+    "description": "A female demon of European lore in medieval times. They visit sleeping men and have sexual intercourse with them. The victims don't wake up, but may dream of the encounter.",
+    "image": "https://megatenwiki.com/images/a/a3/P5X_Succubus_Artwork.png",
+    "strength": 26,
+    "magic": 41,
+    "endurance": 28,
+    "agility": 33,
+    "luck": 27,
+    "weak": [
+      "Pierce",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Fire"
+    ],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "succubus"
+  },
+  {
+    "id": 165,
+    "name": "Pazuzu",
+    "arcana": "Devil",
+    "level": 56,
+    "description": "The Babylonian lord of wind and scorching sands. Has a lion's head and arms, eagle-clawed feet, bird wings, and deadly poison. The diseases he spreads can only be cured by magical means.",
+    "image": "https://megatenwiki.com/images/c/c3/P5X_Pazuzu_Censored_Artwork.png",
+    "strength": 34,
+    "magic": 42,
+    "endurance": 35,
+    "agility": 32,
+    "luck": 34,
+    "weak": [
+      "Electric",
+      "Light"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [
+      "Ice"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "pazuzu"
+  },
+  {
+    "id": 166,
+    "name": "Lilith",
+    "arcana": "Devil",
+    "level": 65,
+    "description": "Said to have been Adam's first wife, she desired to be his equal and refused to obey him. She was cast out of Eden and became a demon of the night. She is the mother of the demoness, Lilim.",
+    "image": "https://megatenwiki.com/images/5/5a/SMT1_PS_Lilith_Artwork.png",
+    "strength": 35,
+    "magic": 56,
+    "endurance": 38,
+    "agility": 44,
+    "luck": 35,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Electric"
+    ],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "lilith"
+  },
+  {
+    "id": 167,
+    "name": "Abaddon",
+    "arcana": "Devil",
+    "level": 76,
+    "description": "The ''Destroyer'' and ''Angel of the Bottomless Pit'' as described in ancient scriptures. He controls locusts, using them to cause massive destruction to villages. ",
+    "image": "https://megatenwiki.com/images/d/d4/SMT1_Abaddon_Artwork.png",
+    "strength": 53,
+    "magic": 61,
+    "endurance": 48,
+    "agility": 33,
+    "luck": 46,
+    "weak": [
+      "Ice",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Slash",
+      "Strike",
+      "Dark"
+    ],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "abaddon"
+  },
+  {
+    "id": 168,
+    "name": "Beelzebub",
+    "arcana": "Devil",
+    "level": 81,
+    "description": "Demonic Lord of the Flies whose insect minions carry souls for him to control. He is mentioned in the Bible as a leader of evil spirits and is seen as a powerful demon.",
+    "image": "https://megatenwiki.com/images/0/07/SH1_Beelzebub_Artwork.png",
+    "strength": 50,
+    "magic": 62,
+    "endurance": 50,
+    "agility": 60,
+    "luck": 52,
+    "weak": [
+      "Fire",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Strike",
+      "Electric",
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "beelzebub"
+  },
+  {
+    "id": 169,
+    "name": "Eligor",
+    "arcana": "Tower",
+    "level": 31,
+    "description": "One of the 72 demons of the Goetia. He looks like a knight and has the power to see things to come. He also knows much about wars. ",
+    "image": "https://megatenwiki.com/images/2/21/P5X_Eligor_Artwork.png",
+    "strength": 26,
+    "magic": 21,
+    "endurance": 24,
+    "agility": 20,
+    "luck": 15,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Pierce",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "eligor"
+  },
+  {
+    "id": 170,
+    "name": "Cu Chulainn",
+    "arcana": "Tower",
+    "level": 40,
+    "description": "A hero in Celtic folklore. He was called Setanta until he earned the name ''Culann's Hound.'' There are many tales of his adventures. He received his spear, Gae Bolg, from his mentor, Scathach.",
+    "image": "https://megatenwiki.com/images/a/ad/P5X_Cu_Chulainn_Artwork.png",
+    "strength": 33,
+    "magic": 29,
+    "endurance": 24,
+    "agility": 26,
+    "luck": 21,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Pierce",
+      "Electric"
+    ],
+    "reflects": [
+      "Wind"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "cu-chulainn"
+  },
+  {
+    "id": 171,
+    "name": "Magatsu-Izanagi",
+    "arcana": "Tower",
+    "level": 50,
+    "description": "A Persona of another story. He is Izanagi's rival and looks just like him. Magatsu means ''calamity.'' Unlike Izanagi, who founded the land and brought order, he leads all back into chaos.",
+    "image": "https://megatenwiki.com/images/a/a8/P3R_Magatsu-Izanagi_Render.png",
+    "strength": 42,
+    "magic": 39,
+    "endurance": 36,
+    "agility": 28,
+    "luck": 17,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light",
+      "Dark"
+    ],
+    "dlc": 1,
+    "query": "magatsu-izanagi"
+  },
+  {
+    "id": 172,
+    "name": "Bishamonten",
+    "arcana": "Tower",
+    "level": 60,
+    "description": "Also known as Tamonten and Vaishravana in Buddhist lore, he is the strongest of the Heavenly Kings. He protects the North and is the god of war.",
+    "image": "https://megatenwiki.com/images/9/96/DeSu1_Bishamonten_Artwork.png",
+    "strength": 50,
+    "magic": 38,
+    "endurance": 45,
+    "agility": 36,
+    "luck": 30,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Strike",
+      "Fire"
+    ],
+    "dlc": 0,
+    "query": "bishamonten"
+  },
+  {
+    "id": 173,
+    "name": "Qitian Dasheng",
+    "arcana": "Tower",
+    "level": 67,
+    "description": "Also known as ''Sun Wukong,'' he was supposedly born from a rock. After wreaking havoc, he was punished by Buddha, but was eventually saved by a monk named Santsang.",
+    "image": "https://megatenwiki.com/images/1/1f/P3_Seiten_Taisei_Artwork.png",
+    "strength": 52,
+    "magic": 38,
+    "endurance": 39,
+    "agility": 50,
+    "luck": 41,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Pierce"
+    ],
+    "dlc": 0,
+    "query": "qitian-dasheng"
+  },
+  {
+    "id": 174,
+    "name": "Mara",
+    "arcana": "Tower",
+    "level": 75,
+    "description": "A Buddhist demon that represents the fear of death. Also known as ''The Evil One,'' he sent his daughters to tempt Buddha during his meditations.",
+    "image": "https://megatenwiki.com/images/f/f1/P5X_Mara_Artwork.png",
+    "strength": 60,
+    "magic": 50,
+    "endurance": 50,
+    "agility": 48,
+    "luck": 39,
+    "weak": [
+      "Ice",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Strike",
+      "Fire",
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "mara"
+  },
+  {
+    "id": 175,
+    "name": "Masakado",
+    "arcana": "Tower",
+    "level": 79,
+    "description": "Taira no Masakado, hero of the Heian period. He claimed the title ''Shinno'' (New Emperor) and rebelled against the government. He was killed, but it is said he became a demigod.",
+    "image": "https://megatenwiki.com/images/c/c6/SH1_Masakado_Artwork.png",
+    "strength": 67,
+    "magic": 46,
+    "endurance": 55,
+    "agility": 43,
+    "luck": 48,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Pierce",
+      "Dark"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "masakado"
+  },
+  {
+    "id": 176,
+    "name": "Shiva",
+    "arcana": "Tower",
+    "level": 82,
+    "description": "One of the major Hindu gods, he is known as the Destroyer but is also related to regeneration. His wife is Parvati.",
+    "image": "https://megatenwiki.com/images/6/60/DeSum_Shiva_Artwork.png",
+    "strength": 63,
+    "magic": 57,
+    "endurance": 48,
+    "agility": 57,
+    "luck": 55,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Electric"
+    ],
+    "nullifies": [
+      "Pierce",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "shiva"
+  },
+  {
+    "id": 177,
+    "name": "Chi You",
+    "arcana": "Tower",
+    "level": 86,
+    "description": "A Chinese god of war, he is said to have invented many weapons. He and his followers rebelled against the Yellow Emperor, Huang Di, but were ultimately defeated.",
+    "image": "https://megatenwiki.com/images/d/d7/DeSum_Chi_You_Artwork.png",
+    "strength": 69,
+    "magic": 50,
+    "endurance": 63,
+    "agility": 53,
+    "luck": 60,
+    "weak": [
+      "Electric"
+    ],
+    "resists": [
+      "Slash",
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "chi-you"
+  },
+  {
+    "id": 178,
+    "name": "Neko Shogun",
+    "arcana": "Star",
+    "level": 17,
+    "description": "A prophetic Taoist god, originally known as Mao Shogun. Due to a linguistic error involving the Chinese word for cat, his name became Neko Shogun.",
+    "image": "https://megatenwiki.com/images/b/b0/P5X_Neko_Shogun_Artwork.png",
+    "strength": 15,
+    "magic": 12,
+    "endurance": 10,
+    "agility": 14,
+    "luck": 8,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "neko-shogun"
+  },
+  {
+    "id": 179,
+    "name": "Setanta",
+    "arcana": "Star",
+    "level": 29,
+    "description": "A brave young man in Celtic myth. After defeating a fierce guard dog, he volunteered to take its place, earning him the nickname ''Hound of Culann.''",
+    "image": "https://megatenwiki.com/images/0/0b/P5X_Setanta_Artwork.png",
+    "strength": 26,
+    "magic": 19,
+    "endurance": 17,
+    "agility": 21,
+    "luck": 15,
+    "weak": [
+      "Fire",
+      "Dark"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "setanta"
+  },
+  {
+    "id": 180,
+    "name": "Cendrillon",
+    "arcana": "Star",
+    "level": 36,
+    "description": "A Persona of another story. It is the French name of the titular heroine of Cinderella, a tale of great renown in which a mistreated waif gains luxury, beauty, and a single night's dance with a prince through the power of magic.",
+    "image": "https://megatenwiki.com/images/9/90/P5R_Cendrillon_Artwork.png",
+    "strength": 25,
+    "magic": 22,
+    "endurance": 20,
+    "agility": 28,
+    "luck": 20,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 1,
+    "query": "cendrillon"
+  },
+  {
+    "id": 181,
+    "name": "Kaiwan",
+    "arcana": "Star",
+    "level": 42,
+    "description": "A god in Assyrian legend. His name is interchangeable with that of Sakkut, another incarnation of the star god, Saturn.",
+    "image": "https://megatenwiki.com/images/0/08/P5X_Kaiwan_Artwork.png",
+    "strength": 23,
+    "magic": 28,
+    "endurance": 25,
+    "agility": 25,
+    "luck": 32,
+    "weak": [
+      "Pierce"
+    ],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "kaiwan"
+  },
+  {
+    "id": 182,
+    "name": "Ganesha",
+    "arcana": "Star",
+    "level": 51,
+    "description": "The Hindu elephant-headed god. He was originally created by Parvati to prevent anyone from watching her bathe. Shiva batted off his original head and replaced it with an elephant's head.",
+    "image": "https://megatenwiki.com/images/7/7b/P5X_Ganesha_Artwork.png",
+    "strength": 39,
+    "magic": 31,
+    "endurance": 34,
+    "agility": 20,
+    "luck": 40,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Wind"
+    ],
+    "nullifies": [
+      "Pierce"
+    ],
+    "dlc": 0,
+    "query": "ganesha"
+  },
+  {
+    "id": 183,
+    "name": "Vanadis",
+    "arcana": "Star",
+    "level": 58,
+    "description": "A Persona of another story. It is the true name of Freyja, of the Norse Vanir deities. Her name means ''dis of the Vanir''—''dis'' being a goddess. Known to be a great beauty and a witchlike master of magic.",
+    "image": "https://megatenwiki.com/images/a/af/P3R_Vanadis_Render.png",
+    "strength": 43,
+    "magic": 38,
+    "endurance": 30,
+    "agility": 42,
+    "luck": 33,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Slash"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 1,
+    "query": "vanadis"
+  },
+  {
+    "id": 184,
+    "name": "Garuda",
+    "arcana": "Star",
+    "level": 64,
+    "description": "A divine bird-man in Hindu lore, he once fought the gods and received immortality in exchange for becoming Vishnu's carrier.",
+    "image": "https://megatenwiki.com/images/7/75/P5X_Garuda_Artwork.png",
+    "strength": 45,
+    "magic": 41,
+    "endurance": 35,
+    "agility": 51,
+    "luck": 36,
+    "weak": [
+      "Ice",
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Fire",
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "garuda"
+  },
+  {
+    "id": 185,
+    "name": "Houou",
+    "arcana": "Star",
+    "level": 70,
+    "description": "The legendary bird of myth said to appear only in times of peace. It is the ruler of all birds. When it dies, birds across the land chirp with sadness.",
+    "image": "https://megatenwiki.com/images/9/9c/P5X_Phoenix_Artwork.png",
+    "strength": 35,
+    "magic": 57,
+    "endurance": 39,
+    "agility": 54,
+    "luck": 41,
+    "weak": [
+      "Pierce",
+      "Electric"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire",
+      "Light"
+    ],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "houou"
+  },
+  {
+    "id": 186,
+    "name": "Saturnus",
+    "arcana": "Star",
+    "level": 76,
+    "description": "The Roman god of agriculture. He is commonly identified with Cronus. In an attempt to prevent his destiny, he ate his children, but was overthrown as was fated.",
+    "image": "https://megatenwiki.com/images/6/67/SH1_Saturnus_Artwork.png",
+    "strength": 43,
+    "magic": 70,
+    "endurance": 45,
+    "agility": 51,
+    "luck": 41,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [
+      "Wind"
+    ],
+    "dlc": 0,
+    "query": "saturnus"
+  },
+  {
+    "id": 187,
+    "name": "Helel",
+    "arcana": "Star",
+    "level": 88,
+    "description": "A fallen angel in Judeo-Christian lore whose name means ''morning star.'' Primarily known for defying God, but also worshiped as a bringer of light to mankind.",
+    "image": "https://megatenwiki.com/images/7/7b/SMT2_Lucifer_Ally_Artwork.png",
+    "strength": 63,
+    "magic": 63,
+    "endurance": 62,
+    "agility": 58,
+    "luck": 58,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Slash",
+      "Strike",
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Light",
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "helel"
+  },
+  {
+    "id": 188,
+    "name": "Gurulu",
+    "arcana": "Moon",
+    "level": 14,
+    "description": "A demon that takes the shape of a giant bird in Sri Lankan myth. It is thought to be a derivation of Garuda.",
+    "image": "https://megatenwiki.com/images/2/2b/SH1_Gurr_Artwork.png",
+    "strength": 13,
+    "magic": 8,
+    "endurance": 10,
+    "agility": 12,
+    "luck": 6,
+    "weak": [
+      "Fire",
+      "Light"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "gurulu"
+  },
+  {
+    "id": 189,
+    "name": "Yamata-no-Orochi",
+    "arcana": "Moon",
+    "level": 25,
+    "description": "A giant snake with eight heads that Susano-o defeated to save Kushinada-hime. The legendary sword Ame-no-Murakumo-no-Tsurugi, also known as the Sword of Kusanagi, emerged from its belly.",
+    "image": "https://megatenwiki.com/images/c/c7/P5X_Yamata-no-Orochi_Artwork.png",
+    "strength": 19,
+    "magic": 19,
+    "endurance": 17,
+    "agility": 13,
+    "luck": 14,
+    "weak": [
+      "Slash"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "yamata-no-orochi"
+  },
+  {
+    "id": 190,
+    "name": "Kaguya",
+    "arcana": "Moon",
+    "level": 34,
+    "description": "A Persona of another story. A divine being born from a glowing bamboo shoot. Though many proposed to her, none could complete her strict tasks. She eventually returned to her home, the moon.",
+    "image": "https://megatenwiki.com/images/b/ba/P4G_Kaguya_Graphic.png",
+    "strength": 19,
+    "magic": 32,
+    "endurance": 28,
+    "agility": 19,
+    "luck": 11,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light",
+      "Dark"
+    ],
+    "dlc": 1,
+    "query": "kaguya"
+  },
+  {
+    "id": 191,
+    "name": "Girimekhala",
+    "arcana": "Moon",
+    "level": 39,
+    "description": "A giant elephant monster of Sri Lankan myth, it is typically portrayed as being ridden by the Evil One, Mara. Whoever looks into its evil eye is said to be met with misfortune.",
+    "image": "https://megatenwiki.com/images/d/db/P5X_Girimehkala_Artwork.png",
+    "strength": 36,
+    "magic": 26,
+    "endurance": 28,
+    "agility": 20,
+    "luck": 20,
+    "weak": [
+      "Wind",
+      "Light"
+    ],
+    "resists": [],
+    "reflects": [
+      "Slash",
+      "Pierce"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "girimekhala"
+  },
+  {
+    "id": 192,
+    "name": "Dionysus",
+    "arcana": "Moon",
+    "level": 49,
+    "description": "The Greek god of wine and theater. He had two births. When his mother died while bearing him, Zeus took the premature infant and let him mature in Zeus's own thigh to a proper birth.",
+    "image": "https://megatenwiki.com/images/6/6a/P5X_Dionysus_Artwork.png",
+    "strength": 30,
+    "magic": 38,
+    "endurance": 26,
+    "agility": 30,
+    "luck": 33,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Strike"
+    ],
+    "reflects": [
+      "Electric"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "dionysus"
+  },
+  {
+    "id": 193,
+    "name": "Chernobog",
+    "arcana": "Moon",
+    "level": 56,
+    "description": "A cursed god of the darkness in Slavic myth. His name means ''Black God.'' He is the counterpart of the ''White God'' Belobog.",
+    "image": "https://megatenwiki.com/images/3/39/SH1_Chernobog_Artwork.png",
+    "strength": 48,
+    "magic": 41,
+    "endurance": 31,
+    "agility": 35,
+    "luck": 32,
+    "weak": [
+      "Fire"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [
+      "Slash"
+    ],
+    "dlc": 0,
+    "query": "chernobog"
+  },
+  {
+    "id": 194,
+    "name": "Seth",
+    "arcana": "Moon",
+    "level": 62,
+    "description": "The Egyptian god of the desert, chaos, and evil. He murdered his brother, Osiris, and tried to become chief god, but he was castrated by Osiris's son, Horus.",
+    "image": "https://megatenwiki.com/images/6/60/P5X_Seth_Artwork.png",
+    "strength": 47,
+    "magic": 49,
+    "endurance": 42,
+    "agility": 29,
+    "luck": 35,
+    "weak": [
+      "Ice",
+      "Light"
+    ],
+    "resists": [
+      "Dark"
+    ],
+    "reflects": [
+      "Fire"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "seth"
+  },
+  {
+    "id": 195,
+    "name": "Baal Zebul",
+    "arcana": "Moon",
+    "level": 72,
+    "description": "Demon whose name means ''Lord of the High Place.'' Possibly derived from the Syrian deity Ba'al, he presides over death and the spirits of the deceased. Many worshiped him because of this power.",
+    "image": "https://megatenwiki.com/images/a/a2/SH1_Beelzebub_Human_Artwork.png",
+    "strength": 51,
+    "magic": 56,
+    "endurance": 45,
+    "agility": 42,
+    "luck": 41,
+    "weak": [
+      "Fire",
+      "Light"
+    ],
+    "resists": [
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "baal-zebul"
+  },
+  {
+    "id": 196,
+    "name": "Sandalphon",
+    "arcana": "Moon",
+    "level": 80,
+    "description": "Metatron's twin brother in Judeo-Christian lore, he is the master of heavenly songs. It is said that a human would take 500 years to walk the length of his body.",
+    "image": "https://megatenwiki.com/images/9/98/P5X_Sandalphon_Artwork.png",
+    "strength": 53,
+    "magic": 53,
+    "endurance": 67,
+    "agility": 46,
+    "luck": 49,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Electric"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Slash"
+    ],
+    "dlc": 0,
+    "query": "sandalphon"
+  },
+  {
+    "id": 197,
+    "name": "Yatagarasu",
+    "arcana": "Sun",
+    "level": 24,
+    "description": "A divine creature in Japanese lore. They are three-legged birds sent by Amaterasu to help humans. They are said to have helped Emperor Jinmu claim victory.",
+    "image": "https://megatenwiki.com/images/4/47/P5X_Yatagarasu_Artwork.png",
+    "strength": 16,
+    "magic": 16,
+    "endurance": 14,
+    "agility": 24,
+    "luck": 13,
+    "weak": [
+      "Ice"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "yatagarasu"
+  },
+  {
+    "id": 198,
+    "name": "Thunderbird",
+    "arcana": "Sun",
+    "level": 35,
+    "description": "A revered bird of Native American mythology said to live atop cloud-shrouded peaks. Resembles an eagle. Its wingbeats create thunderclaps, and some legends say its eyes can unleash lightning.",
+    "image": "https://megatenwiki.com/images/d/db/SH1_Thunderbird_Artwork.png",
+    "strength": 18,
+    "magic": 28,
+    "endurance": 18,
+    "agility": 32,
+    "luck": 21,
+    "weak": [
+      "Pierce"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Electric"
+    ],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "thunderbird"
+  },
+  {
+    "id": 199,
+    "name": "Quetzalcoatl",
+    "arcana": "Sun",
+    "level": 45,
+    "description": "An Aztec deity known as the Feathered Serpent. He created humans with his own blood and taught them how to sustain themselves.",
+    "image": "https://megatenwiki.com/images/3/30/P5X_Quetzalcoatl_Artwork.png",
+    "strength": 25,
+    "magic": 35,
+    "endurance": 33,
+    "agility": 30,
+    "luck": 25,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Wind"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "quetzalcoatl"
+  },
+  {
+    "id": 200,
+    "name": "Jatayu",
+    "arcana": "Sun",
+    "level": 55,
+    "description": "The king of birds in Hindu myth. In the Ramayana, he fought bravely, but lost to Ravana in an attempt to save Sita, Rama's wife, the 7th avatar of Vishnu.",
+    "image": "https://megatenwiki.com/images/9/9c/P5X_Jatayu_Artwork.png",
+    "strength": 33,
+    "magic": 40,
+    "endurance": 30,
+    "agility": 50,
+    "luck": 28,
+    "weak": [
+      "Pierce",
+      "Electric"
+    ],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Light"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Wind"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "jatayu"
+  },
+  {
+    "id": 201,
+    "name": "Horus",
+    "arcana": "Sun",
+    "level": 67,
+    "description": "An ancient god of Egypt whose eyes are the sun and moon. Revered by some as the chief god, he is often depicted as a hawk or a falcon.",
+    "image": "https://megatenwiki.com/images/d/d4/P5X_Horus_Artwork.png",
+    "strength": 42,
+    "magic": 53,
+    "endurance": 34,
+    "agility": 48,
+    "luck": 40,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "horus"
+  },
+  {
+    "id": 202,
+    "name": "Vishnu",
+    "arcana": "Sun",
+    "level": 78,
+    "description": "One of the major Hindu gods, he is the preserver and protector of the universe. Legends claim that he will make ten appearances across time and space to strike down evil and uphold justice.",
+    "image": "https://megatenwiki.com/images/3/3a/P5X_Vishnu_Artwork.png",
+    "strength": 65,
+    "magic": 55,
+    "endurance": 50,
+    "agility": 53,
+    "luck": 42,
+    "weak": [
+      "Dark"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Light"
+    ],
+    "nullifies": [
+      "Ice",
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "vishnu"
+  },
+  {
+    "id": 203,
+    "name": "Asura",
+    "arcana": "Sun",
+    "level": 85,
+    "description": "The Hindu king of Asuras is named Maha Vairocana, or ''One Who Shines On All.'' In Buddhism, he is known as Dainichi Nyorai.",
+    "image": "https://megatenwiki.com/images/0/05/SMT1_Asura_Artwork.png",
+    "strength": 75,
+    "magic": 55,
+    "endurance": 58,
+    "agility": 50,
+    "luck": 54,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [
+      "Strike",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "asura"
+  },
+  {
+    "id": 204,
+    "name": "Anubis",
+    "arcana": "Judgement",
+    "level": 40,
+    "description": "The jackal-headed god of Egyptian myth. He weighs the hearts of the dead to determine their final destination. He is also associated with embalming. ",
+    "image": "https://megatenwiki.com/images/3/35/P5X_Anubis_Artwork.png",
+    "strength": 27,
+    "magic": 35,
+    "endurance": 30,
+    "agility": 21,
+    "luck": 26,
+    "weak": [],
+    "resists": [],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Light",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "anubis"
+  },
+  {
+    "id": 205,
+    "name": "Trumpeter",
+    "arcana": "Judgement",
+    "level": 59,
+    "description": "Angels said to sound the trumpets at the apocalypse. Each trumpet brings more plagues and disasters, turning the earth into a land of death and suffering.",
+    "image": "https://megatenwiki.com/images/1/1e/P5X_Trumpeter_Artwork.png",
+    "strength": 44,
+    "magic": 44,
+    "endurance": 37,
+    "agility": 35,
+    "luck": 33,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Dark"
+    ],
+    "dlc": 0,
+    "query": "trumpeter"
+  },
+  {
+    "id": 206,
+    "name": "Michael",
+    "arcana": "Judgement",
+    "level": 70,
+    "description": "One of the four major archangels, he is at the top of the angelic hierarchy. He carries a long spear that can cut through anything, and his name means ''one who is like God.''",
+    "image": "https://megatenwiki.com/images/e/e4/P5X_Michael_Artwork.png",
+    "strength": 56,
+    "magic": 48,
+    "endurance": 46,
+    "agility": 37,
+    "luck": 42,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Slash",
+      "Pierce",
+      "Dark"
+    ],
+    "reflects": [
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "michael"
+  },
+  {
+    "id": 207,
+    "name": "Satan",
+    "arcana": "Judgement",
+    "level": 82,
+    "description": "The prince of darkness in Judeo-Christian lore, known for his role as the snake that tempted Adam and Eve at Eden. It is also said he is sent by God to test man's piety.",
+    "image": "https://megatenwiki.com/images/b/bb/SMT2_SFC_Satan_Artwork.png",
+    "strength": 55,
+    "magic": 68,
+    "endurance": 52,
+    "agility": 43,
+    "luck": 53,
+    "weak": [
+      "Wind"
+    ],
+    "resists": [
+      "Fire"
+    ],
+    "reflects": [
+      "Ice"
+    ],
+    "absorbs": [
+      "Dark"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "satan"
+  },
+  {
+    "id": 208,
+    "name": "Lucifer",
+    "arcana": "Judgement",
+    "level": 89,
+    "description": "A fallen angel and the lord of demons in Judeo-Christian lore. His pride led him to revolt against God, taking a third of the heavenly host with him. He now waits for a second chance to challenge God.",
+    "image": "https://megatenwiki.com/images/f/fc/SMT2_Lucifer_Enemy_Artwork.png",
+    "strength": 70,
+    "magic": 70,
+    "endurance": 61,
+    "agility": 51,
+    "luck": 55,
+    "weak": [],
+    "resists": [],
+    "reflects": [
+      "Dark"
+    ],
+    "absorbs": [
+      "Fire",
+      "Electric"
+    ],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "lucifer"
+  },
+  {
+    "id": 209,
+    "name": "Messiah",
+    "arcana": "Judgement",
+    "level": 91,
+    "description": "Appears before Judgment Day to save the virtuous. He is a universal figure, appearing in myth around the world. Many stories involve his death and rebirth.",
+    "image": "https://megatenwiki.com/images/1/1a/P3_Messiah_Artwork.png",
+    "strength": 65,
+    "magic": 70,
+    "endurance": 62,
+    "agility": 59,
+    "luck": 59,
+    "weak": [],
+    "resists": [
+      "Fire",
+      "Ice",
+      "Electric",
+      "Wind"
+    ],
+    "reflects": [
+      "Light",
+      "Dark"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "messiah"
+  },
+  {
+    "id": 210,
+    "name": "Nidhoggr",
+    "arcana": "Aeon",
+    "level": 47,
+    "description": "An evil dragon that gnaws on the roots of Yggdrasil, the World Tree. It rules over the evil snakes that live there. Capable of surviving Ragnarok by feeding on the slain corpses that drift to it.",
+    "image": "https://megatenwiki.com/images/4/45/P3_Nidhoggr_Artwork.png",
+    "strength": 36,
+    "magic": 29,
+    "endurance": 43,
+    "agility": 21,
+    "luck": 28,
+    "weak": [
+      "Wind",
+      "Light"
+    ],
+    "resists": [
+      "Pierce",
+      "Dark"
+    ],
+    "reflects": [],
+    "absorbs": [],
+    "nullifies": [
+      "Ice",
+      "Electric"
+    ],
+    "dlc": 0,
+    "query": "nidhoggr"
+  },
+  {
+    "id": 211,
+    "name": "Uriel",
+    "arcana": "Aeon",
+    "level": 57,
+    "description": "One of the four major archangels. His name means ''Flame of God,'' and he knows all the celestial phenomena. He is the first angel Satan met on earth. ",
+    "image": "https://megatenwiki.com/images/5/56/SMT2_Uriel_Artwork.png",
+    "strength": 47,
+    "magic": 42,
+    "endurance": 35,
+    "agility": 36,
+    "luck": 30,
+    "weak": [
+      "Ice",
+      "Dark"
+    ],
+    "resists": [
+      "Slash"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Fire"
+    ],
+    "nullifies": [
+      "Electric",
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "uriel"
+  },
+  {
+    "id": 212,
+    "name": "Ananta",
+    "arcana": "Aeon",
+    "level": 73,
+    "description": "The thousand-headed serpent of Hindu myth. Ananta is Sanskrit for ''infinite.'' After resting on him, Vishnu woke up and created the universe. ",
+    "image": "https://megatenwiki.com/images/8/89/DeSum_Ananta_Artwork.png",
+    "strength": 51,
+    "magic": 51,
+    "endurance": 68,
+    "agility": 35,
+    "luck": 42,
+    "weak": [
+      "Slash",
+      "Electric"
+    ],
+    "resists": [
+      "Pierce"
+    ],
+    "reflects": [],
+    "absorbs": [
+      "Ice"
+    ],
+    "nullifies": [
+      "Light"
+    ],
+    "dlc": 0,
+    "query": "ananta"
+  },
+  {
+    "id": 213,
+    "name": "Metatron",
+    "arcana": "Aeon",
+    "level": 87,
+    "description": "The greatest angel in Judeo-Christian legend. He is known as the Voice of God or the Angel of Contracts. Despite his duty to maintain the world's order, he shows no mercy towards humanity.",
+    "image": "https://megatenwiki.com/images/2/26/DeSum_Metatron_Artwork.png",
+    "strength": 60,
+    "magic": 65,
+    "endurance": 65,
+    "agility": 55,
+    "luck": 53,
+    "weak": [
+      "Electric",
+      "Dark"
+    ],
+    "resists": [
+      "Ice"
+    ],
+    "reflects": [
+      "Fire",
+      "Wind",
+      "Light"
+    ],
+    "absorbs": [],
+    "nullifies": [],
+    "dlc": 0,
+    "query": "metatron"
+  }
+]

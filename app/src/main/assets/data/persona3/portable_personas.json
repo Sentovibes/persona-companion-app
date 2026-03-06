@@ -1,0 +1,192 @@
+{
+  "Cybele": {
+    "cardlvl": 76,
+    "inherits": "recovery",
+    "lvl": 68,
+    "race": "Lovers",
+    "resists": "---s-s--n-",
+    "skills": {
+      "Samarecarm": 0.1,
+      "Auto-Maraku": 0.2,
+      "Myriad Arrows": 0.3,
+      "Megidola": 70,
+      "Weapons Master": 73,
+      "Spell Master": 75
+    },
+    "stats": [49, 55, 40, 42, 50]
+  },
+  "Melchizedek": {
+    "cardlvl": 68,
+    "heart": "Radiant Halo",
+    "inherits": "strike",
+    "lvl": 59,
+    "race": "Justice",
+    "resists": "-s-----rw-",
+    "skills": {
+      "Vicious Strike": 0.1,
+      "Mediarahan": 0.2,
+      "Auto-Mataru": 0.3,
+      "Weapons Master": 60,
+      "Akasha Arts": 64,
+      "Repel Dark": 65,
+      "God's Hand": 69
+    },
+    "stats": [50, 46, 43, 36, 31]
+  },
+  "Messiah": {
+    "cardlvl": 99,
+    "heart": "Armor of Light,Shoes of Light,Soul of Athena,Swan Legs,Aura Dog Suit,Omnipotent Orb (1%)",
+    "inherits": "lidark",
+    "lvl": 90,
+    "race": "Judgement",
+    "resists": "---ssssrw-",
+    "skills": {
+      "Megidolaon": 0.1,
+      "Regenerate 3": 0.2,
+      "God's Hand": 0.3,
+      "Salvation": 93,
+      "Invigorate 3": 94,
+      "Absorb Pierce": 95,
+      "Enduring Soul": 97,
+      "Magic Skill Up": 98
+    },
+    "stats": [63, 62, 60, 62, 63]
+  },
+  "Mokoi": {
+    "cardlvl": 20,
+    "inherits": "ailment",
+    "lvl": 18,
+    "race": "Devil",
+    "resists": "---wn---n-",
+    "skills": {
+      "Evil Smile": 0.1,
+      "Fear Boost": 0.2,
+      "Stagnant Air": 0.3,
+      "Marin Karin": 19,
+      "Poison Mist": 20,
+      "Charm Boost": 21,
+      "Kill Rush": 22
+    },
+    "stats": [6, 9, 12, 17, 23]
+  },
+  "Neko Shogun": {
+    "cardlvl": 23,
+    "inherits": "strike",
+    "lvl": 19,
+    "race": "Star",
+    "resists": "s-----wnn-",
+    "skills": {
+      "Assault Dive": 0.1,
+      "Double Fangs": 0.2,
+      "Regenerate 1": 0.3,
+      "Counter": 20,
+      "Dodge Wind": 22,
+      "Swift Strike": 24
+    },
+    "stats": [18, 11, 11, 19, 7]
+  },
+  "Seiten Taisei": {
+    "cardlvl": 72,
+    "heart": "Mystic Rock",
+    "inherits": "pierce",
+    "lvl": 67,
+    "race": "Tower",
+    "resists": "--nw--s---",
+    "skills": {
+      "Arrow Rain": 0.1,
+      "Apt Pupil": 0.2,
+      "Fast Retreat": 0.3,
+      "Weary Thrust": 70,
+      "Weapons Master": 71,
+      "Regenerate 3": 73
+    },
+    "stats": [51, 38, 43, 51, 45]
+  },
+  "Setanta": {
+    "cardlvl": 34,
+    "inherits": "pierce",
+    "lvl": 28,
+    "race": "Star",
+    "resists": "---w----w-",
+    "skills": {
+      "Twin Shot": 0.1,
+      "Sharp Student": 0.2,
+      "Zionga": 0.3,
+      "Power Charge": 29,
+      "Auto-Tarukaja": 31,
+      "Resist Fire": 32,
+      "Auto-Sukukaja": 33
+    },
+    "stats": [26, 19, 18, 21, 14]
+  },
+  "Siegfried": {
+    "cardlvl": 67,
+    "inherits": "slash",
+    "lvl": 59,
+    "race": "Strength",
+    "resists": "ns-----nw-",
+    "skills": {
+      "Tempest Slash": 0.1,
+      "Power Charge": 0.2,
+      "Auto-Masuku": 0.3,
+      "High Counter": 62,
+      "Vorpal Blade": 63,
+      "Arms Master": 65,
+      "Weapons Master": 66,
+      "Scarlet Havoc": 3883
+    },
+    "stats": [50, 43, 40, 41, 32]
+  },
+  "Tam Lin": {
+    "cardlvl": 20,
+    "inherits": "pierce",
+    "lvl": 13,
+    "race": "Lovers",
+    "resists": "s--s-s-n--",
+    "skills": {
+      "Zio": 0.1,
+      "Tarukaja": 0.2,
+      "Power Slash": 0.3,
+      "Sharp Student": 14,
+      "Getsu-ei": 16,
+      "Mazio": 17,
+      "Auto-Rakukaja": 19
+    },
+    "stats": [9, 10, 5, 10, 8]
+  },
+  "Thanatos": {
+    "cardlvl": 73,
+    "heart": "Ring of Darkness",
+    "inherits": "dark",
+    "lvl": 64,
+    "race": "Death",
+    "resists": "ss-----wr-",
+    "skills": {
+      "Ghastly Wail": 0.1,
+      "Tempest Slash": 0.2,
+      "Megidola": 0.3,
+      "Mahamaon": 66,
+      "Weapons Master": 68,
+      "Brave Blade": 71
+    },
+    "stats": [48, 51, 44, 39, 40]
+  },
+  "Thor": {
+    "cardlvl": 61,
+    "heart": "Lightning Gloves",
+    "inherits": "elec",
+    "lvl": 53,
+    "race": "Chariot",
+    "resists": "-n---nw---",
+    "skills": {
+      "Ziodyne": 0.1,
+      "Vicious Strike": 0.2,
+      "High Counter": 0.3,
+      "Auto-Mataru": 55,
+      "Elec Amp": 59,
+      "Weapons Master": 60,
+      "Thunder Call": 3883
+    },
+    "stats": [42, 45, 34, 30, 34]
+  }
+}

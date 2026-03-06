@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Persona Companion</string>
+    <string name="home_title">Persona Companion</string>
+    <string name="home_subtitle">Series Guide</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="personas">Personas</string>
+    <string name="fusion_calculator">Fusion Calculator</string>
+    <string name="social_links">Social Links / Confidants</string>
+    <string name="classroom_answers">Classroom Answers</string>
+    <string name="bosses">Bosses</string>
+    <string name="enemies">Enemies</string>
+    <string name="search_hint">Search personas…</string>
+    <string name="no_results">No personas found</string>
+    <string name="level_abbrev">Lv.</string>
+    <string name="arcana">Arcana</string>
+    <string name="base_stats">Base Stats</string>
+    <string name="skills">Skills</string>
+    <string name="weaknesses">Weaknesses</string>
+    <string name="resistances">Resistances</string>
+    <string name="back">Back</string>
+</resources>
