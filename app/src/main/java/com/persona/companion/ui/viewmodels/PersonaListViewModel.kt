@@ -39,7 +39,8 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
             } else {
                 val lower = query.lowercase()
                 current.personas.filter {
-                    it.name.lowercase().contains(lower) || it.arcana.lowercase().contains(lower)
+                    it.name.lowercase().contains(lower) || 
+                    (it.arcana?.lowercase()?.contains(lower) == true)
                 }
             }
             current.copy(query = query, filtered = filtered)

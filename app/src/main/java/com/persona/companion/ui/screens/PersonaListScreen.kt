@@ -83,7 +83,7 @@ fun PersonaListScreen(
                 }
                 else -> {
                     // Group by arcana for easier browsing
-                    val grouped = state.filtered.groupBy { it.arcana }.entries.sortedBy { it.key }
+                    val grouped = state.filtered.groupBy { it.arcana ?: "Unknown" }.entries.sortedBy { it.key }
 
                     LazyColumn(
                         modifier = Modifier
@@ -202,17 +202,20 @@ private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit
                 color = TextPrimary
             )
             Text(
-                text  = persona.arcana,
+                text  = persona.arcana ?: "Unknown",
                 style = MaterialTheme.typography.bodyMedium,
                 color = TextSecondary
             )
         }
 
         // Skill count hint
-        Text(
-            text  = "${persona.skills.size} skills",
-            style = MaterialTheme.typography.labelSmall,
-            color = TextDisabled
-        )
+        val skillCount = persona.skills?.size ?: 0
+        if (skillCount > 0) {
+            Text(
+                text  = "$skillCount skills",
+                style = MaterialTheme.typography.labelSmall,
+                color = TextDisabled
+            )
+        }
     }
 }

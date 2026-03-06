@@ -27,13 +27,51 @@ data class Persona(
     val heart: String? = null,
     val cardlvl: Int? = null,
     
-    val description: String? = null
+    // P3 Reload Format Fields
+    val id: Int? = null,
+    val description: String? = null,
+    val image: String? = null,
+    val strength: Int? = null,
+    val magic: Int? = null,
+    val endurance: Int? = null,
+    val agility: Int? = null,
+    val luck: Int? = null,
+    val weak: List<String>? = null,
+    @SerializedName("resists") val resistsList: List<String>? = null,
+    val reflects: List<String>? = null,
+    @SerializedName("absorbs") val absorbsList: List<String>? = null,
+    @SerializedName("nullifies") val nullifiesList: List<String>? = null,
+    val dlc: Int? = null
 ) {
-    val weaknesses: List<String> get() = parseElements('w')
-    val resistances: List<String> get() = parseElements('s')
-    val nullifies: List<String> get() = parseElements('n')
-    val repels: List<String> get() = parseElements('r')
-    val absorbs: List<String> get() = parseElements('d')
+    val weaknesses: List<String> get() {
+        // P3 Reload format uses direct lists
+        if (weak != null) return weak
+        return parseElements('w')
+    }
+    
+    val resistances: List<String> get() {
+        // P3 Reload format uses direct lists
+        if (resistsList != null) return resistsList
+        return parseElements('s')
+    }
+    
+    val nullifies: List<String> get() {
+        // P3 Reload format uses direct lists
+        if (nullifiesList != null) return nullifiesList
+        return parseElements('n')
+    }
+    
+    val repels: List<String> get() {
+        // P3 Reload format uses direct lists
+        if (reflects != null) return reflects
+        return parseElements('r')
+    }
+    
+    val absorbs: List<String> get() {
+        // P3 Reload format uses direct lists
+        if (absorbsList != null) return absorbsList
+        return parseElements('d')
+    }
 
     private fun parseElements(type: Char): List<String> {
         val safeResists = resistsString ?: ""
@@ -48,9 +86,11 @@ data class Persona(
         } else if (isP5) {
             listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
         } else {
-            // Fallback for P4 (usually 7 characters)
+            // Fallback for P4 (usually 7 or 8 characters)
             if (safeResists.length == 7) {
                 listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark")
+            } else if (safeResists.length == 8) {
+                listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
             } else {
                 listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
             }

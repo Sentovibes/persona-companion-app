@@ -29,12 +29,17 @@ object SeriesData {
                 Game(
                     id = "p3fes",
                     title = "Persona 3 FES",
-                    dataPath = "data/persona3/personas.json"   // same roster; update when FES data is added
+                    dataPath = "data/persona3/personas.json"
+                ),
+                Game(
+                    id = "p3p",
+                    title = "Persona 3 Portable",
+                    dataPath = "data/persona3/portable_personas.json"
                 ),
                 Game(
                     id = "p3r",
                     title = "Persona 3 Reload",
-                    dataPath = "data/persona3/personas.json"   // update when Reload data is added
+                    dataPath = "data/persona3/reload_personas.json"
                 )
             )
         ),
@@ -52,7 +57,7 @@ object SeriesData {
                 Game(
                     id = "p4g",
                     title = "Persona 4 Golden",
-                    dataPath = "data/persona4/personas.json"   // update when Golden-specific data is added
+                    dataPath = "data/persona4/golden_personas.json"
                 )
             )
         ),

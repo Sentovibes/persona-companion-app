@@ -66,13 +66,13 @@ fun PersonaDetailScreen(
         ) {
             item { HeroSection(persona, series.color) }
             
-            if (persona.description.isNotBlank()) {
+            if (!persona.description.isNullOrBlank()) {
                 item { DescriptionSection(persona.description) }
             }
 
             item { StatsSection(persona, series.color) }
 
-            if (persona.skills.isNotEmpty()) {
+            if (!persona.skills.isNullOrEmpty()) {
                 item { SectionHeader("Skills") }
                 items(persona.skills.toList()) { skillEntry ->
                     SkillRow(skillEntry.first, skillEntry.second, series.color)
@@ -101,7 +101,7 @@ private fun HeroSection(persona: Persona, accentColor: Color) {
         Spacer(Modifier.width(16.dp))
         Column {
             Text(text = persona.name, style = MaterialTheme.typography.headlineMedium, color = TextPrimary)
-            Text(text = "${persona.arcana} Arcana", style = MaterialTheme.typography.bodyMedium, color = TextSecondary)
+            Text(text = "${persona.arcana ?: "Unknown"} Arcana", style = MaterialTheme.typography.bodyMedium, color = TextSecondary)
             if (persona.trait != null) {
                 Text(text = "Trait: ${persona.trait}", style = MaterialTheme.typography.labelSmall, color = accentColor)
             }
@@ -119,7 +119,7 @@ private fun DescriptionSection(description: String) {
 @Composable
 private fun StatsSection(persona: Persona, accentColor: Color) {
     val statsList = persona.stats
-    if (statsList.size < 5) return
+    if (statsList == null || statsList.size < 5) return
     Column(modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(SurfaceCard).padding(16.dp)) {
         SectionHeader("Base Stats")
         Spacer(Modifier.height(12.dp))
