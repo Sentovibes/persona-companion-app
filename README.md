@@ -1,119 +1,174 @@
 # Persona Companion
 
-A native Android companion app for the Persona series — built as an open-source mini wiki for players.
+A native Android companion app for the Persona series — your pocket compendium for Personas across P3, P4, and P5.
 
 > Built with Kotlin · Jetpack Compose · Material 3
 
 ---
 
-## What's in the app
+## Features
 
-| Feature | Status |
-|---|---|
-| Persona browser (P3 / P4 / P5) | ✅ Available |
-| Persona stats & skills | ✅ Available |
-| Search by name or arcana | ✅ Available |
-| Fusion Calculator | 🔒 Coming soon |
-| Social Links / Confidants guide | 🔒 Coming soon |
-| Classroom Answers | 🔒 Coming soon |
-| Bosses database | 🔒 Coming soon |
-| Enemies database | 🔒 Coming soon |
+- **Complete Persona Database** - Browse all Personas from P3 FES, P3 Portable, P3 Reload, P4, P4 Golden, P5, and P5 Royal
+- **Detailed Stats & Skills** - View base stats, skill lists, elemental affinities, and more
+- **Smart Search** - Search by Persona name or Arcana
+- **Flexible Sorting** - Sort by Arcana (grouped), Level, or Name
+- **Beautiful UI** - Material 3 design with series-specific color themes
+- **Offline First** - All data stored locally, no internet required
 
 ---
 
-## Project structure
+## Supported Games
+
+| Game | Personas | Status |
+|---|---|---|
+| Persona 3 FES | 96 | ✅ Complete |
+| Persona 3 Portable | 194 | ✅ Complete |
+| Persona 3 Reload | 194 | ✅ Complete |
+| Persona 4 | 187 | ✅ Complete |
+| Persona 4 Golden | 205 | ✅ Complete |
+| Persona 5 | 192 | ✅ Complete |
+| Persona 5 Royal | 207 | ✅ Complete |
+
+---
+
+## Screenshots
+
+[Coming soon]
+
+---
+
+## Download
+
+Get the latest APK from the [Releases](../../releases) page.
+
+**Requirements:**
+- Android 8.0 (API 26) or higher
+- ~10 MB storage space
+
+---
+
+## Project Structure
 
 ```
 persona-companion-app/
 ├── app/
 │   └── src/main/
 │       ├── java/com/persona/companion/
-│       │   ├── data/            # Repository + static series catalogue
-│       │   ├── models/          # Kotlin data classes (Persona, Game, Series)
-│       │   ├── navigation/      # NavGraph and route definitions
+│       │   ├── data/            # Repository + SeriesData catalogue
+│       │   ├── models/          # Persona, Game, PersonaSeries models
+│       │   ├── navigation/      # Navigation graph
 │       │   ├── ui/
-│       │   │   ├── screens/     # One file per screen
-│       │   │   ├── components/  # Reusable Composables
-│       │   │   ├── theme/       # Colors, Typography, Theme
-│       │   │   └── viewmodels/  # ViewModel per screen
-│       │   └── utils/           # JsonLoader
-│       └── assets/
-│           └── data/
-│               ├── persona3/    # Persona 3 JSON files
-│               ├── persona4/    # Persona 4 JSON files
-│               └── persona5/    # Persona 5 / Royal JSON files
+│       │   │   ├── screens/     # UI screens (Home, List, Detail, etc.)
+│       │   │   ├── theme/       # Material 3 theming
+│       │   │   └── viewmodels/  # State management
+│       │   └── utils/           # JSON loader utility
+│       └── assets/data/         # Persona JSON files
+│           ├── persona3/
+│           ├── persona4/
+│           └── persona5/
 ```
 
 ---
 
-## How to build
+## Building from Source
 
-1. Clone the repo
-2. Open the project folder in **Android Studio Hedgehog** or later
-3. Let Gradle sync
-4. Run on a device or emulator (minSdk 26)
+### Prerequisites
+- JDK 17 or higher
+- Android SDK (API 34)
+- Gradle 8.2+
+
+### Steps
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/persona-companion-app.git
+cd persona-companion-app
+```
+
+2. Build the APK:
+```bash
+# Windows
+gradlew.bat assembleDebug
+
+# Linux/Mac
+./gradlew assembleDebug
+```
+
+3. Find the APK at:
+```
+app/build/outputs/apk/debug/app-debug.apk
+```
 
 ---
 
-## How to contribute
+## Contributing
 
-### Adding or fixing Persona data
+### Adding or Updating Persona Data
 
-All Persona data lives in JSON files under `app/src/main/assets/data/`.  
-Each file is a simple JSON array — just edit the relevant file and open a PR.
+All Persona data is stored in JSON files under `app/src/main/assets/data/`.
 
-**Persona JSON schema:**
-
+**Map Format** (P3 FES, P3P, P4, P4G, P5, P5R):
 ```json
 {
-  "name": "Orpheus",
-  "arcana": "Fool",
-  "level": 1,
-  "stats": {
-    "strength": 2,
-    "magic": 3,
-    "endurance": 2,
-    "agility": 3,
-    "luck": 2
-  },
-  "skills": [
-    { "name": "Bash", "level": 0 },
-    { "name": "Agi",  "level": 0 }
-  ],
-  "description": "The initial Persona of the protagonist.",
-  "weaknesses":  ["Pierce"],
-  "resistances": [],
-  "nullifies":   [],
-  "repels":      [],
-  "absorbs":     [],
-  "special_fusion": false
+  "Orpheus": {
+    "race": "Fool",
+    "lvl": 1,
+    "stats": [3, 2, 2, 3, 2],
+    "skills": {
+      "Bash": 0.1,
+      "Agi": 0.2,
+      "Tarukaja": 3
+    },
+    "resists": "----w-s---",
+    "inherits": "fire"
+  }
 }
 ```
 
-- `level` in skills — set to `0` for innate skills, otherwise the level learned
-- Affinity arrays accept element strings: `Fire`, `Ice`, `Elec`, `Wind`, `Psychic`, `Nuclear`, `Bless`, `Curse`, `Phys`, `Gun`, `Almighty`
+**Array Format** (P3 Reload):
+```json
+[
+  {
+    "name": "Orpheus",
+    "arcana": "Fool",
+    "level": 1,
+    "strength": 3,
+    "magic": 2,
+    "endurance": 2,
+    "agility": 3,
+    "luck": 2,
+    "weak": ["Electric", "Dark"],
+    "resists": ["Fire"]
+  }
+]
+```
 
-### Adding a new game version
+### Adding a New Game
 
-1. Add your JSON data file to the correct `assets/data/` subfolder
-2. Add a `Game(...)` entry to `SeriesData.kt` pointing to the new file
-3. Done — the rest of the app picks it up automatically
-
-### Adding a new screen (Coming Soon feature)
-
-1. Create a new `@Composable` file under `ui/screens/`
-2. Add a route object to `navigation/NavGraph.kt`
-3. Add a composable destination in `NavGraph`
-4. Update `CategoryScreen.kt` to set `available = true` for that category
+1. Add the JSON file to `app/src/main/assets/data/<series>/`
+2. Update `SeriesData.kt` to add a new `Game` entry
+3. The app will automatically pick it up!
 
 ---
 
-## Data sources
+## Roadmap
 
-Persona data is sourced from community wikis:
+- [ ] Fusion calculator
+- [ ] Social Links / Confidants guide
+- [ ] Classroom answers database
+- [ ] Boss strategies
+- [ ] Enemy compendium
+- [ ] Dark mode toggle
+- [ ] Export/import favorites
 
+---
+
+## Data Sources
+
+Persona data compiled from:
 - [Megami Tensei Wiki](https://megamitensei.fandom.com/)
-- [Megaten Database](https://megaten.io/)
+- [Aqiu's Persona Fusion Calculator](https://aqiu384.github.io/megaten-fusion-tool/)
+- Community contributions
 
 This is a fan project with no affiliation to Atlus or SEGA.
 
@@ -121,4 +176,15 @@ This is a fan project with no affiliation to Atlus or SEGA.
 
 ## License
 
-MIT — free to use, fork, and contribute.
+MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+## Changelog
+
+### v1.0.0 (2026-03-07)
+- Initial release
+- Complete Persona database for 7 games
+- Search and sort functionality
+- Material 3 UI with series-specific themes
+- Offline-first architecture

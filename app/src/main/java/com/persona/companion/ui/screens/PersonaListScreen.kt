@@ -70,6 +70,13 @@ fun PersonaListScreen(
                 accentColor   = series.color
             )
 
+            // Sort options
+            SortBar(
+                currentSort = state.sortBy,
+                onSortChange = vm::setSortOption,
+                accentColor = series.color
+            )
+
             when {
                 state.isLoading -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -78,13 +85,20 @@ fun PersonaListScreen(
                 }
                 state.filtered.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text("No personas found", color = TextSecondary)
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(16.dp)) {
+                            Text("No personas found", color = TextSecondary)
+                            val errorMsg = state.errorMessage
+                            if (errorMsg != null) {
+                                Spacer(Modifier.height(8.dp))
+                                Text(errorMsg, color = Color.Red, style = MaterialTheme.typography.bodySmall)
+                            }
+                            Spacer(Modifier.height(16.dp))
+                            Text(state.debugInfo, color = TextDisabled, style = MaterialTheme.typography.bodySmall)
+                        }
                     }
                 }
                 else -> {
-                    // Group by arcana for easier browsing
-                    val grouped = state.filtered.groupBy { it.arcana ?: "Unknown" }.entries.sortedBy { it.key }
-
+                    // Display personas based on sort option
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxSize()
@@ -92,22 +106,42 @@ fun PersonaListScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         contentPadding = PaddingValues(vertical = 12.dp)
                     ) {
-                        grouped.forEach { (arcana, personas) ->
-                            item {
-                                ArcanaHeader(arcana, series.color)
-                            }
-                            items(personas) { persona ->
-                                PersonaRow(
-                                    persona     = persona,
-                                    accentColor = series.color,
-                                    onClick     = {
-                                        navController.navigate(
-                                            Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
+                        when (state.sortBy) {
+                            com.persona.companion.ui.viewmodels.SortOption.ARCANA -> {
+                                // Group by arcana
+                                val grouped = state.filtered.groupBy { it.arcana ?: "Unknown" }.entries.sortedBy { it.key }
+                                grouped.forEach { (arcana, personas) ->
+                                    item {
+                                        ArcanaHeader(arcana, series.color)
+                                    }
+                                    items(personas) { persona ->
+                                        PersonaRow(
+                                            persona     = persona,
+                                            accentColor = series.color,
+                                            onClick     = {
+                                                navController.navigate(
+                                                    Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
+                                                )
+                                            }
                                         )
                                     }
-                                )
+                                    item { Spacer(Modifier.height(4.dp)) }
+                                }
                             }
-                            item { Spacer(Modifier.height(4.dp)) }
+                            else -> {
+                                // Flat list for level/name sorting
+                                items(state.filtered) { persona ->
+                                    PersonaRow(
+                                        persona     = persona,
+                                        accentColor = series.color,
+                                        onClick     = {
+                                            navController.navigate(
+                                                Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
+                                            )
+                                        }
+                                    )
+                                }
+                            }
                         }
                     }
                 }
@@ -216,6 +250,45 @@ private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit
                 style = MaterialTheme.typography.labelSmall,
                 color = TextDisabled
             )
+        }
+    }
+}
+
+
+@Composable
+private fun SortBar(
+    currentSort: com.persona.companion.ui.viewmodels.SortOption,
+    onSortChange: (com.persona.companion.ui.viewmodels.SortOption) -> Unit,
+    accentColor: Color
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        com.persona.companion.ui.viewmodels.SortOption.values().forEach { option ->
+            val isSelected = currentSort == option
+            Surface(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable { onSortChange(option) },
+                color = if (isSelected) accentColor.copy(alpha = 0.2f) else SurfaceCard,
+                shape = RoundedCornerShape(8.dp)
+            ) {
+                Text(
+                    text = when (option) {
+                        com.persona.companion.ui.viewmodels.SortOption.ARCANA -> "Arcana"
+                        com.persona.companion.ui.viewmodels.SortOption.LEVEL -> "Level"
+                        com.persona.companion.ui.viewmodels.SortOption.NAME -> "Name"
+                    },
+                    style = MaterialTheme.typography.labelMedium,
+                    color = if (isSelected) accentColor else TextSecondary,
+                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                    modifier = Modifier.padding(vertical = 10.dp, horizontal = 12.dp)
+                )
+            }
         }
     }
 }

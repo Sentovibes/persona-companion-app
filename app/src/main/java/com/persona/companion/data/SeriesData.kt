@@ -22,11 +22,6 @@ object SeriesData {
             color = Color(0xFF1565C0),
             games = listOf(
                 Game(
-                    id = "p3",
-                    title = "Persona 3",
-                    dataPath = "data/persona3/personas.json"
-                ),
-                Game(
                     id = "p3fes",
                     title = "Persona 3 FES",
                     dataPath = "data/persona3/personas.json"

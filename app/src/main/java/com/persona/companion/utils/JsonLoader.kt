@@ -16,7 +16,7 @@ object JsonLoader {
         return try {
             Log.d(TAG, "Loading personas from: $path")
             val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            Log.d(TAG, "JSON loaded, length: ${json.length}")
+            Log.d(TAG, "JSON loaded, length: ${json.length}, first 100 chars: ${json.take(100)}")
             
             // Try to detect if it's an array or map format
             val trimmed = json.trim()
@@ -40,13 +40,16 @@ object JsonLoader {
             }
             
             Log.d(TAG, "Returning ${personas.size} personas")
+            if (personas.isEmpty()) {
+                throw Exception("Parsed 0 personas - JSON format might be incorrect")
+            }
             personas
         } catch (e: JsonSyntaxException) {
             Log.e(TAG, "JSON syntax error in '$path': ${e.message}", e)
-            emptyList()
+            throw Exception("JSON syntax error: ${e.message}")
         } catch (e: Exception) {
             Log.e(TAG, "Could not load personas from '$path': ${e.message}", e)
-            emptyList()
+            throw e
         }
     }
 }

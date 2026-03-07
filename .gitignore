@@ -1,2 +1,64 @@
+# Kiro/Zencoder/Zenflow
 /.zencoder
 /.zenflow
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle files
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio
+*.iml
+.idea/
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# Keystore files (except debug keystore)
+*.jks
+release.keystore
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary/working files in root
+persona3reload.json
+persona3fes.json
+persona3portable.json
+velvet-room-symbol-across-games-v0-aq9kkrbv3cbd1.webp
+*.webp
+*.png
+*.jpg
+*.jpeg
+
+# Keep assets
+!app/src/main/res/**/*.webp
+!app/src/main/res/**/*.png
+!app/src/main/res/**/*.jpg

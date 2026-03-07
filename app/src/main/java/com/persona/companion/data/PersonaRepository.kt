@@ -1,16 +1,25 @@
 package com.persona.companion.data
 
 import android.content.Context
+import android.util.Log
 import com.persona.companion.models.Persona
 import com.persona.companion.utils.JsonLoader
+
+private const val TAG = "PersonaRepository"
 
 class PersonaRepository(private val context: Context) {
 
     private val cache = mutableMapOf<String, List<Persona>>()
 
     fun getPersonas(dataPath: String): List<Persona> {
+        Log.d(TAG, "getPersonas() called with dataPath: $dataPath")
         return cache.getOrPut(dataPath) {
-            JsonLoader.loadPersonas(context, dataPath)
+            Log.d(TAG, "Cache miss, loading from JSON")
+            val personas = JsonLoader.loadPersonas(context, dataPath)
+            Log.d(TAG, "Loaded and cached ${personas.size} personas")
+            personas
+        }.also {
+            Log.d(TAG, "Returning ${it.size} personas from cache")
         }
     }
 

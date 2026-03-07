@@ -11,7 +11,7 @@ data class Persona(
     @SerializedName("lvl") val level: Int? = null,
     val stats: List<Int>? = null,
     val skills: Map<String, Double>? = null,
-    @SerializedName("resists") val resistsString: String? = null,
+    val resists: Any? = null,  // Can be String (old format) or List<String> (P3R format)
     
     // Universal Optional Field
     val inherits: String? = null,
@@ -37,10 +37,9 @@ data class Persona(
     val agility: Int? = null,
     val luck: Int? = null,
     val weak: List<String>? = null,
-    @SerializedName("resists") val resistsList: List<String>? = null,
     val reflects: List<String>? = null,
-    @SerializedName("absorbs") val absorbsList: List<String>? = null,
-    @SerializedName("nullifies") val nullifiesList: List<String>? = null,
+    @SerializedName("absorbs") val absorbsJson: List<String>? = null,
+    @SerializedName("nullifies") val nullifiesJson: List<String>? = null,
     val dlc: Int? = null
 ) {
     val weaknesses: List<String> get() {
@@ -50,14 +49,17 @@ data class Persona(
     }
     
     val resistances: List<String> get() {
-        // P3 Reload format uses direct lists
-        if (resistsList != null) return resistsList
+        // P3 Reload format uses direct lists - resists is a List<String>
+        if (resists is List<*>) {
+            @Suppress("UNCHECKED_CAST")
+            return resists as? List<String> ?: emptyList()
+        }
         return parseElements('s')
     }
     
     val nullifies: List<String> get() {
         // P3 Reload format uses direct lists
-        if (nullifiesList != null) return nullifiesList
+        if (nullifiesJson != null) return nullifiesJson
         return parseElements('n')
     }
     
@@ -69,12 +71,16 @@ data class Persona(
     
     val absorbs: List<String> get() {
         // P3 Reload format uses direct lists
-        if (absorbsList != null) return absorbsList
+        if (absorbsJson != null) return absorbsJson
         return parseElements('d')
     }
 
     private fun parseElements(type: Char): List<String> {
-        val safeResists = resistsString ?: ""
+        // Get resists as string for old format
+        val safeResists = when (resists) {
+            is String -> resists
+            else -> ""
+        }
         if (safeResists.isEmpty()) return emptyList()
 
         // Determine elements by specific game fields
