@@ -11,6 +11,7 @@ import com.persona.companion.ui.screens.GameSelectionScreen
 import com.persona.companion.ui.screens.HomeScreen
 import com.persona.companion.ui.screens.PersonaDetailScreen
 import com.persona.companion.ui.screens.PersonaListScreen
+import com.persona.companion.ui.screens.SettingsScreen
 
 // ---------------------------------------------------------------------------
 // Route definitions
@@ -19,6 +20,8 @@ import com.persona.companion.ui.screens.PersonaListScreen
 sealed class Screen(val route: String) {
 
     object Home : Screen("home")
+    
+    object Settings : Screen("settings")
 
     object GameSelection : Screen("game_selection/{seriesId}") {
         fun createRoute(seriesId: String) = "game_selection/$seriesId"
@@ -54,6 +57,10 @@ fun NavGraph(navController: NavHostController) {
 
         composable(Screen.Home.route) {
             HomeScreen(navController)
+        }
+        
+        composable(Screen.Settings.route) {
+            SettingsScreen(navController)
         }
 
         composable(

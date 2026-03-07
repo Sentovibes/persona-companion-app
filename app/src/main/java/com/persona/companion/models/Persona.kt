@@ -40,7 +40,12 @@ data class Persona(
     val reflects: List<String>? = null,
     @SerializedName("absorbs") val absorbsJson: List<String>? = null,
     @SerializedName("nullifies") val nullifiesJson: List<String>? = null,
-    val dlc: Int? = null
+    val dlc: Int? = null,
+    
+    // Unlock requirements and special flags
+    val unlock: String? = null,
+    val episodeAigis: Boolean? = null,
+    val isDlc: Boolean? = null
 ) {
     val weaknesses: List<String> get() {
         // P3 Reload format uses direct lists

@@ -12,6 +12,7 @@ A native Android companion app for the Persona series — your pocket compendium
 - **Detailed Stats & Skills** - View base stats, skill lists, elemental affinities, and more
 - **Smart Search** - Search by Persona name or Arcana
 - **Flexible Sorting** - Sort by Arcana (grouped), Level, or Name
+- **Content Filters** - Toggle DLC and Episode Aigis personas on/off in settings
 - **Beautiful UI** - Material 3 design with series-specific color themes
 - **Offline First** - All data stored locally, no internet required
 
@@ -27,7 +28,7 @@ A native Android companion app for the Persona series — your pocket compendium
 | Persona 4 | 187 | ✅ Complete |
 | Persona 4 Golden | 205 | ✅ Complete |
 | Persona 5 | 192 | ✅ Complete |
-| Persona 5 Royal | 207 | ✅ Complete |
+| Persona 5 Royal | 225 | ✅ Complete |
 
 ---
 
@@ -181,6 +182,14 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v1.5.0 (2026-03-07)
+- Added Settings screen
+- Added DLC persona filtering (toggle on/off)
+- Added Episode Aigis filtering for P3 games
+- Added 18 DLC personas to P5 Royal (225 total)
+- Improved persona filtering system
+- Settings accessible from home screen
 
 ### v1.0.0 (2026-03-07)
 - Initial release

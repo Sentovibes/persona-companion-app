@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.persona.companion.data.AppPreferences
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.models.Persona
 import kotlinx.coroutines.Dispatchers
@@ -31,6 +32,7 @@ data class PersonaListState(
 class PersonaListViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repo = PersonaRepository(application)
+    private val prefs = AppPreferences(application)
 
     private val _state = MutableStateFlow(PersonaListState())
     val state = _state.asStateFlow()
@@ -43,8 +45,17 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
                 Log.d(TAG, "Starting to load personas from: $dataPath")
                 val all = repo.getPersonas(dataPath)
                 Log.d(TAG, "Loaded ${all.size} personas")
-                val debug = "Path: $dataPath\nLoaded: ${all.size} personas\nFirst 3: ${all.take(3).map { it.name }}"
-                _state.update { it.copy(personas = all, filtered = applySorting(all, it.sortBy), isLoading = false, debugInfo = debug) }
+                
+                // Apply filters based on settings
+                val settings = prefs.getSettings()
+                val filtered = all.filter { persona ->
+                    val includeDlc = settings.showDlc || persona.isDlc != true
+                    val includeAigis = settings.showEpisodeAigis || persona.episodeAigis != true
+                    includeDlc && includeAigis
+                }
+                
+                val debug = "Path: $dataPath\nLoaded: ${all.size} personas\nFiltered: ${filtered.size} personas\nFirst 3: ${filtered.take(3).map { it.name }}"
+                _state.update { it.copy(personas = filtered, filtered = applySorting(filtered, it.sortBy), isLoading = false, debugInfo = debug) }
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading personas", e)
                 _state.update { it.copy(isLoading = false, errorMessage = "Error: ${e.message}", debugInfo = "Path: $dataPath\nError: ${e.stackTraceToString()}") }

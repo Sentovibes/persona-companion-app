@@ -49,16 +49,14 @@ Thumbs.db
 .DS_Store
 
 # Temporary/working files in root
-persona3reload.json
-persona3fes.json
-persona3portable.json
-velvet-room-symbol-across-games-v0-aq9kkrbv3cbd1.webp
+*.json
 *.webp
 *.png
 *.jpg
 *.jpeg
 
 # Keep assets
+!app/src/main/assets/**/*.json
 !app/src/main/res/**/*.webp
 !app/src/main/res/**/*.png
 !app/src/main/res/**/*.jpg
