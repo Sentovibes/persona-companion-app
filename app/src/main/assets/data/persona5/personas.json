@@ -300,11 +300,7 @@
       "Megidolaon": 82,
       "Concentrate": 83,
       "Survival Trick": 84
-    },
-    "recipes": [
-      "Belial",
-      "Nebiros"
-    ]
+    }
   },
   "Ame-no-Uzume": {
     "arcana": "Lovers",
@@ -4294,11 +4290,7 @@
       "Auto-Masuku": 88,
       "Fortified Moxy": 89,
       "Salvation": 90
-    },
-    "recipes": [
-      "Shiva",
-      "Parvati"
-    ]
+    }
   },
   "Arsene": {
     "arcana": "Fool",
@@ -4350,13 +4342,7 @@
       "Mafreidyne": 79,
       "High Counter": 80,
       "Unshaken Will": 81
-    },
-    "recipes": [
-      "Bishamonten",
-      "Koumokuten",
-      "Zouchouten",
-      "Jikokuten"
-    ]
+    }
   },
   "Atropos": {
     "arcana": "Fortune",
@@ -8985,12 +8971,7 @@
       "Freeze Boost": 70,
       "Repel Fire": 71,
       "Diamond Dust": 72
-    },
-    "recipes": [
-      "Jack-o'-Lantern",
-      "Jack Frost",
-      "King Frost"
-    ]
+    }
   },
   "Black Ooze": {
     "arcana": "Moon",
@@ -9962,12 +9943,7 @@
       "Triple Down": 52,
       "Evade Phys": 54,
       "Fast Heal": 55
-    },
-    "recipes": [
-      "Pixie",
-      "Pisaca",
-      "Hariti"
-    ]
+    }
   },
   "Byakko": {
     "arcana": "Temperance",
@@ -13836,14 +13812,7 @@
       "Psycho Blast": 89,
       "Drain Psy": 90,
       "Concentrate": 92
-    },
-    "recipes": [
-      "Hecatoncheires",
-      "White Rider",
-      "Thor",
-      "Yoshitsune",
-      "Cu Chulainn"
-    ]
+    }
   },
   "Choronzon": {
     "arcana": "Magician",
@@ -14861,8 +14830,7 @@
       "Mafreidyne": 0.6,
       "Makougaon": 0.7,
       "Maeigaon": 0.8
-    },
-    "recipes": []
+    }
   },
   "Cu Chulainn": {
     "arcana": "Star",
@@ -19298,8 +19266,7 @@
       "Freidyne": 0.6,
       "Kougaon": 0.7,
       "Eigaon": 0.8
-    },
-    "recipes": []
+    }
   },
   "Flauros": {
     "arcana": "Devil",
@@ -19319,12 +19286,7 @@
       "Apt Pupil": 28,
       "Assault Dive": 29,
       "Heat Up": 30
-    },
-    "recipes": [
-      "Berith",
-      "Andras",
-      "Eligor"
-    ]
+    }
   },
   "Forneus": {
     "arcana": "Hierophant",
@@ -28992,8 +28954,7 @@
       "Invigorate 2": 0.6,
       "High Counter": 0.7,
       "Fast Heal": 0.8
-    },
-    "recipes": []
+    }
   },
   "Horus": {
     "arcana": "Sun",
@@ -36308,8 +36269,7 @@
       "Dodge Nuke": 0.6,
       "Dodge Bless": 0.7,
       "Dodge Curse": 0.8
-    },
-    "recipes": []
+    }
   },
   "Kohryu": {
     "arcana": "Hierophant",
@@ -36329,13 +36289,7 @@
       "Concentrate": 79,
       "Psy Amp": 80,
       "Spell Master": 82
-    },
-    "recipes": [
-      "Seiryu",
-      "Byakko",
-      "Suzaku",
-      "Genbu"
-    ]
+    }
   },
   "Koppa Tengu": {
     "arcana": "Temperance",
@@ -43251,15 +43205,7 @@
       "Fortified Moxy": 97,
       "Insta-Heal": 98,
       "Drain Phys": 99
-    },
-    "recipes": [
-      "Anubis",
-      "Ananta",
-      "Trumpeter",
-      "Michael",
-      "Metatron",
-      "Satan"
-    ]
+    }
   },
   "Mada": {
     "arcana": "Tower",
@@ -46002,15 +45948,7 @@
       "Concentrate": 93,
       "Bless Amp": 94,
       "Divine Judgement": 95
-    },
-    "recipes": [
-      "Principality",
-      "Power",
-      "Dominion",
-      "Melchizedek",
-      "Sandalphon",
-      "Michael"
-    ]
+    }
   },
   "Michael": {
     "arcana": "Judgement",
@@ -46030,12 +45968,7 @@
       "Mahamaon": 90,
       "Megidolaon": 91,
       "Cosmic Flare": 92
-    },
-    "recipes": [
-      "Raphael",
-      "Gabriel",
-      "Uriel"
-    ]
+    }
   },
   "Mithra": {
     "arcana": "Temperance",
@@ -51372,12 +51305,7 @@
       "Cornered Fang": 33,
       "Defense Master": 35,
       "Fortified Moxy": 36
-    },
-    "recipes": [
-      "Kodama",
-      "Sudama",
-      "Anzu"
-    ]
+    }
   },
   "Nekomata": {
     "arcana": "Magician",
@@ -53651,12 +53579,7 @@
       "Regenerate 3": 78,
       "Firm Stance": 79,
       "Agneyastra": 81
-    },
-    "recipes": [
-      "Kin-Ki",
-      "Sui-Ki",
-      "Fuu-Ki"
-    ]
+    }
   },
   "Oni": {
     "arcana": "Strength",
@@ -54163,8 +54086,7 @@
       "Mafreila": 0.6,
       "Makouga": 0.7,
       "Maeiga": 0.8
-    },
-    "recipes": []
+    }
   },
   "Orobas": {
     "arcana": "Hierophant",
@@ -62104,8 +62026,7 @@
       "Tarunda": 0.6,
       "Rakunda": 0.7,
       "Sukunda": 0.8
-    },
-    "recipes": []
+    }
   },
   "Quetzalcoatl": {
     "arcana": "Sun",
@@ -65029,8 +64950,7 @@
       "Mafrei": 0.6,
       "Makouha": 0.7,
       "Maeiha": 0.8
-    },
-    "recipes": []
+    }
   },
   "Saki Mitama": {
     "arcana": "Lovers",
@@ -66612,15 +66532,7 @@
       "Heat Riser": 97,
       "Unshaken Will": 98,
       "Victory Cry": 99
-    },
-    "recipes": [
-      "Arsene",
-      "Anzu",
-      "Ishtar",
-      "Satan",
-      "Lucifer",
-      "Michael"
-    ]
+    }
   },
   "Scathach": {
     "arcana": "Priestess",
@@ -67988,13 +67900,7 @@
       "Cripple": 53,
       "Fire Break": 54,
       "Fortify Spirit": 56
-    },
-    "recipes": [
-      "Isis",
-      "Thoth",
-      "Anubis",
-      "Horus"
-    ]
+    }
   },
   "Shiisaa": {
     "arcana": "Chariot",
@@ -68581,11 +68487,7 @@
       "Megidolaon": 86,
       "Auto-Mataru": 87,
       "Psycho Blast": 88
-    },
-    "recipes": [
-      "Barong",
-      "Rangda"
-    ]
+    }
   },
   "Siegfried": {
     "arcana": "Strength",
@@ -71332,14 +71234,7 @@
       "Angelic Grace": 83,
       "Amrita Shower": 84,
       "Debilitate": 85
-    },
-    "recipes": [
-      "Mithra",
-      "Mithras",
-      "Melchizedek",
-      "Lilith",
-      "Gabriel"
-    ]
+    }
   },
   "Stone of Scone": {
     "arcana": "Fortune",
@@ -71360,8 +71255,7 @@
       "Freila": 0.6,
       "Kouga": 0.7,
       "Eiga": 0.8
-    },
-    "recipes": []
+    }
   },
   "Succubus": {
     "arcana": "Moon",
@@ -74106,12 +74000,7 @@
       "Bless Amp": 74,
       "Evade Curse": 75,
       "Auto-Maraku": 76
-    },
-    "recipes": [
-      "Power",
-      "Melchizedek",
-      "Dominion"
-    ]
+    }
   },
   "Titania": {
     "arcana": "Empress",
@@ -74628,13 +74517,7 @@
       "Cripple": 62,
       "Life Aid": 63,
       "Debilitate": 65
-    },
-    "recipes": [
-      "White Rider",
-      "Red Rider",
-      "Black Rider",
-      "Pale Rider"
-    ]
+    }
   },
   "Unicorn": {
     "arcana": "Hierophant",
@@ -77871,12 +77754,7 @@
       "Trigger Happy": 71,
       "Brainwash Boost": 72,
       "Makarakarn": 73
-    },
-    "recipes": [
-      "Naga",
-      "Raja Naga",
-      "Ananta"
-    ]
+    }
   },
   "Vishnu": {
     "arcana": "Fool",
@@ -81130,14 +81008,7 @@
       "Fast Heal": 82,
       "Elec Amp": 84,
       "Hassou Tobi": 86
-    },
-    "recipes": [
-      "Okuninushi",
-      "Shiki-Ouji",
-      "Arahabaki",
-      "Yatagarasu",
-      "Futsunushi"
-    ]
+    }
   },
   "Yurlungur": {
     "arcana": "Sun",

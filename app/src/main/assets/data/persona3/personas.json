@@ -3234,15 +3234,7 @@
       "Tetrakarn": 87,
       "Megidolaon": 88,
       "Spell Master": 91
-    },
-    "recipes": [
-      "Yatagarasu",
-      "Quetzalcoatl",
-      "Jatayu",
-      "Horus",
-      "Suparna",
-      "Vishnu"
-    ]
+    }
   },
   "Atropos": {
     "arcana": "Fortune",
@@ -4289,15 +4281,7 @@
       "Maziodyne": 84,
       "High Counter": 85,
       "Victory Cry": 87
-    },
-    "recipes": [
-      "Pazuzu",
-      "Baal Zebul",
-      "Incubus",
-      "Succubus",
-      "Lilith",
-      "Abaddon"
-    ]
+    }
   },
   "Berith": {
     "arcana": "Hierophant",
@@ -24621,14 +24605,7 @@
       "Megidolaon": 91,
       "Spell Master": 93,
       "Victory Cry": 95
-    },
-    "recipes": [
-      "Helel",
-      "Satan",
-      "Beelzebub",
-      "Abaddon",
-      "Samael"
-    ]
+    }
   },
   "Masakado": {
     "arcana": "Tower",
@@ -42279,15 +42256,7 @@
       "Mahamaon": 66,
       "1hSwd Master": 68,
       "Brave Blade": 71
-    },
-    "recipes": [
-      "Ghoul",
-      "Pale Rider",
-      "Loa",
-      "Mot",
-      "Samael",
-      "Alice"
-    ]
+    }
   },
   "Thor": {
     "arcana": "Chariot",
@@ -51041,14 +51010,7 @@
       "Power Charge": 80,
       "Tetrakarn": 82,
       "Absorb Ice": 84
-    },
-    "recipes": [
-      "Incubus",
-      "Mot",
-      "Pazuzu",
-      "Kumbhanda",
-      "Attis"
-    ]
+    }
   },
   "Mothman": {
     "arcana": "Hermit",

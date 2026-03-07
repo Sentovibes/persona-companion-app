@@ -423,13 +423,7 @@
       "Mudo Boost": 70,
       "Endure Light": 72,
       "Megidolaon": 74
-    },
-    "recipes": [
-      "Pixie",
-      "Lilim",
-      "Narcissus",
-      "Titania"
-    ]
+    }
   },
   "Alilat": {
     "arcana": "Empress",
@@ -2846,12 +2840,7 @@
       "Vacuum Slash": 25,
       "Maeiga": 27,
       "Survival Trick": 29
-    },
-    "recipes": [
-      "Tam Lin",
-      "Jack-o'-Lantern",
-      "Neko Shogun"
-    ]
+    }
   },
   "Astarte": {
     "arcana": "Empress",
@@ -3349,15 +3338,7 @@
       "Strike Amp": 88,
       "God's Hand": 90,
       "Firm Stance": 91
-    },
-    "recipes": [
-      "Rakshasa",
-      "Girimekhala",
-      "Bishamonten",
-      "Qitian Dasheng",
-      "Atavaka",
-      "Vishnu"
-    ]
+    }
   },
   "Atavaka": {
     "arcana": "Strength",
@@ -6093,15 +6074,7 @@
       "Megidolaon": 84,
       "Concentrate": 85,
       "Dark Amp": 87
-    },
-    "recipes": [
-      "Incubus",
-      "Succubus",
-      "Pazuzu",
-      "Lilith",
-      "Baal Zebul",
-      "Abaddon"
-    ]
+    }
   },
   "Belphegor": {
     "arcana": "Emperor",
@@ -7288,12 +7261,7 @@
       "Fast Heal": 42,
       "Resist Light": 43,
       "King and I": 5217
-    },
-    "recipes": [
-      "Jack Frost",
-      "Jack-o'-Lantern",
-      "King Frost"
-    ]
+    }
   },
   "Byakko": {
     "arcana": "Temperance",
@@ -14472,12 +14440,7 @@
       "Apt Pupil": 35,
       "Herculean Strike": 36,
       "Evade Wind": 38
-    },
-    "recipes": [
-      "Forneus",
-      "Berith",
-      "Eligor"
-    ]
+    }
   },
   "Forneus": {
     "arcana": "Emperor",
@@ -14555,12 +14518,7 @@
       "Dodge Wind": 17,
       "Rakukaja": 18,
       "Wind Boost": 20
-    },
-    "recipes": [
-      "Angel",
-      "Silky",
-      "Unicorn"
-    ]
+    }
   },
   "Futsunushi": {
     "arcana": "Magician",
@@ -30354,13 +30312,7 @@
       "Makarakarn": 74,
       "Tetrakarn": 75,
       "Spell Master": 77
-    },
-    "recipes": [
-      "Genbu",
-      "Seiryu",
-      "Suzaku",
-      "Byakko"
-    ]
+    }
   },
   "Koumokuten": {
     "arcana": "Chariot",
@@ -36950,14 +36902,7 @@
       "Panta Rhei": 92,
       "Diamond Dust": 94,
       "Resist Phys": 96
-    },
-    "recipes": [
-      "Samael",
-      "Abaddon",
-      "Beelzebub",
-      "Satan",
-      "Helel"
-    ]
+    }
   },
   "Mada": {
     "arcana": "Hanged",
@@ -36978,13 +36923,7 @@
       "Null Wind": 61,
       "Amrita Shower": 62,
       "Strike Amp": 64
-    },
-    "recipes": [
-      "Hanuman",
-      "Vasuki",
-      "Naga Raja",
-      "Ganesha"
-    ]
+    }
   },
   "Magatsu-Izanagi": {
     "arcana": "Tower",
@@ -37574,14 +37513,7 @@
       "Charge": 78,
       "Pierce Amp": 80,
       "Drain Light": 82
-    },
-    "recipes": [
-      "Incubus",
-      "Pazuzu",
-      "Mot",
-      "Kumbhanda",
-      "Attis"
-    ]
+    }
   },
   "Masakado": {
     "arcana": "Tower",
@@ -37601,13 +37533,7 @@
       "Crit Rate Amp": 83,
       "Arms Master": 84,
       "Unshaken Will": 86
-    },
-    "recipes": [
-      "Zouchouten",
-      "Jikokuten",
-      "Koumokuten",
-      "Bishamonten"
-    ]
+    }
   },
   "Matador": {
     "arcana": "Strength",
@@ -38606,11 +38532,7 @@
       "Invigorate 3": 94,
       "Null Phys": 96,
       "Magic Ability": 98
-    },
-    "recipes": [
-      "Orpheus",
-      "Thanatos"
-    ]
+    }
   },
   "Metatron": {
     "arcana": "Aeon",
@@ -38630,13 +38552,7 @@
       "Salvation": 90,
       "Light Amp": 92,
       "Repel Elec": 94
-    },
-    "recipes": [
-      "Uriel",
-      "Raphael",
-      "Gabriel",
-      "Michael"
-    ]
+    }
   },
   "Michael": {
     "arcana": "Judgement",
@@ -45236,12 +45152,7 @@
       "Mediarahan": 68,
       "Soul Link": 70,
       "Salvation": 72
-    },
-    "recipes": [
-      "Clotho",
-      "Lachesis",
-      "Atropos"
-    ]
+    }
   },
   "Oberon": {
     "arcana": "Emperor",
@@ -47949,15 +47860,7 @@
     ],
     "skills": {
       "Victory Cry": 0.1
-    },
-    "recipes": [
-      "Thanatos",
-      "Asura",
-      "Chi You",
-      "Metatron",
-      "Helel",
-      "Messiah"
-    ]
+    }
   },
   "Orthrus": {
     "arcana": "Hanged",
@@ -49365,12 +49268,7 @@
       "Eiga": 25,
       "Survive Light": 26,
       "Null Fear": 28
-    },
-    "recipes": [
-      "Berith",
-      "Gurulu",
-      "Matador"
-    ]
+    }
   },
   "Parvati": {
     "arcana": "Priestess",
@@ -49390,12 +49288,7 @@
       "Mediarama": 50,
       "Divine Grace": 52,
       "Bufudyne": 53
-    },
-    "recipes": [
-      "Sati",
-      "Sarasvati",
-      "Dakini"
-    ]
+    }
   },
   "Pazuzu": {
     "arcana": "Devil",
@@ -56323,15 +56216,7 @@
       "Life Aid": 91,
       "Heat Riser": 93,
       "Almighty Boost": 95
-    },
-    "recipes": [
-      "Orpheus",
-      "Michael",
-      "Thanatos",
-      "Satan",
-      "Helel",
-      "Lucifer"
-    ]
+    }
   },
   "Sati": {
     "arcana": "Magician",
@@ -60691,11 +60576,7 @@
       "Life Aid": 84,
       "God's Hand": 86,
       "Ali Dance": 88
-    },
-    "recipes": [
-      "Rangda",
-      "Barong"
-    ]
+    }
   },
   "Siegfried": {
     "arcana": "Strength",
@@ -63326,14 +63207,7 @@
       "Slash Amp": 81,
       "Repel Light": 84,
       "Trickster": 5217
-    },
-    "recipes": [
-      "Take-Minakata",
-      "Take-Mikazuchi",
-      "Okuninushi",
-      "Shiki-Ouji",
-      "Kikuri-Hime"
-    ]
+    }
   },
   "Suzaku": {
     "arcana": "Temperance",
@@ -65100,15 +64974,7 @@
       "Enduring Soul": 80,
       "Brave Blade": 82,
       "Megidolaon": 84
-    },
-    "recipes": [
-      "Pisaca",
-      "Pale Rider",
-      "Loa",
-      "Samael",
-      "Mot",
-      "Alice"
-    ]
+    }
   },
   "Thor": {
     "arcana": "Chariot",

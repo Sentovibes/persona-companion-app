@@ -247,7 +247,12 @@ fun FusionResultsView(
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 items(state.fusionRecipes) { recipe ->
-                    FusionRecipeCard(recipe = recipe)
+                    FusionRecipeCard(
+                        recipe = recipe,
+                        onPersonaClick = { persona ->
+                            viewModel.selectPersona(persona)
+                        }
+                    )
                 }
             }
         }
@@ -255,7 +260,10 @@ fun FusionResultsView(
 }
 
 @Composable
-fun FusionRecipeCard(recipe: com.persona.companion.fusion.FusionRecipe) {
+fun FusionRecipeCard(
+    recipe: com.persona.companion.fusion.FusionRecipe,
+    onPersonaClick: (com.persona.companion.models.Persona) -> Unit
+) {
     Card(
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -263,43 +271,40 @@ fun FusionRecipeCard(recipe: com.persona.companion.fusion.FusionRecipe) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
+            horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // First persona
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = recipe.persona1.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = "${recipe.persona1.arcana} • Lv. ${recipe.persona1.level}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            
-            // Plus icon
-            Icon(
-                imageVector = Icons.Default.Add,
-                contentDescription = "Plus",
-                modifier = Modifier.padding(horizontal = 8.dp),
-                tint = MaterialTheme.colorScheme.primary
-            )
-            
-            // Second persona
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = recipe.persona2.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = "${recipe.persona2.arcana} • Lv. ${recipe.persona2.level}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+            recipe.personas.forEachIndexed { index, persona ->
+                // Persona column
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clickable { onPersonaClick(persona) }
+                        .padding(4.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = persona.name,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(
+                        text = "${persona.arcana} • Lv. ${persona.level}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                
+                // Plus icon (except after last persona)
+                if (index < recipe.personas.size - 1) {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = "Plus",
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        tint = MaterialTheme.colorScheme.primary
+                    )
+                }
             }
         }
     }

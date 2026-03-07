@@ -412,11 +412,7 @@
       "Megidolaon": 86,
       "Concentrate": 87,
       "Survival Trick": 88
-    },
-    "recipes": [
-      "Belial",
-      "Nebiros"
-    ]
+    }
   },
   "Alilat": {
     "arcana": "Empress",
@@ -5632,11 +5628,7 @@
       "Auto-Masuku": 88,
       "Fortified Moxy": 89,
       "Salvation": 90
-    },
-    "recipes": [
-      "Shiva",
-      "Parvati"
-    ]
+    }
   },
   "Arsene": {
     "arcana": "Fool",
@@ -5684,13 +5676,7 @@
       "Mafreidyne": 79,
       "High Counter": 80,
       "Unshaken Will": 81
-    },
-    "recipes": [
-      "Jikokuten",
-      "Zouchouten",
-      "Koumokuten",
-      "Bishamonten"
-    ]
+    }
   },
   "Atavaka": {
     "arcana": "Faith",
@@ -12517,12 +12503,7 @@
       "Freeze Boost": 70,
       "Repel Fire": 71,
       "Diamond Dust": 72
-    },
-    "recipes": [
-      "Jack-o'-Lantern",
-      "Jack Frost",
-      "King Frost"
-    ]
+    }
   },
   "Black Ooze": {
     "arcana": "Moon",
@@ -13426,12 +13407,7 @@
       "Triple Down": 52,
       "Evade Phys": 54,
       "Fast Heal": 55
-    },
-    "recipes": [
-      "Pixie",
-      "Pisaca",
-      "Hariti"
-    ]
+    }
   },
   "Byakhee": {
     "arcana": "Moon",
@@ -16328,14 +16304,7 @@
       "Psycho Blast": 91,
       "Drain Psy": 92,
       "Concentrate": 94
-    },
-    "recipes": [
-      "White Rider",
-      "Hecatoncheires",
-      "Thor",
-      "Cu Chulainn",
-      "Yoshitsune"
-    ]
+    }
   },
   "Chimera": {
     "arcana": "Strength",
@@ -17578,8 +17547,7 @@
       "Foul Stench": 0.9,
       "Ailment Hunter": 1.0,
       "Cursed Bloodline": 1.1
-    },
-    "recipes": []
+    }
   },
   "Cu Chulainn": {
     "arcana": "Faith",
@@ -22382,8 +22350,7 @@
       "Frigid Bloodline": 0.9,
       "Wind Bloodline": 1.0,
       "Psychic Bloodline": 1.1
-    },
-    "recipes": []
+    }
   },
   "Fafnir": {
     "arcana": "Hermit",
@@ -22833,12 +22800,7 @@
       "Rebellion": 22,
       "Cornered Fang": 23,
       "Heat Up": 24
-    },
-    "recipes": [
-      "Berith",
-      "Eligor",
-      "Orobas"
-    ]
+    }
   },
   "Forneus": {
     "arcana": "Magician",
@@ -34707,12 +34669,7 @@
       "Fire Boost": 39,
       "Maragion": 40,
       "Mamudoon": 41
-    },
-    "recipes": [
-      "Archangel",
-      "Matador",
-      "Decarabia"
-    ]
+    }
   },
   "High Pixie": {
     "arcana": "Fool",
@@ -34909,8 +34866,7 @@
       "Striking Weight": 0.9,
       "Retaliating Body": 1.0,
       "Internal Hypnosis": 1.1
-    },
-    "recipes": []
+    }
   },
   "Horus": {
     "arcana": "Sun",
@@ -42148,8 +42104,7 @@
       "Rare Antibody": 0.9,
       "Crisis Control": 1.0,
       "Bloodstained Eyes": 1.1
-    },
-    "recipes": []
+    }
   },
   "Kohryu": {
     "arcana": "Hierophant",
@@ -42169,13 +42124,7 @@
       "Concentrate": 79,
       "Psy Amp": 80,
       "Spell Master": 82
-    },
-    "recipes": [
-      "Seiryu",
-      "Byakko",
-      "Suzaku",
-      "Genbu"
-    ]
+    }
   },
   "Koppa Tengu": {
     "arcana": "Temperance",
@@ -50163,15 +50112,7 @@
       "Repel Bless": 97,
       "Insta-Heal": 98,
       "Drain Phys": 99
-    },
-    "recipes": [
-      "Anubis",
-      "Ananta",
-      "Trumpeter",
-      "Michael",
-      "Metatron",
-      "Satan"
-    ]
+    }
   },
   "Macabre": {
     "arcana": "Hanged",
@@ -53861,15 +53802,7 @@
       "Concentrate": 93,
       "Bless Amp": 94,
       "Divine Judgement": 95
-    },
-    "recipes": [
-      "Principality",
-      "Power",
-      "Dominion",
-      "Melchizedek",
-      "Sandalphon",
-      "Michael"
-    ]
+    }
   },
   "Michael": {
     "arcana": "Judgement",
@@ -53889,12 +53822,7 @@
       "Mahamaon": 90,
       "Megidolaon": 91,
       "Cosmic Flare": 92
-    },
-    "recipes": [
-      "Gabriel",
-      "Raphael",
-      "Uriel"
-    ]
+    }
   },
   "Mishaguji": {
     "arcana": "Hierophant",
@@ -60110,12 +60038,7 @@
       "Cornered Fang": 33,
       "Defense Master": 35,
       "Fortified Moxy": 36
-    },
-    "recipes": [
-      "Kodama",
-      "Sudama",
-      "Anzu"
-    ]
+    }
   },
   "Nekomata": {
     "arcana": "Magician",
@@ -63365,12 +63288,7 @@
       "Regenerate 3": 92,
       "Firm Stance": 93,
       "Agneyastra": 95
-    },
-    "recipes": [
-      "Kin-Ki",
-      "Sui-Ki",
-      "Fuu-Ki"
-    ]
+    }
   },
   "Oni": {
     "arcana": "Strength",
@@ -63872,8 +63790,7 @@
       "Immunity": 0.9,
       "Blessed Bloodline": 1.0,
       "Mouth of Savoring": 1.1
-    },
-    "recipes": []
+    }
   },
   "Orlov": {
     "arcana": "Strength",
@@ -63897,8 +63814,7 @@
       "Heated Bloodline": 0.9,
       "Electric Bloodline": 1.0,
       "Atomic Bloodline": 1.1
-    },
-    "recipes": []
+    }
   },
   "Orobas": {
     "arcana": "Hierophant",
@@ -73580,8 +73496,7 @@
       "Savior Bloodline": 0.9,
       "Relief Bloodline": 1.0,
       "Potent Hypnosis": 1.1
-    },
-    "recipes": []
+    }
   },
   "Quetzalcoatl": {
     "arcana": "Sun",
@@ -77920,8 +77835,7 @@
       "Skillful Combo": 0.9,
       "Mighty Gaze": 1.0,
       "Skillful Technique": 1.1
-    },
-    "recipes": []
+    }
   },
   "Saki Mitama": {
     "arcana": "Lovers",
@@ -79620,15 +79534,7 @@
       "Heat Riser": 97,
       "Tyrant's Mind": 98,
       "Victory Cry": 99
-    },
-    "recipes": [
-      "Arsene",
-      "Anzu",
-      "Ishtar",
-      "Satan",
-      "Lucifer",
-      "Michael"
-    ]
+    }
   },
   "Scathach": {
     "arcana": "Priestess",
@@ -81676,13 +81582,7 @@
       "Gun Amp": 53,
       "Fire Break": 54,
       "Fortify Spirit": 56
-    },
-    "recipes": [
-      "Isis",
-      "Anubis",
-      "Thoth",
-      "Horus"
-    ]
+    }
   },
   "Shiisaa": {
     "arcana": "Strength",
@@ -82445,11 +82345,7 @@
       "Megidolaon": 86,
       "Auto-Mataru": 87,
       "Psycho Blast": 88
-    },
-    "recipes": [
-      "Barong",
-      "Rangda"
-    ]
+    }
   },
   "Siegfried": {
     "arcana": "Faith",
@@ -83205,14 +83101,7 @@
       "Angelic Grace": 83,
       "Amrita Shower": 84,
       "Debilitate": 85
-    },
-    "recipes": [
-      "Mithra",
-      "Mithras",
-      "Melchizedek",
-      "Lilith",
-      "Gabriel"
-    ]
+    }
   },
   "Stone of Scone": {
     "arcana": "Fortune",
@@ -83236,8 +83125,7 @@
       "Relentless": 0.9,
       "Intense Focus": 1.0,
       "Gluttonmouth": 1.1
-    },
-    "recipes": []
+    }
   },
   "Succubus": {
     "arcana": "Moon",
@@ -84888,12 +84776,7 @@
       "Brain Buster": 30,
       "Brainwash Boost": 31,
       "Heat Up": 32
-    },
-    "recipes": [
-      "Cait Sith",
-      "High Pixie",
-      "Leanan Sidhe"
-    ]
+    }
   },
   "Thor": {
     "arcana": "Chariot",
@@ -87646,13 +87529,7 @@
       "Gun Amp": 62,
       "Life Aid": 63,
       "Debilitate": 65
-    },
-    "recipes": [
-      "White Rider",
-      "Red Rider",
-      "Black Rider",
-      "Pale Rider"
-    ]
+    }
   },
   "Unicorn": {
     "arcana": "Faith",
@@ -90633,12 +90510,7 @@
       "Makarakarn": 71,
       "Brainwash Boost": 72,
       "Null Curse": 73
-    },
-    "recipes": [
-      "Naga",
-      "Ananta",
-      "Raja Naga"
-    ]
+    }
   },
   "Vishnu": {
     "arcana": "Fool",
@@ -94838,14 +94710,7 @@
       "Fast Heal": 90,
       "Elec Amp": 92,
       "Hassou Tobi": 94
-    },
-    "recipes": [
-      "Shiki-Ouji",
-      "Arahabaki",
-      "Okuninushi",
-      "Yatagarasu",
-      "Futsunushi"
-    ]
+    }
   },
   "Yurlungur": {
     "arcana": "Sun",
@@ -98674,15 +98539,7 @@
       "Heat Up": 83,
       "Salvation": 84,
       "Almighty Boost": 85
-    },
-    "recipes": [
-      "Yamata-no-Orochi",
-      "Throne",
-      "Inugami",
-      "Raja Naga",
-      "Barong",
-      "Norn"
-    ]
+    }
   },
   "Izanagi-no-Okami Picaro": {
     "arcana": "World",
@@ -98703,15 +98560,7 @@
       "Enduring Soul": 92,
       "Salvation": 93,
       "Almighty Boost": 94
-    },
-    "recipes": [
-      "Okuninushi",
-      "Orthrus",
-      "Kali",
-      "Mithras",
-      "Cu Chulainn",
-      "Lucifer"
-    ]
+    }
   },
   "Kaguya": {
     "arcana": "Moon",

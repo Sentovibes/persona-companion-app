@@ -72,7 +72,28 @@ class FusionViewModel : ViewModel() {
                     }
                 }
                 
-                fusionCalculator = FusionCalculator(fusionRecipes, personas)
+                // Load special fusions
+                val specialPath = when (gameId) {
+                    "p3fes", "p3p" -> "data/special-fusions/p3-special.json"
+                    "p3r" -> "data/special-fusions/p3r-special.json"
+                    "p4", "p4g" -> "data/special-fusions/p4-special.json"
+                    "p5" -> "data/special-fusions/p5-special.json"
+                    "p5r" -> "data/special-fusions/p5r-special.json"
+                    else -> null
+                }
+                
+                val specialFusions = if (specialPath != null) {
+                    try {
+                        val specialJson = context.assets.open(specialPath).bufferedReader().use { it.readText() }
+                        Gson().fromJson<Map<String, List<List<String>>>>(specialJson, object : com.google.gson.reflect.TypeToken<Map<String, List<List<String>>>>() {}.type)
+                    } catch (e: Exception) {
+                        emptyMap()
+                    }
+                } else {
+                    emptyMap()
+                }
+                
+                fusionCalculator = FusionCalculator(fusionRecipes, specialFusions, personas)
                 
                 _state.value = _state.value.copy(
                     personas = personas.sortedBy { it.name },
