@@ -3,11 +3,11 @@ import os
 
 # Mapping of special files to their corresponding offline data files
 special_to_offline = {
-    "persona3fes+portable-special.json": ["p3fes_offline_data.json", "p3p_offline_data.json"],
-    "persona3reload-special.json": ["p3r_offline_data.json", "p3raeg_offline_data.json"],
-    "persona4+golden-special.json": ["p4_offline_data.json", "p4g_offline_data.json"],
-    "persona5-special.json": ["p5_offline_data.json"],
-    "persona5royal-special.json": ["p5r_offline_data.json"]
+    "extras/persona3fes+portable-special.json": ["extras/p3fes_persona_data.json", "extras/p3p_persona_data.json"],
+    "extras/persona3reload-special.json": ["extras/p3r_persona_data.json"],
+    "extras/persona4+golden-special.json": ["extras/p4_persona_data.json", "extras/p4g_persona_data.json"],
+    "extras/persona5-special.json": ["extras/p5_persona_data.json"],
+    "extras/persona5royal-special.json": ["extras/p5r_persona_data.json"]
 }
 
 def merge_special_fusions():

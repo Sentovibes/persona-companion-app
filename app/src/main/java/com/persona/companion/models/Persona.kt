@@ -7,8 +7,8 @@ import com.google.gson.annotations.SerializedName
  */
 data class Persona(
     val name: String = "",
-    @SerializedName("race") val arcana: String? = null,
-    @SerializedName("lvl") val level: Int? = null,
+    @SerializedName("race", alternate = ["arcana"]) val arcana: String? = null,
+    @SerializedName("lvl", alternate = ["level"]) val level: Int? = null,
     val stats: List<Int>? = null,
     val skills: Map<String, Double>? = null,
     val resists: Any? = null,  // Can be String (old format) or List<String> (P3R format)
