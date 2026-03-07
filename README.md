@@ -50,6 +50,14 @@ Get the latest APK from the [Releases](../../releases) page.
 
 ---
 
+## Support Development
+
+If you find this app helpful, consider supporting development:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
+
+---
+
 ## Project Structure
 
 ```
@@ -184,6 +192,13 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v2.6.0 (2026-03-07)
+- Added update checker - check for new releases from GitHub
+- Added About section with app info and support link
+- Fixed special fusion display for 3+ persona fusions
+- Improved fusion recipe UI layout
+- QoL improvements
 
 ### v2.5.0 (2026-03-07)
 - Enhanced persona database with improved datasets

@@ -267,43 +267,91 @@ fun FusionRecipeCard(
     Card(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            recipe.personas.forEachIndexed { index, persona ->
-                // Persona column
-                Column(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clickable { onPersonaClick(persona) }
-                        .padding(4.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = persona.name,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Text(
-                        text = "${persona.arcana} • Lv. ${persona.level}",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+        // Use Column for 3+ personas to avoid squishing
+        if (recipe.personas.size > 2) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                recipe.personas.forEachIndexed { index, persona ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Plus icon (except for first persona)
+                        if (index > 0) {
+                            Icon(
+                                imageVector = Icons.Default.Add,
+                                contentDescription = "Plus",
+                                modifier = Modifier.padding(end = 12.dp),
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        } else {
+                            Spacer(modifier = Modifier.width(36.dp))
+                        }
+                        
+                        // Persona info
+                        Column(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { onPersonaClick(persona) }
+                                .padding(8.dp)
+                        ) {
+                            Text(
+                                text = persona.name,
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Text(
+                                text = "${persona.arcana} • Lv. ${persona.level}",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
                 }
-                
-                // Plus icon (except after last persona)
-                if (index < recipe.personas.size - 1) {
-                    Icon(
-                        imageVector = Icons.Default.Add,
-                        contentDescription = "Plus",
-                        modifier = Modifier.padding(horizontal = 4.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
+            }
+        } else {
+            // Original horizontal layout for 2-persona fusions
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                recipe.personas.forEachIndexed { index, persona ->
+                    Column(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clickable { onPersonaClick(persona) }
+                            .padding(4.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = persona.name,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Text(
+                            text = "${persona.arcana} • Lv. ${persona.level}",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    
+                    if (index < recipe.personas.size - 1) {
+                        Icon(
+                            imageVector = Icons.Default.Add,
+                            contentDescription = "Plus",
+                            modifier = Modifier.padding(horizontal = 4.dp),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
                 }
             }
         }

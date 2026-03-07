@@ -25,4 +25,19 @@ class AppPreferences(context: Context) {
     fun setShowEpisodeAigis(show: Boolean) {
         prefs.edit().putBoolean("show_episode_aigis", show).apply()
     }
+    
+    fun getLastUpdateCheck(): Long {
+        return prefs.getLong("last_update_check", 0)
+    }
+    
+    fun setLastUpdateCheck(timestamp: Long) {
+        prefs.edit().putLong("last_update_check", timestamp).apply()
+    }
+    
+    fun shouldCheckForUpdates(): Boolean {
+        val lastCheck = getLastUpdateCheck()
+        val now = System.currentTimeMillis()
+        val dayInMillis = 24 * 60 * 60 * 1000
+        return (now - lastCheck) >= dayInMillis
+    }
 }
