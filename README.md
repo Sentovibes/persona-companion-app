@@ -9,6 +9,7 @@ A native Android companion app for the Persona series — your pocket compendium
 ## Features
 
 - **Complete Persona Database** - Browse all Personas from P3 FES, P3 Portable, P3 Reload, P4, P4 Golden, P5, and P5 Royal
+- **Fusion Calculator** - Calculate all possible fusion recipes for any Persona (backwards fusion)
 - **Detailed Stats & Skills** - View base stats, skill lists, elemental affinities, and more
 - **Smart Search** - Search by Persona name or Arcana
 - **Flexible Sorting** - Sort by Arcana (grouped), Level, or Name
@@ -155,13 +156,13 @@ All Persona data is stored in JSON files under `app/src/main/assets/data/`.
 
 ## Roadmap
 
-- [ ] Fusion calculator
 - [ ] Social Links / Confidants guide
 - [ ] Classroom answers database
 - [ ] Boss strategies
 - [ ] Enemy compendium
 - [ ] Dark mode toggle
 - [ ] Export/import favorites
+- [ ] Forward fusion (calculate result from two personas)
 
 ---
 
@@ -183,6 +184,13 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v2.0.0 (2026-03-07)
+- Added Fusion Calculator for all games
+- Calculate all possible fusion recipes for any Persona
+- Supports backwards fusion (fission) algorithm
+- Fusion charts for P3, P4, and P5 series
+- Same-arcana and cross-arcana fusion support
 
 ### v1.5.0 (2026-03-07)
 - Added Settings screen

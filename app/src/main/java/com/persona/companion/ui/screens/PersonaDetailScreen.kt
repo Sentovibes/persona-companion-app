@@ -150,8 +150,17 @@ private fun StatBar(label: String, value: Int, maxValue: Int, accentColor: Color
 private fun SkillRow(name: String, level: Double, accentColor: Color) {
     Row(modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).background(SurfaceCard).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
         Text(text = name, style = MaterialTheme.typography.bodyMedium, color = TextPrimary, modifier = Modifier.weight(1f))
-        val label = if (level < 1.0) "Innate" else "Lv. ${level.toInt()}"
-        Text(text = label, style = MaterialTheme.typography.labelSmall, color = if (level < 1.0) accentColor else TextSecondary)
+        val label = when {
+            level < 1.0 -> "Innate"
+            level >= 100 -> "Special"
+            else -> "Lv. ${level.toInt()}"
+        }
+        val labelColor = when {
+            level < 1.0 -> accentColor
+            level >= 100 -> Color(0xFFFFD700) // Gold for special skills
+            else -> TextSecondary
+        }
+        Text(text = label, style = MaterialTheme.typography.labelSmall, color = labelColor)
     }
 }
 

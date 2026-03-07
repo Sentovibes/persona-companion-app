@@ -91,20 +91,21 @@ data class Persona(
         // Determine elements by specific game fields
         val isP3 = heart != null || cardlvl != null
         val isP5 = trait != null || item != null || itemr != null || resmods != null || specialFusion != null
-
-        val elements = if (isP3) {
-            listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        } else if (isP5) {
-            listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
-        } else {
-            // Fallback for P4 (usually 7 or 8 characters)
-            if (safeResists.length == 7) {
-                listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark")
-            } else if (safeResists.length == 8) {
-                listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-            } else {
-                listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+        
+        // P3 has 10 elements: Slash, Strike, Pierce, Fire, Ice, Elec, Wind, Light, Dark, Almighty
+        // P5 has 10 elements: Phys, Gun, Fire, Ice, Elec, Wind, Psy, Nuke, Bless, Curse
+        // P4 has 7-8 elements: Phys, Fire, Ice, Elec, Wind, Light, Dark(, Almighty)
+        
+        val elements = when {
+            isP3 -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+            isP5 -> listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+            safeResists.length == 10 && !isP5 -> {
+                // 10 characters but not P5 = must be P3 (some personas don't have heart field)
+                listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
             }
+            safeResists.length == 7 -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark")
+            safeResists.length == 8 -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+            else -> listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
         }
         
         return safeResists.mapIndexedNotNull { index, char ->

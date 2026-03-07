@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.persona.companion.ui.screens.CategoryScreen
+import com.persona.companion.ui.screens.FusionScreen
 import com.persona.companion.ui.screens.GameSelectionScreen
 import com.persona.companion.ui.screens.HomeScreen
 import com.persona.companion.ui.screens.PersonaDetailScreen
@@ -41,6 +42,10 @@ sealed class Screen(val route: String) {
             val safeName = personaName.replace("/", "|")
             return "persona_detail/$seriesId/$gameId/$safeName"
         }
+    }
+    
+    object Fusion : Screen("fusion/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "fusion/$seriesId/$gameId"
     }
 }
 
@@ -107,6 +112,28 @@ fun NavGraph(navController: NavHostController) {
             val gameId      = back.arguments?.getString("gameId")      ?: return@composable
             val personaName = back.arguments?.getString("personaName") ?: return@composable
             PersonaDetailScreen(navController, seriesId, gameId, personaName.replace("|", "/"))
+        }
+        
+        composable(
+            route = Screen.Fusion.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            
+            // Get the data path for this game
+            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
+            val dataPath = game?.dataPath ?: return@composable
+            
+            FusionScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                dataPath = dataPath,
+                onBack = { navController.popBackStack() }
+            )
         }
     }
 }

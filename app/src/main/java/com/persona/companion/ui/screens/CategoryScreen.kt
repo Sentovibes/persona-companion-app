@@ -52,7 +52,8 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
         CategoryItem(
             label     = "Fusion Calculator",
             icon      = Icons.Default.AutoAwesome,
-            available = false
+            available = true,
+            route     = Screen.Fusion.createRoute(seriesId, gameId)
         ),
         CategoryItem(
             label     = "Social Links / Confidants",
