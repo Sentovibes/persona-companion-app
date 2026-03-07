@@ -9,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -89,6 +90,19 @@ fun PersonaSelectionView(
     personas: List<com.persona.companion.models.Persona>,
     onPersonaSelected: (com.persona.companion.models.Persona) -> Unit
 ) {
+    var searchQuery by remember { mutableStateOf("") }
+    
+    val filteredPersonas = remember(personas, searchQuery) {
+        if (searchQuery.isBlank()) {
+            personas
+        } else {
+            personas.filter { 
+                it.name.contains(searchQuery, ignoreCase = true) ||
+                it.arcana?.contains(searchQuery, ignoreCase = true) == true
+            }
+        }
+    }
+    
     Column(modifier = Modifier.fillMaxSize()) {
         Text(
             text = "Select a Persona to see fusion recipes",
@@ -96,12 +110,39 @@ fun PersonaSelectionView(
             style = MaterialTheme.typography.titleMedium
         )
         
+        // Search bar
+        OutlinedTextField(
+            value = searchQuery,
+            onValueChange = { searchQuery = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            placeholder = { Text("Search by name or arcana...") },
+            singleLine = true,
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Search"
+                )
+            },
+            trailingIcon = {
+                if (searchQuery.isNotEmpty()) {
+                    IconButton(onClick = { searchQuery = "" }) {
+                        Icon(
+                            imageVector = Icons.Default.Close,
+                            contentDescription = "Clear"
+                        )
+                    }
+                }
+            }
+        )
+        
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(personas) { persona ->
+            items(filteredPersonas) { persona ->
                 PersonaListItem(
                     persona = persona,
                     onClick = { onPersonaSelected(persona) }

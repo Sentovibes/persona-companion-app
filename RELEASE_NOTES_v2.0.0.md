@@ -25,8 +25,9 @@ Example: Armageddon, Cadenza, and other special skills now show "Special" in gol
 ## Technical Details
 
 - Version: 2.0.0 (versionCode 3)
-- Size: ~16 MB
+- Size: ~17 MB
 - Minimum Android: 8.0 (API 26)
+- Fusion recipes: Pre-calculated for instant results
 
 ## Installation
 
