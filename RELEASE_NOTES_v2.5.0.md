@@ -16,11 +16,18 @@ Updated all persona datasets with improved and more complete data across all gam
 
 **Total: 1,370 personas** (was 1,293)
 
+### Improved Fusion Calculator
+- Updated fusion recipes with better formula accuracy
+- Special fusions (3+ personas) now work correctly
+- More accurate fusion results across all games
+- Fixed edge cases in fusion calculations
+
 ### What's Improved
 - More accurate persona stats and skills
 - Better data consistency across games
 - Additional personas that were missing in previous versions
 - Refined P3 Portable dataset for better accuracy
+- Enhanced fusion recipe accuracy
 
 ## Technical Details
 
@@ -34,4 +41,4 @@ Download the APK and install on your Android device. If you have v2.0.0 installe
 
 ## Notes
 
-All fusion calculator features from v2.0.0 remain fully functional with the updated persona data.
+All fusion calculator features from v2.0.0 remain fully functional with the updated persona data and improved fusion formulas.
