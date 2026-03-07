@@ -32,7 +32,7 @@ fun FusionScreen(
     val state by viewModel.state.collectAsState()
     
     LaunchedEffect(dataPath) {
-        viewModel.loadData(context, seriesId, dataPath)
+        viewModel.loadData(context, seriesId, gameId, dataPath)
     }
     
     Scaffold(

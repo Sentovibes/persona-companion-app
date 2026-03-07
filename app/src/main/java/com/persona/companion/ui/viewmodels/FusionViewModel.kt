@@ -29,7 +29,7 @@ class FusionViewModel : ViewModel() {
     
     private var fusionCalculator: FusionCalculator? = null
     
-    fun loadData(context: Context, seriesId: String, dataPath: String) {
+    fun loadData(context: Context, seriesId: String, gameId: String, dataPath: String) {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, errorMessage = null)
             
@@ -37,15 +37,16 @@ class FusionViewModel : ViewModel() {
                 // Load personas
                 val personas = JsonLoader.loadPersonas(context, dataPath)
                 
-                // Load fusion chart
-                val chartPath = when (seriesId) {
-                    "p3" -> "data/fusion-charts/p3-fusion-chart.json"
-                    "p4" -> "data/fusion-charts/p4-fusion-chart.json"
-                    "p5" -> "data/fusion-charts/p5-fusion-chart.json"
+                // Load fusion recipes
+                val recipePath = when (gameId) {
+                    "p3r" -> "data/fusion-recipes/p3r-recipes.json"
+                    "p4g" -> "data/fusion-recipes/p4g-recipes.json"
+                    "p5" -> "data/fusion-recipes/p5-recipes.json"
+                    "p5r" -> "data/fusion-recipes/p5r-recipes.json"
                     else -> null
                 }
                 
-                if (chartPath == null) {
+                if (recipePath == null) {
                     _state.value = _state.value.copy(
                         isLoading = false,
                         errorMessage = "Fusion not available for this game"
@@ -53,10 +54,22 @@ class FusionViewModel : ViewModel() {
                     return@launch
                 }
                 
-                val chartJson = context.assets.open(chartPath).bufferedReader().use { it.readText() }
-                val fusionChart = Gson().fromJson(chartJson, FusionChart::class.java)
+                val recipeJson = context.assets.open(recipePath).bufferedReader().use { it.readText() }
+                val recipeData = Gson().fromJson<Map<String, Any>>(recipeJson, object : com.google.gson.reflect.TypeToken<Map<String, Any>>() {}.type)
                 
-                fusionCalculator = FusionCalculator(fusionChart, personas)
+                // Convert recipe data to the format we need
+                val fusionRecipes = mutableMapOf<String, List<List<String>>>()
+                for ((personaName, data) in recipeData) {
+                    if (data is Map<*, *>) {
+                        val recipes = data["recipes"]
+                        if (recipes is List<*>) {
+                            @Suppress("UNCHECKED_CAST")
+                            fusionRecipes[personaName] = recipes as List<List<String>>
+                        }
+                    }
+                }
+                
+                fusionCalculator = FusionCalculator(fusionRecipes, personas)
                 
                 _state.value = _state.value.copy(
                     personas = personas.sortedBy { it.name },
