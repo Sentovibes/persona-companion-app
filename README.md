@@ -194,11 +194,13 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## Changelog
 
 ### v2.6.0 (2026-03-07)
-- Added update checker - check for new releases from GitHub
-- Added About section with app info and support link
-- Fixed special fusion display for 3+ persona fusions
-- Improved fusion recipe UI layout
-- QoL improvements
+- Added automatic update checker (checks every 24 hours on launch)
+- Added manual update check in Settings
+- Added About section with app info and Ko-fi support link
+- Fixed special fusion crashes (Messiah, Lucifer)
+- Fixed special fusion UI for 3+ persona fusions (now displays vertically)
+- APK now named with version number
+- Added internet permission (for update checking only)
 
 ### v2.5.0 (2026-03-07)
 - Enhanced persona database with improved datasets
