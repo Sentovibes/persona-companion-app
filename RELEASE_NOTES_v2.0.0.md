@@ -6,8 +6,8 @@
 Calculate all possible fusion recipes for any Persona using backwards fusion (fission). The calculator shows you which two Personas can be fused together to create your target Persona.
 
 - Supports all games: P3 FES, P3 Portable, P3 Reload, P4, P4 Golden, P5, and P5 Royal
-- Same-arcana fusion support
-- Cross-arcana fusion with accurate fusion charts
+- Pre-calculated fusion recipes for instant results (including special fusions)
+- Search functionality to quickly find personas
 - Clean UI showing all possible ingredient combinations
 
 ## Bug Fixes

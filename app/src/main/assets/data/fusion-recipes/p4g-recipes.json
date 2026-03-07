@@ -18,6 +18,7 @@
       "Tetra Break": 60,
       "Null Physical": 62
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -804,11 +805,10 @@
       "Mind Charge": 77,
       "Die for Me!": 79
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Belial",
-        "Nebiros"
-      ]
+      "Belial",
+      "Nebiros"
     ]
   },
   "Alilat": {
@@ -829,6 +829,7 @@
       "Growth 2": 74,
       "Auto-Maraku": 75
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -1263,6 +1264,7 @@
       "Null Enervate": 45,
       "Enervate Boost": 46
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -1813,6 +1815,7 @@
       "Auto-Rakukaja": 23,
       "Trafuri": 24
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -2019,6 +2022,7 @@
       "Invigorate 3": 63,
       "Null Exhaust": 64
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -2621,6 +2625,7 @@
       "Zionga": 24,
       "Dodge Wind": 25
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -2898,6 +2903,7 @@
       "Regenerate 1": 8,
       "Hama Boost": 9
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Apsaras",
@@ -2937,6 +2943,7 @@
       "Mahamaon": 64,
       "Hama Boost": 65
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -5116,6 +5123,10 @@
       ],
       [
         "Michael",
+        "Satan"
+      ],
+      [
+        "Michael",
         "Trumpeter"
       ],
       [
@@ -5763,6 +5774,7 @@
       "Mahama": 19,
       "Auto-Sukukaja": 20
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -5839,6 +5851,7 @@
       "Me Patra": 6,
       "Bufu": 7
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -5868,6 +5881,7 @@
       "Blue Wall": 22,
       "Dodge Elec": 23
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -6049,6 +6063,7 @@
       "Tetrakarn": 76,
       "Repel Physical": 80
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -6347,6 +6362,7 @@
       "Sharp Student": 14,
       "Survive Dark": 15
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -6446,11 +6462,10 @@
       "Angelic Grace": 95,
       "Null Physical": 96
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Shiva",
-        "Parvati"
-      ]
+      "Shiva",
+      "Parvati"
     ]
   },
   "Ares": {
@@ -6471,6 +6486,7 @@
       "Dekaja": 29,
       "Power Charge": 30
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -6797,6 +6813,7 @@
       "Spell Master": 90,
       "Unshaken Will": 92
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ardha",
@@ -6923,6 +6940,7 @@
       "Mind Charge": 76,
       "Arms Master": 79
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -7248,6 +7266,7 @@
       "Evade Fire": 69,
       "Wind Amp": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -7702,6 +7721,7 @@
       "Maragidyne": 87,
       "Mamudoon": 88
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -7900,6 +7920,7 @@
       "Mudo Boost": 80,
       "Stagnant Air": 82
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -8130,6 +8151,7 @@
       "Mamudoon": 52,
       "Mudo Boost": 53
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -8732,6 +8754,7 @@
       "High Counter": 71,
       "Maziodyne": 72
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -9483,15 +9506,14 @@
       "Mudo Boost": 86,
       "Megidolaon": 87
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Pazuzu",
-        "Baal Zebul",
-        "Belial",
-        "Belphegor",
-        "Mot",
-        "Seth"
-      ]
+      "Pazuzu",
+      "Baal Zebul",
+      "Belial",
+      "Belphegor",
+      "Mot",
+      "Seth"
     ]
   },
   "Belial": {
@@ -9512,6 +9534,7 @@
       "Fire Amp": 72,
       "Maragidyne": 73
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -9794,6 +9817,7 @@
       "Enervate Boost": 66,
       "Elec Amp": 67
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -10320,6 +10344,7 @@
       "Brain Shake": 19,
       "Resist Confuse": 20
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -10355,14 +10380,13 @@
       "Agidyne": 43,
       "Mudoon": 44
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Jack Frost",
-        "Pyro Jack",
-        "King Frost",
-        "Pixie",
-        "Ghoul"
-      ]
+      "Jack Frost",
+      "Pyro Jack",
+      "King Frost",
+      "Pixie",
+      "Ghoul"
     ]
   },
   "Byakko": {
@@ -10384,6 +10408,7 @@
       "Ice Amp": 67,
       "Mabufudyne": 68
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -10826,6 +10851,7 @@
       "Fire Amp": 57,
       "Auto-Sukukaja": 58
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -11328,6 +11354,7 @@
       "Megidola": 68,
       "Invigorate 3": 69
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -11742,6 +11769,7 @@
       "Garudyne": 49,
       "Null Enervate": 50
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -12633,6 +12661,7 @@
       "Garudyne": 51,
       "Wind Amp": 53
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -13583,6 +13612,7 @@
       "White Wall": 14,
       "Traesto": 15
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Apsaras",
@@ -13640,6 +13670,7 @@
       "Samarecarm": 68,
       "Mediarahan": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -14435,6 +14466,7 @@
       "Hama Boost": 65,
       "Samsara": 67
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -14965,6 +14997,7 @@
       "Fire Amp": 51,
       "Resist Physical": 52
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -14973,6 +15006,10 @@
       [
         "Alice",
         "Orobas"
+      ],
+      [
+        "Alice",
+        "Pixie"
       ],
       [
         "Alilat",
@@ -14992,7 +15029,15 @@
       ],
       [
         "Alilat",
+        "Ukobach"
+      ],
+      [
+        "Alilat",
         "Vetala"
+      ],
+      [
+        "Alraune",
+        "Ares"
       ],
       [
         "Alraune",
@@ -15008,7 +15053,19 @@
       ],
       [
         "Ame-no-Uzume",
+        "Clotho"
+      ],
+      [
+        "Ame-no-Uzume",
         "Hariti"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Kikuri-Hime"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Lachesis"
       ],
       [
         "Ame-no-Uzume",
@@ -15017,6 +15074,10 @@
       [
         "Ame-no-Uzume",
         "Tzitzimitl"
+      ],
+      [
+        "Ananta",
+        "Berith"
       ],
       [
         "Ananta",
@@ -15036,11 +15097,31 @@
       ],
       [
         "Andras",
+        "Kin-Ki"
+      ],
+      [
+        "Andras",
         "Thor"
+      ],
+      [
+        "Andras",
+        "Triglav"
+      ],
+      [
+        "Anubis",
+        "Anzu"
+      ],
+      [
+        "Anubis",
+        "Berith"
       ],
       [
         "Anubis",
         "Makami"
+      ],
+      [
+        "Anubis",
+        "Omoikane"
       ],
       [
         "Anubis",
@@ -15068,7 +15149,15 @@
       ],
       [
         "Ara Mitama",
+        "Girimehkala"
+      ],
+      [
+        "Ara Mitama",
         "Seth"
+      ],
+      [
+        "Ara Mitama",
+        "Sui-Ki"
       ],
       [
         "Arahabaki",
@@ -15077,6 +15166,10 @@
       [
         "Arahabaki",
         "Yaksini"
+      ],
+      [
+        "Ares",
+        "Girimehkala"
       ],
       [
         "Ares",
@@ -15108,6 +15201,10 @@
       ],
       [
         "Barong",
+        "Senri"
+      ],
+      [
+        "Barong",
         "Titania"
       ],
       [
@@ -15128,11 +15225,19 @@
       ],
       [
         "Belphegor",
+        "Senri"
+      ],
+      [
+        "Belphegor",
         "Titania"
       ],
       [
         "Belphegor",
         "Yaksini"
+      ],
+      [
+        "Berith",
+        "Lachesis"
       ],
       [
         "Berith",
@@ -15164,6 +15269,14 @@
       ],
       [
         "Clotho",
+        "Makami"
+      ],
+      [
+        "Clotho",
+        "Narcissus"
+      ],
+      [
+        "Clotho",
         "Orthrus"
       ],
       [
@@ -15171,8 +15284,24 @@
         "Raja Naga"
       ],
       [
+        "Clotho",
+        "Sati"
+      ],
+      [
+        "Clotho",
+        "Yomotsu-Ikusa"
+      ],
+      [
         "Cybele",
         "Rakshasa"
+      ],
+      [
+        "Cybele",
+        "Sandman"
+      ],
+      [
+        "Cybele",
+        "Senri"
       ],
       [
         "Cybele",
@@ -15184,19 +15313,39 @@
       ],
       [
         "Cybele",
+        "Valkyrie"
+      ],
+      [
+        "Cybele",
         "Yaksini"
+      ],
+      [
+        "Dis",
+        "Matador"
       ],
       [
         "Dis",
         "Mot"
       ],
       [
+        "Dis",
+        "Samael"
+      ],
+      [
         "Eligor",
         "Seth"
       ],
       [
+        "Eligor",
+        "Sui-Ki"
+      ],
+      [
         "Forneus",
         "Isis"
+      ],
+      [
+        "Forneus",
+        "Mother Harlot"
       ],
       [
         "Fortuna",
@@ -15204,7 +15353,23 @@
       ],
       [
         "Fortuna",
+        "Makami"
+      ],
+      [
+        "Fortuna",
+        "Orthrus"
+      ],
+      [
+        "Fortuna",
         "Quetzalcoatl"
+      ],
+      [
+        "Fortuna",
+        "Raja Naga"
+      ],
+      [
+        "Fortuna",
+        "Sati"
       ],
       [
         "Fortuna",
@@ -15217,6 +15382,18 @@
       [
         "Gabriel",
         "Hitokoto-Nushi"
+      ],
+      [
+        "Gabriel",
+        "Incubus"
+      ],
+      [
+        "Gabriel",
+        "King Frost"
+      ],
+      [
+        "Gabriel",
+        "Lamia"
       ],
       [
         "Gabriel",
@@ -15236,6 +15413,10 @@
       ],
       [
         "Gabriel",
+        "Queen Mab"
+      ],
+      [
+        "Gabriel",
         "Setanta"
       ],
       [
@@ -15251,12 +15432,28 @@
         "Undine"
       ],
       [
+        "Gabriel",
+        "Vetala"
+      ],
+      [
         "Ganga",
         "Kingu"
       ],
       [
         "Ganga",
+        "Kushinada-Hime"
+      ],
+      [
+        "Ganga",
         "Quetzalcoatl"
+      ],
+      [
+        "Ganga",
+        "Raja Naga"
+      ],
+      [
+        "Ghoul",
+        "Jinn"
       ],
       [
         "Ghoul",
@@ -15272,6 +15469,14 @@
       ],
       [
         "Gorgon",
+        "Hitokoto-Nushi"
+      ],
+      [
+        "Gorgon",
+        "Incubus"
+      ],
+      [
+        "Gorgon",
         "Kurama Tengu"
       ],
       [
@@ -15284,7 +15489,15 @@
       ],
       [
         "Gorgon",
+        "Mothman"
+      ],
+      [
+        "Gorgon",
         "Niddhoggr"
+      ],
+      [
+        "Gorgon",
+        "Okuninushi"
       ],
       [
         "Gorgon",
@@ -15292,7 +15505,15 @@
       ],
       [
         "Gorgon",
+        "Pazuzu"
+      ],
+      [
+        "Gorgon",
         "Raphael"
+      ],
+      [
+        "Gorgon",
+        "Setanta"
       ],
       [
         "Gorgon",
@@ -15303,8 +15524,20 @@
         "Thoth"
       ],
       [
+        "Gorgon",
+        "Undine"
+      ],
+      [
         "Hanuman",
         "Leanan Sidhe"
+      ],
+      [
+        "Hanuman",
+        "Queen Mab"
+      ],
+      [
+        "Hanuman",
+        "Undine"
       ],
       [
         "Hariti",
@@ -15320,7 +15553,23 @@
       ],
       [
         "High Pixie",
+        "Kushinada-Hime"
+      ],
+      [
+        "High Pixie",
         "Lakshmi"
+      ],
+      [
+        "High Pixie",
+        "Quetzalcoatl"
+      ],
+      [
+        "Hitokoto-Nushi",
+        "Titania"
+      ],
+      [
+        "Hua Po",
+        "Mot"
       ],
       [
         "Hua Po",
@@ -15337,6 +15586,10 @@
       [
         "Ippon-Datara",
         "Mother Harlot"
+      ],
+      [
+        "Ippon-Datara",
+        "Skadi"
       ],
       [
         "Ishtar",
@@ -15371,6 +15624,14 @@
         "Ukobach"
       ],
       [
+        "Jack Frost",
+        "Mot"
+      ],
+      [
+        "Jack Frost",
+        "White Rider"
+      ],
+      [
         "Jinn",
         "Matador"
       ],
@@ -15388,7 +15649,15 @@
       ],
       [
         "Kali",
+        "Queen Mab"
+      ],
+      [
+        "Kali",
         "Undine"
+      ],
+      [
+        "Kikuri-Hime",
+        "Narcissus"
       ],
       [
         "Kikuri-Hime",
@@ -15411,8 +15680,32 @@
         "Mother Harlot"
       ],
       [
+        "King Frost",
+        "Skadi"
+      ],
+      [
+        "Kingu",
+        "Saki Mitama"
+      ],
+      [
+        "Kingu",
+        "Sarasvati"
+      ],
+      [
+        "Kurama Tengu",
+        "Titania"
+      ],
+      [
+        "Kurama Tengu",
+        "Yaksini"
+      ],
+      [
         "Kushinada-Hime",
         "Parvati"
+      ],
+      [
+        "Kusi Mitama",
+        "Leanan Sidhe"
       ],
       [
         "Kusi Mitama",
@@ -15421,6 +15714,10 @@
       [
         "Lachesis",
         "Makami"
+      ],
+      [
+        "Lachesis",
+        "Narcissus"
       ],
       [
         "Lachesis",
@@ -15433,6 +15730,10 @@
       [
         "Lachesis",
         "Sati"
+      ],
+      [
+        "Lachesis",
+        "Yomotsu-Ikusa"
       ],
       [
         "Lakshmi",
@@ -15451,8 +15752,36 @@
         "Skadi"
       ],
       [
+        "Leanan Sidhe",
+        "Oni"
+      ],
+      [
+        "Leanan Sidhe",
+        "Rakshasa"
+      ],
+      [
+        "Leanan Sidhe",
+        "Titania"
+      ],
+      [
+        "Lilim",
+        "Mother Harlot"
+      ],
+      [
+        "Lilim",
+        "Skadi"
+      ],
+      [
+        "Lilith",
+        "Senri"
+      ],
+      [
         "Lilith",
         "Titania"
+      ],
+      [
+        "Lilith",
+        "Yaksini"
       ],
       [
         "Loki",
@@ -15469,6 +15798,10 @@
       [
         "Mahakala",
         "Pixie"
+      ],
+      [
+        "Matador",
+        "Rangda"
       ],
       [
         "Metatron",
@@ -15488,7 +15821,15 @@
       ],
       [
         "Mother Harlot",
+        "Oberon"
+      ],
+      [
+        "Mother Harlot",
         "Queen Mab"
+      ],
+      [
+        "Mother Harlot",
+        "Ukobach"
       ],
       [
         "Mother Harlot",
@@ -15503,6 +15844,18 @@
         "Sandalphon"
       ],
       [
+        "Nata Taishi",
+        "Seth"
+      ],
+      [
+        "Nata Taishi",
+        "Sui-Ki"
+      ],
+      [
+        "Nebiros",
+        "Senri"
+      ],
+      [
         "Nebiros",
         "Titania"
       ],
@@ -15512,15 +15865,39 @@
       ],
       [
         "Niddhoggr",
+        "Senri"
+      ],
+      [
+        "Niddhoggr",
         "Titania"
+      ],
+      [
+        "Niddhoggr",
+        "Yaksini"
+      ],
+      [
+        "Nozuchi",
+        "Triglav"
+      ],
+      [
+        "Oberon",
+        "Skadi"
       ],
       [
         "Odin",
         "Senri"
       ],
       [
+        "Okuninushi",
+        "Titania"
+      ],
+      [
         "Omoikane",
         "Satan"
+      ],
+      [
+        "Omoikane",
+        "Trumpeter"
       ],
       [
         "Ongyo-Ki",
@@ -15531,16 +15908,44 @@
         "Raphael"
       ],
       [
+        "Oni",
+        "Undine"
+      ],
+      [
+        "Orobas",
+        "White Rider"
+      ],
+      [
         "Pabilsag",
         "Titania"
+      ],
+      [
+        "Pabilsag",
+        "Yaksini"
       ],
       [
         "Parvati",
         "Quetzalcoatl"
       ],
       [
+        "Parvati",
+        "Raja Naga"
+      ],
+      [
+        "Parvati",
+        "Sati"
+      ],
+      [
         "Pazuzu",
         "Skadi"
+      ],
+      [
+        "Pazuzu",
+        "Titania"
+      ],
+      [
+        "Pyro Jack",
+        "Samael"
       ],
       [
         "Pyro Jack",
@@ -15555,6 +15960,14 @@
         "Skadi"
       ],
       [
+        "Quetzalcoatl",
+        "Saki Mitama"
+      ],
+      [
+        "Quetzalcoatl",
+        "Sarasvati"
+      ],
+      [
         "Rakshasa",
         "Raphael"
       ],
@@ -15564,7 +15977,19 @@
       ],
       [
         "Raphael",
+        "Senri"
+      ],
+      [
+        "Raphael",
+        "Titan"
+      ],
+      [
+        "Raphael",
         "Titania"
+      ],
+      [
+        "Raphael",
+        "Yaksini"
       ],
       [
         "Sandalphon",
@@ -15575,12 +16000,36 @@
         "Skadi"
       ],
       [
+        "Seth",
+        "Slime"
+      ],
+      [
         "Shiisaa",
         "Trumpeter"
       ],
       [
         "Skadi",
         "Undine"
+      ],
+      [
+        "Skadi",
+        "Vetala"
+      ],
+      [
+        "Succubus",
+        "Titania"
+      ],
+      [
+        "Succubus",
+        "Yaksini"
+      ],
+      [
+        "Thoth",
+        "Titania"
+      ],
+      [
+        "Thoth",
+        "Yaksini"
       ],
       [
         "Triglav",
@@ -15611,6 +16060,7 @@
       "Agidyne": 43,
       "Mind Charge": 44
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -16173,6 +16623,7 @@
       "Survive Dark": 43,
       "Null Dark": 44
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -16563,6 +17014,7 @@
       "Soul Break": 16,
       "Resist Exhaust": 17
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -16657,6 +17109,7 @@
       "Dodge Ice": 40,
       "Crazy Chain": 41
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -17110,6 +17563,7 @@
       "Poisma": 8,
       "Dodge Elec": 10
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ippon-Datara",
@@ -17139,6 +17593,7 @@
       "Auto-Sukukaja": 40,
       "Wind Boost": 41
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -18338,14 +18793,13 @@
       "Arms Master": 85,
       "Firm Stance": 86
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Atavaka",
-        "Ares",
-        "Kin-Ki",
-        "Triglav",
-        "Neko Shogun"
-      ]
+      "Atavaka",
+      "Ares",
+      "Kin-Ki",
+      "Triglav",
+      "Neko Shogun"
     ]
   },
   "Fuu-Ki": {
@@ -18367,6 +18821,7 @@
       "Wind Boost": 47,
       "Null Exhaust": 49
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -18375,6 +18830,10 @@
       [
         "Abaddon",
         "Lilim"
+      ],
+      [
+        "Abaddon",
+        "Ukobach"
       ],
       [
         "Abaddon",
@@ -18394,6 +18853,10 @@
       ],
       [
         "Alraune",
+        "Archangel"
+      ],
+      [
+        "Alraune",
         "Dominion"
       ],
       [
@@ -18402,7 +18865,19 @@
       ],
       [
         "Alraune",
+        "Principality"
+      ],
+      [
+        "Alraune",
         "Virtue"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Gabriel"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Gorgon"
       ],
       [
         "Ame-no-Uzume",
@@ -18414,6 +18889,10 @@
       ],
       [
         "Andras",
+        "Dominion"
+      ],
+      [
+        "Andras",
         "Throne"
       ],
       [
@@ -18421,8 +18900,16 @@
         "Uriel"
       ],
       [
+        "Andras",
+        "Virtue"
+      ],
+      [
         "Angel",
         "Baal Zebul"
+      ],
+      [
+        "Angel",
+        "Girimehkala"
       ],
       [
         "Angel",
@@ -18434,7 +18921,19 @@
       ],
       [
         "Angel",
+        "Sui-Ki"
+      ],
+      [
+        "Angel",
+        "Taowu"
+      ],
+      [
+        "Angel",
         "Vasuki"
+      ],
+      [
+        "Angel",
+        "Yatsufusa"
       ],
       [
         "Anubis",
@@ -18454,6 +18953,10 @@
       ],
       [
         "Anzu",
+        "Orthrus"
+      ],
+      [
+        "Anzu",
         "Taowu"
       ],
       [
@@ -18462,7 +18965,15 @@
       ],
       [
         "Archangel",
+        "Girimehkala"
+      ],
+      [
+        "Archangel",
         "Hell Biker"
+      ],
+      [
+        "Archangel",
+        "Orthrus"
       ],
       [
         "Archangel",
@@ -18481,6 +18992,10 @@
         "Vasuki"
       ],
       [
+        "Archangel",
+        "Yatsufusa"
+      ],
+      [
         "Attis",
         "Izanagi"
       ],
@@ -18490,7 +19005,23 @@
       ],
       [
         "Baphomet",
+        "Jack Frost"
+      ],
+      [
+        "Baphomet",
+        "Orobas"
+      ],
+      [
+        "Baphomet",
+        "Pixie"
+      ],
+      [
+        "Baphomet",
         "Pyro Jack"
+      ],
+      [
+        "Berith",
+        "Black Frost"
       ],
       [
         "Berith",
@@ -18502,7 +19033,27 @@
       ],
       [
         "Berith",
+        "Decarabia"
+      ],
+      [
+        "Berith",
+        "Dominion"
+      ],
+      [
+        "Berith",
+        "Flauros"
+      ],
+      [
+        "Berith",
         "Hachiman"
+      ],
+      [
+        "Berith",
+        "Hanuman"
+      ],
+      [
+        "Berith",
+        "Hokuto Seikun"
       ],
       [
         "Berith",
@@ -18533,8 +19084,20 @@
         "Uriel"
       ],
       [
+        "Berith",
+        "Virtue"
+      ],
+      [
         "Black Frost",
         "Makami"
+      ],
+      [
+        "Black Frost",
+        "Matador"
+      ],
+      [
+        "Black Frost",
+        "Mokoi"
       ],
       [
         "Black Frost",
@@ -18547,6 +19110,10 @@
       [
         "Black Frost",
         "Samael"
+      ],
+      [
+        "Black Frost",
+        "Yomotsu-Ikusa"
       ],
       [
         "Cerberus",
@@ -18574,7 +19141,15 @@
       ],
       [
         "Cu Chulainn",
+        "Lilim"
+      ],
+      [
+        "Cu Chulainn",
         "Pazuzu"
+      ],
+      [
+        "Cu Chulainn",
+        "Ukobach"
       ],
       [
         "Cu Chulainn",
@@ -18586,11 +19161,19 @@
       ],
       [
         "Decarabia",
+        "Ghoul"
+      ],
+      [
+        "Decarabia",
         "Makami"
       ],
       [
         "Decarabia",
         "Matador"
+      ],
+      [
+        "Decarabia",
+        "Mokoi"
       ],
       [
         "Decarabia",
@@ -18603,6 +19186,10 @@
       [
         "Decarabia",
         "Yomotsu-Ikusa"
+      ],
+      [
+        "Dis",
+        "Gurr"
       ],
       [
         "Dis",
@@ -18633,12 +19220,24 @@
         "Yamata-no-Orochi"
       ],
       [
+        "Dominion",
+        "Yomotsu-Ikusa"
+      ],
+      [
+        "Flauros",
+        "Makami"
+      ],
+      [
         "Flauros",
         "Orthrus"
       ],
       [
         "Flauros",
         "Yatsufusa"
+      ],
+      [
+        "Flauros",
+        "Yomotsu-Ikusa"
       ],
       [
         "Gabriel",
@@ -18686,6 +19285,10 @@
       ],
       [
         "Gorgon",
+        "Narcissus"
+      ],
+      [
+        "Gorgon",
         "Quetzalcoatl"
       ],
       [
@@ -18699,6 +19302,10 @@
       [
         "Gurr",
         "Jinn"
+      ],
+      [
+        "Gurr",
+        "Pyro Jack"
       ],
       [
         "Gurr",
@@ -18769,16 +19376,48 @@
         "Loa"
       ],
       [
+        "Hua Po",
+        "Pale Rider"
+      ],
+      [
+        "Hua Po",
+        "Take-Minakata"
+      ],
+      [
+        "Incubus",
+        "Taotie"
+      ],
+      [
         "Izanagi",
         "Mahakala"
+      ],
+      [
+        "Izanagi",
+        "Taowu"
       ],
       [
         "Izanagi",
         "Vasuki"
       ],
       [
+        "Izanagi",
+        "White Rider"
+      ],
+      [
+        "Izanagi",
+        "Yatsufusa"
+      ],
+      [
         "Jack Frost",
         "Kumbhanda"
+      ],
+      [
+        "Jack Frost",
+        "Loa"
+      ],
+      [
+        "Jack Frost",
+        "Pale Rider"
       ],
       [
         "Jack Frost",
@@ -18821,8 +19460,28 @@
         "Yaksini"
       ],
       [
+        "Kumbhanda",
+        "Orobas"
+      ],
+      [
+        "Kumbhanda",
+        "Pixie"
+      ],
+      [
+        "Kushinada-Hime",
+        "Senri"
+      ],
+      [
         "Kushinada-Hime",
         "Titania"
+      ],
+      [
+        "Kushinada-Hime",
+        "Yaksini"
+      ],
+      [
+        "Kusi Mitama",
+        "Makami"
       ],
       [
         "Kusi Mitama",
@@ -18837,6 +19496,10 @@
         "Yatsufusa"
       ],
       [
+        "Kusi Mitama",
+        "Yomotsu-Ikusa"
+      ],
+      [
         "Lakshmi",
         "Senri"
       ],
@@ -18846,7 +19509,19 @@
       ],
       [
         "Legion",
+        "Makami"
+      ],
+      [
+        "Legion",
         "Mot"
+      ],
+      [
+        "Legion",
+        "Orthrus"
+      ],
+      [
+        "Legion",
+        "Samael"
       ],
       [
         "Legion",
@@ -18874,6 +19549,10 @@
       ],
       [
         "Loa",
+        "Orobas"
+      ],
+      [
+        "Loa",
         "Pyro Jack"
       ],
       [
@@ -18894,6 +19573,26 @@
       ],
       [
         "Makami",
+        "Oni"
+      ],
+      [
+        "Makami",
+        "Ose"
+      ],
+      [
+        "Makami",
+        "Power"
+      ],
+      [
+        "Makami",
+        "Rakshasa"
+      ],
+      [
+        "Makami",
+        "Shiisaa"
+      ],
+      [
+        "Makami",
         "Shiki-Ouji"
       ],
       [
@@ -18902,7 +19601,15 @@
       ],
       [
         "Makami",
+        "Unicorn"
+      ],
+      [
+        "Makami",
         "Uriel"
+      ],
+      [
+        "Makami",
+        "Virtue"
       ],
       [
         "Mara",
@@ -18918,6 +19625,10 @@
       ],
       [
         "Matador",
+        "Ose"
+      ],
+      [
+        "Matador",
         "Shiki-Ouji"
       ],
       [
@@ -18930,7 +19641,15 @@
       ],
       [
         "Mot",
+        "Obariyon"
+      ],
+      [
+        "Mot",
         "Ose"
+      ],
+      [
+        "Mot",
+        "Yomotsu-Shikome"
       ],
       [
         "Mother Harlot",
@@ -18941,12 +19660,32 @@
         "Skadi"
       ],
       [
+        "Narcissus",
+        "Titania"
+      ],
+      [
+        "Nozuchi",
+        "Power"
+      ],
+      [
         "Nozuchi",
         "Throne"
       ],
       [
         "Nozuchi",
         "Uriel"
+      ],
+      [
+        "Nozuchi",
+        "Virtue"
+      ],
+      [
+        "Obariyon",
+        "Orthrus"
+      ],
+      [
+        "Obariyon",
+        "Samael"
       ],
       [
         "Obariyon",
@@ -18961,8 +19700,20 @@
         "White Rider"
       ],
       [
+        "Obariyon",
+        "Yatsufusa"
+      ],
+      [
+        "Omoikane",
+        "Taowu"
+      ],
+      [
         "Omoikane",
         "Vasuki"
+      ],
+      [
+        "Omoikane",
+        "Yatsufusa"
       ],
       [
         "Oni",
@@ -18971,6 +19722,10 @@
       [
         "Oni",
         "Yatsufusa"
+      ],
+      [
+        "Oni",
+        "Yomotsu-Ikusa"
       ],
       [
         "Orobas",
@@ -18983,6 +19738,22 @@
       [
         "Orthrus",
         "Power"
+      ],
+      [
+        "Orthrus",
+        "Principality"
+      ],
+      [
+        "Orthrus",
+        "Rakshasa"
+      ],
+      [
+        "Orthrus",
+        "Shiisaa"
+      ],
+      [
+        "Orthrus",
+        "Titan"
       ],
       [
         "Orthrus",
@@ -18999,6 +19770,10 @@
       [
         "Ose",
         "Yatsufusa"
+      ],
+      [
+        "Ose",
+        "Yomotsu-Ikusa"
       ],
       [
         "Pale Rider",
@@ -19026,7 +19801,15 @@
       ],
       [
         "Power",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Power",
         "Yatsufusa"
+      ],
+      [
+        "Power",
+        "Yomotsu-Ikusa"
       ],
       [
         "Principality",
@@ -19038,7 +19821,19 @@
       ],
       [
         "Principality",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Principality",
         "Yatsufusa"
+      ],
+      [
+        "Pyro Jack",
+        "Take-Minakata"
+      ],
+      [
+        "Quetzalcoatl",
+        "Senri"
       ],
       [
         "Quetzalcoatl",
@@ -19046,6 +19841,14 @@
       ],
       [
         "Quetzalcoatl",
+        "Yaksini"
+      ],
+      [
+        "Raja Naga",
+        "Titania"
+      ],
+      [
+        "Raja Naga",
         "Yaksini"
       ],
       [
@@ -19062,7 +19865,15 @@
       ],
       [
         "Sandman",
+        "Taowu"
+      ],
+      [
+        "Sandman",
         "Vasuki"
+      ],
+      [
+        "Sandman",
+        "Yatsufusa"
       ],
       [
         "Satan",
@@ -19071,6 +19882,14 @@
       [
         "Sati",
         "Skadi"
+      ],
+      [
+        "Sati",
+        "Titania"
+      ],
+      [
+        "Sati",
+        "Yaksini"
       ],
       [
         "Senri",
@@ -19101,6 +19920,10 @@
         "Taotie"
       ],
       [
+        "Taotie",
+        "Vetala"
+      ],
+      [
         "Taowu",
         "Titan"
       ],
@@ -19111,6 +19934,10 @@
       [
         "Taowu",
         "Valkyrie"
+      ],
+      [
+        "Taowu",
+        "Yomotsu-Shikome"
       ],
       [
         "Throne",
@@ -19125,6 +19952,10 @@
         "Vasuki"
       ],
       [
+        "Titan",
+        "Yatsufusa"
+      ],
+      [
         "Trumpeter",
         "Yaksini"
       ],
@@ -19137,12 +19968,20 @@
         "Yatsufusa"
       ],
       [
+        "Unicorn",
+        "Yomotsu-Ikusa"
+      ],
+      [
         "Uriel",
         "Yomotsu-Ikusa"
       ],
       [
         "Valkyrie",
         "Vasuki"
+      ],
+      [
+        "Valkyrie",
+        "Yatsufusa"
       ],
       [
         "Vasuki",
@@ -19157,7 +19996,15 @@
         "Yatsufusa"
       ],
       [
+        "Virtue",
+        "Yomotsu-Ikusa"
+      ],
+      [
         "White Rider",
+        "Yomotsu-Shikome"
+      ],
+      [
+        "Yatsufusa",
         "Yomotsu-Shikome"
       ]
     ]
@@ -19180,6 +20027,7 @@
       "Heat Wave": 48,
       "Divine Grace": 50
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -20126,6 +20974,7 @@
       "Endure": 55,
       "Magarudyne": 56
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -20680,6 +21529,7 @@
       "Mediarama": 33,
       "Evade Fire": 35
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -21066,6 +21916,7 @@
       "Repel Wind": 62,
       "Auto-Sukukaja": 63
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -21548,6 +22399,7 @@
       "Fire Boost": 35,
       "Evade Ice": 36
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -22034,6 +22886,7 @@
       "Resist Physical": 45,
       "Evade Elec": 46
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -22492,6 +23345,7 @@
       "Rakunda": 13,
       "Poison Boost": 14
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -22539,6 +23393,7 @@
       "Endure Light": 53,
       "Repel Physical": 56
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -23152,6 +24007,7 @@
       "Mabufula": 38,
       "Ice Boost": 39
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -23830,6 +24686,7 @@
       "Poison Boost": 25,
       "Resist Physical": 27
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -24099,6 +24956,7 @@
       "Dekunda": 74,
       "Revolution": 75
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -24493,6 +25351,7 @@
       "Endure": 47,
       "Power Charge": 48
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -25238,6 +26097,7 @@
       "Arrow Rain": 62,
       "Samarecarm": 64
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -26009,6 +26869,7 @@
       "Arms Master": 92,
       "Morning Star": 94
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -26127,6 +26988,7 @@
       "Absorb Fire": 71,
       "Fire Amp": 73
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -26677,6 +27539,7 @@
       "Dodge Fire": 26,
       "Trafuri": 27
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -26903,6 +27766,7 @@
       "Elec Boost": 46,
       "Auto-Masuku": 47
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -27449,6 +28313,7 @@
       "Counterstrike": 50,
       "Ziodyne": 51
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -28054,6 +28919,7 @@
       "Matarukaja": 71,
       "Absorb Wind": 73
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -28492,6 +29358,7 @@
       "Dodge Ice": 29,
       "Fire Boost": 30
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -28885,6 +29752,7 @@
       "Spirit Drain": 32,
       "Ghastly Wail": 33
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -29358,6 +30226,7 @@
       "Rampage": 21,
       "Mudo Boost": 22
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -29549,6 +30418,7 @@
       "Absorb Wind": 77,
       "Salvation": 78
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -29864,6 +30734,7 @@
       "Salvation": 85,
       "Null Elec": 86
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -30068,6 +30939,7 @@
       "Rakunda": 3,
       "Tarukaja": 5
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Obariyon",
@@ -30099,21 +30971,20 @@
       "Elec Amp": 98,
       "Wind Amp": 99
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Izanagi",
-        "Sandman",
-        "Nata Taishi",
-        "Girimehkala",
-        "Norn",
-        "Okuninushi",
-        "Orthrus",
-        "Kartikeya",
-        "Mithra",
-        "Tzitzimitl",
-        "Cu Chulainn",
-        "Legion"
-      ]
+      "Izanagi",
+      "Sandman",
+      "Nata Taishi",
+      "Girimehkala",
+      "Norn",
+      "Okuninushi",
+      "Orthrus",
+      "Kartikeya",
+      "Mithra",
+      "Tzitzimitl",
+      "Cu Chulainn",
+      "Legion"
     ]
   },
   "Jack Frost": {
@@ -30135,6 +31006,7 @@
       "Dodge Fire": 20,
       "Mind Charge": 25
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -30348,6 +31220,7 @@
       "Repel Elec": 65,
       "Magarudyne": 66
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -30355,7 +31228,19 @@
       ],
       [
         "Alilat",
+        "Hua Po"
+      ],
+      [
+        "Alilat",
+        "Makami"
+      ],
+      [
+        "Alilat",
         "Orthrus"
+      ],
+      [
+        "Alilat",
+        "Pyro Jack"
       ],
       [
         "Alilat",
@@ -30364,6 +31249,10 @@
       [
         "Alilat",
         "Yatsufusa"
+      ],
+      [
+        "Alraune",
+        "Jinn"
       ],
       [
         "Alraune",
@@ -30379,7 +31268,39 @@
       ],
       [
         "Ame-no-Uzume",
+        "Kohryu"
+      ],
+      [
+        "Ame-no-Uzume",
         "Lucifer"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Metatron"
+      ],
+      [
+        "Ame-no-Uzume",
+        "Satan"
+      ],
+      [
+        "Andras",
+        "Mada"
+      ],
+      [
+        "Angel",
+        "Ardha"
+      ],
+      [
+        "Angel",
+        "Lucifer"
+      ],
+      [
+        "Anubis",
+        "Dis"
+      ],
+      [
+        "Anubis",
+        "Dominion"
       ],
       [
         "Anubis",
@@ -30391,7 +31312,15 @@
       ],
       [
         "Anubis",
+        "Kushinada-Hime"
+      ],
+      [
+        "Anubis",
         "Quetzalcoatl"
+      ],
+      [
+        "Anubis",
+        "Raja Naga"
       ],
       [
         "Anubis",
@@ -30406,6 +31335,22 @@
         "Uriel"
       ],
       [
+        "Archangel",
+        "Ardha"
+      ],
+      [
+        "Archangel",
+        "Helel"
+      ],
+      [
+        "Archangel",
+        "Lucifer"
+      ],
+      [
+        "Archangel",
+        "Metatron"
+      ],
+      [
         "Ardha",
         "Hua Po"
       ],
@@ -30416,6 +31361,10 @@
       [
         "Ardha",
         "Narcissus"
+      ],
+      [
+        "Ardha",
+        "Orobas"
       ],
       [
         "Ardha",
@@ -30458,8 +31407,16 @@
         "Titania"
       ],
       [
+        "Attis",
+        "Yaksini"
+      ],
+      [
         "Baal Zebul",
         "Dis"
+      ],
+      [
+        "Baal Zebul",
+        "Hua Po"
       ],
       [
         "Baal Zebul",
@@ -30479,7 +31436,35 @@
       ],
       [
         "Barong",
+        "Neko Shogun"
+      ],
+      [
+        "Barong",
         "Quetzalcoatl"
+      ],
+      [
+        "Barong",
+        "Raja Naga"
+      ],
+      [
+        "Barong",
+        "Sati"
+      ],
+      [
+        "Berith",
+        "Helel"
+      ],
+      [
+        "Berith",
+        "Isis"
+      ],
+      [
+        "Byakko",
+        "Dis"
+      ],
+      [
+        "Byakko",
+        "Pyro Jack"
       ],
       [
         "Byakko",
@@ -30491,7 +31476,15 @@
       ],
       [
         "Cerberus",
+        "Kushinada-Hime"
+      ],
+      [
+        "Cerberus",
         "Lakshmi"
+      ],
+      [
+        "Cerberus",
+        "Quetzalcoatl"
       ],
       [
         "Daisoujou",
@@ -30499,7 +31492,15 @@
       ],
       [
         "Daisoujou",
+        "Kushinada-Hime"
+      ],
+      [
+        "Daisoujou",
         "Quetzalcoatl"
+      ],
+      [
+        "Daisoujou",
+        "Raja Naga"
       ],
       [
         "Dis",
@@ -30511,11 +31512,19 @@
       ],
       [
         "Dis",
+        "Mother Harlot"
+      ],
+      [
+        "Dis",
         "Satan"
       ],
       [
         "Dis",
         "Seth"
+      ],
+      [
+        "Dis",
+        "Sui-Ki"
       ],
       [
         "Dis",
@@ -30528,6 +31537,14 @@
       [
         "Dis",
         "Yurlungur"
+      ],
+      [
+        "Dominion",
+        "Garuda"
+      ],
+      [
+        "Dominion",
+        "Kartikeya"
       ],
       [
         "Dominion",
@@ -30546,8 +31563,20 @@
         "Saturnus"
       ],
       [
+        "Dominion",
+        "Trumpeter"
+      ],
+      [
         "Flauros",
         "Kaguya"
+      ],
+      [
+        "Flauros",
+        "Kingu"
+      ],
+      [
+        "Flauros",
+        "Lakshmi"
       ],
       [
         "Fuu-Ki",
@@ -30563,7 +31592,19 @@
       ],
       [
         "Fuu-Ki",
+        "Pabilsag"
+      ],
+      [
+        "Fuu-Ki",
         "Sraosha"
+      ],
+      [
+        "Fuu-Ki",
+        "Taowu"
+      ],
+      [
+        "Fuu-Ki",
+        "Uriel"
       ],
       [
         "Fuu-Ki",
@@ -30583,6 +31624,10 @@
       ],
       [
         "Gabriel",
+        "Taowu"
+      ],
+      [
+        "Gabriel",
         "Vasuki"
       ],
       [
@@ -30595,7 +31640,19 @@
       ],
       [
         "Ganesha",
+        "Pabilsag"
+      ],
+      [
+        "Ganesha",
         "Taowu"
+      ],
+      [
+        "Ganesha",
+        "Thoth"
+      ],
+      [
+        "Ganesha",
+        "Throne"
       ],
       [
         "Ganesha",
@@ -30606,12 +31663,28 @@
         "Vasuki"
       ],
       [
+        "Ganesha",
+        "Yatsufusa"
+      ],
+      [
+        "Garuda",
+        "Okuninushi"
+      ],
+      [
+        "Garuda",
+        "Orthrus"
+      ],
+      [
         "Garuda",
         "Pabilsag"
       ],
       [
         "Garuda",
         "Taowu"
+      ],
+      [
+        "Garuda",
+        "Thoth"
       ],
       [
         "Garuda",
@@ -30627,6 +31700,10 @@
       ],
       [
         "Genbu",
+        "Jinn"
+      ],
+      [
+        "Genbu",
         "Mada"
       ],
       [
@@ -30639,15 +31716,39 @@
       ],
       [
         "Girimehkala",
+        "Rangda"
+      ],
+      [
+        "Girimehkala",
         "Surt"
+      ],
+      [
+        "Gorgon",
+        "Hell Biker"
+      ],
+      [
+        "Gorgon",
+        "Jinn"
       ],
       [
         "Gorgon",
         "Mada"
       ],
       [
+        "Gorgon",
+        "Surt"
+      ],
+      [
+        "Gorgon",
+        "Vasuki"
+      ],
+      [
         "Hachiman",
         "Kushinada-Hime"
+      ],
+      [
+        "Hachiman",
+        "Narcissus"
       ],
       [
         "Hachiman",
@@ -30658,12 +31759,20 @@
         "Raja Naga"
       ],
       [
+        "Hachiman",
+        "Sati"
+      ],
+      [
         "Helel",
         "King Frost"
       ],
       [
         "Helel",
         "Makami"
+      ],
+      [
+        "Helel",
+        "Oberon"
       ],
       [
         "Helel",
@@ -30687,6 +31796,10 @@
       ],
       [
         "Hell Biker",
+        "Neko Shogun"
+      ],
+      [
+        "Hell Biker",
         "Skadi"
       ],
       [
@@ -30695,11 +31808,23 @@
       ],
       [
         "Hokuto Seikun",
+        "Kingu"
+      ],
+      [
+        "Hokuto Seikun",
         "Lakshmi"
+      ],
+      [
+        "Hokuto Seikun",
+        "Quetzalcoatl"
       ],
       [
         "Horus",
         "Suparna"
+      ],
+      [
+        "Hua Po",
+        "Isis"
       ],
       [
         "Hua Po",
@@ -30711,7 +31836,27 @@
       ],
       [
         "Hua Po",
+        "Michael"
+      ],
+      [
+        "Hua Po",
         "Sandalphon"
+      ],
+      [
+        "Hua Po",
+        "Satan"
+      ],
+      [
+        "Hua Po",
+        "Vishnu"
+      ],
+      [
+        "Hua Po",
+        "Yurlungur"
+      ],
+      [
+        "Isis",
+        "Jack Frost"
       ],
       [
         "Isis",
@@ -30726,8 +31871,20 @@
         "Pyro Jack"
       ],
       [
+        "Isis",
+        "Yomotsu-Ikusa"
+      ],
+      [
         "Jack Frost",
         "Lucifer"
+      ],
+      [
+        "Jack Frost",
+        "Metatron"
+      ],
+      [
+        "Jack Frost",
+        "Sandalphon"
       ],
       [
         "Jinn",
@@ -30746,6 +31903,14 @@
         "Suzaku"
       ],
       [
+        "Jinn",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Kaguya",
+        "King Frost"
+      ],
+      [
         "Kaguya",
         "Okuninushi"
       ],
@@ -30755,7 +31920,31 @@
       ],
       [
         "Kaguya",
+        "Shiisaa"
+      ],
+      [
+        "Kaguya",
         "Thoth"
+      ],
+      [
+        "Kaguya",
+        "Unicorn"
+      ],
+      [
+        "Kaiwan",
+        "Odin"
+      ],
+      [
+        "Kaiwan",
+        "Sraosha"
+      ],
+      [
+        "Kaiwan",
+        "Vasuki"
+      ],
+      [
+        "Kartikeya",
+        "Makami"
       ],
       [
         "Kartikeya",
@@ -30771,6 +31960,14 @@
       ],
       [
         "Kartikeya",
+        "Power"
+      ],
+      [
+        "Kartikeya",
+        "Setanta"
+      ],
+      [
+        "Kartikeya",
         "Thoth"
       ],
       [
@@ -30779,15 +31976,35 @@
       ],
       [
         "Kartikeya",
+        "Virtue"
+      ],
+      [
+        "Kartikeya",
         "Yatsufusa"
+      ],
+      [
+        "King Frost",
+        "Saturnus"
+      ],
+      [
+        "Kingu",
+        "Okuninushi"
       ],
       [
         "Kingu",
         "Pabilsag"
       ],
       [
+        "Kingu",
+        "Thoth"
+      ],
+      [
         "Kohryu",
         "Kushinada-Hime"
+      ],
+      [
+        "Kohryu",
+        "Narcissus"
       ],
       [
         "Kohryu",
@@ -30807,6 +32024,10 @@
       ],
       [
         "Kushinada-Hime",
+        "Pabilsag"
+      ],
+      [
+        "Kushinada-Hime",
         "Satan"
       ],
       [
@@ -30823,11 +32044,27 @@
       ],
       [
         "Lakshmi",
+        "Setanta"
+      ],
+      [
+        "Lakshmi",
         "Thoth"
+      ],
+      [
+        "Lakshmi",
+        "Unicorn"
       ],
       [
         "Lucifer",
         "Narcissus"
+      ],
+      [
+        "Lucifer",
+        "Orobas"
+      ],
+      [
+        "Lucifer",
+        "Pixie"
       ],
       [
         "Lucifer",
@@ -30843,7 +32080,35 @@
       ],
       [
         "Mada",
+        "Nigi Mitama"
+      ],
+      [
+        "Mada",
+        "Nozuchi"
+      ],
+      [
+        "Mada",
+        "Titania"
+      ],
+      [
+        "Mada",
+        "Xiezhai"
+      ],
+      [
+        "Mada",
+        "Yaksini"
+      ],
+      [
+        "Mada",
         "Yamata-no-Orochi"
+      ],
+      [
+        "Makami",
+        "Saturnus"
+      ],
+      [
+        "Melchizedek",
+        "Neko Shogun"
       ],
       [
         "Metatron",
@@ -30852,6 +32117,10 @@
       [
         "Metatron",
         "Power"
+      ],
+      [
+        "Metatron",
+        "Principality"
       ],
       [
         "Metatron",
@@ -30871,6 +32140,18 @@
       ],
       [
         "Michael",
+        "Narcissus"
+      ],
+      [
+        "Michael",
+        "Power"
+      ],
+      [
+        "Michael",
+        "Pyro Jack"
+      ],
+      [
+        "Michael",
         "Raja Naga"
       ],
       [
@@ -30879,7 +32160,23 @@
       ],
       [
         "Michael",
+        "Sati"
+      ],
+      [
+        "Michael",
         "Throne"
+      ],
+      [
+        "Michael",
+        "Virtue"
+      ],
+      [
+        "Mithra",
+        "Surt"
+      ],
+      [
+        "Mother Harlot",
+        "Orthrus"
       ],
       [
         "Mother Harlot",
@@ -30898,6 +32195,14 @@
         "Suparna"
       ],
       [
+        "Narcissus",
+        "Odin"
+      ],
+      [
+        "Narcissus",
+        "Satan"
+      ],
+      [
         "Neko Shogun",
         "Odin"
       ],
@@ -30906,8 +32211,20 @@
         "Sraosha"
       ],
       [
+        "Neko Shogun",
+        "Vasuki"
+      ],
+      [
+        "Nozuchi",
+        "Surt"
+      ],
+      [
         "Odin",
         "Raja Naga"
+      ],
+      [
+        "Odin",
+        "Sati"
       ],
       [
         "Okuninushi",
@@ -30915,6 +32232,30 @@
       ],
       [
         "Orthrus",
+        "Saturnus"
+      ],
+      [
+        "Pabilsag",
+        "Quetzalcoatl"
+      ],
+      [
+        "Power",
+        "Satan"
+      ],
+      [
+        "Power",
+        "Saturnus"
+      ],
+      [
+        "Power",
+        "Trumpeter"
+      ],
+      [
+        "Principality",
+        "Satan"
+      ],
+      [
+        "Principality",
         "Saturnus"
       ],
       [
@@ -30926,6 +32267,26 @@
         "Satan"
       ],
       [
+        "Pyro Jack",
+        "Seth"
+      ],
+      [
+        "Pyro Jack",
+        "Trumpeter"
+      ],
+      [
+        "Pyro Jack",
+        "Vishnu"
+      ],
+      [
+        "Pyro Jack",
+        "Yurlungur"
+      ],
+      [
+        "Quetzalcoatl",
+        "Thoth"
+      ],
+      [
         "Quetzalcoatl",
         "Trumpeter"
       ],
@@ -30934,8 +32295,28 @@
         "Satan"
       ],
       [
+        "Raja Naga",
+        "Trumpeter"
+      ],
+      [
+        "Rangda",
+        "Seiryu"
+      ],
+      [
         "Rangda",
         "Seth"
+      ],
+      [
+        "Rangda",
+        "Skadi"
+      ],
+      [
+        "Rangda",
+        "Sui-Ki"
+      ],
+      [
+        "Rangda",
+        "Suzaku"
       ],
       [
         "Rangda",
@@ -30958,6 +32339,10 @@
         "Virtue"
       ],
       [
+        "Sati",
+        "Trumpeter"
+      ],
+      [
         "Saturnus",
         "Setanta"
       ],
@@ -30968,6 +32353,10 @@
       [
         "Saturnus",
         "Virtue"
+      ],
+      [
+        "Saturnus",
+        "Yomotsu-Ikusa"
       ],
       [
         "Seiryu",
@@ -30982,12 +32371,32 @@
         "Taowu"
       ],
       [
+        "Skadi",
+        "Yatsufusa"
+      ],
+      [
         "Suparna",
         "Tam Lin"
       ],
       [
+        "Surt",
+        "Titania"
+      ],
+      [
+        "Surt",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Throne",
         "Trumpeter"
+      ],
+      [
+        "Titania",
+        "Vasuki"
+      ],
+      [
+        "Trumpeter",
+        "Virtue"
       ]
     ]
   },
@@ -31009,6 +32418,7 @@
       "Null Physical": 67,
       "Valiant Dance": 68
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -32047,6 +33457,7 @@
       "Hama Boost": 78,
       "Spell Master": 80
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -32373,6 +33784,7 @@
       "Life Drain": 28,
       "Spirit Drain": 29
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -32529,6 +33941,14 @@
       [
         "Black Frost",
         "Ghoul"
+      ],
+      [
+        "Fuu-Ki",
+        "Ganesha"
+      ],
+      [
+        "Fuu-Ki",
+        "Garuda"
       ],
       [
         "Fuu-Ki",
@@ -32790,6 +34210,7 @@
       "High Counter": 54,
       "Power Charge": 55
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -33359,6 +34780,7 @@
       "Growth 2": 70,
       "Primal Force": 75
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -33845,6 +35267,7 @@
       "Resist Dark": 53,
       "Divine Grace": 54
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -34826,6 +36249,7 @@
       "Revolution": 59,
       "Power Charge": 60
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -35793,6 +37217,7 @@
       "Null Fire": 27,
       "Anima Freeze": 28
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -36127,6 +37552,7 @@
       "Vicious Strike": 62,
       "Endure": 63
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -36594,13 +38020,12 @@
       "Spell Master": 82,
       "Salvation": 83
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Byakko",
-        "Genbu",
-        "Seiryu",
-        "Suzaku"
-      ]
+      "Byakko",
+      "Genbu",
+      "Seiryu",
+      "Suzaku"
     ]
   },
   "Kumbhanda": {
@@ -36622,6 +38047,7 @@
       "Deathbound": 60,
       "Regenerate 2": 61
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -37204,6 +38630,7 @@
       "Red Wall": 52,
       "Resist Elec": 53
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -37653,6 +39080,7 @@
       "Null Fire": 48,
       "Makarakarn": 50
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -38167,6 +39595,7 @@
       "Traesto": 33,
       "Exhaust Boost": 34
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -38381,6 +39810,7 @@
       "Red Wall": 56,
       "Resist Exhaust": 57
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -39090,6 +40520,7 @@
       "Resist Fire": 70,
       "Amrita": 71
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -39448,6 +40879,7 @@
       "Soul Break": 30,
       "Maragion": 32
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -39786,6 +41218,7 @@
       "Samarecarm": 46,
       "Divine Grace": 47
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -40684,6 +42117,7 @@
       "Foul Breath": 25,
       "Survive Light": 26
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -40850,6 +42284,10 @@
         "Yaksini"
       ],
       [
+        "Ose",
+        "Shiki-Ouji"
+      ],
+      [
         "Pixie",
         "Samael"
       ],
@@ -40917,6 +42355,7 @@
       "Sukukaja": 13,
       "Mamudo": 15
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -40990,6 +42429,7 @@
       "Elec Break": 56,
       "Ailment Boost": 57
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -41792,6 +43232,7 @@
       "Mudo Boost": 45,
       "Tetraja": 46
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -42279,6 +43720,7 @@
       "Null Fire": 69,
       "Niflheim": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -42818,15 +44260,14 @@
       "Absorb Elec": 98,
       "Victory Cry": 99
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Ananta",
-        "Satan",
-        "Anubis",
-        "Metatron",
-        "Trumpeter",
-        "Michael"
-      ]
+      "Ananta",
+      "Satan",
+      "Anubis",
+      "Metatron",
+      "Trumpeter",
+      "Michael"
     ]
   },
   "Mada": {
@@ -42848,6 +44289,7 @@
       "Ailment Boost": 83,
       "Fire Amp": 84
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -43091,6 +44533,7 @@
       "Heat Riser": 84,
       "Vorpal Blade": 86
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -43306,15 +44749,14 @@
       "Fire Amp": 84,
       "Mudo Boost": 85
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Matador",
-        "Daisoujou",
-        "Hell Biker",
-        "White Rider",
-        "Mother Harlot",
-        "Trumpeter"
-      ]
+      "Matador",
+      "Daisoujou",
+      "Hell Biker",
+      "White Rider",
+      "Mother Harlot",
+      "Trumpeter"
     ]
   },
   "Makami": {
@@ -43336,6 +44778,7 @@
       "Dodge Physical": 32,
       "Resist Ice": 33
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -43402,6 +44845,10 @@
         "Nozuchi"
       ],
       [
+        "Hell Biker",
+        "Orthrus"
+      ],
+      [
         "High Pixie",
         "Queen Mab"
       ],
@@ -43440,6 +44887,10 @@
       [
         "Orthrus",
         "Taowu"
+      ],
+      [
+        "Orthrus",
+        "Vasuki"
       ],
       [
         "Orthrus",
@@ -43497,6 +44948,7 @@
       "Absorb Physical": 66,
       "Fire Amp": 67
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -43966,6 +45418,7 @@
       "Arms Master": 74,
       "Enduring Soul": 76
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ananta",
@@ -44316,6 +45769,7 @@
       "Auto-Sukukaja": 29,
       "Survive Light": 30
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -44593,6 +46047,7 @@
       "Mahamaon": 69,
       "God's Hand": 72
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -44918,6 +46373,7 @@
       "Repel Elec": 88,
       "Repel Fire": 89
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ardha",
@@ -44984,10 +46440,39 @@
       "Repel Dark": 76,
       "Heaven's Blade": 79
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
+        "Alilat"
+      ],
+      [
+        "Abaddon",
+        "Cybele"
+      ],
+      [
+        "Abaddon",
+        "Ishtar"
+      ],
+      [
+        "Abaddon",
         "Isis"
+      ],
+      [
+        "Abaddon",
+        "Magatsu-Izanagi"
+      ],
+      [
+        "Abaddon",
+        "Seiten Taisei"
+      ],
+      [
+        "Abaddon",
+        "Vishnu"
+      ],
+      [
+        "Abaddon",
+        "Yurlungur"
       ],
       [
         "Alilat",
@@ -44995,7 +46480,27 @@
       ],
       [
         "Alilat",
+        "Mara"
+      ],
+      [
+        "Alilat",
         "Masakado"
+      ],
+      [
+        "Alilat",
+        "Shiki-Ouji"
+      ],
+      [
+        "Ananta",
+        "Arahabaki"
+      ],
+      [
+        "Ananta",
+        "Loki"
+      ],
+      [
+        "Ananta",
+        "Nebiros"
       ],
       [
         "Ananta",
@@ -45014,20 +46519,84 @@
         "Atropos"
       ],
       [
+        "Arahabaki",
+        "Lachesis"
+      ],
+      [
         "Ardha",
         "Satan"
+      ],
+      [
+        "Asura",
+        "Dominion"
       ],
       [
         "Asura",
         "Throne"
       ],
       [
+        "Asura",
+        "Virtue"
+      ],
+      [
+        "Atavaka",
+        "Cerberus"
+      ],
+      [
+        "Atavaka",
+        "Daisoujou"
+      ],
+      [
         "Atavaka",
         "Hachiman"
       ],
       [
+        "Atropos",
+        "Loki"
+      ],
+      [
+        "Atropos",
+        "Nebiros"
+      ],
+      [
+        "Atropos",
+        "Niddhoggr"
+      ],
+      [
+        "Atropos",
+        "Shiki-Ouji"
+      ],
+      [
+        "Baphomet",
+        "Kaguya"
+      ],
+      [
+        "Baphomet",
+        "Shiva"
+      ],
+      [
+        "Baphomet",
+        "Yoshitsune"
+      ],
+      [
         "Byakko",
         "Kaguya"
+      ],
+      [
+        "Byakko",
+        "Kingu"
+      ],
+      [
+        "Byakko",
+        "Lakshmi"
+      ],
+      [
+        "Byakko",
+        "Mara"
+      ],
+      [
+        "Byakko",
+        "Masakado"
       ],
       [
         "Byakko",
@@ -45038,8 +46607,28 @@
         "Yoshitsune"
       ],
       [
+        "Cerberus",
+        "Futsunushi"
+      ],
+      [
         "Chernobog",
         "Kaguya"
+      ],
+      [
+        "Chernobog",
+        "Kingu"
+      ],
+      [
+        "Chernobog",
+        "Lakshmi"
+      ],
+      [
+        "Chernobog",
+        "Mara"
+      ],
+      [
+        "Chernobog",
+        "Masakado"
       ],
       [
         "Chernobog",
@@ -45048,10 +46637,42 @@
       [
         "Chernobog",
         "Yoshitsune"
+      ],
+      [
+        "Clotho",
+        "Ongyo-Ki"
+      ],
+      [
+        "Cu Chulainn",
+        "Isis"
+      ],
+      [
+        "Cu Chulainn",
+        "Magatsu-Izanagi"
+      ],
+      [
+        "Cu Chulainn",
+        "Vishnu"
       ],
       [
         "Cybele",
         "Kaguya"
+      ],
+      [
+        "Cybele",
+        "Kingu"
+      ],
+      [
+        "Cybele",
+        "Lakshmi"
+      ],
+      [
+        "Cybele",
+        "Mara"
+      ],
+      [
+        "Cybele",
+        "Masakado"
       ],
       [
         "Cybele",
@@ -45060,6 +46681,38 @@
       [
         "Daisoujou",
         "Futsunushi"
+      ],
+      [
+        "Daisoujou",
+        "Thor"
+      ],
+      [
+        "Decarabia",
+        "Isis"
+      ],
+      [
+        "Decarabia",
+        "Norn"
+      ],
+      [
+        "Futsunushi",
+        "Hokuto Seikun"
+      ],
+      [
+        "Gabriel",
+        "Shiva"
+      ],
+      [
+        "Gabriel",
+        "Yoshitsune"
+      ],
+      [
+        "Genbu",
+        "Shiva"
+      ],
+      [
+        "Hachiman",
+        "Kin-Ki"
       ],
       [
         "Hachiman",
@@ -45074,12 +46727,28 @@
         "Sraosha"
       ],
       [
+        "Horus",
+        "Uriel"
+      ],
+      [
+        "Ishtar",
+        "Kingu"
+      ],
+      [
         "Ishtar",
         "Lakshmi"
       ],
       [
         "Ishtar",
+        "Mara"
+      ],
+      [
+        "Ishtar",
         "Masakado"
+      ],
+      [
+        "Ishtar",
+        "Quetzalcoatl"
       ],
       [
         "Isis",
@@ -45095,7 +46764,27 @@
       ],
       [
         "Jatayu",
+        "Melchizedek"
+      ],
+      [
+        "Jatayu",
         "Sraosha"
+      ],
+      [
+        "Jatayu",
+        "Uriel"
+      ],
+      [
+        "Kaguya",
+        "Kumbhanda"
+      ],
+      [
+        "Kaguya",
+        "Raphael"
+      ],
+      [
+        "Kaguya",
+        "Seiryu"
       ],
       [
         "Kaguya",
@@ -45103,23 +46792,83 @@
       ],
       [
         "Kaguya",
+        "Suzaku"
+      ],
+      [
+        "Kaguya",
         "Yurlungur"
+      ],
+      [
+        "Kin-Ki",
+        "Kohryu"
       ],
       [
         "Kingu",
         "Magatsu-Izanagi"
       ],
       [
+        "Kingu",
+        "Seiten Taisei"
+      ],
+      [
+        "Kingu",
+        "Vishnu"
+      ],
+      [
+        "Kingu",
+        "Yurlungur"
+      ],
+      [
         "Kohryu",
         "Thor"
+      ],
+      [
+        "Kohryu",
+        "Triglav"
+      ],
+      [
+        "Kumbhanda",
+        "Lakshmi"
+      ],
+      [
+        "Kumbhanda",
+        "Masakado"
       ],
       [
         "Kumbhanda",
         "Shiva"
       ],
       [
+        "Kumbhanda",
+        "Yoshitsune"
+      ],
+      [
+        "Kurama Tengu",
+        "Norn"
+      ],
+      [
+        "Kushinada-Hime",
+        "Magatsu-Izanagi"
+      ],
+      [
+        "Lachesis",
+        "Ongyo-Ki"
+      ],
+      [
         "Lakshmi",
         "Magatsu-Izanagi"
+      ],
+      [
+        "Lakshmi",
+        "Raphael"
+      ],
+      [
+        "Lakshmi",
+        "Seiten Taisei"
+      ],
+      [
+        "Lakshmi",
+        "Suzaku"
       ],
       [
         "Lakshmi",
@@ -45128,6 +46877,18 @@
       [
         "Lakshmi",
         "Yurlungur"
+      ],
+      [
+        "Leanan Sidhe",
+        "Shiva"
+      ],
+      [
+        "Loa",
+        "Shiva"
+      ],
+      [
+        "Loki",
+        "Mother Harlot"
       ],
       [
         "Loki",
@@ -45138,12 +46899,44 @@
         "Mara"
       ],
       [
+        "Magatsu-Izanagi",
+        "Quetzalcoatl"
+      ],
+      [
+        "Mara",
+        "Mother Harlot"
+      ],
+      [
+        "Mara",
+        "Seiten Taisei"
+      ],
+      [
         "Mara",
         "Vishnu"
       ],
       [
+        "Mara",
+        "Yurlungur"
+      ],
+      [
+        "Masakado",
+        "Mother Harlot"
+      ],
+      [
+        "Masakado",
+        "Raphael"
+      ],
+      [
         "Masakado",
         "Seiten Taisei"
+      ],
+      [
+        "Masakado",
+        "Skadi"
+      ],
+      [
+        "Masakado",
+        "Suzaku"
       ],
       [
         "Masakado",
@@ -45156,6 +46949,10 @@
       [
         "Melchizedek",
         "Suparna"
+      ],
+      [
+        "Melchizedek",
+        "Tam Lin"
       ],
       [
         "Metatron",
@@ -45174,8 +46971,48 @@
         "Yoshitsune"
       ],
       [
+        "Narasimha",
+        "Sraosha"
+      ],
+      [
         "Nebiros",
         "Norn"
+      ],
+      [
+        "Niddhoggr",
+        "Norn"
+      ],
+      [
+        "Norn",
+        "Shiki-Ouji"
+      ],
+      [
+        "Quetzalcoatl",
+        "Seiten Taisei"
+      ],
+      [
+        "Quetzalcoatl",
+        "Vishnu"
+      ],
+      [
+        "Quetzalcoatl",
+        "Yurlungur"
+      ],
+      [
+        "Raphael",
+        "Shiva"
+      ],
+      [
+        "Raphael",
+        "Yoshitsune"
+      ],
+      [
+        "Seiryu",
+        "Shiva"
+      ],
+      [
+        "Seiryu",
+        "Yoshitsune"
       ],
       [
         "Seiten Taisei",
@@ -45183,11 +47020,31 @@
       ],
       [
         "Shiva",
+        "Skadi"
+      ],
+      [
+        "Shiva",
         "Suzaku"
+      ],
+      [
+        "Skadi",
+        "Yoshitsune"
+      ],
+      [
+        "Sraosha",
+        "Tam Lin"
+      ],
+      [
+        "Suparna",
+        "Throne"
       ],
       [
         "Suparna",
         "Uriel"
+      ],
+      [
+        "Suzaku",
+        "Yoshitsune"
       ]
     ]
   },
@@ -45210,6 +47067,7 @@
       "Hama Boost": 36,
       "Null Mute": 37
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -45484,6 +47342,7 @@
       "Soul Break": 18,
       "Exhaust Boost": 19
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -45561,6 +47420,7 @@
       "Ghastly Wail": 49,
       "Mudo Boost": 50
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -46370,6 +48230,7 @@
       "Resist Fire": 64,
       "Ailment Boost": 65
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -46931,6 +48792,7 @@
       "Mazionga": 37,
       "Rage Boost": 38
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -47312,6 +49174,7 @@
       "Mahamaon": 51,
       "Auto-Mataru": 53
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -47428,6 +49291,10 @@
       [
         "Asura",
         "Cu Sith"
+      ],
+      [
+        "Asura",
+        "Gdon"
       ],
       [
         "Asura",
@@ -47586,6 +49453,10 @@
         "Horus"
       ],
       [
+        "Gdon",
+        "Suparna"
+      ],
+      [
         "Genbu",
         "Rangda"
       ],
@@ -47627,7 +49498,15 @@
       ],
       [
         "Horus",
+        "Jatayu"
+      ],
+      [
+        "Horus",
         "Tam Lin"
+      ],
+      [
+        "Horus",
+        "Yatagarasu"
       ],
       [
         "Hua Po",
@@ -47906,6 +49785,10 @@
         "Vasuki"
       ],
       [
+        "Suparna",
+        "Yatagarasu"
+      ],
+      [
         "Surt",
         "Sylph"
       ],
@@ -47946,6 +49829,7 @@
       "Anima Freeze": 27,
       "Ailment Boost": 30
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -48156,6 +50040,7 @@
       "Resist Dizzy": 9,
       "Soul Break": 10
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -48214,6 +50099,7 @@
       "Null Light": 69,
       "Spell Master": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -48588,13 +50474,12 @@
       "Evade Wind": 36,
       "Divine Grace": 37
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Ara Mitama",
-        "Nigi Mitama",
-        "Kusi Mitama",
-        "Saki Mitama"
-      ]
+      "Ara Mitama",
+      "Nigi Mitama",
+      "Kusi Mitama",
+      "Saki Mitama"
     ]
   },
   "Niddhoggr": {
@@ -48616,6 +50501,7 @@
       "Resist Physical": 60,
       "Ice Boost": 61
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -49054,6 +50940,7 @@
       "Garula": 28,
       "Resist Enervate": 29
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -49233,12 +51120,11 @@
       "Insta-Heal": 77,
       "Debilitate": 79
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Clotho",
-        "Lachesis",
-        "Atropos"
-      ]
+      "Clotho",
+      "Lachesis",
+      "Atropos"
     ]
   },
   "Nozuchi": {
@@ -49260,6 +51146,7 @@
       "Null Poison": 31,
       "Null Enervate": 32
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -49578,6 +51465,7 @@
       "Resist Physical": 17,
       "Single Shot": 18
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -49664,6 +51552,7 @@
       "Mazio": 16,
       "Dodge Wind": 17
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -49834,6 +51723,7 @@
       "Mind Charge": 80,
       "Panta Rhei": 81
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -50152,6 +52042,7 @@
       "Elec Boost": 46,
       "Null Wind": 47
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -50667,6 +52558,7 @@
       "Resist Poison": 11,
       "Resist Elec": 12
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Anzu",
@@ -50693,13 +52585,12 @@
       "Revolution": 86,
       "Firm Stance": 87
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Kin-Ki",
-        "Sui-Ki",
-        "Fuu-Ki",
-        "Oni"
-      ]
+      "Kin-Ki",
+      "Sui-Ki",
+      "Fuu-Ki",
+      "Oni"
     ]
   },
   "Oni": {
@@ -50721,6 +52612,7 @@
       "Endure": 34,
       "Power Charge": 35
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ara Mitama",
@@ -50838,6 +52730,7 @@
       "Resist Dizzy": 11,
       "Sharp Student": 12
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -50899,6 +52792,7 @@
       "Maragion": 44,
       "Null Ice": 45
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -51047,6 +52941,14 @@
       [
         "Attis",
         "Berith"
+      ],
+      [
+        "Attis",
+        "Makami"
+      ],
+      [
+        "Attis",
+        "Yomotsu-Ikusa"
       ],
       [
         "Baphomet",
@@ -51207,6 +53109,10 @@
       [
         "Hell Biker",
         "Makami"
+      ],
+      [
+        "Hell Biker",
+        "Taowu"
       ],
       [
         "Hell Biker",
@@ -51422,6 +53328,10 @@
       ],
       [
         "Taowu",
+        "Vasuki"
+      ],
+      [
+        "Taowu",
         "Yatsufusa"
       ],
       [
@@ -51457,6 +53367,7 @@
       "Auto-Sukukaja": 35,
       "Survive Light": 36
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -51521,6 +53432,14 @@
       [
         "Decarabia",
         "Legion"
+      ],
+      [
+        "Decarabia",
+        "Loki"
+      ],
+      [
+        "Decarabia",
+        "Shiki-Ouji"
       ],
       [
         "Dis",
@@ -51720,6 +53639,10 @@
       ],
       [
         "Legion",
+        "Loki"
+      ],
+      [
+        "Legion",
         "Shiki-Ouji"
       ],
       [
@@ -51910,6 +53833,7 @@
       "Mudoon": 55,
       "Arrow Rain": 56
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -52423,6 +54347,7 @@
       "Mudoon": 37,
       "Survive Light": 39
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -52820,6 +54745,7 @@
       "Dodge Elec": 41,
       "Divine Grace": 43
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -53450,6 +55376,7 @@
       "Navas Nebula": 41,
       "Cool Breeze": 42
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -54120,6 +56047,7 @@
       "Fire Boost": 26,
       "Maragion": 27
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -54332,6 +56260,7 @@
       "Me Patra": 4,
       "Trafuri": 8
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Hua Po",
@@ -54363,6 +56292,7 @@
       "Survive Dark": 32,
       "Null Confuse": 33
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -54729,6 +56659,7 @@
       "Survive Dark": 24,
       "Tetraja": 25
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -54974,6 +56905,7 @@
       "Auto-Rakukaja": 37,
       "Resist Ice": 38
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -55408,6 +57340,7 @@
       "Mazionga": 29,
       "Resist Confuse": 30
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -56198,6 +58131,7 @@
       "Mahamaon": 55,
       "Wind Amp": 57
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -56736,6 +58670,7 @@
       "Mazionga": 42,
       "Confuse Boost": 43
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -57150,6 +59085,7 @@
       "Dodge Physical": 27,
       "Power Charge": 28
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -57355,6 +59291,7 @@
       "Mustard Bomb": 51,
       "Repel Physical": 55
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -58068,6 +60005,7 @@
       "Null Dizzy": 57,
       "Mediarahan": 59
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -59145,6 +61083,7 @@
       "Media": 14,
       "Null Rage": 16
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -59239,6 +61178,7 @@
       "Mudo Boost": 40,
       "Survive Light": 41
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -59873,6 +61813,7 @@
       "Endure Dark": 89,
       "Repel Dark": 90
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -59942,6 +61883,7 @@
       "Dekaja": 8,
       "Traesto": 11
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Forneus",
@@ -59972,6 +61914,7 @@
       "Dekaja": 21,
       "Null Wind": 23
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -60150,6 +62093,7 @@
       "Black Viper": 81,
       "Null Wind": 82
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -60279,6 +62223,7 @@
       "Trafuri": 34,
       "Maragion": 36
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -60644,6 +62589,7 @@
       "Growth 3": 79,
       "Spell Master": 81
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -60890,6 +62836,7 @@
       "Wind Amp": 84,
       "Mind Charge": 85
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -61056,6 +63003,7 @@
       "Elec Boost": 52,
       "Resist Exhaust": 53
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -61522,6 +63470,7 @@
       "Regenerate 3": 74,
       "Vorpal Blade": 76
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -61755,6 +63704,7 @@
       "Media": 11,
       "Trafuri": 14
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Cu Sith",
@@ -61833,6 +63783,7 @@
       "Auto-Maraku": 39,
       "Null Fire": 40
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -62458,6 +64409,7 @@
       "Wind Amp": 73,
       "Evade Elec": 74
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -62968,6 +64920,7 @@
       "Resist Fire": 25,
       "Null Rage": 26
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -63129,6 +65082,7 @@
       "Growth 2": 59,
       "Null Physical": 62
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -63935,11 +65889,10 @@
       "Megidolaon": 84,
       "Pralaya": 87
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Rangda",
-        "Barong"
-      ]
+      "Rangda",
+      "Barong"
     ]
   },
   "Siegfried": {
@@ -63961,6 +65914,7 @@
       "Rainy Death": 68,
       "God's Hand": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -64667,6 +66621,7 @@
       "Repel Fire": 59,
       "Spell Master": 60
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
@@ -65384,6 +67339,7 @@
       "Fear Boost": 5,
       "Resist Physical": 7
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ara Mitama",
@@ -65414,6 +67370,7 @@
       "Megidolaon": 80,
       "Angelic Grace": 81
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -65628,6 +67585,7 @@
       "Resist Light": 49,
       "Invigorate 3": 50
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -66321,6 +68279,7 @@
       "Tetra Break": 60,
       "Enduring Soul": 62
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -66987,6 +68946,7 @@
       "Evade Fire": 82,
       "Elec Amp": 83
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -67337,6 +69297,7 @@
       "Fire Amp": 75,
       "Null Ice": 76
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -67647,6 +69608,7 @@
       "Fire Amp": 59,
       "Auto-Masuku": 60
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -68108,6 +70070,7 @@
       "Media": 13,
       "Magaru": 14
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -68165,6 +70128,7 @@
       "Dekaja": 31,
       "Dodge Physical": 33
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -68496,13 +70460,12 @@
       "Evade Physical": 58,
       "Enduring Soul": 59
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Gdon",
-        "Phoenix",
-        "Yatagarasu",
-        "Narasimha"
-      ]
+      "Gdon",
+      "Phoenix",
+      "Yatagarasu",
+      "Narasimha"
     ]
   },
   "Taotie": {
@@ -68524,6 +70487,7 @@
       "Null Enervate": 40,
       "Torrent Shot": 41
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -69602,14 +71566,35 @@
       "Evade Physical": 61,
       "Absorb Fire": 62
     },
+    "isSpecial": false,
     "recipes": [
+      [
+        "Abaddon",
+        "Alraune"
+      ],
       [
         "Abaddon",
         "Girimehkala"
       ],
       [
+        "Abaddon",
+        "Nozuchi"
+      ],
+      [
+        "Abaddon",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Alice",
+        "Andras"
+      ],
+      [
         "Alice",
         "Nozuchi"
+      ],
+      [
+        "Alice",
+        "Queen Mab"
       ],
       [
         "Alice",
@@ -69621,6 +71606,10 @@
       ],
       [
         "Alraune",
+        "Baphomet"
+      ],
+      [
+        "Alraune",
         "Byakko"
       ],
       [
@@ -69629,7 +71618,27 @@
       ],
       [
         "Alraune",
+        "Cu Chulainn"
+      ],
+      [
+        "Alraune",
         "Cybele"
+      ],
+      [
+        "Alraune",
+        "Genbu"
+      ],
+      [
+        "Alraune",
+        "Kumbhanda"
+      ],
+      [
+        "Alraune",
+        "Leanan Sidhe"
+      ],
+      [
+        "Alraune",
+        "Loa"
       ],
       [
         "Alraune",
@@ -69641,7 +71650,23 @@
       ],
       [
         "Alraune",
+        "Mot"
+      ],
+      [
+        "Alraune",
+        "Raphael"
+      ],
+      [
+        "Alraune",
+        "Seiryu"
+      ],
+      [
+        "Alraune",
         "Seiten Taisei"
+      ],
+      [
+        "Alraune",
+        "Suzaku"
       ],
       [
         "Alraune",
@@ -69657,6 +71682,10 @@
       ],
       [
         "Ananta",
+        "Flauros"
+      ],
+      [
+        "Ananta",
         "Hokuto Seikun"
       ],
       [
@@ -69665,7 +71694,43 @@
       ],
       [
         "Ananta",
+        "Queen Mab"
+      ],
+      [
+        "Ananta",
         "Raphael"
+      ],
+      [
+        "Ananta",
+        "Shiisaa"
+      ],
+      [
+        "Ananta",
+        "Undine"
+      ],
+      [
+        "Ananta",
+        "Unicorn"
+      ],
+      [
+        "Andras",
+        "Byakko"
+      ],
+      [
+        "Andras",
+        "Chernobog"
+      ],
+      [
+        "Andras",
+        "Cybele"
+      ],
+      [
+        "Andras",
+        "Ishtar"
+      ],
+      [
+        "Andras",
+        "Magatsu-Izanagi"
       ],
       [
         "Andras",
@@ -69673,7 +71738,39 @@
       ],
       [
         "Andras",
+        "Mara"
+      ],
+      [
+        "Andras",
+        "Masakado"
+      ],
+      [
+        "Andras",
+        "Seiten Taisei"
+      ],
+      [
+        "Andras",
         "Shiva"
+      ],
+      [
+        "Andras",
+        "Vishnu"
+      ],
+      [
+        "Andras",
+        "White Rider"
+      ],
+      [
+        "Andras",
+        "Yoshitsune"
+      ],
+      [
+        "Andras",
+        "Yurlungur"
+      ],
+      [
+        "Anubis",
+        "King Frost"
       ],
       [
         "Anubis",
@@ -69685,7 +71782,35 @@
       ],
       [
         "Anubis",
+        "Setanta"
+      ],
+      [
+        "Anubis",
         "Thoth"
+      ],
+      [
+        "Anzu",
+        "Atropos"
+      ],
+      [
+        "Anzu",
+        "Cybele"
+      ],
+      [
+        "Anzu",
+        "Ishtar"
+      ],
+      [
+        "Anzu",
+        "Norn"
+      ],
+      [
+        "Apsaras",
+        "Baal Zebul"
+      ],
+      [
+        "Apsaras",
+        "Sandalphon"
       ],
       [
         "Ardha",
@@ -69705,7 +71830,19 @@
       ],
       [
         "Atropos",
+        "Queen Mab"
+      ],
+      [
+        "Atropos",
+        "Shiisaa"
+      ],
+      [
+        "Atropos",
         "Undine"
+      ],
+      [
+        "Atropos",
+        "Unicorn"
       ],
       [
         "Attis",
@@ -69717,11 +71854,23 @@
       ],
       [
         "Baal Zebul",
+        "Ghoul"
+      ],
+      [
+        "Baal Zebul",
+        "Gurr"
+      ],
+      [
+        "Baal Zebul",
         "Matador"
       ],
       [
         "Baal Zebul",
         "Mithra"
+      ],
+      [
+        "Baal Zebul",
+        "Mokoi"
       ],
       [
         "Baal Zebul",
@@ -69737,6 +71886,10 @@
       ],
       [
         "Baal Zebul",
+        "Sylph"
+      ],
+      [
+        "Baal Zebul",
         "Take-Minakata"
       ],
       [
@@ -69744,12 +71897,40 @@
         "Undine"
       ],
       [
+        "Baal Zebul",
+        "Xiezhai"
+      ],
+      [
+        "Baphomet",
+        "Girimehkala"
+      ],
+      [
         "Baphomet",
         "Sui-Ki"
       ],
       [
+        "Baphomet",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Byakko",
         "Girimehkala"
+      ],
+      [
+        "Byakko",
+        "Nozuchi"
+      ],
+      [
+        "Byakko",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Cerberus",
+        "Clotho"
+      ],
+      [
+        "Cerberus",
+        "Fortuna"
       ],
       [
         "Cerberus",
@@ -69757,11 +71938,27 @@
       ],
       [
         "Cerberus",
+        "Leanan Sidhe"
+      ],
+      [
+        "Cerberus",
         "Raphael"
+      ],
+      [
+        "Cerberus",
+        "Undine"
       ],
       [
         "Chernobog",
         "Girimehkala"
+      ],
+      [
+        "Chernobog",
+        "Nozuchi"
+      ],
+      [
+        "Chernobog",
+        "Yamata-no-Orochi"
       ],
       [
         "Clotho",
@@ -69772,8 +71969,32 @@
         "Daisoujou"
       ],
       [
+        "Clotho",
+        "Flauros"
+      ],
+      [
+        "Clotho",
+        "Hokuto Seikun"
+      ],
+      [
+        "Clotho",
+        "Leanan Sidhe"
+      ],
+      [
+        "Clotho",
+        "Raphael"
+      ],
+      [
+        "Cu Chulainn",
+        "Girimehkala"
+      ],
+      [
         "Cu Chulainn",
         "Sui-Ki"
+      ],
+      [
+        "Cu Chulainn",
+        "Yamata-no-Orochi"
       ],
       [
         "Cybele",
@@ -69785,11 +72006,31 @@
       ],
       [
         "Cybele",
+        "Ganga"
+      ],
+      [
+        "Cybele",
+        "High Pixie"
+      ],
+      [
+        "Cybele",
         "Hokuto Seikun"
       ],
       [
         "Cybele",
+        "Matador"
+      ],
+      [
+        "Cybele",
+        "Mokoi"
+      ],
+      [
+        "Cybele",
         "Mot"
+      ],
+      [
+        "Cybele",
+        "Nozuchi"
       ],
       [
         "Cybele",
@@ -69801,7 +72042,23 @@
       ],
       [
         "Cybele",
+        "Sarasvati"
+      ],
+      [
+        "Cybele",
+        "Shiisaa"
+      ],
+      [
+        "Cybele",
+        "Unicorn"
+      ],
+      [
+        "Cybele",
         "Yamata-no-Orochi"
+      ],
+      [
+        "Daisoujou",
+        "Fortuna"
       ],
       [
         "Daisoujou",
@@ -69812,16 +72069,40 @@
         "Leanan Sidhe"
       ],
       [
+        "Daisoujou",
+        "Queen Mab"
+      ],
+      [
+        "Daisoujou",
+        "Undine"
+      ],
+      [
         "Flauros",
         "Ishtar"
+      ],
+      [
+        "Flauros",
+        "Lachesis"
+      ],
+      [
+        "Flauros",
+        "Leanan Sidhe"
       ],
       [
         "Flauros",
         "Norn"
       ],
       [
+        "Flauros",
+        "Raphael"
+      ],
+      [
         "Fortuna",
         "Hachiman"
+      ],
+      [
+        "Fortuna",
+        "Hokuto Seikun"
       ],
       [
         "Fortuna",
@@ -69832,12 +72113,36 @@
         "Kohryu"
       ],
       [
+        "Fortuna",
+        "Raphael"
+      ],
+      [
         "Ganga",
         "Ishtar"
       ],
       [
+        "Ganga",
+        "Raphael"
+      ],
+      [
+        "Genbu",
+        "Girimehkala"
+      ],
+      [
         "Genbu",
         "Seth"
+      ],
+      [
+        "Genbu",
+        "Sui-Ki"
+      ],
+      [
+        "Ghoul",
+        "Ishtar"
+      ],
+      [
+        "Ghoul",
+        "Sandalphon"
       ],
       [
         "Girimehkala",
@@ -69845,7 +72150,27 @@
       ],
       [
         "Girimehkala",
+        "Leanan Sidhe"
+      ],
+      [
+        "Girimehkala",
+        "Loa"
+      ],
+      [
+        "Girimehkala",
         "Mara"
+      ],
+      [
+        "Girimehkala",
+        "Mithra"
+      ],
+      [
+        "Girimehkala",
+        "Mot"
+      ],
+      [
+        "Girimehkala",
+        "Pale Rider"
       ],
       [
         "Girimehkala",
@@ -69853,7 +72178,23 @@
       ],
       [
         "Girimehkala",
+        "Samael"
+      ],
+      [
+        "Girimehkala",
+        "Seiryu"
+      ],
+      [
+        "Girimehkala",
         "Suzaku"
+      ],
+      [
+        "Girimehkala",
+        "Taotie"
+      ],
+      [
+        "Girimehkala",
+        "Undine"
       ],
       [
         "Girimehkala",
@@ -69864,12 +72205,28 @@
         "Sandalphon"
       ],
       [
+        "Gurr",
+        "Seth"
+      ],
+      [
+        "Hachiman",
+        "Queen Mab"
+      ],
+      [
         "Hachiman",
         "Undine"
       ],
       [
         "Hariti",
         "Leanan Sidhe"
+      ],
+      [
+        "Hariti",
+        "Queen Mab"
+      ],
+      [
+        "Hariti",
+        "Undine"
       ],
       [
         "Hell Biker",
@@ -69880,8 +72237,32 @@
         "Yatsufusa"
       ],
       [
+        "High Pixie",
+        "Ishtar"
+      ],
+      [
+        "Hokuto Seikun",
+        "Lachesis"
+      ],
+      [
+        "Hokuto Seikun",
+        "Leanan Sidhe"
+      ],
+      [
         "Hokuto Seikun",
         "Raphael"
+      ],
+      [
+        "Hokuto Seikun",
+        "Undine"
+      ],
+      [
+        "Ishtar",
+        "Matador"
+      ],
+      [
+        "Ishtar",
+        "Mokoi"
       ],
       [
         "Ishtar",
@@ -69889,11 +72270,27 @@
       ],
       [
         "Ishtar",
+        "Omoikane"
+      ],
+      [
+        "Ishtar",
         "Parvati"
       ],
       [
         "Ishtar",
+        "Saki Mitama"
+      ],
+      [
+        "Ishtar",
         "Samael"
+      ],
+      [
+        "Ishtar",
+        "Sarasvati"
+      ],
+      [
+        "Ishtar",
+        "Shiisaa"
       ],
       [
         "Ishtar",
@@ -69905,7 +72302,15 @@
       ],
       [
         "Kikuri-Hime",
+        "Leanan Sidhe"
+      ],
+      [
+        "Kikuri-Hime",
         "Raphael"
+      ],
+      [
+        "Kikuri-Hime",
+        "Undine"
       ],
       [
         "King Frost",
@@ -69913,7 +72318,15 @@
       ],
       [
         "King Frost",
+        "Michael"
+      ],
+      [
+        "King Frost",
         "Satan"
+      ],
+      [
+        "King Frost",
+        "Trumpeter"
       ],
       [
         "Kohryu",
@@ -69924,8 +72337,40 @@
         "Undine"
       ],
       [
+        "Kumbhanda",
+        "Nozuchi"
+      ],
+      [
+        "Kumbhanda",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Lachesis",
+        "Leanan Sidhe"
+      ],
+      [
         "Lachesis",
         "Raphael"
+      ],
+      [
+        "Lachesis",
+        "Undine"
+      ],
+      [
+        "Lachesis",
+        "Unicorn"
+      ],
+      [
+        "Leanan Sidhe",
+        "Mot"
+      ],
+      [
+        "Leanan Sidhe",
+        "Parvati"
+      ],
+      [
+        "Leanan Sidhe",
+        "Samael"
       ],
       [
         "Leanan Sidhe",
@@ -69942,6 +72387,10 @@
       [
         "Loa",
         "Seth"
+      ],
+      [
+        "Loa",
+        "Sui-Ki"
       ],
       [
         "Lucifer",
@@ -69968,12 +72417,40 @@
         "Undine"
       ],
       [
+        "Mara",
+        "Nozuchi"
+      ],
+      [
+        "Mara",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "Masakado",
+        "Nozuchi"
+      ],
+      [
         "Masakado",
         "Yamata-no-Orochi"
       ],
       [
         "Matador",
         "Sandalphon"
+      ],
+      [
+        "Matador",
+        "Seth"
+      ],
+      [
+        "Matador",
+        "Sui-Ki"
+      ],
+      [
+        "Metatron",
+        "Oberon"
+      ],
+      [
+        "Michael",
+        "Oberon"
       ],
       [
         "Michael",
@@ -69984,8 +72461,16 @@
         "Seth"
       ],
       [
+        "Mithra",
+        "Sui-Ki"
+      ],
+      [
         "Mokoi",
         "Sandalphon"
+      ],
+      [
+        "Mokoi",
+        "Seth"
       ],
       [
         "Mot",
@@ -69996,8 +72481,36 @@
         "Sui-Ki"
       ],
       [
+        "Mot",
+        "Undine"
+      ],
+      [
+        "Mot",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Nigi Mitama",
         "Sandalphon"
+      ],
+      [
+        "Nigi Mitama",
+        "Seth"
+      ],
+      [
+        "Nigi Mitama",
+        "Sui-Ki"
+      ],
+      [
+        "Norn",
+        "Omoikane"
+      ],
+      [
+        "Norn",
+        "Queen Mab"
+      ],
+      [
+        "Norn",
+        "Shiisaa"
       ],
       [
         "Norn",
@@ -70009,7 +72522,19 @@
       ],
       [
         "Nozuchi",
+        "Raphael"
+      ],
+      [
+        "Nozuchi",
+        "Seiten Taisei"
+      ],
+      [
+        "Nozuchi",
         "Shiva"
+      ],
+      [
+        "Nozuchi",
+        "Suzaku"
       ],
       [
         "Nozuchi",
@@ -70017,7 +72542,23 @@
       ],
       [
         "Nozuchi",
+        "White Rider"
+      ],
+      [
+        "Nozuchi",
         "Yoshitsune"
+      ],
+      [
+        "Nozuchi",
+        "Yurlungur"
+      ],
+      [
+        "Oberon",
+        "Satan"
+      ],
+      [
+        "Oberon",
+        "Trumpeter"
       ],
       [
         "Okuninushi",
@@ -70028,6 +72569,14 @@
         "Seth"
       ],
       [
+        "Pale Rider",
+        "Sui-Ki"
+      ],
+      [
+        "Parvati",
+        "Raphael"
+      ],
+      [
         "Queen Mab",
         "Sandalphon"
       ],
@@ -70036,16 +72585,52 @@
         "Scathach"
       ],
       [
+        "Queen Mab",
+        "Seth"
+      ],
+      [
+        "Queen Mab",
+        "Sui-Ki"
+      ],
+      [
+        "Queen Mab",
+        "Tzitzimitl"
+      ],
+      [
+        "Queen Mab",
+        "White Rider"
+      ],
+      [
+        "Raphael",
+        "Samael"
+      ],
+      [
         "Raphael",
         "Sui-Ki"
+      ],
+      [
+        "Raphael",
+        "Unicorn"
       ],
       [
         "Raphael",
         "White Rider"
       ],
       [
+        "Raphael",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Samael",
         "Seth"
+      ],
+      [
+        "Samael",
+        "Sui-Ki"
+      ],
+      [
+        "Sandalphon",
+        "Sylph"
       ],
       [
         "Sandalphon",
@@ -70064,12 +72649,24 @@
         "Sui-Ki"
       ],
       [
+        "Seiryu",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Seiten Taisei",
         "Yamata-no-Orochi"
       ],
       [
         "Setanta",
         "Trumpeter"
+      ],
+      [
+        "Seth",
+        "Sylph"
+      ],
+      [
+        "Seth",
+        "Take-Minakata"
       ],
       [
         "Seth",
@@ -70080,12 +72677,36 @@
         "Undine"
       ],
       [
+        "Seth",
+        "Xiezhai"
+      ],
+      [
         "Sui-Ki",
         "Suzaku"
       ],
       [
+        "Sui-Ki",
+        "Take-Minakata"
+      ],
+      [
+        "Sui-Ki",
+        "Taotie"
+      ],
+      [
+        "Sui-Ki",
+        "Undine"
+      ],
+      [
+        "Suzaku",
+        "Yamata-no-Orochi"
+      ],
+      [
         "Tzitzimitl",
         "Undine"
+      ],
+      [
+        "Undine",
+        "White Rider"
       ],
       [
         "Vasuki",
@@ -70093,6 +72714,10 @@
       ],
       [
         "Vishnu",
+        "Yamata-no-Orochi"
+      ],
+      [
+        "White Rider",
         "Yamata-no-Orochi"
       ],
       [
@@ -70124,6 +72749,7 @@
       "Null Physical": 69,
       "Thunder Reign": 70
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -70830,6 +73456,7 @@
       "Null Mute": 49,
       "Ziodyne": 51
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -71164,6 +73791,7 @@
       "Resist Dark": 54,
       "Endure Dark": 55
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -71985,6 +74613,7 @@
       "Kill Rush": 18,
       "Resist Fear": 19
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -72082,6 +74711,7 @@
       "Regenerate 2": 31,
       "Mind Charge": 32
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alraune",
@@ -72572,6 +75202,7 @@
       "Blue Wall": 48,
       "Power Charge": 49
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -73807,15 +76438,14 @@
       "Debilitate": 73,
       "Heat Riser": 74
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Matador",
-        "White Rider",
-        "Daisoujou",
-        "Pabilsag",
-        "Taotie",
-        "Taowu"
-      ]
+      "Matador",
+      "White Rider",
+      "Daisoujou",
+      "Pabilsag",
+      "Taotie",
+      "Taowu"
     ]
   },
   "Tzitzimitl": {
@@ -73838,6 +76468,7 @@
       "Maziodyne": 76,
       "Repel Elec": 77
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -74295,6 +76926,7 @@
       "Resist Fire": 6,
       "Fire Break": 7
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Incubus",
@@ -74324,6 +76956,7 @@
       "Mediarama": 36,
       "Ice Boost": 37
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -74950,6 +77583,7 @@
       "Recarm": 33,
       "Mazionga": 34
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -75280,6 +77914,7 @@
       "Fire Amp": 63,
       "Null Dark": 64
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -75805,6 +78440,7 @@
       "Arm Chopper": 11,
       "Mabufu": 12
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Forneus",
@@ -75851,6 +78487,7 @@
       "Mahamaon": 76,
       "Ziodyne": 77
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -76057,6 +78694,7 @@
       "Ghastly Wail": 23,
       "Fear Boost": 24
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Angel",
@@ -76327,6 +78965,7 @@
       "Hama Boost": 38,
       "Resist Dark": 39
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -76709,6 +79348,7 @@
       "Power Charge": 78,
       "Angelic Grace": 79
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -76860,6 +79500,7 @@
       "Hama Boost": 66,
       "Mudo Boost": 67
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -77922,6 +80563,7 @@
       "Rampage": 19,
       "Elec Boost": 21
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -78024,6 +80666,7 @@
       "Bufula": 22,
       "Auto-Tarukaja": 23
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ame-no-Uzume",
@@ -78337,6 +80980,7 @@
       "Resist Enervate": 38,
       "Ice Boost": 39
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Abaddon",
@@ -78771,6 +81415,7 @@
       "Diarahan": 45,
       "Cool Breeze": 46
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -79094,6 +81739,10 @@
       ],
       [
         "Horus",
+        "Narasimha"
+      ],
+      [
+        "Horus",
         "Phoenix"
       ],
       [
@@ -79127,6 +81776,10 @@
       [
         "Jack Frost",
         "Suzaku"
+      ],
+      [
+        "Jatayu",
+        "Narasimha"
       ],
       [
         "Jinn",
@@ -79418,14 +82071,13 @@
       "Maragidyne": 54,
       "Mind Charge": 55
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Thoth",
-        "Orthrus",
-        "Makami",
-        "Narasimha",
-        "Mothman"
-      ]
+      "Thoth",
+      "Orthrus",
+      "Makami",
+      "Narasimha",
+      "Mothman"
     ]
   },
   "Yomotsu-Ikusa": {
@@ -79446,6 +82098,7 @@
       "Poison Mist": 26,
       "Poison Boost": 27
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Andras",
@@ -79563,6 +82216,7 @@
       "Mudo": 10,
       "Ghastly Wail": 11
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Ghoul",
@@ -79601,14 +82255,13 @@
       "Elec Amp": 79,
       "Hassou Tobi": 83
     },
+    "isSpecial": true,
     "recipes": [
-      [
-        "Hachiman",
-        "Masakado",
-        "Hitokoto-Nushi",
-        "Okuninushi",
-        "Shiki-Ouji"
-      ]
+      "Hachiman",
+      "Masakado",
+      "Hitokoto-Nushi",
+      "Okuninushi",
+      "Shiki-Ouji"
     ]
   },
   "Yurlungur": {
@@ -79629,6 +82282,7 @@
       "Samarecarm": 74,
       "Repel Light": 75
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alilat",
@@ -79892,6 +82546,7 @@
       "Fire Amp": 95,
       "Vorpal Blade": 96
     },
+    "isSpecial": false,
     "recipes": [
       [
         "Alice",
