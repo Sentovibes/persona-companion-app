@@ -23,13 +23,13 @@ A native Android companion app for the Persona series — your pocket compendium
 
 | Game | Personas | Status |
 |---|---|---|
-| Persona 3 FES | 96 | ✅ Complete |
-| Persona 3 Portable | 194 | ✅ Complete |
+| Persona 3 FES | 169 | ✅ Complete |
+| Persona 3 Portable | 173 | ✅ Complete |
 | Persona 3 Reload | 194 | ✅ Complete |
 | Persona 4 | 187 | ✅ Complete |
 | Persona 4 Golden | 205 | ✅ Complete |
-| Persona 5 | 192 | ✅ Complete |
-| Persona 5 Royal | 225 | ✅ Complete |
+| Persona 5 | 210 | ✅ Complete |
+| Persona 5 Royal | 232 | ✅ Complete |
 
 ---
 
@@ -184,6 +184,15 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v2.5.0 (2026-03-07)
+- Enhanced persona database with improved datasets
+- P3 FES: 96 → 169 personas
+- P3 Portable: 194 → 173 personas (refined)
+- P5: 192 → 210 personas
+- P5 Royal: 225 → 232 personas
+- Total: 1,370 personas across all games
+- More accurate stats and skills
 
 ### v2.0.0 (2026-03-07)
 - Added Fusion Calculator for all games

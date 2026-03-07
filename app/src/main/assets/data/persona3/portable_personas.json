@@ -1,3214 +1,3337 @@
 {
   "Abaddon": {
-    "heart": "Abyssal King Tooth",
-    "heartlvl": 82,
-    "inherits": "fireD",
-    "lvl": 76,
-    "race": "Devil",
-    "resists": "dd-nw--wd-",
+    "arcana": "Devil",
+    "level": 68,
+    "stats": [
+      49,
+      52,
+      49,
+      33,
+      44
+    ],
     "skills": {
-      "Virus Breath": 0.1,
-      "Evil Smile": 0.2,
-      "Deathbound": 0.3,
-      "Ailment Boost": 78,
-      "Vile Assault": 79,
-      "Maragidyne": 81,
-      "Drain Ice": 83
-    },
-    "stats": [53, 61, 48, 33, 46]
+      "Evil Smile": 0.1,
+      "Weary Thrust": 0.2,
+      "High Counter": 0.3,
+      "Null Strike": 71,
+      "Null Slash": 72,
+      "Null Pierce": 73,
+      "Absorb Strike": 74
+    }
   },
   "Alice": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 73,
-    "inherits": "darkA",
-    "lvl": 68,
-    "race": "Death",
-    "resists": "-------wr-",
+    "arcana": "Death",
+    "level": 56,
+    "stats": [
+      31,
+      50,
+      27,
+      42,
+      39
+    ],
     "skills": {
-      "Mudoon": 0.1,
-      "Maeigaon": 0.2,
-      "Spirit Drain": 0.3,
-      "Die For Me!": 69,
-      "Mudo Boost": 70,
-      "Endure Light": 72,
-      "Megidolaon": 74
-    },
-    "stats": [35, 62, 31, 51, 44]
+      "Evil Touch": 0.1,
+      "Spirit Drain": 0.2,
+      "Die for Me!": 59,
+      "Marakunda": 60,
+      "Repel Dark": 61,
+      "Mudo Boost": 62
+    }
   },
   "Alilat": {
-    "heart": "Black Pillar Shard",
-    "heartlvl": 91,
-    "inherits": "recovery",
-    "lvl": 84,
-    "race": "Empress",
-    "resists": "rr-wn-s-w-",
+    "arcana": "Empress",
+    "level": 84,
+    "stats": [
+      53,
+      64,
+      61,
+      52,
+      60
+    ],
     "skills": {
-      "Mabufudyne": 0.1,
-      "Maziodyne": 0.2,
-      "Makarakarn": 0.3,
-      "Repel Fire": 86,
-      "Diamond Dust": 87,
-      "Inferno": 89,
-      "Repel Pierce": 91
-    },
-    "stats": [51, 70, 60, 51, 51]
+      "Regenerate 3": 0.1,
+      "Makarakarn": 0.2,
+      "Mabufudyne": 0.3,
+      "Repel Slash": 88,
+      "Repel Strike": 89,
+      "Repel Pierce": 90
+    }
   },
   "Ananta": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 78,
-    "inherits": "windA",
-    "lvl": 73,
-    "race": "Aeon",
-    "resists": "w-s-dw-n--",
+    "arcana": "Aeon",
+    "level": 75,
+    "stats": [
+      52,
+      56,
+      60,
+      39,
+      48
+    ],
     "skills": {
-      "Vile Assault": 0.1,
+      "Mediarahan": 0.1,
       "Dekunda": 0.2,
-      "Auto Maraku": 0.3,
-      "Evade Slash": 74,
-      "Resist Ailments": 75,
-      "Growth 3": 77,
-      "Drain Slash": 80
-    },
-    "stats": [51, 51, 68, 35, 42]
-  },
-  "Anat": {
-    "inherits": "windA",
-    "lvl": 53,
-    "race": "Priestess",
-    "resists": "-n--sw----",
-    "skills": {
-      "Cosmic Flare": 0.1,
-      "Neuro Slash": 0.2,
-      "Diarahan": 0.3,
-      "Auto Maraku": 54,
-      "Samarecarm": 55,
-      "Mediarahan": 57,
-      "Enduring Soul": 59
-    },
-    "stats": [36, 39, 33, 37, 23]
+      "Weary Thrust": 76,
+      "High Counter": 78,
+      "Samarecarm": 79,
+      "Absorb Wind": 81,
+      "Infinity": 3883
+    }
   },
   "Angel": {
-    "inherits": "lightA",
-    "lvl": 4,
-    "race": "Justice",
-    "resists": "-----s-sw-",
+    "arcana": "Justice",
+    "level": 4,
+    "stats": [
+      4,
+      5,
+      3,
+      4,
+      3
+    ],
     "skills": {
       "Garu": 0.1,
-      "Sukukaja": 0.2,
-      "Single Shot": 5,
-      "Patra": 6,
-      "Resist Charm": 8
-    },
-    "stats": [4, 5, 3, 4, 3]
+      "Patra": 0.2,
+      "Sukukaja": 5,
+      "Hama": 7,
+      "Charmdi": 8,
+      "Justice": 3883
+    }
   },
   "Anubis": {
-    "inherits": "lidarkA",
-    "lvl": 40,
-    "race": "Judgement",
-    "resists": "-------nn-",
+    "arcana": "Judgement",
+    "level": 59,
+    "stats": [
+      41,
+      50,
+      38,
+      37,
+      36
+    ],
     "skills": {
-      "Hamaon": 0.1,
-      "Mudoon": 0.2,
-      "Maeiga": 0.3,
-      "Makouga": 41,
-      "Makarakarn": 43,
-      "Growth 2": 44,
-      "Resist Dark": 45
-    },
-    "stats": [27, 35, 30, 21, 26]
+      "Mahamaon": 0.1,
+      "Mamudoon": 0.2,
+      "Makarakarn": 61,
+      "Null Ice": 62,
+      "Null Elec": 64,
+      "Regenerate 3": 66
+    }
   },
   "Apsaras": {
-    "inherits": "iceB",
-    "lvl": 2,
-    "race": "Priestess",
-    "resists": "---ws-----",
+    "arcana": "Priestess",
+    "level": 3,
+    "stats": [
+      3,
+      4,
+      3,
+      2,
+      4
+    ],
     "skills": {
       "Bufu": 0.1,
-      "Baisudi": 3,
-      "Sukunda": 4,
-      "Patra": 5,
-      "Resist Freeze": 7,
-      "Cadenza": 5217
-    },
-    "stats": [2, 4, 2, 3, 2]
+      "Posumudi": 4,
+      "Sukunda": 5,
+      "Cadenza": 3883
+    }
   },
   "Ara Mitama": {
-    "inherits": "elecA",
-    "lvl": 6,
-    "race": "Chariot",
-    "resists": "-s-s--w---",
+    "arcana": "Chariot",
+    "level": 6,
+    "stats": [
+      6,
+      4,
+      6,
+      4,
+      5
+    ],
     "skills": {
       "Bash": 0.1,
       "Rakukaja": 0.2,
-      "Provoke": 0.3,
-      "Agi": 7,
-      "Rakunda": 8,
-      "Rage Boost": 10
-    },
-    "stats": [8, 3, 4, 5, 5]
+      "Agi": 0.3,
+      "Rakunda": 7,
+      "Sukukaja": 8,
+      "Sharp Student": 12
+    }
   },
   "Arahabaki": {
-    "heart": "Clay God Fragment",
-    "heartlvl": 74,
-    "inherits": "strikeB",
-    "lvl": 68,
-    "race": "Hermit",
-    "resists": "rwr-w--sw-",
+    "arcana": "Hermit",
+    "level": 60,
+    "stats": [
+      42,
+      50,
+      51,
+      32,
+      34
+    ],
     "skills": {
-      "Herculean Strike": 0.1,
-      "Makarakarn": 0.2,
-      "Null Charm": 0.3,
-      "Repel Dark": 70,
-      "Auto Maraku": 71,
-      "Virus Breath": 72,
-      "Repel Strike": 76
-    },
-    "stats": [47, 52, 53, 32, 36]
+      "Virus Breath": 0.1,
+      "Vicious Strike": 0.2,
+      "Auto-Maraku": 0.3,
+      "Alertness": 62,
+      "Tetrakarn": 64,
+      "Repel Ice": 66,
+      "Null Strike": 67
+    }
   },
   "Archangel": {
-    "inherits": "lightA",
-    "lvl": 10,
-    "race": "Justice",
-    "resists": "s----w-nw-",
+    "arcana": "Justice",
+    "level": 10,
+    "stats": [
+      8,
+      8,
+      8,
+      7,
+      6
+    ],
     "skills": {
-      "Kouha": 0.1,
-      "Single Shot": 0.2,
-      "Baisudi": 0.3,
-      "Sukukaja": 11,
-      "Holy Arrow": 13,
-      "Apt Pupil": 15
-    },
-    "stats": [8, 8, 8, 7, 6]
+      "Hama": 0.1,
+      "Sukukaja": 0.2,
+      "Cleave": 0.3,
+      "Patra": 11,
+      "Holy Arrow": 12,
+      "Mazio": 13,
+      "Sharp Student": 14,
+      "Justice": 3883
+    }
   },
-  "Arsene": {
-    "inherits": "darkA",
-    "lvl": 23,
-    "race": "Fool",
-    "resists": "-------ws-",
+  "Ares": {
+    "arcana": "Chariot",
+    "level": 19,
+    "stats": [
+      17,
+      10,
+      15,
+      9,
+      13
+    ],
     "skills": {
-      "Eiga": 0.1,
-      "Fatal End": 0.2,
-      "Dark Driver": 0.3,
-      "Evil Smile": 24,
-      "Vacuum Slash": 25,
-      "Maeiga": 27,
-      "Survival Trick": 29
-    },
-    "stats": [17, 17, 14, 18, 11]
-  },
-  "Astarte": {
-    "inherits": "iceA",
-    "lvl": 54,
-    "race": "Empress",
-    "resists": "--nw----s-",
-    "skills": {
-      "One-shot Kill": 0.1,
-      "Tetrakarn": 0.2,
-      "Makarakarn": 0.3,
-      "Insta-Heal": 55,
-      "Amrita Shower": 56,
-      "Single-Target Boost": 58,
-      "Myriad Arrows": 60
-    },
-    "stats": [42, 36, 33, 33, 31]
+      "Zan-ei": 0.1,
+      "Rakunda": 0.2,
+      "Counter": 21,
+      "Rebellion": 22,
+      "Getsu-ei": 24,
+      "Scarlet Havoc": 3883
+    }
   },
   "Asura": {
-    "heart": "Carnage King's Gear",
-    "heartlvl": 92,
-    "inherits": "almighty",
-    "lvl": 85,
-    "race": "Sun",
-    "resists": "-n-d--wn--",
+    "arcana": "Sun",
+    "level": 85,
+    "stats": [
+      62,
+      60,
+      58,
+      56,
+      57
+    ],
     "skills": {
       "Agidyne": 0.1,
       "Akasha Arts": 0.2,
       "Unshaken Will": 0.3,
-      "Heat Riser": 86,
-      "Strike Amp": 88,
-      "God's Hand": 90,
-      "Firm Stance": 91
-    },
-    "stats": [75, 55, 58, 50, 54]
-  },
-  "Atavaka": {
-    "heart": "Wisdom King's Locks",
-    "heartlvl": 79,
-    "inherits": "fireL",
-    "lvl": 72,
-    "race": "Strength",
-    "resists": "--n-w--n--",
-    "skills": {
-      "Brave Blade": 0.1,
-      "Maragidyne": 0.2,
-      "Null Dizzy": 0.3,
-      "God's Hand": 74,
-      "Auto Mataru": 75,
-      "Mediarahan": 77,
-      "Firm Stance": 79
-    },
-    "stats": [63, 37, 64, 39, 35]
+      "Tetrakarn": 87,
+      "Megidolaon": 88,
+      "Spell Master": 91
+    }
   },
   "Atropos": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 61,
-    "inherits": "iceA",
-    "lvl": 56,
-    "race": "Fortune",
-    "resists": "---w--nss-",
+    "arcana": "Fortune",
+    "level": 54,
+    "stats": [
+      26,
+      45,
+      27,
+      31,
+      40
+    ],
     "skills": {
       "Magarula": 0.1,
-      "Marakunda": 0.2,
-      "Dekunda": 0.3,
-      "Ziodyne": 57,
-      "Garudyne": 59,
-      "Wind Amp": 61,
-      "Soul Link": 62
-    },
-    "stats": [26, 45, 32, 36, 40]
+      "Wind Boost": 0.2,
+      "Mind Charge": 57,
+      "Garudyne": 58,
+      "Resist Elec": 59,
+      "Wind Amp": 60
+    }
   },
   "Attis": {
-    "heart": "Sacrifice God Wrap",
-    "heartlvl": 79,
-    "inherits": "recovery",
-    "lvl": 73,
-    "race": "Hanged",
-    "resists": "sssn--rww-",
+    "arcana": "Hanged",
+    "level": 67,
+    "stats": [
+      46,
+      54,
+      56,
+      44,
+      32
+    ],
     "skills": {
-      "Mahamaon": 0.1,
-      "Recarmdra": 0.2,
-      "Samarecarm": 0.3,
-      "Survival Trick": 74,
-      "Endure": 75,
-      "Megidolaon": 77,
-      "Enduring Soul": 79
-    },
-    "stats": [45, 53, 51, 57, 32]
-  },
-  "Baal Zebul": {
-    "inherits": "iceD",
-    "lvl": 72,
-    "race": "Moon",
-    "resists": "---wssswr-",
-    "skills": {
-      "Magarudyne": 0.1,
-      "Eigaon": 0.2,
+      "Recarmdra": 0.1,
+      "Ghastly Wail": 0.2,
       "Megidola": 0.3,
-      "Matarukaja": 73,
-      "Ziodyne": 74,
-      "Maeigaon": 76,
-      "Panta Rhei": 78
-    },
-    "stats": [51, 56, 45, 42, 41]
-  },
-  "Baphomet": {
-    "inherits": "elecD",
-    "lvl": 30,
-    "race": "Devil",
-    "resists": "---s--wwn-",
-    "skills": {
-      "Maragi": 0.1,
-      "Eiga": 0.2,
-      "Dodge Fire": 0.3,
-      "Fire Boost": 31,
-      "Maeiga": 33,
-      "Dark Boost": 34,
-      "Endure Light": 36
-    },
-    "stats": [20, 25, 22, 16, 19]
+      "Samarecarm": 70,
+      "Repel Light": 71,
+      "Enduring Soul": 75
+    }
   },
   "Barong": {
-    "inherits": "elecA",
-    "lvl": 63,
-    "race": "Emperor",
-    "resists": "-----nwn--",
+    "arcana": "Emperor",
+    "level": 52,
+    "stats": [
+      40,
+      36,
+      30,
+      28,
+      29
+    ],
     "skills": {
-      "Ziodyne": 0.1,
-      "Elec Boost": 0.2,
-      "Elec Break": 0.3,
-      "Maziodyne": 64,
-      "Eerie Sound": 65,
-      "Auto Masuku": 67,
-      "Drain Elec": 69
-    },
-    "stats": [43, 55, 41, 31, 32]
+      "Heat Wave": 0.1,
+      "Counterstrike": 0.2,
+      "Null Poison": 0.3,
+      "Virus Breath": 54,
+      "Invigorate 2": 55,
+      "Auto-Maraku": 56,
+      "Endure Dark": 57
+    }
   },
   "Beelzebub": {
-    "heart": "Lord of Flies Wings",
-    "heartlvl": 88,
-    "inherits": "iceD",
-    "lvl": 81,
-    "race": "Devil",
-    "resists": "-n-w-nnwr-",
+    "arcana": "Devil",
+    "level": 81,
+    "stats": [
+      53,
+      62,
+      56,
+      55,
+      54
+    ],
     "skills": {
-      "Mamudoon": 0.1,
-      "Maeigaon": 0.2,
-      "Evil Smile": 0.3,
-      "Demonic Decree": 82,
-      "Megidolaon": 84,
-      "Concentrate": 85,
-      "Dark Amp": 87
-    },
-    "stats": [50, 62, 50, 60, 52]
-  },
-  "Belphegor": {
-    "inherits": "iceD",
-    "lvl": 53,
-    "race": "Emperor",
-    "resists": "---wss-wd-",
-    "skills": {
-      "Mabufula": 0.1,
-      "Maeiga": 0.2,
-      "Dodge Light": 0.3,
-      "Mudoon": 54,
-      "Stagnant Air": 55,
-      "Endure Light": 57,
-      "Maeigaon": 59
-    },
-    "stats": [34, 43, 38, 28, 29]
+      "Magarudyne": 0.1,
+      "Makarakarn": 0.2,
+      "Primal Force": 83,
+      "Maziodyne": 84,
+      "High Counter": 85,
+      "Victory Cry": 87
+    }
   },
   "Berith": {
-    "inherits": "windA",
-    "lvl": 13,
-    "race": "Hierophant",
-    "resists": "---s-ws---",
+    "arcana": "Hierophant",
+    "level": 13,
+    "stats": [
+      11,
+      10,
+      9,
+      7,
+      9
+    ],
     "skills": {
-      "Single Shot": 0.1,
-      "Agi": 0.2,
-      "Rakukaja": 0.3,
-      "Power Slash": 14,
-      "Dodge Fire": 16,
-      "Assault Dive": 18
-    },
-    "stats": [12, 7, 10, 11, 6]
+      "Agi": 0.1,
+      "Tarukaja": 0.2,
+      "Double Fangs": 0.3,
+      "Auto-Tarukaja": 15,
+      "Maragi": 16,
+      "Rebellion": 17
+    }
   },
   "Bishamonten": {
-    "inherits": "fireL",
-    "lvl": 60,
-    "race": "Tower",
-    "resists": "-n-nw--s--",
+    "arcana": "Tower",
+    "level": 60,
+    "stats": [
+      47,
+      44,
+      41,
+      34,
+      39
+    ],
     "skills": {
       "Maragidyne": 0.1,
-      "Vile Assault": 0.2,
-      "Pierce Boost": 0.3,
-      "Myriad Arrows": 61,
-      "Crit Rate Amp": 62,
-      "Primal Force": 64,
-      "Pierce Amp": 66
-    },
-    "stats": [50, 38, 45, 36, 30]
+      "Diarahan": 0.2,
+      "Fire Amp": 62,
+      "Arrow Rain": 63,
+      "Myriad Arrows": 65,
+      "Arms Master": 67
+    }
   },
   "Black Frost": {
-    "heart": "Black Frostite",
-    "heartlvl": 41,
-    "inherits": "almighty",
-    "lvl": 37,
-    "race": "Fool",
-    "resists": "---nd--wr-",
+    "arcana": "Fool",
+    "level": 34,
+    "stats": [
+      23,
+      25,
+      22,
+      22,
+      25
+    ],
     "skills": {
-      "Maeiga": 0.1,
-      "Bufula": 0.2,
-      "Matarukaja": 0.3,
-      "Agidyne": 38,
-      "Dark Boost": 39,
-      "Bufudyne": 40,
-      "Fast Heal": 42,
-      "Resist Light": 43,
-      "King and I": 5217
-    },
-    "stats": [22, 34, 23, 25, 20]
+      "Mudo": 0.1,
+      "Agilao": 0.2,
+      "Bufula": 0.3,
+      "Marakunda": 35,
+      "Trafuri": 37,
+      "Matarukaja": 40,
+      "King and I": 3883
+    }
   },
   "Byakko": {
-    "heart": "King of Beasts Fang",
-    "heartlvl": 68,
-    "inherits": "iceL",
-    "lvl": 63,
-    "race": "Temperance",
-    "resists": "---wnr----",
+    "arcana": "Temperance",
+    "level": 57,
+    "stats": [
+      49,
+      36,
+      34,
+      48,
+      32
+    ],
     "skills": {
-      "Mabufula": 0.1,
-      "Freeze Boost": 0.2,
-      "Heat Wave": 0.3,
-      "Soul Shift": 64,
-      "Evade Fire": 66,
-      "Mabufudyne": 67,
-      "Enduring Soul": 69
-    },
-    "stats": [45, 44, 50, 39, 30]
-  },
-  "Captain Kidd": {
-    "inherits": "elecA",
-    "lvl": 18,
-    "race": "Chariot",
-    "resists": "-----sw---",
-    "skills": {
-      "Mazio": 0.1,
-      "Assault Dive": 0.2,
-      "Elec Driver": 0.3,
-      "Tarukaja": 19,
-      "Shock Boost": 20,
-      "Zionga": 21,
-      "Swift Strike": 23
-    },
-    "stats": [14, 8, 16, 12, 11]
-  },
-  "Carmen": {
-    "inherits": "fireA",
-    "lvl": 19,
-    "race": "Lovers",
-    "resists": "---sw-----",
-    "skills": {
-      "Agilao": 0.1,
-      "Tarunda": 0.2,
-      "Fire Driver": 0.3,
-      "Sexy Dance": 20,
-      "Diarama": 21,
-      "Charm Boost": 22,
-      "Maragion": 24
-    },
-    "stats": [8, 18, 12, 14, 12]
-  },
-  "Cendrillon": {
-    "inherits": "lightA",
-    "lvl": 36,
-    "race": "Star",
-    "resists": "-------sw-",
-    "skills": {
-      "Neuro Slash": 0.1,
-      "Makouga": 0.2,
-      "Slash Driver": 0.3,
-      "Revolution": 37,
-      "Null Dizzy": 38,
-      "Vidyaraja's Blessing": 40,
-      "Tempest Slash": 42
-    },
-    "stats": [25, 22, 20, 28, 20]
+      "Mazionga": 0.1,
+      "Elec Boost": 0.2,
+      "Deathbound": 0.3,
+      "Ziodyne": 59,
+      "Endure": 61,
+      "Maziodyne": 63
+    }
   },
   "Chernobog": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 61,
-    "inherits": "iceD",
-    "lvl": 56,
-    "race": "Moon",
-    "resists": "n-sw----d-",
+    "arcana": "Moon",
+    "level": 58,
+    "stats": [
+      46,
+      47,
+      32,
+      36,
+      34
+    ],
     "skills": {
-      "Tempest Slash": 0.1,
-      "Maeiga": 0.2,
-      "Apt Pupil": 0.3,
-      "Eigaon": 57,
-      "Poison Mist": 58,
-      "Shift Amp": 60,
-      "Brave Blade": 61
-    },
-    "stats": [48, 41, 31, 35, 32]
+      "Mamudoon": 0.1,
+      "Blade of Fury": 0.2,
+      "Null Slash": 0.3,
+      "Deathbound": 60,
+      "Null Wind": 62,
+      "Megidola": 63,
+      "Invigorate 2": 64
+    }
   },
   "Chi You": {
-    "heart": "Bull Warrior Horns",
-    "heartlvl": 94,
-    "inherits": "windA",
-    "lvl": 86,
-    "race": "Tower",
-    "resists": "s-s--w----",
+    "arcana": "Tower",
+    "level": 86,
+    "stats": [
+      65,
+      56,
+      62,
+      54,
+      59
+    ],
     "skills": {
-      "Primal Force": 0.1,
-      "Vorpal Blade": 0.2,
-      "Shift Amp": 0.3,
-      "Akasha Arts": 88,
-      "Charge": 89,
-      "Arms Master": 91,
-      "Drain Strike": 93
-    },
-    "stats": [69, 50, 63, 53, 60]
+      "Vorpal Blade": 0.1,
+      "Invigorate 3": 0.2,
+      "Primal Force": 89,
+      "Absorb Strike": 91,
+      "Arms Master": 92
+    }
   },
   "Chimera": {
-    "inherits": "fireB",
-    "lvl": 9,
-    "race": "Chariot",
-    "resists": "-s-s----w-",
+    "arcana": "Chariot",
+    "level": 9,
+    "stats": [
+      8,
+      4,
+      9,
+      8,
+      5
+    ],
     "skills": {
-      "Power Slash": 0.1,
-      "Bewilder": 0.2,
-      "Agi": 10,
+      "Cleave": 0.1,
+      "Agi": 0.2,
+      "Bewilder": 0.3,
       "Sonic Punch": 11,
-      "Sukunda": 12,
-      "Auto Tarukaja": 14
-    },
-    "stats": [8, 4, 12, 4, 6]
+      "Rakunda": 12,
+      "Auto-Tarukaja": 14
+    }
   },
   "Clotho": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 41,
-    "inherits": "iceA",
-    "lvl": 37,
-    "race": "Fortune",
-    "resists": "---w--n---",
+    "arcana": "Fortune",
+    "level": 38,
+    "stats": [
+      20,
+      29,
+      22,
+      21,
+      29
+    ],
     "skills": {
       "Garula": 0.1,
-      "Wind Break": 0.2,
-      "Rakunda": 0.3,
-      "Masukunda": 38,
-      "Me Patra": 39,
-      "Soul Chain": 40,
-      "Samarecarm": 42
-    },
-    "stats": [20, 29, 22, 24, 26]
+      "Charmdi": 0.2,
+      "Wind Boost": 40,
+      "Null Distress": 41,
+      "Me Patra": 42,
+      "Magarula": 44
+    }
   },
   "Cu Chulainn": {
-    "heart": "Fetching Hero's Comb",
-    "heartlvl": 44,
-    "inherits": "fireA",
-    "lvl": 40,
-    "race": "Tower",
-    "resists": "--s-wsr---",
+    "arcana": "Tower",
+    "level": 40,
+    "stats": [
+      33,
+      28,
+      30,
+      23,
+      25
+    ],
     "skills": {
       "Torrent Shot": 0.1,
       "Matarukaja": 0.2,
-      "Dekaja": 0.3,
-      "Charge": 41,
-      "Fast Heal": 42,
-      "Magarula": 44,
-      "Myriad Arrows": 45,
-      "Shift Amp": 46
-    },
-    "stats": [33, 29, 24, 26, 21]
+      "Mazionga": 41,
+      "Power Charge": 43,
+      "Survive Dark": 44,
+      "Vile Assault": 45,
+      "Shadow Hound": 3883
+    }
   },
   "Cybele": {
-    "heart": "Earth Goddess Ring",
-    "heartlvl": 74,
-    "inherits": "windA",
-    "lvl": 67,
-    "race": "Lovers",
-    "resists": "---snw-s--",
+    "arcana": "Lovers",
+    "level": 68,
+    "stats": [
+      49,
+      55,
+      40,
+      42,
+      50
+    ],
     "skills": {
-      "Makougaon": 0.1,
-      "Garudyne": 0.2,
-      "Diarahan": 0.3,
-      "Mediarahan": 68,
-      "Auto Maraku": 69,
-      "Light Amp": 71,
-      "Spell Master": 73
-    },
-    "stats": [39, 54, 40, 42, 45]
+      "Samarecarm": 0.1,
+      "Auto-Maraku": 0.2,
+      "Myriad Arrows": 0.3,
+      "Megidola": 70,
+      "Weapons Master": 73,
+      "Spell Master": 75
+    }
   },
   "Daisoujou": {
-    "inherits": "almighty",
-    "lvl": 59,
-    "race": "Hierophant",
-    "resists": "-------nw-",
+    "arcana": "Hierophant",
+    "level": 53,
+    "stats": [
+      32,
+      44,
+      36,
+      29,
+      38
+    ],
     "skills": {
       "Hamaon": 0.1,
       "Diarahan": 0.2,
       "Growth 3": 0.3,
-      "Samsara": 60,
-      "Invigorate 3": 61,
-      "Hama Boost": 63,
-      "Null Dark": 65
-    },
-    "stats": [33, 49, 38, 31, 42]
-  },
-  "Dakini": {
-    "inherits": "slashB",
-    "lvl": 38,
-    "race": "Hermit",
-    "resists": "-s-sw-----",
-    "skills": {
-      "Herculean Strike": 0.1,
-      "Counterstrike": 0.2,
-      "Auto Tarukaja": 39,
-      "Getsu-ei": 40,
-      "Strike Boost": 41,
-      "High Counter": 43
-    },
-    "stats": [36, 22, 16, 29, 18]
+      "Samsara": 56,
+      "Null Dark": 58,
+      "Hama Boost": 59
+    }
   },
   "Decarabia": {
-    "inherits": "almighty",
-    "lvl": 54,
-    "race": "Fool",
-    "resists": "w---------",
+    "arcana": "Fool",
+    "level": 50,
+    "stats": [
+      28,
+      39,
+      29,
+      29,
+      32
+    ],
     "skills": {
-      "Megido": 0.1,
-      "Tetrakarn": 0.2,
-      "Invigorate 2": 0.3,
-      "Agidyne": 55,
-      "Fast Heal": 56,
-      "Megidola": 58,
-      "Null Slash": 60,
-      "Best Friends": 5217
-    },
-    "stats": [35, 35, 35, 35, 35]
+      "Stagnant Air": 0.1,
+      "Matarunda": 0.2,
+      "Megido": 0.3,
+      "Evade Ice": 52,
+      "Marakukaja": 54,
+      "Resist Ice": 56,
+      "Best Friends": 3883
+    }
   },
   "Dionysus": {
-    "inherits": "elecA",
-    "lvl": 49,
-    "race": "Moon",
-    "resists": "-s---rw---",
+    "arcana": "Moon",
+    "level": 48,
+    "stats": [
+      30,
+      41,
+      26,
+      30,
+      36
+    ],
     "skills": {
-      "Ziodyne": 0.1,
-      "Marakukaja": 0.2,
-      "Makarakarn": 0.3,
-      "Resist Slash": 50,
-      "Mazionga": 51,
-      "Heat Wave": 52,
-      "Regenerate 3": 54
-    },
-    "stats": [30, 38, 26, 30, 33]
+      "Mazionga": 0.1,
+      "Mind Charge": 0.2,
+      "Ziodyne": 50,
+      "Heat Wave": 51,
+      "Resist Wind": 52,
+      "Regenerate 2": 53
+    }
   },
   "Dominion": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 46,
-    "inherits": "windL",
-    "lvl": 42,
-    "race": "Justice",
-    "resists": "-----wsnw-",
+    "arcana": "Justice",
+    "level": 42,
+    "stats": [
+      28,
+      33,
+      24,
+      25,
+      23
+    ],
     "skills": {
-      "Makouga": 0.1,
-      "Hamaon": 0.2,
-      "Infuriate": 0.3,
-      "Hama Boost": 43,
-      "Samarecarm": 44,
-      "Light Boost": 46,
-      "Kougaon": 47
-    },
-    "stats": [25, 32, 24, 26, 26]
+      "Hamaon": 0.1,
+      "Infuriate": 0.2,
+      "Endure Dark": 45,
+      "Hama Boost": 46,
+      "Mazionga": 47,
+      "Resist Dark": 49
+    }
   },
   "Eligor": {
-    "inherits": "windA",
-    "lvl": 31,
-    "race": "Tower",
-    "resists": "--sn-w--s-",
+    "arcana": "Tower",
+    "level": 31,
+    "stats": [
+      28,
+      19,
+      23,
+      22,
+      18
+    ],
     "skills": {
-      "Revolution": 0.1,
-      "Torrent Shot": 0.2,
-      "Cruel Attack": 32,
-      "Pierce Boost": 33,
-      "Maragion": 35,
-      "Life Aid": 36
-    },
-    "stats": [26, 21, 24, 20, 15]
+      "Twin Shot": 0.1,
+      "Revolution": 0.2,
+      "Maragion": 32,
+      "Dodge Ice": 33,
+      "Cruel Attack": 34,
+      "Cool Breeze": 37
+    }
   },
   "Flauros": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 37,
-    "inherits": "fireA",
-    "lvl": 33,
-    "race": "Hierophant",
-    "resists": "---nw-s---",
+    "arcana": "Hierophant",
+    "level": 33,
+    "stats": [
+      25,
+      25,
+      20,
+      18,
+      18
+    ],
     "skills": {
       "Agilao": 0.1,
-      "Swift Strike": 0.2,
-      "Auto Sukukaja": 0.3,
-      "Crit Rate Boost": 34,
-      "Apt Pupil": 35,
-      "Herculean Strike": 36,
+      "Gale Slash": 0.2,
+      "Auto-Sukukaja": 34,
+      "Sharp Student": 35,
+      "Mighty Swing": 37,
       "Evade Wind": 38
-    },
-    "stats": [27, 25, 20, 18, 16]
+    }
   },
   "Forneus": {
-    "inherits": "windA",
-    "lvl": 7,
-    "race": "Emperor",
-    "resists": "----sw----",
+    "arcana": "Emperor",
+    "level": 7,
+    "stats": [
+      5,
+      5,
+      8,
+      6,
+      4
+    ],
     "skills": {
       "Bufu": 0.1,
       "Bash": 0.2,
       "Tarukaja": 0.3,
-      "Single Shot": 9,
-      "Sharp Student": 10,
-      "Dodge Ice": 12,
-      "Best Friends": 5217
-    },
-    "stats": [5, 6, 7, 6, 4]
+      "Auto-Sukukaja": 9,
+      "Poisma": 10,
+      "Posumudi": 11,
+      "Best Friends": 3883
+    }
   },
   "Fortuna": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 17,
-    "inherits": "lidarkA",
-    "lvl": 15,
-    "race": "Fortune",
-    "resists": "---n-wn---",
+    "arcana": "Fortune",
+    "level": 17,
+    "stats": [
+      9,
+      14,
+      10,
+      15,
+      10
+    ],
     "skills": {
       "Garu": 0.1,
       "Bufu": 0.2,
-      "Patra": 0.3,
-      "Magaru": 16,
-      "Dodge Wind": 17,
-      "Rakukaja": 18,
-      "Wind Boost": 20
-    },
-    "stats": [7, 17, 10, 13, 11]
-  },
-  "Futsunushi": {
-    "heart": "Sword God Steel",
-    "heartlvl": 80,
-    "inherits": "slashB",
-    "lvl": 74,
-    "race": "Magician",
-    "resists": "ns---s--w-",
-    "skills": {
-      "Vorpal Blade": 0.1,
-      "Bloody Charge": 0.2,
-      "Apt Pupil": 0.3,
-      "Matarukaja": 75,
-      "Sharp Student": 76,
-      "Brave Blade": 78,
-      "Unshaken Will": 81
-    },
-    "stats": [62, 49, 50, 42, 35]
+      "Dodge Wind": 0.3,
+      "Magaru": 18,
+      "Rakukaja": 19,
+      "Wind Boost": 22
+    }
   },
   "Gabriel": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 67,
-    "inherits": "elecL",
-    "lvl": 62,
-    "race": "Empress",
-    "resists": "----d-wnw-",
+    "arcana": "Empress",
+    "level": 69,
+    "stats": [
+      43,
+      49,
+      35,
+      45,
+      42
+    ],
     "skills": {
-      "Mabufudyne": 0.1,
-      "Ziodyne": 0.2,
-      "Diarahan": 0.3,
-      "Divine Judgment": 64,
-      "Evade Wind": 65,
-      "Ice Amp": 66,
-      "Diamond Dust": 68
-    },
-    "stats": [40, 52, 35, 41, 37]
+      "Bufudyne": 0.1,
+      "Mahamaon": 0.2,
+      "Hama Boost": 0.3,
+      "Mabufudyne": 71,
+      "Repel Dark": 73,
+      "Myriad Arrows": 75
+    }
   },
   "Ganesha": {
-    "inherits": "lightA",
-    "lvl": 51,
-    "race": "Star",
-    "resists": "--n---d-w-",
+    "arcana": "Star",
+    "level": 58,
+    "stats": [
+      49,
+      35,
+      39,
+      32,
+      40
+    ],
     "skills": {
       "Deathbound": 0.1,
-      "Garudyne": 0.2,
-      "Revolution": 0.3,
-      "Gigantic Fist": 52,
-      "Charge": 54,
-      "Endure": 55,
-      "Repel Pierce": 57
-    },
-    "stats": [39, 31, 34, 20, 40]
+      "Power Charge": 0.2,
+      "Alertness": 0.3,
+      "Magarudyne": 61,
+      "High Counter": 62,
+      "Wind Amp": 63,
+      "Endure": 64
+    }
   },
   "Ganga": {
-    "inherits": "iceA",
-    "lvl": 41,
-    "race": "Priestess",
-    "resists": "--sws--sw-",
-    "skills": {
-      "Tentarafoo": 0.1,
-      "Confuse Boost": 0.2,
-      "Media": 0.3,
-      "Neuro Slash": 42,
-      "Bufula": 43,
-      "Diarama": 44,
-      "Endure Dark": 46
-    },
-    "stats": [24, 30, 26, 22, 28]
-  },
-  "Garuda": {
-    "inherits": "windL",
-    "lvl": 64,
-    "race": "Star",
-    "resists": "ss-swwsnw-",
-    "skills": {
-      "Garudyne": 0.1,
-      "Tentarafoo": 0.2,
-      "Masukukaja": 0.3,
-      "Amrita Shower": 65,
-      "Magarudyne": 67,
-      "Panta Rhei": 70
-    },
-    "stats": [45, 41, 35, 51, 36]
-  },
-  "Genbu": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 33,
-    "inherits": "windA",
-    "lvl": 30,
-    "race": "Temperance",
-    "resists": "----nw----",
-    "skills": {
-      "Dekunda": 0.1,
-      "Auto Rakukaja": 0.2,
-      "Null Confuse": 0.3,
-      "Resist Strike": 31,
-      "Null Rage": 32,
-      "Anti-Ice Master": 33,
-      "Resist Wind": 35
-    },
-    "stats": [18, 17, 30, 12, 20]
-  },
-  "Girimekhala": {
-    "inherits": "elecD",
-    "lvl": 39,
-    "race": "Moon",
-    "resists": "r-r---ww--",
-    "skills": {
-      "Cruel Attack": 0.1,
-      "Mudoon": 0.2,
-      "Marakunda": 0.3,
-      "Virus Breath": 40,
-      "Heat Wave": 42,
-      "Mamudoon": 44,
-      "Repel Slash": 46
-    },
-    "stats": [36, 26, 28, 20, 20]
-  },
-  "Goemon": {
-    "inherits": "iceA",
-    "lvl": 27,
-    "race": "Emperor",
-    "resists": "---ws-----",
+    "arcana": "Priestess",
+    "level": 35,
+    "stats": [
+      18,
+      28,
+      21,
+      22,
+      23
+    ],
     "skills": {
       "Bufula": 0.1,
-      "Getsu-ei": 0.2,
-      "Ice Driver": 0.3,
-      "Shift Boost": 28,
-      "Counterstrike": 29,
-      "Blade of Fury": 31,
-      "Mabufula": 32
-    },
-    "stats": [24, 16, 18, 17, 13]
+      "Charmdi": 0.2,
+      "Media": 0.3,
+      "Tentarafoo": 37,
+      "Diarama": 39,
+      "Panic Boost": 40
+    }
   },
-  "Gurulu": {
-    "inherits": "darkA",
-    "lvl": 14,
-    "race": "Moon",
-    "resists": "---w--swn-",
+  "Garuda": {
+    "arcana": "Star",
+    "level": 65,
+    "stats": [
+      47,
+      42,
+      35,
+      53,
+      41
+    ],
     "skills": {
-      "Eiha": 0.1,
-      "Power Slash": 0.2,
-      "Growth 1": 0.3,
-      "Raging Tiger": 15,
-      "Auto Sukukaja": 16,
-      "Poison Mist": 18,
-      "Poison Boost": 19
-    },
-    "stats": [13, 8, 10, 12, 6]
+      "Magarudyne": 0.1,
+      "Mediarama": 0.2,
+      "Arrow Rain": 0.3,
+      "Amrita": 68,
+      "High Counter": 69,
+      "Repel Wind": 70,
+      "Raktapaksha": 3883
+    }
+  },
+  "Genbu": {
+    "arcana": "Temperance",
+    "level": 29,
+    "stats": [
+      19,
+      22,
+      26,
+      12,
+      22
+    ],
+    "skills": {
+      "Bufula": 0.1,
+      "Auto-Rakukaja": 0.2,
+      "Swift Strike": 30,
+      "Me Patra": 31,
+      "Dekunda": 32,
+      "Resist Strike": 34
+    }
+  },
+  "Girimehkala": {
+    "arcana": "Moon",
+    "level": 42,
+    "stats": [
+      32,
+      30,
+      24,
+      28,
+      29
+    ],
+    "skills": {
+      "Mighty Swing": 0.1,
+      "Marakunda": 0.2,
+      "Virus Breath": 43,
+      "Mamudoon": 45,
+      "Survive Light": 46,
+      "Endure Light": 48
+    }
+  },
+  "Gurr": {
+    "arcana": "Moon",
+    "level": 15,
+    "stats": [
+      13,
+      9,
+      12,
+      13,
+      9
+    ],
+    "skills": {
+      "Power Slash": 0.1,
+      "Auto-Tarukaja": 0.2,
+      "Growth 1": 17,
+      "Raging Tiger": 18,
+      "Dodge Strike": 19,
+      "Poison Mist": 20,
+      "Poison Boost": 21,
+      "Raktapaksha": 3883
+    }
   },
   "Hanuman": {
-    "inherits": "elecA",
-    "lvl": 36,
-    "race": "Strength",
-    "resists": "s--s--w---",
+    "arcana": "Strength",
+    "level": 37,
+    "stats": [
+      26,
+      23,
+      20,
+      22,
+      27
+    ],
     "skills": {
       "Getsu-ei": 0.1,
-      "Blade of Fury": 0.2,
-      "Shift Boost": 0.3,
-      "Recarm": 37,
+      "Counter": 0.2,
+      "Recarm": 0.3,
       "Fatal End": 38,
-      "Evade Slash": 40,
-      "Endure": 41
-    },
-    "stats": [30, 17, 24, 22, 22]
+      "Evade Slash": 41,
+      "Blade of Fury": 43,
+      "Resist Slash": 44
+    }
   },
   "Hariti": {
-    "inherits": "recovery",
-    "lvl": 48,
-    "race": "Empress",
-    "resists": "----dw-d--",
+    "arcana": "Empress",
+    "level": 62,
+    "stats": [
+      38,
+      44,
+      34,
+      39,
+      38
+    ],
     "skills": {
-      "Mediarama": 0.1,
-      "Samarecarm": 0.2,
-      "Me Patra": 0.3,
-      "Diarahan": 50,
-      "Amrita Shower": 52,
-      "Invigorate 3": 54
-    },
-    "stats": [24, 42, 31, 28, 33]
+      "Diarahan": 0.1,
+      "Mediarahan": 0.2,
+      "Bufudyne": 0.3,
+      "Samarecarm": 64,
+      "Poison Arrow": 65,
+      "Auto-Masuku": 67
+    }
   },
-  "Hecate": {
-    "inherits": "fireA",
-    "lvl": 42,
-    "race": "Lovers",
-    "resists": "---nws----",
+  "Hokuto Seikun": {
+    "arcana": "Hierophant",
+    "level": 47,
+    "stats": [
+      28,
+      35,
+      35,
+      23,
+      27
+    ],
     "skills": {
-      "Blazing Hell": 0.1,
-      "Sexy Dance": 0.2,
-      "Matarunda": 0.3,
-      "Stagnant Air": 43,
-      "Agidyne": 44,
-      "Concentrate": 46,
-      "Drain Fire": 48
-    },
-    "stats": [22, 35, 24, 26, 26]
-  },
-  "Hecatoncheires": {
-    "inherits": "darkA",
-    "lvl": 47,
-    "race": "Hanged",
-    "resists": "-ss-ss-ws-",
-    "skills": {
-      "Vile Assault": 0.1,
-      "Evade Strike": 0.2,
-      "Regenerate 2": 0.3,
-      "Endure": 48,
-      "Recarmdra": 49,
-      "Heat Wave": 51,
-      "Auto Maraku": 53
-    },
-    "stats": [37, 24, 48, 20, 25]
-  },
-  "Helel": {
-    "inherits": "fireL",
-    "lvl": 88,
-    "race": "Star",
-    "resists": "sss-w--dd-",
-    "skills": {
-      "Makougaon": 0.1,
-      "Heat Riser": 0.2,
-      "Salvation": 0.3,
-      "Morning Star": 90,
-      "Life Aid": 92,
-      "Spell Master": 94,
-      "Almighty Boost": 95,
-      "Armageddon": 5217
-    },
-    "stats": [63, 63, 62, 58, 58]
-  },
-  "Hell Biker": {
-    "heart": "Hell's Muffler",
-    "heartlvl": 70,
-    "inherits": "darkA",
-    "lvl": 65,
-    "race": "Hanged",
-    "resists": "---r--rw--",
-    "skills": {
-      "Maragidyne": 0.1,
-      "Eigaon": 0.2,
-      "Life Aid": 0.3,
-      "Bloody Charge": 66,
-      "Maeigaon": 68,
-      "Evade Light": 70,
-      "Enduring Soul": 71
-    },
-    "stats": [48, 51, 50, 40, 22]
-  },
-  "High Pixie": {
-    "inherits": "elecA",
-    "lvl": 20,
-    "race": "Priestess",
-    "resists": "----n-w---",
-    "skills": {
-      "Arrow Rain": 0.1,
-      "Mabufu": 0.2,
-      "Media": 0.3,
-      "Bufula": 22,
-      "Tarukaja": 23,
-      "Dodge Wind": 25
-    },
-    "stats": [11, 20, 10, 13, 13]
+      "Zionga": 0.1,
+      "Dodge Slash": 0.2,
+      "Poison Arrow": 49,
+      "Elec Boost": 50,
+      "Null Shock": 51,
+      "Elec Break": 52,
+      "Apt Pupil": 53
+    }
   },
   "Horus": {
-    "heart": "Eye of Wadjet",
-    "heartlvl": 72,
-    "inherits": "lightA",
-    "lvl": 67,
-    "race": "Sun",
-    "resists": "----sn-rw-",
+    "arcana": "Sun",
+    "level": 63,
+    "stats": [
+      49,
+      50,
+      33,
+      44,
+      39
+    ],
     "skills": {
       "Mahamaon": 0.1,
-      "Growth 3": 0.2,
-      "Auto Masuku": 0.3,
-      "Samarecarm": 68,
-      "Kougaon": 70,
-      "Amrita Shower": 71,
-      "Evade Dark": 73
-    },
-    "stats": [42, 53, 34, 48, 40]
-  },
-  "Houou": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 75,
-    "inherits": "windL",
-    "lvl": 70,
-    "race": "Star",
-    "resists": "--wdswnd--",
-    "skills": {
-      "Maragidyne": 0.1,
-      "Samarecarm": 0.2,
-      "Mediarama": 0.3,
-      "Divine Grace": 71,
-      "Regenerate 3": 72,
-      "Null Pierce": 74,
-      "Salvation": 77
-    },
-    "stats": [35, 57, 39, 54, 41]
-  },
-  "Hua Po": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 22,
-    "inherits": "fireA",
-    "lvl": 19,
-    "race": "Magician",
-    "resists": "---nw---n-",
-    "skills": {
-      "Maragi": 0.1,
-      "Baisudi": 0.2,
-      "Rakunda": 0.3,
-      "Agilao": 20,
-      "Resist Freeze": 21,
-      "Fire Boost": 23
-    },
-    "stats": [8, 21, 13, 17, 11]
+      "Mediarahan": 0.2,
+      "Growth 3": 0.3,
+      "Auto-Masuku": 65,
+      "Bufudyne": 67,
+      "Repel Dark": 68
+    }
   },
   "Incubus": {
-    "inherits": "ailment",
-    "lvl": 37,
-    "race": "Devil",
-    "resists": "w--n---wn-",
+    "arcana": "Devil",
+    "level": 34,
+    "stats": [
+      21,
+      30,
+      20,
+      21,
+      25
+    ],
     "skills": {
       "Life Drain": 0.1,
-      "Evil Touch": 0.2,
-      "Eiga": 0.3,
-      "Stagnant Air": 38,
-      "Spirit Drain": 39,
-      "Maragion": 40,
-      "Drain Ability": 42
-    },
-    "stats": [22, 30, 20, 21, 28]
+      "Evil Smile": 0.2,
+      "Agilao": 0.3,
+      "Maragion": 35,
+      "Stagnant Air": 36,
+      "Spirit Drain": 37,
+      "Fire Break": 38,
+      "Dreamfest": 3883
+    }
   },
   "Inugami": {
-    "inherits": "ailment",
-    "lvl": 10,
-    "race": "Hanged",
-    "resists": "---n--w-s-",
+    "arcana": "Hanged",
+    "level": 10,
+    "stats": [
+      6,
+      11,
+      10,
+      6,
+      4
+    ],
     "skills": {
       "Poisma": 0.1,
-      "Foul Breath": 0.2,
+      "Single Shot": 0.2,
+      "Zio": 0.3,
       "Poison Boost": 11,
-      "Maragi": 12,
-      "Media": 14
-    },
-    "stats": [4, 8, 7, 7, 11]
-  },
-  "Izanagi": {
-    "inherits": "elecA",
-    "lvl": 46,
-    "race": "Fool",
-    "resists": "-----sw-n-",
-    "skills": {
-      "Cross Slash": 0.1,
-      "Ziodyne": 0.2,
-      "Marakukaja": 0.3,
-      "Matarukaja": 47,
-      "Blade of Fury": 48,
-      "Evade Slash": 50,
-      "Soul Shift": 52
-    },
-    "stats": [31, 30, 25, 31, 28]
+      "Media": 13,
+      "Foul Breath": 14
+    }
   },
   "Jack Frost": {
-    "heart": "Jacktite",
-    "heartlvl": 11,
-    "inherits": "iceA",
-    "lvl": 8,
-    "race": "Magician",
-    "resists": "---wn-----",
+    "arcana": "Magician",
+    "level": 8,
+    "stats": [
+      5,
+      8,
+      8,
+      4,
+      6
+    ],
     "skills": {
       "Bufu": 0.1,
       "Pulinpa": 0.2,
-      "Mabufu": 10,
-      "Sonic Punch": 11,
-      "Freeze Boost": 12,
-      "Ice Boost": 13,
-      "Jack Brothers": 5217
-    },
-    "stats": [5, 9, 8, 6, 4]
-  },
-  "Jack-o'-Lantern": {
-    "heart": "Jacktite",
-    "heartlvl": 17,
-    "inherits": "fireA",
-    "lvl": 15,
-    "race": "Magician",
-    "resists": "---nw-----",
-    "skills": {
-      "Agi": 0.1,
-      "Maragi": 0.2,
-      "Provoke": 0.3,
-      "Rage Boost": 17,
-      "Dodge Ice": 19,
-      "Agilao": 21,
-      "Jack Brothers": 5217
-    },
-    "stats": [8, 15, 9, 9, 11]
+      "Re Patra": 0.3,
+      "Sonic Punch": 10,
+      "Ice Boost": 11,
+      "Mabufu": 13,
+      "Jack Brothers": 3883
+    }
   },
   "Jatayu": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 60,
-    "inherits": "slashA",
-    "lvl": 55,
-    "race": "Sun",
-    "resists": "--wsswds--",
+    "arcana": "Sun",
+    "level": 55,
+    "stats": [
+      35,
+      40,
+      31,
+      44,
+      39
+    ],
     "skills": {
       "Garudyne": 0.1,
-      "Magarula": 0.2,
-      "Growth 3": 0.3,
-      "Masukunda": 56,
-      "Evade Pierce": 58,
-      "Amrita Shower": 59,
-      "Magarudyne": 61
-    },
-    "stats": [33, 40, 30, 50, 28]
+      "Growth 3": 0.2,
+      "Null Panic": 0.3,
+      "Amrita": 57,
+      "Null Elec": 59,
+      "Magarudyne": 60
+    }
   },
   "Jikokuten": {
-    "inherits": "lightB",
-    "lvl": 29,
-    "race": "Strength",
-    "resists": "s--wr--s--",
+    "arcana": "Strength",
+    "level": 29,
+    "stats": [
+      24,
+      19,
+      19,
+      14,
+      18
+    ],
     "skills": {
       "Zan-ei": 0.1,
-      "Auto Sukukaja": 0.2,
-      "Crit Rate Boost": 0.3,
-      "Getsu-ei": 31,
-      "Revolution": 32,
-      "Slash Boost": 34,
-      "Endure Dark": 35
-    },
-    "stats": [27, 13, 25, 12, 17]
-  },
-  "Johanna": {
-    "inherits": "windA",
-    "lvl": 28,
-    "race": "Priestess",
-    "resists": "-s---w----",
-    "skills": {
-      "Herculean Strike": 0.1,
-      "Diarama": 0.2,
-      "Strike Driver": 0.3,
-      "Marakukaja": 29,
-      "Dekunda": 30,
-      "Megido": 32,
-      "Gigantic Fist": 33
-    },
-    "stats": [19, 19, 17, 21, 15]
-  },
-  "Kaguya": {
-    "inherits": "iceA",
-    "lvl": 34,
-    "race": "Moon",
-    "resists": "---w--snn-",
-    "skills": {
-      "Shining Arrows": 0.1,
-      "Mediarama": 0.2,
-      "Divine Grace": 0.3,
-      "Multi-Target Boost": 35,
-      "High Counter": 37,
-      "Amrita Shower": 38,
-      "Diarahan": 39
-    },
-    "stats": [19, 32, 28, 19, 11]
+      "Sukunda": 0.2,
+      "Auto-Sukukaja": 0.3,
+      "Revolution": 31,
+      "Survive Dark": 32,
+      "Evade Slash": 34,
+      "Endure Dark": 36
+    }
   },
   "Kaiwan": {
-    "inherits": "darkA",
-    "lvl": 42,
-    "race": "Star",
-    "resists": "--wss---s-",
+    "arcana": "Star",
+    "level": 49,
+    "stats": [
+      35,
+      39,
+      33,
+      26,
+      33
+    ],
     "skills": {
       "Virus Breath": 0.1,
-      "Eerie Sound": 0.2,
-      "Spirit Drain": 0.3,
-      "Vile Assault": 43,
-      "Evil Smile": 44,
-      "Invigorate 2": 46,
-      "Evade Pierce": 47
-    },
-    "stats": [23, 28, 25, 25, 32]
+      "Spirit Drain": 0.2,
+      "Evade Pierce": 0.3,
+      "Invigorate 2": 51,
+      "Vile Assault": 53,
+      "Null Light": 54,
+      "Ailment Boost": 55
+    }
   },
   "Kali": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 68,
-    "inherits": "slashB",
-    "lvl": 63,
-    "race": "Strength",
-    "resists": "r--s--w---",
+    "arcana": "Strength",
+    "level": 55,
+    "stats": [
+      42,
+      30,
+      33,
+      36,
+      31
+    ],
     "skills": {
-      "Heat Wave": 0.1,
-      "Deathbound": 0.2,
+      "Blade of Fury": 0.1,
+      "Apt Pupil": 0.2,
       "Marakunda": 0.3,
-      "Brave Blade": 64,
-      "Charge": 66,
-      "High Counter": 67,
-      "Vorpal Blade": 70
-    },
-    "stats": [53, 30, 34, 48, 34]
-  },
-  "Kamu Susano-o": {
-    "inherits": "iceA",
-    "lvl": 47,
-    "race": "Emperor",
-    "resists": "---wn-s---",
-    "skills": {
-      "Ice Age": 0.1,
-      "Tempest Slash": 0.2,
-      "Masukukaja": 0.3,
-      "Bufudyne": 48,
-      "High Counter": 49,
-      "Shift Amp": 51,
-      "Vorpal Blade": 53
-    },
-    "stats": [40, 25, 30, 30, 23]
+      "Deathbound": 57,
+      "Revolution": 59,
+      "High Counter": 60
+    }
   },
   "Kikuri-Hime": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 66,
-    "inherits": "lidarkA",
-    "lvl": 61,
-    "race": "Priestess",
-    "resists": "---wn-ss--",
+    "arcana": "Priestess",
+    "level": 53,
+    "stats": [
+      29,
+      45,
+      28,
+      30,
+      34
+    ],
     "skills": {
-      "Bufudyne": 0.1,
-      "Mabufula": 0.2,
-      "Mediarama": 0.3,
-      "Amrita Shower": 62,
-      "Marakukaja": 63,
-      "Samarecarm": 65,
-      "Mediarahan": 67
-    },
-    "stats": [29, 50, 34, 41, 39]
+      "Mediarama": 0.1,
+      "Invigorate 1": 0.2,
+      "Maragion": 0.3,
+      "Cool Breeze": 55,
+      "Diarahan": 56,
+      "Resist Ice": 58,
+      "Fire Amp": 59
+    }
   },
   "King Frost": {
-    "inherits": "iceA",
-    "lvl": 34,
-    "race": "Emperor",
-    "resists": "---wd-----",
+    "arcana": "Emperor",
+    "level": 30,
+    "stats": [
+      20,
+      23,
+      22,
+      15,
+      24
+    ],
     "skills": {
-      "Bufula": 0.1,
-      "Freeze Boost": 0.2,
-      "Rakukaja": 0.3,
-      "Mabufula": 35,
-      "Ice Break": 36,
-      "Marakukaja": 37,
-      "Null Ice": 39,
-      "King and I": 5217
-    },
-    "stats": [18, 31, 26, 14, 20]
+      "Mabufu": 0.1,
+      "Bufula": 0.2,
+      "Dodge Fire": 0.3,
+      "Ice Break": 32,
+      "Growth 1": 33,
+      "Mabufula": 36,
+      "King and I": 3883
+    }
+  },
+  "Kingu": {
+    "arcana": "Emperor",
+    "level": 46,
+    "stats": [
+      31,
+      37,
+      30,
+      23,
+      24
+    ],
+    "skills": {
+      "Mediarama": 0.1,
+      "Evade Fire": 0.2,
+      "Virus Breath": 48,
+      "Null Poison": 49,
+      "Heat Wave": 50,
+      "Endure": 52
+    }
   },
   "Kohryu": {
-    "heart": "God Dragon Whiskers",
-    "heartlvl": 78,
-    "inherits": "lightA",
-    "lvl": 71,
-    "race": "Hierophant",
-    "resists": "-----r-n--",
+    "arcana": "Hierophant",
+    "level": 66,
+    "stats": [
+      49,
+      51,
+      58,
+      30,
+      41
+    ],
     "skills": {
-      "Makougaon": 0.1,
+      "Samarecarm": 0.1,
       "Mediarahan": 0.2,
-      "Invigorate 3": 0.3,
-      "Concentrate": 73,
-      "Makarakarn": 74,
-      "Tetrakarn": 75,
-      "Spell Master": 77
-    },
-    "stats": [44, 53, 58, 31, 40]
+      "Weary Thrust": 0.3,
+      "Invigorate 3": 68,
+      "Makarakarn": 70,
+      "Null Strike": 71,
+      "Null Pierce": 73
+    }
   },
   "Koumokuten": {
-    "inherits": "windB",
-    "lvl": 52,
-    "race": "Chariot",
-    "resists": "-ss--wn---",
+    "arcana": "Chariot",
+    "level": 43,
+    "stats": [
+      35,
+      24,
+      31,
+      21,
+      25
+    ],
     "skills": {
-      "Herculean Strike": 0.1,
-      "Magarula": 0.2,
-      "Masukukaja": 0.3,
-      "Gigantic Fist": 53,
-      "Auto Tarukaja": 54,
-      "Vile Assault": 56,
-      "Enduring Soul": 57
-    },
-    "stats": [40, 35, 40, 25, 29]
-  },
-  "Kumbhanda": {
-    "inherits": "darkA",
-    "lvl": 61,
-    "race": "Hermit",
-    "resists": "---d--nws-",
-    "skills": {
-      "Garudyne": 0.1,
-      "Poison Arrow": 0.2,
-      "Poison Boost": 0.3,
-      "Dekunda": 62,
-      "Myriad Arrows": 64,
-      "Magarudyne": 65,
-      "Insta-Heal": 67
-    },
-    "stats": [48, 44, 39, 45, 20]
+      "Swift Strike": 0.1,
+      "Cruel Attack": 0.2,
+      "Dekaja": 0.3,
+      "Counterstrike": 46,
+      "Gigantic Fist": 47,
+      "Regenerate 1": 48
+    }
   },
   "Kurama Tengu": {
-    "inherits": "windA",
-    "lvl": 46,
-    "race": "Hermit",
-    "resists": "-----wd-s-",
+    "arcana": "Hermit",
+    "level": 44,
+    "stats": [
+      27,
+      29,
+      30,
+      35,
+      18
+    ],
     "skills": {
-      "Magarula": 0.1,
+      "Tentarafoo": 0.1,
       "Masukunda": 0.2,
-      "Dodge Pierce": 0.3,
-      "Tentarafoo": 47,
-      "Garudyne": 49,
-      "Null Dizzy": 51
-    },
-    "stats": [26, 32, 25, 37, 25]
+      "Growth 1": 0.3,
+      "Growth 2": 46,
+      "Cruel Attack": 48,
+      "Resist Elec": 50
+    }
   },
-  "Kushi Mitama": {
-    "inherits": "iceA",
-    "lvl": 28,
-    "race": "Fortune",
-    "resists": "---w-sn---",
+  "Kusi Mitama": {
+    "arcana": "Fortune",
+    "level": 29,
+    "stats": [
+      16,
+      23,
+      20,
+      11,
+      24
+    ],
+    "skills": {
+      "Magaru": 0.1,
+      "Garula": 0.2,
+      "Re Patra": 0.3,
+      "Auto-Rakukaja": 30,
+      "Recarm": 31,
+      "Wind Boost": 34
+    }
+  },
+  "Lachesis": {
+    "arcana": "Fortune",
+    "level": 45,
+    "stats": [
+      26,
+      36,
+      19,
+      31,
+      30
+    ],
     "skills": {
       "Recarm": 0.1,
       "Garula": 0.2,
-      "Magaru": 0.3,
-      "Wind Break": 29,
-      "Regenerate 2": 30,
-      "Magarula": 32,
-      "Marakunda": 33
-    },
-    "stats": [16, 22, 18, 13, 22]
+      "Masukukaja": 0.3,
+      "Dodge Elec": 47,
+      "Magarula": 50,
+      "Evade Elec": 51
+    }
   },
-  "Lachesis": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 48,
-    "inherits": "windA",
-    "lvl": 44,
-    "race": "Fortune",
-    "resists": "----swn---",
+  "Laksmi": {
+    "arcana": "Empress",
+    "level": 57,
+    "stats": [
+      31,
+      45,
+      32,
+      33,
+      37
+    ],
     "skills": {
-      "Magarula": 0.1,
-      "Masukukaja": 0.2,
-      "Makarakarn": 0.3,
-      "Soul Chain": 45,
-      "Mediarama": 46,
-      "Marakunda": 47,
-      "Evade Elec": 49
-    },
-    "stats": [22, 37, 23, 30, 29]
-  },
-  "Lakshmi": {
-    "heart": "Goddess Water Lily",
-    "heartlvl": 79,
-    "inherits": "iceA",
-    "lvl": 73,
-    "race": "Fortune",
-    "resists": "---wn--n--",
-    "skills": {
-      "Diarahan": 0.1,
-      "Amrita Shower": 0.2,
-      "Bufudyne": 0.3,
-      "Soul Link": 74,
-      "Sexy Dance": 75,
-      "Mabufudyne": 77,
-      "Salvation": 80
-    },
-    "stats": [39, 61, 38, 45, 52]
+      "Mabufula": 0.1,
+      "Bufudyne": 0.2,
+      "Ice Break": 59,
+      "Null Dark": 61,
+      "Resist Fire": 62,
+      "Amrita": 63
+    }
   },
   "Lamia": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 28,
-    "inherits": "pierceA",
-    "lvl": 25,
-    "race": "Hermit",
-    "resists": "-w-n-s--s-",
+    "arcana": "Hermit",
+    "level": 25,
+    "stats": [
+      15,
+      20,
+      12,
+      18,
+      17
+    ],
     "skills": {
-      "Agilao": 0.1,
-      "Poisma": 0.2,
-      "Resist Charm": 0.3,
-      "Poison Boost": 27,
+      "Bewilder": 0.1,
+      "Agilao": 0.2,
+      "Raging Tiger": 0.3,
+      "Mamudo": 26,
       "Poison Mist": 28,
-      "Stagnant Air": 30
-    },
-    "stats": [15, 20, 16, 14, 17]
+      "Stagnant Air": 29
+    }
   },
   "Leanan Sidhe": {
-    "inherits": "recovery",
-    "lvl": 21,
-    "race": "Empress",
-    "resists": "---w--s---",
+    "arcana": "Empress",
+    "level": 33,
+    "stats": [
+      19,
+      29,
+      20,
+      24,
+      22
+    ],
     "skills": {
       "Media": 0.1,
-      "Diarama": 0.2,
-      "Patra": 0.3,
-      "Spirit Drain": 22,
-      "Me Patra": 24,
-      "Marin Karin": 25,
-      "Null Charm": 26
-    },
-    "stats": [12, 22, 13, 15, 14]
+      "Me Patra": 0.2,
+      "Diarama": 0.3,
+      "Sexy Dance": 34,
+      "Charm Boost": 35,
+      "Mediarama": 38
+    }
   },
   "Legion": {
-    "inherits": "almighty",
-    "lvl": 26,
-    "race": "Fool",
-    "resists": "ssws---w--",
+    "arcana": "Fool",
+    "level": 22,
+    "stats": [
+      17,
+      15,
+      18,
+      8,
+      15
+    ],
     "skills": {
       "Assault Dive": 0.1,
       "Pulinpa": 0.2,
       "Rebellion": 0.3,
-      "Null Distress": 27,
-      "Sexy Dance": 28,
-      "Confuse Boost": 30,
-      "Resist Pierce": 31
-    },
-    "stats": [16, 14, 26, 9, 20]
+      "Sexy Dance": 24,
+      "Panic Boost": 25,
+      "Bewilder": 27
+    }
   },
   "Lilim": {
-    "inherits": "elecD",
-    "lvl": 8,
-    "race": "Devil",
-    "resists": "-----s-ws-",
+    "arcana": "Devil",
+    "level": 8,
+    "stats": [
+      4,
+      10,
+      6,
+      6,
+      7
+    ],
     "skills": {
-      "Agi": 0.1,
-      "Zio": 0.2,
-      "Marin Karin": 9,
-      "Life Drain": 11,
-      "Mazio": 13
-    },
-    "stats": [4, 10, 4, 6, 7]
+      "Marin Karin": 0.1,
+      "Agi": 0.2,
+      "Zio": 0.3,
+      "Rakukaja": 9,
+      "Mudo": 11,
+      "Mazio": 12
+    }
   },
   "Lilith": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 70,
-    "inherits": "ailment",
-    "lvl": 65,
-    "race": "Devil",
-    "resists": "---wsd--n-",
+    "arcana": "Devil",
+    "level": 61,
+    "stats": [
+      39,
+      52,
+      38,
+      40,
+      36
+    ],
     "skills": {
-      "Mabufudyne": 0.1,
+      "Sexy Dance": 0.1,
       "Maziodyne": 0.2,
-      "Sexy Dance": 0.3,
-      "Megidola": 66,
-      "Makarakarn": 68,
-      "Demonic Decree": 70,
-      "Drain Wind": 72
-    },
-    "stats": [35, 56, 38, 44, 35]
+      "Makarakarn": 0.3,
+      "Megidola": 63,
+      "Fast Retreat": 64,
+      "Elec Break": 65,
+      "Absorb Wind": 67
+    }
   },
   "Loa": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 36,
-    "inherits": "darkA",
-    "lvl": 33,
-    "race": "Death",
-    "resists": "-----s-ws-",
+    "arcana": "Death",
+    "level": 31,
+    "stats": [
+      21,
+      26,
+      24,
+      19,
+      18
+    ],
     "skills": {
       "Mamudo": 0.1,
       "Life Drain": 0.2,
-      "Maeiha": 0.3,
-      "Survive Light": 34,
-      "Zionga": 36,
-      "Marakunda": 37,
-      "Mudo Boost": 38
-    },
-    "stats": [21, 26, 24, 19, 18]
+      "Tarunda": 0.3,
+      "Survive Light": 33,
+      "Zionga": 34,
+      "Fear Boost": 35,
+      "Mudo Boost": 36
+    }
   },
   "Loki": {
-    "inherits": "almighty",
-    "lvl": 69,
-    "race": "Fool",
-    "resists": "---wn-d-s-",
+    "arcana": "Fool",
+    "level": 58,
+    "stats": [
+      41,
+      47,
+      30,
+      42,
+      21
+    ],
     "skills": {
-      "Agidyne": 0.1,
-      "Bufudyne": 0.2,
-      "Ziodyne": 0.3,
-      "Garudyne": 0.4,
-      "Megidola": 72,
-      "Single-Target Boost": 73,
-      "Soul Shift": 74,
-      "Spell Master": 76,
-      "Trickster": 5217
-    },
-    "stats": [48, 60, 45, 42, 28]
-  },
-  "Loki A": {
-    "inherits": "darkA",
-    "lvl": 60,
-    "race": "Justice",
-    "resists": "---ss--wn-",
-    "skills": {
-      "Rebellion Blade": 0.1,
-      "Eigaon": 0.2,
-      "Resist Ailments": 0.3,
-      "Debilitate": 61,
-      "Evade Light": 62,
-      "Akasha Arts": 64,
-      "Megidolaon": 66
-    },
-    "stats": [44, 42, 33, 38, 33]
+      "Apt Pupil": 0.1,
+      "Garudyne": 0.2,
+      "Bufudyne": 0.3,
+      "Megidola": 60,
+      "Stagnant Air": 61,
+      "Null Fire": 63,
+      "Repel Fire": 65,
+      "Trickster": 3883
+    }
   },
   "Lucifer": {
-    "heart": "Fallen Angel Wing",
-    "heartlvl": 97,
-    "inherits": "darkA",
-    "lvl": 89,
-    "race": "Judgement",
-    "resists": "---d-d--r-",
+    "arcana": "Judgement",
+    "level": 89,
+    "stats": [
+      65,
+      68,
+      64,
+      52,
+      52
+    ],
     "skills": {
-      "Megidolaon": 0.1,
-      "Debilitate": 0.2,
-      "Brave Blade": 0.3,
-      "Inferno": 90,
-      "Panta Rhei": 92,
-      "Diamond Dust": 94,
-      "Resist Phys": 96
-    },
-    "stats": [70, 70, 61, 51, 55]
-  },
-  "Mada": {
-    "inherits": "fireA",
-    "lvl": 57,
-    "race": "Hanged",
-    "resists": "-s-dwswwn-",
-    "skills": {
-      "Gigantic Fist": 0.1,
-      "Agidyne": 0.2,
-      "Endure": 0.3,
-      "Maragidyne": 58,
-      "Vile Assault": 59,
-      "Null Wind": 61,
-      "Amrita Shower": 62,
-      "Strike Amp": 64
-    },
-    "stats": [42, 48, 45, 33, 28]
-  },
-  "Magatsu-Izanagi": {
-    "inherits": "fireA",
-    "lvl": 50,
-    "race": "Tower",
-    "resists": "--s-w--nn-",
-    "skills": {
-      "Magatsu Mandala": 0.1,
-      "Auto Tarukaja": 0.2,
-      "Ghastly Wail": 0.3,
-      "Megidola": 51,
-      "Ailment Boost": 52,
-      "Maziodyne": 54,
-      "Heat Riser": 56
-    },
-    "stats": [42, 39, 36, 28, 17]
-  },
-  "Mara": {
-    "heart": "Mara's Head",
-    "heartlvl": 81,
-    "inherits": "fireA",
-    "lvl": 75,
-    "race": "Tower",
-    "resists": "-d-dw--wd-",
-    "skills": {
-      "Maralagidyne": 0.1,
-      "Myriad Arrows": 0.2,
-      "Spirit Drain": 0.3,
-      "Primal Force": 76,
-      "Charge": 78,
-      "Pierce Amp": 80,
-      "Drain Light": 82
-    },
-    "stats": [60, 50, 50, 48, 39]
+      "Maziodyne": 0.1,
+      "Brave Blade": 0.2,
+      "Makarakarn": 0.3,
+      "Megidolaon": 91,
+      "Spell Master": 93,
+      "Victory Cry": 95
+    }
   },
   "Masakado": {
-    "heart": "Emperor's Sake Cup",
-    "heartlvl": 86,
-    "inherits": "almighty",
-    "lvl": 79,
-    "race": "Tower",
-    "resists": "sss--w-rs-",
+    "arcana": "Tower",
+    "level": 73,
+    "stats": [
+      56,
+      46,
+      52,
+      49,
+      45
+    ],
     "skills": {
       "Tempest Slash": 0.1,
-      "Myriad Arrows": 0.2,
-      "Magarudyne": 0.3,
-      "Debilitate": 81,
-      "Crit Rate Amp": 83,
-      "Arms Master": 84,
-      "Unshaken Will": 86
-    },
-    "stats": [67, 46, 55, 43, 48]
-  },
-  "Matador": {
-    "inherits": "iceD",
-    "lvl": 22,
-    "race": "Strength",
-    "resists": "---w--n-r-",
-    "skills": {
-      "Torrent Shot": 0.1,
-      "Vacuum Slash": 0.2,
-      "Dodge Pierce": 0.3,
-      "Auto Sukukaja": 23,
-      "Dodge Fire": 25,
-      "Dekunda": 26,
-      "Blade of Fury": 28
-    },
-    "stats": [17, 14, 12, 23, 10]
+      "Marakunda": 0.2,
+      "Power Charge": 0.3,
+      "Magarudyne": 75,
+      "Myriad Arrows": 76,
+      "Arms Master": 79
+    }
   },
   "Melchizedek": {
-    "heart": "Immortal Angel Core",
-    "heartlvl": 72,
-    "inherits": "elecA",
-    "lvl": 66,
-    "race": "Justice",
-    "resists": "-r----wr--",
+    "arcana": "Justice",
+    "level": 59,
+    "stats": [
+      50,
+      46,
+      43,
+      36,
+      31
+    ],
     "skills": {
-      "Gigantic Fist": 0.1,
-      "Hamaon": 0.2,
-      "Revolution": 0.3,
-      "Mahamaon": 67,
-      "Hama Boost": 69,
-      "God's Hand": 71,
-      "Akasha Arts": 73
-    },
-    "stats": [54, 47, 47, 35, 31]
-  },
-  "Mercurius": {
-    "inherits": "windA",
-    "lvl": 43,
-    "race": "Magician",
-    "resists": "-----wns--",
-    "skills": {
-      "Vacuum Wave": 0.1,
-      "Mediarama": 0.2,
-      "Masukunda": 0.3,
-      "Samarecarm": 44,
-      "Garudyne": 45,
-      "Anti-Electric Master": 47,
-      "Salvation": 49
-    },
-    "stats": [23, 31, 22, 33, 27]
+      "Vicious Strike": 0.1,
+      "Mediarahan": 0.2,
+      "Auto-Mataru": 0.3,
+      "Weapons Master": 60,
+      "Akasha Arts": 64,
+      "Repel Dark": 65,
+      "God's Hand": 69
+    }
   },
   "Messiah": {
-    "heart": "Savior's Augite",
-    "heartlvl": 99,
-    "inherits": "lightA",
-    "lvl": 91,
-    "race": "Judgement",
-    "resists": "---ssssrr-",
+    "arcana": "Judgement",
+    "level": 90,
+    "stats": [
+      63,
+      62,
+      60,
+      62,
+      63
+    ],
     "skills": {
       "Megidolaon": 0.1,
-      "God's Hand": 0.2,
-      "Salvation": 0.3,
-      "Enduring Soul": 92,
-      "Regenerate 3": 93,
+      "Regenerate 3": 0.2,
+      "God's Hand": 0.3,
+      "Salvation": 93,
       "Invigorate 3": 94,
-      "Null Phys": 96,
-      "Magic Ability": 98
-    },
-    "stats": [65, 70, 62, 59, 59]
+      "Absorb Pierce": 95,
+      "Enduring Soul": 97,
+      "Magic Skill Up": 98
+    }
   },
   "Metatron": {
-    "heart": "Contract Angel Wing",
-    "heartlvl": 94,
-    "inherits": "lightA",
-    "lvl": 87,
-    "race": "Aeon",
-    "resists": "---rswrrw-",
+    "arcana": "Aeon",
+    "level": 87,
+    "stats": [
+      61,
+      65,
+      57,
+      61,
+      56
+    ],
     "skills": {
-      "Makougaon": 0.1,
-      "Divine Judgment": 0.2,
+      "Mahamaon": 0.1,
+      "Auto-Mataru": 0.2,
       "God's Hand": 0.3,
-      "Megidolaon": 89,
-      "Salvation": 90,
-      "Light Amp": 92,
-      "Repel Elec": 94
-    },
-    "stats": [60, 65, 65, 55, 53]
+      "Megidolaon": 90,
+      "Repel Ice": 91,
+      "Repel Elec": 92,
+      "Repel Fire": 93,
+      "Last Judge": 3883
+    }
   },
   "Michael": {
-    "heart": "Archangel Wings",
-    "heartlvl": 75,
-    "inherits": "elecA",
-    "lvl": 70,
-    "race": "Judgement",
-    "resists": "s-s---wrs-",
+    "arcana": "Judgement",
+    "level": 72,
+    "stats": [
+      51,
+      47,
+      46,
+      50,
+      51
+    ],
     "skills": {
-      "Heaven's Blade": 0.1,
-      "Divine Judgment": 0.2,
-      "Angelic Grace": 0.3,
-      "Makougaon": 72,
-      "Maziodyne": 73,
-      "Heat Riser": 75,
-      "Drain Pierce": 77
-    },
-    "stats": [56, 48, 46, 37, 42]
+      "Maziodyne": 0.1,
+      "Mediarahan": 0.2,
+      "Mabufudyne": 74,
+      "Repel Dark": 75,
+      "Heaven's Blade": 77
+    }
   },
-  "Milady": {
-    "inherits": "iceA",
-    "lvl": 36,
-    "race": "Empress",
-    "resists": "--sw------",
+  "Mithra": {
+    "arcana": "Temperance",
+    "level": 22,
+    "stats": [
+      17,
+      20,
+      17,
+      11,
+      13
+    ],
     "skills": {
-      "Torrent Shot": 0.1,
-      "Amrita Drop": 0.2,
-      "Pierce Driver": 0.3,
-      "Fast Heal": 37,
-      "Tentarafoo": 38,
-      "Tetrakarn": 40,
-      "Makarakarn": 41
-    },
-    "stats": [27, 24, 22, 22, 20]
-  },
-  "Mishaguji": {
-    "inherits": "fireA",
-    "lvl": 48,
-    "race": "Hierophant",
-    "resists": "----wn--n-",
-    "skills": {
-      "Mazionga": 0.1,
-      "Deathbound": 0.2,
-      "Marin Karin": 0.3,
-      "Ziodyne": 49,
-      "Matarukaja": 50,
-      "Vile Assault": 52,
-      "Null Strike": 54
-    },
-    "stats": [36, 35, 30, 24, 26]
-  },
-  "Mithras": {
-    "inherits": "windA",
-    "lvl": 24,
-    "race": "Chariot",
-    "resists": "s--d-w----",
-    "skills": {
-      "Makouha": 0.1,
-      "Zan-ei": 0.2,
-      "Rakunda": 0.3,
-      "Agilao": 25,
-      "Hama": 26,
-      "Tentarafoo": 27,
-      "Swift Strike": 29,
-      "Scarlet Havoc": 5217
-    },
-    "stats": [16, 19, 15, 14, 15]
-  },
-  "Mitra": {
-    "inherits": "windL",
-    "lvl": 22,
-    "race": "Temperance",
-    "resists": "----nw-n--",
-    "skills": {
-      "Bufu": 0.1,
-      "Makouha": 0.2,
-      "Counter": 23,
-      "Diarama": 24,
-      "Kouga": 26,
-      "Dodge Elec": 27
-    },
-    "stats": [13, 19, 16, 10, 15]
-  },
-  "Mokoi": {
-    "inherits": "ailment",
-    "lvl": 18,
-    "race": "Devil",
-    "resists": "---wn---n-",
-    "skills": {
-      "Evil Touch": 0.1,
-      "Marin Karin": 0.2,
-      "Sonic Punch": 0.3,
-      "Fear Boost": 19,
-      "Charm Boost": 21,
-      "Evil Smile": 23
-    },
-    "stats": [7, 7, 12, 16, 22]
+      "Hama": 0.1,
+      "Double Fangs": 0.2,
+      "Mabufu": 0.3,
+      "Eerie Sound": 24,
+      "Dodge Elec": 25,
+      "Counter": 28,
+      "Last Judge": 3883
+    }
   },
   "Mot": {
-    "inherits": "elecD",
-    "lvl": 58,
-    "race": "Death",
-    "resists": "-----nw-r-",
+    "arcana": "Death",
+    "level": 45,
+    "stats": [
+      31,
+      37,
+      34,
+      22,
+      29
+    ],
     "skills": {
-      "Mamudoon": 0.1,
+      "Mudoon": 0.1,
       "Evil Smile": 0.2,
       "Null Fear": 0.3,
-      "Ghastly Wail": 59,
-      "Mazionga": 60,
-      "Mudo Boost": 61,
-      "Megidola": 63
-    },
-    "stats": [37, 42, 44, 29, 33]
+      "Mamudoon": 46,
+      "Ghastly Wail": 48,
+      "Mudo Boost": 49,
+      "Resist Light": 51
+    }
   },
   "Mother Harlot": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 82,
-    "inherits": "iceA",
-    "lvl": 77,
-    "race": "Empress",
-    "resists": "-n-w-rw-n-",
+    "arcana": "Empress",
+    "level": 74,
+    "stats": [
+      48,
+      55,
+      50,
+      43,
+      51
+    ],
     "skills": {
       "Mamudoon": 0.1,
       "Ziodyne": 0.2,
-      "Sexy Dance": 0.3,
-      "Mudo Boost": 78,
-      "Maziodyne": 80,
-      "Debilitate": 82,
-      "Diamond Dust": 83
-    },
-    "stats": [44, 65, 60, 36, 42]
-  },
-  "Mothman": {
-    "inherits": "ailment",
-    "lvl": 31,
-    "race": "Hermit",
-    "resists": "--wswrn-s-",
-    "skills": {
-      "Eerie Sound": 0.1,
-      "Stagnant Air": 0.2,
-      "Zionga": 32,
-      "Distress Boost": 33,
-      "Elec Boost": 34,
-      "Megido": 36
-    },
-    "stats": [15, 25, 18, 27, 22]
+      "Mudo Boost": 76,
+      "Sexy Dance": 77,
+      "Ailment Boost": 78,
+      "Null Fire": 80
+    }
   },
   "Naga": {
-    "inherits": "darkA",
-    "lvl": 17,
-    "race": "Hermit",
-    "resists": "-w---s--s-",
+    "arcana": "Hermit",
+    "level": 17,
+    "stats": [
+      14,
+      10,
+      12,
+      14,
+      8
+    ],
     "skills": {
-      "Bewilder": 0.1,
-      "Single Shot": 0.2,
-      "Distress Boost": 18,
-      "Torrent Shot": 19,
-      "Eerie Sound": 21,
-      "Invigorate 1": 22
-    },
-    "stats": [14, 10, 11, 14, 9]
+      "Double Fangs": 0.1,
+      "Rakukaja": 0.2,
+      "Bewilder": 0.3,
+      "Mazio": 19,
+      "Dodge Pierce": 21,
+      "Eerie Sound": 22
+    }
   },
   "Naga Raja": {
-    "inherits": "iceA",
-    "lvl": 43,
-    "race": "Emperor",
-    "resists": "--sw-n----",
+    "arcana": "Emperor",
+    "level": 36,
+    "stats": [
+      24,
+      26,
+      23,
+      21,
+      21
+    ],
     "skills": {
-      "Mazionga": 0.1,
-      "Cruel Attack": 0.2,
-      "Tentarafoo": 0.3,
-      "Revolution": 44,
-      "Elec Break": 45,
-      "Confuse Boost": 46,
-      "Null Pierce": 48
-    },
-    "stats": [33, 31, 22, 27, 23]
+      "Twin Shot": 0.1,
+      "Tentarafoo": 0.2,
+      "Matarukaja": 37,
+      "Torrent Shot": 39,
+      "Null Panic": 40,
+      "Mazionga": 41,
+      "Panic Boost": 42
+    }
+  },
+  "Nandi": {
+    "arcana": "Star",
+    "level": 39,
+    "stats": [
+      29,
+      26,
+      29,
+      17,
+      32
+    ],
+    "skills": {
+      "Magarula": 0.1,
+      "Marin Karin": 0.2,
+      "Marakukaja": 0.3,
+      "Cool Breeze": 41,
+      "Garudyne": 43,
+      "Dodge Fire": 44
+    }
+  },
+  "Narasimha": {
+    "arcana": "Strength",
+    "level": 46,
+    "stats": [
+      36,
+      27,
+      28,
+      28,
+      26
+    ],
+    "skills": {
+      "Fatal End": 0.1,
+      "Evade Wind": 0.2,
+      "Herculean Strike": 47,
+      "Power Charge": 48,
+      "Counterstrike": 49,
+      "Blade of Fury": 51
+    }
   },
   "Narcissus": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 25,
-    "inherits": "ailment",
-    "lvl": 23,
-    "race": "Lovers",
-    "resists": "w---sss---",
+    "arcana": "Lovers",
+    "level": 20,
+    "stats": [
+      12,
+      18,
+      9,
+      13,
+      20
+    ],
     "skills": {
       "Marin Karin": 0.1,
       "Charm Boost": 0.2,
       "Magaru": 0.3,
-      "Sexy Dance": 24,
-      "Sharp Student": 25,
-      "Growth 1": 27,
-      "Dodge Slash": 28
-    },
-    "stats": [12, 18, 10, 17, 20]
+      "Sexy Dance": 21,
+      "Charmdi": 22,
+      "Dekunda": 24,
+      "Frolic": 3883
+    }
+  },
+  "Nata Taishi": {
+    "arcana": "Chariot",
+    "level": 37,
+    "stats": [
+      29,
+      19,
+      24,
+      29,
+      26
+    ],
+    "skills": {
+      "Swift Strike": 0.1,
+      "Masukukaja": 0.2,
+      "Regenerate 1": 38,
+      "Counterstrike": 40,
+      "Herculean Strike": 41,
+      "Endure Dark": 43
+    }
   },
   "Nebiros": {
-    "heart": "Unholy Wooden Doll",
-    "heartlvl": 56,
-    "inherits": "ailment",
-    "lvl": 52,
-    "race": "Hermit",
-    "resists": "----r--wn-",
+    "arcana": "Hermit",
+    "level": 50,
+    "stats": [
+      31,
+      42,
+      32,
+      34,
+      30
+    ],
     "skills": {
-      "Evil Touch": 0.1,
-      "Eigaon": 0.2,
-      "Ghastly Wail": 0.3,
-      "Resist Ailments": 53,
-      "Evil Smile": 54,
-      "Fear Boost": 55,
-      "Mamudoon": 57
-    },
-    "stats": [28, 42, 31, 31, 37]
-  },
-  "Neko Shogun": {
-    "inherits": "strikeB",
-    "lvl": 17,
-    "race": "Star",
-    "resists": "-----swnn-",
-    "skills": {
-      "Regenerate 1": 0.1,
-      "Assault Dive": 0.2,
-      "Rebellion": 0.3,
-      "Sharp Student": 18,
-      "Swift Strike": 20,
-      "Resist Dizzy": 22
-    },
-    "stats": [15, 12, 10, 14, 8]
+      "Evil Smile": 0.1,
+      "Megido": 0.2,
+      "Ghastly Wail": 52,
+      "Mudoon": 53,
+      "Fear Boost": 54,
+      "Stagnant Air": 55
+    }
   },
   "Nekomata": {
-    "inherits": "windA",
-    "lvl": 3,
-    "race": "Magician",
-    "resists": "-----ws---",
+    "arcana": "Magician",
+    "level": 5,
+    "stats": [
+      4,
+      6,
+      5,
+      3,
+      4
+    ],
     "skills": {
       "Agi": 0.1,
-      "Rakunda": 0.2,
-      "Power Slash": 4,
-      "Resist Distress": 5,
-      "Marin Karin": 6,
-      "Maragi": 8
-    },
-    "stats": [4, 4, 2, 5, 2]
-  },
-  "Nidhoggr": {
-    "inherits": "elecD",
-    "lvl": 47,
-    "race": "Aeon",
-    "resists": "--s-nnwws-",
-    "skills": {
-      "Matarunda": 0.1,
-      "Mudoon": 0.2,
-      "Heat Wave": 0.3,
-      "Virus Breath": 48,
-      "Stagnant Air": 49,
-      "Ailment Boost": 51,
-      "Null Light": 53
-    },
-    "stats": [36, 29, 43, 21, 28]
+      "Cleave": 0.2,
+      "Provoke": 6,
+      "Re Patra": 7,
+      "Maragi": 10
+    }
   },
   "Nigi Mitama": {
-    "inherits": "windA",
-    "lvl": 12,
-    "race": "Temperance",
-    "resists": "-----wnss-",
+    "arcana": "Temperance",
+    "level": 12,
+    "stats": [
+      9,
+      8,
+      10,
+      9,
+      10
+    ],
     "skills": {
-      "Media": 0.1,
-      "Garu": 0.2,
-      "Baisudi": 0.3,
-      "Magaru": 14,
-      "Sharp Student": 15,
-      "Recarm": 17
-    },
-    "stats": [6, 10, 9, 10, 8]
+      "Garu": 0.1,
+      "Patra": 0.2,
+      "Posumudi": 0.3,
+      "Media": 14,
+      "Magaru": 16,
+      "Recarm": 18
+    }
   },
   "Norn": {
-    "heart": "Second Hand of Fate",
-    "heartlvl": 71,
-    "inherits": "windA",
-    "lvl": 65,
-    "race": "Fortune",
-    "resists": "---nrwd---",
+    "arcana": "Fortune",
+    "level": 62,
+    "stats": [
+      40,
+      54,
+      32,
+      46,
+      44
+    ],
     "skills": {
       "Magarudyne": 0.1,
-      "Panta Rhei": 0.2,
-      "Wind Amp": 0.3,
-      "Invigorate 3": 66,
-      "Mediarahan": 68,
-      "Soul Link": 70,
-      "Salvation": 72
-    },
-    "stats": [37, 60, 40, 37, 40]
+      "Wind Amp": 0.2,
+      "Panta Rhei": 0.3,
+      "Regenerate 3": 66,
+      "Invigorate 3": 67,
+      "Absorb Elec": 69
+    }
   },
   "Oberon": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 18,
-    "inherits": "fireA",
-    "lvl": 16,
-    "race": "Emperor",
-    "resists": "----wn-ss-",
+    "arcana": "Emperor",
+    "level": 15,
+    "stats": [
+      12,
+      15,
+      9,
+      8,
+      8
+    ],
     "skills": {
       "Zio": 0.1,
       "Media": 0.2,
+      "Survive Dark": 16,
       "Mazio": 17,
       "Zan-ei": 18,
-      "Survive Dark": 19,
-      "Zionga": 21
-    },
-    "stats": [11, 15, 9, 12, 8]
+      "Zionga": 20,
+      "Summer Dream": 3883
+    }
   },
   "Odin": {
-    "heart": "Eyepatch of Wisdom",
-    "heartlvl": 81,
-    "inherits": "elecA",
-    "lvl": 74,
-    "race": "Emperor",
-    "resists": "-----dw---",
+    "arcana": "Emperor",
+    "level": 57,
+    "stats": [
+      39,
+      52,
+      33,
+      36,
+      39
+    ],
     "skills": {
-      "Maziodyne": 0.1,
-      "Primal Force": 0.2,
-      "Marakunda": 0.3,
-      "Thunder Reign": 75,
-      "Elec Amp": 76,
-      "Concentrate": 78,
-      "Spell Master": 80
-    },
-    "stats": [44, 63, 42, 46, 49]
-  },
-  "Okuninushi": {
-    "inherits": "elecA",
-    "lvl": 44,
-    "race": "Temperance",
-    "resists": "---n-rws--",
-    "skills": {
-      "Getsu-ei": 0.1,
-      "Deathbound": 0.2,
-      "Maragion": 0.3,
-      "Marakukaja": 45,
-      "Fire Break": 46,
-      "Agidyne": 47,
-      "Evade Fire": 49
-    },
-    "stats": [35, 32, 29, 24, 19]
+      "Ziodyne": 0.1,
+      "Vile Assault": 0.2,
+      "Maziodyne": 0.3,
+      "Elec Amp": 60,
+      "Thunder Reign": 63,
+      "Spell Master": 65,
+      "Valhalla": 3883
+    }
   },
   "Omoikane": {
-    "inherits": "elecL",
-    "lvl": 7,
-    "race": "Hierophant",
-    "resists": "-----s--w-",
+    "arcana": "Hierophant",
+    "level": 7,
+    "stats": [
+      4,
+      7,
+      6,
+      4,
+      7
+    ],
     "skills": {
       "Zio": 0.1,
       "Dia": 0.2,
-      "Rebellion": 8,
-      "Resist Shock": 10,
-      "Auto Rakukaja": 12
-    },
-    "stats": [4, 8, 6, 4, 6]
-  },
-  "Oni": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 34,
-    "inherits": "slashB",
-    "lvl": 31,
-    "race": "Chariot",
-    "resists": "-s--------",
-    "skills": {
-      "Bash": 0.1,
-      "Counter": 0.2,
-      "Regenerate 1": 0.3,
-      "Swift Strike": 32,
-      "Anti-Electric Master": 33,
-      "Counterstrike": 34,
-      "Dizzy Boost": 36
-    },
-    "stats": [30, 13, 26, 21, 19]
-  },
-  "Onmoraki": {
-    "inherits": "darkA",
-    "lvl": 8,
-    "race": "Hermit",
-    "resists": "w--s--sw--",
-    "skills": {
-      "Evil Touch": 0.1,
-      "Tarunda": 0.2,
-      "Garu": 0.3,
-      "Eiha": 10,
-      "Growth 1": 11,
-      "Magaru": 13
-    },
-    "stats": [4, 7, 6, 10, 4]
+      "Enradi": 8,
+      "Auto-Rakukaja": 12,
+      "Me Patra": 13
+    }
   },
   "Orobas": {
-    "inherits": "fireA",
-    "lvl": 39,
-    "race": "Magician",
-    "resists": "----w-n-s-",
+    "arcana": "Magician",
+    "level": 34,
+    "stats": [
+      20,
+      29,
+      21,
+      22,
+      17
+    ],
     "skills": {
-      "Magarula": 0.1,
-      "Torrent Shot": 0.2,
-      "Wind Break": 0.3,
-      "Wind Boost": 40,
-      "Masukukaja": 42,
-      "Resist Ice": 44,
-      "Survival Trick": 45
-    },
-    "stats": [22, 33, 22, 28, 19]
+      "Garula": 0.1,
+      "Sharp Student": 0.2,
+      "Rakukaja": 0.3,
+      "Wind Break": 36,
+      "Torrent Shot": 37,
+      "Trafuri": 38,
+      "Wind Boost": 39
+    }
   },
   "Orpheus": {
-    "inherits": "windA",
-    "lvl": 1,
-    "race": "Fool",
-    "resists": "---s-w--w-",
+    "arcana": "Fool",
+    "level": 1,
+    "stats": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
     "skills": {
-      "Agi": 0.1,
-      "Dia": 3,
-      "Bash": 4,
-      "Tarunda": 5,
-      "Cadenza": 5217
-    },
-    "stats": [2, 2, 2, 3, 2]
-  },
-  "Orpheus Telos": {
-    "inherits": "almighty",
-    "lvl": 91,
-    "race": "Fool",
-    "resists": "sssssssss-",
-    "skills": {
-      "Victory Cry": 0.1
-    },
-    "stats": [63, 63, 63, 63, 63]
+      "Bash": 0.1,
+      "Agi": 2,
+      "Tarunda": 6,
+      "Cadenza": 3883
+    }
   },
   "Orthrus": {
-    "inherits": "fireB",
-    "lvl": 27,
-    "race": "Hanged",
-    "resists": "---dw---s-",
+    "arcana": "Hanged",
+    "level": 28,
+    "stats": [
+      22,
+      14,
+      20,
+      21,
+      14
+    ],
     "skills": {
-      "Fatal End": 0.1,
-      "Agilao": 0.2,
-      "Raging Tiger": 0.3,
-      "Counter": 28,
-      "Resist Poison": 29,
-      "Eerie Sound": 31,
-      "Matarukaja": 32
-    },
-    "stats": [22, 14, 20, 18, 15]
+      "Agilao": 0.1,
+      "Getsu-ei": 0.2,
+      "Counter": 0.3,
+      "Dodge Ice": 30,
+      "Fire Boost": 31,
+      "Mighty Swing": 33
+    }
   },
   "Ose": {
-    "inherits": "almighty",
-    "lvl": 41,
-    "race": "Fool",
-    "resists": "-s-s---wn-",
+    "arcana": "Fool",
+    "level": 44,
+    "stats": [
+      32,
+      26,
+      30,
+      27,
+      24
+    ],
     "skills": {
-      "Blade of Fury": 0.1,
-      "Matarunda": 0.2,
-      "Multi-Target Boost": 0.3,
-      "Deathbound": 42,
-      "Null Rage": 43,
-      "Life Aid": 45,
-      "Tempest Slash": 47
-    },
-    "stats": [32, 23, 28, 25, 22]
+      "Gale Slash": 0.1,
+      "Poison Mist": 0.2,
+      "Maragion": 45,
+      "Herculean Strike": 47,
+      "Cool Breeze": 49
+    }
+  },
+  "Oukuninushi": {
+    "arcana": "Temperance",
+    "level": 44,
+    "stats": [
+      33,
+      37,
+      27,
+      26,
+      27
+    ],
+    "skills": {
+      "Maragion": 0.1,
+      "Mighty Swing": 0.2,
+      "Agidyne": 46,
+      "Fire Boost": 47,
+      "Fire Break": 48,
+      "Apt Pupil": 49
+    }
+  },
+  "Oumitsunu": {
+    "arcana": "Chariot",
+    "level": 30,
+    "stats": [
+      26,
+      14,
+      26,
+      11,
+      20
+    ],
+    "skills": {
+      "Kill Rush": 0.1,
+      "Dodge Pierce": 0.2,
+      "Rebellion": 0.3,
+      "Auto-Tarukaja": 31,
+      "Counter": 34,
+      "Null Rage": 35,
+      "Resist Pierce": 36
+    }
   },
   "Pale Rider": {
-    "inherits": "darkA",
-    "lvl": 23,
-    "race": "Death",
-    "resists": "------swr-",
-    "skills": {
-      "Maeiha": 0.1,
-      "Fatal End": 0.2,
-      "Resist Fear": 0.3,
-      "Mamudo": 24,
-      "Eiga": 25,
-      "Survive Light": 26,
-      "Null Fear": 28
-    },
-    "stats": [20, 18, 13, 17, 11]
-  },
-  "Parvati": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 51,
-    "inherits": "lidarkA",
-    "lvl": 48,
-    "race": "Priestess",
-    "resists": "---wn-----",
-    "skills": {
-      "Mabufula": 0.1,
-      "Diarama": 0.2,
-      "Mabaisudi": 0.3,
-      "Amrita Drop": 49,
-      "Mediarama": 50,
-      "Divine Grace": 52,
-      "Bufudyne": 53
-    },
-    "stats": [26, 40, 26, 31, 31]
-  },
-  "Pazuzu": {
-    "inherits": "windD",
-    "lvl": 56,
-    "race": "Devil",
-    "resists": "----rwnws-",
-    "skills": {
-      "Eigaon": 0.1,
-      "Poison Arrow": 0.2,
-      "Poison Mist": 0.3,
-      "Infuriate": 57,
-      "Neuro Slash": 58,
-      "Masukunda": 59,
-      "Ailment Boost": 61
-    },
-    "stats": [34, 42, 35, 32, 34]
-  },
-  "Pisaca": {
-    "inherits": "iceD",
-    "lvl": 15,
-    "race": "Death",
-    "resists": "-sww-s-wn-",
+    "arcana": "Death",
+    "level": 24,
+    "stats": [
+      20,
+      19,
+      15,
+      19,
+      12
+    ],
     "skills": {
       "Mudo": 0.1,
-      "Eiha": 0.2,
-      "Dekaja": 16,
-      "Foul Breath": 17,
-      "Maeiha": 18,
-      "Mamudo": 19
-    },
-    "stats": [10, 13, 16, 9, 7]
+      "Zan-ei": 0.2,
+      "Mamudo": 0.3,
+      "Garula": 25,
+      "Counter": 27,
+      "Survive Light": 29
+    }
+  },
+  "Parvati": {
+    "arcana": "Priestess",
+    "level": 47,
+    "stats": [
+      24,
+      38,
+      25,
+      30,
+      31
+    ],
+    "skills": {
+      "Bufula": 0.1,
+      "Diarama": 0.2,
+      "Marakukaja": 0.3,
+      "Mabufula": 49,
+      "Dodge Fire": 51,
+      "Bufudyne": 52,
+      "Ardhanari": 3883
+    }
   },
   "Pixie": {
-    "inherits": "recovery",
-    "lvl": 2,
-    "race": "Lovers",
-    "resists": "----ws----",
+    "arcana": "Lovers",
+    "level": 2,
+    "stats": [
+      2,
+      3,
+      2,
+      3,
+      3
+    ],
     "skills": {
       "Dia": 0.1,
-      "Pulinpa": 0.2,
-      "Zio": 4,
-      "Tarukaja": 5,
-      "Resist Confuse": 6
-    },
-    "stats": [2, 2, 2, 4, 3]
+      "Rakunda": 3,
+      "Pulinpa": 4,
+      "Trafuri": 8,
+      "Frolic": 3883
+    }
   },
   "Power": {
-    "inherits": "lightA",
-    "lvl": 25,
-    "race": "Justice",
-    "resists": "--s---snw-",
+    "arcana": "Justice",
+    "level": 25,
+    "stats": [
+      20,
+      19,
+      15,
+      16,
+      12
+    ],
     "skills": {
       "Hama": 0.1,
       "Magaru": 0.2,
-      "Arrow Rain": 0.3,
-      "Mahama": 26,
-      "Torrent Shot": 27,
-      "Dodge Dark": 29,
+      "Mahama": 0.3,
+      "Zan-ei": 27,
+      "Me Patra": 28,
       "Revolution": 30
-    },
-    "stats": [20, 16, 15, 16, 15]
+    }
   },
   "Principality": {
-    "inherits": "lightA",
-    "lvl": 16,
-    "race": "Justice",
-    "resists": "---s---nw-",
+    "arcana": "Justice",
+    "level": 16,
+    "stats": [
+      12,
+      13,
+      7,
+      11,
+      12
+    ],
     "skills": {
       "Hama": 0.1,
-      "Kouha": 0.2,
+      "Dodge Elec": 0.2,
       "Holy Arrow": 0.3,
-      "Recarm": 18,
-      "Dodge Elec": 19,
+      "Media": 18,
+      "Recarm": 20,
       "Mahama": 21
-    },
-    "stats": [11, 13, 7, 12, 12]
+    }
   },
-  "Qitian Dasheng": {
-    "inherits": "iceA",
-    "lvl": 67,
-    "race": "Tower",
-    "resists": "--nw--s---",
+  "Pyro Jack": {
+    "arcana": "Magician",
+    "level": 14,
+    "stats": [
+      7,
+      14,
+      9,
+      8,
+      11
+    ],
     "skills": {
-      "Myriad Arrows": 0.1,
-      "Apt Pupil": 0.2,
-      "Regenerate 3": 0.3,
-      "Primal Force": 68,
-      "Revolution": 70,
-      "Akasha Arts": 72,
-      "Evade Strike": 73
-    },
-    "stats": [52, 38, 39, 50, 41]
-  },
-  "Queen Medb": {
-    "inherits": "lidarkA",
-    "lvl": 28,
-    "race": "Lovers",
-    "resists": "---s-nw---",
-    "skills": {
-      "Me Patra": 0.1,
-      "Mazio": 0.2,
+      "Agi": 0.1,
+      "Sukunda": 0.2,
       "Maragi": 0.3,
-      "Multi-Target Boost": 29,
+      "Provoke": 15,
+      "Rage Boost": 17,
+      "Agilao": 19,
+      "Jack Brothers": 3883
+    }
+  },
+  "Queen Mab": {
+    "arcana": "Lovers",
+    "level": 27,
+    "stats": [
+      16,
+      21,
+      16,
+      12,
+      23
+    ],
+    "skills": {
+      "Posumudi": 0.1,
+      "Rakunda": 0.2,
+      "Rakukaja": 0.3,
+      "Recarm": 28,
+      "Dodge Wind": 29,
       "Dodge Strike": 30,
-      "Dodge Pierce": 31,
-      "Matarunda": 33
-    },
-    "stats": [14, 26, 15, 19, 17]
+      "Dodge Pierce": 32
+    }
   },
   "Quetzalcoatl": {
-    "inherits": "windL",
-    "lvl": 45,
-    "race": "Sun",
-    "resists": "----n-snw-",
+    "arcana": "Sun",
+    "level": 43,
+    "stats": [
+      28,
+      29,
+      30,
+      32,
+      30
+    ],
     "skills": {
-      "Bufula": 0.1,
-      "Garudyne": 0.2,
-      "Growth 3": 0.3,
-      "Single-Target Boost": 46,
-      "Bufudyne": 48,
-      "Resist Ailments": 50,
-      "Ice Amp": 51
-    },
-    "stats": [25, 35, 33, 30, 25]
-  },
-  "Rakshasa": {
-    "inherits": "elecB",
-    "lvl": 15,
-    "race": "Strength",
-    "resists": "s-s---ww--",
-    "skills": {
-      "Vacuum Slash": 0.1,
-      "Dodge Slash": 0.2,
-      "Regenerate 1": 0.3,
-      "Fatal End": 16,
-      "Counter": 18,
-      "Getsu-ei": 20
-    },
-    "stats": [17, 8, 13, 11, 6]
+      "Magarula": 0.1,
+      "Marakukaja": 0.2,
+      "Growth 2": 0.3,
+      "Garudyne": 44,
+      "Heat Wave": 46,
+      "Mahamaon": 47,
+      "Wind Boost": 48
+    }
   },
   "Rangda": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 54,
-    "inherits": "fireD",
-    "lvl": 50,
-    "race": "Magician",
-    "resists": "-r-sww----",
-    "skills": {
-      "Myriad Arrows": 0.1,
-      "Matarunda": 0.2,
-      "Counterstrike": 0.3,
-      "Agidyne": 51,
-      "High Counter": 53,
-      "Maeiga": 54,
-      "Evade Ice": 56
-    },
-    "stats": [33, 39, 28, 30, 30]
-  },
-  "Raphael": {
-    "inherits": "windL",
-    "lvl": 60,
-    "race": "Lovers",
-    "resists": "---s-wnnw-",
-    "skills": {
-      "Tempest Slash": 0.1,
-      "Mediarama": 0.2,
-      "Dekaja": 0.3,
-      "Auto Maraku": 61,
-      "Magarudyne": 62,
-      "Angelic Grace": 64,
-      "Heat Riser": 66
-    },
-    "stats": [46, 42, 37, 31, 40]
-  },
-  "Robin Hood": {
-    "inherits": "lightA",
-    "lvl": 37,
-    "race": "Justice",
-    "resists": "-------sw-",
-    "skills": {
-      "Kouga": 0.1,
-      "Eiga": 0.2,
-      "Light Driver": 0.3,
-      "Megido": 38,
-      "Resist Ailments": 40,
-      "Kougaon": 41,
-      "Eigaon": 42
-    },
-    "stats": [25, 27, 22, 24, 20]
-  },
-  "Saki Mitama": {
-    "inherits": "recovery",
-    "lvl": 36,
-    "race": "Lovers",
-    "resists": "-w-ssss---",
-    "skills": {
-      "Diarama": 0.1,
-      "Mabufu": 0.2,
-      "Ice Break": 0.3,
-      "Mediarama": 37,
-      "Dekunda": 38,
-      "Null Shock": 39,
-      "Divine Grace": 41
-    },
-    "stats": [16, 30, 20, 22, 28]
-  },
-  "Samael": {
-    "inherits": "elecD",
-    "lvl": 41,
-    "race": "Death",
-    "resists": "----snw-n-",
-    "skills": {
-      "Maeiga": 0.1,
-      "Masukunda": 0.2,
-      "Poison Mist": 0.3,
-      "Dekunda": 42,
-      "Mudoon": 43,
-      "Megido": 44,
-      "Ghastly Wail": 46
-    },
-    "stats": [26, 31, 27, 21, 25]
-  },
-  "Sandalphon": {
-    "heart": "Prayer Angel Garland",
-    "heartlvl": 87,
-    "inherits": "lightA",
-    "lvl": 80,
-    "race": "Moon",
-    "resists": "n----s-rw-",
-    "skills": {
-      "Divine Judgment": 0.1,
-      "Mediarahan": 0.2,
-      "Akasha Arts": 0.3,
-      "Angelic Grace": 81,
-      "Makougaon": 83,
-      "Salvation": 84,
-      "Drain Dark": 87
-    },
-    "stats": [53, 53, 67, 46, 49]
-  },
-  "Sandman": {
-    "inherits": "almighty",
-    "lvl": 20,
-    "race": "Fortune",
-    "resists": "---nwwn---",
-    "skills": {
-      "Garula": 0.1,
-      "Tentarafoo": 0.2,
-      "Null Confuse": 21,
-      "Agilao": 22,
-      "Confuse Boost": 24,
-      "Resist Elec": 26
-    },
-    "stats": [13, 13, 15, 15, 20]
-  },
-  "Sarasvati": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 34,
-    "inherits": "recovery",
-    "lvl": 32,
-    "race": "Priestess",
-    "resists": "----nw-s--",
-    "skills": {
-      "Diarama": 0.1,
-      "Mabaisudi": 0.2,
-      "Bufula": 0.3,
-      "Dodge Elec": 33,
-      "Anti-Wind Master": 34,
-      "Mediarama": 35,
-      "Masukukaja": 36
-    },
-    "stats": [17, 26, 16, 24, 22]
-  },
-  "Satan": {
-    "inherits": "elecA",
-    "lvl": 82,
-    "race": "Judgement",
-    "resists": "---sr-w-d-",
-    "skills": {
-      "Diamond Dust": 0.1,
-      "Maeigaon": 0.2,
-      "Resist Ailments": 0.3,
-      "Megidolaon": 83,
-      "Concentrate": 84,
-      "Debilitate": 86,
-      "Repel Wind": 88,
-      "Black Viper": 89,
-      "Armageddon": 5217
-    },
-    "stats": [55, 68, 52, 43, 53]
-  },
-  "Satanael": {
-    "inherits": "almighty",
-    "lvl": 89,
-    "race": "Fool",
-    "resists": "---ssssnd-",
-    "skills": {
-      "Sinful Shell": 0.1,
-      "Maeigaon": 0.2,
-      "Survival Trick": 0.3,
-      "Primal Force": 90,
-      "Life Aid": 91,
-      "Heat Riser": 93,
-      "Almighty Boost": 95
-    },
-    "stats": [63, 60, 57, 56, 56]
-  },
-  "Sati": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 32,
-    "inherits": "fireA",
-    "lvl": 29,
-    "race": "Magician",
-    "resists": "---nw-----",
+    "arcana": "Magician",
+    "level": 40,
+    "stats": [
+      25,
+      35,
+      24,
+      22,
+      21
+    ],
     "skills": {
       "Agilao": 0.1,
-      "Maragi": 0.2,
-      "Media": 0.3,
-      "Baisudi": 30,
-      "Maragion": 32,
-      "Anti-Fire Master": 33,
-      "Evade Ice": 35
-    },
-    "stats": [13, 27, 13, 21, 20]
+      "Zan-ei": 0.2,
+      "Matarunda": 42,
+      "Dodge Ice": 44,
+      "Agidyne": 46
+    }
   },
-  "Saturnus": {
-    "heart": "Black Sun Candle",
-    "heartlvl": 82,
-    "inherits": "fireA",
-    "lvl": 76,
-    "race": "Star",
-    "resists": "---dw-n---",
+  "Raphael": {
+    "arcana": "Lovers",
+    "level": 61,
+    "stats": [
+      44,
+      42,
+      31,
+      31,
+      42
+    ],
     "skills": {
-      "Inferno": 0.1,
-      "Maragidyne": 0.2,
-      "Concentrate": 0.3,
-      "Fire Amp": 77,
-      "Primal Force": 78,
-      "Heat Riser": 80,
-      "Repel Ice": 82
-    },
-    "stats": [43, 70, 45, 51, 41]
+      "Deathbound": 0.1,
+      "Auto-Maraku": 0.2,
+      "Null Charm": 0.3,
+      "Mediarahan": 63,
+      "Matarukaja": 64,
+      "Tempest Slash": 67
+    }
   },
-  "Scathach": {
-    "heart": "Preceptress Silk",
-    "heartlvl": 81,
-    "inherits": "iceA",
-    "lvl": 75,
-    "race": "Priestess",
-    "resists": "--nwn-ss--",
+  "Saki Mitama": {
+    "arcana": "Lovers",
+    "level": 39,
+    "stats": [
+      20,
+      32,
+      20,
+      22,
+      30
+    ],
     "skills": {
-      "Mabufudyne": 0.1,
-      "Magarudyne": 0.2,
-      "Myriad Arrows": 0.3,
-      "Auto Masuku": 76,
-      "Freeze Boost": 77,
-      "Invigorate 3": 79,
-      "Auto Mataru": 81
-    },
-    "stats": [55, 58, 40, 49, 42]
+      "Diarama": 0.1,
+      "Zionga": 0.2,
+      "Mediarama": 42,
+      "Dekunda": 43,
+      "Null Charm": 44,
+      "Divine Grace": 45
+    }
   },
-  "Seiryu": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 42,
-    "inherits": "windA",
-    "lvl": 38,
-    "race": "Temperance",
-    "resists": "----nw----",
+  "Samael": {
+    "arcana": "Death",
+    "level": 37,
+    "stats": [
+      27,
+      31,
+      26,
+      20,
+      23
+    ],
     "skills": {
-      "Mabufula": 0.1,
-      "Mediarama": 0.2,
-      "Matarunda": 39,
-      "Tetrakarn": 40,
-      "Amrita Drop": 41,
-      "Bufudyne": 43
-    },
-    "stats": [24, 31, 27, 21, 18]
+      "Mamudo": 0.1,
+      "Masukunda": 0.2,
+      "Megido": 40,
+      "Dekunda": 41,
+      "Mudoon": 42,
+      "Ghastly Wail": 43
+    }
   },
-  "Seiten Taisei A": {
-    "inherits": "elecA",
-    "lvl": 40,
-    "race": "Chariot",
-    "resists": "---s-nw---",
+  "Sandalphon": {
+    "arcana": "Moon",
+    "level": 74,
+    "stats": [
+      54,
+      54,
+      50,
+      47,
+      51
+    ],
     "skills": {
-      "Wild Thunder": 0.1,
-      "Deathbound": 0.2,
-      "Auto Tarukaja": 0.3,
-      "Auto Rebellion": 41,
-      "Charge": 43,
-      "Gigantic Fist": 44,
-      "Auto Mataru": 46
-    },
-    "stats": [30, 20, 33, 24, 20]
+      "Mahamaon": 0.1,
+      "Hama Boost": 0.2,
+      "Makarakarn": 0.3,
+      "Akasha Arts": 76,
+      "Regenerate 3": 78,
+      "Salvation": 83
+    }
   },
-  "Setanta": {
-    "inherits": "iceL",
-    "lvl": 29,
-    "race": "Star",
-    "resists": "--sw-n--w-",
-    "skills": {
-      "Torrent Shot": 0.1,
-      "Auto Tarukaja": 0.2,
-      "Sharp Student": 0.3,
-      "Zionga": 30,
-      "Charge": 31,
-      "Shift Boost": 33,
-      "Resist Fire": 34
-    },
-    "stats": [26, 19, 17, 21, 15]
-  },
-  "Seth": {
-    "inherits": "darkA",
-    "lvl": 62,
-    "race": "Moon",
-    "resists": "---rw--ws-",
-    "skills": {
-      "Agidyne": 0.1,
-      "Garudyne": 0.2,
-      "Tetrakarn": 0.3,
-      "Makarakarn": 63,
-      "Fire Break": 64,
-      "Maragidyne": 66,
-      "Repel Ice": 68
-    },
-    "stats": [47, 49, 42, 29, 35]
-  },
-  "Shiisaa": {
-    "inherits": "iceL",
-    "lvl": 23,
-    "race": "Hierophant",
-    "resists": "-s-wn--s--",
+  "Sarasvati": {
+    "arcana": "Priestess",
+    "level": 27,
+    "stats": [
+      13,
+      23,
+      14,
+      20,
+      18
+    ],
     "skills": {
       "Mabufu": 0.1,
-      "Assault Dive": 0.2,
-      "Rakukaja": 24,
-      "Ice Boost": 26,
-      "Dodge Fire": 27,
-      "Herculean Strike": 29
-    },
-    "stats": [15, 15, 19, 16, 11]
+      "Posumudi": 0.2,
+      "Bufula": 0.3,
+      "Me Patra": 28,
+      "Ice Boost": 29,
+      "Dekaja": 31
+    }
   },
-  "Shiki-Ouji": {
-    "inherits": "iceA",
-    "lvl": 45,
-    "race": "Chariot",
-    "resists": "-rnw--wss-",
+  "Satan": {
+    "arcana": "Judgement",
+    "level": 79,
+    "stats": [
+      51,
+      60,
+      52,
+      47,
+      58
+    ],
     "skills": {
-      "Torrent Shot": 0.1,
-      "Dekaja": 0.2,
-      "Kouga": 0.3,
-      "Tetrakarn": 46,
-      "Matarukaja": 47,
-      "Evade Wind": 49,
-      "Null Fire": 51
-    },
-    "stats": [33, 28, 28, 25, 28]
+      "Megidola": 0.1,
+      "Maragidyne": 0.2,
+      "Regenerate 3": 81,
+      "Invigorate 3": 82,
+      "Repel Light": 83,
+      "Black Viper": 86,
+      "Armageddon": 3883
+    }
+  },
+  "Sati": {
+    "arcana": "Magician",
+    "level": 28,
+    "stats": [
+      17,
+      25,
+      18,
+      16,
+      15
+    ],
+    "skills": {
+      "Maragi": 0.1,
+      "Agilao": 0.2,
+      "Media": 0.3,
+      "Enradi": 29,
+      "Trafuri": 31,
+      "Diarama": 33
+    }
+  },
+  "Saturnus": {
+    "arcana": "Star",
+    "level": 78,
+    "stats": [
+      52,
+      58,
+      45,
+      52,
+      53
+    ],
+    "skills": {
+      "Maragidyne": 0.1,
+      "Fire Amp": 0.2,
+      "Evade Ice": 0.3,
+      "Growth 3": 80,
+      "Primal Force": 82,
+      "Repel Ice": 83,
+      "Absorb Ice": 84
+    }
+  },
+  "Scathach": {
+    "arcana": "Priestess",
+    "level": 64,
+    "stats": [
+      51,
+      53,
+      29,
+      49,
+      40
+    ],
+    "skills": {
+      "Myriad Arrows": 0.1,
+      "Mabufudyne": 0.2,
+      "Amrita": 66,
+      "Magarudyne": 67,
+      "Power Charge": 69,
+      "Invigorate 3": 72,
+      "Shadow Hound": 3883
+    }
+  },
+  "Seiryuu": {
+    "arcana": "Temperance",
+    "level": 36,
+    "stats": [
+      26,
+      24,
+      27,
+      22,
+      25
+    ],
+    "skills": {
+      "Garula": 0.1,
+      "Poison Mist": 0.2,
+      "Matarunda": 0.3,
+      "Magarula": 37,
+      "Diarama": 39,
+      "Virus Breath": 40
+    }
+  },
+  "Seiten Taisei": {
+    "arcana": "Tower",
+    "level": 67,
+    "stats": [
+      51,
+      38,
+      43,
+      51,
+      45
+    ],
+    "skills": {
+      "Arrow Rain": 0.1,
+      "Apt Pupil": 0.2,
+      "Fast Retreat": 0.3,
+      "Weary Thrust": 70,
+      "Weapons Master": 71,
+      "Regenerate 3": 73
+    }
+  },
+  "Seth": {
+    "arcana": "Moon",
+    "level": 66,
+    "stats": [
+      48,
+      53,
+      46,
+      34,
+      40
+    ],
+    "skills": {
+      "Agidyne": 0.1,
+      "Maragidyne": 0.2,
+      "Fire Amp": 68,
+      "Fire Break": 69,
+      "Null Ice": 71,
+      "Repel Light": 72
+    }
   },
   "Shiva": {
-    "heart": "Destroyer's Drums",
-    "heartlvl": 90,
-    "inherits": "fireA",
-    "lvl": 82,
-    "race": "Tower",
-    "resists": "--n-wd-n--",
+    "arcana": "Tower",
+    "level": 82,
+    "stats": [
+      60,
+      55,
+      48,
+      59,
+      56
+    ],
     "skills": {
       "Maziodyne": 0.1,
       "Enduring Soul": 0.2,
-      "Invigorate 3": 0.3,
-      "Pralaya": 83,
-      "Life Aid": 84,
-      "God's Hand": 86,
-      "Ali Dance": 88
-    },
-    "stats": [63, 57, 48, 57, 55]
+      "Sexy Dance": 0.3,
+      "Pralaya": 85,
+      "Invigorate 3": 86,
+      "Victory Cry": 88,
+      "Ardhanari": 3883
+    }
   },
   "Siegfried": {
-    "heart": "Nibelung Ore",
-    "heartlvl": 59,
-    "inherits": "lightA",
-    "lvl": 54,
-    "race": "Strength",
-    "resists": "ns-----nw-",
+    "arcana": "Strength",
+    "level": 59,
+    "stats": [
+      50,
+      43,
+      40,
+      41,
+      32
+    ],
     "skills": {
-      "Deathbound": 0.1,
-      "Charge": 0.2,
-      "Auto Rebellion": 0.3,
-      "Auto Masuku": 55,
-      "Crit Rate Amp": 57,
-      "Brave Blade": 59,
-      "Slash Amp": 61,
-      "Scarlet Havoc": 5217
-    },
-    "stats": [44, 29, 38, 36, 25]
-  },
-  "Silky": {
-    "inherits": "iceA",
-    "lvl": 5,
-    "race": "Lovers",
-    "resists": "---wsw----",
-    "skills": {
-      "Bewilder": 0.1,
-      "Bufu": 0.2,
-      "Dia": 6,
-      "Baisudi": 7,
-      "Sharp Student": 9
-    },
-    "stats": [3, 7, 3, 4, 5]
+      "Tempest Slash": 0.1,
+      "Power Charge": 0.2,
+      "Auto-Masuku": 0.3,
+      "High Counter": 62,
+      "Vorpal Blade": 63,
+      "Arms Master": 65,
+      "Weapons Master": 66,
+      "Scarlet Havoc": 3883
+    }
   },
   "Skadi": {
-    "heart": "Shadow Lipstick",
-    "heartlvl": 74,
-    "inherits": "iceA",
-    "lvl": 68,
-    "race": "Empress",
-    "resists": "---wd-s---",
+    "arcana": "Empress",
+    "level": 80,
+    "stats": [
+      48,
+      57,
+      47,
+      45,
+      50
+    ],
     "skills": {
       "Mabufudyne": 0.1,
       "Tetrakarn": 0.2,
-      "Vorpal Blade": 0.3,
-      "Diamond Dust": 69,
-      "Maeigaon": 70,
-      "Ice Amp": 72,
-      "Drain Fire": 75
-    },
-    "stats": [52, 58, 33, 40, 40]
-  },
-  "Slime": {
-    "inherits": "almighty",
-    "lvl": 12,
-    "race": "Fool",
-    "resists": "ss-w--w-s-",
-    "skills": {
-      "Bash": 0.1,
-      "Evil Touch": 0.2,
-      "Raging Tiger": 0.3,
-      "Mudo": 13,
-      "Fire Break": 15,
-      "Survive Light": 16
-    },
-    "stats": [10, 6, 14, 6, 7]
+      "Ice Amp": 0.3,
+      "Akasha Arts": 83,
+      "Absorb Fire": 84,
+      "Niflheim": 86
+    }
   },
   "Succubus": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 51,
-    "inherits": "ailment",
-    "lvl": 47,
-    "race": "Devil",
-    "resists": "--wr---wd-",
+    "arcana": "Devil",
+    "level": 43,
+    "stats": [
+      24,
+      36,
+      27,
+      32,
+      27
+    ],
     "skills": {
-      "Maeiga": 0.1,
-      "Sexy Dance": 0.2,
-      "Spirit Drain": 0.3,
-      "Drain Ability": 48,
-      "Maragion": 49,
-      "Eigaon": 51,
-      "Evade Light": 53
-    },
-    "stats": [26, 41, 28, 33, 27]
+      "Sexy Dance": 0.1,
+      "Mudoon": 0.2,
+      "Agidyne": 0.3,
+      "Fire Break": 45,
+      "Ailment Boost": 46,
+      "Null Light": 48,
+      "Dreamfest": 3883
+    }
   },
   "Surt": {
-    "heart": "Muspell Rock",
-    "heartlvl": 66,
-    "inherits": "fireA",
-    "lvl": 60,
-    "race": "Magician",
-    "resists": "---dw-----",
+    "arcana": "Magician",
+    "level": 52,
+    "stats": [
+      40,
+      49,
+      35,
+      26,
+      32
+    ],
     "skills": {
       "Agidyne": 0.1,
       "Deathbound": 0.2,
-      "Auto Tarukaja": 0.3,
-      "Maragidyne": 61,
-      "Marakunda": 62,
-      "Inferno": 64,
-      "Fire Amp": 66
-    },
-    "stats": [43, 51, 40, 28, 34]
+      "Fire Boost": 0.3,
+      "Maragidyne": 54,
+      "Ragnarok": 58,
+      "Fire Amp": 59
+    }
   },
   "Susano-o": {
-    "heart": "Susano-o's Cloth",
-    "heartlvl": 84,
-    "inherits": "pierceB",
-    "lvl": 77,
-    "race": "Fool",
-    "resists": "--r--wnw--",
+    "arcana": "Fool",
+    "level": 76,
+    "stats": [
+      57,
+      51,
+      53,
+      49,
+      53
+    ],
     "skills": {
       "Brave Blade": 0.1,
-      "Vorpal Blade": 0.2,
-      "Charge": 0.3,
-      "Auto Mataru": 78,
-      "High Counter": 79,
-      "Slash Amp": 81,
-      "Repel Light": 84,
-      "Trickster": 5217
-    },
-    "stats": [71, 35, 43, 49, 55]
+      "Tetrakarn": 0.2,
+      "Fast Retreat": 0.3,
+      "Vorpal Blade": 79,
+      "Regenerate 3": 81,
+      "Repel Strike": 83,
+      "Trickster": 3883
+    }
   },
   "Suzaku": {
-    "heart": "Soul Sea Drop",
-    "heartlvl": 60,
-    "inherits": "fireL",
-    "lvl": 55,
-    "race": "Temperance",
-    "resists": "---rw--s--",
+    "arcana": "Temperance",
+    "level": 51,
+    "stats": [
+      32,
+      39,
+      32,
+      40,
+      29
+    ],
     "skills": {
       "Maragion": 0.1,
-      "Diarahan": 0.2,
-      "Samarecarm": 0.3,
-      "Regenerate 3": 56,
-      "Agidyne": 57,
-      "Fast Heal": 59,
-      "Fire Amp": 61
-    },
-    "stats": [31, 40, 32, 42, 31]
+      "Masukukaja": 0.2,
+      "Agidyne": 53,
+      "Mediarama": 54,
+      "Growth 3": 55,
+      "Resist Ice": 57
+    }
   },
   "Take-Mikazuchi": {
-    "inherits": "elecB",
-    "lvl": 23,
-    "race": "Emperor",
-    "resists": "s----nw---",
+    "arcana": "Emperor",
+    "level": 24,
+    "stats": [
+      19,
+      18,
+      13,
+      15,
+      14
+    ],
     "skills": {
       "Mazio": 0.1,
-      "Fatal End": 0.2,
-      "Elec Break": 0.3,
-      "Zionga": 24,
-      "Auto Tarukaja": 26,
+      "Pulinpa": 0.2,
+      "Auto-Tarukaja": 0.3,
+      "Zionga": 26,
       "Getsu-ei": 27,
-      "Mazionga": 28
-    },
-    "stats": [18, 17, 13, 15, 14]
+      "Elec Break": 29,
+      "Elec Boost": 30,
+      "Thunder Call": 3883
+    }
   },
   "Take-Minakata": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 23,
-    "inherits": "pierceB",
-    "lvl": 20,
-    "race": "Hanged",
-    "resists": "--ss-s-ww-",
+    "arcana": "Hanged",
+    "level": 21,
+    "stats": [
+      16,
+      16,
+      19,
+      10,
+      9
+    ],
     "skills": {
       "Zio": 0.1,
-      "Auto Rakukaja": 0.2,
-      "Dekaja": 0.3,
-      "Survive Dark": 21,
-      "Zionga": 22,
+      "Mazio": 0.2,
+      "Survive Light": 22,
+      "Auto-Rakukaja": 23,
       "Dodge Strike": 24,
-      "Elec Boost": 25
-    },
-    "stats": [14, 14, 21, 10, 10]
+      "Dekaja": 26
+    }
   },
-  "Tam Lin": {
-    "inherits": "lightA",
-    "lvl": 13,
-    "race": "Lovers",
-    "resists": "s----n-sw-",
+  "Taraka": {
+    "arcana": "Hermit",
+    "level": 38,
+    "stats": [
+      27,
+      23,
+      26,
+      28,
+      17
+    ],
     "skills": {
-      "Power Slash": 0.1,
-      "Zio": 0.2,
-      "Sukukaja": 0.3,
-      "Fatal End": 15,
-      "Mazio": 17,
-      "Survive Dark": 18
-    },
-    "stats": [12, 11, 8, 10, 5]
+      "Getsu-ei": 0.1,
+      "Eerie Sound": 0.2,
+      "Tarukaja": 0.3,
+      "Mighty Swing": 41,
+      "Distress Boost": 42,
+      "Fatal End": 43
+    }
   },
   "Thanatos": {
-    "heart": "Jaw of Death",
-    "heartlvl": 85,
-    "inherits": "darkA",
-    "lvl": 78,
-    "race": "Death",
-    "resists": "---sssswr-",
+    "arcana": "Death",
+    "level": 64,
+    "stats": [
+      48,
+      51,
+      44,
+      39,
+      40
+    ],
     "skills": {
-      "Maeigaon": 0.1,
-      "Mamudoon": 0.2,
-      "Ghastly Wail": 0.3,
-      "Dark Amp": 79,
-      "Enduring Soul": 80,
-      "Brave Blade": 82,
-      "Megidolaon": 84
-    },
-    "stats": [52, 66, 53, 45, 40]
+      "Ghastly Wail": 0.1,
+      "Tempest Slash": 0.2,
+      "Megidola": 0.3,
+      "Mahamaon": 66,
+      "Weapons Master": 68,
+      "Brave Blade": 71
+    }
   },
   "Thor": {
-    "heart": "Thunder Whetstone",
-    "heartlvl": 70,
-    "inherits": "elecA",
-    "lvl": 64,
-    "race": "Chariot",
-    "resists": "-n---nw---",
+    "arcana": "Chariot",
+    "level": 53,
+    "stats": [
+      42,
+      45,
+      34,
+      30,
+      34
+    ],
     "skills": {
       "Ziodyne": 0.1,
-      "Maziodyne": 0.2,
-      "Gigantic Fist": 0.3,
-      "High Counter": 66,
-      "Elec Amp": 68,
-      "God's Hand": 71
-    },
-    "stats": [54, 50, 42, 30, 35]
-  },
-  "Thoth": {
-    "inherits": "lidarkA",
-    "lvl": 40,
-    "race": "Hierophant",
-    "resists": "-w---n-nw-",
-    "skills": {
-      "Zionga": 0.1,
-      "Mahama": 0.2,
-      "Diarama": 0.3,
-      "Mazionga": 41,
-      "Soul Shift": 43,
-      "Megido": 44,
-      "Concentrate": 45
-    },
-    "stats": [20, 40, 20, 25, 25]
+      "Vicious Strike": 0.2,
+      "High Counter": 0.3,
+      "Auto-Mataru": 55,
+      "Elec Amp": 59,
+      "Weapons Master": 60,
+      "Thunder Call": 3883
+    }
   },
   "Throne": {
-    "inherits": "lightA",
-    "lvl": 52,
-    "race": "Justice",
-    "resists": "-w-n---rw-",
+    "arcana": "Justice",
+    "level": 51,
+    "stats": [
+      35,
+      32,
+      26,
+      34,
+      33
+    ],
     "skills": {
-      "Mahama": 0.1,
-      "Maragion": 0.2,
-      "Recarmdra": 0.3,
-      "Samarecarm": 53,
-      "Kougaon": 54,
-      "Hama Boost": 55,
-      "Mahamaon": 57
-    },
-    "stats": [39, 35, 30, 30, 33]
+      "Hamaon": 0.1,
+      "Hama Boost": 0.2,
+      "Mahamaon": 0.3,
+      "Recarmdra": 53,
+      "Mediarahan": 55,
+      "Resist Dark": 57
+    }
   },
-  "Thunderbird": {
-    "inherits": "lidarkA",
-    "lvl": 35,
-    "race": "Sun",
-    "resists": "--w--d-n--",
+  "Titan": {
+    "arcana": "Strength",
+    "level": 23,
+    "stats": [
+      23,
+      10,
+      18,
+      11,
+      14
+    ],
     "skills": {
-      "Mazionga": 0.1,
-      "Shock Boost": 0.2,
-      "Counterstrike": 36,
-      "Rebellion": 37,
-      "Ziodyne": 39,
-      "Null Elec": 41
-    },
-    "stats": [18, 28, 18, 32, 21]
+      "Zan-ei": 0.1,
+      "Rebellion": 0.2,
+      "Mudo": 0.3,
+      "Kill Rush": 25,
+      "Dodge Slash": 26,
+      "Swift Strike": 29
+    }
   },
   "Titania": {
-    "heart": "Soul Sea Droplet",
-    "heartlvl": 52,
-    "inherits": "lidarkA",
-    "lvl": 49,
-    "race": "Lovers",
-    "resists": "---wn--s--",
+    "arcana": "Lovers",
+    "level": 48,
+    "stats": [
+      19,
+      39,
+      23,
+      31,
+      39
+    ],
     "skills": {
-      "Bufudyne": 0.1,
-      "Mabufula": 0.2,
-      "Magarula": 50,
-      "Freeze Boost": 51,
-      "Concentrate": 53,
-      "Mabufudyne": 55
-    },
-    "stats": [19, 45, 23, 34, 36]
+      "Mediarama": 0.1,
+      "Mind Charge": 0.2,
+      "Magarula": 49,
+      "Mabufula": 51,
+      "Divine Grace": 52,
+      "Ice Amp": 54,
+      "Summer Dream": 3883
+    }
   },
   "Trumpeter": {
-    "inherits": "almighty",
-    "lvl": 59,
-    "race": "Judgement",
-    "resists": "----n-wrn-",
+    "arcana": "Judgement",
+    "level": 65,
+    "stats": [
+      43,
+      47,
+      43,
+      46,
+      43
+    ],
     "skills": {
       "Hamaon": 0.1,
       "Mudoon": 0.2,
-      "High Counter": 0.3,
-      "Makougaon": 60,
-      "Resist Ailments": 62,
-      "Mediarahan": 63,
-      "Debilitate": 65
-    },
-    "stats": [44, 44, 37, 35, 33]
+      "Garudyne": 0.3,
+      "Mabufudyne": 67,
+      "Ice Break": 68,
+      "Tetrakarn": 70
+    }
+  },
+  "Ubelluris": {
+    "arcana": "Hanged",
+    "level": 48,
+    "stats": [
+      32,
+      29,
+      40,
+      24,
+      26
+    ],
+    "skills": {
+      "Herculean Strike": 0.1,
+      "Recarmdra": 0.2,
+      "Null Distress": 0.3,
+      "Gigantic Fist": 50,
+      "Evade Strike": 52,
+      "Raging Tiger": 53,
+      "Diarahan": 54
+    }
   },
   "Unicorn": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 13,
-    "inherits": "recovery",
-    "lvl": 11,
-    "race": "Priestess",
-    "resists": "----n-wnw-",
+    "arcana": "Priestess",
+    "level": 11,
+    "stats": [
+      7,
+      10,
+      8,
+      9,
+      6
+    ],
     "skills": {
-      "Kouha": 0.1,
-      "Dia": 0.2,
-      "Hama": 12,
-      "Patra": 13,
-      "Auto Rakukaja": 15,
-      "Resist Rage": 16
-    },
-    "stats": [5, 10, 12, 8, 7]
+      "Dia": 0.1,
+      "Hama": 0.2,
+      "Poisma": 0.3,
+      "Dodge Pierce": 12,
+      "Enradi": 13,
+      "Auto-Rakukaja": 15
+    }
   },
   "Uriel": {
-    "inherits": "fireL",
-    "lvl": 57,
-    "race": "Aeon",
-    "resists": "s--dwn-nw-",
+    "arcana": "Aeon",
+    "level": 63,
+    "stats": [
+      44,
+      51,
+      41,
+      41,
+      38
+    ],
     "skills": {
-      "Vorpal Blade": 0.1,
-      "Kougaon": 0.2,
-      "Sharp Student": 0.3,
-      "Agidyne": 58,
-      "Angelic Grace": 60,
-      "Mahamaon": 61,
-      "Heaven's Blade": 63
-    },
-    "stats": [47, 42, 35, 36, 30]
+      "Mahamaon": 0.1,
+      "Maragidyne": 0.2,
+      "Deathbound": 0.3,
+      "Fire Amp": 65,
+      "Tempest Slash": 66,
+      "High Counter": 67
+    }
   },
   "Valkyrie": {
-    "inherits": "iceL",
-    "lvl": 10,
-    "race": "Strength",
-    "resists": "--sws-----",
+    "arcana": "Strength",
+    "level": 11,
+    "stats": [
+      10,
+      7,
+      8,
+      8,
+      7
+    ],
     "skills": {
-      "Power Slash": 0.1,
-      "Bufu": 0.2,
-      "Dodge Slash": 0.3,
-      "Auto Sukukaja": 12,
-      "Vacuum Slash": 13,
-      "Fatal End": 15
-    },
-    "stats": [11, 7, 6, 8, 5]
-  },
-  "Vanadis": {
-    "inherits": "lightA",
-    "lvl": 58,
-    "race": "Star",
-    "resists": "s------nw-",
-    "skills": {
-      "Masquerade": 0.1,
-      "Kougaon": 0.2,
-      "Revolution": 0.3,
-      "Soul Chain": 59,
-      "Makougaon": 61,
-      "Brave Blade": 62,
-      "Ali Dance": 64
-    },
-    "stats": [43, 38, 30, 42, 33]
+      "Cleave": 0.1,
+      "Dodge Slash": 0.2,
+      "Mabufu": 13,
+      "Auto-Sukukaja": 14,
+      "Power Slash": 15,
+      "Valhalla": 3883
+    }
   },
   "Vasuki": {
-    "inherits": "elecA",
-    "lvl": 38,
-    "race": "Hanged",
-    "resists": "----sswr--",
+    "arcana": "Hanged",
+    "level": 38,
+    "stats": [
+      27,
+      27,
+      30,
+      19,
+      18
+    ],
     "skills": {
       "Mahama": 0.1,
-      "Neuro Slash": 0.2,
-      "Poison Mist": 0.3,
-      "Recarmdra": 39,
-      "Hama Boost": 40,
+      "Twin Shot": 0.2,
+      "Recarmdra": 40,
+      "Dodge Wind": 41,
       "Counterstrike": 42,
-      "Mahamaon": 44
-    },
-    "stats": [27, 27, 35, 15, 17]
+      "Resist Light": 43
+    }
+  },
+  "Vetala": {
+    "arcana": "Devil",
+    "level": 24,
+    "stats": [
+      21,
+      16,
+      21,
+      10,
+      17
+    ],
+    "skills": {
+      "Tentarafoo": 0.1,
+      "Rebellion": 0.2,
+      "Kill Rush": 0.3,
+      "Dekaja": 26,
+      "Foul Breath": 27,
+      "Evil Smile": 28
+    }
   },
   "Virtue": {
-    "inherits": "lightA",
-    "lvl": 32,
-    "race": "Justice",
-    "resists": "------srw-",
+    "arcana": "Justice",
+    "level": 32,
+    "stats": [
+      22,
+      23,
+      15,
+      20,
+      23
+    ],
     "skills": {
-      "Magaru": 0.1,
-      "Kouga": 0.2,
-      "Null Poison": 33,
-      "Mahama": 34,
-      "Light Boost": 35,
-      "Makouga": 37
-    },
-    "stats": [21, 24, 15, 22, 22]
+      "Mahama": 0.1,
+      "Infuriate": 0.2,
+      "Tarukaja": 0.3,
+      "Survive Dark": 34,
+      "Hamaon": 36,
+      "Rage Boost": 37,
+      "Endure Dark": 39
+    }
   },
   "Vishnu": {
-    "heart": "Preservation Conch",
-    "heartlvl": 85,
-    "inherits": "lightA",
-    "lvl": 78,
-    "race": "Sun",
-    "resists": "----nn-dw-",
+    "arcana": "Sun",
+    "level": 78,
+    "stats": [
+      53,
+      58,
+      47,
+      56,
+      51
+    ],
     "skills": {
       "Akasha Arts": 0.1,
-      "Bufudyne": 0.2,
-      "Ziodyne": 0.3,
-      "Panta Rhei": 79,
-      "Concentrate": 80,
-      "Ali Dance": 82,
-      "Salvation": 84
-    },
-    "stats": [65, 55, 50, 53, 42]
+      "Ziodyne": 0.2,
+      "Bufudyne": 0.3,
+      "Mind Charge": 80,
+      "God's Hand": 82,
+      "Salvation": 86,
+      "Infinity": 3883
+    }
   },
-  "White Rider": {
-    "inherits": "fireA",
-    "lvl": 46,
-    "race": "Strength",
-    "resists": "---sw--nr-",
+  "Yamatano-Orochi": {
+    "arcana": "Moon",
+    "level": 26,
+    "stats": [
+      21,
+      17,
+      21,
+      13,
+      19
+    ],
     "skills": {
-      "Maeiga": 0.1,
-      "Arrow Rain": 0.2,
-      "Mudoon": 0.3,
-      "Poison Arrow": 47,
-      "Pierce Boost": 48,
-      "Null Fear": 49,
-      "Evade Dark": 51
-    },
-    "stats": [36, 27, 30, 27, 25]
-  },
-  "Yakshini": {
-    "inherits": "iceA",
-    "lvl": 32,
-    "race": "Empress",
-    "resists": "--swn-----",
-    "skills": {
-      "Sexy Dance": 0.1,
-      "Fatal End": 0.2,
-      "Blade of Fury": 33,
-      "Charm Boost": 35,
-      "Multi-Target Boost": 36,
-      "Deathbound": 37
-    },
-    "stats": [33, 16, 13, 25, 18]
-  },
-  "Yamata-no-Orochi": {
-    "heart": "Soul Sea Driblet",
-    "heartlvl": 28,
-    "inherits": "strikeA",
-    "lvl": 25,
-    "race": "Moon",
-    "resists": "w---nn----",
-    "skills": {
-      "Bufula": 0.1,
-      "Zio": 0.2,
-      "Single Shot": 0.3,
-      "Single-Target Boost": 26,
-      "Null Freeze": 27,
-      "Marakukaja": 29,
-      "Cruel Attack": 30
-    },
-    "stats": [19, 19, 17, 13, 14]
+      "Kill Rush": 0.1,
+      "Auto-Rakukaja": 0.2,
+      "Mabufu": 0.3,
+      "Dekaja": 28,
+      "Swift Strike": 30,
+      "Ice Boost": 31
+    }
   },
   "Yatagarasu": {
-    "inherits": "fireL",
-    "lvl": 24,
-    "race": "Sun",
-    "resists": "----w-sn--",
+    "arcana": "Sun",
+    "level": 30,
+    "stats": [
+      22,
+      23,
+      18,
+      24,
+      19
+    ],
     "skills": {
-      "Growth 1": 0.1,
-      "Sukunda": 0.2,
+      "Diarama": 0.1,
+      "Sukukaja": 0.2,
       "Zan-ei": 0.3,
-      "Sukukaja": 25,
-      "Diarama": 26,
-      "Infuriate": 28,
-      "Masukunda": 30
-    },
-    "stats": [16, 16, 14, 24, 13]
+      "Masukunda": 31,
+      "Infuriate": 32,
+      "Invigorate 1": 34,
+      "Growth 2": 37
+    }
   },
-  "Yurlungur": {
-    "heart": "Rainbow Snake Scale",
-    "heartlvl": 77,
-    "inherits": "lightA",
-    "lvl": 71,
-    "race": "Temperance",
-    "resists": "---s-s-sw-",
+  "Yomotsu Shikome": {
+    "arcana": "Hermit",
+    "level": 9,
+    "stats": [
+      3,
+      8,
+      9,
+      10,
+      4
+    ],
     "skills": {
-      "Kougaon": 0.1,
-      "Evade Elec": 0.2,
-      "Evade Fire": 0.3,
-      "Maziodyne": 72,
-      "Revolution": 74,
-      "Makougaon": 75,
-      "Evade Dark": 77
-    },
-    "stats": [41, 45, 63, 42, 38]
-  },
-  "Zorro": {
-    "inherits": "windA",
-    "lvl": 22,
-    "race": "Magician",
-    "resists": "-----ws---",
-    "skills": {
-      "Magaru": 0.1,
-      "Media": 0.2,
-      "Wind Driver": 0.3,
-      "Garula": 23,
-      "Recarm": 24,
-      "Divine Grace": 25,
-      "Magarula": 27
-    },
-    "stats": [13, 17, 13, 15, 15]
+      "Evil Touch": 0.1,
+      "Tarunda": 0.2,
+      "Bufu": 0.3,
+      "Auto-Tarukaja": 11,
+      "Mudo": 13,
+      "Magaru": 14
+    }
   },
   "Zouchouten": {
-    "inherits": "elecB",
-    "lvl": 14,
-    "race": "Chariot",
-    "resists": "-s----w---",
+    "arcana": "Chariot",
+    "level": 14,
+    "stats": [
+      14,
+      6,
+      13,
+      7,
+      9
+    ],
     "skills": {
       "Bash": 0.1,
       "Zio": 0.2,
-      "Crit Rate Boost": 0.3,
-      "Auto Tarukaja": 15,
+      "Tarukaja": 0.3,
       "Assault Dive": 16,
-      "Rebellion": 18,
-      "Swift Strike": 19
-    },
-    "stats": [14, 7, 13, 6, 10]
+      "Sharp Student": 18,
+      "Auto-Sukukaja": 19
+    }
+  },
+  "Alp": {
+    "arcana": "Lovers",
+    "level": 6,
+    "stats": [
+      3,
+      7,
+      5,
+      5,
+      5
+    ],
+    "skills": {
+      "Dia": 0.1,
+      "Sukunda": 0.2,
+      "Garu": 0.3,
+      "Marin Karin": 7,
+      "Charmdi": 8,
+      "Mudo": 11
+    }
+  },
+  "Atavaka": {
+    "arcana": "Aeon",
+    "level": 80,
+    "stats": [
+      57,
+      54,
+      50,
+      54,
+      56
+    ],
+    "skills": {
+      "Mahamaon": 0.1,
+      "Megidola": 0.2,
+      "Akasha Arts": 82,
+      "Mediarahan": 83,
+      "Brave Blade": 85
+    }
+  },
+  "Baal Zebul": {
+    "arcana": "Moon",
+    "level": 71,
+    "stats": [
+      50,
+      55,
+      47,
+      44,
+      41
+    ],
+    "skills": {
+      "Mamudoon": 0.1,
+      "Poison Mist": 0.2,
+      "Megidola": 0.3,
+      "Bufudyne": 72,
+      "Mudo Boost": 73,
+      "Maragidyne": 75
+    }
+  },
+  "Empusa": {
+    "arcana": "Fortune",
+    "level": 23,
+    "stats": [
+      10,
+      20,
+      10,
+      16,
+      20
+    ],
+    "skills": {
+      "Magaru": 0.1,
+      "Tarunda": 0.2,
+      "Growth 1": 25,
+      "Garula": 26,
+      "Mazio": 27,
+      "Provoke": 28
+    }
+  },
+  "Ghoul": {
+    "arcana": "Death",
+    "level": 18,
+    "stats": [
+      13,
+      15,
+      15,
+      11,
+      11
+    ],
+    "skills": {
+      "Mudo": 0.1,
+      "Assault Dive": 0.2,
+      "Mamudo": 20,
+      "Dekaja": 21,
+      "Provoke": 22,
+      "Gale Slash": 23
+    }
+  },
+  "Hecatoncheires": {
+    "arcana": "Hanged",
+    "level": 54,
+    "stats": [
+      37,
+      32,
+      45,
+      20,
+      35
+    ],
+    "skills": {
+      "Gigantic Fist": 0.1,
+      "Evade Strike": 0.2,
+      "Vicious Strike": 56,
+      "Endure Light": 57,
+      "Mamudoon": 58,
+      "Recarmdra": 59
+    }
+  },
+  "Helel": {
+    "arcana": "Star",
+    "level": 88,
+    "stats": [
+      64,
+      63,
+      61,
+      57,
+      58
+    ],
+    "skills": {
+      "Primal Force": 0.1,
+      "Maragidyne": 0.2,
+      "Mind Charge": 0.3,
+      "Morning Star": 91,
+      "Absorb Slash": 92,
+      "Salvation": 94,
+      "Armageddon": 3883
+    }
+  },
+  "Hell Biker": {
+    "arcana": "Hanged",
+    "level": 60,
+    "stats": [
+      49,
+      35,
+      49,
+      40,
+      14
+    ],
+    "skills": {
+      "Agidyne": 0.1,
+      "Maragidyne": 0.2,
+      "Fire Amp": 62,
+      "Vicious Strike": 63,
+      "Endure": 64,
+      "Absorb Fire": 66
+    }
+  },
+  "High Pixie": {
+    "arcana": "Priestess",
+    "level": 21,
+    "stats": [
+      13,
+      18,
+      12,
+      11,
+      16
+    ],
+    "skills": {
+      "Mabufu": 0.1,
+      "Holy Arrow": 0.2,
+      "Bufula": 23,
+      "Media": 24,
+      "Rakukaja": 25,
+      "Trafuri": 26
+    }
+  },
+  "Hua Po": {
+    "arcana": "Magician",
+    "level": 20,
+    "stats": [
+      10,
+      19,
+      11,
+      14,
+      13
+    ],
+    "skills": {
+      "Maragi": 0.1,
+      "Re Patra": 0.2,
+      "Agilao": 22,
+      "Rakunda": 23,
+      "Fire Boost": 24,
+      "Null Freeze": 26
+    }
+  },
+  "Kartikeya": {
+    "arcana": "Star",
+    "level": 70,
+    "stats": [
+      52,
+      44,
+      42,
+      53,
+      43
+    ],
+    "skills": {
+      "Myriad Arrows": 0.1,
+      "Masukukaja": 0.2,
+      "Maziodyne": 72,
+      "High Counter": 73,
+      "Absorb Elec": 75,
+      "Primal Force": 77
+    }
+  },
+  "Kumbhanda": {
+    "arcana": "Hermit",
+    "level": 56,
+    "stats": [
+      38,
+      37,
+      35,
+      45,
+      20
+    ],
+    "skills": {
+      "Agidyne": 0.1,
+      "Auto-Masuku": 0.2,
+      "Null Charm": 58,
+      "Fire Amp": 59,
+      "Regenerate 2": 60,
+      "Alertness": 62
+    }
+  },
+  "Mara": {
+    "arcana": "Tower",
+    "level": 77,
+    "stats": [
+      60,
+      50,
+      52,
+      48,
+      51
+    ],
+    "skills": {
+      "Myriad Arrows": 0.1,
+      "Maralagidyne": 0.2,
+      "Primal Force": 79,
+      "Power Charge": 80,
+      "Tetrakarn": 82,
+      "Absorb Ice": 84
+    }
+  },
+  "Mothman": {
+    "arcana": "Hermit",
+    "level": 32,
+    "stats": [
+      15,
+      25,
+      19,
+      27,
+      25
+    ],
+    "skills": {
+      "Eerie Sound": 0.1,
+      "Foul Breath": 0.2,
+      "Wind Break": 35,
+      "Fire Break": 36,
+      "Megido": 37,
+      "Ziodyne": 38
+    }
+  },
+  "Nidhoggr": {
+    "arcana": "Aeon",
+    "level": 69,
+    "stats": [
+      55,
+      45,
+      55,
+      32,
+      48
+    ],
+    "skills": {
+      "Mamudoon": 0.1,
+      "Virus Breath": 0.2,
+      "Revolution": 71,
+      "Matarunda": 72,
+      "Absorb Pierce": 74
+    }
+  },
+  "Orpheus Telos": {
+    "arcana": "Fool",
+    "level": 90,
+    "stats": [
+      62,
+      62,
+      62,
+      62,
+      62
+    ],
+    "skills": {
+      "Victory Cry": 97
+    }
+  },
+  "Pazuzu": {
+    "arcana": "Devil",
+    "level": 52,
+    "stats": [
+      34,
+      41,
+      31,
+      36,
+      34
+    ],
+    "skills": {
+      "Poison Mist": 0.1,
+      "Garudyne": 0.2,
+      "Spirit Drain": 54,
+      "Poison Arrow": 55,
+      "Virus Breath": 57,
+      "Arrow Rain": 58
+    }
+  },
+  "Rakshasa": {
+    "arcana": "Strength",
+    "level": 16,
+    "stats": [
+      16,
+      8,
+      13,
+      10,
+      8
+    ],
+    "skills": {
+      "Power Slash": 0.1,
+      "Dodge Slash": 0.2,
+      "Getsu-ei": 18,
+      "Zionga": 20,
+      "Counter": 21,
+      "Gale Slash": 22
+    }
+  },
+  "Shiisaa": {
+    "arcana": "Hierophant",
+    "level": 26,
+    "stats": [
+      18,
+      18,
+      17,
+      17,
+      15
+    ],
+    "skills": {
+      "Mabufu": 0.1,
+      "Gale Slash": 0.2,
+      "Mazio": 28,
+      "Dodge Fire": 29,
+      "Ice Boost": 30,
+      "Fatal End": 32
+    }
+  },
+  "Slime": {
+    "arcana": "Fool",
+    "level": 12,
+    "stats": [
+      9,
+      9,
+      7,
+      8,
+      10
+    ],
+    "skills": {
+      "Single Shot": 0.1,
+      "Evil Touch": 0.2,
+      "Maragi": 13,
+      "Raging Tiger": 14,
+      "Eerie Sound": 16,
+      "Survive Light": 18
+    }
+  },
+  "Suparna": {
+    "arcana": "Sun",
+    "level": 70,
+    "stats": [
+      44,
+      52,
+      43,
+      54,
+      45
+    ],
+    "skills": {
+      "Magarudyne": 0.1,
+      "Diarahan": 0.2,
+      "Wind Amp": 72,
+      "Mabufudyne": 74,
+      "Tetrakarn": 76
+    }
+  },
+  "Thoth": {
+    "arcana": "Hierophant",
+    "level": 41,
+    "stats": [
+      23,
+      32,
+      26,
+      23,
+      26
+    ],
+    "skills": {
+      "Zionga": 0.1,
+      "Mahama": 0.2,
+      "Growth 2": 43,
+      "Mazionga": 44,
+      "Megido": 45,
+      "Mediarama": 46
+    }
+  },
+  "Yaksini": {
+    "arcana": "Empress",
+    "level": 50,
+    "stats": [
+      33,
+      32,
+      26,
+      33,
+      33
+    ],
+    "skills": {
+      "Fatal End": 0.1,
+      "Sexy Dance": 0.2,
+      "Blade of Fury": 52,
+      "Maragion": 53,
+      "Charm Boost": 54,
+      "Deathbound": 56
+    }
+  },
+  "Yurlungur": {
+    "arcana": "Temperance",
+    "level": 64,
+    "stats": [
+      43,
+      47,
+      49,
+      34,
+      41
+    ],
+    "skills": {
+      "Mabufudyne": 0.1,
+      "Garudyne": 0.2,
+      "Ice Amp": 66,
+      "Growth 3": 67,
+      "Mediarahan": 68,
+      "Samarecarm": 70,
+      "Repel Light": 71
+    }
+  },
+  "Mokoi": {
+    "arcana": "Devil",
+    "level": 18,
+    "stats": [
+      6,
+      9,
+      12,
+      17,
+      23
+    ],
+    "skills": {
+      "Evil Smile": 0.1,
+      "Fear Boost": 0.2,
+      "Stagnant Air": 0.3,
+      "Marin Karin": 19,
+      "Poison Mist": 20,
+      "Charm Boost": 21,
+      "Kill Rush": 22
+    }
+  },
+  "Neko Shogun": {
+    "arcana": "Star",
+    "level": 19,
+    "stats": [
+      18,
+      11,
+      11,
+      19,
+      7
+    ],
+    "skills": {
+      "Assault Dive": 0.1,
+      "Double Fangs": 0.2,
+      "Regenerate 1": 0.3,
+      "Counter": 20,
+      "Dodge Wind": 22,
+      "Swift Strike": 24
+    }
+  },
+  "Setanta": {
+    "arcana": "Star",
+    "level": 28,
+    "stats": [
+      26,
+      19,
+      18,
+      21,
+      14
+    ],
+    "skills": {
+      "Twin Shot": 0.1,
+      "Sharp Student": 0.2,
+      "Zionga": 0.3,
+      "Power Charge": 29,
+      "Auto-Tarukaja": 31,
+      "Resist Fire": 32,
+      "Auto-Sukukaja": 33
+    }
+  },
+  "Tam Lin": {
+    "arcana": "Lovers",
+    "level": 13,
+    "stats": [
+      9,
+      10,
+      5,
+      10,
+      8
+    ],
+    "skills": {
+      "Zio": 0.1,
+      "Tarukaja": 0.2,
+      "Power Slash": 0.3,
+      "Sharp Student": 14,
+      "Getsu-ei": 16,
+      "Mazio": 17,
+      "Auto-Rakukaja": 19
+    }
   }
 }
