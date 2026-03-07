@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -68,6 +69,10 @@ fun PersonaDetailScreen(
             
             if (!persona.description.isNullOrBlank()) {
                 item { DescriptionSection(persona.description) }
+            }
+            
+            if (!persona.unlock.isNullOrBlank()) {
+                item { UnlockSection(persona.unlock) }
             }
 
             item { StatsSection(persona, series.color) }
@@ -180,4 +185,39 @@ private fun AffinityRow(label: String, elements: List<String>, chipColor: Color)
 @Composable
 private fun SectionHeader(title: String) {
     Text(text = title, style = MaterialTheme.typography.titleMedium, color = TextPrimary, fontWeight = FontWeight.Bold)
+}
+
+
+@Composable
+private fun UnlockSection(unlock: String) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color(0xFF2A2A3E))
+            .padding(16.dp)
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                imageVector = Icons.Default.Lock,
+                contentDescription = null,
+                tint = Color(0xFFFFD700),
+                modifier = Modifier.size(20.dp)
+            )
+            Spacer(Modifier.width(12.dp))
+            Column {
+                Text(
+                    text = "Unlock Requirement",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = Color(0xFFFFD700)
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = unlock,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = TextPrimary
+                )
+            }
+        }
+    }
 }

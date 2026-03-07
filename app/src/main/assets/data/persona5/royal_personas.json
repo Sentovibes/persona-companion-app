@@ -71,7 +71,8 @@
                                 54,
                                 47
                             ],
-                  "trait":  "Just Die"
+                  "trait":  "Just Die",
+                  "unlock":  "Death Rank 10"
               },
     "Alilat":  {
                    "inherits":  "ice",
@@ -97,7 +98,8 @@
                                  49,
                                  45
                              ],
-                   "trait":  "Frigid Bloodline"
+                   "trait":  "Frigid Bloodline",
+                   "unlock":  "Unlocked Third Semester"
                },
     "Ame-no-Uzume":  {
                          "inherits":  "almighty",
@@ -365,7 +367,8 @@
                                 54,
                                 40
                             ],
-                  "trait":  "Naranari"
+                  "trait":  "Naranari",
+                  "unlock":  "Temperance Rank 10"
               },
     "Arsene":  {
                    "inherits":  "curse",
@@ -413,7 +416,8 @@
                                 49,
                                 35
                             ],
-                  "trait":  "Atomic Hellscape"
+                  "trait":  "Atomic Hellscape",
+                  "unlock":  "Sun Rank 10"
               },
     "Atavaka":  {
                     "inherits":  "phys",
@@ -488,7 +492,8 @@
                                 54,
                                 52
                             ],
-                  "trait":  "Vitality of the Tree"
+                  "trait":  "Vitality of the Tree",
+                  "unlock":  "Hanged Rank 10"
               },
     "Baal":  {
                  "inherits":  "wind",
@@ -588,7 +593,8 @@
                                     56,
                                     42
                                 ],
-                      "trait":  "Mother\u0027s Lament"
+                      "trait":  "Mother\u0027s Lament",
+                      "unlock":  "Devil Rank 10"
                   },
     "Belial":  {
                    "inherits":  "curse",
@@ -733,7 +739,8 @@
                                       42,
                                       35
                                   ],
-                        "trait":  "Frigid Bloodline"
+                        "trait":  "Frigid Bloodline",
+                        "unlock":  "Cleared \"One Who Bullies Bullies\""
                     },
     "Black Ooze":  {
                        "inherits":  "curse",
@@ -808,7 +815,8 @@
                                32,
                                24
                            ],
-                 "trait":  "Potent Hypnosis"
+                 "trait":  "Potent Hypnosis",
+                 "unlock":  "Cleared \"The Lovesick Cyberstalking Girl\""
              },
     "Byakhee":  {
                     "inherits":  "fire",
@@ -833,7 +841,8 @@
                                   51,
                                   32
                               ],
-                    "trait":  "Heated Bloodline"
+                    "trait":  "Heated Bloodline",
+                    "unlock":  "Unlocked Third Semester"
                 },
     "Byakko":  {
                    "inherits":  "ice",
@@ -957,7 +966,8 @@
                                   53,
                                   51
                               ],
-                    "trait":  "Chi You\u0027s Blessing"
+                    "trait":  "Chi You\u0027s Blessing",
+                    "unlock":  "Chariot Rank 10"
                 },
     "Chimera":  {
                     "inherits":  "phys",
@@ -982,7 +992,8 @@
                                   48,
                                   48
                               ],
-                    "trait":  "Foul Stench"
+                    "trait":  "Foul Stench",
+                    "unlock":  "Unlocked Third Semester"
                 },
     "Choronzon":  {
                       "inherits":  "curse",
@@ -1112,7 +1123,8 @@
                                  51,
                                  55
                              ],
-                   "trait":  "Linked Bloodline"
+                   "trait":  "Linked Bloodline",
+                   "unlock":  "Priestess Rank 10"
                },
     "Daisoujou":  {
                       "inherits":  "bless",
@@ -1315,7 +1327,8 @@
                                  48,
                                  43
                              ],
-                   "trait":  "Ailment Hunter"
+                   "trait":  "Ailment Hunter",
+                   "unlock":  "Unlocked Third Semester"
                },
     "Flauros":  {
                     "inherits":  "ailment",
@@ -1416,7 +1429,8 @@
                                      52,
                                      40
                                  ],
-                       "trait":  "Will of the Sword"
+                       "trait":  "Will of the Sword",
+                       "unlock":  "Magician Rank 10"
                    },
     "Fuu-Ki":  {
                    "inherits":  "wind",
@@ -1639,7 +1653,8 @@
                                  56,
                                  41
                              ],
-                   "trait":  "Mouth of Savoring"
+                   "trait":  "Mouth of Savoring",
+                   "unlock":  "Unlocked Third Semester"
                },
     "Hecatoncheires":  {
                            "inherits":  "psy",
@@ -1888,7 +1903,8 @@
                                  58,
                                  48
                              ],
-                   "trait":  "Grace of Mother"
+                   "trait":  "Grace of Mother",
+                   "unlock":  "Lovers Rank 10"
                },
     "Isis":  {
                  "inherits":  "healing",
@@ -2236,7 +2252,8 @@
                                  53,
                                  38
                              ],
-                   "trait":  "Universal Law"
+                   "trait":  "Universal Law",
+                   "unlock":  "Hierophant Rank 10"
                },
     "Koppa Tengu":  {
                         "inherits":  "wind",
@@ -2459,7 +2476,8 @@
                                   47,
                                   38
                               ],
-                    "trait":  "Wealth of Lotus"
+                    "trait":  "Wealth of Lotus",
+                    "unlock":  "Fortune Rank 10"
                 },
     "Lamia":  {
                   "inherits":  "fire",
@@ -2621,7 +2639,8 @@
                               46,
                               39
                           ],
-                "trait":  "Draining Mouth"
+                "trait":  "Draining Mouth",
+                "unlock":  "Unlocked Third Semester"
             },
     "Lucifer":  {
                     "inherits":  "almighty",
@@ -2647,7 +2666,8 @@
                                   56,
                                   51
                               ],
-                    "trait":  "Allure of Wisdom"
+                    "trait":  "Allure of Wisdom",
+                    "unlock":  "Star Rank 10"
                 },
     "Macabre":  {
                     "inherits":  "ailment",
@@ -2672,7 +2692,8 @@
                                   48,
                                   39
                               ],
-                    "trait":  "Ailment Hunter"
+                    "trait":  "Ailment Hunter",
+                    "unlock":  "Unlocked Third Semester"
                 },
     "Mada":  {
                  "inherits":  "fire",
@@ -2698,7 +2719,8 @@
                                59,
                                48
                            ],
-                 "trait":  "Drunken Passion"
+                 "trait":  "Drunken Passion",
+                 "unlock":  "Tower Rank 10"
              },
     "Makami":  {
                    "inherits":  "nuke",
@@ -2795,7 +2817,8 @@
                                 54,
                                 61
                             ],
-                  "trait":  "Ave Maria"
+                  "trait":  "Ave Maria",
+                  "unlock":  "Faith Rank 10"
               },
     "Matador":  {
                     "inherits":  "psy",
@@ -2870,7 +2893,8 @@
                                    57,
                                    42
                                ],
-                     "trait":  "Martyr\u0027s Gift"
+                     "trait":  "Martyr\u0027s Gift",
+                     "unlock":  "Justice Rank 10"
                  },
     "Michael":  {
                     "inherits":  "almighty",
@@ -3081,7 +3105,8 @@
                                         50,
                                         55
                                     ],
-                          "trait":  "Ghost Nest"
+                          "trait":  "Ghost Nest",
+                          "unlock":  "Empress Rank 10"
                       },
     "Mothman":  {
                     "inherits":  "elec",
@@ -3379,7 +3404,8 @@
                                52,
                                42
                            ],
-                 "trait":  "Bargain Bolts"
+                 "trait":  "Bargain Bolts",
+                 "unlock":  "Emperor Rank 10"
              },
     "Okuninushi":  {
                        "inherits":  "psy",
@@ -3429,7 +3455,8 @@
                                    59,
                                    49
                                ],
-                     "trait":  "Demon\u0027s Bite"
+                     "trait":  "Demon\u0027s Bite",
+                     "unlock":  "Hermit Rank 10"
                  },
     "Oni":  {
                 "inherits":  "phys",
@@ -4098,7 +4125,8 @@
                                      48,
                                      38
                                  ],
-                       "trait":  "Omen"
+                       "trait":  "Omen",
+                       "unlock":  "Moon Rank 10"
                    },
     "Sandman":  {
                     "inherits":  "wind",
@@ -4174,7 +4202,8 @@
                                 52,
                                 55
                             ],
-                  "trait":  "Cocytus"
+                  "trait":  "Cocytus",
+                  "unlock":  "Judgement Rank 10"
               },
     "Satanael":  {
                      "inherits":  "almighty",
@@ -4200,7 +4229,8 @@
                                    56,
                                    56
                                ],
-                     "trait":  "Pagan Allure"
+                     "trait":  "Pagan Allure",
+                     "unlock":  "Cleared Good Ending, New Game+"
                  },
     "Scathach":  {
                      "inherits":  "wind",
@@ -4970,7 +5000,8 @@
                                  57,
                                  43
                              ],
-                   "trait":  "Vahana\u0027s Wings"
+                   "trait":  "Vahana\u0027s Wings",
+                   "unlock":  "Fool Rank 10"
                },
     "Vohu Manah":  {
                        "inherits":  "almighty",
@@ -4995,7 +5026,8 @@
                                      56,
                                      41
                                  ],
-                       "trait":  "Positive Thoughts"
+                       "trait":  "Positive Thoughts",
+                       "unlock":  "Councillor Rank 10"
                    },
     "White Rider":  {
                         "inherits":  "curse",
@@ -5169,7 +5201,8 @@
                                       56,
                                       39
                                   ],
-                        "trait":  "Undying Fury"
+                        "trait":  "Undying Fury",
+                        "unlock":  "Strength Rank 10"
                     },
     "Zouchouten":  {
                        "inherits":  "elec",
@@ -5218,6 +5251,7 @@
                                   17,
                                   18
                               ],
+                    "unlock":  "Ariadne Set DLC",
                     "isDlc":  true
                 },
     "Ariadne Picaro":  {
@@ -5242,6 +5276,7 @@
                                          24,
                                          21
                                      ],
+                           "unlock":  "Ariadne Set DLC",
                            "isDlc":  true
                        },
     "Asterius":  {
@@ -5266,6 +5301,7 @@
                                    32,
                                    25
                                ],
+                     "unlock":  "Asterius Set DLC",
                      "isDlc":  true
                  },
     "Asterius Picaro":  {
@@ -5290,6 +5326,7 @@
                                           36,
                                           29
                                       ],
+                            "unlock":  "Asterius Set DLC",
                             "isDlc":  true
                         },
     "Izanagi":  {
@@ -5314,6 +5351,7 @@
                                   14,
                                   13
                               ],
+                    "unlock":  "Izanagi Set DLC",
                     "isDlc":  true
                 },
     "Izanagi Picaro":  {
@@ -5338,6 +5376,7 @@
                                          16,
                                          14
                                      ],
+                           "unlock":  "Izanagi Set DLC",
                            "isDlc":  true
                        },
     "Kaguya":  {
@@ -5362,6 +5401,7 @@
                                  11,
                                  6
                              ],
+                   "unlock":  "Kaguya Set DLC",
                    "isDlc":  true
                },
     "Kaguya Picaro":  {
@@ -5386,6 +5426,7 @@
                                         15,
                                         11
                                     ],
+                          "unlock":  "Kaguya Set DLC",
                           "isDlc":  true
                       },
     "Magatsu-Izanagi":  {
@@ -5409,7 +5450,9 @@
                                           32,
                                           25,
                                           10
-                                      ]
+                                      ],
+                            "unlock":  "Magatsu-Izanagi Set DLC",
+                            "isDlc":  true
                         },
     "Magatsu-Izanagi Picaro":  {
                                    "inherits":  "almighty",
@@ -5432,7 +5475,9 @@
                                                  35,
                                                  27,
                                                  11
-                                             ]
+                                             ],
+                                   "unlock":  "Magatsu-Izanagi Set DLC",
+                                   "isDlc":  true
                                },
     "Messiah":  {
                     "inherits":  "almighty",
@@ -5457,6 +5502,7 @@
                                   50,
                                   50
                               ],
+                    "unlock":  "Messiah Set DLC",
                     "isDlc":  true
                 },
     "Messiah Picaro":  {
@@ -5482,6 +5528,7 @@
                                          55,
                                          55
                                      ],
+                           "unlock":  "Messiah Set DLC",
                            "isDlc":  true
                        },
     "Orpheus":  {
@@ -5506,6 +5553,7 @@
                                   17,
                                   17
                               ],
+                    "unlock":  "Orpheus Set DLC",
                     "isDlc":  true
                 },
     "Orpheus Picaro":  {
@@ -5530,6 +5578,7 @@
                                          19,
                                          18
                                      ],
+                           "unlock":  "Orpheus Set DLC",
                            "isDlc":  true
                        },
     "Thanatos":  {
@@ -5554,6 +5603,7 @@
                                    38,
                                    31
                                ],
+                     "unlock":  "Thanatos Set DLC",
                      "isDlc":  true
                  },
     "Thanatos Picaro":  {
@@ -5578,6 +5628,7 @@
                                           40,
                                           35
                                       ],
+                            "unlock":  "Thanatos Set DLC",
                             "isDlc":  true
                         },
     "Tsukiyomi":  {
@@ -5601,7 +5652,9 @@
                                     33,
                                     37,
                                     17
-                                ]
+                                ],
+                      "unlock":  "Tsukiyomi Set DLC",
+                      "isDlc":  true
                   },
     "Tsukiyomi Picaro":  {
                              "inherits":  "almighty",
@@ -5624,6 +5677,8 @@
                                            36,
                                            40,
                                            20
-                                       ]
+                                       ],
+                             "unlock":  "Tsukiyomi Set DLC",
+                             "isDlc":  true
                          }
 }
