@@ -33,8 +33,9 @@ A native Android companion app for the Persona series — your pocket compendium
 ---
 
 ## Screenshots
+![Screenshot_20260307_104327_com_persona_companion_MainActivity](https://github.com/user-attachments/assets/b665304b-886f-47c8-a114-3e4d6caf55a1)
+![Screenshot_20260307_104454_com_persona_companion_MainActivity](https://github.com/user-attachments/assets/ce4921fe-db7e-4611-9c18-229fc5a8c7d3)
 
-[Coming soon]
 
 ---
 
