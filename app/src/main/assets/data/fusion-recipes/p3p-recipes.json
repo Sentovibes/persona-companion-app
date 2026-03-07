@@ -1,0 +1,284 @@
+{
+  "Cybele": {
+    "arcana": "Lovers",
+    "level": 68,
+    "stats": [
+      49,
+      55,
+      40,
+      42,
+      50
+    ],
+    "skills": {
+      "Samarecarm": 0.1,
+      "Auto-Maraku": 0.2,
+      "Myriad Arrows": 0.3,
+      "Megidola": 70,
+      "Weapons Master": 73,
+      "Spell Master": 75
+    },
+    "recipes": []
+  },
+  "Melchizedek": {
+    "arcana": "Justice",
+    "level": 59,
+    "stats": [
+      50,
+      46,
+      43,
+      36,
+      31
+    ],
+    "skills": {
+      "Vicious Strike": 0.1,
+      "Mediarahan": 0.2,
+      "Auto-Mataru": 0.3,
+      "Weapons Master": 60,
+      "Akasha Arts": 64,
+      "Repel Dark": 65,
+      "God's Hand": 69
+    },
+    "recipes": [
+      [
+        "Siegfried",
+        "Thor"
+      ]
+    ]
+  },
+  "Messiah": {
+    "arcana": "Judgement",
+    "level": 90,
+    "stats": [
+      63,
+      62,
+      60,
+      62,
+      63
+    ],
+    "skills": {
+      "Megidolaon": 0.1,
+      "Regenerate 3": 0.2,
+      "God's Hand": 0.3,
+      "Salvation": 93,
+      "Invigorate 3": 94,
+      "Absorb Pierce": 95,
+      "Enduring Soul": 97,
+      "Magic Skill Up": 98
+    },
+    "recipes": [
+      [
+        "Mokoi",
+        "Seiten Taisei"
+      ],
+      [
+        "Mokoi",
+        "Thanatos"
+      ],
+      [
+        "Neko Shogun",
+        "Seiten Taisei"
+      ],
+      [
+        "Seiten Taisei",
+        "Setanta"
+      ],
+      [
+        "Seiten Taisei",
+        "Siegfried"
+      ]
+    ]
+  },
+  "Mokoi": {
+    "arcana": "Devil",
+    "level": 18,
+    "stats": [
+      6,
+      9,
+      12,
+      17,
+      23
+    ],
+    "skills": {
+      "Evil Smile": 0.1,
+      "Fear Boost": 0.2,
+      "Stagnant Air": 0.3,
+      "Marin Karin": 19,
+      "Poison Mist": 20,
+      "Charm Boost": 21,
+      "Kill Rush": 22
+    },
+    "recipes": []
+  },
+  "Neko Shogun": {
+    "arcana": "Star",
+    "level": 19,
+    "stats": [
+      18,
+      11,
+      11,
+      19,
+      7
+    ],
+    "skills": {
+      "Assault Dive": 0.1,
+      "Double Fangs": 0.2,
+      "Regenerate 1": 0.3,
+      "Counter": 20,
+      "Dodge Wind": 22,
+      "Swift Strike": 24
+    },
+    "recipes": []
+  },
+  "Seiten Taisei": {
+    "arcana": "Tower",
+    "level": 67,
+    "stats": [
+      51,
+      38,
+      43,
+      51,
+      45
+    ],
+    "skills": {
+      "Arrow Rain": 0.1,
+      "Apt Pupil": 0.2,
+      "Fast Retreat": 0.3,
+      "Weary Thrust": 70,
+      "Weapons Master": 71,
+      "Regenerate 3": 73
+    },
+    "recipes": [
+      [
+        "Melchizedek",
+        "Mokoi"
+      ],
+      [
+        "Neko Shogun",
+        "Thanatos"
+      ],
+      [
+        "Setanta",
+        "Thanatos"
+      ]
+    ]
+  },
+  "Setanta": {
+    "arcana": "Star",
+    "level": 28,
+    "stats": [
+      26,
+      19,
+      18,
+      21,
+      14
+    ],
+    "skills": {
+      "Twin Shot": 0.1,
+      "Sharp Student": 0.2,
+      "Zionga": 0.3,
+      "Power Charge": 29,
+      "Auto-Tarukaja": 31,
+      "Resist Fire": 32,
+      "Auto-Sukukaja": 33
+    },
+    "recipes": []
+  },
+  "Siegfried": {
+    "arcana": "Strength",
+    "level": 59,
+    "stats": [
+      50,
+      43,
+      40,
+      41,
+      32
+    ],
+    "skills": {
+      "Tempest Slash": 0.1,
+      "Power Charge": 0.2,
+      "Auto-Masuku": 0.3,
+      "High Counter": 62,
+      "Vorpal Blade": 63,
+      "Arms Master": 65,
+      "Weapons Master": 66,
+      "Scarlet Havoc": 3883
+    },
+    "recipes": [
+      [
+        "Tam Lin",
+        "Thor"
+      ]
+    ]
+  },
+  "Tam Lin": {
+    "arcana": "Lovers",
+    "level": 13,
+    "stats": [
+      9,
+      10,
+      5,
+      10,
+      8
+    ],
+    "skills": {
+      "Zio": 0.1,
+      "Tarukaja": 0.2,
+      "Power Slash": 0.3,
+      "Sharp Student": 14,
+      "Getsu-ei": 16,
+      "Mazio": 17,
+      "Auto-Rakukaja": 19
+    },
+    "recipes": []
+  },
+  "Thanatos": {
+    "arcana": "Death",
+    "level": 64,
+    "stats": [
+      48,
+      51,
+      44,
+      39,
+      40
+    ],
+    "skills": {
+      "Ghastly Wail": 0.1,
+      "Tempest Slash": 0.2,
+      "Megidola": 0.3,
+      "Mahamaon": 66,
+      "Weapons Master": 68,
+      "Brave Blade": 71
+    },
+    "recipes": [
+      [
+        "Ghoul",
+        "Pale Rider",
+        "Loa",
+        "Mot",
+        "Samael",
+        "Alice"
+      ]
+    ]
+  },
+  "Thor": {
+    "arcana": "Chariot",
+    "level": 53,
+    "stats": [
+      42,
+      45,
+      34,
+      30,
+      34
+    ],
+    "skills": {
+      "Ziodyne": 0.1,
+      "Vicious Strike": 0.2,
+      "High Counter": 0.3,
+      "Auto-Mataru": 55,
+      "Elec Amp": 59,
+      "Weapons Master": 60,
+      "Thunder Call": 3883
+    },
+    "recipes": []
+  }
+}

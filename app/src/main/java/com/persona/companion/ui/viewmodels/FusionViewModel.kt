@@ -39,7 +39,10 @@ class FusionViewModel : ViewModel() {
                 
                 // Load fusion recipes
                 val recipePath = when (gameId) {
+                    "p3fes" -> "data/fusion-recipes/p3fes-recipes.json"
+                    "p3p" -> "data/fusion-recipes/p3p-recipes.json"
                     "p3r" -> "data/fusion-recipes/p3r-recipes.json"
+                    "p4" -> "data/fusion-recipes/p4-recipes.json"
                     "p4g" -> "data/fusion-recipes/p4g-recipes.json"
                     "p5" -> "data/fusion-recipes/p5-recipes.json"
                     "p5r" -> "data/fusion-recipes/p5r-recipes.json"
