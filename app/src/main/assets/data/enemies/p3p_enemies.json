@@ -156,305 +156,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Arcana Priestess",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "4/20"
-  },
-  {
-    "name": "Arcana Empress",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "wnnnnnn-ww",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "5/9"
-  },
-  {
-    "name": "Arcana Emperor",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "nwwwwnn-nn",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "6/8"
-  },
-  {
-    "name": "Arcana Hierophant",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "---r-nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "7/7"
-  },
-  {
-    "name": "Arcana Lovers",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "8/6"
-  },
-  {
-    "name": "Arcana Chariot",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "9/5"
-  },
-  {
-    "name": "Arcana Justice",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "10/4"
-  },
-  {
-    "name": "Arcana Hermit",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "---d-nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "11/3"
-  },
-  {
-    "name": "Arcana Fortune",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "12/2"
-  },
-  {
-    "name": "Arcana Strength",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "12/30"
-  },
-  {
-    "name": "Arcana Hanged Man",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Nyx Avatar",
-    "arcana": "Shadow",
-    "level": 1,
-    "hp": 100,
-    "sp": 50,
-    "stats": {
-      "strength": 10,
-      "magic": 10,
-      "endurance": 10,
-      "agility": 10,
-      "luck": 10
-    },
-    "resists": "-----nn---",
-    "skills": [],
-    "area": "Unknown",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": true,
-    "isMiniBoss": false,
-    "date": "1/31"
-  },
-  {
     "name": "Cowardly Maya",
     "arcana": "Magician",
     "level": 2,
@@ -1046,6 +747,25 @@
     "isMiniBoss": false
   },
   {
+    "name": "Priestess",
+    "arcana": "Priestess",
+    "level": 14,
+    "hp": 1500,
+    "sp": 999,
+    "resists": "----d--nn",
+    "skills": [
+      "Bufu",
+      "Mabufu",
+      "Summon Mutating Maya",
+      "Ice Break"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
     "name": "Bestial Wheel",
     "arcana": "Chariot",
     "level": 15,
@@ -1100,6 +820,46 @@
     },
     "isBoss": false,
     "isMiniBoss": false
+  },
+  {
+    "name": "Emperor & Empress",
+    "arcana": "Emperor",
+    "level": 16,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Emperor",
+        "hp": 800,
+        "sp": 999,
+        "resists": "nnnwwwwnn",
+        "skills": [
+          "Swift Strike",
+          "Fatal End",
+          "Tarukaja",
+          "Paradigm Shift"
+        ]
+      },
+      {
+        "name": "Empress",
+        "hp": 800,
+        "sp": 999,
+        "resists": "wwwnnnnnn",
+        "skills": [
+          "Magaru",
+          "Mabufu",
+          "Rakunda",
+          "Paradigm Shift"
+        ]
+      }
+    ]
   },
   {
     "name": "Change Relic",
@@ -1539,6 +1299,44 @@
     "isMiniBoss": false
   },
   {
+    "name": "Hierophant",
+    "arcana": "Hierophant",
+    "level": 24,
+    "hp": 2500,
+    "sp": 999,
+    "resists": "-----d-nn",
+    "skills": [
+      "Zionga",
+      "Mazio",
+      "Prophecy of Ruin",
+      "Dekunda"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Lovers",
+    "arcana": "Lovers",
+    "level": 25,
+    "hp": 3000,
+    "sp": 999,
+    "resists": "-------nn",
+    "skills": [
+      "Marin Karin",
+      "Heartbreaker",
+      "Holy Arrow",
+      "Life Drain"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
     "name": "Creation Relic",
     "arcana": "Empress",
     "level": 26,
@@ -1947,6 +1745,46 @@
     },
     "isBoss": false,
     "isMiniBoss": false
+  },
+  {
+    "name": "Chariot & Justice",
+    "arcana": "Chariot",
+    "level": 31,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Chariot",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "rrr----nn",
+        "skills": [
+          "Kill Rush",
+          "Tentarafoo",
+          "Power Charge",
+          "Separate"
+        ]
+      },
+      {
+        "name": "Justice",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "---rrrrnn",
+        "skills": [
+          "Twin Shot",
+          "Hamaon",
+          "Tarukaja",
+          "Separate"
+        ]
+      }
+    ]
   },
   {
     "name": "Insidious Maya",
@@ -2393,6 +2231,25 @@
     "isMiniBoss": false
   },
   {
+    "name": "Hermit",
+    "arcana": "Hermit",
+    "level": 39,
+    "hp": 4500,
+    "sp": 999,
+    "resists": "-----drnn",
+    "skills": [
+      "Giga Spark",
+      "Zionga",
+      "Charge",
+      "Tarukaja"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
     "name": "Blue Sigil",
     "arcana": "Hierophant",
     "level": 40,
@@ -2741,6 +2598,45 @@
     },
     "isBoss": false,
     "isMiniBoss": true
+  },
+  {
+    "name": "Fortune & Strength",
+    "arcana": "Fortune",
+    "level": 46,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Fortune",
+        "hp": 3000,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Wheel of Fortune",
+          "Garula",
+          "Magarula"
+        ]
+      },
+      {
+        "name": "Strength",
+        "hp": 3000,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Vajra Blast",
+          "Deathbound",
+          "Heat Wave",
+          "Rakunda"
+        ]
+      }
+    ]
   },
   {
     "name": "Liberating Idol",
@@ -3187,6 +3083,51 @@
     "isMiniBoss": false
   },
   {
+    "name": "Hanged Man",
+    "arcana": "Hanged Man",
+    "level": 54,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Hanged Man (Main Body)",
+        "hp": 5500,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Akasha Arts",
+          "God's Hand",
+          "Megidola"
+        ]
+      },
+      {
+        "name": "Left Wing",
+        "hp": 800,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Summon Devious Maya"
+        ]
+      },
+      {
+        "name": "Right Wing",
+        "hp": 800,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Summon Devious Maya"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Imprudent Maya",
     "arcana": "Fortune",
     "level": 55,
@@ -3340,6 +3281,26 @@
     },
     "isBoss": false,
     "isMiniBoss": true
+  },
+  {
+    "name": "Chidori Yoshino",
+    "arcana": "Hanged Man",
+    "level": 56,
+    "hp": 4000,
+    "sp": 999,
+    "resists": "---d---nn",
+    "skills": [
+      "Agidyne",
+      "Maragidyne",
+      "Spring of Life",
+      "Mind Charge",
+      "Tentarafoo"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
   },
   {
     "name": "Kaiden Musha",
@@ -4789,6 +4750,25 @@
     "isMiniBoss": false
   },
   {
+    "name": "Jin Shirato",
+    "arcana": "Hermit",
+    "level": 73,
+    "hp": 5500,
+    "sp": 999,
+    "resists": "---r---nn",
+    "skills": [
+      "Maragidyne",
+      "Mudoon",
+      "Poison Mist",
+      "Flashbomb"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
     "name": "Eternal Eagle",
     "arcana": "Empress",
     "level": 74,
@@ -4846,6 +4826,25 @@
       "item": "-"
     },
     "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Takaya Sakaki",
+    "arcana": "Fortune",
+    "level": 74,
+    "hp": 6500,
+    "sp": 999,
+    "resists": "-------dd",
+    "skills": [
+      "Megidolaon",
+      "Kougaon",
+      "Eigaon",
+      "Mind Charge"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
     "isMiniBoss": false
   },
   {
@@ -4973,6 +4972,162 @@
     "isMiniBoss": false
   },
   {
+    "name": "Nyx Avatar",
+    "arcana": "Death",
+    "level": 76,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla / FES / Portable",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Fool Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Almighty Attack"
+        ]
+      },
+      {
+        "name": "Magician Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "---d---nn",
+        "skills": [
+          "Agidyne",
+          "Maragidyne"
+        ]
+      },
+      {
+        "name": "Priestess Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "----d--nn",
+        "skills": [
+          "Bufudyne",
+          "Mabufudyne"
+        ]
+      },
+      {
+        "name": "Empress Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "------dnn",
+        "skills": [
+          "Garudyne",
+          "Magarudyne"
+        ]
+      },
+      {
+        "name": "Emperor Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-----d-nn",
+        "skills": [
+          "Ziodyne",
+          "Maziodyne"
+        ]
+      },
+      {
+        "name": "Hierophant Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-n-----nn",
+        "skills": [
+          "God's Hand",
+          "Revolution"
+        ]
+      },
+      {
+        "name": "Lovers Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "------nnn",
+        "skills": [
+          "Marin Karin",
+          "Holy Arrow"
+        ]
+      },
+      {
+        "name": "Chariot Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "nnn----nn",
+        "skills": [
+          "God's Hand",
+          "Power Charge"
+        ]
+      },
+      {
+        "name": "Justice Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-------nn",
+        "skills": [
+          "Hamaon",
+          "Mahamaon"
+        ]
+      },
+      {
+        "name": "Hermit Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-----nnnn",
+        "skills": [
+          "Thunder Reign",
+          "Tetrakarn"
+        ]
+      },
+      {
+        "name": "Fortune Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "---nnnnnn",
+        "skills": [
+          "Megidolaon"
+        ]
+      },
+      {
+        "name": "Strength Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "nnn----nn",
+        "skills": [
+          "Deathbound",
+          "Rakunda"
+        ]
+      },
+      {
+        "name": "Hanged Man Phase",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "rrn----nn",
+        "skills": [
+          "Akasha Arts",
+          "Mudoon"
+        ]
+      },
+      {
+        "name": "Death Phase (True Form)",
+        "hp": 6000,
+        "sp": 9999,
+        "resists": "-------nn",
+        "skills": [
+          "Night Queen",
+          "Almighty Attack",
+          "Poison Mist",
+          "Megidolaon"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Harmony Giant",
     "arcana": "Justice",
     "level": 77,
@@ -5066,5 +5221,26 @@
     },
     "isBoss": false,
     "isMiniBoss": true
+  },
+  {
+    "name": "Elizabeth / Theodore",
+    "arcana": "The Ultimate One",
+    "level": 99,
+    "hp": 20000,
+    "sp": 9999,
+    "resists": "rrrrrrrnn",
+    "skills": [
+      "Megidolaon",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "High Counter"
+    ],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Secret Boss (FES & Portable)",
+    "isBoss": true,
+    "isMiniBoss": false
   }
 ]
