@@ -7,15 +7,25 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.theme.*
+import com.persona.companion.utils.FilterUtils
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,6 +34,11 @@ fun EnemyDetailScreen(
     gameId: String = "",
     onBack: () -> Unit
 ) {
+    val context = LocalContext.current
+    val userPrefs = remember { UserPreferences(context) }
+    val enemyId = FilterUtils.getEnemyId(enemy)
+    var isFavorite by remember { mutableStateOf(userPrefs.isFavoriteEnemy(enemyId)) }
+    
     Scaffold(
         containerColor = Background,
         topBar = {
@@ -32,6 +47,22 @@ fun EnemyDetailScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                    }
+                },
+                actions = {
+                    IconButton(onClick = {
+                        if (isFavorite) {
+                            userPrefs.removeFavoriteEnemy(enemyId)
+                        } else {
+                            userPrefs.addFavoriteEnemy(enemyId)
+                        }
+                        isFavorite = !isFavorite
+                    }) {
+                        Icon(
+                            imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                            contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
+                            tint = if (isFavorite) Color(0xFFE91E63) else TextSecondary
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)

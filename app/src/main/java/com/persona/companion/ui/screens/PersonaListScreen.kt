@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -24,6 +25,7 @@ import androidx.navigation.NavController
 import com.persona.companion.data.SeriesData
 import com.persona.companion.models.Persona
 import com.persona.companion.navigation.Screen
+import com.persona.companion.ui.components.PersonaFilterSheet
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.PersonaListViewModel
 
@@ -39,6 +41,7 @@ fun PersonaListScreen(
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
     val state   by vm.state.collectAsState()
+    var showFilterSheet by remember { mutableStateOf(false) }
 
     LaunchedEffect(game.dataPath) {
         vm.load(game.dataPath)
@@ -52,6 +55,11 @@ fun PersonaListScreen(
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = TextPrimary)
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { showFilterSheet = true }) {
+                        Icon(Icons.Default.FilterList, contentDescription = "Filter", tint = series.color)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)
@@ -146,6 +154,17 @@ fun PersonaListScreen(
                     }
                 }
             }
+        }
+        
+        // Filter Sheet
+        if (showFilterSheet) {
+            PersonaFilterSheet(
+                filters = state.filters,
+                onFiltersChanged = { filters ->
+                    vm.setFilters(filters)
+                },
+                onDismiss = { showFilterSheet = false }
+            )
         }
     }
 }

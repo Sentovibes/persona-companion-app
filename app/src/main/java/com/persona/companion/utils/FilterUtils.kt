@@ -12,25 +12,25 @@ object FilterUtils {
         var filtered = personas
         
         // Level range
-        filtered = filtered.filter { it.level in filters.minLevel..filters.maxLevel }
+        filtered = filtered.filter { (it.level ?: 0) in filters.minLevel..filters.maxLevel }
         
         // Skill type
         if (filters.skillType != SkillType.ALL) {
             filtered = filtered.filter { persona ->
-                persona.skills.any { skill ->
+                persona.skills?.keys?.any { skill ->
                     matchesSkillType(skill, filters.skillType)
-                }
+                } == true
             }
         }
         
-        // Game exclusive (has "Exclusive" or specific version in name/data)
+        // Game exclusive (has DLC or special flags)
         if (filters.gameExclusive) {
-            filtered = filtered.filter { it.dlc == true || it.special == true }
+            filtered = filtered.filter { it.dlc != null && it.dlc > 0 }
         }
         
         // DLC only
         if (filters.dlcOnly) {
-            filtered = filtered.filter { it.dlc == true }
+            filtered = filtered.filter { it.isDlc == true || (it.dlc != null && it.dlc > 0) }
         }
         
         // Favorites only
@@ -40,16 +40,26 @@ object FilterUtils {
         
         // Sort
         filtered = when (filters.sortOption) {
-            PersonaSortOption.LEVEL_ASC -> filtered.sortedBy { it.level }
-            PersonaSortOption.LEVEL_DESC -> filtered.sortedByDescending { it.level }
+            PersonaSortOption.LEVEL_ASC -> filtered.sortedBy { it.level ?: 0 }
+            PersonaSortOption.LEVEL_DESC -> filtered.sortedByDescending { it.level ?: 0 }
             PersonaSortOption.NAME_ASC -> filtered.sortedBy { it.name }
             PersonaSortOption.NAME_DESC -> filtered.sortedByDescending { it.name }
-            PersonaSortOption.ARCANA -> filtered.sortedBy { it.arcana }
-            PersonaSortOption.STRENGTH -> filtered.sortedByDescending { it.stats.strength }
-            PersonaSortOption.MAGIC -> filtered.sortedByDescending { it.stats.magic }
-            PersonaSortOption.ENDURANCE -> filtered.sortedByDescending { it.stats.endurance }
-            PersonaSortOption.AGILITY -> filtered.sortedByDescending { it.stats.agility }
-            PersonaSortOption.LUCK -> filtered.sortedByDescending { it.stats.luck }
+            PersonaSortOption.ARCANA -> filtered.sortedBy { it.arcana ?: "Unknown" }
+            PersonaSortOption.STRENGTH -> filtered.sortedByDescending { 
+                it.strength ?: it.stats?.getOrNull(2) ?: 0
+            }
+            PersonaSortOption.MAGIC -> filtered.sortedByDescending { 
+                it.magic ?: it.stats?.getOrNull(3) ?: 0
+            }
+            PersonaSortOption.ENDURANCE -> filtered.sortedByDescending { 
+                it.endurance ?: it.stats?.getOrNull(4) ?: 0
+            }
+            PersonaSortOption.AGILITY -> filtered.sortedByDescending { 
+                it.agility ?: it.stats?.getOrNull(5) ?: 0
+            }
+            PersonaSortOption.LUCK -> filtered.sortedByDescending { 
+                it.luck ?: it.stats?.getOrNull(6) ?: 0
+            }
         }
         
         return filtered

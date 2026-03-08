@@ -16,15 +16,15 @@
 ## 🚧 In Progress - Need to Complete
 
 ### ViewModels
-- [ ] Update EnemyListViewModel with filter support
-- [ ] Add favorites toggle to EnemyListViewModel
+- [x] Update EnemyListViewModel with filter support
+- [x] Add favorites toggle to EnemyListViewModel
 - [ ] Add recent history tracking to both ViewModels
 
 ### UI Screens
-- [ ] Update PersonaListScreen to show filter button and use filters
-- [ ] Update EnemyListScreen to show filter button and use filters
-- [ ] Add favorite button to PersonaDetailScreen
-- [ ] Add favorite button to EnemyDetailScreen
+- [x] Update PersonaListScreen to show filter button and use filters
+- [x] Update EnemyListScreen to show filter button and use filters
+- [x] Add favorite button to PersonaDetailScreen
+- [x] Add favorite button to EnemyDetailScreen
 - [ ] Add recent history tracking when viewing details
 - [ ] Update PersonaDetailScreen to track views
 - [ ] Update EnemyDetailScreen to track views

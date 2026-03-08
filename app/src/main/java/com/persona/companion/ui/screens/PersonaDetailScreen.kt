@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -17,11 +19,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
+import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Persona
 import com.persona.companion.ui.theme.*
+import com.persona.companion.utils.FilterUtils
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,10 +39,14 @@ fun PersonaDetailScreen(
     val context = LocalContext.current
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
+    val userPrefs = remember { UserPreferences(context) }
 
     val persona = remember(personaName, game.dataPath) {
         PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
     }
+    
+    val personaId = persona?.let { FilterUtils.getPersonaId(it) } ?: ""
+    var isFavorite by remember { mutableStateOf(userPrefs.isFavoritePersona(personaId)) }
 
     Scaffold(
         containerColor = Background,
@@ -47,6 +56,24 @@ fun PersonaDetailScreen(
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = TextPrimary)
+                    }
+                },
+                actions = {
+                    if (persona != null) {
+                        IconButton(onClick = {
+                            if (isFavorite) {
+                                userPrefs.removeFavoritePersona(personaId)
+                            } else {
+                                userPrefs.addFavoritePersona(personaId)
+                            }
+                            isFavorite = !isFavorite
+                        }) {
+                            Icon(
+                                imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                                contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
+                                tint = if (isFavorite) series.color else TextSecondary
+                            )
+                        }
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)

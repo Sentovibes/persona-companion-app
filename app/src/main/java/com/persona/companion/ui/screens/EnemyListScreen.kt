@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -20,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.persona.companion.models.Enemy
+import com.persona.companion.ui.components.EnemyFilterSheet
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.EnemyListViewModel
 
@@ -42,17 +44,18 @@ fun EnemyListScreen(
     val state by viewModel.state.collectAsState()
     var selectedTab by remember { mutableStateOf(EnemyTab.ENEMIES) }
     var searchQuery by remember { mutableStateOf("") }
+    var showFilterSheet by remember { mutableStateOf(false) }
     
     LaunchedEffect(enemyPath) {
-        viewModel.loadEnemies(context, enemyPath)
+        viewModel.loadEnemies(enemyPath, gameId)
     }
     
     // Filter enemies by category and search
-    val filteredEnemies = remember(state.enemies, selectedTab, searchQuery) {
+    val filteredEnemies = remember(state.filtered, selectedTab, searchQuery) {
         val byCategory = when (selectedTab) {
-            EnemyTab.ENEMIES -> state.enemies.filter { !it.isMiniBoss && !it.isBoss }
-            EnemyTab.MINI_BOSSES -> state.enemies.filter { it.isMiniBoss }
-            EnemyTab.MAIN_BOSSES -> state.enemies.filter { it.isBoss }
+            EnemyTab.ENEMIES -> state.filtered.filter { !it.isMiniBoss && !it.isBoss }
+            EnemyTab.MINI_BOSSES -> state.filtered.filter { it.isMiniBoss }
+            EnemyTab.MAIN_BOSSES -> state.filtered.filter { it.isBoss }
         }
         
         if (searchQuery.isBlank()) {
@@ -66,9 +69,9 @@ fun EnemyListScreen(
         }
     }
     
-    val enemyCount = state.enemies.count { !it.isMiniBoss && !it.isBoss }
-    val miniBossCount = state.enemies.count { it.isMiniBoss }
-    val mainBossCount = state.enemies.count { it.isBoss }
+    val enemyCount = state.filtered.count { !it.isMiniBoss && !it.isBoss }
+    val miniBossCount = state.filtered.count { it.isMiniBoss }
+    val mainBossCount = state.filtered.count { it.isBoss }
     
     Scaffold(
         containerColor = Background,
@@ -78,6 +81,11 @@ fun EnemyListScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { showFilterSheet = true }) {
+                        Icon(Icons.Default.FilterList, "Filter", tint = TextPrimary)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)
@@ -247,6 +255,28 @@ fun EnemyListScreen(
                 }
             }
         }
+        
+        // Filter Sheet
+        if (showFilterSheet) {
+            EnemyFilterSheet(
+                filters = state.filters,
+                elements = getElementsForGame(gameId),
+                onFiltersChanged = { filters ->
+                    viewModel.setFilters(filters)
+                },
+                onDismiss = { showFilterSheet = false }
+            )
+        }
+    }
+}
+
+// Helper function to get elements based on game
+private fun getElementsForGame(gameId: String): List<String> {
+    return when {
+        gameId.startsWith("p5") -> listOf("Physical", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+        gameId.startsWith("p4") -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+        gameId.startsWith("p3") -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+        else -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
     }
 }
 

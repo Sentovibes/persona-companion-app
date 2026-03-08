@@ -138,7 +138,7 @@ fun SettingsScreen(
                 SettingItem(
                     icon = Icons.Default.Info,
                     title = "About",
-                    description = "Version 3.1.0 • Made with ❤️ for Persona fans",
+                    description = "Version 3.1.5 • Made with ❤️ for Persona fans",
                     onClick = {}
                 )
             }

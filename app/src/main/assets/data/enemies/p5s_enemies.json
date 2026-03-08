@@ -1,0 +1,2140 @@
+[
+  {
+    "name": "Arsene",
+    "arcana": "Fool",
+    "level": 1,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---w----wr",
+    "skills": [
+      "Eiha",
+      "Cleave",
+      "Tarunda",
+      "Dream Needle"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 4,
+      "magic": 4,
+      "endurance": 4,
+      "agility": 5,
+      "luck": 3
+    }
+  },
+  {
+    "name": "Jack-o'-Lantern",
+    "arcana": "Magician",
+    "level": 2,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--dw-w----",
+    "skills": [
+      "Agi",
+      "Rakunda",
+      "Burn Boost",
+      "Soul Thief"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 2,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 3,
+      "luck": 2
+    }
+  },
+  {
+    "name": "Pixie",
+    "arcana": "Lovers",
+    "level": 2,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w-wr---rw",
+    "skills": [
+      "Zio",
+      "Dia",
+      "Null Sleep",
+      "Mazio"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 1,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 4,
+      "luck": 2
+    }
+  },
+  {
+    "name": "Bicorn",
+    "arcana": "Hermit",
+    "level": 4,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----w---r-",
+    "skills": [
+      "Lunge",
+      "Garu",
+      "Rampage"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 5,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 5,
+      "luck": 3
+    }
+  },
+  {
+    "name": "Silky",
+    "arcana": "Priestess",
+    "level": 6,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--wrw-----",
+    "skills": [
+      "Dormina",
+      "Bufu",
+      "Sleep Boost",
+      "Mabufu",
+      "Dekaja"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 4,
+      "magic": 7,
+      "endurance": 4,
+      "agility": 5,
+      "luck": 5
+    }
+  },
+  {
+    "name": "Mokoi",
+    "arcana": "Death",
+    "level": 8,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----rw----",
+    "skills": [
+      "Tarukaja",
+      "Sledgehammer",
+      "Dekunda"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 8,
+      "magic": 5,
+      "endurance": 5,
+      "agility": 9,
+      "luck": 4
+    }
+  },
+  {
+    "name": "Andras",
+    "arcana": "Devil",
+    "level": 10,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--wr--r-wn",
+    "skills": [
+      "Mabufu",
+      "Terror Claw",
+      "Sukunda"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 5,
+      "magic": 9,
+      "endurance": 7,
+      "agility": 10,
+      "luck": 6
+    }
+  },
+  {
+    "name": "Succubus",
+    "arcana": "Moon",
+    "level": 11,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-wr--wr-wn",
+    "skills": [
+      "Marin Karin",
+      "Psi",
+      "Null Brainwash",
+      "Snap"
+    ],
+    "area": "Shibuya",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 5,
+      "magic": 10,
+      "endurance": 7,
+      "agility": 13,
+      "luck": 5
+    }
+  },
+  {
+    "name": "Target Shadow (Mothman)",
+    "arcana": "Moon",
+    "level": 12,
+    "hp": 5500,
+    "sp": 999,
+    "exp": 0,
+    "resists": "-w--r-r---",
+    "skills": [
+      "Zio",
+      "Makajama",
+      "Skull Cracker"
+    ],
+    "area": "Shibuya Jail",
+    "version": "Jail Mini-Boss",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Slime",
+    "arcana": "Chariot",
+    "level": 12,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rrw--w----",
+    "skills": [
+      "Hysterical Slap",
+      "Evil Touch",
+      "Maeiha"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 10,
+      "magic": 8,
+      "endurance": 13,
+      "agility": 7,
+      "luck": 5
+    }
+  },
+  {
+    "name": "Hua Po",
+    "arcana": "Hanged",
+    "level": 13,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-wnw------",
+    "skills": [
+      "Maragi",
+      "Tarunda",
+      "Amrita Drop"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 5,
+      "magic": 14,
+      "endurance": 5,
+      "agility": 11,
+      "luck": 11
+    }
+  },
+  {
+    "name": "Mad Rabbit Alice",
+    "arcana": "Lovers",
+    "level": 15,
+    "hp": 8500,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--w--wrr--",
+    "skills": [
+      "Severing Slash",
+      "Maragi",
+      "Mapsi",
+      "Life Drain"
+    ],
+    "area": "Shibuya Jail",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null
+  },
+  {
+    "name": "Shibuya Lock Keeper",
+    "arcana": "Boss",
+    "level": 15,
+    "hp": 8500,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrw--w--ww",
+    "skills": [
+      "Slam",
+      "Vacuum Slash",
+      "Tarukaja",
+      "Maragi"
+    ],
+    "area": "Shibuya Jail",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Berith",
+    "arcana": "Hierophant",
+    "level": 15,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-nrw------",
+    "skills": [
+      "Rakukaja",
+      "Double Fangs",
+      "Rampage"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 13,
+      "magic": 9,
+      "endurance": 11,
+      "agility": 13,
+      "luck": 6
+    }
+  },
+  {
+    "name": "High Pixie",
+    "arcana": "Fool",
+    "level": 16,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w--rr-w--",
+    "skills": [
+      "Magaru",
+      "Makajam",
+      "Media",
+      "Garula",
+      "Recarm"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 8,
+      "magic": 14,
+      "endurance": 10,
+      "agility": 13,
+      "luck": 10
+    }
+  },
+  {
+    "name": "Lamia",
+    "arcana": "Empress",
+    "level": 18,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--rwr--w-n",
+    "skills": [
+      "Agilao",
+      "Brain Shake",
+      "Tetraja"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 13,
+      "magic": 11,
+      "endurance": 13,
+      "agility": 14,
+      "luck": 10
+    }
+  },
+  {
+    "name": "Archangel",
+    "arcana": "Justice",
+    "level": 19,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----w---dw",
+    "skills": [
+      "Makouha",
+      "Vajra Blast",
+      "Dazzler",
+      "Giant Slice",
+      "Hama"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 16,
+      "magic": 11,
+      "endurance": 16,
+      "agility": 14,
+      "luck": 7
+    }
+  },
+  {
+    "name": "Target Shadow (Orthrus)",
+    "arcana": "Hanged Man",
+    "level": 21,
+    "hp": 8500,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--aw---r--",
+    "skills": [
+      "Agilao",
+      "Double Fangs",
+      "Tarukaja"
+    ],
+    "area": "Sendai Jail",
+    "version": "Jail Mini-Boss",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Orthrus",
+    "arcana": "Hanged",
+    "level": 21,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--dw---r--",
+    "skills": [
+      "Frei",
+      "Double Fangs",
+      "Terror Claw"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 16,
+      "magic": 14,
+      "endurance": 14,
+      "agility": 19,
+      "luck": 7
+    }
+  },
+  {
+    "name": "Pisaca",
+    "arcana": "Death",
+    "level": 22,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--w-r---wd",
+    "skills": [
+      "Life Drain",
+      "Mudo",
+      "Dream Needle",
+      "Mamudo"
+    ],
+    "area": "Sendai",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 15,
+      "magic": 16,
+      "endurance": 16,
+      "agility": 14,
+      "luck": 12
+    }
+  },
+  {
+    "name": "Ame-no-Uzume",
+    "arcana": "Lovers",
+    "level": 23,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--d---w---",
+    "skills": [
+      "Bufula",
+      "Masukukaja",
+      "Diarama",
+      "Media"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 13,
+      "magic": 16,
+      "endurance": 16,
+      "agility": 16,
+      "luck": 15
+    }
+  },
+  {
+    "name": "Jack Frost",
+    "arcana": "Magician",
+    "level": 24,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--wd------",
+    "skills": [
+      "Bufula",
+      "Marakunda",
+      "Freeze Boost",
+      "Ice Boost",
+      "Mabufula"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 17,
+      "magic": 20,
+      "endurance": 11,
+      "agility": 20,
+      "luck": 11
+    }
+  },
+  {
+    "name": "Nightmare Dragon Ango",
+    "arcana": "Emperor",
+    "level": 25,
+    "hp": 12000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "---wrr--w-",
+    "skills": [
+      "Blight",
+      "Mabufula",
+      "Makouga",
+      "Tarukaja"
+    ],
+    "area": "Sendai Jail",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null
+  },
+  {
+    "name": "Sendai Lock Keeper",
+    "arcana": "Boss",
+    "level": 25,
+    "hp": 12000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "---ww---w-",
+    "skills": [
+      "Shield Bash",
+      "Mabufula",
+      "Mazionga",
+      "Rakukaja"
+    ],
+    "area": "Sendai Jail",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Lilim",
+    "arcana": "Devil",
+    "level": 25,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---r-w--wn",
+    "skills": [
+      "Mabufula",
+      "Evil Smile",
+      "Null Forget",
+      "Soul Thief",
+      "Dekaja"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 15,
+      "magic": 18,
+      "endurance": 14,
+      "agility": 19,
+      "luck": 16
+    }
+  },
+  {
+    "name": "Setanta",
+    "arcana": "Emperor",
+    "level": 26,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-r----wr--",
+    "skills": [
+      "Giant Slice",
+      "Dormin Rush",
+      "Mafrei"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 18,
+      "magic": 16,
+      "endurance": 18,
+      "agility": 17,
+      "luck": 16
+    }
+  },
+  {
+    "name": "Principality",
+    "arcana": "Justice",
+    "level": 27,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--r-----nw",
+    "skills": [
+      "Makouga",
+      "Makajam",
+      "Media",
+      "Recarm"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 15,
+      "magic": 18,
+      "endurance": 17,
+      "agility": 20,
+      "luck": 18
+    }
+  },
+  {
+    "name": "Mothman",
+    "arcana": "Moon",
+    "level": 28,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w--d-r---",
+    "skills": [
+      "Mazionga",
+      "Flash Bomb",
+      "Dizzy Boost",
+      "Megido"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 18,
+      "magic": 20,
+      "endurance": 15,
+      "agility": 20,
+      "luck": 18
+    }
+  },
+  {
+    "name": "Target Shadow (Naga)",
+    "arcana": "Hermit",
+    "level": 30,
+    "hp": 11000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "-r--nw----",
+    "skills": [
+      "Zionga",
+      "Lunge",
+      "Rakunda"
+    ],
+    "area": "Sapporo Jail",
+    "version": "Jail Mini-Boss",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Kaiwan",
+    "arcana": "Star",
+    "level": 30,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-n----dw--",
+    "skills": [
+      "Concentrate",
+      "Mapsio",
+      "Dodge Nuke"
+    ],
+    "area": "Sapporo",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 19,
+      "magic": 21,
+      "endurance": 20,
+      "agility": 19,
+      "luck": 18
+    }
+  },
+  {
+    "name": "Eligor",
+    "arcana": "Emperor",
+    "level": 31,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--r-w----r",
+    "skills": [
+      "Maragion",
+      "Tarukaja",
+      "Memory Blow"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 23,
+      "magic": 17,
+      "endurance": 28,
+      "agility": 16,
+      "luck": 16
+    }
+  },
+  {
+    "name": "Black Ooze",
+    "arcana": "Moon",
+    "level": 33,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rr-rw-w-wn",
+    "skills": [
+      "Matarunda",
+      "Headbutt",
+      "Eiga"
+    ],
+    "area": "Okinawa",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 21,
+      "magic": 20,
+      "endurance": 22,
+      "agility": 18,
+      "luck": 25
+    }
+  },
+  {
+    "name": "Mitra",
+    "arcana": "Temperance",
+    "level": 33,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---nw---n-",
+    "skills": [
+      "Kouga",
+      "Mahama",
+      "Eiga",
+      "Makouga",
+      "Maeiga"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 19,
+      "magic": 26,
+      "endurance": 19,
+      "agility": 24,
+      "luck": 18
+    }
+  },
+  {
+    "name": "Legion",
+    "arcana": "Fool",
+    "level": 34,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r-r-w-rwwn",
+    "skills": [
+      "Psio",
+      "Brain Shake",
+      "Life Drain",
+      "Rampage"
+    ],
+    "area": "Okinawa",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 22,
+      "magic": 21,
+      "endurance": 26,
+      "agility": 20,
+      "luck": 20
+    }
+  },
+  {
+    "name": "Snow Empress Mariko",
+    "arcana": "Empress",
+    "level": 35,
+    "hp": 18000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--rn--w--w",
+    "skills": [
+      "Mabufudyne",
+      "Maeiga",
+      "Dreadful Scream",
+      "Swallow Whole"
+    ],
+    "area": "Sapporo Jail",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null
+  },
+  {
+    "name": "Sapporo Lock Keeper",
+    "arcana": "Boss",
+    "level": 35,
+    "hp": 18000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "------w--w",
+    "skills": [
+      "Spin Attack",
+      "Mapsio",
+      "Makajama",
+      "Eiga"
+    ],
+    "area": "Sapporo Jail",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Shiisaa",
+    "arcana": "Chariot",
+    "level": 35,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r-w---w-nw",
+    "skills": [
+      "Assault Dive",
+      "Sukukaja",
+      "Zionga"
+    ],
+    "area": "Okinawa",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 30,
+      "magic": 16,
+      "endurance": 23,
+      "agility": 30,
+      "luck": 13
+    }
+  },
+  {
+    "name": "Arahabaki",
+    "arcana": "Hermit",
+    "level": 36,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rr-w--wwnn",
+    "skills": [
+      "Maeiga",
+      "Masukunda",
+      "Assault Dive"
+    ],
+    "area": "Okinawa",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 22,
+      "magic": 24,
+      "endurance": 22,
+      "agility": 25,
+      "luck": 22
+    }
+  },
+  {
+    "name": "Neko Shogun",
+    "arcana": "Star",
+    "level": 37,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----rw--nr",
+    "skills": [
+      "Maragion",
+      "Sukukaja",
+      "Dodge Wind",
+      "Heat Wave"
+    ],
+    "area": "Kyoto",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 23,
+      "magic": 24,
+      "endurance": 23,
+      "agility": 26,
+      "luck": 22
+    }
+  },
+  {
+    "name": "Unicorn",
+    "arcana": "Hierophant",
+    "level": 38,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---n--r-nw",
+    "skills": [
+      "Assault Dive",
+      "Mafreila",
+      "Mediarama",
+      "Recarm"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 20,
+      "magic": 26,
+      "endurance": 24,
+      "agility": 27,
+      "luck": 24
+    }
+  },
+  {
+    "name": "Koppa Tengu",
+    "arcana": "Temperance",
+    "level": 39,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w-w-r--w-",
+    "skills": [
+      "Magarula",
+      "One-shot Kill",
+      "Taunt",
+      "Gun Boost"
+    ],
+    "area": "Kyoto",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 23,
+      "magic": 25,
+      "endurance": 25,
+      "agility": 32,
+      "luck": 19
+    }
+  },
+  {
+    "name": "Target Shadow (Kikuri-Hime)",
+    "arcana": "Priestess",
+    "level": 40,
+    "hp": 15000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--w--n--r-",
+    "skills": [
+      "Diarama",
+      "Energy Drop",
+      "Lullaby"
+    ],
+    "area": "Kyoto Jail",
+    "version": "Jail Mini-Boss",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Mithras",
+    "arcana": "Sun",
+    "level": 41,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r-d-wwwdrr",
+    "skills": [
+      "Marakukaja",
+      "Mafreila",
+      "Vicious Strike"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 29,
+      "magic": 27,
+      "endurance": 29,
+      "agility": 26,
+      "luck": 19
+    }
+  },
+  {
+    "name": "Okuninushi",
+    "arcana": "Emperor",
+    "level": 42,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----nwdw--",
+    "skills": [
+      "Psio",
+      "Tempest Slash",
+      "Matarukaja"
+    ],
+    "area": "Kyoto",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 28,
+      "magic": 27,
+      "endurance": 27,
+      "agility": 26,
+      "luck": 25
+    }
+  },
+  {
+    "name": "Queen Mab",
+    "arcana": "Magician",
+    "level": 43,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--n-rw----",
+    "skills": [
+      "Maragion",
+      "Mabufula",
+      "Makajamaon"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 23,
+      "magic": 35,
+      "endurance": 26,
+      "agility": 30,
+      "luck": 22
+    }
+  },
+  {
+    "name": "Naga",
+    "arcana": "Hermit",
+    "level": 44,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-r--nw----",
+    "skills": [
+      "Rakukaja",
+      "Memory Blow",
+      "Mazionga"
+    ],
+    "area": "Osaka",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 24,
+      "magic": 33,
+      "endurance": 24,
+      "agility": 34,
+      "luck": 24
+    }
+  },
+  {
+    "name": "Okinawa Lock Keeper",
+    "arcana": "Boss",
+    "level": 45,
+    "hp": 24000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--------ww",
+    "skills": [
+      "Heavy Slam",
+      "Kougaon",
+      "Eigaon",
+      "Megidola"
+    ],
+    "area": "Okinawa Jail",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Valkyrie",
+    "arcana": "Strength",
+    "level": 45,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-rwn----d-",
+    "skills": [
+      "Brain Buster",
+      "Bloodbath",
+      "Attack Master"
+    ],
+    "area": "Osaka",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 34,
+      "magic": 24,
+      "endurance": 29,
+      "agility": 30,
+      "luck": 25
+    }
+  },
+  {
+    "name": "Hecatoncheires",
+    "arcana": "Hanged",
+    "level": 46,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-r------wd",
+    "skills": [
+      "Swift Strike",
+      "Tarukaja",
+      "Endure",
+      "Triple Down"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 32,
+      "magic": 28,
+      "endurance": 34,
+      "agility": 28,
+      "luck": 23
+    }
+  },
+  {
+    "name": "Ganesha",
+    "arcana": "Sun",
+    "level": 47,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r---wnwd-w",
+    "skills": [
+      "Freidyne",
+      "Vajra Blast",
+      "Charge"
+    ],
+    "area": "Osaka",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 33,
+      "magic": 28,
+      "endurance": 33,
+      "agility": 30,
+      "luck": 24
+    }
+  },
+  {
+    "name": "Sarasvati",
+    "arcana": "Priestess",
+    "level": 48,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---nr--w--",
+    "skills": [
+      "Mediarama",
+      "Dekaja",
+      "Matarunda"
+    ],
+    "area": "Osaka",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 29,
+      "magic": 33,
+      "endurance": 31,
+      "agility": 32,
+      "luck": 26
+    }
+  },
+  {
+    "name": "Fortuna",
+    "arcana": "Fortune",
+    "level": 49,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--n-wd----",
+    "skills": [
+      "Garudyne",
+      "Matarunda",
+      "Concentrate"
+    ],
+    "area": "Osaka",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 24,
+      "magic": 34,
+      "endurance": 31,
+      "agility": 37,
+      "luck": 28
+    }
+  },
+  {
+    "name": "Akane's Joker (Cognitive Joker)",
+    "arcana": "Fool",
+    "level": 50,
+    "hp": 15000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "----------",
+    "skills": [
+      "Maeigaon",
+      "Maragidyne",
+      "Riot Gun",
+      "Brave Zap",
+      "Megidola"
+    ],
+    "area": "Kyoto Jail",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null
+  },
+  {
+    "name": "Fratricidal Destroyer (Seth)",
+    "arcana": "Tower",
+    "level": 50,
+    "hp": 25000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--r--rd-w-",
+    "skills": [
+      "One-Shot Kill",
+      "Agidyne",
+      "Garudyne",
+      "Masukukaja"
+    ],
+    "area": "Sendai Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Kurama Tengu",
+    "arcana": "Hermit",
+    "level": 52,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w-w-n--rr",
+    "skills": [
+      "Heat Wave",
+      "Nocturnal Flash",
+      "Garudyne"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 32,
+      "magic": 35,
+      "endurance": 32,
+      "agility": 39,
+      "luck": 25
+    }
+  },
+  {
+    "name": "Norn",
+    "arcana": "Fortune",
+    "level": 53,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----nd-wrw",
+    "skills": [
+      "Magarudyne",
+      "Megidola",
+      "Diarahan",
+      "Samarecarm"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 30,
+      "magic": 39,
+      "endurance": 34,
+      "agility": 35,
+      "luck": 28
+    }
+  },
+  {
+    "name": "Akira Konoe",
+    "arcana": "Justice",
+    "level": 55,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Osaka Jail",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null,
+    "phases": [
+      {
+        "name": "Zephyrus Mech",
+        "hp": 20000,
+        "sp": 999,
+        "resists": "rr--w--w--",
+        "skills": [
+          "Super VIP Form",
+          "Maziodyne",
+          "Mafreidyne",
+          "Megidolaon"
+        ]
+      },
+      {
+        "name": "Akira the Hero (True Form)",
+        "hp": 15000,
+        "sp": 999,
+        "resists": "----w--w--",
+        "skills": [
+          "Brave Zap",
+          "Sword Dance",
+          "Heat Riser",
+          "Megidolaon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Osaka Lock Keeper",
+    "arcana": "Boss",
+    "level": 55,
+    "hp": 30000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "----w--w--",
+    "skills": [
+      "Laser Beam",
+      "Maziodyne",
+      "Mafreidyne",
+      "Matarukaja"
+    ],
+    "area": "Osaka Jail",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Guard Dog of Hades (Cerberus)",
+    "arcana": "Chariot",
+    "level": 55,
+    "hp": 28000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--dw------",
+    "skills": [
+      "Maragidyne",
+      "Megidola",
+      "Rebellion",
+      "High Counter"
+    ],
+    "area": "Osaka Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Trumpeter",
+    "arcana": "Judgement",
+    "level": 56,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--wdr---nn",
+    "skills": [
+      "Mafreidyne",
+      "Nocturnal Flash",
+      "Fortify Spirit"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 32,
+      "magic": 39,
+      "endurance": 38,
+      "agility": 36,
+      "luck": 30
+    }
+  },
+  {
+    "name": "Yatagarasu",
+    "arcana": "Sun",
+    "level": 58,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w---r--nw",
+    "skills": [
+      "Ziodyne",
+      "Sukukaja",
+      "Dekunda",
+      "Maziodyne"
+    ],
+    "area": "Final",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 36,
+      "magic": 42,
+      "endurance": 30,
+      "agility": 41,
+      "luck": 32
+    }
+  },
+  {
+    "name": "Cu Chulainn",
+    "arcana": "Star",
+    "level": 59,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rr--wn--d-",
+    "skills": [
+      "Dormin Rush",
+      "Oni Kagura",
+      "Speed Master"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 40,
+      "magic": 32,
+      "endurance": 40,
+      "agility": 40,
+      "luck": 32
+    }
+  },
+  {
+    "name": "Killer Teddy Bear (Bugs)",
+    "arcana": "Fool",
+    "level": 60,
+    "hp": 65000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rr---wnnrw",
+    "skills": [
+      "Miracle Punch",
+      "Deathbound",
+      "Lullaby",
+      "Megidolaon"
+    ],
+    "area": "Shibuya Jail (Bunkamachi)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Forneus",
+    "arcana": "Hierophant",
+    "level": 60,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "---nw-d---",
+    "skills": [
+      "Mapsiodyne",
+      "Eigaon",
+      "Makajamaon"
+    ],
+    "area": "Final",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 39,
+      "magic": 37,
+      "endurance": 38,
+      "agility": 40,
+      "luck": 33
+    }
+  },
+  {
+    "name": "Thor",
+    "arcana": "Chariot",
+    "level": 61,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r---nww-rr",
+    "skills": [
+      "Maziodyne",
+      "Megaton Raid",
+      "Wage War"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 42,
+      "magic": 37,
+      "endurance": 41,
+      "agility": 37,
+      "luck": 33
+    }
+  },
+  {
+    "name": "Dominion",
+    "arcana": "Justice",
+    "level": 62,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "-w--w--dnr",
+    "skills": [
+      "Nocturnal Flash",
+      "Hamaon",
+      "Kougaon"
+    ],
+    "area": "Final",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 38,
+      "magic": 41,
+      "endurance": 39,
+      "agility": 40,
+      "luck": 35
+    }
+  },
+  {
+    "name": "Snowman Emperor (King Frost)",
+    "arcana": "Emperor",
+    "level": 63,
+    "hp": 32000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--wd------",
+    "skills": [
+      "Mabufudyne",
+      "Ice Age",
+      "Matarukaja",
+      "Megidolaon"
+    ],
+    "area": "Sapporo Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Kali",
+    "arcana": "Empress",
+    "level": 64,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "--nw--n--r",
+    "skills": [
+      "Vorpal Blade",
+      "Oni Kagura",
+      "Psiodyne"
+    ],
+    "area": "Final",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 42,
+      "magic": 38,
+      "endurance": 40,
+      "agility": 42,
+      "luck": 37
+    }
+  },
+  {
+    "name": "Jail of the Abyss Lock Keeper",
+    "arcana": "Boss",
+    "level": 65,
+    "hp": 35000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "---w----w-",
+    "skills": [
+      "Crushing Fall",
+      "Mabufudyne",
+      "Makougaon",
+      "Megidolaon"
+    ],
+    "area": "Jail of the Abyss",
+    "version": "Lock Keeper",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Snake King (Raja Naga)",
+    "arcana": "Emperor",
+    "level": 65,
+    "hp": 70000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrw-nwrrw-",
+    "skills": [
+      "Ziodyne",
+      "Maziodyne",
+      "Elec Break",
+      "Shock Rate Up"
+    ],
+    "area": "Sendai Jail (West Garden)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Abaddon",
+    "arcana": "Judgement",
+    "level": 66,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rn----wwrd",
+    "skills": [
+      "Deathbound",
+      "Brain Buster",
+      "Maeigaon"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 45,
+      "magic": 37,
+      "endurance": 49,
+      "agility": 36,
+      "luck": 38
+    }
+  },
+  {
+    "name": "Fallen Snowman (Black Frost)",
+    "arcana": "Fool",
+    "level": 67,
+    "hp": 35000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "--pp---nwn",
+    "skills": [
+      "Mabufudyne",
+      "Maeigaon",
+      "Ice Age",
+      "Megidolaon"
+    ],
+    "area": "Shibuya Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Harlot of Desire (Lilith)",
+    "arcana": "Moon",
+    "level": 70,
+    "hp": 80000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrd-wrwwn",
+    "skills": [
+      "Mabufudyne",
+      "Ice Age",
+      "Marin Karin",
+      "Megidolaon"
+    ],
+    "area": "Sapporo Jail (Clocktower)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Dragon Slayer (Siegfried)",
+    "arcana": "Strength",
+    "level": 71,
+    "hp": 38000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "d------wn-",
+    "skills": [
+      "Brave Zap",
+      "Vorpal Blade",
+      "Charge",
+      "Masukukaja"
+    ],
+    "area": "Kyoto Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Throbbing King of Desires (Mara)",
+    "arcana": "Tower",
+    "level": 74,
+    "hp": 42000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "-nd---w--n",
+    "skills": [
+      "Maragidyne",
+      "One-Shot Kill",
+      "Charge",
+      "Megidolaon"
+    ],
+    "area": "Okinawa Jail",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "False God Demiurge",
+    "arcana": "World",
+    "level": 75,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tree of Knowledge",
+    "version": "Persona 5 Strikers",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "drops": null,
+    "phases": [
+      {
+        "name": "Demiurge (First Form)",
+        "hp": 25000,
+        "sp": 999,
+        "resists": "----------",
+        "skills": [
+          "Purgatorio",
+          "Megidolaon",
+          "Divine Apex"
+        ]
+      },
+      {
+        "name": "Demiurge & Spheres",
+        "hp": 30000,
+        "sp": 999,
+        "resists": "----------",
+        "skills": [],
+        "parts": [
+          {
+            "name": "Demiurge (Core)",
+            "hp": 30000,
+            "resists": "----------",
+            "skills": [
+              "Light of Creation",
+              "Rays of Control",
+              "Megidolaon"
+            ]
+          },
+          {
+            "name": "Sephiroth Halo (Left)",
+            "hp": 8000,
+            "resists": "rr-w-w-w-n",
+            "skills": []
+          },
+          {
+            "name": "Sephiroth Halo (Right)",
+            "hp": 8000,
+            "resists": "rrw-w-w-n-",
+            "skills": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wandering Reviver (Nebiros)",
+    "arcana": "Hermit",
+    "level": 75,
+    "hp": 85000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrr----wn",
+    "skills": [
+      "Maeigaon",
+      "Curse Age",
+      "Evil Smile",
+      "Ghastly Wail"
+    ],
+    "area": "Okinawa Jail (Laboratory North)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Alice",
+    "arcana": "Death",
+    "level": 75,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "------rrwd",
+    "skills": [
+      "Mamudoon",
+      "Megidolaon",
+      "Concentrate"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 41,
+      "magic": 55,
+      "endurance": 39,
+      "agility": 54,
+      "luck": 43
+    }
+  },
+  {
+    "name": "Yoshitsune",
+    "arcana": "Tower",
+    "level": 78,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "r-r-n---n-",
+    "skills": [
+      "Myriad Slashes",
+      "Brave Blade",
+      "Charge"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 57,
+      "magic": 46,
+      "endurance": 45,
+      "agility": 52,
+      "luck": 41
+    }
+  },
+  {
+    "name": "Macabre Angel of White (Metatron)",
+    "arcana": "Justice",
+    "level": 80,
+    "hp": 48000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "----wn--dw",
+    "skills": [
+      "Makougaon",
+      "Divine Judgement",
+      "Sword Dance",
+      "Megidolaon"
+    ],
+    "area": "Tree of Knowledge",
+    "version": "Powerful Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Sun's Emissary (Yatagarasu)",
+    "arcana": "Sun",
+    "level": 80,
+    "hp": 90000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrw-d-rnw",
+    "skills": [
+      "Magarudyne",
+      "Panta Rhei",
+      "Garneastra",
+      "Masukukaja"
+    ],
+    "area": "Kyoto Jail (Fox Square)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "War-Hungry Horseman (Eligor)",
+    "arcana": "Emperor",
+    "level": 85,
+    "hp": 95000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrrwrrrrw",
+    "skills": [
+      "Maragidyne",
+      "Inferno",
+      "Brave Zap",
+      "Matarukaja"
+    ],
+    "area": "Osaka Jail (Mt. Chashiro)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Dark Sun (Mithras)",
+    "arcana": "Sun",
+    "level": 90,
+    "hp": 100000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrwrrwdn-",
+    "skills": [
+      "Freidyne",
+      "Mafreidyne",
+      "Cosmic Flare",
+      "Nuke Break"
+    ],
+    "area": "Jail of the Abyss (Lower Stratum)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "Lucifer",
+    "arcana": "Star",
+    "level": 90,
+    "hp": 0,
+    "sp": 0,
+    "exp": 0,
+    "resists": "rnrrrr--wd",
+    "skills": [
+      "Gigantomachia",
+      "Blazing Hell",
+      "Rebel Soul"
+    ],
+    "area": "Various",
+    "version": "",
+    "isBoss": false,
+    "isMiniBoss": false,
+    "drops": null,
+    "stats": {
+      "strength": 59,
+      "magic": 57,
+      "endurance": 57,
+      "agility": 54,
+      "luck": 50
+    }
+  },
+  {
+    "name": "Heavenly Punisher (Archangel)",
+    "arcana": "Justice",
+    "level": 95,
+    "hp": 110000,
+    "sp": 999,
+    "exp": 0,
+    "resists": "rrrrrwrrnw",
+    "skills": [
+      "Kougaon",
+      "Makougaon",
+      "Divine Judgement",
+      "Megidolaon"
+    ],
+    "area": "Tree of Knowledge (Path of Surrender)",
+    "version": "Dire Shadow",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  },
+  {
+    "name": "The Reaper",
+    "arcana": "Death",
+    "level": 99,
+    "hp": 250000,
+    "sp": 9999,
+    "exp": 0,
+    "resists": "rrrrrrrrrr",
+    "skills": [
+      "Megidolaon",
+      "Riot Gun",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "Mapsiodyne",
+      "Mafreidyne",
+      "Makougaon",
+      "Maeigaon",
+      "Concentrate",
+      "Charge",
+      "Heat Riser",
+      "Debilitate"
+    ],
+    "area": "Okinawa Jail (Post-Game)",
+    "version": "Super Boss",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "drops": null
+  }
+]
