@@ -1,0 +1,227 @@
+{
+  "main_bosses": [
+    {
+      "name": "Awakened God",
+      "arcana": "Hermit",
+      "level": 35,
+      "hp": 420,
+      "sp": 167,
+      "stats": {
+        "strength": 28,
+        "magic": 32,
+        "endurance": 50,
+        "agility": 25,
+        "luck": 20
+      },
+      "resists": "rraaa-wwss",
+      "skills": [
+        "Makarakarn",
+        "Abysmal Surge",
+        "Flash Bomb"
+      ],
+      "area": "Unknown",
+      "exp": 131,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Coffin-Borne God",
+      "arcana": "Death",
+      "level": 72,
+      "hp": 1100,
+      "sp": 468,
+      "stats": {
+        "strength": 55,
+        "magic": 99,
+        "endurance": 64,
+        "agility": 49,
+        "luck": 39
+      },
+      "resists": "-saadw---R",
+      "skills": [
+        "Maeigaon",
+        "Megidolaon",
+        "Evil Smile",
+        "Concentrate"
+      ],
+      "area": "Unknown",
+      "exp": 1921,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Decadent False God",
+      "arcana": "Empress",
+      "level": 81,
+      "hp": 1700,
+      "sp": 289,
+      "stats": {
+        "strength": 64,
+        "magic": 96,
+        "endurance": 78,
+        "agility": 55,
+        "luck": 50
+      },
+      "resists": "rrxda-n--w",
+      "skills": [
+        "Diamond Dust",
+        "Ice Age",
+        "Concentrate",
+        "Freeze Boost",
+        "Ice Amp"
+      ],
+      "area": "Unknown",
+      "exp": 4080,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Deformed Lion God",
+      "arcana": "Strength",
+      "level": 74,
+      "hp": 727,
+      "sp": 345,
+      "stats": {
+        "strength": 64,
+        "magic": 92,
+        "endurance": 43,
+        "agility": 46,
+        "luck": 41
+      },
+      "resists": "--dnaw---w",
+      "skills": [
+        "Maragidyne",
+        "Bufudyne",
+        "Cornered Fang",
+        "Fire Amp",
+        "Burn Boost",
+        "High Counter"
+      ],
+      "area": "Unknown",
+      "exp": 1021,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Raging Bird God",
+      "arcana": "Star",
+      "level": 52,
+      "hp": 504,
+      "sp": 366,
+      "stats": {
+        "strength": 39,
+        "magic": 60,
+        "endurance": 36,
+        "agility": 53,
+        "luck": 36
+      },
+      "resists": "--aaas--R-",
+      "skills": [
+        "Magarudyne",
+        "Mind Slice",
+        "Sukukaja",
+        "Wind Boost"
+      ],
+      "area": "Unknown",
+      "exp": 422,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    }
+  ],
+  "mini_bosses": [
+    {
+      "name": "Quaking Lady of Shadow",
+      "arcana": "Priestess",
+      "level": 53,
+      "hp": 1290,
+      "sp": 465,
+      "stats": {
+        "strength": 46,
+        "magic": 92,
+        "endurance": 36,
+        "agility": 29,
+        "luck": 36
+      },
+      "resists": "--ara----N",
+      "skills": [
+        "Fear Boost",
+        "Freeze Boost",
+        "Mabufudyne",
+        "Maeigaon",
+        "Evil Smile",
+        "Deadly Fury",
+        "Foul Breath"
+      ],
+      "area": "Unknown",
+      "exp": 4000,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "The Shadowed One",
+      "arcana": "Priestess",
+      "level": 77,
+      "hp": 1346,
+      "sp": 321,
+      "stats": {
+        "strength": 52,
+        "magic": 99,
+        "endurance": 47,
+        "agility": 53,
+        "luck": 43
+      },
+      "resists": "--anr----n",
+      "skills": [
+        "Mabufudyne",
+        "Elec Wall",
+        "Myriad Slashes",
+        "Freeze Boost",
+        "High Counter"
+      ],
+      "area": "Unknown",
+      "exp": 2620,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Thief of Tablets",
+      "arcana": "Hierophant",
+      "level": 25,
+      "hp": 281,
+      "sp": 189,
+      "stats": {
+        "strength": 28,
+        "magic": 22,
+        "endurance": 16,
+        "agility": 25,
+        "luck": 15
+      },
+      "resists": "-waasr-waa",
+      "skills": [
+        "Garula",
+        "Masukukaja",
+        "Assault Dive"
+      ],
+      "area": "Unknown",
+      "exp": 89,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    }
+  ]
+}

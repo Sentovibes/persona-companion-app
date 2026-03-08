@@ -1,0 +1,4759 @@
+[
+  {
+    "name": "Beguiling Girl",
+    "arcana": "Lovers",
+    "level": 2,
+    "hp": 86,
+    "sp": 14,
+    "stats": {
+      "strength": 1,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 4,
+      "luck": 3
+    },
+    "resists": "-w-ws---sw",
+    "skills": [
+      "Dia"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Qimranut 1",
+      "Path of Aiyatsbus 1,3"
+    ],
+    "exp": 4,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Crypt-Dwelling Pyromaniac",
+    "arcana": "Magician",
+    "level": 2,
+    "hp": 100,
+    "sp": 6,
+    "stats": {
+      "strength": 2,
+      "magic": 5,
+      "endurance": 3,
+      "agility": 1,
+      "luck": 2
+    },
+    "resists": "-wdw-w----",
+    "skills": [
+      "Agi"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Qimranut 1",
+      "Path of Aiyatsbus 1"
+    ],
+    "exp": 4,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Apprentice in a Jug",
+    "arcana": "Chariot",
+    "level": 3,
+    "hp": 150,
+    "sp": 54,
+    "stats": {
+      "strength": 4,
+      "magic": 5,
+      "endurance": 9,
+      "agility": 6,
+      "luck": 5
+    },
+    "resists": "-s--sw----",
+    "skills": [
+      "Zio",
+      "Rakukaja"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 2,3"
+    ],
+    "exp": 8,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Gallows Flower",
+    "arcana": "Death",
+    "level": 3,
+    "hp": 98,
+    "sp": 48,
+    "stats": {
+      "strength": 4,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 3,
+      "luck": 3
+    },
+    "resists": "--w-s-----",
+    "skills": [
+      "Pulinpa"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Qimranut 1",
+      "Path of Aiyatsbus 1"
+    ],
+    "exp": 5,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Dirty Two-Horned Beast",
+    "arcana": "Hermit",
+    "level": 4,
+    "hp": 110,
+    "sp": 51,
+    "stats": {
+      "strength": 5,
+      "magic": 3,
+      "endurance": 3,
+      "agility": 4,
+      "luck": 4
+    },
+    "resists": "----w----s",
+    "skills": [
+      "Lunge"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 1,2"
+    ],
+    "exp": 6,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Bedside Brute",
+    "arcana": "Devil",
+    "level": 5,
+    "hp": 103,
+    "sp": 63,
+    "stats": {
+      "strength": 5,
+      "magic": 6,
+      "endurance": 6,
+      "agility": 7,
+      "luck": 4
+    },
+    "resists": "-w--s---w-",
+    "skills": [
+      "Life Drain",
+      "Ice Wall"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 2,3,6"
+    ],
+    "exp": 5,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Mad Marsh Horse",
+    "arcana": "Strength",
+    "level": 6,
+    "hp": 128,
+    "sp": 63,
+    "stats": {
+      "strength": 6,
+      "magic": 5,
+      "endurance": 5,
+      "agility": 8,
+      "luck": 6
+    },
+    "resists": "---sw-----",
+    "skills": [
+      "Garu",
+      "Summon"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 2,3"
+    ],
+    "exp": 8,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Troublesome Maid",
+    "arcana": "Priestess",
+    "level": 6,
+    "hp": 142,
+    "sp": 66,
+    "stats": {
+      "strength": 4,
+      "magic": 6,
+      "endurance": 5,
+      "agility": 8,
+      "luck": 8
+    },
+    "resists": "--wsw-----",
+    "skills": [
+      "Dormina",
+      "Bufu"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 2,3,5,6"
+    ],
+    "exp": 6,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Twilight Prostitute",
+    "arcana": "Moon",
+    "level": 7,
+    "hp": 148,
+    "sp": 81,
+    "stats": {
+      "strength": 5,
+      "magic": 10,
+      "endurance": 6,
+      "agility": 12,
+      "luck": 8
+    },
+    "resists": "-ws-----wn",
+    "skills": [
+      "Marin Karin"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 5,6"
+    ],
+    "exp": 9,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Piggyback Demon",
+    "arcana": "Fool",
+    "level": 8,
+    "hp": 206,
+    "sp": 78,
+    "stats": {
+      "strength": 14,
+      "magic": 8,
+      "endurance": 11,
+      "agility": 12,
+      "luck": 7
+    },
+    "resists": "s---w-----",
+    "skills": [
+      "Sukunda",
+      "Lucky Punch"
+    ],
+    "area": [
+      "Path of Aiyatsbus 3,5,6",
+      "Path of Aiyatsbus 3,5,6"
+    ],
+    "exp": 9,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Brutal Cavalryman",
+    "arcana": "Hierophant",
+    "level": 9,
+    "hp": 211,
+    "sp": 78,
+    "stats": {
+      "strength": 11,
+      "magic": 7,
+      "endurance": 8,
+      "agility": 6,
+      "luck": 7
+    },
+    "resists": "-nsw------",
+    "skills": [
+      "Cleave"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 5,6"
+    ],
+    "exp": 11,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Girl of the Hanging Tree",
+    "arcana": "Hanged",
+    "level": 9,
+    "hp": 169,
+    "sp": 105,
+    "stats": {
+      "strength": 8,
+      "magic": 16,
+      "endurance": 6,
+      "agility": 8,
+      "luck": 14
+    },
+    "resists": "-wrw------",
+    "skills": [
+      "Agi"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 1-3"
+    ],
+    "exp": 18,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Leafy Old Man",
+    "arcana": "Hermit",
+    "level": 9,
+    "hp": 188,
+    "sp": 93,
+    "stats": {
+      "strength": 7,
+      "magic": 12,
+      "endurance": 8,
+      "agility": 10,
+      "luck": 6
+    },
+    "resists": "-sws-s----",
+    "skills": [
+      "Bufu",
+      "Sukunda"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 2,3"
+    ],
+    "exp": 25,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Night-Walking Warrior",
+    "arcana": "Death",
+    "level": 9,
+    "hp": 230,
+    "sp": 78,
+    "stats": {
+      "strength": 13,
+      "magic": 7,
+      "endurance": 10,
+      "agility": 11,
+      "luck": 5
+    },
+    "resists": "----sw----",
+    "skills": [
+      "Tarukaja"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 1-4"
+    ],
+    "exp": 21,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Menacing Owlman",
+    "arcana": "Devil",
+    "level": 10,
+    "hp": 175,
+    "sp": 85,
+    "stats": {
+      "strength": 9,
+      "magic": 13,
+      "endurance": 9,
+      "agility": 9,
+      "luck": 10
+    },
+    "resists": "-wws------",
+    "skills": [
+      "Bufu",
+      "Rakunda"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 5,6"
+    ],
+    "exp": 13,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Regent D",
+    "arcana": "Emperor",
+    "level": 10,
+    "hp": 165,
+    "sp": 93,
+    "stats": {
+      "strength": 12,
+      "magic": 11,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "sssssswwss",
+    "skills": [],
+    "area": [
+      "Madarame's Palace",
+      "Path of Qimranut 1",
+      "Path of Aiyatsbus 1-3,5,6",
+      "Path of Chemdah 1-4,6,7"
+    ],
+    "exp": 300,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Vampire Moth",
+    "arcana": "Moon",
+    "level": 10,
+    "hp": 340,
+    "sp": 455,
+    "stats": {
+      "strength": 22,
+      "magic": 25,
+      "endurance": 20,
+      "agility": 26,
+      "luck": 23
+    },
+    "resists": "-w--n-s---",
+    "skills": [
+      "Ziodyne",
+      "Mazionga",
+      "Life Leech"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 3,4,7,8,10"
+    ],
+    "exp": 134,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Viscid Rotting Meat",
+    "arcana": "Chariot",
+    "level": 10,
+    "hp": 121,
+    "sp": 72,
+    "stats": {
+      "strength": 11,
+      "magic": 4,
+      "endurance": 9,
+      "agility": 5,
+      "luck": 8
+    },
+    "resists": "s-w--w----",
+    "skills": [
+      "Tarunda",
+      "Self-destruct"
+    ],
+    "area": [
+      "Path of Qimranut 1",
+      "Path of Aiyatsbus 1,2,3,6"
+    ],
+    "exp": 10,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Foolish Monk",
+    "arcana": "Temperance",
+    "level": 11,
+    "hp": 168,
+    "sp": 87,
+    "stats": {
+      "strength": 11,
+      "magic": 8,
+      "endurance": 9,
+      "agility": 13,
+      "luck": 9
+    },
+    "resists": "---w-s--w-",
+    "skills": [
+      "Sukukaja",
+      "Taunt"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 6,7"
+    ],
+    "exp": 30,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Hanging Tree Spirit",
+    "arcana": "Star",
+    "level": 11,
+    "hp": 194,
+    "sp": 105,
+    "stats": {
+      "strength": 12,
+      "magic": 14,
+      "endurance": 10,
+      "agility": 15,
+      "luck": 13
+    },
+    "resists": "--ws------",
+    "skills": [
+      "Rakunda",
+      "Garu",
+      "Summon"
+    ],
+    "area": [
+      "Path of Aiyatsbus 1-3"
+    ],
+    "exp": 18,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Mocking Snowman",
+    "arcana": "Magician",
+    "level": 11,
+    "hp": 214,
+    "sp": 129,
+    "stats": {
+      "strength": 12,
+      "magic": 22,
+      "endurance": 11,
+      "agility": 13,
+      "luck": 10
+    },
+    "resists": "--wn------",
+    "skills": [
+      "Mabufu"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 4,6"
+    ],
+    "exp": 28,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Waterside Nymph",
+    "arcana": "Priestess",
+    "level": 11,
+    "hp": 145,
+    "sp": 105,
+    "stats": {
+      "strength": 8,
+      "magic": 14,
+      "endurance": 9,
+      "agility": 13,
+      "luck": 11
+    },
+    "resists": "---sw-----",
+    "skills": [
+      "Rebellion",
+      "Fire Wall",
+      "Ice Wall",
+      "Elec Wall",
+      "Wind Wall"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 1-4"
+    ],
+    "exp": 26,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Kamoshida",
+    "arcana": "Lust",
+    "level": 11,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Asmodeus",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Volleyball Assault",
+          "Libido Boost",
+          "Golden Knife",
+          "Lick",
+          "Gold Medal Spike"
+        ]
+      },
+      {
+        "name": "Trophy of Lust",
+        "hp": 300,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Send Golden Medal"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Corpse Bird",
+    "arcana": "Moon",
+    "level": 12,
+    "hp": 206,
+    "sp": 102,
+    "stats": {
+      "strength": 10,
+      "magic": 12,
+      "endurance": 7,
+      "agility": 11,
+      "luck": 33
+    },
+    "resists": "-ws-----wn",
+    "skills": [
+      "Mudo"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 3,4"
+    ],
+    "exp": 31,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Zealous Messenger",
+    "arcana": "Justice",
+    "level": 12,
+    "hp": 212,
+    "sp": 117,
+    "stats": {
+      "strength": 7,
+      "magic": 17,
+      "endurance": 9,
+      "agility": 12,
+      "luck": 13
+    },
+    "resists": "----s---nw",
+    "skills": [
+      "Hama",
+      "Self-destruct"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 1-4"
+    ],
+    "exp": 31,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Embittered Blacksmith",
+    "arcana": "Hermit",
+    "level": 13,
+    "hp": 365,
+    "sp": 96,
+    "stats": {
+      "strength": 39,
+      "magic": 9,
+      "endurance": 15,
+      "agility": 15,
+      "luck": 11
+    },
+    "resists": "--sw-r--ss",
+    "skills": [
+      "Sledgehammer"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 1-4"
+    ],
+    "exp": 32,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Possessive Dog Ghost",
+    "arcana": "Hanged",
+    "level": 14,
+    "hp": 223,
+    "sp": 105,
+    "stats": {
+      "strength": 12,
+      "magic": 11,
+      "endurance": 9,
+      "agility": 12,
+      "luck": 8
+    },
+    "resists": "--n--w---n",
+    "skills": [
+      "Giant Slice",
+      "Pulinpa",
+      "Tarukaja"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 4,6,7"
+    ],
+    "exp": 37,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Hunting Wolf Spirit",
+    "arcana": "Temperance",
+    "level": 15,
+    "hp": 305,
+    "sp": 111,
+    "stats": {
+      "strength": 17,
+      "magic": 12,
+      "endurance": 10,
+      "agility": 13,
+      "luck": 9
+    },
+    "resists": "----ws-sn-",
+    "skills": [
+      "Double Fangs",
+      "Mafrei"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 6,7"
+    ],
+    "exp": 41,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Queen's Necklace D",
+    "arcana": "Empress",
+    "level": 15,
+    "hp": 250,
+    "sp": 120,
+    "stats": {
+      "strength": 15,
+      "magic": 15,
+      "endurance": 24,
+      "agility": 17,
+      "luck": 20
+    },
+    "resists": "swssssssss",
+    "skills": [],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 1-5,7-9"
+    ],
+    "exp": 500,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Nakanohara",
+    "arcana": "Fool",
+    "level": 15,
+    "hp": 650,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 13,
+      "luck": 9
+    },
+    "resists": "----w-----",
+    "skills": [
+      "Tarukaja",
+      "Rampage"
+    ],
+    "area": [
+      "Qimranut 1"
+    ],
+    "exp": 505,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Heavenly Punisher",
+    "arcana": "Justice",
+    "level": 16,
+    "hp": 221,
+    "sp": 123,
+    "stats": {
+      "strength": 13,
+      "magic": 10,
+      "endurance": 13,
+      "agility": 12,
+      "luck": 7
+    },
+    "resists": "----w---nw",
+    "skills": [
+      "Makouha",
+      "Vajra Blast",
+      "Giant Slice"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Aiyatsbus 5,6"
+    ],
+    "exp": 60,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Prankster Leader",
+    "arcana": "Fool",
+    "level": 16,
+    "hp": 232,
+    "sp": 174,
+    "stats": {
+      "strength": 10,
+      "magic": 32,
+      "endurance": 13,
+      "agility": 26,
+      "luck": 17
+    },
+    "resists": "-w--ss-w--",
+    "skills": [
+      "Dormina",
+      "Diarama",
+      "Garula"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 1-3,5"
+    ],
+    "exp": 60,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "War-Hungry Horseman",
+    "arcana": "Emperor",
+    "level": 16,
+    "hp": 285,
+    "sp": 108,
+    "stats": {
+      "strength": 8,
+      "magic": 10,
+      "endurance": 8,
+      "agility": 10,
+      "luck": 15
+    },
+    "resists": "-ss-w----s",
+    "skills": [
+      "Double Fangs",
+      "Tarukaja"
+    ],
+    "area": [
+      "Kamoshida's Palace",
+      "Path of Chemdah 3,4"
+    ],
+    "exp": 41,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Takanashi",
+    "arcana": "Magician",
+    "level": 16,
+    "hp": 650,
+    "sp": 200,
+    "stats": {
+      "strength": 18,
+      "magic": 17,
+      "endurance": 10,
+      "agility": 15,
+      "luck": 99
+    },
+    "resists": "----------",
+    "skills": [
+      "Lucky Punch",
+      "Stomach Blow",
+      "Evil Smile",
+      "Evil Touch"
+    ],
+    "area": [
+      "Aiyatsbus 2"
+    ],
+    "exp": 520,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Ascended Feline",
+    "arcana": "Magician",
+    "level": 17,
+    "hp": 258,
+    "sp": 168,
+    "stats": {
+      "strength": 30,
+      "magic": 29,
+      "endurance": 15,
+      "agility": 16,
+      "luck": 14
+    },
+    "resists": "----w-s---",
+    "skills": [
+      "Terror Claw",
+      "Magaru"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 2-4"
+    ],
+    "exp": 81,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Equine Sage",
+    "arcana": "Hierophant",
+    "level": 17,
+    "hp": 262,
+    "sp": 195,
+    "stats": {
+      "strength": 16,
+      "magic": 38,
+      "endurance": 17,
+      "agility": 19,
+      "luck": 13
+    },
+    "resists": "-----s--ws",
+    "skills": [
+      "Maragi",
+      "Agi",
+      "Sukukaja"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 1-3"
+    ],
+    "exp": 103,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Noisy Mountain Spirit",
+    "arcana": "Hermit",
+    "level": 17,
+    "hp": 159,
+    "sp": 150,
+    "stats": {
+      "strength": 11,
+      "magic": 23,
+      "endurance": 12,
+      "agility": 16,
+      "luck": 14
+    },
+    "resists": "---w-r-w--",
+    "skills": [
+      "Mapsi",
+      "Concentrate"
+    ],
+    "area": [
+      "Path of Chemdah 6,7"
+    ],
+    "exp": 43,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Madarame",
+    "arcana": "Vanity",
+    "level": 18,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Right Eye",
+        "hp": 300,
+        "sp": 999,
+        "resists": "wwddddddnn",
+        "skills": [
+          "Agi",
+          "Zio",
+          "Tarukaja",
+          "Rakunda"
+        ]
+      },
+      {
+        "name": "Left Eye",
+        "hp": 300,
+        "sp": 999,
+        "resists": "wwddddddnn",
+        "skills": [
+          "Garu",
+          "Bufu",
+          "Tarukaja",
+          "Rakunda"
+        ]
+      },
+      {
+        "name": "Nose",
+        "hp": 300,
+        "sp": 999,
+        "resists": "ddwwwwwwnn",
+        "skills": [
+          "Wind Breath",
+          "Dust Flurry"
+        ]
+      },
+      {
+        "name": "Mouth",
+        "hp": 300,
+        "sp": 999,
+        "resists": "ddwwwwwwnn",
+        "skills": [
+          "Bite",
+          "Chew",
+          "Lick"
+        ]
+      },
+      {
+        "name": "Azazel (True Form)",
+        "hp": 1200,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Madarame's Embellishment",
+          "Artist's Grace"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chivalrous Fiend",
+    "arcana": "Strength",
+    "level": 19,
+    "hp": 331,
+    "sp": 117,
+    "stats": {
+      "strength": 21,
+      "magic": 10,
+      "endurance": 21,
+      "agility": 10,
+      "luck": 9
+    },
+    "resists": "ss--------",
+    "skills": [
+      "Rampage"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 3-5,8,9"
+    ],
+    "exp": 113,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Jealous Lover",
+    "arcana": "Lovers",
+    "level": 19,
+    "hp": 265,
+    "sp": 129,
+    "stats": {
+      "strength": 5,
+      "magic": 14,
+      "endurance": 17,
+      "agility": 13,
+      "luck": 7
+    },
+    "resists": "--w--ss---",
+    "skills": [
+      "Rakunda",
+      "Psio",
+      "Marin Karin"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 3-5"
+    ],
+    "exp": 121,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Human-Eating Lady",
+    "arcana": "Empress",
+    "level": 20,
+    "hp": 262,
+    "sp": 132,
+    "stats": {
+      "strength": 16,
+      "magic": 14,
+      "endurance": 15,
+      "agility": 15,
+      "luck": 2
+    },
+    "resists": "---s---w--",
+    "skills": [
+      "Wage War"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 3-5,7"
+    ],
+    "exp": 102,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Night Chimera",
+    "arcana": "Moon",
+    "level": 20,
+    "hp": 312,
+    "sp": 168,
+    "stats": {
+      "strength": 29,
+      "magic": 26,
+      "endurance": 20,
+      "agility": 22,
+      "luck": 13
+    },
+    "resists": "--ws-----n",
+    "skills": [
+      "Maeiha",
+      "Skull Cracker"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 4"
+    ],
+    "exp": 77,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Stone of Scone D",
+    "arcana": "Fortune",
+    "level": 20,
+    "hp": 300,
+    "sp": 150,
+    "stats": {
+      "strength": 20,
+      "magic": 20,
+      "endurance": 25,
+      "agility": 22,
+      "luck": 30
+    },
+    "resists": "nnnnnnnnnw",
+    "skills": [],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 1-3,5-7,9-11"
+    ],
+    "exp": 1000,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Bringer of Misfortune",
+    "arcana": "Chariot",
+    "level": 21,
+    "hp": 565,
+    "sp": 126,
+    "stats": {
+      "strength": 21,
+      "magic": 11,
+      "endurance": 15,
+      "agility": 16,
+      "luck": 13
+    },
+    "resists": "nn-----wnn",
+    "skills": [
+      "Taunt",
+      "Snap",
+      "Tarukaja"
+    ],
+    "area": [
+      "Madarame's Palace",
+      "Path of Chemdah 6,7"
+    ],
+    "exp": 82,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Twin-Headed Guardian",
+    "arcana": "Hanged",
+    "level": 21,
+    "hp": 365,
+    "sp": 186,
+    "stats": {
+      "strength": 30,
+      "magic": 31,
+      "endurance": 14,
+      "agility": 22,
+      "luck": 14
+    },
+    "resists": "--dw---s--",
+    "skills": [
+      "Agilao",
+      "Maragi",
+      "Cornered Fang",
+      "Double Fangs",
+      "Burn Boost"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 4,5,7-9"
+    ],
+    "exp": 110,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Sakoda",
+    "arcana": "Fool",
+    "level": 21,
+    "hp": 600,
+    "sp": 200,
+    "stats": {
+      "strength": 15,
+      "magic": 25,
+      "endurance": 16,
+      "agility": 18,
+      "luck": 5
+    },
+    "resists": "--sn----ws",
+    "skills": [
+      "Mabufu",
+      "Mamudo"
+    ],
+    "area": [
+      "Aiyatsbus 5"
+    ],
+    "exp": 300,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Makigami",
+    "arcana": "Sun",
+    "level": 22,
+    "hp": 600,
+    "sp": 80,
+    "stats": {
+      "strength": 15,
+      "magic": 17,
+      "endurance": 15,
+      "agility": 15,
+      "luck": 25
+    },
+    "resists": "---------w",
+    "skills": [
+      "Magarula",
+      "Mabufula",
+      "Dazzler",
+      "Marakunda",
+      "Diarama",
+      "Tarukaja",
+      "Rakukaja",
+      "Sukukaja",
+      "Summon"
+    ],
+    "area": [
+      "Aiyatsbus 6"
+    ],
+    "exp": 830,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Shimizu",
+    "arcana": "Empress",
+    "level": 22,
+    "hp": 800,
+    "sp": 500,
+    "stats": {
+      "strength": 20,
+      "magic": 15,
+      "endurance": 13,
+      "agility": 15,
+      "luck": 12
+    },
+    "resists": "ssw-----wn",
+    "skills": [
+      "Oni Kagura",
+      "Tarukaja",
+      "Charge"
+    ],
+    "area": [
+      "Aiyatsbus 7"
+    ],
+    "exp": 810,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Tornado Devil",
+    "arcana": "Star",
+    "level": 23,
+    "hp": 307,
+    "sp": 186,
+    "stats": {
+      "strength": 21,
+      "magic": 29,
+      "endurance": 19,
+      "agility": 17,
+      "luck": 11
+    },
+    "resists": "----wd----",
+    "skills": [
+      "Magarula",
+      "Garula",
+      "Tarukaja"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 8,9"
+    ],
+    "exp": 96,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Odo",
+    "arcana": "Emperor",
+    "level": 23,
+    "hp": 750,
+    "sp": 150,
+    "stats": {
+      "strength": 25,
+      "magic": 18,
+      "endurance": 16,
+      "agility": 30,
+      "luck": 22
+    },
+    "resists": "ss------ns",
+    "skills": [
+      "Assault Dive",
+      "Charge",
+      "Makarakarn",
+      "Masukunda"
+    ],
+    "area": [
+      "Chemdah 1"
+    ],
+    "exp": 820,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Oyamada",
+    "arcana": "Emperor",
+    "level": 23,
+    "hp": 800,
+    "sp": 1200,
+    "stats": {
+      "strength": 16,
+      "magic": 15,
+      "endurance": 10,
+      "agility": 15,
+      "luck": 15
+    },
+    "resists": "--sdssssnn",
+    "skills": [
+      "Mazio",
+      "Tarukaja",
+      "Megido",
+      "Concentrate"
+    ],
+    "area": [
+      "Chemdah 2"
+    ],
+    "exp": 850,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Battle Fiend",
+    "arcana": "Strength",
+    "level": 24,
+    "hp": 289,
+    "sp": 144,
+    "stats": {
+      "strength": 27,
+      "magic": 14,
+      "endurance": 17,
+      "agility": 16,
+      "luck": 13
+    },
+    "resists": "s-s--w--ws",
+    "skills": [
+      "Giant Slice"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 5,7-9"
+    ],
+    "exp": 114,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Cavern Snakeman",
+    "arcana": "Hermit",
+    "level": 24,
+    "hp": 351,
+    "sp": 198,
+    "stats": {
+      "strength": 45,
+      "magic": 32,
+      "endurance": 18,
+      "agility": 17,
+      "luck": 14
+    },
+    "resists": "----nw----",
+    "skills": [
+      "Giant Slice",
+      "Zionga",
+      "Marakukaja"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 2,3,5-7,9"
+    ],
+    "exp": 117,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Envoy of Slumber",
+    "arcana": "Magician",
+    "level": 24,
+    "hp": 256,
+    "sp": 168,
+    "stats": {
+      "strength": 18,
+      "magic": 22,
+      "endurance": 17,
+      "agility": 20,
+      "luck": 22
+    },
+    "resists": "----ws----",
+    "skills": [
+      "Dormina"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 1-3"
+    ],
+    "exp": 105,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Floodbringer Demon",
+    "arcana": "Moon",
+    "level": 24,
+    "hp": 312,
+    "sp": 168,
+    "stats": {
+      "strength": 17,
+      "magic": 22,
+      "endurance": 21,
+      "agility": 17,
+      "luck": 11
+    },
+    "resists": "---ds--w--",
+    "skills": [
+      "Bufula",
+      "Mabufula",
+      "Sledgehammer"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 7-9"
+    ],
+    "exp": 98,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Demonic Warrior",
+    "arcana": "Chariot",
+    "level": 25,
+    "hp": 392,
+    "sp": 144,
+    "stats": {
+      "strength": 37,
+      "magic": 13,
+      "endurance": 27,
+      "agility": 23,
+      "luck": 12
+    },
+    "resists": "ss----w---",
+    "skills": [
+      "Marakukaja",
+      "Vajra Blast",
+      "Charge"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 4,5,7-9"
+    ],
+    "exp": 102,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Koh-i-Noor D",
+    "arcana": "Priestess",
+    "level": 25,
+    "hp": 600,
+    "sp": 180,
+    "stats": {
+      "strength": 25,
+      "magic": 25,
+      "endurance": 24,
+      "agility": 25,
+      "luck": 25
+    },
+    "resists": "sssssss-nn",
+    "skills": [],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 1-4,6-8,10-12"
+    ],
+    "exp": 1500,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Thief of Tablets",
+    "arcana": "Hierophant",
+    "level": 25,
+    "hp": 291,
+    "sp": 189,
+    "stats": {
+      "strength": 30,
+      "magic": 28,
+      "endurance": 15,
+      "agility": 25,
+      "luck": 16
+    },
+    "resists": "-w--sd-w--",
+    "skills": [
+      "Garula",
+      "Masukukaja",
+      "Assault Dive"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 1-3,5-7,9-11"
+    ],
+    "exp": 103,
+    "drops": {
+      "gem": "-",
+      "item": "Aluminum Sheet"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Kaneshiro",
+    "arcana": "Gluttony",
+    "level": 25,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Piggytron",
+        "hp": 3000,
+        "sp": 999,
+        "resists": "rr------nn",
+        "skills": [
+          "Missile Party",
+          "Fear Gas",
+          "Super VIP Form",
+          "March of the Piggy"
+        ]
+      },
+      {
+        "name": "Bael (True Form)",
+        "hp": 2500,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Make it Rain",
+          "Lullaby",
+          "Metabolism"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "She of Life and Death",
+    "arcana": "Priestess",
+    "level": 26,
+    "hp": 376,
+    "sp": 240,
+    "stats": {
+      "strength": 12,
+      "magic": 44,
+      "endurance": 18,
+      "agility": 28,
+      "luck": 16
+    },
+    "resists": "------w-nn",
+    "skills": [
+      "Agilao",
+      "Garula",
+      "Zionga",
+      "Makarakarn"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 5-7,9-11"
+    ],
+    "exp": 146,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Slithering Snakewoman",
+    "arcana": "Empress",
+    "level": 26,
+    "hp": 340,
+    "sp": 183,
+    "stats": {
+      "strength": 30,
+      "magic": 25,
+      "endurance": 20,
+      "agility": 19,
+      "luck": 18
+    },
+    "resists": "-s-ws----n",
+    "skills": [
+      "Rising Slash",
+      "Agilao",
+      "Foul Breath",
+      "Ominous Words",
+      "Summon"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 3,5-7,9-11"
+    ],
+    "exp": 129,
+    "drops": {
+      "gem": "-",
+      "item": "Tanned Leather"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Gathering Devil",
+    "arcana": "Magician",
+    "level": 28,
+    "hp": 240,
+    "sp": 180,
+    "stats": {
+      "strength": 21,
+      "magic": 22,
+      "endurance": 23,
+      "agility": 24,
+      "luck": 25
+    },
+    "resists": "--d-----w-",
+    "skills": [
+      "Maragi",
+      "Rampage",
+      "Pulinpa"
+    ],
+    "area": [
+      "Path of Kaitul 1-4,5"
+    ],
+    "exp": 104,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Corpse-Eating Corpse",
+    "arcana": "Death",
+    "level": 29,
+    "hp": 315,
+    "sp": 207,
+    "stats": {
+      "strength": 29,
+      "magic": 30,
+      "endurance": 28,
+      "agility": 28,
+      "luck": 27
+    },
+    "resists": "--w-s---wn",
+    "skills": [
+      "Stagnant Air",
+      "Rampage",
+      "Dream Needle"
+    ],
+    "area": [
+      "Path of Akzeriyyuth 5-7,9-11"
+    ],
+    "exp": 258,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Defeated Avenger",
+    "arcana": "Hanged",
+    "level": 29,
+    "hp": 420,
+    "sp": 156,
+    "stats": {
+      "strength": 14,
+      "magic": 13,
+      "endurance": 14,
+      "agility": 15,
+      "luck": 11
+    },
+    "resists": "----r-w--s",
+    "skills": [
+      "Assault Dive",
+      "Mazionga"
+    ],
+    "area": [
+      "Kaneshiro's Palace",
+      "Path of Kaitul 7-9"
+    ],
+    "exp": 143,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Pulsing Mud",
+    "arcana": "Moon",
+    "level": 29,
+    "hp": 366,
+    "sp": 174,
+    "stats": {
+      "strength": 22,
+      "magic": 19,
+      "endurance": 27,
+      "agility": 17,
+      "luck": 20
+    },
+    "resists": "ss-sw-w-wn",
+    "skills": [
+      "Stagnant Air",
+      "Famine's Scream",
+      "Summon"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 1-4,6"
+    ],
+    "exp": 115,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Orlov D",
+    "arcana": "Strength",
+    "level": 30,
+    "hp": 700,
+    "sp": 210,
+    "stats": {
+      "strength": 30,
+      "magic": 30,
+      "endurance": 27,
+      "agility": 32,
+      "luck": 30
+    },
+    "resists": "snnn-nnnnn",
+    "skills": [],
+    "area": [
+      "Nijima's Palace",
+      "Path of Sheriruth I All",
+      "Path of Sheriruth II 1-5"
+    ],
+    "exp": 2000,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Honjo",
+    "arcana": "Hanged",
+    "level": 30,
+    "hp": 1400,
+    "sp": 26,
+    "stats": {
+      "strength": 35,
+      "magic": 21,
+      "endurance": 20,
+      "agility": 24,
+      "luck": 19
+    },
+    "resists": "----dwnn-n",
+    "skills": [
+      "Megidola",
+      "Flash Bomb",
+      "Invigorate 3"
+    ],
+    "area": [
+      "Kaitul 9"
+    ],
+    "exp": 915,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Takase F",
+    "arcana": "Empress",
+    "level": 30,
+    "hp": 600,
+    "sp": 850,
+    "stats": {
+      "strength": 10,
+      "magic": 30,
+      "endurance": 13,
+      "agility": 18,
+      "luck": 50
+    },
+    "resists": "--w-------",
+    "skills": [
+      "Bufudyne",
+      "Mabufula",
+      "Masukukaja",
+      "Diarama"
+    ],
+    "area": [
+      "Chemdah 7"
+    ],
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Takase M",
+    "arcana": "Emperor",
+    "level": 31,
+    "hp": 800,
+    "sp": 162,
+    "stats": {
+      "strength": 30,
+      "magic": 13,
+      "endurance": 13,
+      "agility": 13,
+      "luck": 15
+    },
+    "resists": "------ws--",
+    "skills": [
+      "Heat Wave",
+      "Mazionga",
+      "Zionga",
+      "Rising Slash"
+    ],
+    "area": [
+      "Chemdah 7"
+    ],
+    "exp": 925,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Vicious Pentagram",
+    "arcana": "Fool",
+    "level": 32,
+    "hp": 320,
+    "sp": 222,
+    "stats": {
+      "strength": 22,
+      "magic": 32,
+      "endurance": 19,
+      "agility": 24,
+      "luck": 20
+    },
+    "resists": "w-r----s-s",
+    "skills": [
+      "Tetrakarn",
+      "Megidola",
+      "Agidyne"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 3,4,6-8"
+    ],
+    "exp": 116,
+    "drops": {
+      "gem": "-",
+      "item": "Liquid Mercury"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Woman who brings Ruin",
+    "arcana": "Devil",
+    "level": 32,
+    "hp": 345,
+    "sp": 246,
+    "stats": {
+      "strength": 21,
+      "magic": 40,
+      "endurance": 21,
+      "agility": 29,
+      "luck": 32
+    },
+    "resists": "-w-s-w--wn",
+    "skills": [
+      "Masukunda",
+      "Bufula",
+      "Spirit Drain"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 6-8,10-12"
+    ],
+    "exp": 118,
+    "drops": {
+      "gem": "-",
+      "item": "Tanned Leather"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Naguri",
+    "arcana": "Chariot",
+    "level": 32,
+    "hp": 6000,
+    "sp": 600,
+    "stats": {
+      "strength": 45,
+      "magic": 18,
+      "endurance": 5,
+      "agility": 5,
+      "luck": 21
+    },
+    "resists": "----------",
+    "skills": [
+      "Counter",
+      "Assault Dive",
+      "Swift Strike",
+      "Tarukaja"
+    ],
+    "area": [
+      "Kaitul 5"
+    ],
+    "exp": 900,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Uchimura",
+    "arcana": "Moon",
+    "level": 34,
+    "hp": 550,
+    "sp": 720,
+    "stats": {
+      "strength": 27,
+      "magic": 20,
+      "endurance": 22,
+      "agility": 22,
+      "luck": 18
+    },
+    "resists": "ss---dw--s",
+    "skills": [
+      "Swift Strike",
+      "Rampage",
+      "Garula",
+      "Tarukaja"
+    ],
+    "area": [
+      "Chemdah 3"
+    ],
+    "exp": 860,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Cognitive Wakaba Isshiki",
+    "arcana": "Wrath",
+    "level": 34,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Sphinx",
+        "hp": 11000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Sphinx Dive",
+          "Rapid Ascent",
+          "Slam",
+          "Dreadful Scream"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Awakened God",
+    "arcana": "Hermit",
+    "level": 35,
+    "hp": 310,
+    "sp": 198,
+    "stats": {
+      "strength": 23,
+      "magic": 21,
+      "endurance": 26,
+      "agility": 22,
+      "luck": 20
+    },
+    "resists": "rr----wwss",
+    "skills": [
+      "Makarakarn",
+      "Abysmal Surge"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 1-4,6-8,10"
+    ],
+    "exp": 157,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Emperor's Amulet D",
+    "arcana": "Hanged",
+    "level": 35,
+    "hp": 850,
+    "sp": 240,
+    "stats": {
+      "strength": 35,
+      "magic": 35,
+      "endurance": 28,
+      "agility": 35,
+      "luck": 30
+    },
+    "resists": "sn-d-dddnn",
+    "skills": [],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 7-9,11-13"
+    ],
+    "exp": 2500,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Mogami",
+    "arcana": "Fool",
+    "level": 35,
+    "hp": 1300,
+    "sp": 600,
+    "stats": {
+      "strength": 25,
+      "magic": 13,
+      "endurance": 20,
+      "agility": 21,
+      "luck": 25
+    },
+    "resists": "----------",
+    "skills": [
+      "Brain Shake",
+      "Marakunda",
+      "Rakukaja",
+      "Stagnant Air",
+      "Life Drain"
+    ],
+    "area": [
+      "Chemdah 8"
+    ],
+    "exp": 890,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Tsuboi",
+    "arcana": "Death",
+    "level": 35,
+    "hp": 2000,
+    "sp": 80,
+    "stats": {
+      "strength": 30,
+      "magic": 18,
+      "endurance": 20,
+      "agility": 23,
+      "luck": 20
+    },
+    "resists": "--w-----wr",
+    "skills": [
+      "Flash Bomb",
+      "Mudo",
+      "Stagnant Air"
+    ],
+    "area": [
+      "Kaitul 1"
+    ],
+    "exp": 910,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Chanting Baboon",
+    "arcana": "Emperor",
+    "level": 36,
+    "hp": 328,
+    "sp": 216,
+    "stats": {
+      "strength": 23,
+      "magic": 26,
+      "endurance": 23,
+      "agility": 17,
+      "luck": 21
+    },
+    "resists": "------wnn-",
+    "skills": [
+      "Megido",
+      "Freila",
+      "Taunt",
+      "Concentrate",
+      "Reverse Rub"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 6,7,9-11"
+    ],
+    "exp": 144,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Wishless Star",
+    "arcana": "Star",
+    "level": 36,
+    "hp": 380,
+    "sp": 267,
+    "stats": {
+      "strength": 30,
+      "magic": 43,
+      "endurance": 26,
+      "agility": 30,
+      "luck": 30
+    },
+    "resists": "-n----nw--",
+    "skills": [
+      "Psiodyne",
+      "Makajam"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 10-12"
+    ],
+    "exp": 319,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Ambassador of Filth",
+    "arcana": "Tower",
+    "level": 37,
+    "hp": 620,
+    "sp": 300,
+    "stats": {
+      "strength": 30,
+      "magic": 38,
+      "endurance": 22,
+      "agility": 25,
+      "luck": 28
+    },
+    "resists": "--wss--s-r",
+    "skills": [
+      "Concentrate",
+      "Mabufula",
+      "Bufudyne"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 6-8,10"
+    ],
+    "exp": 291,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Bearer of the Scales",
+    "arcana": "Judgement",
+    "level": 37,
+    "hp": 503,
+    "sp": 325,
+    "stats": {
+      "strength": 19,
+      "magic": 25,
+      "endurance": 24,
+      "agility": 23,
+      "luck": 18
+    },
+    "resists": "--------nn",
+    "skills": [
+      "Hamaon",
+      "Makouga",
+      "Kouga",
+      "Mudoon",
+      "Maeiga"
+    ],
+    "area": [
+      "Futaba's Palace",
+      "Path of Akzeriyyuth 10,11"
+    ],
+    "exp": 295,
+    "drops": {
+      "gem": "-",
+      "item": "Liquid Mercury"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Fused Ghost",
+    "arcana": "Fool",
+    "level": 38,
+    "hp": 367,
+    "sp": 177,
+    "stats": {
+      "strength": 44,
+      "magic": 11,
+      "endurance": 25,
+      "agility": 23,
+      "luck": 21
+    },
+    "resists": "sss---s-wn",
+    "skills": [
+      "Negative Pile",
+      "Rampage"
+    ],
+    "area": [
+      "Path of Adyeshach 1-4"
+    ],
+    "exp": 182,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Dark Sun",
+    "arcana": "Sun",
+    "level": 39,
+    "hp": 400,
+    "sp": 297,
+    "stats": {
+      "strength": 40,
+      "magic": 50,
+      "endurance": 23,
+      "agility": 27,
+      "luck": 20
+    },
+    "resists": "s-d---wn--",
+    "skills": [
+      "Freidyne",
+      "Mafreila",
+      "Vicious Strike"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 11,12"
+    ],
+    "exp": 381,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Expressionless Beast",
+    "arcana": "Hierophant",
+    "level": 39,
+    "hp": 378,
+    "sp": 222,
+    "stats": {
+      "strength": 80,
+      "magic": 25,
+      "endurance": 29,
+      "agility": 35,
+      "luck": 32
+    },
+    "resists": "---n--s-nw",
+    "skills": [
+      "Assault Dive"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 1-4",
+      "Path of Sheriruth II 1,2"
+    ],
+    "exp": 378,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Akitsu",
+    "arcana": "Hierophant",
+    "level": 39,
+    "hp": 2550,
+    "sp": 820,
+    "stats": {
+      "strength": 45,
+      "magic": 45,
+      "endurance": 25,
+      "agility": 18,
+      "luck": 30
+    },
+    "resists": "----ws----",
+    "skills": [
+      "Mudoon",
+      "Maeiga",
+      "Eigaon",
+      "Stomach Blow",
+      "Swift Strike",
+      "Dekaja",
+      "Life Leech"
+    ],
+    "area": [
+      "Akzeriyyuth 3"
+    ],
+    "exp": 945,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Kishi",
+    "arcana": "Tower",
+    "level": 39,
+    "hp": 1000,
+    "sp": 600,
+    "stats": {
+      "strength": 60,
+      "magic": 20,
+      "endurance": 18,
+      "agility": 25,
+      "luck": 60
+    },
+    "resists": "--------w-",
+    "skills": [
+      "Brain Shake",
+      "Eigaon",
+      "Tetrakarn",
+      "Makarakarn",
+      "Diarahan",
+      "Brainwash Boost",
+      "Dekunda",
+      "Dekaja"
+    ],
+    "area": [
+      "Kaitul 8"
+    ],
+    "exp": 935,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Hope Diamond D",
+    "arcana": "Death",
+    "level": 40,
+    "hp": 900,
+    "sp": 270,
+    "stats": {
+      "strength": 40,
+      "magic": 40,
+      "endurance": 25,
+      "agility": 50,
+      "luck": 40
+    },
+    "resists": "snrrr-rrrr",
+    "skills": [],
+    "area": [
+      "Path of Sheriruth II 7-9,11-13"
+    ],
+    "exp": 3000,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Mountain Girl",
+    "arcana": "Priestess",
+    "level": 40,
+    "hp": 445,
+    "sp": 246,
+    "stats": {
+      "strength": 25,
+      "magic": 32,
+      "endurance": 30,
+      "agility": 42,
+      "luck": 28
+    },
+    "resists": "--w--n--s-",
+    "skills": [
+      "Mediarama",
+      "Energy Drop",
+      "Patra",
+      "Makarakarn"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 3-5",
+      "Path of Sheriruth II 2,3"
+    ],
+    "exp": 445,
+    "drops": {
+      "gem": "-",
+      "item": "Tanned Leather"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Jochi",
+    "arcana": "Hermit",
+    "level": 40,
+    "hp": 1800,
+    "sp": 600,
+    "stats": {
+      "strength": 50,
+      "magic": 16,
+      "endurance": 18,
+      "agility": 30,
+      "luck": 99
+    },
+    "resists": "--s-w----n",
+    "skills": [
+      "Rampage",
+      "Sledgehammer",
+      "Charge",
+      "Tarukaja",
+      "Rebellion"
+    ],
+    "area": [
+      "Kaitul 10"
+    ],
+    "exp": 1420,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Tsuda",
+    "arcana": "Devil",
+    "level": 40,
+    "hp": 600,
+    "sp": 600,
+    "stats": {
+      "strength": 19,
+      "magic": 32,
+      "endurance": 28,
+      "agility": 24,
+      "luck": 40
+    },
+    "resists": "---d----sn",
+    "skills": [
+      "Bufudyne",
+      "Mabufula",
+      "Evil Smile",
+      "Ghastly Wail"
+    ],
+    "area": [
+      "Kaitul 4"
+    ],
+    "exp": 840,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Divine Warrior",
+    "arcana": "Justice",
+    "level": 41,
+    "hp": 307,
+    "sp": 291,
+    "stats": {
+      "strength": 40,
+      "magic": 46,
+      "endurance": 32,
+      "agility": 40,
+      "luck": 24
+    },
+    "resists": "-w---s--nw",
+    "skills": [
+      "Hamaon",
+      "Swift Strike",
+      "Makouga",
+      "Masukukaja",
+      "Bless Boost"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 1-5,7",
+      "Path of Sheriruth II 1-3"
+    ],
+    "exp": 307,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Cruel Leopard",
+    "arcana": "Fool",
+    "level": 42,
+    "hp": 393,
+    "sp": 234,
+    "stats": {
+      "strength": 55,
+      "magic": 26,
+      "endurance": 33,
+      "agility": 31,
+      "luck": 18
+    },
+    "resists": "--s-----wn",
+    "skills": [
+      "Counterstrike",
+      "Oni Kagura",
+      "Charge",
+      "Reverse Rub"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 1-5,9",
+      "Path of Sheriruth II 1-4"
+    ],
+    "exp": 393,
+    "drops": {
+      "gem": "-",
+      "item": "Aluminum Sheet"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Lamenting Sacrifice",
+    "arcana": "Lovers",
+    "level": 42,
+    "hp": 374,
+    "sp": 261,
+    "stats": {
+      "strength": 26,
+      "magic": 35,
+      "endurance": 30,
+      "agility": 35,
+      "luck": 25
+    },
+    "resists": "-------wr-",
+    "skills": [
+      "Mabufula",
+      "Matarukaja",
+      "Wind Wall"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 5,7-9",
+      "Path of Sheriruth II 3,4"
+    ],
+    "exp": 374,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Life-Draining Spirit",
+    "arcana": "Hermit",
+    "level": 42,
+    "hp": 381,
+    "sp": 231,
+    "stats": {
+      "strength": 40,
+      "magic": 25,
+      "endurance": 32,
+      "agility": 32,
+      "luck": 25
+    },
+    "resists": "--nw-----s",
+    "skills": [
+      "Wage War"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 8,9,11-13",
+      "Path of Sheriruth II 4,5"
+    ],
+    "exp": 381,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Midnight Queen",
+    "arcana": "Magician",
+    "level": 43,
+    "hp": 392,
+    "sp": 414,
+    "stats": {
+      "strength": 28,
+      "magic": 85,
+      "endurance": 29,
+      "agility": 28,
+      "luck": 24
+    },
+    "resists": "--n-sw----",
+    "skills": [
+      "Mazionga",
+      "Agidyne",
+      "Concentrate",
+      "Burn Boost"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 5,7-9",
+      "Path of Sheriruth II 3,4"
+    ],
+    "exp": 392,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Okumura",
+    "arcana": "Greed",
+    "level": 43,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Corporobo Waves",
+        "hp": 2500,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Famine's Scream",
+          "Bufu",
+          "Zio",
+          "Garu",
+          "Self-Destruct"
+        ]
+      },
+      {
+        "name": "Executive Director",
+        "hp": 2800,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Big Bang Challenge",
+          "Dekaja",
+          "Rakunda"
+        ]
+      },
+      {
+        "name": "Mammon (True Form)",
+        "hp": 2500,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Famine's Breath",
+          "Hunger Strike"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Funerary Warrior",
+    "arcana": "Strength",
+    "level": 44,
+    "hp": 548,
+    "sp": 246,
+    "stats": {
+      "strength": 60,
+      "magic": 28,
+      "endurance": 29,
+      "agility": 28,
+      "luck": 29
+    },
+    "resists": "-s------n-",
+    "skills": [
+      "Mind Slice",
+      "Counterstrike",
+      "Dodge Physical"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 3-5,7-9",
+      "Path of Sheriruth II 2-4"
+    ],
+    "exp": 548,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Rebellious Elephant",
+    "arcana": "Moon",
+    "level": 44,
+    "hp": 580,
+    "sp": 231,
+    "stats": {
+      "strength": 35,
+      "magic": 23,
+      "endurance": 25,
+      "agility": 24,
+      "luck": 22
+    },
+    "resists": "rrss----wn",
+    "skills": [
+      "Deathbound",
+      "Mudoon"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 4,6-8,10"
+    ],
+    "exp": 414,
+    "drops": {
+      "gem": "-",
+      "item": "Aluminum Sheet"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "The Shadowed One",
+    "arcana": "Priestess",
+    "level": 45,
+    "hp": 575,
+    "sp": 309,
+    "stats": {
+      "strength": 41,
+      "magic": 48,
+      "endurance": 32,
+      "agility": 29,
+      "luck": 25
+    },
+    "resists": "---r-----n",
+    "skills": [
+      "Tempest Slash",
+      "Maragion",
+      "Magarula"
+    ],
+    "area": [
+      "Okumura's Palace",
+      "Path of Adyeshach 10-12"
+    ],
+    "exp": 442,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Nejima",
+    "arcana": "Fool",
+    "level": 45,
+    "hp": 1800,
+    "sp": 1220,
+    "stats": {
+      "strength": 41,
+      "magic": 21,
+      "endurance": 28,
+      "agility": 31,
+      "luck": 28
+    },
+    "resists": "--w--s---s",
+    "skills": [
+      "Oni Kagura",
+      "Vicious Strike",
+      "Double Fangs",
+      "Stagnant Air"
+    ],
+    "area": [
+      "Akzeriyyuth 5"
+    ],
+    "exp": 2560,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Fukurai",
+    "arcana": "Devil",
+    "level": 47,
+    "hp": 1500,
+    "sp": 366,
+    "stats": {
+      "strength": 18,
+      "magic": 65,
+      "endurance": 24,
+      "agility": 32,
+      "luck": 50
+    },
+    "resists": "--sw----ws",
+    "skills": [
+      "Psiodyne",
+      "Eigaon",
+      "Mudoon",
+      "Mapsi",
+      "Brain Jack",
+      "Psy Boost"
+    ],
+    "area": [
+      "Kaitul 3"
+    ],
+    "exp": 1430,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Magario F",
+    "arcana": "Devil",
+    "level": 47,
+    "hp": 900,
+    "sp": 336,
+    "stats": {
+      "strength": 16,
+      "magic": 55,
+      "endurance": 20,
+      "agility": 35,
+      "luck": 60
+    },
+    "resists": "--dw-----n",
+    "skills": [
+      "Lullaby",
+      "Spirit Drain",
+      "Maragion",
+      "Spirit Leech"
+    ],
+    "area": [
+      "Adyeshach 3"
+    ],
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Dancing Witch",
+    "arcana": "Magician",
+    "level": 48,
+    "hp": 422,
+    "sp": 354,
+    "stats": {
+      "strength": 39,
+      "magic": 60,
+      "endurance": 30,
+      "agility": 32,
+      "luck": 26
+    },
+    "resists": "rrn-w---wn",
+    "skills": [
+      "Eigaon",
+      "Swift Strike"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 11-13",
+      "Path of Sheriruth II 5"
+    ],
+    "exp": 422,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Magario M",
+    "arcana": "Justice",
+    "level": 48,
+    "hp": 1100,
+    "sp": 66,
+    "stats": {
+      "strength": 85,
+      "magic": 4,
+      "endurance": 25,
+      "agility": 15,
+      "luck": 35
+    },
+    "resists": "--w-------",
+    "skills": [
+      "Life Drain",
+      "One-shot Kill",
+      "Dream Needle",
+      "Maeiga",
+      "Attack Master"
+    ],
+    "area": [
+      "Adyeshach 3"
+    ],
+    "exp": 1450,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Togo",
+    "arcana": "Devil",
+    "level": 48,
+    "hp": 1700,
+    "sp": 666,
+    "stats": {
+      "strength": 21,
+      "magic": 65,
+      "endurance": 18,
+      "agility": 35,
+      "luck": 60
+    },
+    "resists": "--sssssswn",
+    "skills": [
+      "Agidyne",
+      "Maragion",
+      "Bufudyne",
+      "Mabufula",
+      "Ziodyne",
+      "Mazionga",
+      "Garudyne",
+      "Magarula",
+      "Freidyne",
+      "Mafreila",
+      "Psiodyne",
+      "Mapsio",
+      "Eigaon",
+      "Maeigaon",
+      "Mudoon",
+      "Mamudoon"
+    ],
+    "area": [
+      "Akzeriyyuth 6"
+    ],
+    "exp": 1440,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Blood-Thirsty Demoness",
+    "arcana": "Empress",
+    "level": 50,
+    "hp": 442,
+    "sp": 276,
+    "stats": {
+      "strength": 50,
+      "magic": 32,
+      "endurance": 34,
+      "agility": 34,
+      "luck": 34
+    },
+    "resists": "--s-------",
+    "skills": [
+      "Deathbound"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 7-9"
+    ],
+    "exp": 241,
+    "drops": {
+      "gem": "-",
+      "item": "Tin Clasp"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Crystal Skull D",
+    "arcana": "Fool",
+    "level": 50,
+    "hp": 950,
+    "sp": 330,
+    "stats": {
+      "strength": 50,
+      "magic": 50,
+      "endurance": 24,
+      "agility": 50,
+      "luck": 40
+    },
+    "resists": "snrrrrrr-r",
+    "skills": [],
+    "area": [
+      "Path of Sheriruth II 7-9,11-13"
+    ],
+    "exp": 3500,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Self-Infatuated Star",
+    "arcana": "Lovers",
+    "level": 50,
+    "hp": 465,
+    "sp": 288,
+    "stats": {
+      "strength": 27,
+      "magic": 36,
+      "endurance": 29,
+      "agility": 39,
+      "luck": 30
+    },
+    "resists": "--w-ns--s-",
+    "skills": [
+      "Nocturnal Flash"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 7,8"
+    ],
+    "exp": 298,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Strumming Veena Player",
+    "arcana": "Priestess",
+    "level": 50,
+    "hp": 445,
+    "sp": 300,
+    "stats": {
+      "strength": 30,
+      "magic": 40,
+      "endurance": 32,
+      "agility": 47,
+      "luck": 37
+    },
+    "resists": "---ns--w--",
+    "skills": [
+      "Mediarama",
+      "Me Patra",
+      "Tentarafoo",
+      "Marakukaja"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 7-9,12"
+    ],
+    "exp": 325,
+    "drops": {
+      "gem": "-",
+      "item": "Thick Parchment"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Isshiki",
+    "arcana": "Moon",
+    "level": 50,
+    "hp": 3000,
+    "sp": 600,
+    "stats": {
+      "strength": 60,
+      "magic": 35,
+      "endurance": 10,
+      "agility": 25,
+      "luck": 32
+    },
+    "resists": "----------",
+    "skills": [
+      "Fast Heal",
+      "Rising Slash",
+      "Megidola",
+      "Tarukaja"
+    ],
+    "area": [
+      "Adyeshach 0"
+    ],
+    "exp": 1460,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Shadow Kiritani",
+    "arcana": "Strength",
+    "level": 50,
+    "hp": 3000,
+    "sp": 600,
+    "stats": {
+      "strength": 56,
+      "magic": 19,
+      "endurance": 20,
+      "agility": 35,
+      "luck": 32
+    },
+    "resists": "----------",
+    "skills": [
+      "Tempest Slash",
+      "Tarukaja",
+      "Mind Slice",
+      "Revolution",
+      "Rebellion"
+    ],
+    "area": [
+      "Akzeriyyuth 12"
+    ],
+    "exp": 2510,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Dancing Lion",
+    "arcana": "Emperor",
+    "level": 52,
+    "hp": 625,
+    "sp": 426,
+    "stats": {
+      "strength": 41,
+      "magic": 80,
+      "endurance": 34,
+      "agility": 50,
+      "luck": 33
+    },
+    "resists": "-s--sw--nw",
+    "skills": [
+      "Ziodyne",
+      "Mazionga",
+      "Elec Break",
+      "Wage War"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 11,12"
+    ],
+    "exp": 342,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Final Assessor",
+    "arcana": "Fortune",
+    "level": 52,
+    "hp": 609,
+    "sp": 330,
+    "stats": {
+      "strength": 30,
+      "magic": 48,
+      "endurance": 32,
+      "agility": 36,
+      "luck": 30
+    },
+    "resists": "---s-d----",
+    "skills": [
+      "Garudyne",
+      "Ziodyne",
+      "Diarahan"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 11-13",
+      "Path of Sheriruth II 5"
+    ],
+    "exp": 609,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Raging Bird God",
+    "arcana": "Star",
+    "level": 52,
+    "hp": 504,
+    "sp": 366,
+    "stats": {
+      "strength": 39,
+      "magic": 60,
+      "endurance": 36,
+      "agility": 53,
+      "luck": 36
+    },
+    "resists": "-w---s--r-",
+    "skills": [
+      "Garudyne",
+      "Magarudyne",
+      "Masukukaja",
+      "Wind Amp"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 12"
+    ],
+    "exp": 388,
+    "drops": {
+      "gem": "-",
+      "item": "Liquid Mercury"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Auspicious Pachyderm",
+    "arcana": "Sun",
+    "level": 53,
+    "hp": 632,
+    "sp": 279,
+    "stats": {
+      "strength": 74,
+      "magic": 30,
+      "endurance": 32,
+      "agility": 31,
+      "luck": 42
+    },
+    "resists": "s----dw---",
+    "skills": [
+      "Rebellion",
+      "Giant Slice",
+      "Miracle Punch",
+      "Dodge Elec"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 5,7-9",
+      "Path of Sheriruth II 3,4"
+    ],
+    "exp": 632,
+    "drops": {
+      "gem": "-",
+      "item": "Liquid Mercury"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Sae Niijima",
+    "arcana": "Envy",
+    "level": 54,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Leviathan",
+        "hp": 4000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Roulette Time",
+          "Penalty",
+          "Gatling Gun",
+          "Hundred Slaps",
+          "Megidola"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Guard Dog of Hades",
+    "arcana": "Chariot",
+    "level": 55,
+    "hp": 860,
+    "sp": 393,
+    "stats": {
+      "strength": 68,
+      "magic": 66,
+      "endurance": 32,
+      "agility": 41,
+      "luck": 33
+    },
+    "resists": "--dw---s--",
+    "skills": [
+      "Maragidyne",
+      "Agidyne",
+      "Megaton Raid",
+      "High Counter",
+      "Burn Boost"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 7-9"
+    ],
+    "exp": 394,
+    "drops": {
+      "gem": "-",
+      "item": "Iron Sand"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Quaking Lady of Shadow",
+    "arcana": "Priestess",
+    "level": 55,
+    "hp": 818,
+    "sp": 489,
+    "stats": {
+      "strength": 31,
+      "magic": 98,
+      "endurance": 36,
+      "agility": 26,
+      "luck": 30
+    },
+    "resists": "---r-----n",
+    "skills": [
+      "Bufudyne",
+      "Evil Smile",
+      "Ghastly Wail"
+    ],
+    "area": [
+      "Niijima's Palace",
+      "Path of Sheriruth I 12,13",
+      "Path of Sheriruth II 5"
+    ],
+    "exp": 818,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Destructive Beauty",
+    "arcana": "Lovers",
+    "level": 56,
+    "hp": 432,
+    "sp": 402,
+    "stats": {
+      "strength": 31,
+      "magic": 68,
+      "endurance": 31,
+      "agility": 42,
+      "luck": 32
+    },
+    "resists": "---r--s-sw",
+    "skills": [
+      "Diarama",
+      "Psiodyne",
+      "Ice Boost"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 9,11,12"
+    ],
+    "exp": 341,
+    "drops": {
+      "gem": "-",
+      "item": "Plant Balm"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Monk of the Valley",
+    "arcana": "Hermit",
+    "level": 56,
+    "hp": 560,
+    "sp": 468,
+    "stats": {
+      "strength": 65,
+      "magic": 90,
+      "endurance": 20,
+      "agility": 46,
+      "luck": 38
+    },
+    "resists": "---w-r--ss",
+    "skills": [
+      "Garudyne",
+      "Masukunda",
+      "Brain Buster"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 11"
+    ],
+    "exp": 424,
+    "drops": {
+      "gem": "-",
+      "item": "Aluminum Sheet"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Scandalous Queen",
+    "arcana": "Empress",
+    "level": 56,
+    "hp": 469,
+    "sp": 378,
+    "stats": {
+      "strength": 34,
+      "magic": 60,
+      "endurance": 34,
+      "agility": 49,
+      "luck": 40
+    },
+    "resists": "------wsss",
+    "skills": [
+      "Lullaby",
+      "Freidyne",
+      "Mafreidyne",
+      "Nuke Amp"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 8,9,11-13"
+    ],
+    "exp": 477,
+    "drops": {
+      "gem": "-",
+      "item": "Tanned Leather"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Heretic Goat",
+    "arcana": "Devil",
+    "level": 58,
+    "hp": 666,
+    "sp": 444,
+    "stats": {
+      "strength": 34,
+      "magic": 80,
+      "endurance": 36,
+      "agility": 47,
+      "luck": 38
+    },
+    "resists": "--s-----wn",
+    "skills": [
+      "Agidyne",
+      "Bufudyne",
+      "Ziodyne",
+      "Burn Boost",
+      "Freeze Boost",
+      "Shock Boost"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 13"
+    ],
+    "exp": 397,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Harlot of Desire",
+    "arcana": "Moon",
+    "level": 60,
+    "hp": 650,
+    "sp": 450,
+    "stats": {
+      "strength": 34,
+      "magic": 80,
+      "endurance": 40,
+      "agility": 49,
+      "luck": 44
+    },
+    "resists": "--wr-----n",
+    "skills": [
+      "Bufudyne",
+      "Mabufudyne",
+      "Maragidyne",
+      "Magarudyne",
+      "Dekaja",
+      "Dekunda",
+      "Spirit Drain"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 915,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Pagan Saviour",
+    "arcana": "Justice",
+    "level": 60,
+    "hp": 900,
+    "sp": 327,
+    "stats": {
+      "strength": 75,
+      "magic": 39,
+      "endurance": 40,
+      "agility": 60,
+      "luck": 50
+    },
+    "resists": "-----ws-dn",
+    "skills": [
+      "Hamaon",
+      "Masukukaja",
+      "Revolution",
+      "God's Hand"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 1338,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Sacrificial Pyrekeeper",
+    "arcana": "Hanged",
+    "level": 60,
+    "hp": 770,
+    "sp": 507,
+    "stats": {
+      "strength": 42,
+      "magic": 99,
+      "endurance": 45,
+      "agility": 49,
+      "luck": 44
+    },
+    "resists": "--rwssd--n",
+    "skills": [
+      "Psiodyne",
+      "Maragion",
+      "Evil Smile",
+      "Ghastly Wail",
+      "Nuke Amp"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 902,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Torn King of Desires",
+    "arcana": "Tower",
+    "level": 60,
+    "hp": 381,
+    "sp": 315,
+    "stats": {
+      "strength": 50,
+      "magic": 35,
+      "endurance": 40,
+      "agility": 50,
+      "luck": 40
+    },
+    "resists": "--sww--sws",
+    "skills": [
+      "Bufu",
+      "Sukunda"
+    ],
+    "area": [
+      "Qliphoth World"
+    ],
+    "exp": 2045,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Wakasa",
+    "arcana": "Death",
+    "level": 60,
+    "hp": 1700,
+    "sp": 520,
+    "stats": {
+      "strength": 75,
+      "magic": 19,
+      "endurance": 15,
+      "agility": 30,
+      "luck": 80
+    },
+    "resists": "---------d",
+    "skills": [
+      "Brave Blade",
+      "Heat Wave",
+      "Diarahan",
+      "Tentarafoo",
+      "Sharp Student"
+    ],
+    "area": [
+      "Adyeshach 13"
+    ],
+    "exp": 2800,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Hedonistic Braggart",
+    "arcana": "Fool",
+    "level": 61,
+    "hp": 700,
+    "sp": 468,
+    "stats": {
+      "strength": 75,
+      "magic": 85,
+      "endurance": 39,
+      "agility": 45,
+      "luck": 40
+    },
+    "resists": "----r---ss",
+    "skills": [
+      "Debilitate",
+      "Maziodyne",
+      "Ziodyne",
+      "Heat Wave",
+      "Thermopylae"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 1045,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Monarch of Snow",
+    "arcana": "Emperor",
+    "level": 61,
+    "hp": 1030,
+    "sp": 393,
+    "stats": {
+      "strength": 45,
+      "magic": 60,
+      "endurance": 45,
+      "agility": 33,
+      "luck": 35
+    },
+    "resists": "---d----n-",
+    "skills": [
+      "Bufudyne",
+      "Mabufudyne",
+      "Megaton Raid",
+      "Freeze Boost",
+      "Ice Amp"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 8,11-13"
+    ],
+    "exp": 612,
+    "drops": {
+      "gem": "-",
+      "item": "Condenser Lens"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "The Black Avenger",
+    "arcana": "Death",
+    "level": 62,
+    "hp": 750,
+    "sp": 336,
+    "stats": {
+      "strength": 80,
+      "magic": 40,
+      "endurance": 39,
+      "agility": 48,
+      "luck": 40
+    },
+    "resists": "-swdn---wd",
+    "skills": [
+      "Bloodbath",
+      "Brave Blade",
+      "Deathbound",
+      "Mudoon"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 1012,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Wandering Reviver",
+    "arcana": "Devil",
+    "level": 62,
+    "hp": 600,
+    "sp": 456,
+    "stats": {
+      "strength": 36,
+      "magic": 80,
+      "endurance": 40,
+      "agility": 40,
+      "luck": 35
+    },
+    "resists": "------s-wr",
+    "skills": [
+      "Mudoon",
+      "Mamudoon",
+      "Maeigaon",
+      "Rebellion",
+      "Brain Shake"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 1208,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Oda",
+    "arcana": "Empress",
+    "level": 62,
+    "hp": 3500,
+    "sp": 413,
+    "stats": {
+      "strength": 80,
+      "magic": 33,
+      "endurance": 25,
+      "agility": 33,
+      "luck": 70
+    },
+    "resists": "--ws----ss",
+    "skills": [
+      "Myriad Slashes",
+      "Vorpal Blade",
+      "Charge",
+      "Mudoon",
+      "Diarama",
+      "One-shot Kill",
+      "Lullaby"
+    ],
+    "area": [
+      "Adyeshach 11"
+    ],
+    "exp": 2850,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Rhetorician of the Sea",
+    "arcana": "Hierophant",
+    "level": 63,
+    "hp": 670,
+    "sp": 513,
+    "stats": {
+      "strength": 41,
+      "magic": 98,
+      "endurance": 10,
+      "agility": 52,
+      "luck": 40
+    },
+    "resists": "---dw-n---",
+    "skills": [
+      "Psiodyne",
+      "Marin Karin",
+      "Pulinpa",
+      "Stagnant Air"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 12,13"
+    ],
+    "exp": 417,
+    "drops": {
+      "gem": "-",
+      "item": "Red Phosphorus"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Shido",
+    "arcana": "Pride",
+    "level": 63,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Beast of Human Sacrifice",
+        "hp": 4000,
+        "sp": 999,
+        "resists": "dd------nn",
+        "skills": [
+          "Arm of Destruction",
+          "Dekaja",
+          "Dekunda"
+        ]
+      },
+      {
+        "name": "Wings of Human Sacrifice",
+        "hp": 4000,
+        "sp": 999,
+        "resists": "--ddddddnn",
+        "skills": [
+          "Ruinous Wing",
+          "Maragidyne",
+          "Mabufudyne"
+        ]
+      },
+      {
+        "name": "Tomb of Human Sacrifice",
+        "hp": 4000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Cannon of Famine",
+          "Almighty Attack"
+        ]
+      },
+      {
+        "name": "Samael (True Form)",
+        "hp": 8000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Tyrant's Fist",
+          "Tyrant's Glare",
+          "Tyrant's Wave",
+          "Megidolaon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Drunken Serpents",
+    "arcana": "Judgement",
+    "level": 64,
+    "hp": 1720,
+    "sp": 519,
+    "stats": {
+      "strength": 99,
+      "magic": 99,
+      "endurance": 40,
+      "agility": 48,
+      "luck": 99
+    },
+    "resists": "---n---w-s",
+    "skills": [
+      "Mabufudyne",
+      "Oni Kagura"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 2052,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Nimble Monkey King",
+    "arcana": "Star",
+    "level": 64,
+    "hp": 418,
+    "sp": 336,
+    "stats": {
+      "strength": 46,
+      "magic": 38,
+      "endurance": 40,
+      "agility": 40,
+      "luck": 38
+    },
+    "resists": "---w--s-s-",
+    "skills": [
+      "Vicious Strike",
+      "Tempest Slash",
+      "Revolution",
+      "Evade Ice"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 12,13"
+    ],
+    "exp": 414,
+    "drops": {
+      "gem": "-",
+      "item": "Cork Bark"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Thunder Emperor",
+    "arcana": "Chariot",
+    "level": 64,
+    "hp": 1460,
+    "sp": 447,
+    "stats": {
+      "strength": 70,
+      "magic": 75,
+      "endurance": 44,
+      "agility": 40,
+      "luck": 40
+    },
+    "resists": "s---d-w-ss",
+    "skills": [
+      "Maziodyne",
+      "Heat Wave",
+      "Megaton Raid",
+      "Tarukaja",
+      "Shock Boost",
+      "Elec Amp"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 1631,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Unfaithful Dream-King",
+    "arcana": "Emperor",
+    "level": 66,
+    "hp": 894,
+    "sp": 360,
+    "stats": {
+      "strength": 70,
+      "magic": 44,
+      "endurance": 43,
+      "agility": 43,
+      "luck": 35
+    },
+    "resists": "----s-nw--",
+    "skills": [
+      "Maziodyne",
+      "Heat Wave",
+      "Evade Nuke"
+    ],
+    "area": [
+      "Shido's Palace",
+      "Path of Sheriruth II 13"
+    ],
+    "exp": 799,
+    "drops": {
+      "gem": "-",
+      "item": "Silk Yarn"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Merciless Inquisitor",
+    "arcana": "Justice",
+    "level": 68,
+    "hp": 580,
+    "sp": 504,
+    "stats": {
+      "strength": 40,
+      "magic": 90,
+      "endurance": 40,
+      "agility": 43,
+      "luck": 46
+    },
+    "resists": "-w-----rns",
+    "skills": [
+      "Hamaon",
+      "Makougaon",
+      "Bufudyne",
+      "Makajamaon"
+    ],
+    "area": [
+      "Qliphoth World"
+    ],
+    "exp": 855,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Missionary of Depravity",
+    "arcana": "Devil",
+    "level": 68,
+    "hp": 810,
+    "sp": 444,
+    "stats": {
+      "strength": 60,
+      "magic": 70,
+      "endurance": 41,
+      "agility": 50,
+      "luck": 42
+    },
+    "resists": "---------n",
+    "skills": [
+      "Maragidyne",
+      "Myriad Slashes",
+      "Charge"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 4554,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Coffin Borne God",
+    "arcana": "Death",
+    "level": 72,
+    "hp": 1030,
+    "sp": 516,
+    "stats": {
+      "strength": 42,
+      "magic": 90,
+      "endurance": 46,
+      "agility": 49,
+      "luck": 45
+    },
+    "resists": "-s--dw---r",
+    "skills": [
+      "Megido",
+      "Megidolaon",
+      "Lullaby",
+      "Concentrate"
+    ],
+    "area": [
+      "Qliphoth World"
+    ],
+    "exp": 1735,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Throbbing King of Desires",
+    "arcana": "Tower",
+    "level": 73,
+    "hp": 1840,
+    "sp": 546,
+    "stats": {
+      "strength": 99,
+      "magic": 99,
+      "endurance": 26,
+      "agility": 42,
+      "luck": 40
+    },
+    "resists": "-nd-----sr",
+    "skills": [
+      "Maragion",
+      "Maeigaon",
+      "Heat Wave",
+      "Megidolaon",
+      "Fire Boost"
+    ],
+    "area": [
+      "Depths of Mementos",
+      "Qliphoth World"
+    ],
+    "exp": 2277,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Abyssal King of Avarice",
+    "arcana": "Judgement",
+    "level": 74,
+    "hp": 3000,
+    "sp": 387,
+    "stats": {
+      "strength": 99,
+      "magic": 45,
+      "endurance": 5,
+      "agility": 40,
+      "luck": 99
+    },
+    "resists": "dd----ww-d",
+    "skills": [
+      "Megaton Raid",
+      "Gigantomachia"
+    ],
+    "area": [
+      "Qliphoth World"
+    ],
+    "exp": 2803,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Reviled Dictator",
+    "arcana": "Emperor",
+    "level": 75,
+    "hp": 1520,
+    "sp": 522,
+    "stats": {
+      "strength": 57,
+      "magic": 99,
+      "endurance": 25,
+      "agility": 50,
+      "luck": 99
+    },
+    "resists": "--s--d--ss",
+    "skills": [
+      "Magarudyne",
+      "Revolution",
+      "Ayamur",
+      "Matarukaja",
+      "Charge"
+    ],
+    "area": [
+      "Depths of Mementos"
+    ],
+    "exp": 4554,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Yaldabaoth",
+    "arcana": "Hope",
+    "level": 75,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Vanilla & Royal",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Holy Grail (Prelude)",
+        "hp": 3000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Light of Creation",
+          "Radiant Arrow",
+          "Light of Preservation"
+        ]
+      },
+      {
+        "name": "Yaldabaoth & Arms",
+        "hp": 8000,
+        "sp": 999,
+        "resists": "--------dd",
+        "skills": [],
+        "parts": [
+          {
+            "name": "God of Control",
+            "hp": 8000,
+            "sp": null,
+            "resists": "--------dd",
+            "skills": [
+              "Arrow of Light",
+              "Rays of Control",
+              "Divine Apex",
+              "Dekaja",
+              "Dekunda"
+            ]
+          },
+          {
+            "name": "Gun of Execution",
+            "hp": 1500,
+            "sp": null,
+            "resists": "rd---d--nn",
+            "skills": []
+          },
+          {
+            "name": "Bell of Declaration",
+            "hp": 1500,
+            "sp": null,
+            "resists": "rdd-----nn",
+            "skills": []
+          },
+          {
+            "name": "Sword of Conviction",
+            "hp": 1500,
+            "sp": null,
+            "resists": "rd--d---nn",
+            "skills": []
+          },
+          {
+            "name": "Book of Commandments",
+            "hp": 1500,
+            "sp": null,
+            "resists": "rd-d---dnn",
+            "skills": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Blackened Fury",
+    "arcana": "Empress",
+    "level": 77,
+    "hp": 800,
+    "sp": 471,
+    "stats": {
+      "strength": 99,
+      "magic": 70,
+      "endurance": 44,
+      "agility": 44,
+      "luck": 35
+    },
+    "resists": "--n---r--s",
+    "skills": [
+      "Psiodyne",
+      "Tentarafoo",
+      "Vorpal Blade",
+      "Brave Blade",
+      "Apt Pupil"
+    ],
+    "area": [
+      "Qliphoth World"
+    ],
+    "exp": 3578,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Asakura",
+    "arcana": "Priestess",
+    "level": 99,
+    "hp": 3500,
+    "sp": 600,
+    "stats": {
+      "strength": 99,
+      "magic": 99,
+      "endurance": 10,
+      "agility": 45,
+      "luck": 60
+    },
+    "resists": "--d----w-s",
+    "skills": [
+      "Lunge",
+      "Rampage",
+      "Maragidyne",
+      "Tarukaja",
+      "Attack Master",
+      "Sharp Student",
+      "Charge"
+    ],
+    "area": [
+      "Sheriruth II 14"
+    ],
+    "exp": 5600,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Justine & Caroline",
+    "arcana": "Strength",
+    "level": 99,
+    "hp": 0,
+    "sp": 999,
+    "resists": "----------",
+    "skills": [],
+    "area": "Boss",
+    "exp": 0,
+    "version": "Secret Boss (Vanilla & Royal)",
+    "isBoss": false,
+    "isMiniBoss": true,
+    "parts": [
+      {
+        "name": "Caroline",
+        "hp": 8000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Vajra Blast",
+          "Riot Gun",
+          "Maragidyne",
+          "Maziodyne"
+        ]
+      },
+      {
+        "name": "Justine",
+        "hp": 8000,
+        "sp": 999,
+        "resists": "--------nn",
+        "skills": [
+          "Mabufudyne",
+          "Magarudyne",
+          "Kougaon",
+          "Eigaon"
+        ]
+      }
+    ]
+  }
+]

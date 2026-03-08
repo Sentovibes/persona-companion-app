@@ -56,6 +56,12 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
             route     = Screen.Fusion.createRoute(seriesId, gameId)
         ),
         CategoryItem(
+            label     = "Enemies",
+            icon      = Icons.Default.Shield,
+            available = game.enemyPath != null,
+            route     = if (game.enemyPath != null) Screen.EnemyList.createRoute(seriesId, gameId) else null
+        ),
+        CategoryItem(
             label     = "Social Links / Confidants",
             icon      = Icons.Default.Groups,
             available = false
@@ -63,16 +69,6 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
         CategoryItem(
             label     = "Classroom Answers",
             icon      = Icons.Default.School,
-            available = false
-        ),
-        CategoryItem(
-            label     = "Bosses",
-            icon      = Icons.Default.Shield,
-            available = false
-        ),
-        CategoryItem(
-            label     = "Enemies",
-            icon      = Icons.Default.Shield,
             available = false
         )
     )

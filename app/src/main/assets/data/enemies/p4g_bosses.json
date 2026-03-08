@@ -1,0 +1,951 @@
+{
+  "main_bosses": [],
+  "mini_bosses": [
+    {
+      "name": "Almighty Hand",
+      "arcana": "Magician",
+      "level": 40,
+      "hp": 284,
+      "sp": 238,
+      "stats": {
+        "strength": 28,
+        "magic": 28,
+        "endurance": 32,
+        "agility": 32,
+        "luck": 20
+      },
+      "resists": "s-w-----",
+      "skills": [
+        "Diarama",
+        "Rebellion",
+        "White Wall",
+        "God's Hand"
+      ],
+      "area": "Void Quest 3, 4, 6-9, Su",
+      "exp": 900,
+      "drops": {
+        "gem": "Milky Quartz",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Angry Table",
+      "arcana": "Magician",
+      "level": 62,
+      "hp": 345,
+      "sp": 270,
+      "stats": {
+        "strength": 38,
+        "magic": 18,
+        "endurance": 42,
+        "agility": 40,
+        "luck": 41
+      },
+      "resists": "r---w---",
+      "skills": [
+        "Auto-Mataru",
+        "Balzac",
+        "Valiant Dance",
+        "Resist Dizzy"
+      ],
+      "area": "Heaven 5-7",
+      "exp": 2310,
+      "drops": {
+        "gem": "Sphalerite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Arcane Turret",
+      "arcana": "Chariot",
+      "level": 35,
+      "hp": 546,
+      "sp": 264,
+      "stats": {
+        "strength": 26,
+        "magic": 28,
+        "endurance": 23,
+        "agility": 24,
+        "luck": 16
+      },
+      "resists": "--------",
+      "skills": [
+        "Bufudyne",
+        "Mind Charge"
+      ],
+      "area": "Marukyu Striptease 7-10",
+      "exp": 2000,
+      "drops": {
+        "gem": "Olive Stone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Bronze Dice",
+      "arcana": "Fortune",
+      "level": 10,
+      "hp": 180,
+      "sp": 34,
+      "stats": {
+        "strength": 8,
+        "magic": 5,
+        "endurance": 6,
+        "agility": 6,
+        "luck": 7
+      },
+      "resists": "s--w----",
+      "skills": [
+        "Last Resort",
+        "Poisma"
+      ],
+      "area": "Yukiko's Castle 4, 5, 7, Su",
+      "exp": 184,
+      "drops": {
+        "gem": "Blue Quartz",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Contrarian King B",
+      "arcana": "Emperor P",
+      "level": 17,
+      "hp": 1600,
+      "sp": 500,
+      "stats": {
+        "strength": 24,
+        "magic": 8,
+        "endurance": 12,
+        "agility": 18,
+        "luck": 8
+      },
+      "resists": "Sd--nnnS",
+      "skills": [
+        "Hysterical Slap",
+        "Kill Rush",
+        "Rampage",
+        "Red Wall",
+        "Marakunda"
+      ],
+      "area": "Yukiko's Castle 8",
+      "exp": 1800,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Crying Table",
+      "arcana": "Magician",
+      "level": 24,
+      "hp": 139,
+      "sp": 177,
+      "stats": {
+        "strength": 12,
+        "magic": 15,
+        "endurance": 15,
+        "agility": 16,
+        "luck": 12
+      },
+      "resists": "sswss---",
+      "skills": [
+        "Makajam",
+        "Diarama",
+        "Magaru"
+      ],
+      "area": "Steamy Bathhouse 8-10",
+      "exp": 440,
+      "drops": {
+        "gem": "Fluorite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Curse Dice",
+      "arcana": "Fortune",
+      "level": 60,
+      "hp": 200,
+      "sp": 271,
+      "stats": {
+        "strength": 25,
+        "magic": 64,
+        "endurance": 41,
+        "agility": 25,
+        "luck": 25
+      },
+      "resists": "-nnnnZZ-",
+      "skills": [
+        "Last Resort",
+        "Marakukaja"
+      ],
+      "area": "Heaven 1-4, Su",
+      "exp": 2410,
+      "drops": {
+        "gem": "Buffalo Stone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Dancing Hand",
+      "arcana": "Magician",
+      "level": 20,
+      "hp": 135,
+      "sp": 121,
+      "stats": {
+        "strength": 12,
+        "magic": 13,
+        "endurance": 8,
+        "agility": 17,
+        "luck": 15
+      },
+      "resists": "-ssss---",
+      "skills": [
+        "Rebellion",
+        "Stagnant Air",
+        "Balzac"
+      ],
+      "area": "Steamy Bathhouse 1, 2, 5-8",
+      "exp": 240,
+      "drops": {
+        "gem": "Smoky Quartz",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Death Dice",
+      "arcana": "Fortune",
+      "level": 73,
+      "hp": 44,
+      "sp": 444,
+      "stats": {
+        "strength": 44,
+        "magic": 44,
+        "endurance": 44,
+        "agility": 44,
+        "luck": 44
+      },
+      "resists": "sssss---",
+      "skills": [
+        "Megidola",
+        "Mind Charge",
+        "Last Resort"
+      ],
+      "area": "Magatsu Mandala 4, 5",
+      "exp": 4440,
+      "drops": {
+        "gem": "Moonstone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Fanatic Tower",
+      "arcana": "Hierophant",
+      "level": 69,
+      "hp": 325,
+      "sp": 422,
+      "stats": {
+        "strength": 45,
+        "magic": 52,
+        "endurance": 24,
+        "agility": 49,
+        "luck": 41
+      },
+      "resists": "s-w-nnn-",
+      "skills": [
+        "Matarukaja",
+        "Marakunda",
+        "Muzzle Shot",
+        "Hamaon"
+      ],
+      "area": "Magatsu Mandala 1-3",
+      "exp": 3850,
+      "drops": {
+        "gem": "Angelite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Fierce Cyclops",
+      "arcana": "Hanged",
+      "level": 53,
+      "hp": 300,
+      "sp": 397,
+      "stats": {
+        "strength": 36,
+        "magic": 49,
+        "endurance": 25,
+        "agility": 38,
+        "luck": 18
+      },
+      "resists": "wdddd---",
+      "skills": [
+        "Megidola",
+        "Counterstrike",
+        "Null Dizzy"
+      ],
+      "area": "Secret Lab 5-8",
+      "exp": 2520,
+      "drops": {
+        "gem": "Meteorite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Gauntlet Hand",
+      "arcana": "Magician",
+      "level": 75,
+      "hp": 600,
+      "sp": 354,
+      "stats": {
+        "strength": 28,
+        "magic": 20,
+        "endurance": 10,
+        "agility": 44,
+        "luck": 55
+      },
+      "resists": "---w----",
+      "skills": [
+        "High Counter",
+        "Agi",
+        "Garu",
+        "Bufu",
+        "Zio",
+        "Gigantic Fist",
+        "Dodge Elec"
+      ],
+      "area": "Hollow Forest 4-6, 8, Su",
+      "exp": 1500,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Glorious Hand",
+      "arcana": "Magician P",
+      "level": 70,
+      "hp": 9999,
+      "sp": 777,
+      "stats": {
+        "strength": 30,
+        "magic": 30,
+        "endurance": 1,
+        "agility": 85,
+        "luck": 75
+      },
+      "resists": "-rrrrss-",
+      "skills": [
+        "Agilao",
+        "Bufula",
+        "Zionga",
+        "Garula",
+        "Masukukaja",
+        "Soul Break",
+        "Pulinpa",
+        "Poisma"
+      ],
+      "area": "Magatsu Inaba 1, 2, Magatsu Mandala 1-6 (Rare)",
+      "exp": 40000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Grave Beetle",
+      "arcana": "Emperor",
+      "level": 26,
+      "hp": 180,
+      "sp": 67,
+      "stats": {
+        "strength": 20,
+        "magic": 10,
+        "endurance": 24,
+        "agility": 2,
+        "luck": 12
+      },
+      "resists": "-----Zs-",
+      "skills": [
+        "Mamudo"
+      ],
+      "area": "Steamy Bathhouse 8-10",
+      "exp": 330,
+      "drops": {
+        "gem": "Fluorite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Happiness Hand",
+      "arcana": "Magician P",
+      "level": 10,
+      "hp": 150,
+      "sp": 100,
+      "stats": {
+        "strength": 7,
+        "magic": 7,
+        "endurance": 45,
+        "agility": 25,
+        "luck": 50
+      },
+      "resists": "-ssssss-",
+      "skills": [
+        "Agi",
+        "Garu",
+        "Bufu",
+        "Zio",
+        "Sukukaja",
+        "Bash"
+      ],
+      "area": "Yukiko's Castle 3-7 (Rare)",
+      "exp": 1500,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Intrepid Knight",
+      "arcana": "Emperor",
+      "level": 65,
+      "hp": 562,
+      "sp": 140,
+      "stats": {
+        "strength": 48,
+        "magic": 34,
+        "endurance": 40,
+        "agility": 46,
+        "luck": 31
+      },
+      "resists": "s--w-nns",
+      "skills": [
+        "Tempest Slash",
+        "Blight",
+        "Revolution",
+        "Null Dizzy"
+      ],
+      "area": "Heaven 5, 8, 9",
+      "exp": 5060,
+      "drops": {
+        "gem": "Sphalerite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Iron Dice",
+      "arcana": "Fortune",
+      "level": 21,
+      "hp": 178,
+      "sp": 44,
+      "stats": {
+        "strength": 11,
+        "magic": 22,
+        "endurance": 10,
+        "agility": 14,
+        "luck": 10
+      },
+      "resists": "---w----",
+      "skills": [
+        "Last Resort"
+      ],
+      "area": "Steamy Bathhouse 1, 2, 5-7, 9, 10, Su",
+      "exp": 280,
+      "drops": {
+        "gem": "Smoky Quartz",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Isolated Hand",
+      "arcana": "Magician P",
+      "level": 80,
+      "hp": 550,
+      "sp": 999,
+      "stats": {
+        "strength": 55,
+        "magic": 16,
+        "endurance": 62,
+        "agility": 42,
+        "luck": 99
+      },
+      "resists": "sddddrr-",
+      "skills": [
+        "Megido",
+        "Megidolaon",
+        "Hamaon",
+        "Mudoon"
+      ],
+      "area": "Hollow Forest (Chest)",
+      "exp": 10000,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Killing Hand",
+      "arcana": "Magician",
+      "level": 32,
+      "hp": 208,
+      "sp": 179,
+      "stats": {
+        "strength": 14,
+        "magic": 20,
+        "endurance": 13,
+        "agility": 27,
+        "luck": 21
+      },
+      "resists": "w-------",
+      "skills": [
+        "Rebellion",
+        "White Wall",
+        "Tetrakarn",
+        "Balzac",
+        "Recarmdra"
+      ],
+      "area": "Marukyu Striptease 5-10",
+      "exp": 490,
+      "drops": {
+        "gem": "Olive Stone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Killing Hand B",
+      "arcana": "Magician P",
+      "level": 42,
+      "hp": 885,
+      "sp": 100,
+      "stats": {
+        "strength": 32,
+        "magic": 27,
+        "endurance": 32,
+        "agility": 30,
+        "luck": 21
+      },
+      "resists": "-----nn-",
+      "skills": [
+        "Summon",
+        "Deathbound"
+      ],
+      "area": "Void Quest 7",
+      "exp": 8060,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Laughing Table",
+      "arcana": "Magician",
+      "level": 10,
+      "hp": 164,
+      "sp": 154,
+      "stats": {
+        "strength": 7,
+        "magic": 9,
+        "endurance": 8,
+        "agility": 7,
+        "luck": 8
+      },
+      "resists": "---swss-",
+      "skills": [
+        "Zio",
+        "Mazio",
+        "Evil Smile",
+        "Rakukaja"
+      ],
+      "area": "Yukiko's Castle 3-6",
+      "exp": 153,
+      "drops": {
+        "gem": "Iolite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Luxury Hand",
+      "arcana": "Magician P",
+      "level": 60,
+      "hp": 999,
+      "sp": 200,
+      "stats": {
+        "strength": 30,
+        "magic": 30,
+        "endurance": 45,
+        "agility": 75,
+        "luck": 65
+      },
+      "resists": "-dddsrr-",
+      "skills": [
+        "Agilao",
+        "Bufula",
+        "Zionga",
+        "Garula",
+        "Masukukaja",
+        "Bash",
+        "Soul Break",
+        "Anima Freeze"
+      ],
+      "area": "Heaven 1-9 (Rare)",
+      "exp": 34000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Magic Hand",
+      "arcana": "Magician",
+      "level": 8,
+      "hp": 130,
+      "sp": 10,
+      "stats": {
+        "strength": 1,
+        "magic": 6,
+        "endurance": 5,
+        "agility": 2,
+        "luck": 7
+      },
+      "resists": "s-w-s---",
+      "skills": [
+        "Agi"
+      ],
+      "area": "Yukiko's Castle 3, 4",
+      "exp": 78,
+      "drops": {
+        "gem": "Iolite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Mind Dice",
+      "arcana": "Fortune",
+      "level": 53,
+      "hp": 312,
+      "sp": 155,
+      "stats": {
+        "strength": 25,
+        "magic": 35,
+        "endurance": 25,
+        "agility": 40,
+        "luck": 40
+      },
+      "resists": "n----ZZ-",
+      "skills": [
+        "Last Resort",
+        "Debilitate"
+      ],
+      "area": "Secret Lab 5-8",
+      "exp": 2550,
+      "drops": {
+        "gem": "Buffalo Stone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Natural Dancer",
+      "arcana": "Lovers",
+      "level": 64,
+      "hp": 325,
+      "sp": 230,
+      "stats": {
+        "strength": 40,
+        "magic": 37,
+        "endurance": 40,
+        "agility": 45,
+        "luck": 42
+      },
+      "resists": "-----nZ-",
+      "skills": [
+        "Cleave",
+        "Atom Smasher",
+        "Debilitate",
+        "Diarama"
+      ],
+      "area": "Heaven 8, 9",
+      "exp": 2760,
+      "drops": {
+        "gem": "Aurora Quartz",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Opulent Hand",
+      "arcana": "Magician P",
+      "level": 50,
+      "hp": 750,
+      "sp": 500,
+      "stats": {
+        "strength": 30,
+        "magic": 30,
+        "endurance": 40,
+        "agility": 65,
+        "luck": 55
+      },
+      "resists": "-sdddnn-",
+      "skills": [
+        "Agilao",
+        "Bufula",
+        "Zionga",
+        "Garula",
+        "Masukukaja",
+        "Bash",
+        "Foolish Whisper",
+        "Makajam"
+      ],
+      "area": "Secret Lab 1-8 (Rare)",
+      "exp": 30000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Platinum Dice",
+      "arcana": "Fortune",
+      "level": 43,
+      "hp": 256,
+      "sp": 59,
+      "stats": {
+        "strength": 25,
+        "magic": 15,
+        "endurance": 25,
+        "agility": 20,
+        "luck": 25
+      },
+      "resists": "--w-----",
+      "skills": [
+        "Last Resort",
+        "Null Dizzy"
+      ],
+      "area": "Void Quest Su",
+      "exp": 520,
+      "drops": {
+        "gem": "Bloodstone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Reckoning Dice",
+      "arcana": "Fortune",
+      "level": 82,
+      "hp": 777,
+      "sp": 77,
+      "stats": {
+        "strength": 1,
+        "magic": 77,
+        "endurance": 55,
+        "agility": 55,
+        "luck": 77
+      },
+      "resists": "--------",
+      "skills": [
+        "Cleave",
+        "Last Resort",
+        "Apt Pupil"
+      ],
+      "area": "Yomotsu Hirasaka 3-8, Su",
+      "exp": 2660,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Reverent Table",
+      "arcana": "Magician",
+      "level": 74,
+      "hp": 200,
+      "sp": 231,
+      "stats": {
+        "strength": 58,
+        "magic": 29,
+        "endurance": 35,
+        "agility": 45,
+        "luck": 40
+      },
+      "resists": "swwww---",
+      "skills": [
+        "Garula",
+        "Zionga",
+        "Tetrakarn"
+      ],
+      "area": "Hollow Forest 2, 3, 5, 6, Su",
+      "exp": 1150,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Silver Dice",
+      "arcana": "Fortune",
+      "level": 31,
+      "hp": 250,
+      "sp": 83,
+      "stats": {
+        "strength": 19,
+        "magic": 19,
+        "endurance": 19,
+        "agility": 20,
+        "luck": 19
+      },
+      "resists": "s-------",
+      "skills": [
+        "Last Resort"
+      ],
+      "area": "Marukyu Striptease 5-8, 10",
+      "exp": 480,
+      "drops": {
+        "gem": "Olive Stone",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Sleeping Table",
+      "arcana": "Magician",
+      "level": 71,
+      "hp": 333,
+      "sp": 60,
+      "stats": {
+        "strength": 45,
+        "magic": 56,
+        "endurance": 30,
+        "agility": 50,
+        "luck": 42
+      },
+      "resists": "nw-n-rZ-",
+      "skills": [
+        "Brain Shake",
+        "Navas Nebula",
+        "Anima Freeze"
+      ],
+      "area": "Magatsu Mandala 2, 3",
+      "exp": 3950,
+      "drops": {
+        "gem": "Angelite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Sleeping Table B",
+      "arcana": "Magician P",
+      "level": 82,
+      "hp": 2000,
+      "sp": 2000,
+      "stats": {
+        "strength": 42,
+        "magic": 54,
+        "endurance": 67,
+        "agility": 55,
+        "luck": 75
+      },
+      "resists": "-----nn-",
+      "skills": [
+        "Maragidyne",
+        "Mahamaon",
+        "Megidolaon",
+        "Evil Smile",
+        "Ghastly Wail"
+      ],
+      "area": "Yomotsu Hirasaka 6",
+      "exp": 24570,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Supreme Hand",
+      "arcana": "Magician P",
+      "level": 40,
+      "hp": 500,
+      "sp": 500,
+      "stats": {
+        "strength": 30,
+        "magic": 30,
+        "endurance": 45,
+        "agility": 55,
+        "luck": 45
+      },
+      "resists": "-nsnnnn-",
+      "skills": [
+        "Agi",
+        "Bufu",
+        "Zio",
+        "Garu",
+        "Sukukaja",
+        "Bash",
+        "Poisma",
+        "Poison Mist"
+      ],
+      "area": "Void Quest 1-9 (Rare)",
+      "exp": 20000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Treasure Hand",
+      "arcana": "Magician P",
+      "level": 30,
+      "hp": 400,
+      "sp": 450,
+      "stats": {
+        "strength": 15,
+        "magic": 15,
+        "endurance": 43,
+        "agility": 45,
+        "luck": 35
+      },
+      "resists": "-nnsnss-",
+      "skills": [
+        "Agi",
+        "Bufu",
+        "Zio",
+        "Garu",
+        "Sukukaja",
+        "Bash",
+        "Enervation",
+        "Old One"
+      ],
+      "area": "Marukyu Striptease 1-10 (Rare)",
+      "exp": 10000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Wealth Hand",
+      "arcana": "Magician P",
+      "level": 20,
+      "hp": 300,
+      "sp": 250,
+      "stats": {
+        "strength": 10,
+        "magic": 15,
+        "endurance": 50,
+        "agility": 35,
+        "luck": 25
+      },
+      "resists": "-ssssss-",
+      "skills": [
+        "Agi",
+        "Garu",
+        "Bufu",
+        "Zio",
+        "Sukukaja",
+        "Bash",
+        "Pulinpa",
+        "Tentarafoo"
+      ],
+      "area": "Steamy Bathhouse 1-10 (Rare)",
+      "exp": 6000,
+      "drops": {
+        "gem": "Magatsu Xandrite",
+        "item": "-"
+      }
+    }
+  ]
+}

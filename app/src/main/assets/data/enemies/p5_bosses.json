@@ -1,0 +1,181 @@
+{
+  "main_bosses": [
+    {
+      "name": "Awakened God",
+      "arcana": "Hermit",
+      "level": 35,
+      "hp": 310,
+      "sp": 198,
+      "stats": {
+        "strength": 23,
+        "magic": 21,
+        "endurance": 26,
+        "agility": 22,
+        "luck": 20
+      },
+      "resists": "rr----wwss",
+      "skills": [
+        "Makarakarn",
+        "Abysmal Surge"
+      ],
+      "area": [
+        "Okumura's Palace",
+        "Path of Adyeshach 1-4,6-8,10"
+      ],
+      "exp": 157,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Coffin Borne God",
+      "arcana": "Death",
+      "level": 72,
+      "hp": 1030,
+      "sp": 516,
+      "stats": {
+        "strength": 42,
+        "magic": 90,
+        "endurance": 46,
+        "agility": 49,
+        "luck": 45
+      },
+      "resists": "-s--dw---r",
+      "skills": [
+        "Megido",
+        "Megidolaon",
+        "Lullaby",
+        "Concentrate"
+      ],
+      "area": [
+        "Qliphoth World"
+      ],
+      "exp": 1735,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Raging Bird God",
+      "arcana": "Star",
+      "level": 52,
+      "hp": 504,
+      "sp": 366,
+      "stats": {
+        "strength": 39,
+        "magic": 60,
+        "endurance": 36,
+        "agility": 53,
+        "luck": 36
+      },
+      "resists": "-w---s--r-",
+      "skills": [
+        "Garudyne",
+        "Magarudyne",
+        "Masukukaja",
+        "Wind Amp"
+      ],
+      "area": [
+        "Shido's Palace",
+        "Path of Sheriruth II 12"
+      ],
+      "exp": 388,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    }
+  ],
+  "mini_bosses": [
+    {
+      "name": "Quaking Lady of Shadow",
+      "arcana": "Priestess",
+      "level": 55,
+      "hp": 818,
+      "sp": 489,
+      "stats": {
+        "strength": 31,
+        "magic": 98,
+        "endurance": 36,
+        "agility": 26,
+        "luck": 30
+      },
+      "resists": "---r-----n",
+      "skills": [
+        "Bufudyne",
+        "Evil Smile",
+        "Ghastly Wail"
+      ],
+      "area": [
+        "Niijima's Palace",
+        "Path of Sheriruth I 12,13",
+        "Path of Sheriruth II 5"
+      ],
+      "exp": 818,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "The Shadowed One",
+      "arcana": "Priestess",
+      "level": 45,
+      "hp": 575,
+      "sp": 309,
+      "stats": {
+        "strength": 41,
+        "magic": 48,
+        "endurance": 32,
+        "agility": 29,
+        "luck": 25
+      },
+      "resists": "---r-----n",
+      "skills": [
+        "Tempest Slash",
+        "Maragion",
+        "Magarula"
+      ],
+      "area": [
+        "Okumura's Palace",
+        "Path of Adyeshach 10-12"
+      ],
+      "exp": 442,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    },
+    {
+      "name": "Thief of Tablets",
+      "arcana": "Hierophant",
+      "level": 25,
+      "hp": 291,
+      "sp": 189,
+      "stats": {
+        "strength": 30,
+        "magic": 28,
+        "endurance": 15,
+        "agility": 25,
+        "luck": 16
+      },
+      "resists": "-w--sd-w--",
+      "skills": [
+        "Garula",
+        "Masukukaja",
+        "Assault Dive"
+      ],
+      "area": [
+        "Futaba's Palace",
+        "Path of Akzeriyyuth 1-3,5-7,9-11"
+      ],
+      "exp": 103,
+      "drops": {
+        "gem": "-",
+        "item": "-"
+      }
+    }
+  ]
+}
