@@ -8,6 +8,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -39,17 +41,28 @@ fun EnemyListScreen(
     val context = LocalContext.current
     val state by viewModel.state.collectAsState()
     var selectedTab by remember { mutableStateOf(EnemyTab.ENEMIES) }
+    var searchQuery by remember { mutableStateOf("") }
     
     LaunchedEffect(enemyPath) {
         viewModel.loadEnemies(context, enemyPath)
     }
     
-    // Filter enemies by category
-    val filteredEnemies = remember(state.enemies, selectedTab) {
-        when (selectedTab) {
+    // Filter enemies by category and search
+    val filteredEnemies = remember(state.enemies, selectedTab, searchQuery) {
+        val byCategory = when (selectedTab) {
             EnemyTab.ENEMIES -> state.enemies.filter { !it.isMiniBoss && !it.isBoss }
             EnemyTab.MINI_BOSSES -> state.enemies.filter { it.isMiniBoss }
             EnemyTab.MAIN_BOSSES -> state.enemies.filter { it.isBoss }
+        }
+        
+        if (searchQuery.isBlank()) {
+            byCategory
+        } else {
+            byCategory.filter { 
+                it.name.contains(searchQuery, ignoreCase = true) ||
+                it.arcana.contains(searchQuery, ignoreCase = true) ||
+                it.area.contains(searchQuery, ignoreCase = true)
+            }
         }
     }
     
@@ -115,6 +128,42 @@ fun EnemyListScreen(
                         .fillMaxSize()
                         .padding(padding)
                 ) {
+                    // Search Bar
+                    OutlinedTextField(
+                        value = searchQuery,
+                        onValueChange = { searchQuery = it },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 8.dp),
+                        placeholder = { Text("Search enemies...", color = TextDisabled) },
+                        leadingIcon = {
+                            Icon(
+                                imageVector = Icons.Default.Search,
+                                contentDescription = "Search",
+                                tint = TextSecondary
+                            )
+                        },
+                        trailingIcon = {
+                            if (searchQuery.isNotEmpty()) {
+                                IconButton(onClick = { searchQuery = "" }) {
+                                    Icon(
+                                        imageVector = Icons.Default.Close,
+                                        contentDescription = "Clear",
+                                        tint = TextSecondary
+                                    )
+                                }
+                            }
+                        },
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedTextColor = TextPrimary,
+                            unfocusedTextColor = TextPrimary,
+                            focusedBorderColor = TextSecondary,
+                            unfocusedBorderColor = TextDisabled,
+                            cursorColor = TextPrimary
+                        ),
+                        singleLine = true
+                    )
+                    
                     // Tabs
                     TabRow(
                         selectedTabIndex = selectedTab.ordinal,
@@ -169,10 +218,14 @@ fun EnemyListScreen(
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = when (selectedTab) {
-                                    EnemyTab.ENEMIES -> "No enemies available"
-                                    EnemyTab.MINI_BOSSES -> "No mini bosses available"
-                                    EnemyTab.MAIN_BOSSES -> "No main bosses available"
+                                text = if (searchQuery.isNotEmpty()) {
+                                    "No enemies found matching \"$searchQuery\""
+                                } else {
+                                    when (selectedTab) {
+                                        EnemyTab.ENEMIES -> "No enemies available"
+                                        EnemyTab.MINI_BOSSES -> "No mini bosses available"
+                                        EnemyTab.MAIN_BOSSES -> "No main bosses available"
+                                    }
                                 },
                                 color = TextSecondary
                             )
