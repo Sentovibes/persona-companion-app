@@ -37,7 +37,7 @@ object SeriesData {
                     id = "p3r",
                     title = "Persona 3 Reload",
                     dataPath = "data/persona3/reload_personas.json",
-                    enemyPath = "data/enemies/p3fes_enemies.json"
+                    enemyPath = "data/enemies/p3r_enemies.json"
                 )
             )
         ),

@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Cast
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -21,8 +22,10 @@ import com.persona.companion.data.SeriesData
 import com.persona.companion.models.PersonaSeries
 import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.components.AdaptiveSeriesLayout
+import com.persona.companion.ui.components.CastButton
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
+import com.persona.companion.utils.rememberCastAvailable
 import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberTextScaleFactor
@@ -33,6 +36,7 @@ fun HomeScreen(navController: NavController) {
     val deviceType = rememberDeviceType()
     val contentPadding = rememberContentPadding()
     val textScale = rememberTextScaleFactor()
+    val castAvailable = rememberCastAvailable()
     
     Scaffold(
         containerColor = Background,
@@ -40,6 +44,10 @@ fun HomeScreen(navController: NavController) {
             TopAppBar(
                 title = { },
                 actions = {
+                    // Cast button (only show on phone/tablet, not on TV)
+                    if (castAvailable && deviceType != DeviceType.TV) {
+                        CastButton()
+                    }
                     IconButton(onClick = { navController.navigate(Screen.Settings.route) }) {
                         Icon(Icons.Default.Settings, contentDescription = "Settings", tint = TextPrimary)
                     }
