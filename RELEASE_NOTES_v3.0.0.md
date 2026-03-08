@@ -5,15 +5,15 @@
 Complete enemy database for all Persona games with detailed information and advanced filtering.
 
 ### Enemy Data Coverage
-- **P3 FES**: 188 enemies (142 regular, 35 mini-bosses, 11 main bosses)
-- **P3 Portable**: 179 enemies (138 regular, 30 mini-bosses, 11 main bosses)
-- **P3 Reload**: 464 enemies (420 regular, 31 mini-bosses, 13 main bosses)
+- **P3 FES**: 368 enemies (299 regular, 55 mini-bosses, 14 main bosses)
+- **P3 Portable**: 176 enemies (140 regular, 23 mini-bosses, 13 main bosses)
+- **P3 Reload**: 496 enemies (420 regular, 62 mini-bosses, 14 main bosses)
 - **P4**: 271 enemies (243 regular, 17 mini-bosses, 11 main bosses)
 - **P4 Golden**: 297 enemies (265 regular, 19 mini-bosses, 13 main bosses)
 - **P5**: 149 enemies (112 regular, 29 mini-bosses, 8 main bosses)
 - **P5 Royal**: 168 enemies (129 regular, 30 mini-bosses, 9 main bosses)
 
-**Total: 1,716 enemies**
+**Total: 1,925 enemies**
 
 ### Enemy Features
 - **Categorized Tabs**: Separate tabs for regular enemies, mini-bosses, and main bosses with counts
