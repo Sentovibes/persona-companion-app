@@ -12,12 +12,15 @@ import com.google.android.gms.cast.framework.CastButtonFactory
  */
 @Composable
 fun CastButton() {
-    val context = LocalContext.current
-    
     AndroidView(
         factory = { ctx ->
-            MediaRouteButton(ctx).apply {
-                CastButtonFactory.setUpMediaRouteButton(ctx, this)
+            try {
+                MediaRouteButton(ctx).apply {
+                    CastButtonFactory.setUpMediaRouteButton(ctx, this)
+                }
+            } catch (e: Exception) {
+                // Cast not available, return empty view
+                MediaRouteButton(ctx)
             }
         }
     )

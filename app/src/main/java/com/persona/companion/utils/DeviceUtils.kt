@@ -36,13 +36,9 @@ object DeviceUtils {
     
     /**
      * Detect device type based on configuration
+     * Note: Does not check Cast state to avoid initialization issues
      */
     fun getDeviceType(context: Context): DeviceType {
-        // Check if casting first
-        if (CastUtils.isCasting(context)) {
-            return DeviceType.CAST
-        }
-        
         val uiModeManager = context.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
         val currentMode = uiModeManager.currentModeType
         

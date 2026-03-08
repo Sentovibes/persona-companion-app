@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.produceState
+import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import com.google.android.gms.cast.framework.CastContext
 import com.google.android.gms.cast.framework.CastState
@@ -49,6 +50,18 @@ object CastUtils {
             CastState.NO_DEVICES_AVAILABLE
         }
     }
+    
+    /**
+     * Initialize Cast SDK lazily
+     * Call this before using Cast features
+     */
+    fun initializeCast(context: Context) {
+        try {
+            CastContext.getSharedInstance(context)
+        } catch (e: Exception) {
+            // Cast not available, ignore
+        }
+    }
 }
 
 /**
@@ -66,9 +79,16 @@ fun rememberIsCasting(): State<Boolean> {
 
 /**
  * Composable to check if cast is available
+ * Returns false if Cast SDK fails to initialize
  */
 @Composable
 fun rememberCastAvailable(): Boolean {
     val context = LocalContext.current
-    return CastUtils.isCastAvailable(context)
+    return remember {
+        try {
+            CastUtils.isCastAvailable(context)
+        } catch (e: Exception) {
+            false
+        }
+    }
 }
