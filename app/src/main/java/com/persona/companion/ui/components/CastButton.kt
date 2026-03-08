@@ -1,0 +1,196 @@
+package com.persona.companion.ui.components
+
+import android.graphics.Bitmap
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Cast
+import androidx.compose.material.icons.filled.CastConnected
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import com.persona.companion.cast.CastManager
+import com.persona.companion.utils.QRCodeGenerator
+
+/**
+ * Cast button with connection dialog
+ */
+@Composable
+fun CastButton() {
+    val context = LocalContext.current
+    var showDialog by remember { mutableStateOf(false) }
+    var isConnected by remember { mutableStateOf(false) }
+    var connectionUrl by remember { mutableStateOf<String?>(null) }
+    var qrCodeBitmap by remember { mutableStateOf<Bitmap?>(null) }
+    
+    // Set up callbacks
+    LaunchedEffect(Unit) {
+        CastManager.onServerStarted = { url ->
+            connectionUrl = url
+            qrCodeBitmap = QRCodeGenerator.generateQRCode(url, 512)
+        }
+        
+        CastManager.onClientConnected = {
+            isConnected = true
+        }
+        
+        CastManager.onClientDisconnected = {
+            isConnected = false
+        }
+    }
+    
+    IconButton(onClick = { showDialog = true }) {
+        Icon(
+            imageVector = if (isConnected) Icons.Default.CastConnected else Icons.Default.Cast,
+            contentDescription = "Cast",
+            tint = if (isConnected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+        )
+    }
+    
+    if (showDialog) {
+        CastDialog(
+            isConnected = isConnected,
+            connectionUrl = connectionUrl,
+            qrCodeBitmap = qrCodeBitmap,
+            onDismiss = { showDialog = false },
+            onStartCasting = {
+                CastManager.startServer(context)
+            },
+            onStopCasting = {
+                CastManager.stopServer()
+                isConnected = false
+                connectionUrl = null
+                qrCodeBitmap = null
+            }
+        )
+    }
+}
+
+@Composable
+private fun CastDialog(
+    isConnected: Boolean,
+    connectionUrl: String?,
+    qrCodeBitmap: Bitmap?,
+    onDismiss: () -> Unit,
+    onStartCasting: () -> Unit,
+    onStopCasting: () -> Unit
+) {
+    val isServerRunning = CastManager.isServerRunning()
+    
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            shape = RoundedCornerShape(16.dp)
+        ) {
+            Column(
+                modifier = Modifier.padding(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Cast to TV",
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold
+                )
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                if (!isServerRunning) {
+                    // Not started yet
+                    Text(
+                        text = "Start casting to display content on your TV or browser",
+                        style = MaterialTheme.typography.bodyMedium,
+                        textAlign = TextAlign.Center
+                    )
+                    
+                    Spacer(modifier = Modifier.height(24.dp))
+                    
+                    Button(
+                        onClick = onStartCasting,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(Icons.Default.Cast, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Start Casting")
+                    }
+                } else {
+                    // Server running
+                    if (isConnected) {
+                        Text(
+                            text = "✓ TV Connected",
+                            style = MaterialTheme.typography.titleMedium,
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold
+                        )
+                    } else {
+                        Text(
+                            text = "Waiting for TV to connect...",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // Show QR code
+                    qrCodeBitmap?.let { bitmap ->
+                        Card(
+                            modifier = Modifier.size(256.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.surface
+                            )
+                        ) {
+                            Image(
+                                bitmap = bitmap.asImageBitmap(),
+                                contentDescription = "QR Code",
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        }
+                        
+                        Spacer(modifier = Modifier.height(16.dp))
+                    }
+                    
+                    // Show URL
+                    connectionUrl?.let { url ->
+                        Text(
+                            text = "Open on TV browser:",
+                            style = MaterialTheme.typography.bodySmall
+                        )
+                        Text(
+                            text = url,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                    
+                    Spacer(modifier = Modifier.height(24.dp))
+                    
+                    Button(
+                        onClick = onStopCasting,
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.error
+                        )
+                    ) {
+                        Text("Stop Casting")
+                    }
+                }
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                TextButton(onClick = onDismiss) {
+                    Text("Close")
+                }
+            }
+        }
+    }
+}

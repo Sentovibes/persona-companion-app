@@ -21,6 +21,7 @@ import com.persona.companion.data.SeriesData
 import com.persona.companion.models.PersonaSeries
 import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.components.AdaptiveSeriesLayout
+import com.persona.companion.ui.components.CastButton
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.rememberContentPadding
@@ -40,6 +41,10 @@ fun HomeScreen(navController: NavController) {
             TopAppBar(
                 title = { },
                 actions = {
+                    // Cast button (only on phone/tablet, not TV)
+                    if (deviceType != DeviceType.TV) {
+                        CastButton()
+                    }
                     IconButton(onClick = { navController.navigate(Screen.Settings.route) }) {
                         Icon(Icons.Default.Settings, contentDescription = "Settings", tint = TextPrimary)
                     }

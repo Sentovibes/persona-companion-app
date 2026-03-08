@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -26,6 +27,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.persona.companion.R
+import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.AdaptiveDetailLayout
@@ -51,6 +53,13 @@ fun EnemyDetailScreen(
     val shouldLoadImages = rememberShouldLoadImages()
     val deviceType = rememberDeviceType()
     val textScale = rememberTextScaleFactor()
+    
+    // Broadcast to cast if connected
+    LaunchedEffect(enemy) {
+        if (CastManager.isServerRunning()) {
+            CastManager.broadcastEnemy(enemy)
+        }
+    }
     
     Scaffold(
         containerColor = Background,
