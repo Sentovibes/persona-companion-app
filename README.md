@@ -92,7 +92,7 @@ persona-companion-app/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/persona-companion-app.git
+git clone https://github.com/sentovibes/persona-companion-app.git
 cd persona-companion-app
 ```
 
