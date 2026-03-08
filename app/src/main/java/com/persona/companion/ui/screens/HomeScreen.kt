@@ -20,11 +20,20 @@ import androidx.navigation.NavController
 import com.persona.companion.data.SeriesData
 import com.persona.companion.models.PersonaSeries
 import com.persona.companion.navigation.Screen
+import com.persona.companion.ui.components.AdaptiveSeriesLayout
 import com.persona.companion.ui.theme.*
+import com.persona.companion.utils.DeviceType
+import com.persona.companion.utils.rememberContentPadding
+import com.persona.companion.utils.rememberDeviceType
+import com.persona.companion.utils.rememberTextScaleFactor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController) {
+    val deviceType = rememberDeviceType()
+    val contentPadding = rememberContentPadding()
+    val textScale = rememberTextScaleFactor()
+    
     Scaffold(
         containerColor = Background,
         topBar = {
@@ -43,7 +52,7 @@ fun HomeScreen(navController: NavController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(horizontal = 20.dp),
+                .padding(horizontal = contentPadding),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -51,7 +60,7 @@ fun HomeScreen(navController: NavController) {
             Text(
                 text = "PERSONA",
                 style = MaterialTheme.typography.headlineLarge.copy(
-                    fontSize = 42.sp,
+                    fontSize = (42.sp * textScale),
                     letterSpacing = 6.sp,
                     fontWeight = FontWeight.ExtraBold
                 ),
@@ -60,29 +69,41 @@ fun HomeScreen(navController: NavController) {
             Text(
                 text = "COMPANION",
                 style = MaterialTheme.typography.labelLarge.copy(
+                    fontSize = (MaterialTheme.typography.labelLarge.fontSize * textScale),
                     letterSpacing = 10.sp
                 ),
                 color = TextSecondary
             )
 
-            Spacer(modifier = Modifier.height(56.dp))
+            Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 80.dp else 56.dp))
 
-            // Series cards
-            SeriesData.allSeries.forEach { series ->
-                SeriesCard(
-                    series = series,
-                    onClick = {
-                        navController.navigate(Screen.GameSelection.createRoute(series.id))
-                    }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
+            // Series cards - adaptive layout
+            AdaptiveSeriesLayout(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                SeriesData.allSeries.forEach { series ->
+                    SeriesCard(
+                        series = series,
+                        deviceType = deviceType,
+                        onClick = {
+                            navController.navigate(Screen.GameSelection.createRoute(series.id))
+                        },
+                        modifier = when (deviceType) {
+                            DeviceType.PHONE -> Modifier.fillMaxWidth()
+                            DeviceType.TABLET -> Modifier.weight(1f)
+                            DeviceType.TV, DeviceType.CAST -> Modifier.weight(1f)
+                        }
+                    )
+                }
             }
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 48.dp else 32.dp))
 
             Text(
                 text = "Community-driven • Open source",
-                style = MaterialTheme.typography.labelSmall,
+                style = MaterialTheme.typography.labelSmall.copy(
+                    fontSize = (MaterialTheme.typography.labelSmall.fontSize * textScale)
+                ),
                 color = TextDisabled
             )
         }
@@ -90,15 +111,27 @@ fun HomeScreen(navController: NavController) {
 }
 
 @Composable
-private fun SeriesCard(series: PersonaSeries, onClick: () -> Unit) {
+private fun SeriesCard(
+    series: PersonaSeries,
+    deviceType: DeviceType,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     val gradient = Brush.horizontalGradient(
         colors = listOf(series.color, series.color.copy(alpha = 0.6f))
     )
+    
+    val cardHeight = when (deviceType) {
+        DeviceType.PHONE -> 90.dp
+        DeviceType.TABLET -> 120.dp
+        DeviceType.TV, DeviceType.CAST -> 160.dp
+    }
+    
+    val textScale = rememberTextScaleFactor()
 
     Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(90.dp)
+        modifier = modifier
+            .height(cardHeight)
             .clip(RoundedCornerShape(16.dp))
             .background(brush = gradient)
             .clickable(onClick = onClick),
@@ -110,7 +143,7 @@ private fun SeriesCard(series: PersonaSeries, onClick: () -> Unit) {
             modifier = Modifier
                 .align(Alignment.CenterEnd)
                 .padding(end = 20.dp),
-            fontSize = 72.sp,
+            fontSize = (72.sp * textScale),
             fontWeight = FontWeight.ExtraBold,
             color = Color.White.copy(alpha = 0.12f)
         )
@@ -120,13 +153,17 @@ private fun SeriesCard(series: PersonaSeries, onClick: () -> Unit) {
         ) {
             Text(
                 text = series.title,
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.titleLarge.copy(
+                    fontSize = (MaterialTheme.typography.titleLarge.fontSize * textScale)
+                ),
                 color = Color.White,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = "${series.games.size} game${if (series.games.size != 1) "s" else ""}",
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
+                ),
                 color = Color.White.copy(alpha = 0.7f)
             )
         }
