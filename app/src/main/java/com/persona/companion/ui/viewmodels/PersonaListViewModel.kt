@@ -6,7 +6,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.persona.companion.data.AppPreferences
 import com.persona.companion.data.PersonaRepository
+import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Persona
+import com.persona.companion.models.PersonaFilters
+import com.persona.companion.utils.FilterUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -26,20 +29,31 @@ data class PersonaListState(
     val isLoading: Boolean = true,
     val errorMessage: String? = null,
     val debugInfo: String = "",
-    val sortBy: SortOption = SortOption.ARCANA
+    val sortBy: SortOption = SortOption.ARCANA,
+    val filters: PersonaFilters = PersonaFilters(),
+    val favorites: Set<String> = emptySet()
 )
 
 class PersonaListViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repo = PersonaRepository(application)
     private val prefs = AppPreferences(application)
+    private val userPrefs = UserPreferences(application)
 
     private val _state = MutableStateFlow(PersonaListState())
     val state = _state.asStateFlow()
 
     fun load(dataPath: String) {
         Log.d(TAG, "load() called with dataPath: $dataPath")
-        _state.update { it.copy(isLoading = true, query = "", personas = emptyList(), filtered = emptyList(), errorMessage = null, debugInfo = "Loading from: $dataPath") }
+        _state.update { it.copy(
+            isLoading = true, 
+            query = "", 
+            personas = emptyList(), 
+            filtered = emptyList(), 
+            errorMessage = null, 
+            debugInfo = "Loading from: $dataPath",
+            favorites = userPrefs.getFavoritePersonas()
+        ) }
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 Log.d(TAG, "Starting to load personas from: $dataPath")
@@ -55,7 +69,12 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
                 }
                 
                 val debug = "Path: $dataPath\nLoaded: ${all.size} personas\nFiltered: ${filtered.size} personas\nFirst 3: ${filtered.take(3).map { it.name }}"
-                _state.update { it.copy(personas = filtered, filtered = applySorting(filtered, it.sortBy), isLoading = false, debugInfo = debug) }
+                _state.update { it.copy(
+                    personas = filtered, 
+                    filtered = applyFiltersAndSort(filtered, it.filters, it.favorites, it.query), 
+                    isLoading = false, 
+                    debugInfo = debug
+                ) }
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading personas", e)
                 _state.update { it.copy(isLoading = false, errorMessage = "Error: ${e.message}", debugInfo = "Path: $dataPath\nError: ${e.stackTraceToString()}") }
@@ -65,31 +84,59 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
 
     fun onQueryChange(query: String) {
         _state.update { current ->
-            val filtered = if (query.isBlank()) {
-                current.personas
-            } else {
-                val lower = query.lowercase()
-                current.personas.filter {
-                    it.name.lowercase().contains(lower) || 
-                    (it.arcana?.lowercase()?.contains(lower) == true)
-                }
-            }
-            Log.d(TAG, "Query: '$query', filtered: ${filtered.size} personas")
-            current.copy(query = query, filtered = applySorting(filtered, current.sortBy))
+            current.copy(
+                query = query, 
+                filtered = applyFiltersAndSort(current.personas, current.filters, current.favorites, query)
+            )
         }
     }
 
     fun setSortOption(sortBy: SortOption) {
         _state.update { current ->
-            current.copy(sortBy = sortBy, filtered = applySorting(current.filtered, sortBy))
+            current.copy(sortBy = sortBy, filtered = applyFiltersAndSort(current.personas, current.filters, current.favorites, current.query))
         }
+    }
+    
+    fun setFilters(filters: PersonaFilters) {
+        _state.update { current ->
+            current.copy(
+                filters = filters,
+                filtered = applyFiltersAndSort(current.personas, filters, current.favorites, current.query)
+            )
+        }
+    }
+    
+    fun toggleFavorite(persona: Persona) {
+        val personaId = FilterUtils.getPersonaId(persona)
+        if (userPrefs.isFavoritePersona(personaId)) {
+            userPrefs.removeFavoritePersona(personaId)
+        } else {
+            userPrefs.addFavoritePersona(personaId)
+        }
+        _state.update { it.copy(favorites = userPrefs.getFavoritePersonas()) }
     }
 
-    private fun applySorting(personas: List<Persona>, sortBy: SortOption): List<Persona> {
-        return when (sortBy) {
-            SortOption.ARCANA -> personas.sortedWith(compareBy({ it.arcana ?: "Unknown" }, { it.level ?: 0 }))
-            SortOption.LEVEL -> personas.sortedBy { it.level ?: 0 }
-            SortOption.NAME -> personas.sortedBy { it.name }
+    private fun applyFiltersAndSort(
+        personas: List<Persona>, 
+        filters: PersonaFilters,
+        favorites: Set<String>,
+        query: String
+    ): List<Persona> {
+        // First apply search query
+        var filtered = if (query.isBlank()) {
+            personas
+        } else {
+            val lower = query.lowercase()
+            personas.filter {
+                it.name.lowercase().contains(lower) || 
+                (it.arcana?.lowercase()?.contains(lower) == true)
+            }
         }
+        
+        // Then apply filters and sort
+        filtered = FilterUtils.filterAndSortPersonas(filtered, filters, favorites)
+        
+        return filtered
     }
 }
+

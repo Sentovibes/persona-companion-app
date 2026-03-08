@@ -11,8 +11,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 6
-        versionName "3.0.0"
+        versionCode 7
+        versionName "3.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -32,16 +32,25 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "true"
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "false"
         }
     }
     
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "persona-companion-v${variant.versionName}.apk"
+            def buildType = variant.buildType.name
+            if (buildType == "debug") {
+                outputFileName = "persona-companion-v${variant.versionName}-debug.apk"
+            } else {
+                outputFileName = "persona-companion-v${variant.versionName}.apk"
+            }
         }
     }
 
@@ -56,6 +65,7 @@ android {
 
     buildFeatures {
         compose true
+        buildConfig true
     }
 
     composeOptions {
