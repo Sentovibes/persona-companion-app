@@ -51,8 +51,8 @@ def process_p4_bosses():
     print("Processing P4/P4G boss data...")
     
     # Load boss and mini-boss data
-    boss_file = Path("persona4+golden-bosses-template.json")
-    mini_boss_file = Path("persona4+golden-mini-bosses.json")
+    boss_file = Path("extras/persona4+golden-bosses-template.json")
+    mini_boss_file = Path("extras/persona4+golden-mini-bosses.json")
     
     boss_data = json.loads(boss_file.read_text(encoding='utf-8'))
     mini_boss_data = json.loads(mini_boss_file.read_text(encoding='utf-8'))

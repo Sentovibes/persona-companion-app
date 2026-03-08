@@ -60,7 +60,7 @@ def process_p5_bosses():
     print("Processing P5/P5R boss data...")
     
     # Load boss data
-    boss_file = Path("persona5+royal-bosses.json")
+    boss_file = Path("extras/persona5+royal-bosses.json")
     boss_data = json.loads(boss_file.read_text(encoding='utf-8'))
     
     # Load existing enemy data

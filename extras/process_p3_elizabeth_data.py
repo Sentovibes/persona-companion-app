@@ -2,6 +2,7 @@
 """
 Process P3 enemy data from elizabeth-master/shadows.json
 Creates separate files for P3 FES and P3 Portable with proper categorization.
+Flattens the nested structure into the format expected by the app.
 """
 
 import json
@@ -42,6 +43,72 @@ ADDITIONAL_MINI_BOSSES = [
     "Jotun of Blood", "Jotun of Grief"
 ]
 
+# P3 element order: Slash, Strike, Pierce, Fire, Ice, Elec, Wind, Light, Dark, Almighty
+P3_ELEMENTS = ["Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almi"]
+
+def convert_resistances(resist_obj):
+    """Convert elizabeth resistance format to string format."""
+    # Map resistance types to characters
+    resist_map = {
+        "Weak": "w",
+        "Strong": "r",  # Strong = Resist
+        "Null": "n",
+        "Drain": "d",
+        "Repel": "d"  # Treat repel as drain
+    }
+    
+    # Build resistance string for P3 elements
+    result = []
+    for elem in P3_ELEMENTS:
+        found = "-"  # Default to neutral
+        for resist_type, elements in resist_obj.items():
+            if elem in elements or (elem == "Almi" and "Almighty" in elements):
+                found = resist_map.get(resist_type, "-")
+                break
+        result.append(found)
+    
+    return "".join(result)
+
+def flatten_enemy(shadow_data):
+    """Flatten elizabeth nested structure to app format."""
+    name = shadow_data.get("name", "Unknown")
+    
+    # Use "The Journey" variant as default (most common)
+    info_list = shadow_data.get("info", [])
+    journey_info = None
+    for info in info_list:
+        if info.get("variant") == "The Journey":
+            journey_info = info
+            break
+    
+    # Fallback to first variant if no Journey found
+    if not journey_info and info_list:
+        journey_info = info_list[0]
+    
+    if not journey_info:
+        print(f"Warning: No info found for {name}")
+        return None
+    
+    # Extract data
+    resistances = journey_info.get("resistances", {})
+    
+    # Create flattened enemy
+    enemy = {
+        "name": name,
+        "arcana": "Shadow",  # Elizabeth data doesn't have arcana
+        "level": 0,  # Elizabeth data doesn't have level
+        "hp": 0,  # Elizabeth data doesn't have stats
+        "sp": 0,
+        "resists": convert_resistances(resistances),
+        "skills": [],  # Elizabeth data doesn't have skills
+        "area": "Tartarus",  # Default area
+        "exp": 0,
+        "isBoss": False,
+        "isMiniBoss": False
+    }
+    
+    return enemy
+
 def is_mini_boss(enemy):
     """Check if enemy is a mini-boss."""
     name = enemy.get("name", "")
@@ -61,13 +128,21 @@ def is_main_boss(enemy):
 def is_monad_enemy(enemy):
     """Check if enemy is from Monad Depths."""
     name = enemy.get("name", "")
-    area = enemy.get("area", "")
-    return name in MONAD_ENEMIES or "Monad" in area
+    return name in MONAD_ENEMIES
 
 def process_elizabeth_data():
     """Process elizabeth shadows.json data."""
     print("Loading elizabeth data...")
-    data = json.loads(ELIZABETH_PATH.read_text(encoding='utf-8'))
+    raw_data = json.loads(ELIZABETH_PATH.read_text(encoding='utf-8'))
+    
+    # Flatten all enemies
+    flattened = []
+    for shadow in raw_data:
+        enemy = flatten_enemy(shadow)
+        if enemy:
+            flattened.append(enemy)
+    
+    print(f"Flattened {len(flattened)} enemies from elizabeth data")
     
     # Separate into categories
     p3fes_enemies = []
@@ -78,7 +153,7 @@ def process_elizabeth_data():
     p3p_mini_bosses = []
     p3p_main_bosses = []
     
-    for enemy in data:
+    for enemy in flattened:
         name = enemy.get("name", "")
         
         # Add date and flags for main bosses
@@ -107,22 +182,9 @@ def process_elizabeth_data():
                 p3fes_enemies.append(enemy)
                 p3p_enemies.append(enemy)
     
-    # Sort by level
-    p3fes_enemies.sort(key=lambda x: x.get('level', 0))
-    p3fes_mini_bosses.sort(key=lambda x: x.get('level', 0))
-    p3fes_main_bosses.sort(key=lambda x: x.get('level', 0))
-    
-    p3p_enemies.sort(key=lambda x: x.get('level', 0))
-    p3p_mini_bosses.sort(key=lambda x: x.get('level', 0))
-    p3p_main_bosses.sort(key=lambda x: x.get('level', 0))
-    
     # Combine all for each version
     p3fes_all = p3fes_enemies + p3fes_mini_bosses + p3fes_main_bosses
     p3p_all = p3p_enemies + p3p_mini_bosses + p3p_main_bosses
-    
-    # Sort combined by level
-    p3fes_all.sort(key=lambda x: x.get('level', 0))
-    p3p_all.sort(key=lambda x: x.get('level', 0))
     
     # Write to assets
     assets_path = Path("app/src/main/assets/data/enemies")

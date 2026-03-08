@@ -84,6 +84,13 @@ def convert_enemy(name, data, is_subboss=False):
         sp = data.get("mp", 0)
         strength = magic = endurance = agility = luck = 0
     
+    # Handle area - can be string or array
+    area_data = data.get("area", "Unknown")
+    if isinstance(area_data, list):
+        area = ", ".join(area_data) if area_data else "Unknown"
+    else:
+        area = area_data if area_data else "Unknown"
+    
     return {
         "name": name,
         "arcana": data.get("race", "Unknown"),
@@ -99,7 +106,7 @@ def convert_enemy(name, data, is_subboss=False):
         },
         "resists": convert_resists(data.get("resists", {})),
         "skills": data.get("skills", []),
-        "area": data.get("area", "Unknown"),
+        "area": area,
         "exp": data.get("exp", 0),
         "drops": {
             "gem": "-",

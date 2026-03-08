@@ -51,8 +51,8 @@ def process_p3r_bosses():
     print("Processing P3R boss data...")
     
     # Load boss and mini-boss data
-    boss_file = Path("persona3reload-bosses.json")
-    mini_boss_file = Path("persona3reload-mini-bosses.json")
+    boss_file = Path("extras/persona3reload-bosses.json")
+    mini_boss_file = Path("extras/persona3reload-mini-bosses.json")
     
     boss_data = json.loads(boss_file.read_text(encoding='utf-8'))
     mini_boss_data = json.loads(mini_boss_file.read_text(encoding='utf-8'))

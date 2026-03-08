@@ -850,9 +850,7 @@
       "Tarukaja",
       "Rampage"
     ],
-    "area": [
-      "Qimranut 1"
-    ],
+    "area": "Qimranut 1",
     "exp": 505,
     "drops": {
       "gem": "-",
@@ -936,9 +934,7 @@
       "Evil Smile",
       "Evil Touch"
     ],
-    "area": [
-      "Aiyatsbus 2"
-    ],
+    "area": "Aiyatsbus 2",
     "exp": 520,
     "drops": {
       "gem": "-",
@@ -1333,9 +1329,7 @@
       "Mabufu",
       "Mamudo"
     ],
-    "area": [
-      "Aiyatsbus 5"
-    ],
+    "area": "Aiyatsbus 5",
     "exp": 300,
     "drops": {
       "gem": "-",
@@ -1369,9 +1363,7 @@
       "Sukukaja",
       "Summon"
     ],
-    "area": [
-      "Aiyatsbus 6"
-    ],
+    "area": "Aiyatsbus 6",
     "exp": 830,
     "drops": {
       "gem": "-",
@@ -1399,9 +1391,7 @@
       "Tarukaja",
       "Charge"
     ],
-    "area": [
-      "Aiyatsbus 7"
-    ],
+    "area": "Aiyatsbus 7",
     "exp": 810,
     "drops": {
       "gem": "-",
@@ -1484,9 +1474,7 @@
       "Makarakarn",
       "Masukunda"
     ],
-    "area": [
-      "Chemdah 1"
-    ],
+    "area": "Chemdah 1",
     "exp": 820,
     "drops": {
       "gem": "-",
@@ -1515,9 +1503,7 @@
       "Megido",
       "Concentrate"
     ],
-    "area": [
-      "Chemdah 2"
-    ],
+    "area": "Chemdah 2",
     "exp": 850,
     "drops": {
       "gem": "-",
@@ -1946,9 +1932,7 @@
       "Flash Bomb",
       "Invigorate 3"
     ],
-    "area": [
-      "Kaitul 9"
-    ],
+    "area": "Kaitul 9",
     "exp": 915,
     "drops": {
       "gem": "-",
@@ -1977,9 +1961,7 @@
       "Masukukaja",
       "Diarama"
     ],
-    "area": [
-      "Chemdah 7"
-    ],
+    "area": "Chemdah 7",
     "exp": 0,
     "drops": {
       "gem": "-",
@@ -2036,9 +2018,7 @@
       "Zionga",
       "Rising Slash"
     ],
-    "area": [
-      "Chemdah 7"
-    ],
+    "area": "Chemdah 7",
     "exp": 925,
     "drops": {
       "gem": "-",
@@ -2124,9 +2104,7 @@
       "Swift Strike",
       "Tarukaja"
     ],
-    "area": [
-      "Kaitul 5"
-    ],
+    "area": "Kaitul 5",
     "exp": 900,
     "drops": {
       "gem": "-",
@@ -2240,9 +2218,7 @@
       "Garula",
       "Tarukaja"
     ],
-    "area": [
-      "Chemdah 3"
-    ],
+    "area": "Chemdah 3",
     "exp": 860,
     "drops": {
       "gem": "-",
@@ -2352,9 +2328,7 @@
       "Stagnant Air",
       "Life Drain"
     ],
-    "area": [
-      "Chemdah 8"
-    ],
+    "area": "Chemdah 8",
     "exp": 890,
     "drops": {
       "gem": "-",
@@ -2382,9 +2356,7 @@
       "Mudo",
       "Stagnant Air"
     ],
-    "area": [
-      "Kaitul 1"
-    ],
+    "area": "Kaitul 1",
     "exp": 910,
     "drops": {
       "gem": "-",
@@ -2584,9 +2556,7 @@
       "Dekaja",
       "Life Leech"
     ],
-    "area": [
-      "Akzeriyyuth 3"
-    ],
+    "area": "Akzeriyyuth 3",
     "exp": 945,
     "drops": {
       "gem": "-",
@@ -2619,9 +2589,7 @@
       "Dekunda",
       "Dekaja"
     ],
-    "area": [
-      "Kaitul 8"
-    ],
+    "area": "Kaitul 8",
     "exp": 935,
     "drops": {
       "gem": "-",
@@ -2703,9 +2671,7 @@
       "Tarukaja",
       "Rebellion"
     ],
-    "area": [
-      "Kaitul 10"
-    ],
+    "area": "Kaitul 10",
     "exp": 1420,
     "drops": {
       "gem": "-",
@@ -2734,9 +2700,7 @@
       "Evil Smile",
       "Ghastly Wail"
     ],
-    "area": [
-      "Kaitul 4"
-    ],
+    "area": "Kaitul 4",
     "exp": 840,
     "drops": {
       "gem": "-",
@@ -3017,9 +2981,7 @@
       "Double Fangs",
       "Stagnant Air"
     ],
-    "area": [
-      "Akzeriyyuth 5"
-    ],
+    "area": "Akzeriyyuth 5",
     "exp": 2560,
     "drops": {
       "gem": "-",
@@ -3050,9 +3012,7 @@
       "Brain Jack",
       "Psy Boost"
     ],
-    "area": [
-      "Kaitul 3"
-    ],
+    "area": "Kaitul 3",
     "exp": 1430,
     "drops": {
       "gem": "-",
@@ -3081,9 +3041,7 @@
       "Maragion",
       "Spirit Leech"
     ],
-    "area": [
-      "Adyeshach 3"
-    ],
+    "area": "Adyeshach 3",
     "exp": 0,
     "drops": {
       "gem": "-",
@@ -3166,9 +3124,7 @@
       "Maeiga",
       "Attack Master"
     ],
-    "area": [
-      "Adyeshach 3"
-    ],
+    "area": "Adyeshach 3",
     "exp": 1450,
     "drops": {
       "gem": "-",
@@ -3209,9 +3165,7 @@
       "Mudoon",
       "Mamudoon"
     ],
-    "area": [
-      "Akzeriyyuth 6"
-    ],
+    "area": "Akzeriyyuth 6",
     "exp": 1440,
     "drops": {
       "gem": "-",
@@ -3320,9 +3274,7 @@
       "Megidola",
       "Tarukaja"
     ],
-    "area": [
-      "Adyeshach 0"
-    ],
+    "area": "Adyeshach 0",
     "exp": 1460,
     "drops": {
       "gem": "-",
@@ -3352,9 +3304,7 @@
       "Revolution",
       "Rebellion"
     ],
-    "area": [
-      "Akzeriyyuth 12"
-    ],
+    "area": "Akzeriyyuth 12",
     "exp": 2510,
     "drops": {
       "gem": "-",
@@ -3851,9 +3801,7 @@
       "Tentarafoo",
       "Sharp Student"
     ],
-    "area": [
-      "Adyeshach 13"
-    ],
+    "area": "Adyeshach 13",
     "exp": 2800,
     "drops": {
       "gem": "-",
@@ -3945,9 +3893,7 @@
       "One-shot Kill",
       "Lullaby"
     ],
-    "area": [
-      "Adyeshach 11"
-    ],
+    "area": "Adyeshach 11",
     "exp": 2850,
     "drops": {
       "gem": "-",
@@ -4952,9 +4898,7 @@
       "Sharp Student",
       "Charge"
     ],
-    "area": [
-      "Sheriruth II 14"
-    ],
+    "area": "Sheriruth II 14",
     "exp": 5600,
     "drops": {
       "gem": "-",

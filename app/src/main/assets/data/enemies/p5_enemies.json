@@ -16,11 +16,7 @@
     "skills": [
       "Dia"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Qimranut 1",
-      "Path of Aiyatsbus 1,3"
-    ],
+    "area": "Kamoshida's Palace, Path of Qimranut 1, Path of Aiyatsbus 1,3",
     "exp": 4,
     "drops": {
       "gem": "-",
@@ -46,11 +42,7 @@
     "skills": [
       "Agi"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Qimranut 1",
-      "Path of Aiyatsbus 1"
-    ],
+    "area": "Kamoshida's Palace, Path of Qimranut 1, Path of Aiyatsbus 1",
     "exp": 4,
     "drops": {
       "gem": "-",
@@ -77,10 +69,7 @@
       "Zio",
       "Rakukaja"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 2,3"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 2,3",
     "exp": 8,
     "drops": {
       "gem": "-",
@@ -106,11 +95,7 @@
     "skills": [
       "Pulinpa"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Qimranut 1",
-      "Path of Aiyatsbus 1"
-    ],
+    "area": "Kamoshida's Palace, Path of Qimranut 1, Path of Aiyatsbus 1",
     "exp": 5,
     "drops": {
       "gem": "-",
@@ -136,10 +121,7 @@
     "skills": [
       "Lunge"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 1,2"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 1,2",
     "exp": 6,
     "drops": {
       "gem": "-",
@@ -166,10 +148,7 @@
       "Life Drain",
       "Ice Wall"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 2,3,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 2,3,6",
     "exp": 5,
     "drops": {
       "gem": "-",
@@ -196,10 +175,7 @@
       "Garu",
       "Summon"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 2,3"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 2,3",
     "exp": 8,
     "drops": {
       "gem": "-",
@@ -226,10 +202,7 @@
       "Dormina",
       "Bufu"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 2,3,5,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 2,3,5,6",
     "exp": 6,
     "drops": {
       "gem": "-",
@@ -255,10 +228,7 @@
     "skills": [
       "Marin Karin"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 5,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 5,6",
     "exp": 9,
     "drops": {
       "gem": "-",
@@ -285,10 +255,7 @@
       "Sukunda",
       "Lucky Punch"
     ],
-    "area": [
-      "Path of Aiyatsbus 3,5,6",
-      "Path of Aiyatsbus 3,5,6"
-    ],
+    "area": "Path of Aiyatsbus 3,5,6, Path of Aiyatsbus 3,5,6",
     "exp": 9,
     "drops": {
       "gem": "-",
@@ -314,10 +281,7 @@
     "skills": [
       "Cleave"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 5,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 5,6",
     "exp": 11,
     "drops": {
       "gem": "-",
@@ -343,10 +307,7 @@
     "skills": [
       "Agi"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 1-3"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 1-3",
     "exp": 18,
     "drops": {
       "gem": "-",
@@ -373,10 +334,7 @@
       "Bufu",
       "Sukunda"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 2,3"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 2,3",
     "exp": 25,
     "drops": {
       "gem": "-",
@@ -402,10 +360,7 @@
     "skills": [
       "Tarukaja"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 1-4"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 1-4",
     "exp": 21,
     "drops": {
       "gem": "-",
@@ -432,10 +387,7 @@
       "Bufu",
       "Rakunda"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 5,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 5,6",
     "exp": 13,
     "drops": {
       "gem": "-",
@@ -459,12 +411,7 @@
     },
     "resists": "sssssswwss",
     "skills": [],
-    "area": [
-      "Madarame's Palace",
-      "Path of Qimranut 1",
-      "Path of Aiyatsbus 1-3,5,6",
-      "Path of Chemdah 1-4,6,7"
-    ],
+    "area": "Madarame's Palace, Path of Qimranut 1, Path of Aiyatsbus 1-3,5,6, Path of Chemdah 1-4,6,7",
     "exp": 300,
     "drops": {
       "gem": "-",
@@ -492,10 +439,7 @@
       "Mazionga",
       "Life Leech"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 3,4,7,8,10"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 3,4,7,8,10",
     "exp": 134,
     "drops": {
       "gem": "-",
@@ -522,10 +466,7 @@
       "Tarunda",
       "Self-destruct"
     ],
-    "area": [
-      "Path of Qimranut 1",
-      "Path of Aiyatsbus 1,2,3,6"
-    ],
+    "area": "Path of Qimranut 1, Path of Aiyatsbus 1,2,3,6",
     "exp": 10,
     "drops": {
       "gem": "-",
@@ -552,10 +493,7 @@
       "Sukukaja",
       "Taunt"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 6,7"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 6,7",
     "exp": 30,
     "drops": {
       "gem": "-",
@@ -583,9 +521,7 @@
       "Garu",
       "Summon"
     ],
-    "area": [
-      "Path of Aiyatsbus 1-3"
-    ],
+    "area": "Path of Aiyatsbus 1-3",
     "exp": 18,
     "drops": {
       "gem": "-",
@@ -611,10 +547,7 @@
     "skills": [
       "Mabufu"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 4,6"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 4,6",
     "exp": 28,
     "drops": {
       "gem": "-",
@@ -644,10 +577,7 @@
       "Elec Wall",
       "Wind Wall"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 1-4"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 1-4",
     "exp": 26,
     "drops": {
       "gem": "-",
@@ -711,10 +641,7 @@
     "skills": [
       "Mudo"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 3,4"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 3,4",
     "exp": 31,
     "drops": {
       "gem": "-",
@@ -741,10 +668,7 @@
       "Hama",
       "Self-destruct"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 1-4"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 1-4",
     "exp": 31,
     "drops": {
       "gem": "-",
@@ -770,10 +694,7 @@
     "skills": [
       "Sledgehammer"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 1-4"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 1-4",
     "exp": 32,
     "drops": {
       "gem": "-",
@@ -801,10 +722,7 @@
       "Pulinpa",
       "Tarukaja"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 4,6,7"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 4,6,7",
     "exp": 37,
     "drops": {
       "gem": "-",
@@ -831,10 +749,7 @@
       "Double Fangs",
       "Mafrei"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 6,7"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 6,7",
     "exp": 41,
     "drops": {
       "gem": "-",
@@ -858,10 +773,7 @@
     },
     "resists": "swssssssss",
     "skills": [],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 1-5,7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 1-5,7-9",
     "exp": 500,
     "drops": {
       "gem": "-",
@@ -888,9 +800,7 @@
       "Tarukaja",
       "Rampage"
     ],
-    "area": [
-      "Qimranut 1"
-    ],
+    "area": "Qimranut 1",
     "exp": 505,
     "drops": {
       "gem": "-",
@@ -918,10 +828,7 @@
       "Vajra Blast",
       "Giant Slice"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Aiyatsbus 5,6"
-    ],
+    "area": "Kamoshida's Palace, Path of Aiyatsbus 5,6",
     "exp": 60,
     "drops": {
       "gem": "-",
@@ -949,10 +856,7 @@
       "Diarama",
       "Garula"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 1-3,5"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 1-3,5",
     "exp": 60,
     "drops": {
       "gem": "-",
@@ -979,10 +883,7 @@
       "Double Fangs",
       "Tarukaja"
     ],
-    "area": [
-      "Kamoshida's Palace",
-      "Path of Chemdah 3,4"
-    ],
+    "area": "Kamoshida's Palace, Path of Chemdah 3,4",
     "exp": 41,
     "drops": {
       "gem": "-",
@@ -1011,9 +912,7 @@
       "Evil Smile",
       "Evil Touch"
     ],
-    "area": [
-      "Aiyatsbus 2"
-    ],
+    "area": "Aiyatsbus 2",
     "exp": 520,
     "drops": {
       "gem": "-",
@@ -1040,10 +939,7 @@
       "Terror Claw",
       "Magaru"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 2-4"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 2-4",
     "exp": 81,
     "drops": {
       "gem": "-",
@@ -1071,10 +967,7 @@
       "Agi",
       "Sukukaja"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 1-3"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 1-3",
     "exp": 103,
     "drops": {
       "gem": "-",
@@ -1101,9 +994,7 @@
       "Mapsi",
       "Concentrate"
     ],
-    "area": [
-      "Path of Chemdah 6,7"
-    ],
+    "area": "Path of Chemdah 6,7",
     "exp": 43,
     "drops": {
       "gem": "-",
@@ -1200,10 +1091,7 @@
     "skills": [
       "Rampage"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 3-5,8,9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 3-5,8,9",
     "exp": 113,
     "drops": {
       "gem": "-",
@@ -1231,10 +1119,7 @@
       "Psio",
       "Marin Karin"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 3-5"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 3-5",
     "exp": 121,
     "drops": {
       "gem": "-",
@@ -1260,10 +1145,7 @@
     "skills": [
       "Wage War"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 3-5,7"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 3-5,7",
     "exp": 102,
     "drops": {
       "gem": "-",
@@ -1290,10 +1172,7 @@
       "Maeiha",
       "Skull Cracker"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 4"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 4",
     "exp": 77,
     "drops": {
       "gem": "-",
@@ -1317,10 +1196,7 @@
     },
     "resists": "nnnnnnnnnw",
     "skills": [],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 1-3,5-7,9-11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 1-3,5-7,9-11",
     "exp": 1000,
     "drops": {
       "gem": "-",
@@ -1348,10 +1224,7 @@
       "Snap",
       "Tarukaja"
     ],
-    "area": [
-      "Madarame's Palace",
-      "Path of Chemdah 6,7"
-    ],
+    "area": "Madarame's Palace, Path of Chemdah 6,7",
     "exp": 82,
     "drops": {
       "gem": "-",
@@ -1381,10 +1254,7 @@
       "Double Fangs",
       "Burn Boost"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 4,5,7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 4,5,7-9",
     "exp": 110,
     "drops": {
       "gem": "-",
@@ -1411,9 +1281,7 @@
       "Mabufu",
       "Mamudo"
     ],
-    "area": [
-      "Aiyatsbus 5"
-    ],
+    "area": "Aiyatsbus 5",
     "exp": 300,
     "drops": {
       "gem": "-",
@@ -1447,9 +1315,7 @@
       "Sukukaja",
       "Summon"
     ],
-    "area": [
-      "Aiyatsbus 6"
-    ],
+    "area": "Aiyatsbus 6",
     "exp": 830,
     "drops": {
       "gem": "-",
@@ -1477,9 +1343,7 @@
       "Tarukaja",
       "Charge"
     ],
-    "area": [
-      "Aiyatsbus 7"
-    ],
+    "area": "Aiyatsbus 7",
     "exp": 810,
     "drops": {
       "gem": "-",
@@ -1507,10 +1371,7 @@
       "Garula",
       "Tarukaja"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 8,9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 8,9",
     "exp": 96,
     "drops": {
       "gem": "-",
@@ -1539,9 +1400,7 @@
       "Makarakarn",
       "Masukunda"
     ],
-    "area": [
-      "Chemdah 1"
-    ],
+    "area": "Chemdah 1",
     "exp": 820,
     "drops": {
       "gem": "-",
@@ -1570,9 +1429,7 @@
       "Megido",
       "Concentrate"
     ],
-    "area": [
-      "Chemdah 2"
-    ],
+    "area": "Chemdah 2",
     "exp": 850,
     "drops": {
       "gem": "-",
@@ -1598,10 +1455,7 @@
     "skills": [
       "Giant Slice"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 5,7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 5,7-9",
     "exp": 114,
     "drops": {
       "gem": "-",
@@ -1629,10 +1483,7 @@
       "Zionga",
       "Marakukaja"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 2,3,5-7,9"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 2,3,5-7,9",
     "exp": 117,
     "drops": {
       "gem": "-",
@@ -1658,10 +1509,7 @@
     "skills": [
       "Dormina"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 1-3"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 1-3",
     "exp": 105,
     "drops": {
       "gem": "-",
@@ -1689,10 +1537,7 @@
       "Mabufula",
       "Sledgehammer"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 7-9",
     "exp": 98,
     "drops": {
       "gem": "-",
@@ -1720,10 +1565,7 @@
       "Vajra Blast",
       "Charge"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 4,5,7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 4,5,7-9",
     "exp": 102,
     "drops": {
       "gem": "-",
@@ -1747,10 +1589,7 @@
     },
     "resists": "sssssss-nn",
     "skills": [],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 1-4,6-8,10-12"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 1-4,6-8,10-12",
     "exp": 1500,
     "drops": {
       "gem": "-",
@@ -1778,10 +1617,7 @@
       "Masukukaja",
       "Assault Dive"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 1-3,5-7,9-11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 1-3,5-7,9-11",
     "exp": 103,
     "drops": {
       "gem": "-",
@@ -1849,10 +1685,7 @@
       "Zionga",
       "Makarakarn"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 5-7,9-11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 5-7,9-11",
     "exp": 146,
     "drops": {
       "gem": "-",
@@ -1882,10 +1715,7 @@
       "Ominous Words",
       "Summon"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 3,5-7,9-11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 3,5-7,9-11",
     "exp": 129,
     "drops": {
       "gem": "-",
@@ -1913,9 +1743,7 @@
       "Rampage",
       "Pulinpa"
     ],
-    "area": [
-      "Path of Kaitul 1-4,5"
-    ],
+    "area": "Path of Kaitul 1-4,5",
     "exp": 104,
     "drops": {
       "gem": "-",
@@ -1943,9 +1771,7 @@
       "Rampage",
       "Dream Needle"
     ],
-    "area": [
-      "Path of Akzeriyyuth 5-7,9-11"
-    ],
+    "area": "Path of Akzeriyyuth 5-7,9-11",
     "exp": 258,
     "drops": {
       "gem": "-",
@@ -1972,10 +1798,7 @@
       "Assault Dive",
       "Mazionga"
     ],
-    "area": [
-      "Kaneshiro's Palace",
-      "Path of Kaitul 7-9"
-    ],
+    "area": "Kaneshiro's Palace, Path of Kaitul 7-9",
     "exp": 143,
     "drops": {
       "gem": "-",
@@ -2003,10 +1826,7 @@
       "Famine's Scream",
       "Summon"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 1-4,6"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 1-4,6",
     "exp": 115,
     "drops": {
       "gem": "-",
@@ -2030,11 +1850,7 @@
     },
     "resists": "snnn-nnnnn",
     "skills": [],
-    "area": [
-      "Nijima's Palace",
-      "Path of Sheriruth I All",
-      "Path of Sheriruth II 1-5"
-    ],
+    "area": "Nijima's Palace, Path of Sheriruth I All, Path of Sheriruth II 1-5",
     "exp": 2000,
     "drops": {
       "gem": "-",
@@ -2062,9 +1878,7 @@
       "Flash Bomb",
       "Invigorate 3"
     ],
-    "area": [
-      "Kaitul 9"
-    ],
+    "area": "Kaitul 9",
     "exp": 915,
     "drops": {
       "gem": "-",
@@ -2093,9 +1907,7 @@
       "Masukukaja",
       "Diarama"
     ],
-    "area": [
-      "Chemdah 7"
-    ],
+    "area": "Chemdah 7",
     "exp": 0,
     "drops": {
       "gem": "-",
@@ -2124,9 +1936,7 @@
       "Zionga",
       "Rising Slash"
     ],
-    "area": [
-      "Chemdah 7"
-    ],
+    "area": "Chemdah 7",
     "exp": 925,
     "drops": {
       "gem": "-",
@@ -2154,10 +1964,7 @@
       "Megidola",
       "Agidyne"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 3,4,6-8"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 3,4,6-8",
     "exp": 116,
     "drops": {
       "gem": "-",
@@ -2185,10 +1992,7 @@
       "Bufula",
       "Spirit Drain"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 6-8,10-12"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 6-8,10-12",
     "exp": 118,
     "drops": {
       "gem": "-",
@@ -2217,9 +2021,7 @@
       "Swift Strike",
       "Tarukaja"
     ],
-    "area": [
-      "Kaitul 5"
-    ],
+    "area": "Kaitul 5",
     "exp": 900,
     "drops": {
       "gem": "-",
@@ -2248,9 +2050,7 @@
       "Garula",
       "Tarukaja"
     ],
-    "area": [
-      "Chemdah 3"
-    ],
+    "area": "Chemdah 3",
     "exp": 860,
     "drops": {
       "gem": "-",
@@ -2305,10 +2105,7 @@
       "Makarakarn",
       "Abysmal Surge"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 1-4,6-8,10"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 1-4,6-8,10",
     "exp": 157,
     "drops": {
       "gem": "-",
@@ -2332,10 +2129,7 @@
     },
     "resists": "sn-d-dddnn",
     "skills": [],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 7-9,11-13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 7-9,11-13",
     "exp": 2500,
     "drops": {
       "gem": "-",
@@ -2365,9 +2159,7 @@
       "Stagnant Air",
       "Life Drain"
     ],
-    "area": [
-      "Chemdah 8"
-    ],
+    "area": "Chemdah 8",
     "exp": 890,
     "drops": {
       "gem": "-",
@@ -2395,9 +2187,7 @@
       "Mudo",
       "Stagnant Air"
     ],
-    "area": [
-      "Kaitul 1"
-    ],
+    "area": "Kaitul 1",
     "exp": 910,
     "drops": {
       "gem": "-",
@@ -2427,10 +2217,7 @@
       "Concentrate",
       "Reverse Rub"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 6,7,9-11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 6,7,9-11",
     "exp": 144,
     "drops": {
       "gem": "-",
@@ -2457,10 +2244,7 @@
       "Psiodyne",
       "Makajam"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 10-12"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 10-12",
     "exp": 319,
     "drops": {
       "gem": "-",
@@ -2488,10 +2272,7 @@
       "Mabufula",
       "Bufudyne"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 6-8,10"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 6-8,10",
     "exp": 291,
     "drops": {
       "gem": "-",
@@ -2521,10 +2302,7 @@
       "Mudoon",
       "Maeiga"
     ],
-    "area": [
-      "Futaba's Palace",
-      "Path of Akzeriyyuth 10,11"
-    ],
+    "area": "Futaba's Palace, Path of Akzeriyyuth 10,11",
     "exp": 295,
     "drops": {
       "gem": "-",
@@ -2551,9 +2329,7 @@
       "Negative Pile",
       "Rampage"
     ],
-    "area": [
-      "Path of Adyeshach 1-4"
-    ],
+    "area": "Path of Adyeshach 1-4",
     "exp": 182,
     "drops": {
       "gem": "-",
@@ -2581,10 +2357,7 @@
       "Mafreila",
       "Vicious Strike"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 11,12"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 11,12",
     "exp": 381,
     "drops": {
       "gem": "-",
@@ -2610,11 +2383,7 @@
     "skills": [
       "Assault Dive"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 1-4",
-      "Path of Sheriruth II 1,2"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 1-4, Path of Sheriruth II 1,2",
     "exp": 378,
     "drops": {
       "gem": "-",
@@ -2646,9 +2415,7 @@
       "Dekaja",
       "Life Leech"
     ],
-    "area": [
-      "Akzeriyyuth 3"
-    ],
+    "area": "Akzeriyyuth 3",
     "exp": 945,
     "drops": {
       "gem": "-",
@@ -2681,9 +2448,7 @@
       "Dekunda",
       "Dekaja"
     ],
-    "area": [
-      "Kaitul 8"
-    ],
+    "area": "Kaitul 8",
     "exp": 935,
     "drops": {
       "gem": "-",
@@ -2707,9 +2472,7 @@
     },
     "resists": "snrrr-rrrr",
     "skills": [],
-    "area": [
-      "Path of Sheriruth II 7-9,11-13"
-    ],
+    "area": "Path of Sheriruth II 7-9,11-13",
     "exp": 3000,
     "drops": {
       "gem": "-",
@@ -2738,11 +2501,7 @@
       "Patra",
       "Makarakarn"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 3-5",
-      "Path of Sheriruth II 2,3"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 3-5, Path of Sheriruth II 2,3",
     "exp": 445,
     "drops": {
       "gem": "-",
@@ -2772,9 +2531,7 @@
       "Tarukaja",
       "Rebellion"
     ],
-    "area": [
-      "Kaitul 10"
-    ],
+    "area": "Kaitul 10",
     "exp": 1420,
     "drops": {
       "gem": "-",
@@ -2803,9 +2560,7 @@
       "Evil Smile",
       "Ghastly Wail"
     ],
-    "area": [
-      "Kaitul 4"
-    ],
+    "area": "Kaitul 4",
     "exp": 840,
     "drops": {
       "gem": "-",
@@ -2835,11 +2590,7 @@
       "Masukukaja",
       "Bless Boost"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 1-5,7",
-      "Path of Sheriruth II 1-3"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 1-5,7, Path of Sheriruth II 1-3",
     "exp": 307,
     "drops": {
       "gem": "-",
@@ -2868,11 +2619,7 @@
       "Charge",
       "Reverse Rub"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 1-5,9",
-      "Path of Sheriruth II 1-4"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 1-5,9, Path of Sheriruth II 1-4",
     "exp": 393,
     "drops": {
       "gem": "-",
@@ -2900,11 +2647,7 @@
       "Matarukaja",
       "Wind Wall"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 5,7-9",
-      "Path of Sheriruth II 3,4"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 5,7-9, Path of Sheriruth II 3,4",
     "exp": 374,
     "drops": {
       "gem": "-",
@@ -2930,11 +2673,7 @@
     "skills": [
       "Wage War"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 8,9,11-13",
-      "Path of Sheriruth II 4,5"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 8,9,11-13, Path of Sheriruth II 4,5",
     "exp": 381,
     "drops": {
       "gem": "-",
@@ -2963,11 +2702,7 @@
       "Concentrate",
       "Burn Boost"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 5,7-9",
-      "Path of Sheriruth II 3,4"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 5,7-9, Path of Sheriruth II 3,4",
     "exp": 392,
     "drops": {
       "gem": "-",
@@ -3045,11 +2780,7 @@
       "Counterstrike",
       "Dodge Physical"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 3-5,7-9",
-      "Path of Sheriruth II 2-4"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 3-5,7-9, Path of Sheriruth II 2-4",
     "exp": 548,
     "drops": {
       "gem": "-",
@@ -3076,10 +2807,7 @@
       "Deathbound",
       "Mudoon"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 4,6-8,10"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 4,6-8,10",
     "exp": 414,
     "drops": {
       "gem": "-",
@@ -3107,10 +2835,7 @@
       "Maragion",
       "Magarula"
     ],
-    "area": [
-      "Okumura's Palace",
-      "Path of Adyeshach 10-12"
-    ],
+    "area": "Okumura's Palace, Path of Adyeshach 10-12",
     "exp": 442,
     "drops": {
       "gem": "-",
@@ -3139,9 +2864,7 @@
       "Double Fangs",
       "Stagnant Air"
     ],
-    "area": [
-      "Akzeriyyuth 5"
-    ],
+    "area": "Akzeriyyuth 5",
     "exp": 2560,
     "drops": {
       "gem": "-",
@@ -3172,9 +2895,7 @@
       "Brain Jack",
       "Psy Boost"
     ],
-    "area": [
-      "Kaitul 3"
-    ],
+    "area": "Kaitul 3",
     "exp": 1430,
     "drops": {
       "gem": "-",
@@ -3203,9 +2924,7 @@
       "Maragion",
       "Spirit Leech"
     ],
-    "area": [
-      "Adyeshach 3"
-    ],
+    "area": "Adyeshach 3",
     "exp": 0,
     "drops": {
       "gem": "-",
@@ -3232,11 +2951,7 @@
       "Eigaon",
       "Swift Strike"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 11-13",
-      "Path of Sheriruth II 5"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 11-13, Path of Sheriruth II 5",
     "exp": 422,
     "drops": {
       "gem": "-",
@@ -3266,9 +2981,7 @@
       "Maeiga",
       "Attack Master"
     ],
-    "area": [
-      "Adyeshach 3"
-    ],
+    "area": "Adyeshach 3",
     "exp": 1450,
     "drops": {
       "gem": "-",
@@ -3309,9 +3022,7 @@
       "Mudoon",
       "Mamudoon"
     ],
-    "area": [
-      "Akzeriyyuth 6"
-    ],
+    "area": "Akzeriyyuth 6",
     "exp": 1440,
     "drops": {
       "gem": "-",
@@ -3337,10 +3048,7 @@
     "skills": [
       "Deathbound"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 7-9"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 7-9",
     "exp": 241,
     "drops": {
       "gem": "-",
@@ -3364,9 +3072,7 @@
     },
     "resists": "snrrrrrr-r",
     "skills": [],
-    "area": [
-      "Path of Sheriruth II 7-9,11-13"
-    ],
+    "area": "Path of Sheriruth II 7-9,11-13",
     "exp": 3500,
     "drops": {
       "gem": "-",
@@ -3392,10 +3098,7 @@
     "skills": [
       "Nocturnal Flash"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 7,8"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 7,8",
     "exp": 298,
     "drops": {
       "gem": "-",
@@ -3424,10 +3127,7 @@
       "Tentarafoo",
       "Marakukaja"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 7-9,12"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 7-9,12",
     "exp": 325,
     "drops": {
       "gem": "-",
@@ -3456,9 +3156,7 @@
       "Megidola",
       "Tarukaja"
     ],
-    "area": [
-      "Adyeshach 0"
-    ],
+    "area": "Adyeshach 0",
     "exp": 1460,
     "drops": {
       "gem": "-",
@@ -3488,9 +3186,7 @@
       "Revolution",
       "Rebellion"
     ],
-    "area": [
-      "Akzeriyyuth 12"
-    ],
+    "area": "Akzeriyyuth 12",
     "exp": 2510,
     "drops": {
       "gem": "-",
@@ -3519,10 +3215,7 @@
       "Elec Break",
       "Wage War"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 11,12"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 11,12",
     "exp": 342,
     "drops": {
       "gem": "-",
@@ -3550,11 +3243,7 @@
       "Ziodyne",
       "Diarahan"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 11-13",
-      "Path of Sheriruth II 5"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 11-13, Path of Sheriruth II 5",
     "exp": 609,
     "drops": {
       "gem": "-",
@@ -3583,10 +3272,7 @@
       "Masukukaja",
       "Wind Amp"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 12"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 12",
     "exp": 388,
     "drops": {
       "gem": "-",
@@ -3615,11 +3301,7 @@
       "Miracle Punch",
       "Dodge Elec"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 5,7-9",
-      "Path of Sheriruth II 3,4"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 5,7-9, Path of Sheriruth II 3,4",
     "exp": 632,
     "drops": {
       "gem": "-",
@@ -3678,10 +3360,7 @@
       "High Counter",
       "Burn Boost"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 7-9"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 7-9",
     "exp": 394,
     "drops": {
       "gem": "-",
@@ -3709,11 +3388,7 @@
       "Evil Smile",
       "Ghastly Wail"
     ],
-    "area": [
-      "Niijima's Palace",
-      "Path of Sheriruth I 12,13",
-      "Path of Sheriruth II 5"
-    ],
+    "area": "Niijima's Palace, Path of Sheriruth I 12,13, Path of Sheriruth II 5",
     "exp": 818,
     "drops": {
       "gem": "-",
@@ -3741,10 +3416,7 @@
       "Psiodyne",
       "Ice Boost"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 9,11,12"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 9,11,12",
     "exp": 341,
     "drops": {
       "gem": "-",
@@ -3772,10 +3444,7 @@
       "Masukunda",
       "Brain Buster"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 11"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 11",
     "exp": 424,
     "drops": {
       "gem": "-",
@@ -3804,10 +3473,7 @@
       "Mafreidyne",
       "Nuke Amp"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 8,9,11-13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 8,9,11-13",
     "exp": 477,
     "drops": {
       "gem": "-",
@@ -3838,10 +3504,7 @@
       "Freeze Boost",
       "Shock Boost"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 13",
     "exp": 397,
     "drops": {
       "gem": "-",
@@ -3873,9 +3536,7 @@
       "Dekunda",
       "Spirit Drain"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 915,
     "drops": {
       "gem": "-",
@@ -3904,9 +3565,7 @@
       "Revolution",
       "God's Hand"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 1338,
     "drops": {
       "gem": "-",
@@ -3936,9 +3595,7 @@
       "Ghastly Wail",
       "Nuke Amp"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 902,
     "drops": {
       "gem": "-",
@@ -3965,9 +3622,7 @@
       "Bufu",
       "Sukunda"
     ],
-    "area": [
-      "Qliphoth World"
-    ],
+    "area": "Qliphoth World",
     "exp": 2045,
     "drops": {
       "gem": "-",
@@ -3997,9 +3652,7 @@
       "Tentarafoo",
       "Sharp Student"
     ],
-    "area": [
-      "Adyeshach 13"
-    ],
+    "area": "Adyeshach 13",
     "exp": 2800,
     "drops": {
       "gem": "-",
@@ -4029,9 +3682,7 @@
       "Heat Wave",
       "Thermopylae"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 1045,
     "drops": {
       "gem": "-",
@@ -4061,10 +3712,7 @@
       "Freeze Boost",
       "Ice Amp"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 8,11-13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 8,11-13",
     "exp": 612,
     "drops": {
       "gem": "-",
@@ -4093,9 +3741,7 @@
       "Deathbound",
       "Mudoon"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 1012,
     "drops": {
       "gem": "-",
@@ -4125,9 +3771,7 @@
       "Rebellion",
       "Brain Shake"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 1208,
     "drops": {
       "gem": "-",
@@ -4159,9 +3803,7 @@
       "One-shot Kill",
       "Lullaby"
     ],
-    "area": [
-      "Adyeshach 11"
-    ],
+    "area": "Adyeshach 11",
     "exp": 2850,
     "drops": {
       "gem": "-",
@@ -4190,10 +3832,7 @@
       "Pulinpa",
       "Stagnant Air"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 12,13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 12,13",
     "exp": 417,
     "drops": {
       "gem": "-",
@@ -4280,9 +3919,7 @@
       "Mabufudyne",
       "Oni Kagura"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 2052,
     "drops": {
       "gem": "-",
@@ -4311,10 +3948,7 @@
       "Revolution",
       "Evade Ice"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 12,13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 12,13",
     "exp": 414,
     "drops": {
       "gem": "-",
@@ -4345,9 +3979,7 @@
       "Shock Boost",
       "Elec Amp"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 1631,
     "drops": {
       "gem": "-",
@@ -4375,10 +4007,7 @@
       "Heat Wave",
       "Evade Nuke"
     ],
-    "area": [
-      "Shido's Palace",
-      "Path of Sheriruth II 13"
-    ],
+    "area": "Shido's Palace, Path of Sheriruth II 13",
     "exp": 799,
     "drops": {
       "gem": "-",
@@ -4407,9 +4036,7 @@
       "Bufudyne",
       "Makajamaon"
     ],
-    "area": [
-      "Qliphoth World"
-    ],
+    "area": "Qliphoth World",
     "exp": 855,
     "drops": {
       "gem": "-",
@@ -4437,9 +4064,7 @@
       "Myriad Slashes",
       "Charge"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 4554,
     "drops": {
       "gem": "-",
@@ -4468,9 +4093,7 @@
       "Lullaby",
       "Concentrate"
     ],
-    "area": [
-      "Qliphoth World"
-    ],
+    "area": "Qliphoth World",
     "exp": 1735,
     "drops": {
       "gem": "-",
@@ -4500,10 +4123,7 @@
       "Megidolaon",
       "Fire Boost"
     ],
-    "area": [
-      "Depths of Mementos",
-      "Qliphoth World"
-    ],
+    "area": "Depths of Mementos, Qliphoth World",
     "exp": 2277,
     "drops": {
       "gem": "-",
@@ -4530,9 +4150,7 @@
       "Megaton Raid",
       "Gigantomachia"
     ],
-    "area": [
-      "Qliphoth World"
-    ],
+    "area": "Qliphoth World",
     "exp": 2803,
     "drops": {
       "gem": "-",
@@ -4562,9 +4180,7 @@
       "Matarukaja",
       "Charge"
     ],
-    "area": [
-      "Depths of Mementos"
-    ],
+    "area": "Depths of Mementos",
     "exp": 4554,
     "drops": {
       "gem": "-",
@@ -4671,9 +4287,7 @@
       "Brave Blade",
       "Apt Pupil"
     ],
-    "area": [
-      "Qliphoth World"
-    ],
+    "area": "Qliphoth World",
     "exp": 3578,
     "drops": {
       "gem": "-",
@@ -4705,9 +4319,7 @@
       "Sharp Student",
       "Charge"
     ],
-    "area": [
-      "Sheriruth II 14"
-    ],
+    "area": "Sheriruth II 14",
     "exp": 5600,
     "drops": {
       "gem": "-",

@@ -1,8584 +1,2340 @@
 [
   {
     "name": "Cowardly Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Tutorial",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-ww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Merciless Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice",
-            "Elec",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rwww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Frivolous Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almighty"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----rw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Haughty Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almighty"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----rw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Indolent Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Pierce"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almighty"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--w--r----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Insidious Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Repel": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Ill-fated Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Strike"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Strike"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-r---ww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Bigoted Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Strong": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-r----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Desirous Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Imprudent Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice",
-            "Elec"
-          ],
-          "Null": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nww----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Visceral Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Weak": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Repel": [
-            "Slash",
-            "Strike"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nnnwwww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Devious Maya",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Normal Encounter",
-        "resistances": {
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Arcana Hanged Man",
-        "resistances": {
-          "Drain": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi",
-            "Pierce",
-            "Fire",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Slash",
-            "Strike",
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----nw----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Magic Hand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Strong": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Null": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wr-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Dancing Hand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss",
-        "resistances": {
-          "Weak": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Wind"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wn-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Killing Hand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Ice"
-          ],
-          "Strong": [
-            "Wind",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Almi"
-          ],
-          "Strong": [
-            "Dark"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wn-r-r-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Almighty Hand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Drain": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----d--nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Laughing Table",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Strong": [
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Repel": [
-            "Slash"
-          ],
-          "Null": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--rwn-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Crying Table",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss",
-        "resistances": {
-          "Neutral": [
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Strike",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Drain": [
-            "Strike",
-            "Fire"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Sleeping Table",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Strike",
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce",
-            "Fire"
-          ],
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce",
-            "Fire"
-          ],
-          "Null": [
-            "Strike",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rnrr---nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Angry Table",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Slash",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "w---n-w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Magical Magus",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Neutral": [
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal enemy",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrrwd--nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Wondrous Magus",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Dark"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Strike",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wd--nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Prime Magus",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Drain": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wd-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Muttering Tiara",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Normal Encounter",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss (1)",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss (2)",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest (1)",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest (2)",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rw-w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Grieving Tiara",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Writhing Tiara",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almighty"
-          ],
-          "Null": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Shouting Tiara",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Ice",
-            "Dark"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire",
-            "Elec"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dw--nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Tranquil Idol",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Weak": [
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec",
-            "Light"
-          ],
-          "Repel": [
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---n---dw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Liberating Idol",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Fire"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-d---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Ruinous Idol",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Ice",
-            "Light"
-          ],
-          "Repel": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Elec",
-            "Light"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dw--wd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Vehement Idol",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Repel": [
-            "Pierce",
-            "Fire",
-            "Dark"
-          ],
-          "Weak": [
-            "Light"
-          ],
-          "Null": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--dd--nwd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Primitive Idol",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Ice",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----nw-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Venus Eagle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Weak": [
-            "Pierce"
-          ],
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire",
-            "Wind"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rw-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Dark Eagle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Elec"
-          ],
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----wn---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Jupiter Eagle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----wd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Eternal Eagle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Dark"
-          ],
-          "Drain": [
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Repel": [
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----dddw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Elegant Mother",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Strong": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Light",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Light",
-            "Almi"
-          ],
-          "Drain": [
-            "Pierce"
-          ],
-          "Strong": [
-            "Ice",
-            "Elec"
-          ],
-          "Null": [
-            "Wind"
-          ],
-          "Weak": [
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----rwn-w-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Regal Mother",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Almi"
-          ],
-          "Drain": [
-            "Wind"
-          ],
-          "Weak": [
-            "Elec",
-            "Dark"
-          ],
-          "Null": [
-            "Ice",
-            "Light"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Ice",
-            "Light"
-          ],
-          "Drain": [
-            "Wind"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----nwdnw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Pistil Mother",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Repel": [
-            "Ice",
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----dwd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Intrepid Knight",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Pierce"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Drain": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr---dnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Avenger Knight",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Light",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Fire"
-          ],
-          "Null": [
-            "Slash",
-            "Light",
-            "Dark",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi",
-            "Almi",
-            "Phys",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Strong": [
-            "Phys"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Phys"
-          ],
-          "Weak": [
-            "Light",
-            "Fire"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi",
-            "Phys",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Pierce",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Boss",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal Enemy",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Boss",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal Enemy",
-        "resistances": {}
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "n--wwwwwn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Champion Knight",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Drain": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Repel": [
-            "Pierce",
-            "Wind",
-            "Dark"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr--dw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Hell Knight",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Strong": [
-            "Fire",
-            "Ice",
-            "Wind"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Repel": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Slash",
-            "Pierce"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Elec"
-          ],
-          "Null": [
-            "Slash",
-            "Pierce"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "n-n--dw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Death Castle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {}
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Solid Castle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Strike",
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----nw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Power Castle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Strong": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Elec",
-            "Wind"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---r-nw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "King Castle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Repel": [
-            "Strike"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-d---dwrr-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Trance Twins",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Fire",
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Elec",
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wwr----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Killer Twins",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Null": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-n----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Death Twins",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Elec"
-          ],
-          "Weak": [
-            "Strike"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almighty"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-w---d-d--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Crazy Twins",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire",
-            "Dark"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-d-nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Dogmatic Tower",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Elec",
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Null": [
-            "Fire",
-            "Elec",
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---n-n-n--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Fanatic Tower",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Strike",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Fire",
-            "Ice",
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Repel": [
-            "Fire",
-            "Ice",
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r-rddd-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Apostate Tower",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Elec"
-          ],
-          "Strong": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wrd----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Corrupt Tower",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Wind"
-          ],
-          "Weak": [
-            "Light"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce",
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r-r--rdw--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Blue Sigil",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Light",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Dark"
-          ],
-          "Weak": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----d---w-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Red Sigil",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Drain": [
-            "Fire",
-            "Elec"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dw--n--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Green Sigil",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Drain": [
-            "Elec"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Drain": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-d-d--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "White Sigil",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almighty"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Repel": [
-            "Slash",
-            "Light"
-          ],
-          "Drain": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "d--wd--d--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Obsessed Cupid",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "FES / Portable",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Jealous Cupid",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-n---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Devoted Cupid",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-n---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Gracious Cupid",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-w--n-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Soul Dancer",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer (Boss)",
-        "resistances": {
-          "Drain": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer (Normal Encounter)",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Null": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-n---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Ardent Dancer",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Almi"
-          ],
-          "Strong": [
-            "Strike"
-          ],
-          "Weak": [
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-r------w-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Natural Dancer",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Fire",
-            "Elec"
-          ],
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---r-rnnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Royal Dancer",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice",
-            "Wind"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----d-dnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Harem Dancer",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--n----nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Lustful Snake",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w-d---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Immoral Snake",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Wind"
-          ],
-          "Weak": [
-            "Pierce",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--w---nww-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Carnal Snake",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Strong": [
-            "Fire",
-            "Elec",
-            "Wind"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal enemy",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---r-rrnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Amorous Snake",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Weak": [
-            "Ice",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrrdw--dw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Stoic Snake",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ],
-          "Drain": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----dd-w--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Bestial Wheel",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almighty"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r-r--ww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Mach Wheel",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Pierce"
-          ],
-          "Weak": [
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Null": [
-            "Slash",
-            "Pierce",
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "n-n--ww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Brave Wheel",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dw-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Battle Wheel",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------n--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Wild Drive",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr--w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Killer Drive",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Strike"
-          ],
-          "Weak": [
-            "Light"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Strike"
-          ],
-          "Weak": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-d-----w--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Slaughter Drive",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Arcane Turret",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Null": [
-            "Strike",
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Strike",
-            "Pierce",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-nn--w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Scarlet Turret",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Slash"
-          ],
-          "Null": [
-            "Strike"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "dn-r-w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Wicked Turret",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Repel": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Elec",
-            "Light"
-          ],
-          "Strong": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "dddr-w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Berserk Turret",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Elec"
-          ],
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nnnd-w-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Spastic Turret",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----w--nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Justice Sword",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Slash"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Strong": [
-            "Fire",
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----rw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Conviction Sword",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Pierce"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Slash"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Strong": [
-            "Pierce"
-          ],
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r-r---w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Judgement Sword",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Ice",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Slash"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Null": [
-            "Light"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Repel": [
-            "Slash"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r------nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Doom Sword",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Repel": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r---wd----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Order Giant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Fire",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr-wd----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Stasis Giant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Wind"
-          ],
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike"
-          ],
-          "Neutral": [
-            "Pierce",
-            "Fire",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Elec",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Drain": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Pierce",
-            "Fire",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Slash",
-            "Ice"
-          ],
-          "Null": [
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rr--wnn---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Harmony Giant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Fire",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Repel": [
-            "Pierce",
-            "Elec",
-            "Wind"
-          ],
-          "Null": [
-            "Strike"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-nd-wdd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Void Giant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Drain": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Repel": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "ddd----dd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Loss Giant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Strike"
-          ],
-          "Null": [
-            "Slash",
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nd----nnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Black Raven",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Strong": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---n-wr---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Vicious Raven",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Drain": [
-            "Fire"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3 FES - The Journey",
-        "resistances": {
-          "Strong": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3 FES - The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Drain": [
-            "Pierce"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dw-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Amenti Raven",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Repel": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---d-wr---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Ice Raven",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Ice",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Elec",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Wind"
-          ],
-          "Repel": [
-            "Pierce"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wr-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Phantom Mage",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almighty"
-          ],
-          "Null": [
-            "Dark"
-          ],
-          "Strong": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---r---wn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Phantom Master",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "------w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Phantom Lord",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Fire"
-          ],
-          "Repel": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---n---wd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Phantom King",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Phantom Hero",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Repel": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---d---dd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Death Seeker",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Repel": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Repel": [
-            "Dark"
-          ],
-          "Weak": [
-            "Light"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---r---wd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Fate Seeker",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Pierce",
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Repel": [
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--wnnnnwd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Noble Seeker",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss",
-        "resistances": {
-          "Strong": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal Enemy",
-        "resistances": {
-          "Repel": [
-            "Fire",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rrrrnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Acheron Seeker",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Drain": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Elec"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---dddd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Bronze Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Strike"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Strike"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-n---w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Mind Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Fire",
-            "Ice",
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rrwr---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Curse Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Null": [
-            "Dark"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr---w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Reckoning Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nnnnnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Iron Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr--w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Death Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Strong": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Repel": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ],
-          "Strong": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Repel": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-drr-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Silver Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Light",
-            "Dark"
-          ],
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nnn----ww-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Platinum Dice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrrnnwn---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Flowing Sand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Repel": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "wwwdddd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Perpetual Sand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Slash",
-            "Pierce"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "w-wnnnn---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Infinite Sand",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Fire"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw-d---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Steel Gigas",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec",
-            "Light"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Drain": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-r---w-w--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Furious Gigas",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Strong": [
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ],
-          "Strong": [
-            "Strike",
-            "Fire",
-            "Elec"
-          ],
-          "Weak": [
-            "Wind",
-            "Light"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Strike"
-          ],
-          "Strong": [
-            "Fire",
-            "Elec"
-          ],
-          "Weak": [
-            "Ice",
-            "Light"
-          ],
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-r-r-rwwn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Mythical Gigas",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Repel": [
-            "Strike"
-          ],
-          "Strong": [
-            "Slash"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Repel": [
-            "Strike"
-          ],
-          "Null": [
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rdnd---nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Daring Gigas",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr---w---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Immortal Gigas",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Almi"
-          ],
-          "Repel": [
-            "Fire"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Null": [
-            "Elec",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---d-nwnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Minotaur IV",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wr-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Minotaur III",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Strike"
-          ],
-          "Repel": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-n--d-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Minotaur II",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Fire",
-            "Elec",
-            "Wind",
-            "Light",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr-n---w-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Minotaur I",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Dark"
-          ],
-          "Neutral": [
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Light"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrrw---dw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Neo Minotaur",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nn--nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Mighty Cyclops",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wd-----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Mad Cyclops",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rn--w--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Rebellious Cyclops",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Drain": [
-            "Ice",
-            "Wind"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----d-dnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Wealth Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Treasure Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Supreme Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Opulent Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Luxury Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Glorious Hand ",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Arcana Hanged Man",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Hanged Man",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi",
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Left Statue",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark",
-            "Fire",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi",
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Middle Statue",
-        "resistances": {
-          "Null": [
-            "Ice",
-            "Light",
-            "Dark",
-            "Ice",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi",
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Right Statue",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi",
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Elec",
-            "Light",
-            "Dark",
-            "Elec",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Hanged Man",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Left Statue",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Middle Statue",
-        "resistances": {}
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Right Statue",
-        "resistances": {}
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": false
   },
   {
     "name": "Spurious Book",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Weak": [
-            "Fire",
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w-wn---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Maniacal Book",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Light"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Light"
-          ],
-          "Repel": [
-            "Wind"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----d--nw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Silent Book",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Wind"
-          ],
-          "Drain": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wd-r---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Wrathful Book",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Repel": [
-            "Ice"
-          ],
-          "Weak": [
-            "Fire"
-          ],
-          "Drain": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wd-d---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Change Relic",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "------nnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Constancy Relic",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Null": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w--n---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Creation Relic",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 3",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Light"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Repel": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Fire",
-            "Light"
-          ],
-          "Weak": [
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Repel": [
-            "Strike",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "------dnw-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Growth Relic",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Drain": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-w----d---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Affection Relic",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Pierce"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--d----nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Grave Beetle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Elec"
-          ],
-          "Weak": [
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----rw---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Adamant Beetle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Pierce"
-          ],
-          "Strong": [
-            "Slash"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r-n--w----",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Golden Beetle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-boss",
-        "resistances": {
-          "Null": [
-            "Ice",
-            "Light",
-            "Dark"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal Encounter",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Ice"
-          ],
-          "Weak": [
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr-nw-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Emperor Beetle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Strike"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nwn-------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Burning Beetle",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Strike",
-            "Pierce"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-dddw--nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Rampage Drive",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Slash",
-            "Pierce",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "n-n----nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Heat Balance",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Strong": [
-            "Fire",
-            "Ice"
-          ],
-          "Weak": [
-            "Elec",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash"
-          ],
-          "Drain": [
-            "Fire",
-            "Ice"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---rrww---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Sky Balance",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire",
-            "Ice"
-          ],
-          "Repel": [
-            "Elec",
-            "Wind"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Fire",
-            "Ice"
-          ],
-          "Repel": [
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---wwdd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Light Balance",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Wind"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Elec"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "r----wrnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "World Balance",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Wild Beast",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Strong": [
-            "Pierce"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almighty"
-          ],
-          "Weak": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "--r----ww-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Enslaved Beast",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Weak": [
-            "Ice"
-          ],
-          "Drain": [
-            "Strike"
-          ],
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Null": [
-            "Fire"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Mighty Beast",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Light"
-          ],
-          "Repel": [
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------wd-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Nemean Beast",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {}
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "----------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "El Dorado Beast",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Null": [
-            "Fire",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---nw--nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Hakurou Musha",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Default",
-        "resistances": {
-          "Weak": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almighty"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------ww-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Kaiden Musha",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Weak": [
-            "Light"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rrr----w--",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Onnen Musha",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ],
-          "Weak": [
-            "Fire"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "---w------",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Tenjin Musha",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "The Journey",
-        "resistances": {
-          "Drain": [
-            "Wind"
-          ],
-          "Weak": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "The Answer",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----wd---",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Fierce Cyclops",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Sub-Boss",
-        "resistances": {
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Fire"
-          ],
-          "Null": [
-            "Elec",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Pierce",
-            "Ice",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Normal Enemy",
-        "resistances": {
-          "Drain": [
-            "Slash",
-            "Fire"
-          ],
-          "Neutral": [
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "rr-r-n-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Brilliant Cyclops",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Persona 4",
-        "resistances": {
-          "Neutral": [
-            "Phys",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Drain": [
-            "Wind"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Persona 4 Golden",
-        "resistances": {
-          "Repel": [
-            "Fire",
-            "Elec",
-            "Wind"
-          ],
-          "Weak": [
-            "Ice"
-          ],
-          "Neutral": [
-            "Phys",
-            "Light",
-            "Dark",
-            "Almi"
-          ]
-        }
-      }
-    ],
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "------dnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": false,
     "isMiniBoss": true
   },
   {
     "name": "Arcana Priestess",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
-    "date": "4/20",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "4/20"
   },
   {
     "name": "Arcana Empress",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Neutral": [
-            "Almi"
-          ],
-          "Weak": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Neutral": [
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Slash",
-            "Strike",
-            "Pierce"
-          ]
-        }
-      }
-    ],
-    "date": "5/9",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "wwwnnnnnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "5/9"
   },
   {
     "name": "Arcana Emperor",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Weak": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Neutral": [
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Neutral": [
-            "Almi"
-          ],
-          "Weak": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ],
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
-    "date": "6/8",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "nnnwwwwnn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "6/8"
   },
   {
     "name": "Arcana Hierophant",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Repel": [
-            "Elec"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
-    "date": "7/7",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----d-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "7/7"
   },
   {
     "name": "Arcana Lovers",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      }
-    ],
-    "date": "8/6",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "8/6"
   },
   {
     "name": "Arcana Chariot",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
-    "date": "9/5",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "9/5"
   },
   {
     "name": "Arcana Justice",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
-    "date": "10/4",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "10/4"
   },
   {
     "name": "Arcana Hermit",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Elec"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Drain": [
-            "Elec"
-          ]
-        }
-      }
-    ],
-    "date": "11/3",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-----d-nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "11/3"
   },
   {
     "name": "Arcana Fortune",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
-    "date": "12/2",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "12/2"
   },
   {
     "name": "Arcana Strength",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Full Moon Boss",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Vision Quest",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      }
-    ],
-    "date": "12/30",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "12/30"
   },
   {
     "name": "Nyx Avatar",
-    "info": [
-      {
-        "game": "Persona 3",
-        "variant": "Fool",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Magician",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Drain": [
-            "Fire"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Priestess",
-        "resistances": {
-          "Drain": [
-            "Ice"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Empress",
-        "resistances": {
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Emperor",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Elec",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Hierophant",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Strike"
-          ],
-          "Repel": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Lovers",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Chariot",
-        "resistances": {
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Justice",
-        "resistances": {
-          "Repel": [
-            "Light"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Dark"
-          ],
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Hermit",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Almi"
-          ],
-          "Null": [
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Fortune",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Almi"
-          ],
-          "Null": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Strength",
-        "resistances": {
-          "Null": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Hanged Man",
-        "resistances": {
-          "Neutral": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind",
-            "Almi"
-          ],
-          "Null": [
-            "Light",
-            "Dark"
-          ]
-        }
-      },
-      {
-        "game": "Persona 3",
-        "variant": "Death",
-        "resistances": {
-          "Null": [
-            "Light",
-            "Dark"
-          ],
-          "Neutral": [
-            "Almi"
-          ],
-          "Strong": [
-            "Slash",
-            "Strike",
-            "Pierce",
-            "Fire",
-            "Ice",
-            "Elec",
-            "Wind"
-          ]
-        }
-      }
-    ],
-    "date": "1/31",
+    "arcana": "Shadow",
+    "level": 0,
+    "hp": 0,
+    "sp": 0,
+    "resists": "-------nn-",
+    "skills": [],
+    "area": "Tartarus",
+    "exp": 0,
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "date": "1/31"
   }
 ]
