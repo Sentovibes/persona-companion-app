@@ -11,8 +11,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 10
-        versionName "3.2.1"
+        versionCode 9
+        versionName "3.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -99,10 +99,6 @@ dependencies {
 
     // JSON parsing
     implementation 'com.google.code.gson:gson:2.10.1'
-    
-    // Google Cast
-    implementation 'com.google.android.gms:play-services-cast-framework:21.4.0'
-    implementation 'androidx.mediarouter:mediarouter:1.7.0'
 
     // Debug tools
     debugImplementation 'androidx.compose.ui:ui-tooling'

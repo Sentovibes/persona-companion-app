@@ -21,13 +21,6 @@
         android:supportsRtl="true"
         android:banner="@mipmap/ic_launcher">
 
-        <!-- Google Cast Options Provider - DISABLED for now to prevent crashes -->
-        <!-- Uncomment to enable Cast support:
-        <meta-data
-            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.persona.companion.cast.CastOptionsProvider" />
-        -->
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
