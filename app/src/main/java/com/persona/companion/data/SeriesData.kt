@@ -24,17 +24,20 @@ object SeriesData {
                 Game(
                     id = "p3fes",
                     title = "Persona 3 FES",
-                    dataPath = "data/persona3/personas.json"
+                    dataPath = "data/persona3/personas.json",
+                    enemyPath = "data/enemies/p3fes_enemies.json"
                 ),
                 Game(
                     id = "p3p",
                     title = "Persona 3 Portable",
-                    dataPath = "data/persona3/portable_personas.json"
+                    dataPath = "data/persona3/portable_personas.json",
+                    enemyPath = "data/enemies/p3p_enemies.json"
                 ),
                 Game(
                     id = "p3r",
                     title = "Persona 3 Reload",
-                    dataPath = "data/persona3/reload_personas.json"
+                    dataPath = "data/persona3/reload_personas.json",
+                    enemyPath = "data/enemies/p3fes_enemies.json"
                 )
             )
         ),
@@ -47,12 +50,14 @@ object SeriesData {
                 Game(
                     id = "p4",
                     title = "Persona 4",
-                    dataPath = "data/persona4/personas.json"
+                    dataPath = "data/persona4/personas.json",
+                    enemyPath = "data/enemies/p4_enemies.json"
                 ),
                 Game(
                     id = "p4g",
                     title = "Persona 4 Golden",
-                    dataPath = "data/persona4/golden_personas.json"
+                    dataPath = "data/persona4/golden_personas.json",
+                    enemyPath = "data/enemies/p4g_enemies.json"
                 )
             )
         ),
@@ -65,17 +70,20 @@ object SeriesData {
                 Game(
                     id = "p5",
                     title = "Persona 5",
-                    dataPath = "data/persona5/personas.json"
+                    dataPath = "data/persona5/personas.json",
+                    enemyPath = "data/enemies/p5_enemies.json"
                 ),
                 Game(
                     id = "p5r",
                     title = "Persona 5 Royal",
-                    dataPath = "data/persona5/royal_personas.json"
+                    dataPath = "data/persona5/royal_personas.json",
+                    enemyPath = "data/enemies/p5r_enemies.json"
                 ),
                 Game(
                     id = "p5s",
                     title = "Persona 5 Strikers",
-                    dataPath = "data/persona5/personas.json"   // Strikers shares base compendium
+                    dataPath = "data/persona5/personas.json",
+                    enemyPath = "data/enemies/p5_enemies.json"
                 )
             )
         )

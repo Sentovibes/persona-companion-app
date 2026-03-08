@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.persona.companion.ui.screens.CategoryScreen
+import com.persona.companion.ui.screens.EnemyDetailScreen
+import com.persona.companion.ui.screens.EnemyListScreen
 import com.persona.companion.ui.screens.FusionScreen
 import com.persona.companion.ui.screens.GameSelectionScreen
 import com.persona.companion.ui.screens.HomeScreen
@@ -46,6 +48,17 @@ sealed class Screen(val route: String) {
     
     object Fusion : Screen("fusion/{seriesId}/{gameId}") {
         fun createRoute(seriesId: String, gameId: String) = "fusion/$seriesId/$gameId"
+    }
+    
+    object EnemyList : Screen("enemy_list/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "enemy_list/$seriesId/$gameId"
+    }
+    
+    object EnemyDetail : Screen("enemy_detail/{seriesId}/{gameId}/{enemyName}") {
+        fun createRoute(seriesId: String, gameId: String, enemyName: String): String {
+            val safeName = enemyName.replace("/", "|")
+            return "enemy_detail/$seriesId/$gameId/$safeName"
+        }
     }
 }
 
@@ -134,6 +147,61 @@ fun NavGraph(navController: NavHostController) {
                 dataPath = dataPath,
                 onBack = { navController.popBackStack() }
             )
+        }
+        
+        composable(
+            route = Screen.EnemyList.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            
+            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
+            
+            EnemyListScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                gameTitle = game?.title ?: "",
+                enemyPath = game?.enemyPath,
+                onBack = { navController.popBackStack() },
+                onEnemyClick = { enemy ->
+                    navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name))
+                }
+            )
+        }
+        
+        composable(
+            route = Screen.EnemyDetail.route,
+            arguments = listOf(
+                navArgument("seriesId")  { type = NavType.StringType },
+                navArgument("gameId")    { type = NavType.StringType },
+                navArgument("enemyName") { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId  = back.arguments?.getString("seriesId")  ?: return@composable
+            val gameId    = back.arguments?.getString("gameId")    ?: return@composable
+            val enemyName = back.arguments?.getString("enemyName") ?: return@composable
+            
+            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
+            val enemies = if (game?.enemyPath != null) {
+                com.persona.companion.utils.JsonLoader.loadEnemies(
+                    androidx.compose.ui.platform.LocalContext.current,
+                    game.enemyPath
+                )
+            } else emptyList()
+            
+            val enemy = enemies.find { it.name.replace("/", "|") == enemyName }
+            
+            if (enemy != null) {
+                EnemyDetailScreen(
+                    enemy = enemy,
+                    gameId = gameId,
+                    onBack = { navController.popBackStack() }
+                )
+            }
         }
     }
 }

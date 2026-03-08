@@ -1,0 +1,692 @@
+[
+  {
+    "name": "Arcane Turret",
+    "arcana": "Chariot",
+    "level": 46,
+    "hp": 1008,
+    "sp": 426,
+    "stats": {
+      "strength": 54,
+      "magic": 9,
+      "endurance": 43,
+      "agility": 11,
+      "luck": 13
+    },
+    "resists": "-nn--w----",
+    "skills": [
+      "Strike Attack",
+      "Vile Assault",
+      "Tarukaja"
+    ],
+    "area": "Tziah I 115-138",
+    "exp": 1180,
+    "drops": {
+      "gem": "Diamond",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcane Turret B",
+    "arcana": "Chariot P",
+    "level": 41,
+    "hp": 1000,
+    "sp": 132,
+    "stats": {
+      "strength": 45,
+      "magic": 20,
+      "endurance": 33,
+      "agility": 20,
+      "luck": 13
+    },
+    "resists": "SSSnwn-nn-",
+    "skills": [
+      "Strike Attack"
+    ],
+    "area": "Tziah I 122",
+    "exp": 1057,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Carnal Snake",
+    "arcana": "Lovers",
+    "level": 75,
+    "hp": 361,
+    "sp": 177,
+    "stats": {
+      "strength": 49,
+      "magic": 60,
+      "endurance": 39,
+      "agility": 36,
+      "luck": 48
+    },
+    "resists": "----w-n---",
+    "skills": [
+      "Pierce Attack",
+      "Evil Touch",
+      "Infuriate",
+      "Mahamaon",
+      "Garudyne",
+      "Life Drain",
+      "Spirit Drain",
+      "Mediarama",
+      "Eerie Sound"
+    ],
+    "area": "Adamah 237-261",
+    "exp": 1133,
+    "drops": {
+      "gem": "Topaz",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Carnal Snake B",
+    "arcana": "Lovers P",
+    "level": 67,
+    "hp": 1600,
+    "sp": 177,
+    "stats": {
+      "strength": 46,
+      "magic": 57,
+      "endurance": 36,
+      "agility": 33,
+      "luck": 45
+    },
+    "resists": "---S-SSnn-",
+    "skills": [
+      "Pierce Attack"
+    ],
+    "area": "Adamah 228",
+    "exp": 1902,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Fanatic Tower",
+    "arcana": "Hierophant P",
+    "level": 34,
+    "hp": 2000,
+    "sp": 500,
+    "stats": {
+      "strength": 24,
+      "magic": 25,
+      "endurance": 25,
+      "agility": 25,
+      "luck": 20
+    },
+    "resists": "S-Srrr-nn-",
+    "skills": [
+      "Pierce Attack",
+      "Zionga",
+      "Mazionga",
+      "Mind Charge",
+      "Poison Mist",
+      "Elec Break",
+      "Sharp Student",
+      "Poison Boost",
+      "Dodge Strike"
+    ],
+    "area": "Yabbashah I 85",
+    "exp": 2096,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Fierce Cyclops",
+    "arcana": "Hanged",
+    "level": 78,
+    "hp": 397,
+    "sp": 195,
+    "stats": {
+      "strength": 66,
+      "magic": 48,
+      "endurance": 57,
+      "agility": 36,
+      "luck": 34
+    },
+    "resists": "d--d------",
+    "skills": [
+      "Slash Attack",
+      "Last Resort",
+      "Foul Breath",
+      "Agidyne",
+      "Infuriate",
+      "Dekaja",
+      "God's Hand"
+    ],
+    "area": "Adamah 237-261",
+    "exp": 1133,
+    "drops": {
+      "gem": "Pearl",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Fierce Cyclops B",
+    "arcana": "Hanged P",
+    "level": 71,
+    "hp": 1700,
+    "sp": 195,
+    "stats": {
+      "strength": 64,
+      "magic": 46,
+      "endurance": 55,
+      "agility": 34,
+      "luck": 33
+    },
+    "resists": "SS-S-n-nn-",
+    "skills": [
+      "Slash Attack"
+    ],
+    "area": "Adamah 244",
+    "exp": 2320,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Golden Beetle",
+    "arcana": "Emperor",
+    "level": 29,
+    "hp": 217,
+    "sp": 92,
+    "stats": {
+      "strength": 18,
+      "magic": 16,
+      "endurance": 27,
+      "agility": 18,
+      "luck": 15
+    },
+    "resists": "----n-w---",
+    "skills": [
+      "Pierce Attack",
+      "Sonic Punch",
+      "Zionga"
+    ],
+    "area": "Yabbashah I 73-89",
+    "exp": 146,
+    "drops": {
+      "gem": "Turquoise",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Golden Beetle B",
+    "arcana": "Emperor P",
+    "level": 19,
+    "hp": 240,
+    "sp": 92,
+    "stats": {
+      "strength": 15,
+      "magic": 11,
+      "endurance": 22,
+      "agility": 13,
+      "luck": 10
+    },
+    "resists": "SSS-nw-nn-",
+    "skills": [
+      "Pierce Attack"
+    ],
+    "area": "Arqa II 47",
+    "exp": 212,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Intrepid Knight",
+    "arcana": "Emperor P",
+    "level": 26,
+    "hp": 1000,
+    "sp": 102,
+    "stats": {
+      "strength": 20,
+      "magic": 18,
+      "endurance": 20,
+      "agility": 20,
+      "luck": 12
+    },
+    "resists": "SSS---dnn-",
+    "skills": [
+      "Pierce Attack",
+      "Dia",
+      "Magarula",
+      "Garudyne",
+      "Wind Break",
+      "Kill Rush",
+      "Mind Charge",
+      "Counterstrike",
+      "Sharp Student"
+    ],
+    "area": "Arqua II 59",
+    "exp": 1696,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Jotun of Blood",
+    "arcana": "Hanged",
+    "level": 66,
+    "hp": 910,
+    "sp": 564,
+    "stats": {
+      "strength": 65,
+      "magic": 26,
+      "endurance": 54,
+      "agility": 18,
+      "luck": 15
+    },
+    "resists": "--------w-",
+    "skills": [
+      "Strike Attack",
+      "Deathbound",
+      "Infuriate"
+    ],
+    "area": "Harabah 191-200",
+    "exp": 777,
+    "drops": {
+      "gem": "Ruby",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Jotun of Evil",
+    "arcana": "Hanged",
+    "level": 77,
+    "hp": 1260,
+    "sp": 618,
+    "stats": {
+      "strength": 65,
+      "magic": 80,
+      "endurance": 49,
+      "agility": 23,
+      "luck": 21
+    },
+    "resists": "wwwrrrrrr-",
+    "skills": [
+      "Strike Attack",
+      "Hamaon",
+      "Bufudyne",
+      "Mabufudyne",
+      "Provoke",
+      "Infuriate",
+      "Evade Slash",
+      "Evade Strike",
+      "Evade Pierce"
+    ],
+    "area": "Adamah 237-261",
+    "exp": 2266,
+    "drops": {
+      "gem": "Ruby",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Jotun of Grief",
+    "arcana": "Hanged P",
+    "level": 73,
+    "hp": 4000,
+    "sp": 500,
+    "stats": {
+      "strength": 57,
+      "magic": 68,
+      "endurance": 48,
+      "agility": 39,
+      "luck": 16
+    },
+    "resists": "dd-ddddnn-",
+    "skills": [
+      "Strike Attack",
+      "Sharp Student",
+      "Infuriate",
+      "Stagnant Air",
+      "Primal Force",
+      "Marakunda",
+      "Masukunda",
+      "Matarunda",
+      "Megidolaon"
+    ],
+    "area": "Adamah 252",
+    "exp": 15003,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Jotun of Power",
+    "arcana": "Hanged",
+    "level": 38,
+    "hp": 807,
+    "sp": 396,
+    "stats": {
+      "strength": 40,
+      "magic": 19,
+      "endurance": 34,
+      "agility": 13,
+      "luck": 15
+    },
+    "resists": "----d--s--",
+    "skills": [
+      "Strike Attack",
+      "Bufudyne",
+      "Diarama",
+      "Bufula",
+      "Hama",
+      "Last Resort"
+    ],
+    "area": "Yabbashah II 99-113",
+    "exp": 686,
+    "drops": {
+      "gem": "Sapphire",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Judgement Sword",
+    "arcana": "Justice",
+    "level": 64,
+    "hp": 346,
+    "sp": 169,
+    "stats": {
+      "strength": 49,
+      "magic": 32,
+      "endurance": 28,
+      "agility": 26,
+      "luck": 34
+    },
+    "resists": "s------nw-",
+    "skills": [
+      "Slash Attack",
+      "Heat Wave",
+      "Marakunda",
+      "Tarukaja"
+    ],
+    "area": "Harabah 202-213",
+    "exp": 777,
+    "drops": {
+      "gem": "Topaz",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Judgement Sword B",
+    "arcana": "Justice P",
+    "level": 54,
+    "hp": 1300,
+    "sp": 169,
+    "stats": {
+      "strength": 49,
+      "magic": 32,
+      "endurance": 28,
+      "agility": 32,
+      "luck": 34
+    },
+    "resists": "SSSS-d-nn-",
+    "skills": [
+      "Slash Attack"
+    ],
+    "area": "Harabah 171",
+    "exp": 1079,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Natural Dancer",
+    "arcana": "Lovers P",
+    "level": 40,
+    "hp": 1700,
+    "sp": 500,
+    "stats": {
+      "strength": 22,
+      "magic": 27,
+      "endurance": 25,
+      "agility": 30,
+      "luck": 30
+    },
+    "resists": "---S-Snnn-",
+    "skills": [
+      "Pierce Attack",
+      "Garudyne",
+      "Magarudyne",
+      "Hamaon",
+      "Tetrakarn",
+      "Sexy Dance",
+      "Sharp Student",
+      "Charm Boost"
+    ],
+    "area": "Yabbashah II 110",
+    "exp": 4912,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Phantom King",
+    "arcana": "Hermit P",
+    "level": 57,
+    "hp": 2500,
+    "sp": 500,
+    "stats": {
+      "strength": 25,
+      "magic": 57,
+      "endurance": 36,
+      "agility": 35,
+      "luck": 25
+    },
+    "resists": "-SSSSSSrn-",
+    "skills": [
+      "Slash Attack",
+      "Sharp Student",
+      "Megido",
+      "Evil Touch",
+      "Evil Smile",
+      "Mind Charge",
+      "Hamaon",
+      "Mahamaon"
+    ],
+    "area": "Harabah 190",
+    "exp": 9288,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Rampage Drive",
+    "arcana": "Chariot P",
+    "level": 8,
+    "hp": 450,
+    "sp": 450,
+    "stats": {
+      "strength": 9,
+      "magic": 7,
+      "endurance": 10,
+      "agility": 1,
+      "luck": 1
+    },
+    "resists": "nrnS---nn-",
+    "skills": [
+      "Pierce Attack",
+      "Assault Dive",
+      "Tarukaja",
+      "Mazio"
+    ],
+    "area": "Thebel 14",
+    "exp": 300,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Reckoning Dice",
+    "arcana": "Fortune P",
+    "level": 62,
+    "hp": 2900,
+    "sp": 500,
+    "stats": {
+      "strength": 40,
+      "magic": 40,
+      "endurance": 40,
+      "agility": 40,
+      "luck": 33
+    },
+    "resists": "---nnnnrn-",
+    "skills": [
+      "Slash Attack",
+      "Sharp Student",
+      "Rage Boost",
+      "Tetrakarn",
+      "Provoke",
+      "Megidola",
+      "Megidolaon"
+    ],
+    "area": "Harabah 211",
+    "exp": 11120,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Royal Dancer",
+    "arcana": "Lovers",
+    "level": 69,
+    "hp": 364,
+    "sp": 179,
+    "stats": {
+      "strength": 45,
+      "magic": 47,
+      "endurance": 39,
+      "agility": 35,
+      "luck": 48
+    },
+    "resists": "------rnn-",
+    "skills": [
+      "Pierce Attack",
+      "Myriad Arrows",
+      "Sexy Dance",
+      "Tentarafoo",
+      "Maragion"
+    ],
+    "area": "Adamah 229-235",
+    "exp": 991,
+    "drops": {
+      "gem": "Opal",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Royal Dancer B",
+    "arcana": "Lovers P",
+    "level": 61,
+    "hp": 1500,
+    "sp": 179,
+    "stats": {
+      "strength": 40,
+      "magic": 42,
+      "endurance": 34,
+      "agility": 30,
+      "luck": 44
+    },
+    "resists": "-------nn-",
+    "skills": [
+      "Pierce Attack"
+    ],
+    "area": "Harabah 201",
+    "exp": 1390,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Sleeping Table",
+    "arcana": "Magician P",
+    "level": 50,
+    "hp": 1700,
+    "sp": 500,
+    "stats": {
+      "strength": 24,
+      "magic": 50,
+      "endurance": 20,
+      "agility": 40,
+      "luck": 32
+    },
+    "resists": "SnSS---nn-",
+    "skills": [
+      "Strike Attack",
+      "Evil Touch",
+      "Ghastly Wail",
+      "Hamaon",
+      "Maragidyne",
+      "Megidola"
+    ],
+    "area": "Tziah I 135",
+    "exp": 8452,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Wealth Hand",
+    "arcana": "Magician",
+    "level": 1,
+    "hp": 100,
+    "sp": 100,
+    "stats": {
+      "strength": 1,
+      "magic": 1,
+      "endurance": 1,
+      "agility": 99,
+      "luck": 99
+    },
+    "resists": "TTTTTTTnnT",
+    "skills": [
+      "Slash Attack"
+    ],
+    "area": "Thebel 2-16",
+    "exp": 0,
+    "drops": {
+      "gem": "Wealth Coin",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Wealth Hand ",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "----------",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  }
+]

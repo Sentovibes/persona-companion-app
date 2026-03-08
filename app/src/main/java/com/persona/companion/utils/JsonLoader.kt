@@ -52,4 +52,32 @@ object JsonLoader {
             throw e
         }
     }
+    
+    fun loadEnemies(context: Context, path: String): List<com.persona.companion.models.Enemy> {
+        return try {
+            Log.d(TAG, "Loading enemies from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.Enemy>>() {}.type
+            val enemies: List<com.persona.companion.models.Enemy> = gson.fromJson(json, type) ?: emptyList()
+            Log.d(TAG, "Loaded ${enemies.size} enemies")
+            enemies.sortedBy { it.level }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading enemies from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
+    
+    fun loadBosses(context: Context, path: String): com.persona.companion.models.BossData {
+        return try {
+            Log.d(TAG, "Loading bosses from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<com.persona.companion.models.BossData>() {}.type
+            val bossData: com.persona.companion.models.BossData = gson.fromJson(json, type)
+            Log.d(TAG, "Loaded ${bossData.main_bosses.size} main bosses, ${bossData.mini_bosses.size} mini bosses")
+            bossData
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading bosses from '$path': ${e.message}", e)
+            com.persona.companion.models.BossData(emptyList(), emptyList())
+        }
+    }
 }
