@@ -140,10 +140,47 @@ private fun CastDialog(
                     
                     Spacer(modifier = Modifier.height(16.dp))
                     
-                    // Show QR code
-                    qrCodeBitmap?.let { bitmap ->
+                    // Show URL prominently
+                    connectionUrl?.let { url ->
                         Card(
-                            modifier = Modifier.size(256.dp),
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                            )
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(16.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(
+                                    text = "On your TV browser, go to:",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    textAlign = TextAlign.Center
+                                )
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Text(
+                                    text = url,
+                                    style = MaterialTheme.typography.titleLarge,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center,
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                            }
+                        }
+                    }
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // Show QR code for phone scanning
+                    qrCodeBitmap?.let { bitmap ->
+                        Text(
+                            text = "Or scan with another phone:",
+                            style = MaterialTheme.typography.bodySmall,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Card(
+                            modifier = Modifier.size(200.dp),
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.surface
                             )
@@ -154,22 +191,6 @@ private fun CastDialog(
                                 modifier = Modifier.fillMaxSize()
                             )
                         }
-                        
-                        Spacer(modifier = Modifier.height(16.dp))
-                    }
-                    
-                    // Show URL
-                    connectionUrl?.let { url ->
-                        Text(
-                            text = "Open on TV browser:",
-                            style = MaterialTheme.typography.bodySmall
-                        )
-                        Text(
-                            text = url,
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Bold,
-                            textAlign = TextAlign.Center
-                        )
                     }
                     
                     Spacer(modifier = Modifier.height(24.dp))
