@@ -156,6 +156,305 @@
     "isMiniBoss": false
   },
   {
+    "name": "Arcana Priestess",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "4/20"
+  },
+  {
+    "name": "Arcana Empress",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "wnnnnnn-ww",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "5/9"
+  },
+  {
+    "name": "Arcana Emperor",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "nwwwwnn-nn",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "6/8"
+  },
+  {
+    "name": "Arcana Hierophant",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "---r-nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "7/7"
+  },
+  {
+    "name": "Arcana Lovers",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "8/6"
+  },
+  {
+    "name": "Arcana Chariot",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "9/5"
+  },
+  {
+    "name": "Arcana Justice",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "10/4"
+  },
+  {
+    "name": "Arcana Hermit",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "---d-nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "11/3"
+  },
+  {
+    "name": "Arcana Fortune",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "12/2"
+  },
+  {
+    "name": "Arcana Strength",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "12/30"
+  },
+  {
+    "name": "Arcana Hanged Man",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Nyx Avatar",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    },
+    "isBoss": true,
+    "isMiniBoss": false,
+    "date": "1/31"
+  },
+  {
     "name": "Cowardly Maya",
     "arcana": "Magician",
     "level": 2,
