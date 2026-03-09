@@ -20,18 +20,18 @@ Version 4.0.0 introduces image support for personas and enemies! This is a **BET
 - Base64 encoding for seamless transmission
 - Displays in right panel of 2x2 grid layout
 
-#### Image Coverage (BETA - Many Missing!)
+#### Image Coverage
 
 **Personas:**
-- P3 FES: 148/169 (87.6%) - **21 missing**
-- P3 Portable: 151/173 (87.3%) - **22 missing**
-- P3 Reload: 173/194 (89.2%) - **21 missing**
-- P4: 159/187 (85.0%) - **28 missing**
-- P4 Golden: 175/205 (85.4%) - **30 missing**
-- P5: 188/210 (89.5%) - **22 missing**
-- P5 Royal: 205/232 (88.4%) - **27 missing**
+- P3 FES: 169/169 (100.0%) - **✓ COMPLETE!**
+- P3 Portable: 173/173 (100.0%) - **✓ COMPLETE!**
+- P3 Reload: 194/194 (100.0%) - **✓ COMPLETE!**
+- P4: 187/187 (100.0%) - **✓ COMPLETE!**
+- P4 Golden: 205/205 (100.0%) - **✓ COMPLETE!**
+- P5: 199/210 (94.8%) - **11 missing**
+- P5 Royal: 218/232 (94.0%) - **14 missing**
 
-**Total Personas: 1199/1370 (87.5%) - 171 missing**
+**Total Personas: 1345/1370 (98.2%) - 25 missing**
 
 **Enemies:**
 - P3 FES: 230/368 (62.5%) - **138 missing**
@@ -44,11 +44,11 @@ Version 4.0.0 introduces image support for personas and enemies! This is a **BET
 
 **Total Enemies: 1014/1925 (52.7%) - 911 missing**
 
-**GRAND TOTAL: 2213/3295 images (67.2%) - 1082 missing**
+**GRAND TOTAL: 2359/3295 images (71.6%) - 936 missing**
 
 ### ⚠️ Known Issues (BETA)
 
-1. **Many images are missing** - Only 67% of all personas/enemies have images
+1. **Some images still missing** - 98.2% persona coverage (all P3 & P4 games complete!), 52.7% enemy coverage
 2. **Some images may be incorrect** - Automated scraping may have grabbed wrong images
 3. **Quality varies** - Some images are from older games (SMT series) when Persona versions aren't available
 4. **No P5 Strikers images** - P5S enemies not yet scraped
@@ -93,11 +93,10 @@ Version 4.0.0 introduces image support for personas and enemies! This is a **BET
 ## Future Improvements (v4.1+)
 
 ### Planned for v4.1
-- Download remaining high-priority images:
-  - Main story bosses (Nyx, Izanami, Yaldabaoth, etc.)
-  - Popular personas (Orpheus, Izanagi, Arsene, etc.)
-  - DLC personas
-- Target: 80%+ persona coverage, 65%+ enemy coverage
+- Download remaining personas (25 missing):
+  - P5/P5R treasure demons (Regent, Orlov, Hope Diamond, etc.)
+  - P5/P5R DLC personas (Tsukiyomi, Cait Sith, etc.)
+- Target: 99%+ persona coverage
 
 ### Planned for v4.2
 - Image feedback system:
@@ -119,9 +118,9 @@ Version 4.0.0 introduces image support for personas and enemies! This is a **BET
 - **Version Name:** 4.0.0
 - **Release Date:** March 9, 2026
 - **Feature Status:** BETA
-- **APK Size:** 44.15 MB
-- **Image Count:** 542 unique images
-- **Image Coverage:** 67.2% overall
+- **APK Size:** 50 MB (estimated)
+- **Image Count:** 593 unique images (306 personas + 287 enemies)
+- **Image Coverage:** 71.6% overall (98.2% personas, 52.7% enemies)
 
 ## Feedback
 

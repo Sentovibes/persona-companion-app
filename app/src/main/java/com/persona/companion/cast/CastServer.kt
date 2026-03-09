@@ -665,7 +665,7 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
         val status = mapOf(
             "status" to "online",
             "clients" to connectedClients.size,
-            "version" to "4.0.0"
+            "version" to "4.1.0"
         )
         return newFixedLengthResponse(Response.Status.OK, "application/json", gson.toJson(status))
     }
