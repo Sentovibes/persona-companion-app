@@ -14,7 +14,7 @@ data class UpdateInfo(
 
 object UpdateChecker {
     private const val GITHUB_API_URL = "https://api.github.com/repos/Sentovibes/persona-companion-app/releases/latest"
-    private const val CURRENT_VERSION = "3.1.5"
+    private const val CURRENT_VERSION = "4.0.0"
     
     suspend fun checkForUpdates(): Result<UpdateInfo> = withContext(Dispatchers.IO) {
         try {
