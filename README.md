@@ -10,7 +10,8 @@ A native Android companion app for the Persona series — your pocket compendium
 
 - **Complete Persona Database** - Browse all Personas from P3 FES, P3 Portable, P3 Reload, P4, P4 Golden, P5, and P5 Royal
 - **Enemy Compendium** - Complete enemy database with stats, skills, and resistances for all games
-- **Image Support (BETA)** - Profile pictures for personas and enemies (67% coverage, many missing)
+- **100% Persona Images** - Every single persona (all 1,370) now has their portrait
+- **Enemy Images** - 52% enemy coverage (many are 3D models with no official 2D art)
 - **Fusion Calculator** - Calculate all possible fusion recipes for any Persona (backwards fusion)
 - **Detailed Stats & Skills** - View base stats, skill lists, elemental affinities, and more
 - **Smart Search** - Search by Persona name or Arcana
@@ -50,7 +51,7 @@ Get the latest APK from the [Releases](../../releases) page.
 
 **Requirements:**
 - Android 8.0 (API 26) or higher
-- ~10 MB storage space
+- ~50 MB storage space
 
 ---
 
@@ -168,10 +169,11 @@ All Persona data is stored in JSON files under `app/src/main/assets/data/`.
 
 ## Roadmap
 
+- [x] Enemy compendium ✓
+- [x] 100% persona image coverage ✓
 - [ ] Social Links / Confidants guide
 - [ ] Classroom answers database
 - [ ] Boss strategies
-- [ ] Enemy compendium
 - [ ] Dark mode toggle
 - [ ] Export/import favorites
 - [ ] Forward fusion (calculate result from two personas)
@@ -196,6 +198,24 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v4.1.0 (2026-03-09) - The Perfect Collection 🎭
+- **🏆 100% PERSONA COVERAGE ACHIEVED!** - Every single persona now has an image
+  - All 1,370 personas across all 7 games complete
+  - P3 FES: 169/169 ✓
+  - P3 Portable: 173/173 ✓
+  - P3 Reload: 194/194 ✓
+  - P4: 187/187 ✓
+  - P4 Golden: 205/205 ✓
+  - P5: 210/210 ✓
+  - P5 Royal: 232/232 ✓
+- Added 65 new persona images since v4.0.0
+- All treasure demons included (Regent, Orlov, Hope Diamond, etc.)
+- All DLC personas included (Tsukiyomi, Cait Sith, Fafnir, etc.)
+- Enemy coverage: 991/1925 (51.5%)
+- Total images: 607 (320 personas + 287 enemies)
+- APK size: 49.39 MB
+- Version now auto-updates from build.gradle (no more manual updates!)
 
 ### v4.0.0 (2026-03-09) - BETA Image Support
 - **NEW: Image Support (BETA)** - Profile pictures for personas and enemies

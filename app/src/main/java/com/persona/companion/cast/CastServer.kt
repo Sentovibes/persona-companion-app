@@ -3,6 +3,7 @@ package com.persona.companion.cast
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
+import com.persona.companion.BuildConfig
 import com.persona.companion.utils.ImageUtils
 import fi.iki.elonen.NanoHTTPD
 import fi.iki.elonen.NanoWSD
@@ -665,7 +666,7 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
         val status = mapOf(
             "status" to "online",
             "clients" to connectedClients.size,
-            "version" to "4.1.0"
+            "version" to BuildConfig.VERSION_NAME
         )
         return newFixedLengthResponse(Response.Status.OK, "application/json", gson.toJson(status))
     }

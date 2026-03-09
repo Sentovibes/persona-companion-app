@@ -1,5 +1,6 @@
 package com.persona.companion.utils
 
+import com.persona.companion.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -14,7 +15,7 @@ data class UpdateInfo(
 
 object UpdateChecker {
     private const val GITHUB_API_URL = "https://api.github.com/repos/Sentovibes/persona-companion-app/releases/latest"
-    private const val CURRENT_VERSION = "4.1.0"
+    private val CURRENT_VERSION = BuildConfig.VERSION_NAME
     
     suspend fun checkForUpdates(): Result<UpdateInfo> = withContext(Dispatchers.IO) {
         try {

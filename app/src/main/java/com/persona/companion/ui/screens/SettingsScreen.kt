@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.persona.companion.BuildConfig
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.SettingsViewModel
 import com.persona.companion.utils.UpdateChecker
@@ -138,7 +139,7 @@ fun SettingsScreen(
                 SettingItem(
                     icon = Icons.Default.Info,
                     title = "About",
-                    description = "Version 4.1.0 • Made with ❤️ for Persona fans",
+                    description = "Version ${BuildConfig.VERSION_NAME} • Made with ❤️ for Persona fans",
                     onClick = {}
                 )
             }
