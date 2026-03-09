@@ -9,11 +9,15 @@ A native Android companion app for the Persona series — your pocket compendium
 ## Features
 
 - **Complete Persona Database** - Browse all Personas from P3 FES, P3 Portable, P3 Reload, P4, P4 Golden, P5, and P5 Royal
+- **Enemy Compendium** - Complete enemy database with stats, skills, and resistances for all games
+- **Image Support (BETA)** - Profile pictures for personas and enemies (67% coverage, many missing)
 - **Fusion Calculator** - Calculate all possible fusion recipes for any Persona (backwards fusion)
 - **Detailed Stats & Skills** - View base stats, skill lists, elemental affinities, and more
 - **Smart Search** - Search by Persona name or Arcana
 - **Flexible Sorting** - Sort by Arcana (grouped), Level, or Name
 - **Content Filters** - Toggle DLC and Episode Aigis personas on/off in settings
+- **Multi-Device Support** - Adaptive layouts for phone, tablet, and Android TV
+- **Cast System** - Custom HTTP server for casting to any TV browser (no Google Cast required)
 - **Beautiful UI** - Material 3 design with series-specific color themes
 - **Offline First** - All data stored locally, no internet required
 
@@ -192,6 +196,41 @@ MIT License - see [LICENSE](LICENSE) for details.
 ---
 
 ## Changelog
+
+### v4.0.0 (2026-03-09) - BETA Image Support
+- **NEW: Image Support (BETA)** - Profile pictures for personas and enemies
+  - 542 unique images (246 personas + 296 enemies)
+  - Circular profile pictures with tap-to-expand
+  - Adaptive sizing for phone/tablet/TV
+  - **⚠️ BETA: Only 67% coverage - many images missing!**
+  - **⚠️ Some images may be incorrect or from wrong games**
+- Image Coverage:
+  - Personas: 1199/1370 (87.5%) - **171 missing**
+  - Enemies: 1014/1925 (52.7%) - **911 missing**
+- Fallback icon for missing images
+- Works offline (images stored in app assets)
+
+### v3.2.0 (2026-03-08)
+- Multi-device adaptive layouts (phone, tablet, TV)
+- Android TV support with Leanback launcher
+- Device-aware padding and text scaling
+- Horizontal series cards on tablet/TV
+- Fixed P3R enemy data bug
+
+### v3.1.5 (2026-03-08)
+- Debug build configuration with error overlay
+- User preferences system for favorites
+- Filter system for personas and enemies
+- Added Persona 5 Strikers enemy compendium (86 enemies)
+
+### v3.0.0 (2026-03-08)
+- **NEW: Enemy Compendium** - Complete enemy database for all games
+  - 1,925 enemies total across all games
+  - Stats, resistances, skills, drops, and phases
+  - Multi-phase boss support (Nyx Avatar has 14 phases)
+  - Multi-part boss support (Emperor & Empress, etc.)
+- Enemy list with tabs (Enemies/Mini Bosses/Main Bosses)
+- Enemy detail screen with game-specific resistance names
 
 ### v2.6.0 (2026-03-07)
 - Added automatic update checker (checks every 24 hours on launch)

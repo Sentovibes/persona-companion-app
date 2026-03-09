@@ -1,5 +1,7 @@
 package com.persona.companion.ui.screens
 
+import android.graphics.Bitmap
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -10,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -21,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -31,9 +35,11 @@ import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.ProfileImage
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
+import com.persona.companion.utils.ImageUtils
 import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberShouldLoadImages
@@ -46,6 +52,12 @@ fun EnemyDetailScreen(
     gameId: String = "",
     onBack: () -> Unit
 ) {
+    Log.d("EnemyDetailScreen", "========================================")
+    Log.d("EnemyDetailScreen", "EnemyDetailScreen COMPOSING")
+    Log.d("EnemyDetailScreen", "Enemy: ${enemy.name}")
+    Log.d("EnemyDetailScreen", "Game ID: $gameId")
+    Log.d("EnemyDetailScreen", "========================================")
+    
     val context = LocalContext.current
     val userPrefs = remember { UserPreferences(context) }
     val enemyId = FilterUtils.getEnemyId(enemy)
@@ -55,9 +67,27 @@ fun EnemyDetailScreen(
     val textScale = rememberTextScaleFactor()
     
     // Broadcast to cast if connected
-    LaunchedEffect(enemy) {
-        if (CastManager.isServerRunning()) {
-            CastManager.broadcastEnemy(enemy)
+    LaunchedEffect(enemy.name, enemy.level, enemy.hp) {
+        try {
+            Log.d("EnemyDetailScreen", "=== LaunchedEffect START ===")
+            Log.d("EnemyDetailScreen", "Enemy: ${enemy.name}")
+            Log.d("EnemyDetailScreen", "Is boss: ${enemy.isBoss}")
+            Log.d("EnemyDetailScreen", "Is mini boss: ${enemy.isMiniBoss}")
+            Log.d("EnemyDetailScreen", "Server running: ${CastManager.isServerRunning()}")
+            
+            if (CastManager.isServerRunning()) {
+                Log.d("EnemyDetailScreen", "Broadcasting enemy to cast...")
+                // Add a small delay to ensure the screen is fully composed
+                kotlinx.coroutines.delay(100)
+                CastManager.broadcastEnemy(enemy)
+                Log.d("EnemyDetailScreen", "Broadcast call complete")
+            } else {
+                Log.d("EnemyDetailScreen", "Server not running, skipping broadcast")
+            }
+            Log.d("EnemyDetailScreen", "=== LaunchedEffect END ===")
+        } catch (e: Exception) {
+            Log.e("EnemyDetailScreen", "=== LaunchedEffect FAILED ===", e)
+            Log.e("EnemyDetailScreen", "Error: ${e.message}")
         }
     }
     
@@ -394,39 +424,75 @@ private fun EnemyStatsContent(
 
 @Composable
 private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType) {
-    // Placeholder for enemy image
-    // In a real implementation, you would load actual enemy images here
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .clip(RoundedCornerShape(16.dp))
-            .background(SurfaceCard),
-        contentAlignment = Alignment.Center
-    ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = enemy.name,
-                style = when (deviceType) {
-                    DeviceType.TV, DeviceType.CAST -> MaterialTheme.typography.headlineLarge
-                    else -> MaterialTheme.typography.titleLarge
-                },
-                color = TextSecondary
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = "Image Placeholder",
-                style = MaterialTheme.typography.bodyMedium,
-                color = TextDisabled
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = "(Add enemy images to assets)",
-                style = MaterialTheme.typography.bodySmall,
-                color = TextDisabled
-            )
+    val context = LocalContext.current
+    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+    
+    // Load image
+    LaunchedEffect(enemy.name) {
+        val imagePath = ImageUtils.getImagePath(enemy.name, isEnemy = true)
+        bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
+    }
+    
+    when (deviceType) {
+        DeviceType.PHONE -> {
+            // Phone: Small circular profile image
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(SurfaceCard),
+                contentAlignment = Alignment.Center
+            ) {
+                ProfileImage(
+                    name = enemy.name,
+                    isEnemy = true,
+                    size = 64
+                )
+            }
+        }
+        
+        DeviceType.TABLET, DeviceType.TV, DeviceType.CAST -> {
+            // Tablet/TV: Full-size image that fits content
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                if (bitmap != null) {
+                    Image(
+                        bitmap = bitmap!!.asImageBitmap(),
+                        contentDescription = enemy.name,
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Fit
+                    )
+                } else {
+                    // Fallback if no image
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(RoundedCornerShape(16.dp))
+                            .background(SurfaceCard),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Person,
+                                contentDescription = "No image",
+                                tint = TextSecondary.copy(alpha = 0.3f),
+                                modifier = Modifier.size(120.dp)
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Text(
+                                text = enemy.name,
+                                style = MaterialTheme.typography.headlineMedium,
+                                color = TextSecondary
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }

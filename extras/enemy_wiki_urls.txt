@@ -1,0 +1,157 @@
+# Enemy Wiki URLs for Manual Image Collection
+# Right-click infobox image -> Save Image As...
+# Save to: images/enemies/[game]/[name].png
+
+
+# === P3R ===
+Barbaric Beast Wheel|https://megamitensei.fandom.com/wiki/Barbaric_Beast_Wheel
+Barbaric Beast Wheel|https://megamitensei.fandom.com/wiki/Barbaric_Beast_Wheel
+Swift Axle|https://megamitensei.fandom.com/wiki/Swift_Axle
+Swift Axle|https://megamitensei.fandom.com/wiki/Swift_Axle
+Frivolous Maya|https://megamitensei.fandom.com/wiki/Frivolous_Maya
+Frivolous Maya|https://megamitensei.fandom.com/wiki/Frivolous_Maya
+Priestess|https://megamitensei.fandom.com/wiki/Priestess
+Emperor & Empress|https://megamitensei.fandom.com/wiki/Emperor_&_Empress
+Will O' Wisp Raven|https://megamitensei.fandom.com/wiki/Will_O'_Wisp_Raven
+Will O' Wisp Raven|https://megamitensei.fandom.com/wiki/Will_O'_Wisp_Raven
+Hierophant|https://megamitensei.fandom.com/wiki/Hierophant
+Clairvoyant Relic|https://megamitensei.fandom.com/wiki/Clairvoyant_Relic
+Clairvoyant Relic|https://megamitensei.fandom.com/wiki/Clairvoyant_Relic
+Lovers|https://megamitensei.fandom.com/wiki/Lovers
+Chariot & Justice|https://megamitensei.fandom.com/wiki/Chariot_&_Justice
+Desirous Maya|https://megamitensei.fandom.com/wiki/Desirous_Maya
+Desirous Maya|https://megamitensei.fandom.com/wiki/Desirous_Maya
+Crying Table|https://megamitensei.fandom.com/wiki/Crying_Table
+Crying Table|https://megamitensei.fandom.com/wiki/Crying_Table
+Hermit|https://megamitensei.fandom.com/wiki/Hermit
+Heretic Magus|https://megamitensei.fandom.com/wiki/Heretic_Magus
+Heretic Magus|https://megamitensei.fandom.com/wiki/Heretic_Magus
+Brave Wheel|https://megamitensei.fandom.com/wiki/Brave_Wheel
+Brave Wheel|https://megamitensei.fandom.com/wiki/Brave_Wheel
+Heat Balance|https://megamitensei.fandom.com/wiki/Heat_Balance
+Heat Balance|https://megamitensei.fandom.com/wiki/Heat_Balance
+Fortune & Strength|https://megamitensei.fandom.com/wiki/Fortune_&_Strength
+Primitive Idol|https://megamitensei.fandom.com/wiki/Primitive_Idol
+Primitive Idol|https://megamitensei.fandom.com/wiki/Primitive_Idol
+Bloodsucking Flare|https://megamitensei.fandom.com/wiki/Bloodsucking_Flare
+Bloodsucking Flare|https://megamitensei.fandom.com/wiki/Bloodsucking_Flare
+Judgment Sword|https://megamitensei.fandom.com/wiki/Judgment_Sword
+Judgment Sword|https://megamitensei.fandom.com/wiki/Judgment_Sword
+Hanged Man|https://megamitensei.fandom.com/wiki/Hanged_Man
+Isolated Castle|https://megamitensei.fandom.com/wiki/Isolated_Castle
+Isolated Castle|https://megamitensei.fandom.com/wiki/Isolated_Castle
+Minotaur IV|https://megamitensei.fandom.com/wiki/Minotaur_IV
+Platinum Dice|https://megamitensei.fandom.com/wiki/Platinum_Dice
+Minotaur IV|https://megamitensei.fandom.com/wiki/Minotaur_IV
+Platinum Dice|https://megamitensei.fandom.com/wiki/Platinum_Dice
+Chidori Yoshino|https://megamitensei.fandom.com/wiki/Chidori_Yoshino
+Jotun of Blood|https://megamitensei.fandom.com/wiki/Jotun_of_Blood
+Jotun of Blood|https://megamitensei.fandom.com/wiki/Jotun_of_Blood
+Craven Venoms|https://megamitensei.fandom.com/wiki/Craven_Venoms
+Craven Venoms|https://megamitensei.fandom.com/wiki/Craven_Venoms
+Visceral Maya|https://megamitensei.fandom.com/wiki/Visceral_Maya
+Visceral Maya|https://megamitensei.fandom.com/wiki/Visceral_Maya
+Dancing Hand|https://megamitensei.fandom.com/wiki/Dancing_Hand
+Jotun of Power|https://megamitensei.fandom.com/wiki/Jotun_of_Power
+Dancing Hand|https://megamitensei.fandom.com/wiki/Dancing_Hand
+Jotun of Power|https://megamitensei.fandom.com/wiki/Jotun_of_Power
+Onmoraki|https://megamitensei.fandom.com/wiki/Onmoraki
+Onmoraki|https://megamitensei.fandom.com/wiki/Onmoraki
+Jin Shirato|https://megamitensei.fandom.com/wiki/Jin_Shirato
+Minotaur II|https://megamitensei.fandom.com/wiki/Minotaur_II
+Minotaur II|https://megamitensei.fandom.com/wiki/Minotaur_II
+Takaya Sakaki|https://megamitensei.fandom.com/wiki/Takaya_Sakaki
+Slaughter Drive|https://megamitensei.fandom.com/wiki/Slaughter_Drive
+Slaughter Drive|https://megamitensei.fandom.com/wiki/Slaughter_Drive
+Nyx Avatar|https://megamitensei.fandom.com/wiki/Nyx_Avatar
+Neo Minotaur|https://megamitensei.fandom.com/wiki/Neo_Minotaur
+Neo Minotaur|https://megamitensei.fandom.com/wiki/Neo_Minotaur
+Phantom King|https://megamitensei.fandom.com/wiki/Phantom_King
+Phantom King|https://megamitensei.fandom.com/wiki/Phantom_King
+Erebus|https://megamitensei.fandom.com/wiki/Erebus
+Death Castle|https://megamitensei.fandom.com/wiki/Death_Castle
+Deceitful Maria|https://megamitensei.fandom.com/wiki/Deceitful_Maria
+Death Castle|https://megamitensei.fandom.com/wiki/Death_Castle
+Deceitful Maria|https://megamitensei.fandom.com/wiki/Deceitful_Maria
+Grand Magus|https://megamitensei.fandom.com/wiki/Grand_Magus
+Grand Magus|https://megamitensei.fandom.com/wiki/Grand_Magus
+Elizabeth|https://megamitensei.fandom.com/wiki/Elizabeth
+The Reaper|https://megamitensei.fandom.com/wiki/The_Reaper
+Elizabeth|https://megamitensei.fandom.com/wiki/Elizabeth
+The Reaper|https://megamitensei.fandom.com/wiki/The_Reaper
+Elizabeth|https://megamitensei.fandom.com/wiki/Elizabeth
+
+# === P4G ===
+Shadow Yosuke|https://megamitensei.fandom.com/wiki/Shadow_Yosuke
+Shadow Chie|https://megamitensei.fandom.com/wiki/Shadow_Chie
+Avenger Knight|https://megamitensei.fandom.com/wiki/Avenger_Knight
+Shadow Yukiko|https://megamitensei.fandom.com/wiki/Shadow_Yukiko
+Contrarian King|https://megamitensei.fandom.com/wiki/Contrarian_King
+Daring Gigas|https://megamitensei.fandom.com/wiki/Daring_Gigas
+Shadow Kanji|https://megamitensei.fandom.com/wiki/Shadow_Kanji
+Intolerant Officer|https://megamitensei.fandom.com/wiki/Intolerant_Officer
+Amorous Snake|https://megamitensei.fandom.com/wiki/Amorous_Snake
+Shadow Teddie|https://megamitensei.fandom.com/wiki/Shadow_Teddie
+Momentary Child|https://megamitensei.fandom.com/wiki/Momentary_Child
+Killing Hand|https://megamitensei.fandom.com/wiki/Killing_Hand
+Shadow Mitsuo|https://megamitensei.fandom.com/wiki/Shadow_Mitsuo
+Escapist Soldier|https://megamitensei.fandom.com/wiki/Escapist_Soldier
+Dominating Machine|https://megamitensei.fandom.com/wiki/Dominating_Machine
+Shadow Naoto|https://megamitensei.fandom.com/wiki/Shadow_Naoto
+Extreme Vessel|https://megamitensei.fandom.com/wiki/Extreme_Vessel
+World Balance|https://megamitensei.fandom.com/wiki/World_Balance
+Kunino-sagiri|https://megamitensei.fandom.com/wiki/Kunino-sagiri
+Lost Okina|https://megamitensei.fandom.com/wiki/Lost_Okina
+Chaos Fuzz|https://megamitensei.fandom.com/wiki/Chaos_Fuzz
+Tohru Adachi|https://megamitensei.fandom.com/wiki/Tohru_Adachi
+Envious Giant|https://megamitensei.fandom.com/wiki/Envious_Giant
+Ameno-sagiri|https://megamitensei.fandom.com/wiki/Ameno-sagiri
+Marie|https://megamitensei.fandom.com/wiki/Marie
+Kusumi-no-Okami|https://megamitensei.fandom.com/wiki/Kusumi-no-Okami
+Gorgeous King|https://megamitensei.fandom.com/wiki/Gorgeous_King
+Heaven's Giant|https://megamitensei.fandom.com/wiki/Heaven's_Giant
+Neo Minotaur|https://megamitensei.fandom.com/wiki/Neo_Minotaur
+Sleeping Table|https://megamitensei.fandom.com/wiki/Sleeping_Table
+Izanami|https://megamitensei.fandom.com/wiki/Izanami
+Margaret|https://megamitensei.fandom.com/wiki/Margaret
+
+# === P5R ===
+Shadow Kamoshida|https://megamitensei.fandom.com/wiki/Shadow_Kamoshida
+Shadow Nakanohara|https://megamitensei.fandom.com/wiki/Shadow_Nakanohara
+Shadow Takanashi|https://megamitensei.fandom.com/wiki/Shadow_Takanashi
+Shadow Madarame|https://megamitensei.fandom.com/wiki/Shadow_Madarame
+Shadow Sakoda|https://megamitensei.fandom.com/wiki/Shadow_Sakoda
+Shadow Makigami|https://megamitensei.fandom.com/wiki/Shadow_Makigami
+Shadow Shimizu|https://megamitensei.fandom.com/wiki/Shadow_Shimizu
+Shadow Odo|https://megamitensei.fandom.com/wiki/Shadow_Odo
+Shadow Oyamada|https://megamitensei.fandom.com/wiki/Shadow_Oyamada
+Shadow Kaneshiro|https://megamitensei.fandom.com/wiki/Shadow_Kaneshiro
+Shadow Honjo|https://megamitensei.fandom.com/wiki/Shadow_Honjo
+Shadow Takase F|https://megamitensei.fandom.com/wiki/Shadow_Takase_F
+Shadow Takase M|https://megamitensei.fandom.com/wiki/Shadow_Takase_M
+Shadow Naguri|https://megamitensei.fandom.com/wiki/Shadow_Naguri
+Shadow Uchimura|https://megamitensei.fandom.com/wiki/Shadow_Uchimura
+Cognitive Wakaba Isshiki|https://megamitensei.fandom.com/wiki/Cognitive_Wakaba_Isshiki
+Shadow Mogami|https://megamitensei.fandom.com/wiki/Shadow_Mogami
+Shadow Tsuboi|https://megamitensei.fandom.com/wiki/Shadow_Tsuboi
+Shadow Akitsu|https://megamitensei.fandom.com/wiki/Shadow_Akitsu
+Shadow Kishi|https://megamitensei.fandom.com/wiki/Shadow_Kishi
+Shadow Jochi|https://megamitensei.fandom.com/wiki/Shadow_Jochi
+Shadow Tsuda|https://megamitensei.fandom.com/wiki/Shadow_Tsuda
+Shadow Okumura|https://megamitensei.fandom.com/wiki/Shadow_Okumura
+Shadow Nejima|https://megamitensei.fandom.com/wiki/Shadow_Nejima
+Shadow Fukurai|https://megamitensei.fandom.com/wiki/Shadow_Fukurai
+Shadow Magario F|https://megamitensei.fandom.com/wiki/Shadow_Magario_F
+Shadow Magario M|https://megamitensei.fandom.com/wiki/Shadow_Magario_M
+Shadow Togo|https://megamitensei.fandom.com/wiki/Shadow_Togo
+Shadow Isshiki|https://megamitensei.fandom.com/wiki/Shadow_Isshiki
+Shadow Kiritani|https://megamitensei.fandom.com/wiki/Shadow_Kiritani
+Shadow Sae Niijima|https://megamitensei.fandom.com/wiki/Shadow_Sae_Niijima
+Shadow Wakasa|https://megamitensei.fandom.com/wiki/Shadow_Wakasa
+Shadow Oda|https://megamitensei.fandom.com/wiki/Shadow_Oda
+Shadow Shido|https://megamitensei.fandom.com/wiki/Shadow_Shido
+Yaldabaoth|https://megamitensei.fandom.com/wiki/Yaldabaoth
+Takuto Maruki|https://megamitensei.fandom.com/wiki/Takuto_Maruki
+Shadow Asakura|https://megamitensei.fandom.com/wiki/Shadow_Asakura
+Justine & Caroline|https://megamitensei.fandom.com/wiki/Justine_&_Caroline
+Lavenza|https://megamitensei.fandom.com/wiki/Lavenza

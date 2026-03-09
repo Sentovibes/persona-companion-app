@@ -1,5 +1,7 @@
 package com.persona.companion.ui.screens
 
+import android.graphics.Bitmap
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -10,12 +12,15 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -25,8 +30,15 @@ import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Persona
+import com.persona.companion.models.PersonaSeries
+import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.ProfileImage
 import com.persona.companion.ui.theme.*
+import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
+import com.persona.companion.utils.ImageUtils
+import com.persona.companion.utils.rememberDeviceType
+import com.persona.companion.utils.rememberShouldLoadImages
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -40,6 +52,8 @@ fun PersonaDetailScreen(
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
     val userPrefs = remember { UserPreferences(context) }
+    val deviceType = rememberDeviceType()
+    val shouldLoadImages = rememberShouldLoadImages()
 
     val persona = remember(personaName, game.dataPath) {
         PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
@@ -87,31 +101,123 @@ fun PersonaDetailScreen(
             return@Scaffold
         }
 
-        LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(padding),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            item { HeroSection(persona, series.color) }
-            
-            if (!persona.description.isNullOrBlank()) {
-                item { DescriptionSection(persona.description) }
-            }
-            
-            if (!persona.unlock.isNullOrBlank()) {
-                item { UnlockSection(persona.unlock) }
-            }
-
-            item { StatsSection(persona, series.color) }
-
-            if (!persona.skills.isNullOrEmpty()) {
-                item { SectionHeader("Skills") }
-                items(persona.skills.toList()) { skillEntry ->
-                    SkillRow(skillEntry.first, skillEntry.second, series.color)
+        AdaptiveDetailLayout(
+            modifier = Modifier.padding(padding),
+            statsContent = {
+                PersonaStatsContent(persona = persona, series = series)
+            },
+            imageContent = {
+                if (shouldLoadImages) {
+                    PersonaImageDisplay(persona = persona, deviceType = deviceType)
                 }
             }
+        )
+    }
+}
 
-            item { AffinitiesSection(persona) }
+@Composable
+private fun PersonaStatsContent(persona: Persona, series: PersonaSeries) {
+    HeroSection(persona, series.color)
+    
+    Spacer(modifier = Modifier.height(16.dp))
+    
+    if (!persona.description.isNullOrBlank()) {
+        DescriptionSection(persona.description)
+        Spacer(modifier = Modifier.height(16.dp))
+    }
+    
+    if (!persona.unlock.isNullOrBlank()) {
+        UnlockSection(persona.unlock)
+        Spacer(modifier = Modifier.height(16.dp))
+    }
+
+    StatsSection(persona, series.color)
+    
+    Spacer(modifier = Modifier.height(16.dp))
+
+    if (!persona.skills.isNullOrEmpty()) {
+        SectionHeader("Skills")
+        Spacer(modifier = Modifier.height(8.dp))
+        persona.skills.forEach { (skillName, skillLevel) ->
+            SkillRow(skillName, skillLevel, series.color)
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+    }
+
+    AffinitiesSection(persona)
+}
+
+@Composable
+private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType) {
+    val context = LocalContext.current
+    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+    
+    // Load image
+    LaunchedEffect(persona.name) {
+        val imagePath = ImageUtils.getImagePath(persona.name, isEnemy = false)
+        bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
+    }
+    
+    when (deviceType) {
+        DeviceType.PHONE -> {
+            // Phone: Small circular profile image
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(SurfaceCard),
+                contentAlignment = Alignment.Center
+            ) {
+                ProfileImage(
+                    name = persona.name,
+                    isEnemy = false,
+                    size = 64
+                )
+            }
+        }
+        
+        DeviceType.TABLET, DeviceType.TV, DeviceType.CAST -> {
+            // Tablet/TV: Full-size image that fits content
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                if (bitmap != null) {
+                    Image(
+                        bitmap = bitmap!!.asImageBitmap(),
+                        contentDescription = persona.name,
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Fit
+                    )
+                } else {
+                    // Fallback if no image
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(RoundedCornerShape(16.dp))
+                            .background(SurfaceCard),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Person,
+                                contentDescription = "No image",
+                                tint = TextSecondary.copy(alpha = 0.3f),
+                                modifier = Modifier.size(120.dp)
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Text(
+                                text = persona.name,
+                                style = MaterialTheme.typography.headlineMedium,
+                                color = TextSecondary
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }

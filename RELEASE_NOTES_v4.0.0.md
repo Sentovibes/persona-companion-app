@@ -1,0 +1,145 @@
+# Persona Companion App - Version 4.0.0 Release Notes
+
+## 🎨 Major Feature: Image Support (BETA)
+
+Version 4.0.0 introduces image support for personas and enemies! This is a **BETA feature** with known limitations.
+
+### What's New
+
+#### Profile Images
+- Persona and enemy images now display throughout the app
+- Adaptive display based on device:
+  - **Phone:** Small circular profile picture (64dp)
+  - **Tablet:** Full-size rectangular image on right side of screen (80dp thumbnail in lists)
+  - **TV:** Large rectangular image filling right panel (120dp thumbnail in lists)
+- Tap any image to view full-size
+- Works offline - all images stored in app
+
+#### Cast Support for Images
+- Images now broadcast to TV browsers via Cast
+- Base64 encoding for seamless transmission
+- Displays in right panel of 2x2 grid layout
+
+#### Image Coverage (BETA - Many Missing!)
+
+**Personas:**
+- P3 FES: 148/169 (87.6%) - **21 missing**
+- P3 Portable: 151/173 (87.3%) - **22 missing**
+- P3 Reload: 173/194 (89.2%) - **21 missing**
+- P4: 159/187 (85.0%) - **28 missing**
+- P4 Golden: 175/205 (85.4%) - **30 missing**
+- P5: 188/210 (89.5%) - **22 missing**
+- P5 Royal: 205/232 (88.4%) - **27 missing**
+
+**Total Personas: 1199/1370 (87.5%) - 171 missing**
+
+**Enemies:**
+- P3 FES: 230/368 (62.5%) - **138 missing**
+- P3 Portable: 112/176 (63.6%) - **64 missing**
+- P3 Reload: 193/496 (38.9%) - **303 missing**
+- P4: 200/271 (73.8%) - **71 missing**
+- P4 Golden: 220/297 (74.1%) - **77 missing**
+- P5: 29/149 (19.5%) - **120 missing**
+- P5 Royal: 30/168 (17.9%) - **138 missing**
+
+**Total Enemies: 1014/1925 (52.7%) - 911 missing**
+
+**GRAND TOTAL: 2213/3295 images (67.2%) - 1082 missing**
+
+### ⚠️ Known Issues (BETA)
+
+1. **Many images are missing** - Only 67% of all personas/enemies have images
+2. **Some images may be incorrect** - Automated scraping may have grabbed wrong images
+3. **Quality varies** - Some images are from older games (SMT series) when Persona versions aren't available
+4. **No P5 Strikers images** - P5S enemies not yet scraped
+5. **Fallback icon** - Missing images show a generic person icon
+
+### How It Works
+
+- Images load from app assets (no internet required)
+- Phone: Circular profile picture next to name
+- Tablet/TV: Full rectangular image filling right side of screen
+- Tap to expand to full screen
+- Missing images show placeholder icon
+- Works on all devices (phone, tablet, TV, cast)
+
+### Performance Notes
+
+- Images are 256px (compressed for quality vs size balance)
+- Loaded on-demand (lazy loading)
+- App size: 44MB release / 50MB debug
+- No performance impact on devices without images
+
+## Technical Details
+
+### New Components
+- `ImageUtils.kt` - Image loading utilities
+- `ProfileImage.kt` - Reusable profile picture component
+- 542 unique PNG images (256x256px) in assets
+- Base64 encoding for Cast transmission
+
+### Updated Screens
+- `EnemyDetailScreen.kt` - Adaptive layout with images
+- `PersonaDetailScreen.kt` - Adaptive layout with images
+- `CastServer.kt` - Image broadcasting support
+- Cast HTML receiver - Image display panel
+
+### Adaptive Layouts
+- Phone: Vertical scrolling with small circular images
+- Tablet: Two-column (60/40 split) with full image on right
+- TV: Two-column (33/67 split) with large image on right
+- Cast: 2x2 grid with image panel
+
+## Future Improvements (v4.1+)
+
+### Planned for v4.1
+- Download remaining high-priority images:
+  - Main story bosses (Nyx, Izanami, Yaldabaoth, etc.)
+  - Popular personas (Orpheus, Izanagi, Arsene, etc.)
+  - DLC personas
+- Target: 80%+ persona coverage, 65%+ enemy coverage
+
+### Planned for v4.2
+- Image feedback system:
+  - "Report Wrong Image" button
+  - "Submit Missing Image" feature
+  - GitHub issue integration
+- Verify and correct wrong images
+
+### Future Enhancements
+- Add thumbnail images to list views
+- Compress images further for better performance
+- Add P5 Strikers enemy images
+- Manual quality check of all images
+- Community contribution system
+
+## Version Info
+
+- **Version Code:** 11
+- **Version Name:** 4.0.0
+- **Release Date:** March 9, 2026
+- **Feature Status:** BETA
+- **APK Size:** 44.15 MB (release) / 50.03 MB (debug)
+- **Image Count:** 542 unique images
+- **Image Coverage:** 67.2% overall
+
+## Feedback
+
+This is a beta feature. If you notice:
+- Wrong images for personas/enemies
+- Missing images that should exist
+- Performance issues
+- Display bugs
+- Image quality problems
+
+Please report them via GitHub Issues so we can improve the image database in future updates!
+
+## Installation
+
+Download the APK from the releases page:
+- `persona-companion-v4.0.0.apk` (Release build - recommended)
+- `persona-companion-v4.0.0-debug-debug.apk` (Debug build - with error overlay)
+
+---
+
+**Note:** Images were scraped from the Megami Tensei Wiki using automated tools. Some images may be incorrect or from non-Persona games. We're working to improve accuracy in future updates. This is a BETA release - expect missing and potentially incorrect images.

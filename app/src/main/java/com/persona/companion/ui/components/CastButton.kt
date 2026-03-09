@@ -30,12 +30,24 @@ fun CastButton() {
     var isConnected by remember { mutableStateOf(false) }
     var connectionUrl by remember { mutableStateOf<String?>(null) }
     var qrCodeBitmap by remember { mutableStateOf<Bitmap?>(null) }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
     
     // Set up callbacks
     LaunchedEffect(Unit) {
         CastManager.onServerStarted = { url ->
-            connectionUrl = url
-            qrCodeBitmap = QRCodeGenerator.generateQRCode(url, 512)
+            if (url.startsWith("Error:")) {
+                errorMessage = url
+                connectionUrl = null
+                qrCodeBitmap = null
+            } else {
+                connectionUrl = url
+                qrCodeBitmap = try {
+                    QRCodeGenerator.generateQRCode(url, 512)
+                } catch (e: Exception) {
+                    null
+                }
+                errorMessage = null
+            }
         }
         
         CastManager.onClientConnected = {
@@ -60,15 +72,27 @@ fun CastButton() {
             isConnected = isConnected,
             connectionUrl = connectionUrl,
             qrCodeBitmap = qrCodeBitmap,
+            errorMessage = errorMessage,
             onDismiss = { showDialog = false },
             onStartCasting = {
-                CastManager.startServer(context)
+                try {
+                    errorMessage = null
+                    // Start server directly - no service needed
+                    CastManager.startServer(context)
+                } catch (e: Exception) {
+                    errorMessage = "Failed to start: ${e.message}"
+                }
             },
             onStopCasting = {
-                CastManager.stopServer()
-                isConnected = false
-                connectionUrl = null
-                qrCodeBitmap = null
+                try {
+                    CastManager.stopServer()
+                    isConnected = false
+                    connectionUrl = null
+                    qrCodeBitmap = null
+                    errorMessage = null
+                } catch (e: Exception) {
+                    errorMessage = "Failed to stop: ${e.message}"
+                }
             }
         )
     }
@@ -79,6 +103,7 @@ private fun CastDialog(
     isConnected: Boolean,
     connectionUrl: String?,
     qrCodeBitmap: Bitmap?,
+    errorMessage: String?,
     onDismiss: () -> Unit,
     onStartCasting: () -> Unit,
     onStopCasting: () -> Unit
@@ -103,6 +128,25 @@ private fun CastDialog(
                 )
                 
                 Spacer(modifier = Modifier.height(16.dp))
+                
+                // Show error message if any
+                errorMessage?.let { error ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.errorContainer
+                        )
+                    ) {
+                        Text(
+                            text = error,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onErrorContainer,
+                            modifier = Modifier.padding(16.dp),
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
                 
                 if (!isServerRunning) {
                     // Not started yet

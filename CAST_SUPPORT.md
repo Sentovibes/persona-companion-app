@@ -1,188 +1,112 @@
-# Google Cast / Chromecast Support - v3.2.1
+# Cast Support Documentation
 
 ## Overview
-The app now supports casting to Chromecast and other Google Cast devices. You can cast the app from your phone or tablet to your TV.
+Custom cast system that works without Google Play Services. Displays enemy/persona data on TV browsers.
 
 ## Features
+- ✅ HTTP server with WebSocket support (port 8080)
+- ✅ QR code for easy connection
+- ✅ 2x2 grid layout optimized for TV
+- ✅ Stable connection with server-side ping
+- ✅ WiFi lock to maintain connection
+- ✅ Works while app is in foreground
 
-### Cast Button
-- Appears in the top-right of the home screen (next to settings)
-- Only shows on phones and tablets (not on Android TV)
-- Standard Google Cast icon that users recognize
-- Tap to see available Cast devices
+## Layout Structure
 
-### How It Works
-1. **Phone/Tablet**: Acts as the controller
-2. **TV/Chromecast**: Displays the full app UI
-3. **Automatic Detection**: App detects when casting and switches to TV layout
-4. **Seamless Experience**: Navigate on phone, see results on TV
-
-### Supported Devices
-- Chromecast (all generations)
-- Chromecast Ultra
-- Chromecast with Google TV
-- Android TV with Cast built-in
-- Smart TVs with Chromecast built-in
+### 2x2 Grid Display
+```
+┌─────────────────┬─────────────────┬──────────┐
+│  Basic Info     │  Stats          │  Image   │
+│  - Level        │  - Strength     │  Panel   │
+│  - HP/SP        │  - Magic        │  (Ready  │
+│  - Arcana       │  - Endurance    │   for    │
+│  - Area         │  - Agility      │   future)│
+│  - EXP          │  - Luck         │          │
+│  - Drops        │                 │          │
+├─────────────────┼─────────────────┤          │
+│  Resistances    │  Skills         │          │
+│  (Each on own   │  (Each on own   │          │
+│   line)         │   line)         │          │
+└─────────────────┴─────────────────┴──────────┘
+```
 
 ## Usage
 
-### Connecting
-1. Make sure your phone/tablet and Cast device are on the same WiFi network
-2. Open the Persona Companion app
-3. Tap the Cast button (top-right)
-4. Select your Cast device from the list
-5. App will appear on your TV
+### Starting Cast
+1. Open app on phone
+2. Tap Cast button in top bar
+3. Click "Start Casting"
+4. On TV browser, navigate to displayed URL
+5. Or scan QR code with another phone
 
-### Disconnecting
-1. Tap the Cast button again
-2. Tap "Disconnect" or "Stop casting"
-3. App returns to phone/tablet mode
+### Connection Details
+- Server runs on port 8080
+- URL format: `http://192.168.1.X:8080`
+- WebSocket keeps connection alive with 3-second ping
+- WiFi lock prevents disconnection
+
+### Behavior
+- Server runs while app is in foreground
+- Stops when app is closed or screen times out
+- Automatically broadcasts when viewing enemy/persona details
+
+## Image Support
+
+### Current Status
+- Image panel ready in layout
+- Images not yet implemented
+- Fandom Wiki blocks automated scraping
+
+### Future Implementation
+Images should be organized as:
+```
+app/src/main/assets/images/
+├── personas/
+│   ├── p3r/
+│   ├── p4g/
+│   └── p5r/
+└── enemies/
+    ├── p3r/
+    ├── p4g/
+    └── p5r/
+```
+
+### Image Mapping
+- All P3 games (P3, P3 FES, P3P) → P3R images
+- All P4 games (P4, P4G) → P4G images
+- All P5 games (P5, P5R, P5S) → P5R images
+
+### Getting Images
+See `extras/IMAGE_SCRAPING_GUIDE.md` for options:
+1. Manual download from wiki
+2. Browser automation with Selenium
+3. Extract from game files
 
 ## Technical Details
 
-### Implementation
-- **Google Cast SDK**: v21.4.0
-- **MediaRouter**: v1.7.0
-- **Receiver App ID**: CC1AD845 (default media receiver)
+### Files
+- `CastServer.kt` - HTTP/WebSocket server
+- `CastManager.kt` - Server lifecycle management
+- `CastButton.kt` - UI for starting/stopping cast
+- `QRCodeGenerator.kt` - QR code generation
+- `EnemyDetailScreen.kt` - Broadcasts enemy data
 
-### Files Added
-- `CastOptionsProvider.kt` - Cast SDK configuration
-- `CastButton.kt` - Cast button component
-- `CastUtils.kt` - Cast detection utilities
+### Color Scheme
+- Background: #0F0F0F
+- Surface: #1A1A1A
+- Cards: #222222
+- Text: #EEEEEE
+- Accent: #1A6FCC (P3 Blue)
 
-### Device Detection
-The app automatically detects when casting:
-```kotlin
-DeviceType.CAST -> {
-    // Use TV layout with large images
-    // Text scaled 1.3x for readability
-    // Extra padding (48dp)
-}
+### Dependencies
+```gradle
+implementation 'org.nanohttpd:nanohttpd:2.3.1'
+implementation 'org.nanohttpd:nanohttpd-websocket:2.3.1'
+implementation 'com.google.zxing:core:3.5.2'
 ```
 
-### Layouts When Casting
-- **Phone/Tablet**: Shows controls and navigation
-- **TV**: Shows full UI with:
-  - Horizontal series selection
-  - L-shaped enemy details
-  - Large images
-  - 1.3x text scale
-  - Extra padding
-
-## Testing
-
-### Requirements
-- Android phone/tablet with the app installed
-- Chromecast or Cast-enabled TV
-- Both devices on same WiFi network
-
-### Test Steps
-1. Install debug APK on phone: `persona-companion-v3.2.1-debug-debug.apk`
-2. Open app
-3. Look for Cast button (top-right, next to settings)
-4. Tap Cast button
-5. Select your Cast device
-6. Verify app appears on TV
-7. Navigate on phone, see results on TV
-8. Check TV layout (horizontal series, large text)
-
-### Troubleshooting
-
-**Cast button doesn't appear**
-- Check WiFi connection
-- Make sure Cast device is powered on
-- Restart app
-- Check if Cast device is on same network
-
-**Can't find Cast device**
-- Ensure both devices on same WiFi
-- Check firewall settings
-- Restart Cast device
-- Update Google Play Services
-
-**App crashes when casting**
-- Check debug logs in debug build
-- Verify Cast SDK initialized properly
-- Check AndroidManifest has CastOptionsProvider
-
-**TV shows phone layout**
-- Device detection might be failing
-- Check DeviceUtils.getDeviceType()
-- Verify CastUtils.isCasting() returns true
-
-## Limitations
-
-### Current Version
-- Uses default Cast receiver (basic functionality)
-- No custom Cast UI on receiver
-- No media controls (not a media app)
-- Cast state not persisted across app restarts
-
-### Future Enhancements
-- Custom Cast receiver with branded UI
-- Better state synchronization
-- Cast queue management
-- Picture-in-picture support
-- Voice commands via Cast
-- Multi-room audio (if applicable)
-
-## Custom Receiver (Future)
-
-To create a custom Cast receiver:
-
-1. **Register at Google Cast Console**
-   - Go to https://cast.google.com/publish/
-   - Create new application
-   - Get your custom receiver app ID
-
-2. **Update CastOptionsProvider**
-   ```kotlin
-   .setReceiverApplicationId("YOUR_APP_ID_HERE")
-   ```
-
-3. **Create Custom Receiver HTML**
-   - Host on HTTPS server
-   - Implement Cast receiver API
-   - Add custom branding/UI
-
-4. **Benefits**
-   - Custom branding
-   - Better UI control
-   - Advanced features
-   - Analytics
-
-## APK Size Impact
-
-### Before Cast Support (v3.2.0)
-- Debug: 17.68 MB
-- Release: 12.12 MB
-
-### After Cast Support (v3.2.1)
-- Debug: 20.82 MB (+3.14 MB)
-- Release: 14.80 MB (+2.68 MB)
-
-The increase is due to:
-- Google Cast SDK (~2.5 MB)
-- MediaRouter library (~0.2 MB)
-
-## Permissions
-
-No additional permissions required! Cast uses existing INTERNET permission.
-
-## Privacy
-
-- No data sent to Google except Cast discovery
-- No analytics or tracking
-- All data stays local
-- Cast connection is direct (device to device)
-
-## Known Issues
-
-- None currently
-
 ## Version History
-- **v3.2.1**: Initial Cast support
-  - Cast button in UI
-  - Automatic device detection
-  - TV layout when casting
-  - Default receiver integration
+- v3.3.0 - Initial cast system implementation
+- 2x2 grid layout
+- Stable WebSocket connection
+- WiFi lock support
