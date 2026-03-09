@@ -119,7 +119,7 @@ Version 4.0.0 introduces image support for personas and enemies! This is a **BET
 - **Version Name:** 4.0.0
 - **Release Date:** March 9, 2026
 - **Feature Status:** BETA
-- **APK Size:** 44.15 MB (release) / 50.03 MB (debug)
+- **APK Size:** 44.15 MB
 - **Image Count:** 542 unique images
 - **Image Coverage:** 67.2% overall
 
@@ -137,8 +137,15 @@ Please report them via GitHub Issues so we can improve the image database in fut
 ## Installation
 
 Download the APK from the releases page:
-- `persona-companion-v4.0.0.apk` (Release build - recommended)
-- `persona-companion-v4.0.0-debug-debug.apk` (Debug build - with error overlay)
+- `persona-companion-v4.0.0.apk` (44.15 MB - Release build)
+
+**Installation Instructions:**
+1. Download the APK file
+2. Enable "Install from Unknown Sources" in your Android settings
+3. Open the APK file to install
+4. Grant any requested permissions
+
+**Note:** This app is not available on Google Play Store. It's distributed via GitHub for sideloading.
 
 ---
 
