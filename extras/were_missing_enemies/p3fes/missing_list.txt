@@ -1,0 +1,17 @@
+MISSING P3FES ENEMIES (14 total)
+======================================================================
+
+  1. Affection Relic -> affection_relic.png
+  2. Chariot & Justice -> chariot_&_justice.png
+  3. Conceited Maya -> conceited_maya.png
+  4. Elizabeth / Theodore -> elizabeth___theodore.png
+  5. Emperor & Empress -> emperor_&_empress.png
+  6. Fortune & Strength -> fortune_&_strength.png
+  7. Hanged Man -> hanged_man.png
+  8. Hermit -> hermit.png
+  9. Hierophant -> hierophant.png
+ 10. Judgement Sword -> judgement_sword.png
+ 11. Loss Giant -> loss_giant.png
+ 12. Lovers -> lovers.png
+ 13. Merciful Maya -> merciful_maya.png
+ 14. Priestess -> priestess.png

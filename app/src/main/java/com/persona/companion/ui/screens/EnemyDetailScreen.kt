@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -35,6 +36,7 @@ import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.FullImageDialog
 import com.persona.companion.ui.components.ProfileImage
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
@@ -60,11 +62,28 @@ fun EnemyDetailScreen(
     
     val context = LocalContext.current
     val userPrefs = remember { UserPreferences(context) }
-    val enemyId = FilterUtils.getEnemyId(enemy)
+    
+    // Extract seriesId from gameId (e.g., "p3r" -> "p3")
+    val seriesId = when {
+        gameId.startsWith("p3") -> "p3"
+        gameId.startsWith("p4") -> "p4"
+        gameId.startsWith("p5") -> "p5"
+        else -> ""
+    }
+    
+    val enemyId = FilterUtils.getEnemyId(seriesId, gameId, enemy)
     var isFavorite by remember { mutableStateOf(userPrefs.isFavoriteEnemy(enemyId)) }
+    var showFullImage by remember { mutableStateOf(false) }
     val shouldLoadImages = rememberShouldLoadImages()
     val deviceType = rememberDeviceType()
     val textScale = rememberTextScaleFactor()
+    
+    // Track view in history (extract seriesId and gameId from enemyId if needed)
+    LaunchedEffect(enemy) {
+        // For now, we'll use gameId passed in. In a full implementation, 
+        // you might want to pass seriesId as well
+        userPrefs.addRecentEnemy("persona", gameId, enemy.name)
+    }
     
     // Broadcast to cast if connected
     LaunchedEffect(enemy.name, enemy.level, enemy.hp) {
@@ -111,6 +130,23 @@ fun EnemyDetailScreen(
                 },
                 actions = {
                     IconButton(onClick = {
+                        val game = com.persona.companion.data.SeriesData.allSeries
+                            .flatMap { it.games }
+                            .find { it.id == gameId }
+                        com.persona.companion.utils.ShareUtils.shareEnemy(
+                            context,
+                            enemy,
+                            game?.title ?: "Persona",
+                            gameId
+                        )
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.Share,
+                            contentDescription = "Share",
+                            tint = TextSecondary
+                        )
+                    }
+                    IconButton(onClick = {
                         if (isFavorite) {
                             userPrefs.removeFavoriteEnemy(enemyId)
                         } else {
@@ -132,14 +168,29 @@ fun EnemyDetailScreen(
         AdaptiveDetailLayout(
             modifier = Modifier.padding(padding),
             statsContent = {
-                EnemyStatsContent(enemy = enemy, gameId = gameId, textScale = textScale)
+                EnemyStatsContent(
+                    enemy = enemy, 
+                    gameId = gameId, 
+                    textScale = textScale,
+                    onImageClick = { showFullImage = true }
+                )
             },
             imageContent = {
                 if (shouldLoadImages) {
-                    EnemyImagePlaceholder(enemy = enemy, deviceType = deviceType)
+                    EnemyImagePlaceholder(enemy = enemy, deviceType = deviceType, gameId = gameId)
                 }
             }
         )
+        
+        // Show full-size image dialog when clicked (phone only)
+        if (showFullImage && deviceType == DeviceType.PHONE) {
+            FullImageDialog(
+                name = enemy.persona_name ?: enemy.name,
+                isEnemy = true,
+                gameId = gameId,
+                onDismiss = { showFullImage = false }
+            )
+        }
     }
 }
 
@@ -147,14 +198,35 @@ fun EnemyDetailScreen(
 private fun EnemyStatsContent(
     enemy: Enemy,
     gameId: String,
-    textScale: Float
+    textScale: Float,
+    onImageClick: () -> Unit = {}
 ) {
-    // Basic Info
+    val deviceType = rememberDeviceType()
+    val shouldLoadImages = rememberShouldLoadImages()
+    
+    // Basic Info with profile image on phone
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // Show profile image on phone only
+            if (deviceType == DeviceType.PHONE && shouldLoadImages) {
+                ProfileImage(
+                    name = enemy.persona_name ?: enemy.name,
+                    isEnemy = true,
+                    size = 72,
+                    gameId = gameId,
+                    onClick = onImageClick
+                )
+                Spacer(Modifier.width(16.dp))
+            }
+            
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -423,13 +495,15 @@ private fun EnemyStatsContent(
 }
 
 @Composable
-private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType) {
+private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType, gameId: String) {
     val context = LocalContext.current
     var bitmap by remember { mutableStateOf<Bitmap?>(null) }
     
     // Load image
-    LaunchedEffect(enemy.name) {
-        val imagePath = ImageUtils.getImagePath(enemy.name, isEnemy = true)
+    LaunchedEffect(enemy.name, gameId) {
+        // Use persona_name for P5/P5R enemies, otherwise use name
+        val nameForImage = enemy.persona_name ?: enemy.name
+        val imagePath = ImageUtils.getImagePath(nameForImage, isEnemy = true, gameId = gameId)
         bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
     }
     
@@ -444,9 +518,10 @@ private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType) {
                 contentAlignment = Alignment.Center
             ) {
                 ProfileImage(
-                    name = enemy.name,
+                    name = enemy.persona_name ?: enemy.name,
                     isEnemy = true,
-                    size = 64
+                    size = 64,
+                    gameId = gameId
                 )
             }
         }

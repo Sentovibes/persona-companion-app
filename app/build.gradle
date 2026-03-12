@@ -11,8 +11,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 12
-        versionName "4.1.0"
+        versionCode 13
+        versionName "5.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -41,13 +41,35 @@ android {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
             buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "true"
+            buildConfigField "boolean", "INCLUDE_IMAGES", "true"
+            // Debug includes all images bundled for testing
+            
+            // Cloud image download configuration
+            // GitHub Releases (up to 2GB) or Internet Archive (unlimited)
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.0/images.zip"'
+            // Alternative: buildConfigField "String", "IMAGES_CDN_URL", '"https://archive.org/download/persona-companion-images/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1310000000L"  // 1.31 GB
+            buildConfigField "String", "IMAGES_VERSION", '"1.0"'
         }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "false"
+            buildConfigField "boolean", "INCLUDE_IMAGES", "false"
+            // Release excludes images - they will be downloaded from settings
+            
+            // Cloud image download configuration
+            // GitHub Releases (up to 2GB) or Internet Archive (unlimited)
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.0/images.zip"'
+            // Alternative: buildConfigField "String", "IMAGES_CDN_URL", '"https://archive.org/download/persona-companion-images/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1310000000L"  // 1.31 GB
+            buildConfigField "String", "IMAGES_VERSION", '"1.0"'
         }
+    }
+    
+    aaptOptions {
+        ignoreAssetsPattern "!images:!images/*"
     }
     
     applicationVariants.all { variant ->
@@ -113,6 +135,9 @@ dependencies {
     
     // QR Code generation
     implementation 'com.google.zxing:core:3.5.2'
+    
+    // Image loading
+    implementation 'io.coil-kt:coil-compose:2.5.0'
 
     // Debug tools
     debugImplementation 'androidx.compose.ui:ui-tooling'

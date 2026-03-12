@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M100,100m-90,0a90,90 0,1 1,180 0a90,90 0,1 1,-180 0" />
+    
+    <!-- Mask icon (simplified persona mask shape) -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M100,60 L120,80 L120,120 L100,140 L80,120 L80,80 Z" />
+    
+    <!-- Eye holes -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M90,95 m-8,0 a8,8 0,1 1,16 0 a8,8 0,1 1,-16 0" />
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M110,95 m-8,0 a8,8 0,1 1,16 0 a8,8 0,1 1,-16 0" />
+</vector>

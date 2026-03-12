@@ -1,6 +1,7 @@
 [
   {
     "name": "Beguiling Girl",
+    "persona_name": "Pixie",
     "arcana": "Lovers",
     "level": 2,
     "hp": 174,
@@ -27,6 +28,7 @@
   },
   {
     "name": "Crypt-Dwelling Pyromaniac",
+    "persona_name": "Jack-o'-Lantern",
     "arcana": "Magician",
     "level": 2,
     "hp": 100,
@@ -53,6 +55,7 @@
   },
   {
     "name": "Apprentice in a Jug",
+    "persona_name": "Agathion",
     "arcana": "Chariot",
     "level": 3,
     "hp": 150,
@@ -80,6 +83,7 @@
   },
   {
     "name": "Gallows Flower",
+    "persona_name": "Mandrake",
     "arcana": "Death",
     "level": 3,
     "hp": 163,
@@ -104,6 +108,7 @@
   },
   {
     "name": "Dirty Two-Horned Beast",
+    "persona_name": "Bicorn",
     "arcana": "Hermit",
     "level": 4,
     "hp": 132,
@@ -130,6 +135,7 @@
   },
   {
     "name": "Bedside Brute",
+    "persona_name": "Incubus",
     "arcana": "Devil",
     "level": 5,
     "hp": 115,
@@ -157,6 +163,7 @@
   },
   {
     "name": "Hunting Puss in Boots",
+    "persona_name": "Cait Sith",
     "arcana": "Magician",
     "level": 5,
     "hp": 130,
@@ -185,6 +192,7 @@
   },
   {
     "name": "Mad Marsh Horse",
+    "persona_name": "Kelpie",
     "arcana": "Strength",
     "level": 6,
     "hp": 128,
@@ -211,6 +219,7 @@
   },
   {
     "name": "Troublesome Housemaid",
+    "persona_name": "Silky",
     "arcana": "Priestess",
     "level": 6,
     "hp": 142,
@@ -238,6 +247,7 @@
   },
   {
     "name": "Twilight Prostitute",
+    "persona_name": "Succubus",
     "arcana": "Moon",
     "level": 7,
     "hp": 148,
@@ -264,6 +274,7 @@
   },
   {
     "name": "Piggyback Demon",
+    "persona_name": "Obariyon",
     "arcana": "Fool",
     "level": 8,
     "hp": 206,
@@ -291,6 +302,7 @@
   },
   {
     "name": "Brutal Cavalryman",
+    "persona_name": "Berith",
     "arcana": "Hierophant",
     "level": 9,
     "hp": 474,
@@ -317,6 +329,7 @@
   },
   {
     "name": "Girl of the Hanging Tree",
+    "persona_name": "Hua Po",
     "arcana": "Hanged",
     "level": 9,
     "hp": 169,
@@ -343,6 +356,7 @@
   },
   {
     "name": "Leafy Old Man",
+    "persona_name": "Koropokguru",
     "arcana": "Hermit",
     "level": 9,
     "hp": 188,
@@ -370,6 +384,7 @@
   },
   {
     "name": "Night-Walking Warrior",
+    "persona_name": "Mokoi",
     "arcana": "Death",
     "level": 9,
     "hp": 230,
@@ -396,6 +411,7 @@
   },
   {
     "name": "Zealous Messenger",
+    "persona_name": "Angel",
     "arcana": "Justice",
     "level": 9,
     "hp": 152,
@@ -422,6 +438,7 @@
   },
   {
     "name": "Regent D",
+    "persona_name": "Regent",
     "arcana": "Emperor",
     "level": 10,
     "hp": 720,
@@ -446,6 +463,7 @@
   },
   {
     "name": "Viscid Rotting Meat",
+    "persona_name": "Slime",
     "arcana": "Chariot",
     "level": 10,
     "hp": 121,
@@ -472,6 +490,7 @@
   },
   {
     "name": "Foolish Monk",
+    "persona_name": "Koppa Tengu",
     "arcana": "Temperance",
     "level": 11,
     "hp": 168,
@@ -499,6 +518,7 @@
   },
   {
     "name": "Mocking Snowman",
+    "persona_name": "Jack Frost",
     "arcana": "Magician",
     "level": 11,
     "hp": 214,
@@ -526,6 +546,7 @@
   },
   {
     "name": "Waterside Nymph",
+    "persona_name": "Apsaras",
     "arcana": "Priestess",
     "level": 11,
     "hp": 145,
@@ -557,6 +578,7 @@
   },
   {
     "name": "Wavering Tree Spirit",
+    "persona_name": "Kodama",
     "arcana": "Star",
     "level": 11,
     "hp": 194,
@@ -584,6 +606,7 @@
   },
   {
     "name": "Shadow Kamoshida",
+    "persona_name": "Shadow Kamoshida",
     "arcana": "Lust",
     "level": 11,
     "hp": 0,
@@ -622,6 +645,7 @@
   },
   {
     "name": "Corpse Bird",
+    "persona_name": "Onmoraki",
     "arcana": "Moon",
     "level": 12,
     "hp": 206,
@@ -649,6 +673,7 @@
   },
   {
     "name": "Captivating Dancer",
+    "persona_name": "Ame-no-Uzume",
     "arcana": "Lovers",
     "level": 13,
     "hp": 238,
@@ -676,6 +701,7 @@
   },
   {
     "name": "Embittered Blacksmith",
+    "persona_name": "Ippon-Datara",
     "arcana": "Hermit",
     "level": 13,
     "hp": 365,
@@ -702,6 +728,7 @@
   },
   {
     "name": "Heavenly Punisher",
+    "persona_name": "Archangel",
     "arcana": "Justice",
     "level": 14,
     "hp": 190,
@@ -729,6 +756,7 @@
   },
   {
     "name": "Possessing Dog Ghost",
+    "persona_name": "Inugami",
     "arcana": "Hanged",
     "level": 14,
     "hp": 223,
@@ -757,6 +785,7 @@
   },
   {
     "name": "Hunting Wolf Spirit",
+    "persona_name": "Makami",
     "arcana": "Temperance",
     "level": 15,
     "hp": 305,
@@ -784,6 +813,7 @@
   },
   {
     "name": "Queen's Necklace D",
+    "persona_name": "Queen's Necklace",
     "arcana": "Empress",
     "level": 15,
     "hp": 970,
@@ -808,6 +838,7 @@
   },
   {
     "name": "Rooftop Lion",
+    "persona_name": "Shiisaa",
     "arcana": "Strength",
     "level": 15,
     "hp": 212,
@@ -834,6 +865,7 @@
   },
   {
     "name": "Shadow Nakanohara",
+    "persona_name": "Shadow Nakanohara",
     "arcana": "Fool",
     "level": 15,
     "hp": 650,
@@ -861,6 +893,7 @@
   },
   {
     "name": "Prankster Leader",
+    "persona_name": "High Pixie",
     "arcana": "Fool",
     "level": 16,
     "hp": 232,
@@ -889,6 +922,7 @@
   },
   {
     "name": "War-Hungry Horseman",
+    "persona_name": "Eligor",
     "arcana": "Emperor",
     "level": 16,
     "hp": 285,
@@ -916,6 +950,7 @@
   },
   {
     "name": "Shadow Takanashi",
+    "persona_name": "Shadow Takanashi",
     "arcana": "Magician",
     "level": 16,
     "hp": 650,
@@ -945,6 +980,7 @@
   },
   {
     "name": "Ascended Feline",
+    "persona_name": "Nekomata",
     "arcana": "Magician",
     "level": 17,
     "hp": 258,
@@ -972,6 +1008,7 @@
   },
   {
     "name": "Equine Sage",
+    "persona_name": "Orobas",
     "arcana": "Hierophant",
     "level": 17,
     "hp": 262,
@@ -1000,6 +1037,7 @@
   },
   {
     "name": "Noisy Mountain Spirit",
+    "persona_name": "Sudama",
     "arcana": "Hermit",
     "level": 17,
     "hp": 159,
@@ -1027,6 +1065,7 @@
   },
   {
     "name": "Bringer of Misfortune",
+    "persona_name": "Shiki-Ouji",
     "arcana": "Chariot",
     "level": 18,
     "hp": 617,
@@ -1054,6 +1093,7 @@
   },
   {
     "name": "Pulsing Mud",
+    "persona_name": "Black Ooze",
     "arcana": "Moon",
     "level": 18,
     "hp": 270,
@@ -1081,6 +1121,7 @@
   },
   {
     "name": "Shadow Madarame",
+    "persona_name": "Shadow Madarame",
     "arcana": "Vanity",
     "level": 18,
     "hp": 0,
@@ -1152,6 +1193,7 @@
   },
   {
     "name": "Jealous Lover",
+    "persona_name": "Leanan Sidhe",
     "arcana": "Lovers",
     "level": 19,
     "hp": 265,
@@ -1180,6 +1222,7 @@
   },
   {
     "name": "Chivalrous Fiend",
+    "persona_name": "Oni",
     "arcana": "Strength",
     "level": 20,
     "hp": 421,
@@ -1206,6 +1249,7 @@
   },
   {
     "name": "Human-Eating Lady",
+    "persona_name": "Yaksini",
     "arcana": "Empress",
     "level": 20,
     "hp": 262,
@@ -1232,6 +1276,7 @@
   },
   {
     "name": "Night Chimera",
+    "persona_name": "Nue",
     "arcana": "Death",
     "level": 20,
     "hp": 312,
@@ -1259,6 +1304,7 @@
   },
   {
     "name": "Stone of Scone D",
+    "persona_name": "Stone of Scone",
     "arcana": "Fortune",
     "level": 20,
     "hp": 1250,
@@ -1283,6 +1329,7 @@
   },
   {
     "name": "Twin-Headed Guardian",
+    "persona_name": "Orthrus",
     "arcana": "Hanged",
     "level": 21,
     "hp": 365,
@@ -1313,6 +1360,7 @@
   },
   {
     "name": "Shadow Sakoda",
+    "persona_name": "Shadow Sakoda",
     "arcana": "Fool",
     "level": 21,
     "hp": 600,
@@ -1340,6 +1388,7 @@
   },
   {
     "name": "Shadow Makigami",
+    "persona_name": "Shadow Makigami",
     "arcana": "Sun",
     "level": 22,
     "hp": 600,
@@ -1374,6 +1423,7 @@
   },
   {
     "name": "Shadow Shimizu",
+    "persona_name": "Shadow Shimizu",
     "arcana": "Empress",
     "level": 22,
     "hp": 800,
@@ -1402,6 +1452,7 @@
   },
   {
     "name": "Envoy of Slumber",
+    "persona_name": "Sandman",
     "arcana": "Magician",
     "level": 23,
     "hp": 373,
@@ -1428,6 +1479,7 @@
   },
   {
     "name": "Tornado Devil",
+    "persona_name": "Fuu-Ki",
     "arcana": "Star",
     "level": 23,
     "hp": 307,
@@ -1456,6 +1508,7 @@
   },
   {
     "name": "Shadow Odo",
+    "persona_name": "Shadow Odo",
     "arcana": "Emperor",
     "level": 23,
     "hp": 750,
@@ -1485,6 +1538,7 @@
   },
   {
     "name": "Shadow Oyamada",
+    "persona_name": "Shadow Oyamada",
     "arcana": "Emperor",
     "level": 23,
     "hp": 800,
@@ -1514,6 +1568,7 @@
   },
   {
     "name": "Battle Fiend",
+    "persona_name": "Rakshasa",
     "arcana": "Strength",
     "level": 24,
     "hp": 289,
@@ -1540,6 +1595,7 @@
   },
   {
     "name": "Cavern Snakeman",
+    "persona_name": "Naga",
     "arcana": "Hermit",
     "level": 24,
     "hp": 321,
@@ -1570,6 +1626,7 @@
   },
   {
     "name": "Raging Water Demon",
+    "persona_name": "Sui-Ki",
     "arcana": "Moon",
     "level": 24,
     "hp": 312,
@@ -1598,6 +1655,7 @@
   },
   {
     "name": "Koh-i-Noor D",
+    "persona_name": "Koh-i-Noor",
     "arcana": "Priestess",
     "level": 25,
     "hp": 1530,
@@ -1622,6 +1680,7 @@
   },
   {
     "name": "Samurai Killer",
+    "persona_name": "Kin-Ki",
     "arcana": "Chariot",
     "level": 25,
     "hp": 392,
@@ -1650,6 +1709,7 @@
   },
   {
     "name": "Thief of Tablets",
+    "persona_name": "Anzu",
     "arcana": "Hierophant",
     "level": 25,
     "hp": 281,
@@ -1678,6 +1738,7 @@
   },
   {
     "name": "Shadow Kaneshiro",
+    "persona_name": "Shadow Kaneshiro",
     "arcana": "Gluttony",
     "level": 25,
     "hp": 0,
@@ -1717,6 +1778,7 @@
   },
   {
     "name": "Defeated Avenger",
+    "persona_name": "Take-Minakata",
     "arcana": "Hanged",
     "level": 26,
     "hp": 760,
@@ -1747,6 +1809,7 @@
   },
   {
     "name": "She of Life and Death",
+    "persona_name": "Isis",
     "arcana": "Priestess",
     "level": 26,
     "hp": 464,
@@ -1775,6 +1838,7 @@
   },
   {
     "name": "Slithering Snakewoman",
+    "persona_name": "Lamia",
     "arcana": "Empress",
     "level": 26,
     "hp": 291,
@@ -1805,6 +1869,7 @@
   },
   {
     "name": "Menacing Owlman",
+    "persona_name": "Andras",
     "arcana": "Devil",
     "level": 27,
     "hp": 354,
@@ -1835,6 +1900,7 @@
   },
   {
     "name": "Corpse-Eating Corpse",
+    "persona_name": "Pisaca",
     "arcana": "Death",
     "level": 28,
     "hp": 315,
@@ -1863,6 +1929,7 @@
   },
   {
     "name": "Gathering Devil",
+    "persona_name": "Choronzon",
     "arcana": "Magician",
     "level": 28,
     "hp": 240,
@@ -1891,6 +1958,7 @@
   },
   {
     "name": "Orlov D",
+    "persona_name": "Orlov",
     "arcana": "Strength",
     "level": 30,
     "hp": 1650,
@@ -1915,6 +1983,7 @@
   },
   {
     "name": "Shadow Honjo",
+    "persona_name": "Shadow Honjo",
     "arcana": "Hanged",
     "level": 30,
     "hp": 1400,
@@ -1943,6 +2012,7 @@
   },
   {
     "name": "Shadow Takase F",
+    "persona_name": "Shadow Takase",
     "arcana": "Empress",
     "level": 30,
     "hp": 600,
@@ -1972,6 +2042,7 @@
   },
   {
     "name": "Monk of the Valley",
+    "persona_name": "Kurama Tengu",
     "arcana": "Hermit",
     "level": 31,
     "hp": 560,
@@ -2000,6 +2071,7 @@
   },
   {
     "name": "Shadow Takase M",
+    "persona_name": "Shadow Takase",
     "arcana": "Emperor",
     "level": 31,
     "hp": 800,
@@ -2029,6 +2101,7 @@
   },
   {
     "name": "Vicious Pentagram",
+    "persona_name": "Decarabia",
     "arcana": "Councillor",
     "level": 32,
     "hp": 249,
@@ -2057,6 +2130,7 @@
   },
   {
     "name": "Woman Who Brings Ruin",
+    "persona_name": "Lilim",
     "arcana": "Devil",
     "level": 32,
     "hp": 365,
@@ -2086,6 +2160,7 @@
   },
   {
     "name": "Shadow Naguri",
+    "persona_name": "Shadow Naguri",
     "arcana": "Chariot",
     "level": 32,
     "hp": 6000,
@@ -2115,6 +2190,7 @@
   },
   {
     "name": "Vampire Moth",
+    "persona_name": "Mothman",
     "arcana": "Moon",
     "level": 33,
     "hp": 354,
@@ -2143,6 +2219,7 @@
   },
   {
     "name": "Bearer of the Scales",
+    "persona_name": "Anubis",
     "arcana": "Judgement",
     "level": 34,
     "hp": 1621,
@@ -2172,6 +2249,7 @@
   },
   {
     "name": "Storm-Invoking Ptarmigan",
+    "persona_name": "Thunderbird",
     "arcana": "Sun",
     "level": 34,
     "hp": 370,
@@ -2200,6 +2278,7 @@
   },
   {
     "name": "Shadow Uchimura",
+    "persona_name": "Shadow Uchimura",
     "arcana": "Moon",
     "level": 34,
     "hp": 550,
@@ -2229,6 +2308,7 @@
   },
   {
     "name": "Cognitive Wakaba Isshiki",
+    "persona_name": "Cognitive Wakaba Isshiki",
     "arcana": "Wrath",
     "level": 34,
     "hp": 0,
@@ -2257,6 +2337,7 @@
   },
   {
     "name": "Awakened God",
+    "persona_name": "Arahabaki",
     "arcana": "Hermit",
     "level": 35,
     "hp": 420,
@@ -2285,6 +2366,7 @@
   },
   {
     "name": "Emperor's Amulet D",
+    "persona_name": "Emperor's Amulet",
     "arcana": "Hanged",
     "level": 35,
     "hp": 1990,
@@ -2309,6 +2391,7 @@
   },
   {
     "name": "Shadow Mogami",
+    "persona_name": "Shadow Mogami",
     "arcana": "Fool",
     "level": 35,
     "hp": 1300,
@@ -2339,6 +2422,7 @@
   },
   {
     "name": "Shadow Tsuboi",
+    "persona_name": "Shadow Tsuboi",
     "arcana": "Death",
     "level": 35,
     "hp": 2000,
@@ -2367,6 +2451,7 @@
   },
   {
     "name": "Chanting Baboon",
+    "persona_name": "Thoth",
     "arcana": "Emperor",
     "level": 36,
     "hp": 321,
@@ -2397,6 +2482,7 @@
   },
   {
     "name": "Wishless Star",
+    "persona_name": "Kaiwan",
     "arcana": "Star",
     "level": 36,
     "hp": 380,
@@ -2424,6 +2510,7 @@
   },
   {
     "name": "Ambassador of Filth",
+    "persona_name": "Belphegor",
     "arcana": "Tower",
     "level": 37,
     "hp": 548,
@@ -2453,6 +2540,7 @@
   },
   {
     "name": "Fused Ghost",
+    "persona_name": "Legion",
     "arcana": "Fool",
     "level": 38,
     "hp": 367,
@@ -2480,6 +2568,7 @@
   },
   {
     "name": "Dark Sun",
+    "persona_name": "Mithras",
     "arcana": "Sun",
     "level": 39,
     "hp": 455,
@@ -2508,6 +2597,7 @@
   },
   {
     "name": "Expressionless Beast",
+    "persona_name": "Unicorn",
     "arcana": "Faith",
     "level": 39,
     "hp": 495,
@@ -2535,6 +2625,7 @@
   },
   {
     "name": "Shadow Akitsu",
+    "persona_name": "Shadow Akitsu",
     "arcana": "Hierophant",
     "level": 39,
     "hp": 2550,
@@ -2567,6 +2658,7 @@
   },
   {
     "name": "Shadow Kishi",
+    "persona_name": "Shadow Kishi",
     "arcana": "Tower",
     "level": 39,
     "hp": 1000,
@@ -2600,6 +2692,7 @@
   },
   {
     "name": "Hope Diamond D",
+    "persona_name": "Hope Diamond",
     "arcana": "Death",
     "level": 40,
     "hp": 2300,
@@ -2624,6 +2717,7 @@
   },
   {
     "name": "Mountain Girl",
+    "persona_name": "Kikuri-Hime",
     "arcana": "Priestess",
     "level": 40,
     "hp": 445,
@@ -2652,6 +2746,7 @@
   },
   {
     "name": "Shadow Jochi",
+    "persona_name": "Shadow Jochi",
     "arcana": "Hermit",
     "level": 40,
     "hp": 1800,
@@ -2682,6 +2777,7 @@
   },
   {
     "name": "Shadow Tsuda",
+    "persona_name": "Shadow Tsuda",
     "arcana": "Devil",
     "level": 40,
     "hp": 600,
@@ -2711,6 +2807,7 @@
   },
   {
     "name": "Divine Warrior",
+    "persona_name": "Power",
     "arcana": "Justice",
     "level": 41,
     "hp": 307,
@@ -2739,6 +2836,7 @@
   },
   {
     "name": "Cruel Leopard",
+    "persona_name": "Ose",
     "arcana": "Fool",
     "level": 42,
     "hp": 393,
@@ -2768,6 +2866,7 @@
   },
   {
     "name": "Lamenting Sacrifice",
+    "persona_name": "Kushinada",
     "arcana": "Lovers",
     "level": 42,
     "hp": 374,
@@ -2797,6 +2896,7 @@
   },
   {
     "name": "Life-Draining Spirit",
+    "persona_name": "Kumbhanda",
     "arcana": "Hermit",
     "level": 42,
     "hp": 418,
@@ -2825,6 +2925,7 @@
   },
   {
     "name": "Midnight Queen",
+    "persona_name": "Queen Mab",
     "arcana": "Magician",
     "level": 43,
     "hp": 392,
@@ -2854,6 +2955,7 @@
   },
   {
     "name": "Rebellious Elephant",
+    "persona_name": "Girimehkala",
     "arcana": "Moon",
     "level": 43,
     "hp": 1623,
@@ -2884,6 +2986,7 @@
   },
   {
     "name": "Shadow Okumura",
+    "persona_name": "Shadow Okumura",
     "arcana": "Greed",
     "level": 43,
     "hp": 0,
@@ -2934,6 +3037,7 @@
   },
   {
     "name": "Funerary Warrior",
+    "persona_name": "Valkyrie",
     "arcana": "Strength",
     "level": 44,
     "hp": 524,
@@ -2963,6 +3067,7 @@
   },
   {
     "name": "Shadow Nejima",
+    "persona_name": "Shadow Nejima",
     "arcana": "Fool",
     "level": 45,
     "hp": 1800,
@@ -2992,6 +3097,7 @@
   },
   {
     "name": "Shadow Fukurai",
+    "persona_name": "Shadow Fukurai",
     "arcana": "Devil",
     "level": 47,
     "hp": 1500,
@@ -3023,6 +3129,7 @@
   },
   {
     "name": "Shadow Magario F",
+    "persona_name": "Shadow Magario",
     "arcana": "Devil",
     "level": 47,
     "hp": 900,
@@ -3052,6 +3159,7 @@
   },
   {
     "name": "Dancing Witch",
+    "persona_name": "Rangda",
     "arcana": "Magician",
     "level": 48,
     "hp": 422,
@@ -3079,6 +3187,7 @@
   },
   {
     "name": "Self-Infatuated Star",
+    "persona_name": "Narcissus",
     "arcana": "Lovers",
     "level": 48,
     "hp": 465,
@@ -3105,6 +3214,7 @@
   },
   {
     "name": "Shadow Magario M",
+    "persona_name": "Shadow Magario",
     "arcana": "Justice",
     "level": 48,
     "hp": 1100,
@@ -3135,6 +3245,7 @@
   },
   {
     "name": "Shadow Togo",
+    "persona_name": "Shadow Togo",
     "arcana": "Devil",
     "level": 48,
     "hp": 1700,
@@ -3176,6 +3287,7 @@
   },
   {
     "name": "Bloodthirsty Demoness",
+    "persona_name": "Dakini",
     "arcana": "Empress",
     "level": 50,
     "hp": 442,
@@ -3203,6 +3315,7 @@
   },
   {
     "name": "Crystal Skull D",
+    "persona_name": "Crystal Skull",
     "arcana": "Fool",
     "level": 50,
     "hp": 2450,
@@ -3227,6 +3340,7 @@
   },
   {
     "name": "Strumming Veena Player",
+    "persona_name": "Sarasvati",
     "arcana": "Priestess",
     "level": 50,
     "hp": 445,
@@ -3256,6 +3370,7 @@
   },
   {
     "name": "Shadow Isshiki",
+    "persona_name": "Shadow Isshiki",
     "arcana": "Moon",
     "level": 50,
     "hp": 3000,
@@ -3285,6 +3400,7 @@
   },
   {
     "name": "Shadow Kiritani",
+    "persona_name": "Shadow Kiritani",
     "arcana": "Strength",
     "level": 50,
     "hp": 3000,
@@ -3315,6 +3431,7 @@
   },
   {
     "name": "Arrogant Vulture",
+    "persona_name": "Jatayu",
     "arcana": "Hanged",
     "level": 51,
     "hp": 629,
@@ -3344,6 +3461,7 @@
   },
   {
     "name": "Dancing Lion",
+    "persona_name": "Barong",
     "arcana": "Emperor",
     "level": 52,
     "hp": 625,
@@ -3374,6 +3492,7 @@
   },
   {
     "name": "Final Assessor",
+    "persona_name": "Norn",
     "arcana": "Fortune",
     "level": 52,
     "hp": 738,
@@ -3402,6 +3521,7 @@
   },
   {
     "name": "Raging Bird God",
+    "persona_name": "Garuda",
     "arcana": "Star",
     "level": 52,
     "hp": 504,
@@ -3431,6 +3551,7 @@
   },
   {
     "name": "Auspicious Pachyderm",
+    "persona_name": "Ganesha",
     "arcana": "Sun",
     "level": 53,
     "hp": 836,
@@ -3460,6 +3581,7 @@
   },
   {
     "name": "Quaking Lady of Shadow",
+    "persona_name": "Skadi",
     "arcana": "Priestess",
     "level": 53,
     "hp": 1290,
@@ -3492,6 +3614,7 @@
   },
   {
     "name": "Shadow Sae Niijima",
+    "persona_name": "Shadow Sae Niijima",
     "arcana": "Envy",
     "level": 54,
     "hp": 0,
@@ -3521,6 +3644,7 @@
   },
   {
     "name": "Guard Dog of Hades",
+    "persona_name": "Cerberus",
     "arcana": "Chariot",
     "level": 55,
     "hp": 736,
@@ -3551,6 +3675,7 @@
   },
   {
     "name": "Destructive Beauty",
+    "persona_name": "Parvati",
     "arcana": "Lovers",
     "level": 56,
     "hp": 432,
@@ -3581,6 +3706,7 @@
   },
   {
     "name": "Scandalous Queen",
+    "persona_name": "Titania",
     "arcana": "Empress",
     "level": 56,
     "hp": 740,
@@ -3609,6 +3735,7 @@
   },
   {
     "name": "Heretic Goat",
+    "persona_name": "Baphomet",
     "arcana": "Devil",
     "level": 58,
     "hp": 666,
@@ -3640,6 +3767,7 @@
   },
   {
     "name": "Pagan Savior",
+    "persona_name": "Melchizedek",
     "arcana": "Justice",
     "level": 58,
     "hp": 718,
@@ -3669,6 +3797,7 @@
   },
   {
     "name": "Harlot of Desire",
+    "persona_name": "Lilith",
     "arcana": "Moon",
     "level": 60,
     "hp": 650,
@@ -3699,6 +3828,7 @@
   },
   {
     "name": "Orichalcum D",
+    "persona_name": "Orichalcum",
     "arcana": "Faith",
     "level": 60,
     "hp": 2620,
@@ -3723,6 +3853,7 @@
   },
   {
     "name": "Sacrificial Pyrekeeper",
+    "persona_name": "Moloch",
     "arcana": "Hanged",
     "level": 60,
     "hp": 751,
@@ -3752,6 +3883,7 @@
   },
   {
     "name": "Torn King of Desire",
+    "persona_name": "Mara",
     "arcana": "Tower",
     "level": 60,
     "hp": 530,
@@ -3782,6 +3914,7 @@
   },
   {
     "name": "Shadow Wakasa",
+    "persona_name": "Shadow Wakasa",
     "arcana": "Death",
     "level": 60,
     "hp": 1700,
@@ -3812,6 +3945,7 @@
   },
   {
     "name": "Monarch of Snow",
+    "persona_name": "King Frost",
     "arcana": "Emperor",
     "level": 61,
     "hp": 893,
@@ -3843,6 +3977,7 @@
   },
   {
     "name": "The Black Avenger",
+    "persona_name": "Chernobog",
     "arcana": "Death",
     "level": 62,
     "hp": 750,
@@ -3872,6 +4007,7 @@
   },
   {
     "name": "Shadow Oda",
+    "persona_name": "Shadow Oda",
     "arcana": "Empress",
     "level": 62,
     "hp": 3500,
@@ -3904,6 +4040,7 @@
   },
   {
     "name": "Rhetorician of the Sea",
+    "persona_name": "Forneus",
     "arcana": "Magician",
     "level": 63,
     "hp": 670,
@@ -3933,6 +4070,7 @@
   },
   {
     "name": "The Blackened Fury",
+    "persona_name": "Kali",
     "arcana": "Empress",
     "level": 63,
     "hp": 1773,
@@ -3964,6 +4102,7 @@
   },
   {
     "name": "Shadow Shido",
+    "persona_name": "Shadow Shido",
     "arcana": "Pride",
     "level": 63,
     "hp": 0,
@@ -4024,6 +4163,7 @@
   },
   {
     "name": "Drunken Serpents",
+    "persona_name": "Yamata-no-Orochi",
     "arcana": "Judgement",
     "level": 64,
     "hp": 1193,
@@ -4054,6 +4194,7 @@
   },
   {
     "name": "Nimble Monkey King",
+    "persona_name": "Hanuman",
     "arcana": "Strength",
     "level": 64,
     "hp": 332,
@@ -4083,6 +4224,7 @@
   },
   {
     "name": "Thunder Emperor",
+    "persona_name": "Thor",
     "arcana": "Chariot",
     "level": 64,
     "hp": 1033,
@@ -4114,6 +4256,7 @@
   },
   {
     "name": "Infuriated Wisdom King",
+    "persona_name": "Atavaka",
     "arcana": "Faith",
     "level": 65,
     "hp": 760,
@@ -4145,6 +4288,7 @@
   },
   {
     "name": "Killer Teddy Bear",
+    "persona_name": "Bugs",
     "arcana": "Fool",
     "level": 65,
     "hp": 404,
@@ -4171,6 +4315,7 @@
   },
   {
     "name": "Unfaithful Dream-King",
+    "persona_name": "Oberon",
     "arcana": "Emperor",
     "level": 66,
     "hp": 894,
@@ -4200,6 +4345,7 @@
   },
   {
     "name": "Merciless Inquisitor",
+    "persona_name": "Dominion",
     "arcana": "Justice",
     "level": 68,
     "hp": 600,
@@ -4228,6 +4374,7 @@
   },
   {
     "name": "Dream-Dwelling Skull",
+    "persona_name": "Loa",
     "arcana": "Hermit",
     "level": 70,
     "hp": 404,
@@ -4258,6 +4405,7 @@
   },
   {
     "name": "Evil Synthetic Organism",
+    "persona_name": "Byakhee",
     "arcana": "Moon",
     "level": 70,
     "hp": 558,
@@ -4288,6 +4436,7 @@
   },
   {
     "name": "Hedonistic Braggart",
+    "persona_name": "Dionysus",
     "arcana": "Councillor",
     "level": 71,
     "hp": 708,
@@ -4317,6 +4466,7 @@
   },
   {
     "name": "Coffin-Borne God",
+    "persona_name": "Mot",
     "arcana": "Death",
     "level": 72,
     "hp": 1100,
@@ -4346,6 +4496,7 @@
   },
   {
     "name": "Fire Assassin",
+    "persona_name": "Throne",
     "arcana": "Justice",
     "level": 72,
     "hp": 757,
@@ -4375,6 +4526,7 @@
   },
   {
     "name": "Dancer of Death",
+    "persona_name": "Macabre",
     "arcana": "Hanged",
     "level": 73,
     "hp": 593,
@@ -4405,6 +4557,7 @@
   },
   {
     "name": "Throbbing King of Desire",
+    "persona_name": "Mara",
     "arcana": "Tower",
     "level": 73,
     "hp": 1840,
@@ -4435,6 +4588,7 @@
   },
   {
     "name": "Deformed Lion God",
+    "persona_name": "Chimera",
     "arcana": "Strength",
     "level": 74,
     "hp": 727,
@@ -4466,6 +4620,7 @@
   },
   {
     "name": "Wandering Reviver",
+    "persona_name": "Nebiros",
     "arcana": "Devil",
     "level": 74,
     "hp": 532,
@@ -4495,6 +4650,7 @@
   },
   {
     "name": "Abyssal King of Avarice",
+    "persona_name": "Abaddon",
     "arcana": "Judgement",
     "level": 75,
     "hp": 7000,
@@ -4528,6 +4684,7 @@
   },
   {
     "name": "Yaldabaoth",
+    "persona_name": "Yaldabaoth",
     "arcana": "Hope",
     "level": 75,
     "hp": 0,
@@ -4605,6 +4762,7 @@
   },
   {
     "name": "Spear-Wielding General",
+    "persona_name": "Cu Chulainn",
     "arcana": "Faith",
     "level": 76,
     "hp": 1021,
@@ -4634,6 +4792,7 @@
   },
   {
     "name": "The Shadowed One",
+    "persona_name": "Scathach",
     "arcana": "Priestess",
     "level": 77,
     "hp": 1346,
@@ -4664,6 +4823,7 @@
   },
   {
     "name": "Decadent False God",
+    "persona_name": "Alilat",
     "arcana": "Empress",
     "level": 81,
     "hp": 1700,
@@ -4694,6 +4854,7 @@
   },
   {
     "name": "Missionary of Depravity",
+    "persona_name": "Belial",
     "arcana": "Devil",
     "level": 82,
     "hp": 1200,
@@ -4725,6 +4886,7 @@
   },
   {
     "name": "Reviled Dictator",
+    "persona_name": "Baal",
     "arcana": "Emperor",
     "level": 82,
     "hp": 1026,
@@ -4753,6 +4915,7 @@
   },
   {
     "name": "Warped Abyss",
+    "persona_name": "Hastur",
     "arcana": "Star",
     "level": 84,
     "hp": 1294,
@@ -4785,6 +4948,7 @@
   },
   {
     "name": "Evil Voracious Dragon",
+    "persona_name": "Fafnir",
     "arcana": "Hermit",
     "level": 86,
     "hp": 2006,
@@ -4817,6 +4981,7 @@
   },
   {
     "name": "Takuto Maruki",
+    "persona_name": "Takuto Maruki",
     "arcana": "Councillor",
     "level": 90,
     "hp": 0,
@@ -4877,6 +5042,7 @@
   },
   {
     "name": "Shadow Asakura",
+    "persona_name": "Shadow Asakura",
     "arcana": "Priestess",
     "level": 99,
     "hp": 3500,
@@ -4909,6 +5075,7 @@
   },
   {
     "name": "Justine & Caroline",
+    "persona_name": "Justine & Caroline",
     "arcana": "Strength",
     "level": 99,
     "hp": 0,
@@ -4949,6 +5116,7 @@
   },
   {
     "name": "Lavenza",
+    "persona_name": "Lavenza",
     "arcana": "Strength",
     "level": 99,
     "hp": 10000,

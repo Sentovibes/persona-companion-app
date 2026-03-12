@@ -38,7 +38,10 @@ class MainActivity : ComponentActivity() {
         
         enableEdgeToEdge()
         setContent {
-            PersonaCompanionTheme {
+            val userPrefs = remember { com.persona.companion.data.UserPreferences(this) }
+            val isDarkMode by remember { mutableStateOf(userPrefs.isDarkMode()) }
+            
+            PersonaCompanionTheme(darkTheme = isDarkMode) {
                 var showDebugOverlay by remember { mutableStateOf(false) }
                 var lastError by remember { mutableStateOf<Throwable?>(null) }
                 

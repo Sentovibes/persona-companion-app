@@ -78,12 +78,6 @@ object SeriesData {
                     title = "Persona 5 Royal",
                     dataPath = "data/persona5/royal_personas.json",
                     enemyPath = "data/enemies/p5r_enemies.json"
-                ),
-                Game(
-                    id = "p5s",
-                    title = "Persona 5 Strikers",
-                    dataPath = "data/persona5/personas.json",
-                    enemyPath = "data/enemies/p5s_enemies.json"
                 )
             )
         )

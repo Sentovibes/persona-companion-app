@@ -156,162 +156,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Glorious Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Empyrean A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Luxury Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Judecca A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Opulent Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Ptolomea A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Supreme Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Antenora A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Treasure Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Caina A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Wealth Hand",
-    "arcana": "Magician",
-    "level": 1,
-    "hp": 100,
-    "sp": 100,
-    "stats": {
-      "strength": 1,
-      "magic": 1,
-      "endurance": 1,
-      "agility": 99,
-      "luck": 99
-    },
-    "resists": "rrrrrrrnnr",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Malebolge A",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Cowardly Maya",
     "arcana": "Magician",
     "level": 2,
@@ -1474,35 +1318,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Spurious Book",
-    "arcana": "Priestess",
-    "level": 25,
-    "hp": 182,
-    "sp": 112,
-    "stats": {
-      "strength": 10,
-      "magic": 23,
-      "endurance": 14,
-      "agility": 19,
-      "luck": 16
-    },
-    "resists": "---d-wn---",
-    "skills": [
-      "Pierce Attack",
-      "Agi",
-      "Maragi",
-      "Fire Boost"
-    ],
-    "area": "Malebolge 1",
-    "exp": 338,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Lovers",
     "arcana": "Lovers",
     "level": 25,
@@ -1875,35 +1690,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Magic Hand",
-    "arcana": "Magician",
-    "level": 28,
-    "hp": 214,
-    "sp": 105,
-    "stats": {
-      "strength": 13,
-      "magic": 24,
-      "endurance": 16,
-      "agility": 17,
-      "luck": 18
-    },
-    "resists": "---wn--r--",
-    "skills": [
-      "Strike Attack",
-      "Bufula",
-      "Mabufu",
-      "Rakunda"
-    ],
-    "area": "Malebolge 2",
-    "exp": 450,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Furious Gigas B",
     "arcana": "Strength P",
     "level": 29,
@@ -1989,35 +1775,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Vicious Raven",
-    "arcana": "Hermit",
-    "level": 29,
-    "hp": 224,
-    "sp": 108,
-    "stats": {
-      "strength": 17,
-      "magic": 19,
-      "endurance": 16,
-      "agility": 23,
-      "luck": 16
-    },
-    "resists": "--dnw-s---",
-    "skills": [
-      "Pierce Attack",
-      "Agilao",
-      "Maragi",
-      "Double Fangs"
-    ],
-    "area": "Malebolge 2",
-    "exp": 450,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Visceral Maya B",
     "arcana": "Strength P",
     "level": 29,
@@ -2047,34 +1804,6 @@
     ],
     "area": "Malebolge 8",
     "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Wild Beast",
-    "arcana": "Strength",
-    "level": 29,
-    "hp": 241,
-    "sp": 115,
-    "stats": {
-      "strength": 20,
-      "magic": 10,
-      "endurance": 24,
-      "agility": 18,
-      "luck": 15
-    },
-    "resists": "-ssw--nww-",
-    "skills": [
-      "Strike Attack",
-      "Kill Rush",
-      "Tarukaja"
-    ],
-    "area": "Malebolge 1",
-    "exp": 450,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -2172,38 +1901,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Sky Balance",
-    "arcana": "Justice",
-    "level": 30,
-    "hp": 253,
-    "sp": 105,
-    "stats": {
-      "strength": 10,
-      "magic": 22,
-      "endurance": 16,
-      "agility": 19,
-      "luck": 21
-    },
-    "resists": "---wwrr---",
-    "skills": [
-      "Pierce Attack",
-      "Zionga",
-      "Mazio",
-      "Garula",
-      "Magaru",
-      "Elec Boost",
-      "Wind Boost"
-    ],
-    "area": "Malebolge 2",
-    "exp": 450,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Stoic Snake",
     "arcana": "Lovers",
     "level": 30,
@@ -2226,95 +1923,6 @@
     ],
     "area": "Malebolge 1B",
     "exp": 520,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Creation Relic",
-    "arcana": "Empress",
-    "level": 31,
-    "hp": 235,
-    "sp": 108,
-    "stats": {
-      "strength": 17,
-      "magic": 24,
-      "endurance": 21,
-      "agility": 10,
-      "luck": 19
-    },
-    "resists": "-r-n--rnw-",
-    "skills": [
-      "Pierce Attack",
-      "Magarula",
-      "Twin Shot",
-      "Diarama"
-    ],
-    "area": "Malebolge 2",
-    "exp": 500,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Muttering Tiara",
-    "arcana": "Priestess",
-    "level": 31,
-    "hp": 223,
-    "sp": 127,
-    "stats": {
-      "strength": 19,
-      "magic": 21,
-      "endurance": 19,
-      "agility": 18,
-      "luck": 19
-    },
-    "resists": "---dw-s---",
-    "skills": [
-      "Strike Attack",
-      "Agilao",
-      "Maragi",
-      "Matarukaja"
-    ],
-    "area": "Cocytus 1",
-    "exp": 387,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Obsessed Cupid",
-    "arcana": "Lovers",
-    "level": 31,
-    "hp": 223,
-    "sp": 127,
-    "stats": {
-      "strength": 18,
-      "magic": 21,
-      "endurance": 19,
-      "agility": 22,
-      "luck": 20
-    },
-    "resists": "----w-sn--",
-    "skills": [
-      "Pierce Attack",
-      "Garula",
-      "Marin Karin",
-      "Media",
-      "Holy Arrow",
-      "Charm Boost"
-    ],
-    "area": "Cocytus 1",
-    "exp": 483,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -2361,152 +1969,6 @@
         ]
       }
     ]
-  },
-  {
-    "name": "Insidious Maya",
-    "arcana": "Lovers",
-    "level": 32,
-    "hp": 208,
-    "sp": 102,
-    "stats": {
-      "strength": 18,
-      "magic": 22,
-      "endurance": 19,
-      "agility": 19,
-      "luck": 25
-    },
-    "resists": "----w-s---",
-    "skills": [
-      "Slash Attack",
-      "Eerie Sound",
-      "Life Drain",
-      "Diarama"
-    ],
-    "area": "Yabbashah II 90-113",
-    "exp": 206,
-    "drops": {
-      "gem": "Amethyst",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Justice Sword",
-    "arcana": "Justice",
-    "level": 32,
-    "hp": 240,
-    "sp": 118,
-    "stats": {
-      "strength": 34,
-      "magic": 18,
-      "endurance": 15,
-      "agility": 14,
-      "luck": 22
-    },
-    "resists": "-----sw---",
-    "skills": [
-      "Slash Attack",
-      "Mighty Swing",
-      "Zionga"
-    ],
-    "area": "Yabbashah II 90-113",
-    "exp": 343,
-    "drops": {
-      "gem": "Onyx",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Laughing Table",
-    "arcana": "Magician",
-    "level": 32,
-    "hp": 228,
-    "sp": 130,
-    "stats": {
-      "strength": 23,
-      "magic": 26,
-      "endurance": 22,
-      "agility": 17,
-      "luck": 15
-    },
-    "resists": "r--wn-----",
-    "skills": [
-      "Strike Attack",
-      "Bufula",
-      "Mabufula",
-      "Ice Break"
-    ],
-    "area": "Cocytus 1",
-    "exp": 444,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Trance Twins",
-    "arcana": "Hierophant",
-    "level": 32,
-    "hp": 228,
-    "sp": 130,
-    "stats": {
-      "strength": 19,
-      "magic": 24,
-      "endurance": 21,
-      "agility": 19,
-      "luck": 20
-    },
-    "resists": "---w-n-nw-",
-    "skills": [
-      "Strike Attack",
-      "Zionga",
-      "Mazio",
-      "Eerie Sound",
-      "Distress Boost"
-    ],
-    "area": "Cocytus 1",
-    "exp": 644,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Venus Eagle",
-    "arcana": "Empress",
-    "level": 32,
-    "hp": 240,
-    "sp": 118,
-    "stats": {
-      "strength": 23,
-      "magic": 19,
-      "endurance": 18,
-      "agility": 25,
-      "luck": 18
-    },
-    "resists": "---sw-r---",
-    "skills": [
-      "Slash Attack",
-      "Garula",
-      "Magarula",
-      "Diarama",
-      "Dodge Pierce"
-    ],
-    "area": "Cocytus 1",
-    "exp": 644,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Ice Raven",
@@ -2812,99 +2274,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Avenger Knight",
-    "arcana": "Emperor",
-    "level": 35,
-    "hp": 1081,
-    "sp": 225,
-    "stats": {
-      "strength": 25,
-      "magic": 22,
-      "endurance": 24,
-      "agility": 26,
-      "luck": 15
-    },
-    "resists": "--r--d-nr-",
-    "skills": [
-      "Pierce Attack",
-      "Mazionga",
-      "Kill Rush",
-      "Swift Strike",
-      "Elec Boost"
-    ],
-    "area": "Cocytus 1B",
-    "exp": 2000,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Dancing Hand",
-    "arcana": "Magician",
-    "level": 35,
-    "hp": 242,
-    "sp": 138,
-    "stats": {
-      "strength": 20,
-      "magic": 29,
-      "endurance": 18,
-      "agility": 22,
-      "luck": 23
-    },
-    "resists": "---wn-s---",
-    "skills": [
-      "Strike Attack",
-      "Bufula",
-      "Mabufula",
-      "Pulinpa",
-      "Tentarafoo",
-      "Spirit Drain"
-    ],
-    "area": "Cocytus 2",
-    "exp": 644,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Maniacal Book",
-    "arcana": "Priestess",
-    "level": 35,
-    "hp": 242,
-    "sp": 138,
-    "stats": {
-      "strength": 20,
-      "magic": 27,
-      "endurance": 21,
-      "agility": 20,
-      "luck": 24
-    },
-    "resists": "---d--rnw-",
-    "skills": [
-      "Pierce Attack",
-      "Hama",
-      "Garula",
-      "Magarula",
-      "Provoke",
-      "Evil Touch",
-      "Fear Boost"
-    ],
-    "area": "Cocytus 2",
-    "exp": 644,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Soul Dancer B",
     "arcana": "Lovers P",
     "level": 35,
@@ -2925,35 +2294,6 @@
     ],
     "area": "Cocytus 9",
     "exp": 54,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Steel Gigas",
-    "arcana": "Strength",
-    "level": 35,
-    "hp": 300,
-    "sp": 114,
-    "stats": {
-      "strength": 31,
-      "magic": 15,
-      "endurance": 29,
-      "agility": 18,
-      "luck": 19
-    },
-    "resists": "---d-nw---",
-    "skills": [
-      "Strike Attack",
-      "Kill Rush",
-      "Swift Strike",
-      "Dodge Wind"
-    ],
-    "area": "Cocytus 2",
-    "exp": 644,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -3050,68 +2390,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Heat Balance",
-    "arcana": "Justice",
-    "level": 36,
-    "hp": 286,
-    "sp": 121,
-    "stats": {
-      "strength": 23,
-      "magic": 29,
-      "endurance": 21,
-      "agility": 22,
-      "luck": 20
-    },
-    "resists": "s--ddww---",
-    "skills": [
-      "Pierce Attack",
-      "Agilao",
-      "Maragion",
-      "Bufula",
-      "Mabufula",
-      "Dodge Elec"
-    ],
-    "area": "Cocytus 2",
-    "exp": 483,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Jealous Cupid",
-    "arcana": "Lovers",
-    "level": 36,
-    "hp": 260,
-    "sp": 127,
-    "stats": {
-      "strength": 20,
-      "magic": 25,
-      "endurance": 21,
-      "agility": 25,
-      "luck": 24
-    },
-    "resists": "----w-n---",
-    "skills": [
-      "Pierce Attack",
-      "Holy Arrow",
-      "Spirit Drain",
-      "Sukunda",
-      "Charm Boost",
-      "Dodge Ice"
-    ],
-    "area": "Caina 1",
-    "exp": 389,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Minotaur IV",
     "arcana": "Hanged",
     "level": 37,
@@ -3173,96 +2451,6 @@
     },
     "isBoss": false,
     "isMiniBoss": true
-  },
-  {
-    "name": "Dogmatic Tower",
-    "arcana": "Hierophant",
-    "level": 37,
-    "hp": 265,
-    "sp": 130,
-    "stats": {
-      "strength": 25,
-      "magic": 29,
-      "endurance": 19,
-      "agility": 22,
-      "luck": 23
-    },
-    "resists": "s--n-nwn--",
-    "skills": [
-      "Pierce Attack",
-      "Zionga",
-      "Mazio",
-      "Hama",
-      "Elec Boost"
-    ],
-    "area": "Cocytus 2",
-    "exp": 644,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Furious Gigas",
-    "arcana": "Strength",
-    "level": 37,
-    "hp": 265,
-    "sp": 130,
-    "stats": {
-      "strength": 24,
-      "magic": 17,
-      "endurance": 32,
-      "agility": 24,
-      "luck": 21
-    },
-    "resists": "-r-swsnw--",
-    "skills": [
-      "Strike Attack",
-      "Kill Rush",
-      "Cruel Attack",
-      "Tarukaja"
-    ],
-    "area": "Caina 1",
-    "exp": 649,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Soul Dancer",
-    "arcana": "Lovers",
-    "level": 37,
-    "hp": 265,
-    "sp": 130,
-    "stats": {
-      "strength": 28,
-      "magic": 27,
-      "endurance": 20,
-      "agility": 18,
-      "luck": 25
-    },
-    "resists": "----d-n---",
-    "skills": [
-      "Pierce Attack",
-      "Twin Shot",
-      "Getsu-ei",
-      "Swift Strike",
-      "Bewilder",
-      "Marin Karin"
-    ],
-    "area": "Caina 1",
-    "exp": 649,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Jotun of Power",
@@ -3477,93 +2665,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Constancy Relic",
-    "arcana": "Empress",
-    "level": 39,
-    "hp": 252,
-    "sp": 143,
-    "stats": {
-      "strength": 21,
-      "magic": 31,
-      "endurance": 32,
-      "agility": 15,
-      "luck": 19
-    },
-    "resists": "---w--n---",
-    "skills": [
-      "Pierce Attack",
-      "Media",
-      "Garudyne",
-      "Rakukaja",
-      "Re Patra"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 590,
-    "drops": {
-      "gem": "Turquoise",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Ill-fated Maya",
-    "arcana": "Chariot",
-    "level": 39,
-    "hp": 279,
-    "sp": 137,
-    "stats": {
-      "strength": 30,
-      "magic": 16,
-      "endurance": 31,
-      "agility": 19,
-      "luck": 22
-    },
-    "resists": "-s---ww---",
-    "skills": [
-      "Slash Attack",
-      "Assault Dive",
-      "Swift Strike"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 354,
-    "drops": {
-      "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Bronze Dice",
-    "arcana": "Fortune",
-    "level": 39,
-    "hp": 301,
-    "sp": 128,
-    "stats": {
-      "strength": 30,
-      "magic": 17,
-      "endurance": 27,
-      "agility": 21,
-      "luck": 29
-    },
-    "resists": "-n-w------",
-    "skills": [
-      "Strike Attack",
-      "Power Slash",
-      "Kill Rush",
-      "Fatal End"
-    ],
-    "area": "Caina 2",
-    "exp": 649,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Champion Knight",
     "arcana": "Emperor",
     "level": 39,
@@ -3611,64 +2712,6 @@
     "exp": 0,
     "version": "Vanilla / FES / Portable",
     "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Blue Sigil",
-    "arcana": "Hierophant",
-    "level": 40,
-    "hp": 260,
-    "sp": 148,
-    "stats": {
-      "strength": 25,
-      "magic": 33,
-      "endurance": 28,
-      "agility": 20,
-      "luck": 18
-    },
-    "resists": "----d---w-",
-    "skills": [
-      "Slash Attack",
-      "Bufudyne",
-      "Mabufula",
-      "Bewilder"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 767,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Champion Knight",
-    "arcana": "Emperor",
-    "level": 40,
-    "hp": 269,
-    "sp": 132,
-    "stats": {
-      "strength": 28,
-      "magic": 28,
-      "endurance": 27,
-      "agility": 22,
-      "luck": 16
-    },
-    "resists": "sss--dw---",
-    "skills": [
-      "Pierce Attack",
-      "Heat Wave",
-      "Sukunda",
-      "Zionga"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 590,
-    "drops": {
-      "gem": "Garnet",
-      "item": "-"
-    },
-    "isBoss": false,
     "isMiniBoss": false
   },
   {
@@ -3765,65 +2808,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Enslaved Beast",
-    "arcana": "Strength",
-    "level": 40,
-    "hp": 340,
-    "sp": 144,
-    "stats": {
-      "strength": 39,
-      "magic": 26,
-      "endurance": 35,
-      "agility": 28,
-      "luck": 20
-    },
-    "resists": "-d-nw-----",
-    "skills": [
-      "Strike Attack",
-      "Swift Strike",
-      "Maragion",
-      "Tarukaja",
-      "Dodge Ice"
-    ],
-    "area": "Antenora 1",
-    "exp": 661,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Jotun of Power",
-    "arcana": "Hanged",
-    "level": 40,
-    "hp": 779,
-    "sp": 137,
-    "stats": {
-      "strength": 46,
-      "magic": 20,
-      "endurance": 38,
-      "agility": 14,
-      "luck": 9
-    },
-    "resists": "----d--s--",
-    "skills": [
-      "Strike Attack",
-      "Mabufula",
-      "Swift Strike",
-      "Power Charge"
-    ],
-    "area": "Caina 1",
-    "exp": 1946,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Merciless Maya B",
     "arcana": "Priestess P",
     "level": 40,
@@ -3909,65 +2893,6 @@
     },
     "isBoss": false,
     "isMiniBoss": true
-  },
-  {
-    "name": "Tranquil Idol",
-    "arcana": "Priestess",
-    "level": 41,
-    "hp": 247,
-    "sp": 140,
-    "stats": {
-      "strength": 19,
-      "magic": 37,
-      "endurance": 17,
-      "agility": 18,
-      "luck": 24
-    },
-    "resists": "---n---rw-",
-    "skills": [
-      "Pierce Attack",
-      "Twin Shot",
-      "Marakukaja",
-      "Hama",
-      "Hamaon"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 590,
-    "drops": {
-      "gem": "Amethyst",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Mach Wheel",
-    "arcana": "Chariot",
-    "level": 41,
-    "hp": 283,
-    "sp": 139,
-    "stats": {
-      "strength": 36,
-      "magic": 18,
-      "endurance": 34,
-      "agility": 22,
-      "luck": 20
-    },
-    "resists": "n-ns-nw---",
-    "skills": [
-      "Strike Attack",
-      "Twin Shot",
-      "Last Resort",
-      "Dodge Wind"
-    ],
-    "area": "Caina 2",
-    "exp": 649,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Royal Dancer",
@@ -4058,64 +2983,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Wild Drive",
-    "arcana": "Chariot",
-    "level": 42,
-    "hp": 288,
-    "sp": 141,
-    "stats": {
-      "strength": 40,
-      "magic": 12,
-      "endurance": 38,
-      "agility": 31,
-      "luck": 12
-    },
-    "resists": "sss--w----",
-    "skills": [
-      "Slash Attack",
-      "Herculean Strike",
-      "Gale Slash",
-      "Rakukaja"
-    ],
-    "area": "Caina 2",
-    "exp": 649,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Elegant Mother",
-    "arcana": "Empress",
-    "level": 43,
-    "hp": 252,
-    "sp": 143,
-    "stats": {
-      "strength": 30,
-      "magic": 34,
-      "endurance": 24,
-      "agility": 18,
-      "luck": 21
-    },
-    "resists": "----swn-w-",
-    "skills": [
-      "Strike Attack",
-      "Media",
-      "Magarula",
-      "Mabufula"
-    ],
-    "area": "Tziah I 126-138",
-    "exp": 590,
-    "drops": {
-      "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Magical Magus",
     "arcana": "Magician",
     "level": 43,
@@ -4172,65 +3039,6 @@
     },
     "isBoss": false,
     "isMiniBoss": true
-  },
-  {
-    "name": "Black Raven",
-    "arcana": "Hermit",
-    "level": 43,
-    "hp": 292,
-    "sp": 144,
-    "stats": {
-      "strength": 28,
-      "magic": 26,
-      "endurance": 25,
-      "agility": 33,
-      "luck": 24
-    },
-    "resists": "---dw-s---",
-    "skills": [
-      "Pierce Attack",
-      "Agilao",
-      "Maragion",
-      "Power Slash"
-    ],
-    "area": "Antenora 1",
-    "exp": 529,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Killing Hand",
-    "arcana": "Magician",
-    "level": 43,
-    "hp": 292,
-    "sp": 144,
-    "stats": {
-      "strength": 24,
-      "magic": 38,
-      "endurance": 23,
-      "agility": 26,
-      "luck": 25
-    },
-    "resists": "---wn---s-",
-    "skills": [
-      "Strike Attack",
-      "Mabufu",
-      "Bewilder",
-      "Ghastly Wail",
-      "Spirit Drain"
-    ],
-    "area": "Antenora 1",
-    "exp": 661,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Order Giant",
@@ -4290,36 +3098,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Grave Beetle",
-    "arcana": "Emperor",
-    "level": 44,
-    "hp": 1196,
-    "sp": 446,
-    "stats": {
-      "strength": 34,
-      "magic": 24,
-      "endurance": 31,
-      "agility": 26,
-      "luck": 24
-    },
-    "resists": "-----sw---",
-    "skills": [
-      "Pierce Attack",
-      "Herculean Strike",
-      "Torrent Shot",
-      "Life Drain",
-      "Power Charge"
-    ],
-    "area": "Caina 2",
-    "exp": 1946,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Harem Dancer B",
     "arcana": "Lovers P",
     "level": 44,
@@ -4347,35 +3125,6 @@
     ],
     "area": "Caina 7",
     "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Killer Twins",
-    "arcana": "Hierophant",
-    "level": 44,
-    "hp": 296,
-    "sp": 146,
-    "stats": {
-      "strength": 26,
-      "magic": 32,
-      "endurance": 27,
-      "agility": 28,
-      "luck": 26
-    },
-    "resists": "---w-n----",
-    "skills": [
-      "Strike Attack",
-      "Zionga",
-      "Mazionga",
-      "Infuriate"
-    ],
-    "area": "Antenora 1",
-    "exp": 661,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -4474,34 +3223,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Killer Drive",
-    "arcana": "Chariot",
-    "level": 45,
-    "hp": 301,
-    "sp": 148,
-    "stats": {
-      "strength": 41,
-      "magic": 14,
-      "endurance": 39,
-      "agility": 33,
-      "luck": 15
-    },
-    "resists": "-r-----w--",
-    "skills": [
-      "Slash Attack",
-      "Gigantic Fist",
-      "Tarukaja"
-    ],
-    "area": "Antenora 1",
-    "exp": 881,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Ruinous Idol",
     "arcana": "Priestess",
     "level": 45,
@@ -4530,34 +3251,6 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Arcane Turret",
-    "arcana": "Chariot",
-    "level": 46,
-    "hp": 1008,
-    "sp": 426,
-    "stats": {
-      "strength": 54,
-      "magic": 9,
-      "endurance": 43,
-      "agility": 11,
-      "luck": 13
-    },
-    "resists": "-nn--w----",
-    "skills": [
-      "Strike Attack",
-      "Vile Assault",
-      "Tarukaja"
-    ],
-    "area": "Tziah I 115-138",
-    "exp": 1180,
-    "drops": {
-      "gem": "Diamond",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Desirous Maya",
@@ -4619,35 +3312,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Grieving Tiara",
-    "arcana": "Priestess",
-    "level": 46,
-    "hp": 305,
-    "sp": 150,
-    "stats": {
-      "strength": 27,
-      "magic": 33,
-      "endurance": 24,
-      "agility": 31,
-      "luck": 30
-    },
-    "resists": "---nw-----",
-    "skills": [
-      "Strike Attack",
-      "Zionga",
-      "Rakunda",
-      "Media"
-    ],
-    "area": "Antenora 2",
-    "exp": 661,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Liberating Idol",
     "arcana": "Priestess",
     "level": 46,
@@ -4669,35 +3333,6 @@
     ],
     "area": "Antenora 1",
     "exp": 881,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Minotaur IV",
-    "arcana": "Hanged",
-    "level": 46,
-    "hp": 1225,
-    "sp": 450,
-    "stats": {
-      "strength": 36,
-      "magic": 42,
-      "endurance": 32,
-      "agility": 20,
-      "luck": 15
-    },
-    "resists": "---ws-----",
-    "skills": [
-      "Pierce Attack",
-      "Mabufula",
-      "Kill Rush",
-      "Mind Charge"
-    ],
-    "area": "Antenora 1",
-    "exp": 2643,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -4743,37 +3378,6 @@
         ]
       }
     ]
-  },
-  {
-    "name": "Liberating Idol",
-    "arcana": "Priestess",
-    "level": 47,
-    "hp": 290,
-    "sp": 165,
-    "stats": {
-      "strength": 25,
-      "magic": 46,
-      "endurance": 23,
-      "agility": 24,
-      "luck": 30
-    },
-    "resists": "---nw-r---",
-    "skills": [
-      "Pierce Attack",
-      "Garudyne",
-      "Evil Touch",
-      "Mabufula",
-      "Ghastly Wail",
-      "Dodge Ice"
-    ],
-    "area": "Tziah II 140-163",
-    "exp": 700,
-    "drops": {
-      "gem": "Aquamarine",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Visceral Maya",
@@ -4840,95 +3444,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Dark Eagle",
-    "arcana": "Empress",
-    "level": 47,
-    "hp": 309,
-    "sp": 152,
-    "stats": {
-      "strength": 31,
-      "magic": 27,
-      "endurance": 26,
-      "agility": 38,
-      "luck": 26
-    },
-    "resists": "-----wn---",
-    "skills": [
-      "Slash Attack",
-      "Garula",
-      "Magarula",
-      "Gale Slash",
-      "Sukukaja"
-    ],
-    "area": "Antenora 2",
-    "exp": 881,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Phantom Master",
-    "arcana": "Hermit",
-    "level": 47,
-    "hp": 309,
-    "sp": 152,
-    "stats": {
-      "strength": 30,
-      "magic": 35,
-      "endurance": 28,
-      "agility": 30,
-      "luck": 25
-    },
-    "resists": "-----rw---",
-    "skills": [
-      "Slash Attack",
-      "Maragion",
-      "Mabufula",
-      "Bewilder",
-      "Poisma"
-    ],
-    "area": "Antenora 2",
-    "exp": 661,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Flowing Sand",
-    "arcana": "Fortune",
-    "level": 48,
-    "hp": 292,
-    "sp": 144,
-    "stats": {
-      "strength": 24,
-      "magic": 45,
-      "endurance": 33,
-      "agility": 23,
-      "luck": 26
-    },
-    "resists": "wwwrrrr---",
-    "skills": [
-      "Slash Attack",
-      "Magarula",
-      "Maragion",
-      "Tetrakarn"
-    ],
-    "area": "Tziah II 140-150",
-    "exp": 700,
-    "drops": {
-      "gem": "Sapphire",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Hell Knight B",
     "arcana": "Emperor P",
     "level": 48,
@@ -4949,34 +3464,6 @@
     "exp": 1252,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Order Giant",
-    "arcana": "Justice",
-    "level": 48,
-    "hp": 296,
-    "sp": 146,
-    "stats": {
-      "strength": 45,
-      "magic": 43,
-      "endurance": 39,
-      "agility": 9,
-      "luck": 15
-    },
-    "resists": "sss-wr----",
-    "skills": [
-      "Slash Attack",
-      "Heat Wave",
-      "Tarukaja"
-    ],
-    "area": "Tziah II 140-163",
-    "exp": 700,
-    "drops": {
-      "gem": "Emerald",
       "item": "-"
     },
     "isBoss": false,
@@ -5076,65 +3563,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Death Seeker",
-    "arcana": "Hermit",
-    "level": 49,
-    "hp": 277,
-    "sp": 158,
-    "stats": {
-      "strength": 19,
-      "magic": 41,
-      "endurance": 21,
-      "agility": 55,
-      "luck": 18
-    },
-    "resists": "---n---wr-",
-    "skills": [
-      "Strike Attack",
-      "Maragion",
-      "Mudo",
-      "Mamudo",
-      "Mudoon"
-    ],
-    "area": "Tziah II 140-163",
-    "exp": 700,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Solid Castle",
-    "arcana": "Emperor",
-    "level": 49,
-    "hp": 269,
-    "sp": 132,
-    "stats": {
-      "strength": 35,
-      "magic": 43,
-      "endurance": 49,
-      "agility": 11,
-      "luck": 16
-    },
-    "resists": "-----nw---",
-    "skills": [
-      "Strike Attack",
-      "Agilao",
-      "Zionga",
-      "Poisma"
-    ],
-    "area": "Tziah II 140-150",
-    "exp": 910,
-    "drops": {
-      "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Affection Relic",
     "arcana": "Empress",
     "level": 49,
@@ -5187,65 +3615,6 @@
     ],
     "area": "Antenora 2",
     "exp": 881,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Death Twins",
-    "arcana": "Hierophant",
-    "level": 49,
-    "hp": 318,
-    "sp": 156,
-    "stats": {
-      "strength": 29,
-      "magic": 36,
-      "endurance": 30,
-      "agility": 29,
-      "luck": 30
-    },
-    "resists": "-w---d-r--",
-    "skills": [
-      "Strike Attack",
-      "Mamudo",
-      "Pulinpa",
-      "Stagnant Air"
-    ],
-    "area": "Ptolomea 1",
-    "exp": 1050,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Devoted Cupid",
-    "arcana": "Lovers",
-    "level": 49,
-    "hp": 318,
-    "sp": 156,
-    "stats": {
-      "strength": 28,
-      "magic": 33,
-      "endurance": 28,
-      "agility": 34,
-      "luck": 31
-    },
-    "resists": "----w-n---",
-    "skills": [
-      "Pierce Attack",
-      "Holy Arrow",
-      "Pulinpa",
-      "Marakunda",
-      "Re Patra"
-    ],
-    "area": "Ptolomea 1",
-    "exp": 681,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -5407,64 +3776,6 @@
     ],
     "area": "Tziah I 135",
     "exp": 8452,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Adamant Beetle",
-    "arcana": "Emperor",
-    "level": 50,
-    "hp": 322,
-    "sp": 158,
-    "stats": {
-      "strength": 41,
-      "magic": 26,
-      "endurance": 39,
-      "agility": 26,
-      "luck": 25
-    },
-    "resists": "s-n--w----",
-    "skills": [
-      "Pierce Attack",
-      "Heat Wave",
-      "Rakukaja",
-      "Power Charge"
-    ],
-    "area": "Ptolomea 1",
-    "exp": 3000,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Ardent Dancer",
-    "arcana": "Lovers",
-    "level": 50,
-    "hp": 322,
-    "sp": 158,
-    "stats": {
-      "strength": 34,
-      "magic": 34,
-      "endurance": 28,
-      "agility": 26,
-      "luck": 35
-    },
-    "resists": "-s------w-",
-    "skills": [
-      "Pierce Attack",
-      "Blade of Fury",
-      "Sexy Dance",
-      "Tentarafoo"
-    ],
-    "area": "Ptolomea 1",
-    "exp": 1020,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -5689,35 +4000,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Conviction Sword",
-    "arcana": "Justice",
-    "level": 51,
-    "hp": 296,
-    "sp": 146,
-    "stats": {
-      "strength": 28,
-      "magic": 50,
-      "endurance": 26,
-      "agility": 24,
-      "luck": 32
-    },
-    "resists": "s-s---w---",
-    "skills": [
-      "Slash Attack",
-      "Marakunda",
-      "Mighty Swing",
-      "Counter"
-    ],
-    "area": "Tziah II 151-163",
-    "exp": 700,
-    "drops": {
-      "gem": "Diamond",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Apostate Tower",
     "arcana": "Hierophant",
     "level": 51,
@@ -5837,156 +4119,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Indolent Maya",
-    "arcana": "Hierophant",
-    "level": 52,
-    "hp": 330,
-    "sp": 162,
-    "stats": {
-      "strength": 31,
-      "magic": 39,
-      "endurance": 32,
-      "agility": 30,
-      "luck": 31
-    },
-    "resists": "--w--s----",
-    "skills": [
-      "Slash Attack",
-      "Matarunda",
-      "Marakunda",
-      "Masukunda"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 852,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Magical Magus",
-    "arcana": "Magician",
-    "level": 52,
-    "hp": 314,
-    "sp": 178,
-    "stats": {
-      "strength": 32,
-      "magic": 51,
-      "endurance": 27,
-      "agility": 26,
-      "luck": 27
-    },
-    "resists": "---wn-----",
-    "skills": [
-      "Strike Attack",
-      "Bufula",
-      "Mabufula",
-      "Mind Charge",
-      "Tetrakarn"
-    ],
-    "area": "Ptolomea 1",
-    "exp": 1136,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Silent Book",
-    "arcana": "Priestess",
-    "level": 52,
-    "hp": 330,
-    "sp": 162,
-    "stats": {
-      "strength": 29,
-      "magic": 37,
-      "endurance": 30,
-      "agility": 31,
-      "luck": 36
-    },
-    "resists": "---wd-s---",
-    "skills": [
-      "Pierce Attack",
-      "Virus Breath",
-      "Tentarafoo",
-      "Life Drain",
-      "Wind Break"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 852,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Regal Mother",
-    "arcana": "Empress",
-    "level": 53,
-    "hp": 294,
-    "sp": 167,
-    "stats": {
-      "strength": 39,
-      "magic": 43,
-      "endurance": 32,
-      "agility": 24,
-      "luck": 28
-    },
-    "resists": "----nwdnw-",
-    "skills": [
-      "Strike Attack",
-      "Mediarama",
-      "Magarula",
-      "Mabufula",
-      "Rakukaja",
-      "Wind Boost"
-    ],
-    "area": "Tziah II 151-163",
-    "exp": 700,
-    "drops": {
-      "gem": "Turquoise",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Almighty Hand",
-    "arcana": "Magician",
-    "level": 53,
-    "hp": 334,
-    "sp": 164,
-    "stats": {
-      "strength": 27,
-      "magic": 50,
-      "endurance": 29,
-      "agility": 31,
-      "luck": 29
-    },
-    "resists": "----d--nw-",
-    "skills": [
-      "Strike Attack",
-      "Bufula",
-      "Mabufula",
-      "Rakukaja",
-      "Tarunda"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 681,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Pistil Mother",
     "arcana": "Empress",
     "level": 53,
@@ -6009,36 +4141,6 @@
     ],
     "area": "Ptolomea 1",
     "exp": 3406,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Writhing Tiara",
-    "arcana": "Priestess",
-    "level": 53,
-    "hp": 334,
-    "sp": 164,
-    "stats": {
-      "strength": 31,
-      "magic": 41,
-      "endurance": 30,
-      "agility": 31,
-      "luck": 36
-    },
-    "resists": "---nw-----",
-    "skills": [
-      "Strike Attack",
-      "Agidyne",
-      "Mahama",
-      "Spirit Drain",
-      "Diarama"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 1136,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -6076,91 +4178,6 @@
     },
     "isBoss": false,
     "isMiniBoss": true
-  },
-  {
-    "name": "Judgement Sword B",
-    "arcana": "Justice P",
-    "level": 54,
-    "hp": 1300,
-    "sp": 169,
-    "stats": {
-      "strength": 49,
-      "magic": 32,
-      "endurance": 28,
-      "agility": 32,
-      "luck": 34
-    },
-    "resists": "rrrr-d-nn-",
-    "skills": [
-      "Slash Attack"
-    ],
-    "area": "Harabah 171",
-    "exp": 1079,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Jupiter Eagle",
-    "arcana": "Empress",
-    "level": 54,
-    "hp": 338,
-    "sp": 166,
-    "stats": {
-      "strength": 34,
-      "magic": 31,
-      "endurance": 30,
-      "agility": 43,
-      "luck": 31
-    },
-    "resists": "-----wd---",
-    "skills": [
-      "Slash Attack",
-      "Garudyne",
-      "Magarula",
-      "Sukunda",
-      "Masukunda"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 1136,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Phantom Lord",
-    "arcana": "Hermit",
-    "level": 54,
-    "hp": 338,
-    "sp": 166,
-    "stats": {
-      "strength": 35,
-      "magic": 40,
-      "endurance": 32,
-      "agility": 35,
-      "luck": 27
-    },
-    "resists": "---n---wr-",
-    "skills": [
-      "Slash Attack",
-      "Agidyne",
-      "Mudoon",
-      "Makarakarn"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 1136,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Hanged Man",
@@ -6206,37 +4223,6 @@
         ]
       }
     ]
-  },
-  {
-    "name": "Imprudent Maya",
-    "arcana": "Fortune",
-    "level": 55,
-    "hp": 338,
-    "sp": 166,
-    "stats": {
-      "strength": 34,
-      "magic": 34,
-      "endurance": 34,
-      "agility": 34,
-      "luck": 34
-    },
-    "resists": "---nww----",
-    "skills": [
-      "Slash Attack",
-      "Agilao",
-      "Agidyne",
-      "Rakunda",
-      "Sukunda",
-      "Tarunda"
-    ],
-    "area": "Harabah 165-179",
-    "exp": 432,
-    "drops": {
-      "gem": "Pearl",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Minotaur III",
@@ -6306,68 +4292,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Crying Table B",
-    "arcana": "Magician P",
-    "level": 55,
-    "hp": 1300,
-    "sp": 100,
-    "stats": {
-      "strength": 35,
-      "magic": 38,
-      "endurance": 34,
-      "agility": 33,
-      "luck": 30
-    },
-    "resists": "-d-dwr-nn-",
-    "skills": [
-      "Strike Attack",
-      "Agidyne",
-      "Maragion",
-      "Life Drain",
-      "Spirit Drain",
-      "Makarakarn",
-      "Evil Smile",
-      "Fire Amp",
-      "Dodge Ice"
-    ],
-    "area": "Ptolomea 8",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Haughty Maya",
-    "arcana": "Emperor",
-    "level": 55,
-    "hp": 342,
-    "sp": 168,
-    "stats": {
-      "strength": 42,
-      "magic": 30,
-      "endurance": 39,
-      "agility": 33,
-      "luck": 28
-    },
-    "resists": "-----sw---",
-    "skills": [
-      "Slash Attack",
-      "Zionga",
-      "Bufudyne"
-    ],
-    "area": "Judecca 1",
-    "exp": 1370,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Infinite Sand",
     "arcana": "Fortune",
     "level": 55,
@@ -6418,36 +4342,6 @@
       "Torrent Shot",
       "Vile Assault",
       "Vicious Strike"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 1136,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Mind Dice",
-    "arcana": "Fortune",
-    "level": 55,
-    "hp": 342,
-    "sp": 168,
-    "stats": {
-      "strength": 21,
-      "magic": 46,
-      "endurance": 24,
-      "agility": 39,
-      "luck": 42
-    },
-    "resists": "---ssws---",
-    "skills": [
-      "Slash Attack",
-      "Tentarafoo",
-      "Eerie Sound",
-      "Evil Smile",
-      "Infuriate"
     ],
     "area": "Ptolomea 2",
     "exp": 1136,
@@ -6521,36 +4415,6 @@
     "exp": 200,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Apostate Tower",
-    "arcana": "Hierophant",
-    "level": 56,
-    "hp": 302,
-    "sp": 172,
-    "stats": {
-      "strength": 35,
-      "magic": 44,
-      "endurance": 30,
-      "agility": 33,
-      "luck": 33
-    },
-    "resists": "---wsd----",
-    "skills": [
-      "Pierce Attack",
-      "Mazionga",
-      "Poison Mist",
-      "Virus Breath",
-      "Elec Boost"
-    ],
-    "area": "Harabah 165-179",
-    "exp": 720,
-    "drops": {
-      "gem": "Onyx",
       "item": "-"
     },
     "isBoss": false,
@@ -6790,35 +4654,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Mighty Beast",
-    "arcana": "Strength",
-    "level": 57,
-    "hp": 367,
-    "sp": 456,
-    "stats": {
-      "strength": 45,
-      "magic": 30,
-      "endurance": 41,
-      "agility": 33,
-      "luck": 29
-    },
-    "resists": "-------wr-",
-    "skills": [
-      "Strike Attack",
-      "Mudoon",
-      "Gigantic Fist",
-      "Tarukaja"
-    ],
-    "area": "Harabah 165-179",
-    "exp": 720,
-    "drops": {
-      "gem": "Ruby",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Phantom King",
     "arcana": "Hermit P",
     "level": 57,
@@ -6844,35 +4679,6 @@
     ],
     "area": "Harabah 190",
     "exp": 9288,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Bestial Wheel",
-    "arcana": "Chariot",
-    "level": 57,
-    "hp": 1384,
-    "sp": 163,
-    "stats": {
-      "strength": 45,
-      "magic": 30,
-      "endurance": 42,
-      "agility": 31,
-      "luck": 30
-    },
-    "resists": "s-s--ww---",
-    "skills": [
-      "Strike Attack",
-      "Deathbound",
-      "Herculean Strike",
-      "Marakunda"
-    ],
-    "area": "Ptolomea 2",
-    "exp": 3406,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -6975,36 +4781,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Scarlet Turret",
-    "arcana": "Chariot",
-    "level": 58,
-    "hp": 363,
-    "sp": 154,
-    "stats": {
-      "strength": 67,
-      "magic": 16,
-      "endurance": 56,
-      "agility": 18,
-      "luck": 24
-    },
-    "resists": "rn-s-w----",
-    "skills": [
-      "Strike Attack",
-      "Arrow Rain",
-      "Matarukaja",
-      "Maragion",
-      "Agilao"
-    ],
-    "area": "Harabah 165-179",
-    "exp": 1440,
-    "drops": {
-      "gem": "Sapphire",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Stasis Giant B",
     "arcana": "Justice P",
     "level": 58,
@@ -7023,65 +4799,6 @@
     ],
     "area": "Harabah 180",
     "exp": 1161,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Growth Relic",
-    "arcana": "Empress",
-    "level": 58,
-    "hp": 353,
-    "sp": 174,
-    "stats": {
-      "strength": 34,
-      "magic": 44,
-      "endurance": 45,
-      "agility": 28,
-      "luck": 30
-    },
-    "resists": "-w----d---",
-    "skills": [
-      "Pierce Attack",
-      "Garudyne",
-      "Magarudyne",
-      "Diarama"
-    ],
-    "area": "Judecca 1",
-    "exp": 1827,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Lustful Snake",
-    "arcana": "Lovers",
-    "level": 58,
-    "hp": 353,
-    "sp": 174,
-    "stats": {
-      "strength": 37,
-      "magic": 44,
-      "endurance": 31,
-      "agility": 28,
-      "luck": 41
-    },
-    "resists": "----w-d---",
-    "skills": [
-      "Pierce Attack",
-      "Agidyne",
-      "Hamaon",
-      "Marin Karin",
-      "Mediarama"
-    ],
-    "area": "Judecca 1",
-    "exp": 1827,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -7150,36 +4867,6 @@
     "exp": 720,
     "drops": {
       "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Immoral Snake",
-    "arcana": "Lovers",
-    "level": 59,
-    "hp": 326,
-    "sp": 160,
-    "stats": {
-      "strength": 43,
-      "magic": 50,
-      "endurance": 29,
-      "agility": 25,
-      "luck": 37
-    },
-    "resists": "--w---nww-",
-    "skills": [
-      "Pierce Attack",
-      "Tentarafoo",
-      "Foul Breath",
-      "Marin Karin",
-      "Sexy Dance"
-    ],
-    "area": "Harabah 181-189",
-    "exp": 720,
-    "drops": {
-      "gem": "Opal",
       "item": "-"
     },
     "isBoss": false,
@@ -7275,36 +4962,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Hell Knight",
-    "arcana": "Emperor",
-    "level": 60,
-    "hp": 314,
-    "sp": 154,
-    "stats": {
-      "strength": 40,
-      "magic": 44,
-      "endurance": 39,
-      "agility": 33,
-      "luck": 31
-    },
-    "resists": "n-n--rw---",
-    "skills": [
-      "Pierce Attack",
-      "Vile Assault",
-      "Maziodyne",
-      "Power Charge",
-      "Rakunda"
-    ],
-    "area": "Harabah 181-189",
-    "exp": 720,
-    "drops": {
-      "gem": "Amethyst",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Fate Seeker",
     "arcana": "Hermit",
     "level": 60,
@@ -7328,36 +4985,6 @@
     ],
     "area": "Judecca 2",
     "exp": 1827,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Golden Beetle",
-    "arcana": "Emperor",
-    "level": 60,
-    "hp": 397,
-    "sp": 168,
-    "stats": {
-      "strength": 32,
-      "magic": 40,
-      "endurance": 54,
-      "agility": 32,
-      "luck": 29
-    },
-    "resists": "----n-w---",
-    "skills": [
-      "Pierce Attack",
-      "Ziodyne",
-      "Vicious Strike",
-      "Tarukaja",
-      "Rakukaja"
-    ],
-    "area": "Judecca 2",
-    "exp": 1370,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -7396,65 +5023,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Angry Table",
-    "arcana": "Magician",
-    "level": 61,
-    "hp": 238,
-    "sp": 136,
-    "stats": {
-      "strength": 14,
-      "magic": 33,
-      "endurance": 22,
-      "agility": 22,
-      "luck": 21
-    },
-    "resists": "w---n-w---",
-    "skills": [
-      "Strike Attack",
-      "Bufudyne",
-      "Mabufula",
-      "Tentarafoo",
-      "Tetrakarn"
-    ],
-    "area": "Harabah 191-200",
-    "exp": 777,
-    "drops": {
-      "gem": "Amethyst",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Desirous Maya",
-    "arcana": "Hermit",
-    "level": 61,
-    "hp": 334,
-    "sp": 164,
-    "stats": {
-      "strength": 20,
-      "magic": 40,
-      "endurance": 21,
-      "agility": 55,
-      "luck": 30
-    },
-    "resists": "---w------",
-    "skills": [
-      "Slash Attack",
-      "Spirit Drain",
-      "Poisma",
-      "Matarukaja"
-    ],
-    "area": "Harabah 191-200",
-    "exp": 467,
-    "drops": {
-      "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Power Castle",
     "arcana": "Emperor",
     "level": 61,
@@ -7478,36 +5046,6 @@
     "exp": 936,
     "drops": {
       "gem": "Turquoise",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Red Sigil",
-    "arcana": "Hierophant",
-    "level": 61,
-    "hp": 306,
-    "sp": 174,
-    "stats": {
-      "strength": 38,
-      "magic": 49,
-      "endurance": 41,
-      "agility": 32,
-      "luck": 30
-    },
-    "resists": "---dw--n--",
-    "skills": [
-      "Slash Attack",
-      "Hamaon",
-      "Agidyne",
-      "Maragion",
-      "Dodge Ice"
-    ],
-    "area": "Harabah 181-189",
-    "exp": 936,
-    "drops": {
-      "gem": "Emerald",
       "item": "-"
     },
     "isBoss": false,
@@ -7540,63 +5078,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Hakurou Musha",
-    "arcana": "Strength",
-    "level": 61,
-    "hp": 400,
-    "sp": 170,
-    "stats": {
-      "strength": 47,
-      "magic": 26,
-      "endurance": 42,
-      "agility": 47,
-      "luck": 28
-    },
-    "resists": "-------ww-",
-    "skills": [
-      "Slash Attack",
-      "Tempest Slash",
-      "Power Charge"
-    ],
-    "area": "Judecca 2",
-    "exp": 1827,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Minotaur III",
-    "arcana": "Hanged",
-    "level": 61,
-    "hp": 1400,
-    "sp": 100,
-    "stats": {
-      "strength": 94,
-      "magic": 85,
-      "endurance": 53,
-      "agility": 23,
-      "luck": 24
-    },
-    "resists": "sns-r--rr-",
-    "skills": [
-      "Pierce Attack",
-      "Deathbound",
-      "Matarunda",
-      "Life Drain"
-    ],
-    "area": "Ptolomea 2B",
-    "exp": 1136,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Silver Dice",
     "arcana": "Fortune",
     "level": 61,
@@ -7620,63 +5101,6 @@
     "exp": 1827,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Curse Dice",
-    "arcana": "Fortune",
-    "level": 62,
-    "hp": 342,
-    "sp": 168,
-    "stats": {
-      "strength": 19,
-      "magic": 46,
-      "endurance": 24,
-      "agility": 39,
-      "luck": 44
-    },
-    "resists": "sss---w-n-",
-    "skills": [
-      "Slash Attack",
-      "Arrow Rain",
-      "Infuriate"
-    ],
-    "area": "Harabah 191-200",
-    "exp": 1011,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Fate Seeker",
-    "arcana": "Hermit",
-    "level": 62,
-    "hp": 338,
-    "sp": 166,
-    "stats": {
-      "strength": 22,
-      "magic": 49,
-      "endurance": 24,
-      "agility": 59,
-      "luck": 21
-    },
-    "resists": "--wnnnnwr-",
-    "skills": [
-      "Strike Attack",
-      "Mamudo",
-      "Maragion",
-      "Mazionga"
-    ],
-    "area": "Harabah 191-200",
-    "exp": 777,
-    "drops": {
-      "gem": "Garnet",
       "item": "-"
     },
     "isBoss": false,
@@ -7775,67 +5199,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Gracious Cupid",
-    "arcana": "Lovers",
-    "level": 62,
-    "hp": 350,
-    "sp": 199,
-    "stats": {
-      "strength": 33,
-      "magic": 44,
-      "endurance": 32,
-      "agility": 44,
-      "luck": 40
-    },
-    "resists": "-w--n-----",
-    "skills": [
-      "Pierce Attack",
-      "Arrow Rain",
-      "Poison Arrow",
-      "Diarahan",
-      "Me Patra"
-    ],
-    "area": "Empyrean 1",
-    "exp": 1311,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Phantom Mage",
-    "arcana": "Hermit",
-    "level": 62,
-    "hp": 368,
-    "sp": 201,
-    "stats": {
-      "strength": 39,
-      "magic": 44,
-      "endurance": 38,
-      "agility": 37,
-      "luck": 35
-    },
-    "resists": "---s---wn-",
-    "skills": [
-      "Slash Attack",
-      "Agidyne",
-      "Maragion",
-      "Mudoon",
-      "Mind Charge",
-      "Re Patra"
-    ],
-    "area": "Judecca 2",
-    "exp": 1096,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Slaughter Drive B",
     "arcana": "Chariot P",
     "level": 62,
@@ -7918,65 +5281,6 @@
     "exp": 1772,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Pistil Mother",
-    "arcana": "Empress",
-    "level": 63,
-    "hp": 339,
-    "sp": 193,
-    "stats": {
-      "strength": 43,
-      "magic": 46,
-      "endurance": 35,
-      "agility": 28,
-      "luck": 32
-    },
-    "resists": "----rwr---",
-    "skills": [
-      "Strike Attack",
-      "Garudyne",
-      "Bufudyne",
-      "Diarahan"
-    ],
-    "area": "Harabah 191-200",
-    "exp": 777,
-    "drops": {
-      "gem": "Onyx",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Ruinous Idol",
-    "arcana": "Priestess",
-    "level": 63,
-    "hp": 335,
-    "sp": 191,
-    "stats": {
-      "strength": 33,
-      "magic": 50,
-      "endurance": 30,
-      "agility": 31,
-      "luck": 37
-    },
-    "resists": "---dw--wr-",
-    "skills": [
-      "Pierce Attack",
-      "Mudo",
-      "Mamudo",
-      "Mudoon",
-      "Virus Breath"
-    ],
-    "area": "Harabah 165-189",
-    "exp": 777,
-    "drops": {
-      "gem": "Aquamarine",
       "item": "-"
     },
     "isBoss": false,
@@ -8123,66 +5427,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Sleeping Table",
-    "arcana": "Magician",
-    "level": 63,
-    "hp": 553,
-    "sp": 201,
-    "stats": {
-      "strength": 36,
-      "magic": 57,
-      "endurance": 32,
-      "agility": 34,
-      "luck": 37
-    },
-    "resists": "snss---nn-",
-    "skills": [
-      "Strike Attack",
-      "Megidola",
-      "Megidolaon",
-      "God's Hand",
-      "Vicious Strike",
-      "Life Drain"
-    ],
-    "area": "Empyrean 1",
-    "exp": 2553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Iron Dice",
-    "arcana": "Fortune",
-    "level": 64,
-    "hp": 259,
-    "sp": 110,
-    "stats": {
-      "strength": 24,
-      "magic": 10,
-      "endurance": 23,
-      "agility": 17,
-      "luck": 26
-    },
-    "resists": "sss--w----",
-    "skills": [
-      "Strike Attack",
-      "Twin Shot",
-      "Kill Rush",
-      "Deathbound"
-    ],
-    "area": "Harabah 202-213",
-    "exp": 467,
-    "drops": {
-      "gem": "Opal",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Judgement Sword",
     "arcana": "Justice",
     "level": 64,
@@ -8206,37 +5450,6 @@
     "exp": 777,
     "drops": {
       "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Battle Wheel",
-    "arcana": "Chariot",
-    "level": 64,
-    "hp": 413,
-    "sp": 175,
-    "stats": {
-      "strength": 52,
-      "magic": 29,
-      "endurance": 45,
-      "agility": 41,
-      "luck": 32
-    },
-    "resists": "-------n--",
-    "skills": [
-      "Strike Attack",
-      "Vicious Strike",
-      "God's Hand",
-      "Marakunda",
-      "Power Charge",
-      "Eerie Sound"
-    ],
-    "area": "Empyrean 1",
-    "exp": 1370,
-    "drops": {
-      "gem": "-",
       "item": "-"
     },
     "isBoss": false,
@@ -8306,153 +5519,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Power Castle",
-    "arcana": "Emperor",
-    "level": 64,
-    "hp": 375,
-    "sp": 184,
-    "stats": {
-      "strength": 43,
-      "magic": 53,
-      "endurance": 59,
-      "agility": 20,
-      "luck": 24
-    },
-    "resists": "---swnn---",
-    "skills": [
-      "Strike Attack",
-      "Agidyne",
-      "Maragidyne",
-      "Ziodyne",
-      "Maziodyne",
-      "Deathbound"
-    ],
-    "area": "Judecca 2",
-    "exp": 1827,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Amenti Raven",
-    "arcana": "Hermit",
-    "level": 65,
-    "hp": 356,
-    "sp": 203,
-    "stats": {
-      "strength": 30,
-      "magic": 39,
-      "endurance": 31,
-      "agility": 65,
-      "luck": 37
-    },
-    "resists": "---r-ws---",
-    "skills": [
-      "Pierce Attack",
-      "Evil Smile",
-      "Mamudoon",
-      "Garudyne"
-    ],
-    "area": "Adamah 215-227",
-    "exp": 595,
-    "drops": {
-      "gem": "Ruby",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Bigoted Maya",
-    "arcana": "Justice",
-    "level": 65,
-    "hp": 383,
-    "sp": 188,
-    "stats": {
-      "strength": 51,
-      "magic": 48,
-      "endurance": 45,
-      "agility": 24,
-      "luck": 34
-    },
-    "resists": "---w-s----",
-    "skills": [
-      "Slash Attack",
-      "Ziodyne",
-      "Diarama"
-    ],
-    "area": "Adamah 215-227",
-    "exp": 595,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Perpetual Sand",
-    "arcana": "Fortune",
-    "level": 65,
-    "hp": 342,
-    "sp": 185,
-    "stats": {
-      "strength": 28,
-      "magic": 50,
-      "endurance": 37,
-      "agility": 27,
-      "luck": 30
-    },
-    "resists": "w-wnnnn---",
-    "skills": [
-      "Slash Attack",
-      "Magarula",
-      "Maragion",
-      "Makarakarn"
-    ],
-    "area": "Harabah 202-213",
-    "exp": 777,
-    "drops": {
-      "gem": "Sapphire",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Prime Magus",
-    "arcana": "Magician",
-    "level": 65,
-    "hp": 335,
-    "sp": 191,
-    "stats": {
-      "strength": 35,
-      "magic": 64,
-      "endurance": 25,
-      "agility": 22,
-      "luck": 35
-    },
-    "resists": "---wd-----",
-    "skills": [
-      "Strike Attack",
-      "Megido",
-      "Bufudyne",
-      "Mind Charge",
-      "Mamudo"
-    ],
-    "area": "Harabah 202-213",
-    "exp": 777,
-    "drops": {
-      "gem": "Turquoise",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Grand Magus",
     "arcana": "Magician",
     "level": 65,
@@ -8510,67 +5576,6 @@
     "exp": 1827,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Mythical Gigas",
-    "arcana": "Strength",
-    "level": 65,
-    "hp": 1417,
-    "sp": 177,
-    "stats": {
-      "strength": 48,
-      "magic": 22,
-      "endurance": 53,
-      "agility": 37,
-      "luck": 42
-    },
-    "resists": "rrnd---nn-",
-    "skills": [
-      "Strike Attack",
-      "Maragidyne",
-      "Akasha Arts",
-      "Vile Assault",
-      "Rakukaja",
-      "Revolution"
-    ],
-    "area": "Judecca 2",
-    "exp": 5480,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Death Dice",
-    "arcana": "Fortune",
-    "level": 66,
-    "hp": 379,
-    "sp": 186,
-    "stats": {
-      "strength": 26,
-      "magic": 53,
-      "endurance": 31,
-      "agility": 45,
-      "luck": 50
-    },
-    "resists": "---nw-rss-",
-    "skills": [
-      "Slash Attack",
-      "Hamaon",
-      "Mudoon",
-      "Mahamaon",
-      "Mamudoon"
-    ],
-    "area": "Adamah 215-227",
-    "exp": 1289,
-    "drops": {
-      "gem": "Garnet",
       "item": "-"
     },
     "isBoss": false,
@@ -8665,35 +5670,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Stasis Giant",
-    "arcana": "Justice",
-    "level": 66,
-    "hp": 346,
-    "sp": 169,
-    "stats": {
-      "strength": 50,
-      "magic": 47,
-      "endurance": 43,
-      "agility": 14,
-      "luck": 21
-    },
-    "resists": "ss--wnn---",
-    "skills": [
-      "Slash Attack",
-      "Gigantic Fist",
-      "Rakukaja",
-      "High Counter"
-    ],
-    "area": "Harabah 202-213",
-    "exp": 777,
-    "drops": {
-      "gem": "Garnet",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Void Giant",
     "arcana": "Justice",
     "level": 66,
@@ -8783,128 +5759,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Green Sigil",
-    "arcana": "Hierophant",
-    "level": 67,
-    "hp": 343,
-    "sp": 195,
-    "stats": {
-      "strength": 41,
-      "magic": 57,
-      "endurance": 44,
-      "agility": 36,
-      "luck": 30
-    },
-    "resists": "---w-d-r--",
-    "skills": [
-      "Slash Attack",
-      "Megidola",
-      "Ziodyne",
-      "Mazionga",
-      "Sexy Dance",
-      "Spirit Drain"
-    ],
-    "area": "Adamah 215-227",
-    "exp": 1289,
-    "drops": {
-      "gem": "Garnet",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Silver Dice",
-    "arcana": "Fortune",
-    "level": 67,
-    "hp": 379,
-    "sp": 186,
-    "stats": {
-      "strength": 50,
-      "magic": 26,
-      "endurance": 44,
-      "agility": 38,
-      "luck": 50
-    },
-    "resists": "nnn----ww-",
-    "skills": [
-      "Strike Attack",
-      "Mighty Swing",
-      "Gigantic Fist",
-      "Deathbound"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 991,
-    "drops": {
-      "gem": "Pearl",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Crazy Twins",
-    "arcana": "Hierophant",
-    "level": 67,
-    "hp": 367,
-    "sp": 209,
-    "stats": {
-      "strength": 39,
-      "magic": 50,
-      "endurance": 40,
-      "agility": 39,
-      "luck": 40
-    },
-    "resists": "---w-r-nw-",
-    "skills": [
-      "Strike Attack",
-      "Gigantic Fist",
-      "Maziodyne",
-      "Mind Charge",
-      "Ziodyne"
-    ],
-    "area": "Empyrean 2",
-    "exp": 1638,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Fanatic Tower",
-    "arcana": "Hierophant",
-    "level": 67,
-    "hp": 1386,
-    "sp": 190,
-    "stats": {
-      "strength": 44,
-      "magic": 45,
-      "endurance": 45,
-      "agility": 37,
-      "luck": 37
-    },
-    "resists": "r-rrrr-nn-",
-    "skills": [
-      "Pierce Attack",
-      "Maziodyne",
-      "Evil Smile",
-      "Ghastly Wail",
-      "Mind Charge",
-      "Elec Break",
-      "Fear Boost"
-    ],
-    "area": "Empyrean 1",
-    "exp": 6553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Loss Giant",
     "arcana": "Justice",
     "level": 67,
@@ -8926,37 +5780,6 @@
     ],
     "area": "Judecca 2B",
     "exp": 1827,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Natural Dancer",
-    "arcana": "Lovers",
-    "level": 67,
-    "hp": 486,
-    "sp": 290,
-    "stats": {
-      "strength": 38,
-      "magic": 44,
-      "endurance": 41,
-      "agility": 39,
-      "luck": 41
-    },
-    "resists": "------nnn-",
-    "skills": [
-      "Pierce Attack",
-      "Deathbound",
-      "Myriad Arrows",
-      "Primal Force",
-      "Sexy Dance",
-      "Tentarafoo"
-    ],
-    "area": "Empyrean 1",
-    "exp": 2153,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -8990,36 +5813,6 @@
     "exp": 1982,
     "drops": {
       "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Light Balance",
-    "arcana": "Justice",
-    "level": 68,
-    "hp": 386,
-    "sp": 190,
-    "stats": {
-      "strength": 40,
-      "magic": 50,
-      "endurance": 39,
-      "agility": 40,
-      "luck": 42
-    },
-    "resists": "s----wsnn-",
-    "skills": [
-      "Pierce Attack",
-      "Magarula",
-      "Mahama",
-      "Mamudo",
-      "Megido"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 595,
-    "drops": {
-      "gem": "Diamond",
       "item": "-"
     },
     "isBoss": false,
@@ -9148,97 +5941,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Intrepid Knight",
-    "arcana": "Emperor",
-    "level": 68,
-    "hp": 990,
-    "sp": 291,
-    "stats": {
-      "strength": 51,
-      "magic": 49,
-      "endurance": 45,
-      "agility": 39,
-      "luck": 37
-    },
-    "resists": "s-s--wdnn-",
-    "skills": [
-      "Pierce Attack",
-      "Magarudyne",
-      "Vicious Strike",
-      "Poison Mist",
-      "Power Charge",
-      "Evade Elec"
-    ],
-    "area": "Empyrean 1",
-    "exp": 2553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Doom Sword",
-    "arcana": "Justice",
-    "level": 69,
-    "hp": 386,
-    "sp": 190,
-    "stats": {
-      "strength": 58,
-      "magic": 40,
-      "endurance": 36,
-      "agility": 34,
-      "luck": 46
-    },
-    "resists": "s---wr----",
-    "skills": [
-      "Slash Attack",
-      "Mazionga",
-      "Deathbound",
-      "Spirit Drain",
-      "Sukukaja"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 991,
-    "drops": {
-      "gem": "Sapphire",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Royal Dancer",
-    "arcana": "Lovers",
-    "level": 69,
-    "hp": 364,
-    "sp": 179,
-    "stats": {
-      "strength": 45,
-      "magic": 47,
-      "endurance": 39,
-      "agility": 35,
-      "luck": 48
-    },
-    "resists": "------rnn-",
-    "skills": [
-      "Pierce Attack",
-      "Myriad Arrows",
-      "Sexy Dance",
-      "Tentarafoo",
-      "Maragion"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 991,
-    "drops": {
-      "gem": "Opal",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Eternal Eagle",
     "arcana": "Empress",
     "level": 69,
@@ -9292,63 +5994,6 @@
     "exp": 1638,
     "drops": {
       "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Daring Gigas",
-    "arcana": "Strength",
-    "level": 70,
-    "hp": 409,
-    "sp": 174,
-    "stats": {
-      "strength": 42,
-      "magic": 36,
-      "endurance": 54,
-      "agility": 44,
-      "luck": 41
-    },
-    "resists": "sss---w---",
-    "skills": [
-      "Strike Attack",
-      "Akasha Arts",
-      "Gigantic Fist"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 991,
-    "drops": {
-      "gem": "Diamond",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Devious Maya",
-    "arcana": "Hanged",
-    "level": 70,
-    "hp": 390,
-    "sp": 191,
-    "stats": {
-      "strength": 50,
-      "magic": 63,
-      "endurance": 45,
-      "agility": 32,
-      "luck": 27
-    },
-    "resists": "----nw----",
-    "skills": [
-      "Slash Attack",
-      "Diarama",
-      "Bufula",
-      "Last Resort"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 680,
-    "drops": {
-      "gem": "Sapphire",
       "item": "-"
     },
     "isBoss": false,
@@ -9611,68 +6256,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Infinite Sand",
-    "arcana": "Fortune",
-    "level": 71,
-    "hp": 383,
-    "sp": 188,
-    "stats": {
-      "strength": 37,
-      "magic": 61,
-      "endurance": 45,
-      "agility": 36,
-      "luck": 41
-    },
-    "resists": "---nw-r---",
-    "skills": [
-      "Slash Attack",
-      "Megido",
-      "Agidyne",
-      "Maragidyne",
-      "Masukukaja",
-      "Arrow Rain"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 991,
-    "drops": {
-      "gem": "Opal",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Minotaur II",
-    "arcana": "Hanged",
-    "level": 71,
-    "hp": 1200,
-    "sp": 588,
-    "stats": {
-      "strength": 56,
-      "magic": 61,
-      "endurance": 50,
-      "agility": 34,
-      "luck": 19
-    },
-    "resists": "sss-n---w-",
-    "skills": [
-      "Pierce Attack",
-      "Myriad Arrows",
-      "Last Resort",
-      "Mediarama",
-      "Bufudyne",
-      "Matarukaja"
-    ],
-    "area": "Adamah 229-235",
-    "exp": 1982,
-    "drops": {
-      "gem": "Ruby",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Nemean Beast",
     "arcana": "Strength",
     "level": 71,
@@ -9695,40 +6278,6 @@
     ],
     "area": "Empyrean 2",
     "exp": 2184,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "World Balance",
-    "arcana": "Justice P",
-    "level": 72,
-    "hp": 3200,
-    "sp": 500,
-    "stats": {
-      "strength": 30,
-      "magic": 62,
-      "endurance": 42,
-      "agility": 65,
-      "luck": 42
-    },
-    "resists": "rrr----nn-",
-    "skills": [
-      "Pierce Attack",
-      "Megidola",
-      "Agidyne",
-      "Bufudyne",
-      "Ziodyne",
-      "Garudyne",
-      "Sharp Student",
-      "Mamudoon",
-      "Spirit Drain"
-    ],
-    "area": "Adamah 236",
-    "exp": 14176,
     "drops": {
       "gem": "-",
       "item": "-"
@@ -9761,65 +6310,6 @@
     "exp": 680,
     "drops": {
       "gem": "Emerald",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Phantom King",
-    "arcana": "Hermit",
-    "level": 72,
-    "hp": 1383,
-    "sp": 218,
-    "stats": {
-      "strength": 17,
-      "magic": 17,
-      "endurance": 16,
-      "agility": 16,
-      "luck": 16
-    },
-    "resists": "-------rn-",
-    "skills": [
-      "Slash Attack",
-      "Maragidyne",
-      "Mamudoon",
-      "Tentarafoo"
-    ],
-    "area": "Empyrean 2",
-    "exp": 6553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Emperor Beetle",
-    "arcana": "Emperor",
-    "level": 73,
-    "hp": 459,
-    "sp": 194,
-    "stats": {
-      "strength": 53,
-      "magic": 39,
-      "endurance": 52,
-      "agility": 42,
-      "luck": 40
-    },
-    "resists": "nwn-------",
-    "skills": [
-      "Pierce Attack",
-      "Ziodyne",
-      "Poison Mist",
-      "Marakunda",
-      "Akasha Arts"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Opal",
       "item": "-"
     },
     "isBoss": false,
@@ -9860,94 +6350,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Platinum Dice",
-    "arcana": "Fortune",
-    "level": 73,
-    "hp": 439,
-    "sp": 216,
-    "stats": {
-      "strength": 58,
-      "magic": 28,
-      "endurance": 48,
-      "agility": 40,
-      "luck": 52
-    },
-    "resists": "sssnnwn---",
-    "skills": [
-      "Strike Attack",
-      "Tempest Slash",
-      "Akasha Arts",
-      "God's Hand"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Pearl",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Mad Cyclops",
-    "arcana": "Hanged",
-    "level": 73,
-    "hp": 1700,
-    "sp": 600,
-    "stats": {
-      "strength": 79,
-      "magic": 65,
-      "endurance": 63,
-      "agility": 73,
-      "luck": 34
-    },
-    "resists": "sssssss---",
-    "skills": [
-      "Slash Attack",
-      "God's Hand",
-      "Primal Force",
-      "Power Charge"
-    ],
-    "area": "Empyrean 2B",
-    "exp": 2184,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Reckoning Dice",
-    "arcana": "Fortune",
-    "level": 73,
-    "hp": 1387,
-    "sp": 219,
-    "stats": {
-      "strength": 45,
-      "magic": 45,
-      "endurance": 45,
-      "agility": 45,
-      "luck": 45
-    },
-    "resists": "---nnnnrn-",
-    "skills": [
-      "Slash Attack",
-      "Maragidyne",
-      "Mabufudyne",
-      "Mahamaon",
-      "Megidolaon"
-    ],
-    "area": "Empyrean 2",
-    "exp": 6553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Jin Shirato",
     "arcana": "Hermit",
     "level": 73,
@@ -9967,96 +6369,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Eternal Eagle",
-    "arcana": "Empress",
-    "level": 74,
-    "hp": 410,
-    "sp": 202,
-    "stats": {
-      "strength": 45,
-      "magic": 42,
-      "endurance": 41,
-      "agility": 58,
-      "luck": 43
-    },
-    "resists": "-----ddrw-",
-    "skills": [
-      "Slash Attack",
-      "Garudyne",
-      "Magarula",
-      "Magarudyne",
-      "Masukukaja"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Garnet",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Minotaur I",
-    "arcana": "Hanged",
-    "level": 74,
-    "hp": 1230,
-    "sp": 606,
-    "stats": {
-      "strength": 62,
-      "magic": 66,
-      "endurance": 52,
-      "agility": 36,
-      "luck": 13
-    },
-    "resists": "sssw---rw-",
-    "skills": [
-      "Pierce Attack",
-      "Primal Force",
-      "Tarukaja",
-      "High Counter",
-      "Evade Fire"
-    ],
-    "area": "Adamah 245-261",
-    "exp": 2266,
-    "drops": {
-      "gem": "Diamond",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Jotun of Grief",
-    "arcana": "Hanged",
-    "level": 74,
-    "hp": 1410,
-    "sp": 202,
-    "stats": {
-      "strength": 60,
-      "magic": 57,
-      "endurance": 51,
-      "agility": 42,
-      "luck": 19
-    },
-    "resists": "dd-ddddnn-",
-    "skills": [
-      "Strike Attack",
-      "Mabufudyne",
-      "God's Hand",
-      "Infuriate",
-      "Stagnant Air"
-    ],
-    "area": "Empyrean 2",
-    "exp": 6553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Takaya Sakaki",
     "arcana": "Fortune",
     "level": 74,
@@ -10074,71 +6386,6 @@
     "version": "Vanilla / FES / Portable",
     "isBoss": true,
     "isMiniBoss": false
-  },
-  {
-    "name": "Carnal Snake",
-    "arcana": "Lovers",
-    "level": 75,
-    "hp": 361,
-    "sp": 177,
-    "stats": {
-      "strength": 49,
-      "magic": 60,
-      "endurance": 39,
-      "agility": 36,
-      "luck": 48
-    },
-    "resists": "----w-n---",
-    "skills": [
-      "Pierce Attack",
-      "Evil Touch",
-      "Infuriate",
-      "Mahamaon",
-      "Garudyne",
-      "Life Drain",
-      "Spirit Drain",
-      "Mediarama",
-      "Eerie Sound"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Wicked Turret",
-    "arcana": "Chariot",
-    "level": 75,
-    "hp": 405,
-    "sp": 172,
-    "stats": {
-      "strength": 85,
-      "magic": 25,
-      "endurance": 71,
-      "agility": 23,
-      "luck": 28
-    },
-    "resists": "rrrs-w----",
-    "skills": [
-      "Strike Attack",
-      "Power Charge",
-      "Rakunda",
-      "Tarukaja",
-      "Myriad Arrows",
-      "Agidyne"
-    ],
-    "area": "Adamah 236-243",
-    "exp": 1473,
-    "drops": {
-      "gem": "Sapphire",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Chaos Cyclops",
@@ -10173,123 +6420,6 @@
     },
     "isBoss": false,
     "isMiniBoss": true
-  },
-  {
-    "name": "Mighty Cyclops",
-    "arcana": "Hanged",
-    "level": 75,
-    "hp": 1800,
-    "sp": 600,
-    "stats": {
-      "strength": 66,
-      "magic": 64,
-      "endurance": 60,
-      "agility": 35,
-      "luck": 36
-    },
-    "resists": "ddd----nn-",
-    "skills": [
-      "Slash Attack",
-      "Megidolaon",
-      "Vorpal Blade"
-    ],
-    "area": "Empyrean 2B",
-    "exp": 2184,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Rampage Drive",
-    "arcana": "Chariot",
-    "level": 75,
-    "hp": 1454,
-    "sp": 193,
-    "stats": {
-      "strength": 59,
-      "magic": 41,
-      "endurance": 50,
-      "agility": 39,
-      "luck": 43
-    },
-    "resists": "nrn----nn-",
-    "skills": [
-      "Pierce Attack",
-      "Megidolaon",
-      "Vorpal Blade",
-      "Power Charge",
-      "Tarukaja"
-    ],
-    "area": "Empyrean 2",
-    "exp": 6553,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Nemean Beast",
-    "arcana": "Strength",
-    "level": 76,
-    "hp": 409,
-    "sp": 174,
-    "stats": {
-      "strength": 60,
-      "magic": 41,
-      "endurance": 57,
-      "agility": 40,
-      "luck": 37
-    },
-    "resists": "---w----w-",
-    "skills": [
-      "Strike Attack",
-      "God's Hand",
-      "Power Charge",
-      "Provoke"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Diamond",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Noble Seeker",
-    "arcana": "Hermit",
-    "level": 76,
-    "hp": 375,
-    "sp": 184,
-    "stats": {
-      "strength": 32,
-      "magic": 67,
-      "endurance": 34,
-      "agility": 70,
-      "luck": 32
-    },
-    "resists": "---r--wrr-",
-    "skills": [
-      "Strike Attack",
-      "Mudoon",
-      "Agidyne",
-      "Provoke",
-      "Maragidyne"
-    ],
-    "area": "Adamah 245-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Ruby",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
   },
   {
     "name": "Kaiden Musha B",
@@ -10512,69 +6642,6 @@
     ]
   },
   {
-    "name": "Harmony Giant",
-    "arcana": "Justice",
-    "level": 77,
-    "hp": 390,
-    "sp": 191,
-    "stats": {
-      "strength": 65,
-      "magic": 59,
-      "endurance": 55,
-      "agility": 26,
-      "luck": 33
-    },
-    "resists": "-nr-wrr---",
-    "skills": [
-      "Slash Attack",
-      "Magarudyne",
-      "Tempest Slash",
-      "Megido"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Topaz",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Jotun of Evil",
-    "arcana": "Hanged",
-    "level": 77,
-    "hp": 1260,
-    "sp": 618,
-    "stats": {
-      "strength": 65,
-      "magic": 80,
-      "endurance": 49,
-      "agility": 23,
-      "luck": 21
-    },
-    "resists": "wwwrrrrrr-",
-    "skills": [
-      "Strike Attack",
-      "Hamaon",
-      "Bufudyne",
-      "Mabufudyne",
-      "Provoke",
-      "Infuriate",
-      "Evade Slash",
-      "Evade Strike",
-      "Evade Pierce"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 2266,
-    "drops": {
-      "gem": "Ruby",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Tenjin Musha B",
     "arcana": "Strength P",
     "level": 77,
@@ -10609,38 +6676,6 @@
     "isMiniBoss": true
   },
   {
-    "name": "Fierce Cyclops",
-    "arcana": "Hanged",
-    "level": 78,
-    "hp": 397,
-    "sp": 195,
-    "stats": {
-      "strength": 66,
-      "magic": 48,
-      "endurance": 57,
-      "agility": 36,
-      "luck": 34
-    },
-    "resists": "d--d------",
-    "skills": [
-      "Slash Attack",
-      "Last Resort",
-      "Foul Breath",
-      "Agidyne",
-      "Infuriate",
-      "Dekaja",
-      "God's Hand"
-    ],
-    "area": "Adamah 237-261",
-    "exp": 1133,
-    "drops": {
-      "gem": "Pearl",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Erebus",
     "arcana": "Death",
     "level": 80,
@@ -10659,222 +6694,6 @@
     "version": "FES Exclusive (The Answer)",
     "isBoss": true,
     "isMiniBoss": false
-  },
-  {
-    "name": "Grand Magus",
-    "arcana": "Magician",
-    "level": 88,
-    "hp": 432,
-    "sp": 246,
-    "stats": {
-      "strength": 42,
-      "magic": 85,
-      "endurance": 51,
-      "agility": 52,
-      "luck": 41
-    },
-    "resists": "-n-wr--rr-",
-    "skills": [
-      "Strike Attack",
-      "Maragidyne",
-      "Agidyne",
-      "Mind Charge",
-      "Tentarafoo",
-      "Megidolaon"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1500,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Vehement Idol",
-    "arcana": "Priestess",
-    "level": 89,
-    "hp": 435,
-    "sp": 247,
-    "stats": {
-      "strength": 52,
-      "magic": 83,
-      "endurance": 45,
-      "agility": 44,
-      "luck": 50
-    },
-    "resists": "--rr--nwr-",
-    "skills": [
-      "Pierce Attack",
-      "Bufudyne",
-      "Mabufudyne",
-      "Mudoon",
-      "Mamudoon"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1650,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Divine Mother",
-    "arcana": "Empress",
-    "level": 90,
-    "hp": 438,
-    "sp": 249,
-    "stats": {
-      "strength": 61,
-      "magic": 67,
-      "endurance": 53,
-      "agility": 46,
-      "luck": 50
-    },
-    "resists": "----wn-rw-",
-    "skills": [
-      "Strike Attack",
-      "Mahama",
-      "Mahamaon",
-      "Matarunda",
-      "Infuriate"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1800,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "King Castle",
-    "arcana": "Emperor",
-    "level": 92,
-    "hp": 464,
-    "sp": 228,
-    "stats": {
-      "strength": 71,
-      "magic": 69,
-      "endurance": 81,
-      "agility": 27,
-      "luck": 32
-    },
-    "resists": "-r---dwss-",
-    "skills": [
-      "Strike Attack",
-      "Ziodyne",
-      "Maziodyne",
-      "God's Hand",
-      "Poison Mist",
-      "Power Charge",
-      "Elec Break"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1800,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "White Sigil",
-    "arcana": "Hierophant",
-    "level": 92,
-    "hp": 444,
-    "sp": 252,
-    "stats": {
-      "strength": 56,
-      "magic": 88,
-      "endurance": 59,
-      "agility": 31,
-      "luck": 49
-    },
-    "resists": "r--wd--r--",
-    "skills": [
-      "Slash Attack",
-      "Megidolaon",
-      "Mabufudyne",
-      "Mamudoon",
-      "Mind Charge",
-      "Virus Breath"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1875,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Amorous Snake",
-    "arcana": "Lovers",
-    "level": 93,
-    "hp": 470,
-    "sp": 230,
-    "stats": {
-      "strength": 60,
-      "magic": 71,
-      "endurance": 49,
-      "agility": 47,
-      "luck": 59
-    },
-    "resists": "sssdw--rw-",
-    "skills": [
-      "Pierce Attack",
-      "Agidyne",
-      "Mahama",
-      "Sexy Dance",
-      "Virus Breath",
-      "Re Patra",
-      "Mediarahan"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 1950,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Hallowed Turret",
-    "arcana": "Chariot",
-    "level": 94,
-    "hp": 520,
-    "sp": 220,
-    "stats": {
-      "strength": 95,
-      "magic": 26,
-      "endurance": 94,
-      "agility": 30,
-      "luck": 44
-    },
-    "resists": "rrr--w-ss-",
-    "skills": [
-      "Strike Attack",
-      "Primal Force",
-      "Vile Assault",
-      "Power Charge",
-      "Marakunda"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 2025,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Tenjin Musha",
@@ -10934,102 +6753,6 @@
     ],
     "area": "Monad Depths 991-999",
     "exp": 2900,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Eternal Sand",
-    "arcana": "Fortune",
-    "level": 97,
-    "hp": 481,
-    "sp": 236,
-    "stats": {
-      "strength": 54,
-      "magic": 78,
-      "endurance": 62,
-      "agility": 53,
-      "luck": 51
-    },
-    "resists": "ww-nnnd---",
-    "skills": [
-      "Slash Attack",
-      "Magarudyne",
-      "Garudyne",
-      "Masukunda",
-      "Wind Break",
-      "Eerie Sound",
-      "Tentarafoo"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 2250,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Chaos Cyclops",
-    "arcana": "Hanged",
-    "level": 98,
-    "hp": 487,
-    "sp": 239,
-    "stats": {
-      "strength": 98,
-      "magic": 81,
-      "endurance": 66,
-      "agility": 28,
-      "luck": 31
-    },
-    "resists": "----d--nn-",
-    "skills": [
-      "Slash Attack",
-      "Bufudyne",
-      "Megidolaon",
-      "Marakukaja",
-      "God's Hand",
-      "Primal Force",
-      "Diarahan"
-    ],
-    "area": "Monad Depths 996-999",
-    "exp": 3500,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Void Giant",
-    "arcana": "Justice",
-    "level": 98,
-    "hp": 484,
-    "sp": 237,
-    "stats": {
-      "strength": 90,
-      "magic": 76,
-      "endurance": 72,
-      "agility": 28,
-      "luck": 35
-    },
-    "resists": "ddd----rr-",
-    "skills": [
-      "Slash Attack",
-      "Mahamaon",
-      "Hamaon",
-      "Mamudoon",
-      "Mudoon",
-      "Myriad Arrows",
-      "Deathbound"
-    ],
-    "area": "Monad Depths 991-999",
-    "exp": 2400,
     "drops": {
       "gem": "-",
       "item": "-"

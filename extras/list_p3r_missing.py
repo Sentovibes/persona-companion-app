@@ -1,48 +1,46 @@
-#!/usr/bin/env python3
-"""
-List missing P3R enemy images
-"""
-
 import json
 from pathlib import Path
+import re
 
-# Load P3R enemies
-with open("../app/src/main/assets/data/enemies/p3r_enemies.json", "r", encoding="utf-8") as f:
-    enemies = json.load(f)
+def safe_filename(name):
+    """Convert name to safe filename format"""
+    safe = name.lower().replace(" ", "_").replace("/", "_").replace(":", "").replace("?", "").replace("&", "").replace("-", "_").replace("'", "")
+    safe = safe.replace("___", "_")
+    return safe
 
-# Check which have images
-images_dir = Path("../app/src/main/assets/images/enemies")
+# Load P3R enemy data
+with open('../app/src/main/assets/data/enemies/p3r_enemies.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+names = [name for name in data.keys() if name]
+
+# Get unique base names (remove A-Z variants)
+unique_base_names = set()
+for name in names:
+    base_name = re.sub(r'\s+[A-Z]$', '', name)
+    unique_base_names.add(base_name)
+
+# Check downloaded folder
+download_folder = Path("downloaded_enemies/p3r")
+downloaded_safe_names = set()
+if download_folder.exists():
+    for img in download_folder.glob("*.*"):
+        downloaded_safe_names.add(img.stem)
+
+# Find missing
 missing = []
-bosses = []
+for name in unique_base_names:
+    safe_name = safe_filename(name)
+    if safe_name not in downloaded_safe_names:
+        missing.append(name)
 
-for enemy in enemies:
-    name = enemy["name"]
-    safe_name = name.replace("/", "_").replace(":", "").replace("?", "")
-    image_path = images_dir / f"{safe_name}.png"
-    
-    if not image_path.exists():
-        # Check if it's a boss (has phases or is a known boss)
-        is_boss = (
-            "Nyx" in name or
-            "Elizabeth" in name or
-            "Erebus" in name or
-            "Reaper" in name or
-            "Strega" in name or
-            enemy.get("phases") is not None or
-            enemy.get("level", 0) > 80
-        )
-        
-        if is_boss:
-            bosses.append(name)
-        else:
-            missing.append(name)
+print(f"P3R MISSING ENEMIES: {len(missing)} total")
+print("="*70)
+for i, name in enumerate(sorted(missing), 1):
+    print(f"{i:2}. {name}")
 
-print("=" * 60)
-print("P3R MISSING BOSSES (HIGH PRIORITY)")
-print("=" * 60)
-for i, name in enumerate(sorted(bosses), 1):
-    print(f"{i}. {name}")
-
-print(f"\nTotal missing bosses: {len(bosses)}")
-print(f"Total missing regular enemies: {len(missing)}")
-print(f"Total missing: {len(bosses) + len(missing)}")
+print("\n" + "="*70)
+print(f"Total missing: {len(missing)}")
+print(f"Total unique: {len(unique_base_names)}")
+print(f"Downloaded: {len(downloaded_safe_names)}")
+print(f"Success rate: {(len(downloaded_safe_names)/len(unique_base_names)*100):.1f}%")

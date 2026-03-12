@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M100,100m-90,0a90,90 0,1 1,180 0a90,90 0,1 1,-180 0" />
+    
+    <!-- Shadow icon (simplified enemy shadow shape) -->
+    <path
+        android:fillColor="#757575"
+        android:pathData="M100,70 L130,90 L130,130 L100,150 L70,130 L70,90 Z" />
+    
+    <!-- Inner detail -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M100,85 L115,95 L115,125 L100,135 L85,125 L85,95 Z" />
+</vector>

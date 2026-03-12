@@ -75,6 +75,25 @@ class UserPreferences(context: Context) {
         prefs.edit().putString("recent_enemies", gson.toJson(recents)).apply()
     }
     
+    // P3P Protagonist selection (Male MC or FeMC)
+    enum class P3PProtagonist {
+        MALE,
+        FEMC
+    }
+    
+    fun getP3PProtagonist(): P3PProtagonist {
+        val value = prefs.getString("p3p_protagonist", "MALE") ?: "MALE"
+        return try {
+            P3PProtagonist.valueOf(value)
+        } catch (e: Exception) {
+            P3PProtagonist.MALE
+        }
+    }
+    
+    fun setP3PProtagonist(protagonist: P3PProtagonist) {
+        prefs.edit().putString("p3p_protagonist", protagonist.name).apply()
+    }
+    
     data class RecentItem(
         val seriesId: String,
         val gameId: String,

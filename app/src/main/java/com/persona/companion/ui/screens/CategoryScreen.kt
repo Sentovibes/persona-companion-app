@@ -64,12 +64,16 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
         CategoryItem(
             label     = "Social Links / Confidants",
             icon      = Icons.Default.Groups,
-            available = false
+            available = gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"),
+            route     = if (gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r")) 
+                Screen.SocialLinks.createRoute(seriesId, gameId) else null
         ),
         CategoryItem(
             label     = "Classroom Answers",
             icon      = Icons.Default.School,
-            available = false
+            available = gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"),
+            route     = if (gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"))
+                Screen.ClassroomAnswers.createRoute(seriesId, gameId) else null
         )
     )
 

@@ -33,3 +33,8 @@ val TagBless     = Color(0xFFFFEE58)
 val TagCurse     = Color(0xFF4A148C)
 val TagPhys      = Color(0xFFBDBDBD)
 val TagAlmighty  = Color(0xFFFF6D00)
+
+// ── Accent colors for UI elements ────────────────────────────────────────────
+val AccentBlue   = Color(0xFF2196F3)
+val AccentGreen  = Color(0xFF4CAF50)
+val AccentRed    = Color(0xFFF44336)

@@ -31,15 +31,17 @@ fun ProfileImage(
     name: String,
     isEnemy: Boolean,
     modifier: Modifier = Modifier,
-    size: Int = 64
+    size: Int = 64,
+    gameId: String? = null,
+    onClick: (() -> Unit)? = null
 ) {
     val context = LocalContext.current
     var showFullImage by remember { mutableStateOf(false) }
     var bitmap by remember { mutableStateOf<Bitmap?>(null) }
     
     // Load image
-    LaunchedEffect(name) {
-        val imagePath = ImageUtils.getImagePath(name, isEnemy)
+    LaunchedEffect(name, gameId) {
+        val imagePath = ImageUtils.getImagePath(name, isEnemy, gameId)
         bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
     }
     
@@ -48,7 +50,13 @@ fun ProfileImage(
             .size(size.dp)
             .clip(CircleShape)
             .background(Surface)
-            .clickable(enabled = bitmap != null) { showFullImage = true },
+            .clickable(enabled = bitmap != null) { 
+                if (onClick != null) {
+                    onClick()
+                } else {
+                    showFullImage = true
+                }
+            },
         contentAlignment = Alignment.Center
     ) {
         if (bitmap != null) {
@@ -69,8 +77,8 @@ fun ProfileImage(
         }
     }
     
-    // Full screen image dialog
-    if (showFullImage && bitmap != null) {
+    // Full screen image dialog (only show if onClick is not provided)
+    if (showFullImage && bitmap != null && onClick == null) {
         Dialog(
             onDismissRequest = { showFullImage = false },
             properties = DialogProperties(usePlatformDefaultWidth = false)

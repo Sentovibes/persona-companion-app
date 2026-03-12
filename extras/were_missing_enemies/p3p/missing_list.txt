@@ -1,0 +1,14 @@
+MISSING P3P ENEMIES (11 total)
+======================================================================
+
+  1. Chariot & Justice -> chariot_&_justice.png
+  2. Elizabeth / Theodore -> elizabeth___theodore.png
+  3. Emperor & Empress -> emperor_&_empress.png
+  4. Fortune & Strength -> fortune_&_strength.png
+  5. Hanged Man -> hanged_man.png
+  6. Hermit -> hermit.png
+  7. Hierophant -> hierophant.png
+  8. Judgement Sword -> judgement_sword.png
+  9. Lovers -> lovers.png
+ 10. Merciful Maya -> merciful_maya.png
+ 11. Priestess -> priestess.png

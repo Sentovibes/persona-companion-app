@@ -21,10 +21,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.persona.companion.BuildConfig
+import com.persona.companion.data.UserPreferences
 import com.persona.companion.ui.theme.*
+import com.persona.companion.ui.components.ImagesSettingsSection
 import com.persona.companion.ui.viewmodels.SettingsViewModel
 import com.persona.companion.utils.UpdateChecker
 import kotlinx.coroutines.launch
+import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,6 +37,7 @@ fun SettingsScreen(
 ) {
     val settings by vm.settings.collectAsState()
     val context = LocalContext.current
+    val userPrefs = remember { UserPreferences(context) }
     val scope = rememberCoroutineScope()
     
     var isCheckingUpdate by remember { mutableStateOf(false) }
@@ -62,6 +66,24 @@ fun SettingsScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            item {
+                Text(
+                    text = "Persona 3 Portable",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = TextPrimary,
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+            }
+
+            item {
+                P3PProtagonistSelector(
+                    selectedProtagonist = userPrefs.getP3PProtagonist(),
+                    onProtagonistChange = { protagonist ->
+                        userPrefs.setP3PProtagonist(protagonist)
+                    }
+                )
+            }
+
             item {
                 Text(
                     text = "Content Filters",
@@ -97,6 +119,83 @@ fun SettingsScreen(
                     color = TextDisabled,
                     modifier = Modifier.padding(horizontal = 16.dp)
                 )
+            }
+
+            item {
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    text = "HD Images",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = TextPrimary,
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+            }
+
+            item {
+                ImagesSettingsSection()
+            }
+            
+            // Debug info button (only in debug builds)
+            if (BuildConfig.ENABLE_DEBUG_FEATURES) {
+                item {
+                    var debugInfo by remember { mutableStateOf<String?>(null) }
+                    var showDebugDialog by remember { mutableStateOf(false) }
+                    
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(SurfaceCard)
+                            .clickable {
+                                val debugFile = File(context.getExternalFilesDir(null), "import_debug.txt")
+                                debugInfo = if (debugFile.exists()) {
+                                    debugFile.readText()
+                                } else {
+                                    "No debug file found. Import images first."
+                                }
+                                showDebugDialog = true
+                            }
+                            .padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Show Import Debug Info",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = TextPrimary
+                            )
+                            Spacer(Modifier.height(4.dp))
+                            Text(
+                                text = "View detailed import diagnostics",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = TextSecondary
+                            )
+                        }
+                    }
+                    
+                    if (showDebugDialog) {
+                        AlertDialog(
+                            onDismissRequest = { showDebugDialog = false },
+                            title = { Text("Import Debug Info") },
+                            text = {
+                                androidx.compose.foundation.lazy.LazyColumn {
+                                    item {
+                                        Text(
+                                            text = debugInfo ?: "",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace
+                                        )
+                                    }
+                                }
+                            },
+                            confirmButton = {
+                                TextButton(onClick = { showDebugDialog = false }) {
+                                    Text("Close")
+                                }
+                            }
+                        )
+                    }
+                }
             }
 
             item {
@@ -301,3 +400,87 @@ private fun SettingItem(
         }
     }
 }
+
+@Composable
+private fun P3PProtagonistSelector(
+    selectedProtagonist: UserPreferences.P3PProtagonist,
+    onProtagonistChange: (UserPreferences.P3PProtagonist) -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(SurfaceCard)
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "P3P Protagonist",
+            style = MaterialTheme.typography.bodyLarge,
+            color = TextPrimary
+        )
+        Spacer(Modifier.height(4.dp))
+        Text(
+            text = "Choose which protagonist's Social Links to display",
+            style = MaterialTheme.typography.bodySmall,
+            color = TextSecondary
+        )
+        Spacer(Modifier.height(12.dp))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            // Male MC button
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(
+                        if (selectedProtagonist == UserPreferences.P3PProtagonist.MALE)
+                            TextPrimary.copy(alpha = 0.2f)
+                        else
+                            Background
+                    )
+                    .clickable { onProtagonistChange(UserPreferences.P3PProtagonist.MALE) }
+                    .padding(12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "Male MC",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (selectedProtagonist == UserPreferences.P3PProtagonist.MALE)
+                        TextPrimary
+                    else
+                        TextSecondary
+                )
+            }
+
+            // FeMC button
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(
+                        if (selectedProtagonist == UserPreferences.P3PProtagonist.FEMC)
+                            TextPrimary.copy(alpha = 0.2f)
+                        else
+                            Background
+                    )
+                    .clickable { onProtagonistChange(UserPreferences.P3PProtagonist.FEMC) }
+                    .padding(12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "FeMC",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (selectedProtagonist == UserPreferences.P3PProtagonist.FEMC)
+                        TextPrimary
+                    else
+                        TextSecondary
+                )
+            }
+        }
+    }
+}
+
+

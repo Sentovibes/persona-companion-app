@@ -444,36 +444,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Avenger Knight",
-    "arcana": "Emperor",
-    "level": 15,
-    "hp": 300,
-    "sp": 87,
-    "stats": {
-      "strength": 9,
-      "magic": 8,
-      "endurance": 6,
-      "agility": 8,
-      "luck": 10
-    },
-    "resists": "-w------",
-    "skills": [
-      "Skewer",
-      "Poison Skewer",
-      "Mudo",
-      "Power Charge",
-      "Red Wall"
-    ],
-    "area": "Yukiko's Castle 7",
-    "exp": 485,
-    "drops": {
-      "gem": "-",
-      "item": "Bronze Reins"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Heat Balance",
     "arcana": "Justice",
     "level": 15,
@@ -776,33 +746,6 @@
     "drops": {
       "gem": "-",
       "item": "Firm Cloth"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Daring Gigas",
-    "arcana": "Strength",
-    "level": 19,
-    "hp": 225,
-    "sp": 46,
-    "stats": {
-      "strength": 23,
-      "magic": 6,
-      "endurance": 15,
-      "agility": 15,
-      "luck": 4
-    },
-    "resists": "s----ZZ-",
-    "skills": [
-      "Sonic Punch",
-      "Kill Rush"
-    ],
-    "area": "Steamy Bathhouse 2-4, 6-8",
-    "exp": 230,
-    "drops": {
-      "gem": "-",
-      "item": "Proof of Spirit"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -1744,36 +1687,6 @@
     "drops": {
       "gem": "-",
       "item": "Steel Collar"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Killing Hand",
-    "arcana": "Magician",
-    "level": 32,
-    "hp": 208,
-    "sp": 179,
-    "stats": {
-      "strength": 14,
-      "magic": 20,
-      "endurance": 13,
-      "agility": 27,
-      "luck": 21
-    },
-    "resists": "w-------",
-    "skills": [
-      "Rebellion",
-      "White Wall",
-      "Tetrakarn",
-      "Balzac",
-      "Recarmdra"
-    ],
-    "area": "Marukyu Striptease 5-10",
-    "exp": 490,
-    "drops": {
-      "gem": "-",
-      "item": "Glossy Clasp"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -3518,34 +3431,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Chaos Fuzz",
-    "arcana": "Hierophant",
-    "level": 51,
-    "hp": 341,
-    "sp": 133,
-    "stats": {
-      "strength": 33,
-      "magic": 30,
-      "endurance": 14,
-      "agility": 30,
-      "luck": 29
-    },
-    "resists": "-wrrrrr-",
-    "skills": [
-      "Foolish Whisper",
-      "Rampage",
-      "Cruel Attack"
-    ],
-    "area": "Secret Lab 5",
-    "exp": 1340,
-    "drops": {
-      "gem": "-",
-      "item": "Platinum Lump"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Raindrop Musha",
     "arcana": "Strength",
     "level": 51,
@@ -3684,33 +3569,6 @@
     "drops": {
       "gem": "-",
       "item": "Bushy Fur"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "World Balance",
-    "arcana": "Justice",
-    "level": 52,
-    "hp": 210,
-    "sp": 576,
-    "stats": {
-      "strength": 11,
-      "magic": 55,
-      "endurance": 21,
-      "agility": 35,
-      "luck": 34
-    },
-    "resists": "sssssZZ-",
-    "skills": [
-      "Hamaon",
-      "Mudoon"
-    ],
-    "area": "Secret Lab 5, 6",
-    "exp": 2300,
-    "drops": {
-      "gem": "-",
-      "item": "Shining Dish"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -4202,33 +4060,6 @@
     "drops": {
       "gem": "-",
       "item": "Jet Black Steel"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Dominating Machine",
-    "arcana": "Justice",
-    "level": 57,
-    "hp": 3500,
-    "sp": 112,
-    "stats": {
-      "strength": 43,
-      "magic": 31,
-      "endurance": 1,
-      "agility": 40,
-      "luck": 34
-    },
-    "resists": "-----nn-",
-    "skills": [
-      "Rampage",
-      "Cruel Attack"
-    ],
-    "area": "Secret Lab 7, 8",
-    "exp": 5040,
-    "drops": {
-      "gem": "-",
-      "item": "Damascus"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -5401,35 +5232,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Amorous Snake",
-    "arcana": "Lovers",
-    "level": 69,
-    "hp": 268,
-    "sp": 183,
-    "stats": {
-      "strength": 48,
-      "magic": 45,
-      "endurance": 26,
-      "agility": 48,
-      "luck": 39
-    },
-    "resists": "--wssrZ-",
-    "skills": [
-      "Poison Arrow",
-      "Blight",
-      "Life Leech",
-      "Poison Boost"
-    ],
-    "area": "Magatsu Mandala 1-3, Su",
-    "exp": 3760,
-    "drops": {
-      "gem": "-",
-      "item": "Scaly Lump"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Fanatic Tower",
     "arcana": "Hierophant",
     "level": 69,
@@ -5678,34 +5480,6 @@
     "drops": {
       "gem": "-",
       "item": "Gold Signature"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Sleeping Table",
-    "arcana": "Magician",
-    "level": 71,
-    "hp": 333,
-    "sp": 60,
-    "stats": {
-      "strength": 45,
-      "magic": 56,
-      "endurance": 30,
-      "agility": 50,
-      "luck": 42
-    },
-    "resists": "nw-n-rZ-",
-    "skills": [
-      "Brain Shake",
-      "Navas Nebula",
-      "Anima Freeze"
-    ],
-    "area": "Magatsu Mandala 2, 3",
-    "exp": 3950,
-    "drops": {
-      "gem": "-",
-      "item": "Thought Cross"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -7157,43 +6931,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Gorgeous King",
-    "arcana": "Emperor P",
-    "level": 77,
-    "hp": 4000,
-    "sp": 575,
-    "stats": {
-      "strength": 62,
-      "magic": 52,
-      "endurance": 26,
-      "agility": 60,
-      "luck": 88
-    },
-    "resists": "wssssnn-",
-    "skills": [
-      "Summon",
-      "Tetrakarn",
-      "Makarakarn",
-      "Evil Touch",
-      "Poison Mist",
-      "Balzac",
-      "Makajam",
-      "Enveration",
-      "Soul Break",
-      "Spirit Drain",
-      "Mind Charge",
-      "Megidolaon"
-    ],
-    "area": "Hollow Forest 4",
-    "exp": 0,
-    "drops": {
-      "gem": "-",
-      "item": "-"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
     "name": "Harmony Giant",
     "arcana": "Justice",
     "level": 77,
@@ -7221,48 +6958,6 @@
     "drops": {
       "gem": "-",
       "item": "Diamond Sheet"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Heaven's Giant",
-    "arcana": "Magician P",
-    "level": 77,
-    "hp": 3333,
-    "sp": 3333,
-    "stats": {
-      "strength": 24,
-      "magic": 52,
-      "endurance": 4,
-      "agility": 62,
-      "luck": 55
-    },
-    "resists": "snnnnnns",
-    "skills": [
-      "Cell Breaker",
-      "Mustard Bomb",
-      "Navas Nebula",
-      "Mind Slice",
-      "Poison Arrow",
-      "Aeon Rain",
-      "Agidyne",
-      "Bufudyne",
-      "Ziodyne",
-      "Garudyne",
-      "Power Charge",
-      "Heat Riser",
-      "Debilitate",
-      "Spirit Drain",
-      "Soul Break",
-      "Balzac",
-      "Stagnant Air"
-    ],
-    "area": "Hollow Forest 7",
-    "exp": 8000,
-    "drops": {
-      "gem": "-",
-      "item": "-"
     },
     "isBoss": false,
     "isMiniBoss": false
@@ -8046,39 +7741,6 @@
     "drops": {
       "gem": "-",
       "item": "Merciless Cord"
-    },
-    "isBoss": false,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Neo Minotaur",
-    "arcana": "Hanged",
-    "level": 82,
-    "hp": 5100,
-    "sp": 379,
-    "stats": {
-      "strength": 63,
-      "magic": 42,
-      "endurance": 59,
-      "agility": 54,
-      "luck": 88
-    },
-    "resists": "sw------",
-    "skills": [
-      "Mabufudyne",
-      "Rampage",
-      "Cruel Attack",
-      "Auto-Mataru",
-      "Evade Fire",
-      "Ice Amp",
-      "Power Charge",
-      "Mind Charge"
-    ],
-    "area": "Yomotsu Hirasaka 3, 4, 7, 8, Su",
-    "exp": 3120,
-    "drops": {
-      "gem": "-",
-      "item": "Tyrannical Hide"
     },
     "isBoss": false,
     "isMiniBoss": false

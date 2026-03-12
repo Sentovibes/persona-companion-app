@@ -9,6 +9,8 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.persona.companion.BuildConfig
+import com.persona.companion.data.ImageDownloadManager
 
 /**
  * Device type classification
@@ -92,12 +94,16 @@ object DeviceUtils {
     
     /**
      * Check if images should be loaded for this device
+     * Now checks if images are actually available (bundled or downloaded)
      */
     fun shouldLoadImages(context: Context): Boolean {
-        return when (getDeviceType(context)) {
-            DeviceType.PHONE -> false  // Skip images on phones
-            DeviceType.TABLET, DeviceType.TV, DeviceType.CAST -> true
+        // Check if images are bundled in the APK
+        if (BuildConfig.INCLUDE_IMAGES) {
+            return true
         }
+        
+        // Check if images have been downloaded (use ImageDownloadManager)
+        return ImageDownloadManager.areImagesDownloaded(context)
     }
     
     /**

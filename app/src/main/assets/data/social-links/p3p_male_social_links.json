@@ -1,0 +1,878 @@
+{
+  "Fool": {
+    "Rank 1: Auto": {},
+    "Rank 2: Auto": {},
+    "Rank 3: Auto": {},
+    "Rank 4: Auto": {},
+    "Rank 5: Auto": {},
+    "Rank 6: Auto": {},
+    "Rank 7: Auto": {},
+    "Rank 8: Auto": {},
+    "Rank 9: Auto": {},
+    "Rank 10: Auto": {}
+  },
+  "Magician": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "No OR That's a secret": 7,
+      "I like older women OR I like them all": 7
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "What, life?": 22,
+      "Go for it": 7
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Good luck": 22
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "I agree": 22
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "I have 30-year goals": 22
+    },
+    "Rank 7": {
+      "Next Rank": 22,
+      "Ask what's wrong": 7,
+      "Bride-To-Be Magazine": 7,
+      "That's great. Congrats!": 7
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Are you in trouble?": 22,
+      "You should go with her OR You should talk to her": 7
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Confrount Emiri": 22
+    },
+    "Rank 10": {}
+  },
+  "Priestess": {
+    "Rank 1": {
+      "Requires Courage Rank 6 (MAX)": 0
+    },
+    "Rank 2": {
+      "Next Rank": 1,
+      "Sure": 22
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "I believe in you": 22,
+      "Any_1": 7
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "On, I don't think so": 22
+    },
+    "Rank 5": {
+      "Next Rank": 30,
+      "You did a great job": 22,
+      "Any_1": 7
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Okay": 22
+    },
+    "Rank 7": {
+      "Next Rank": 35,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Date 1": {
+      "Yeah, I'm not too bad": 45
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Any_1": 7,
+      "I Want to be with you too": 22
+    },
+    "Date 2": {
+      "N-No, I haven't": 45
+    },
+    "Rank 9": {
+      "Next Rank": 55,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 10": {}
+  },
+  "Empress": {
+    "Rank 1": {
+      "Requires Academics Rank 6 (MAX)": 0,
+      "First place in at least one exam needed": 0
+    },
+    "Rank 2": {
+      "Next Rank": 1,
+      "Any_1": 7
+    },
+    "Rank 3": {
+      "Next Rank": 21,
+      "Ask her to treat you": 7,
+      "Does that make you happy?": 22,
+      "Any_1": 7,
+      "Agree to forget about it": 7
+    },
+    "Rank 4": {
+      "Next Rank": 21,
+      "Did something happen?": 7,
+      "It's the result of love": 22,
+      "Any_1": 0
+    },
+    "Rank 5": {
+      "Next Rank": 21,
+      "I'm glad you enjoyed it": 22,
+      "A motorcycle?": 22,
+      "Let's go for a ride": 22
+    },
+    "Rank 6": {
+      "Next Rank": 21,
+      "Can I get a book for you?": 22,
+      "That's news to me!": 7,
+      "You have to reconsider": 22
+    },
+    "Rank 7": {
+      "Next Rank": 21,
+      "Let's do it": 22
+    },
+    "Rank 8": {
+      "Next Rank": 21,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Say something to the guy": 22,
+      "Any_3": 22
+    },
+    "Rank 9": {
+      "Next Rank": 21,
+      "That makes me happy": 22
+    },
+    "Rank 10": {}
+  },
+  "Emperor": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "It's a waste of time": 22
+    },
+    "Rank 3": {
+      "Next Rank": 1,
+      "Any_1": 7
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Good work": 22
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "They can be pretty cruel": 22
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "But I just got here": 22
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "He should suffer": 22
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "It wasn't me": 22
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Don't blame yourself": 22
+    },
+    "Rank 10": {}
+  },
+  "Hierophant": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Tell him": 7,
+      "Thanks": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Looking for something?": 7,
+      "I'll help you look": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Any_1": 22,
+      "Any_2": 0,
+      "Now, you have me worried": 7
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "I'll root out the truth!": 7,
+      "Any_1": 7
+    },
+    "Rank 6": {
+      "Next Rank": 20,
+      "Please stop quarreling": 22,
+      "Any_1": 0
+    },
+    "Rank 7": {
+      "Next Rank": 20,
+      "Ask why she's crying": 7,
+      "That's great": 7,
+      "Any_1": 7
+    },
+    "Rank 8": {
+      "Next Rank": 20,
+      "Any_1": 7,
+      "Any_2": 0,
+      "Any_3": 22
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "Any_1": 7,
+      "Any_2": 0
+    },
+    "Rank 10": {}
+  },
+  "Lovers": {
+    "Rank 1": {
+      "Requires Charm Rank 6 (MAX)": 0
+    },
+    "Rank 2": {
+      "Next Rank": 1,
+      "Pink's cute": 22,
+      "that's messed up": 7
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Any_1": 0
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Are you alright?": 22
+    },
+    "Rank 5": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Try to cheer her up": 22
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Anytime": 22
+    },
+    "Rank 7": {
+      "Next Rank": 35,
+      "Sounds good": 22
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Alright": 22,
+      "Any_1": 0
+    },
+    "Date 1": {
+      "It's a healthy appetite": 45
+    },
+    "Rank 9": {
+      "Next Rank": 55,
+      "......": 22
+    },
+    "Rank 10": {}
+  },
+  "Chariot": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Toughen up": 7,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Are you sure you're okay?": 7,
+      "Will it heal?": 7
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "That sucks": 22
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "The hospital again?": 7,
+      "Let him use your shoulder": 22
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Suck it up": 7,
+      "Is it that important?": 7,
+      "What will happen to your knee?": 7
+    },
+    "Rank 7": {
+      "Next Rank": 22,
+      "How's your knees?": 7,
+      "You need to toughen up": 22
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Look away": 7
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "I'm fine": 22
+    },
+    "Rank 10": {}
+  },
+  "Justice": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Don't worry about it": 22,
+      "I read the classics OR I read manga": 7,
+      "Not really": 7
+    },
+    "Rank 3": {
+      "Next Rank": 22,
+      "How rude": 7,
+      "I agree": 7
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Speak to her calmly": 22
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "So, how was it?": 22,
+      "It's just a coincidence": 7,
+      "Don't be so hard on yourself": 7,
+      "Hold her hand": 22
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Is it good?": 22,
+      "What do you mean?": 7
+    },
+    "Date 1": {
+      "There's no thief": 45
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "You're not to blame": 7,
+      "We have to do something": 7
+    },
+    "Rank 8": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Talk to the teacher": 7
+    },
+    "Date 2": {
+      "I'm thinking about it": 45
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Don't worry , she'll help us": 7,
+      "Wait and see what happens": 7,
+      "Any_1": 0,
+      "What's wrong?": 7
+    },
+    "Rank 10": {}
+  },
+  "Hermit": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Of course": 33,
+      "The outdoors are overrated": 7
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Oh really?": 7,
+      "So you don't like your job?": 22
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Why don't we get married?": 22
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "Don't you mean S.O.B.": 22,
+      "You're a drunken boxing sensei OR Are you a teacher?": 7
+    },
+    "Rank 6": {
+      "Next Rank": 20,
+      "Which bastard?": 22
+    },
+    "Rank 7": {
+      "Next Rank": 20,
+      "Guys only go for younger chicks": 22,
+      "Any_1": 7
+    },
+    "Rank 8": {
+      "Next Rank": 20,
+      "Hurry up and tell me already": 22,
+      "What is he like?": 7
+    },
+    "Rank 9": {
+      "Next Rank": 20,
+      "No way!": 7,
+      "Any_1": 0,
+      "What are you planning?": 7
+    },
+    "Rank 10": {}
+  },
+  "Fortune": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Great job!": 22,
+      "Any_1": 0
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 7,
+      "Complaining won't help": 22
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "You should tell your dad": 22
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Do whatever you want": 22
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "Are you gonna be a doctor?": 22
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Yeah, I'm fine": 22,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Try to stop him": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 10": {}
+  },
+  "Strength": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "What happened?": 7,
+      "I agree": 22,
+      "That's true": 7
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Not really": 7,
+      "Any_1": 7,
+      "Let's go": 7
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Any_2": 0,
+      "No worries": 7,
+      "I'm honored": 22
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Any_1": 7,
+      "Do you know him?": 7,
+      "It's up to you": 7
+    },
+    "Rank 6": {
+      "Next Rank": 22,
+      "Let's hope for the best": 7
+    },
+    "Date 1": {
+      "You'll find something": 45
+    },
+    "Rank 7": {
+      "Next Rank": 35,
+      "Are you relieved?": 7,
+      "Sure": 22
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "A boy OR A girl": 7
+    },
+    "Date 2": {
+      "Will you wipe it off?": 45
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Forget about what?": 7,
+      "An instructor?": 22
+    },
+    "Rank 10": {}
+  },
+  "Hanged Man": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Sure, let's go": 22,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Any_1": 0,
+      "Don't worry, he'll be there": 7
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "I'm happy for you OR Nobody could forget you": 22
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "That's terrible": 22,
+      "That isn't true": 7
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Calm down OR Sounds like a plan": 7,
+      "You don't need that stuff": 22
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 8": {
+      "Next Rank": 30,
+      "Hamburgers": 7,
+      "Yeah, you did good": 22,
+      "Choose your dad": 22
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "We're friends forever": 22
+    },
+    "Rank 10": {}
+  },
+  "Death": {
+    "Rank 1: Auto": {},
+    "Rank 2: Auto": {},
+    "Rank 3: Auto": {},
+    "Rank 4: Auto": {},
+    "Rank 5: Auto": {},
+    "Rank 6: Auto": {},
+    "Rank 7: Auto": {},
+    "Rank 8: Auto": {},
+    "Rank 9: Auto": {},
+    "Rank 10: Auto": {}
+  },
+  "Temperance": {
+    "Rank 1": {
+      "Requires Academics Rank 2": 0
+    },
+    "Rank 2": {
+      "Next Rank": 1,
+      "Any_1": 7,
+      "Yeah, Japan is great": 22
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Any_1": 7,
+      "Something traditional?": 22
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Are you alright?": 22,
+      "Any_1": 0
+    },
+    "Rank 5": {
+      "Next Rank": 14,
+      "Sure": 7,
+      "Then stay": 7
+    },
+    "Rank 6": {
+      "Next Rank": 16,
+      "Take a break": 7,
+      "Let's go": 7,
+      "Support him": 22
+    },
+    "Rank 7": {
+      "Next Rank": 6,
+      "That's a good idea": 22
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "He'll agree for sure": 22
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Ask about his country": 22
+    },
+    "Rank 10": {}
+  },
+  "Devil": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Placebo": 22,
+      "Any_1": 7
+    },
+    "Rank 3": {
+      "Maybe a little": 22
+    },
+    "Rank 4": {
+      "I sure have": 22
+    },
+    "Rank 5": {
+      "Who're you talking about?": 7,
+      "Any_1": 0,
+      "Is it always about money?": 7
+    },
+    "Rank 6": {
+      "Sounds fun": 22
+    },
+    "Rank 7": {
+      "Sort of?": 7,
+      "The organic one": 22
+    },
+    "Rank 8": {
+      "Oh really?": 22
+    },
+    "Rank 9": {
+      "Are you going to donate?": 22
+    },
+    "Rank 10": {}
+  },
+  "Tower": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "None of your business": 22,
+      "I'm sorry, um?": 7
+    },
+    "Rank 3": {
+      "Next Rank": 25,
+      "I don't have any friends": 22
+    },
+    "Rank 4": {
+      "Next Rank": 25,
+      "Yeah that might look cool": 22
+    },
+    "Rank 5": {
+      "Next Rank": 25,
+      "I have enough": 7,
+      "Yes": 22
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "You should go home": 22,
+      "What about the others?": 7
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "I don't think you should": 22
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Dad?": 22,
+      "I was with a friend OR None of your business": 7,
+      "Any_1": 0,
+      "Are you running away?": 7
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Any_1": 7,
+      "Any_2": 7,
+      "Any_3": 7
+    },
+    "Rank 10": {}
+  },
+  "Star": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Yeah, no problem": 7,
+      "Myself really": 22
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Any_1": 7,
+      "Any_2": 7
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Any_1": 7,
+      "Sounds like a good plan": 7,
+      "Yeah, I bet she would be": 7
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "Are you okay?": 7,
+      "We should come here again": 7
+    },
+    "Rank 6": {
+      "Next Rank": 20,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Hey, no problem": 22
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "I don't mind": 7,
+      "Any_1": 7,
+      "Any_2": 0,
+      "Don't give up!": 22
+    },
+    "Rank 8": {
+      "Next Rank": 30,
+      "You should get some more": 22,
+      "Any_1": 7
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "And you won?": 7,
+      "Do a victory celebration": 7,
+      "Any_1": 7,
+      "Thank him for his generosity": 7
+    },
+    "Rank 10": {}
+  },
+  "Moon": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "Sure, okay": 22
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "You are the Gourmet King": 22
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Oh, are you sick?": 22
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Yeah, that's right": 22
+    },
+    "Rank 6": {
+      "Next Rank": 22,
+      "Are you feeling sick?": 22
+    },
+    "Rank 7": {
+      "Next Rank": 22,
+      "Wiped off the face of ??": 22,
+      "Any_1": 0
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Oh brother": 22
+    },
+    "Rank 9": {
+      "Next Rank": 5,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 10": {}
+  },
+  "Sun": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Really": 7,
+      "That's a good point": 7
+    },
+    "Rank 3": {
+      "I don't know": 7,
+      "Try not to talk so much": 7
+    },
+    "Rank 4": {
+      "Yeah, I like reading": 22,
+      "If it's boring, I stop reading": 7
+    },
+    "Rank 5": {
+      "Reprimand Akinari": 22
+    },
+    "Rank 6": {
+      "Hey, that's cool": 22,
+      "It sounds interesting": 22
+    },
+    "Rank 7": {
+      "It sounds really depressing": 22
+    },
+    "Rank 8": {
+      "Stay at his side": 7,
+      "What are you thinking?": 7
+    },
+    "Rank 9": {
+      "Oh, did you finish the story?": 7
+    },
+    "Rank 10": {}
+  },
+  "Aeon": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 1,
+      "I like it": 22
+    },
+    "Rank 3": {
+      "Next Rank": 1,
+      "Any_1": 0,
+      "That’s not true": 7
+    },
+    "Rank 4": {
+      "Next Rank": 1,
+      "Any_1": 0,
+      "All right": 22
+    },
+    "Rank 5": {
+      "Next Rank": 1,
+      "You may be right": 22
+    },
+    "Rank 6": {
+      "Next Rank": 1,
+      "No, you didn't OR He saw me as a boyfriend": 22
+    },
+    "Rank 7": {
+      "Next Rank": 1,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 8": {
+      "Next Rank": 1,
+      "I'm doing it now": 22,
+      "Any_1": 15
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "You're right": 22
+    },
+    "Rank 10": {}
+  }
+}

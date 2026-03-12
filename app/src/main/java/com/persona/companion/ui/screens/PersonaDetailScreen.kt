@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -32,6 +33,7 @@ import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Persona
 import com.persona.companion.models.PersonaSeries
 import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.FullImageDialog
 import com.persona.companion.ui.components.ProfileImage
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
@@ -59,8 +61,16 @@ fun PersonaDetailScreen(
         PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
     }
     
-    val personaId = persona?.let { FilterUtils.getPersonaId(it) } ?: ""
+    val personaId = persona?.let { FilterUtils.getPersonaId(seriesId, gameId, it) } ?: ""
     var isFavorite by remember { mutableStateOf(userPrefs.isFavoritePersona(personaId)) }
+    var showFullImage by remember { mutableStateOf(false) }
+    
+    // Track view in history
+    LaunchedEffect(persona) {
+        persona?.let {
+            userPrefs.addRecentPersona(seriesId, gameId, it.name)
+        }
+    }
 
     Scaffold(
         containerColor = Background,
@@ -74,6 +84,19 @@ fun PersonaDetailScreen(
                 },
                 actions = {
                     if (persona != null) {
+                        IconButton(onClick = {
+                            com.persona.companion.utils.ShareUtils.sharePersona(
+                                context, 
+                                persona, 
+                                game.title
+                            )
+                        }) {
+                            Icon(
+                                imageVector = Icons.Default.Share,
+                                contentDescription = "Share",
+                                tint = TextSecondary
+                            )
+                        }
                         IconButton(onClick = {
                             if (isFavorite) {
                                 userPrefs.removeFavoritePersona(personaId)
@@ -104,20 +127,35 @@ fun PersonaDetailScreen(
         AdaptiveDetailLayout(
             modifier = Modifier.padding(padding),
             statsContent = {
-                PersonaStatsContent(persona = persona, series = series)
+                PersonaStatsContent(
+                    persona = persona, 
+                    series = series,
+                    gameId = gameId,
+                    onImageClick = { showFullImage = true }
+                )
             },
             imageContent = {
                 if (shouldLoadImages) {
-                    PersonaImageDisplay(persona = persona, deviceType = deviceType)
+                    PersonaImageDisplay(persona = persona, deviceType = deviceType, gameId = gameId)
                 }
             }
         )
+        
+        // Show full-size image dialog when clicked (phone only)
+        if (showFullImage && deviceType == DeviceType.PHONE) {
+            FullImageDialog(
+                name = persona.name,
+                isEnemy = false,
+                gameId = gameId,
+                onDismiss = { showFullImage = false }
+            )
+        }
     }
 }
 
 @Composable
-private fun PersonaStatsContent(persona: Persona, series: PersonaSeries) {
-    HeroSection(persona, series.color)
+private fun PersonaStatsContent(persona: Persona, series: PersonaSeries, gameId: String = "", onImageClick: () -> Unit = {}) {
+    HeroSection(persona, series.color, gameId, onImageClick)
     
     Spacer(modifier = Modifier.height(16.dp))
     
@@ -148,13 +186,13 @@ private fun PersonaStatsContent(persona: Persona, series: PersonaSeries) {
 }
 
 @Composable
-private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType) {
+private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType, gameId: String) {
     val context = LocalContext.current
     var bitmap by remember { mutableStateOf<Bitmap?>(null) }
     
     // Load image
-    LaunchedEffect(persona.name) {
-        val imagePath = ImageUtils.getImagePath(persona.name, isEnemy = false)
+    LaunchedEffect(persona.name, gameId) {
+        val imagePath = ImageUtils.getImagePath(persona.name, isEnemy = false, gameId = gameId)
         bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
     }
     
@@ -171,7 +209,8 @@ private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType) {
                 ProfileImage(
                     name = persona.name,
                     isEnemy = false,
-                    size = 64
+                    size = 64,
+                    gameId = gameId
                 )
             }
         }
@@ -223,11 +262,26 @@ private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType) {
 }
 
 @Composable
-private fun HeroSection(persona: Persona, accentColor: Color) {
+private fun HeroSection(persona: Persona, accentColor: Color, gameId: String = "", onImageClick: () -> Unit = {}) {
+    val deviceType = rememberDeviceType()
+    val shouldLoadImages = rememberShouldLoadImages()
+    
     Row(
         modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(SurfaceCard).padding(20.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Show profile image on phone only
+        if (deviceType == DeviceType.PHONE && shouldLoadImages) {
+            ProfileImage(
+                name = persona.name,
+                isEnemy = false,
+                size = 72,
+                gameId = gameId,
+                onClick = onImageClick
+            )
+            Spacer(Modifier.width(16.dp))
+        }
+        
         Surface(shape = RoundedCornerShape(12.dp), color = accentColor.copy(alpha = 0.2f), modifier = Modifier.size(64.dp)) {
             Box(contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {

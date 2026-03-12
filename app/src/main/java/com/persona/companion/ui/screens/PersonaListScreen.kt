@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -17,17 +18,22 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.persona.companion.data.SeriesData
 import com.persona.companion.models.Persona
 import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.components.PersonaFilterSheet
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.PersonaListViewModel
+import com.persona.companion.utils.personaImage
+import com.persona.companion.utils.rememberShouldLoadImages
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -38,13 +44,15 @@ fun PersonaListScreen(
     vm: PersonaListViewModel = viewModel()
 ) {
     val context = LocalContext.current
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val isCompactView = remember { userPrefs.isCompactView() }
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
     val state   by vm.state.collectAsState()
     var showFilterSheet by remember { mutableStateOf(false) }
 
-    LaunchedEffect(game.dataPath) {
-        vm.load(game.dataPath)
+    LaunchedEffect(game.dataPath, game.aigisDataPath) {
+        vm.load(game.dataPath, game.aigisDataPath, seriesId, gameId)
     }
 
     Scaffold(
@@ -130,7 +138,8 @@ fun PersonaListScreen(
                                                 navController.navigate(
                                                     Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
                                                 )
-                                            }
+                                            },
+                                            isCompact = isCompactView
                                         )
                                     }
                                     item { Spacer(Modifier.height(4.dp)) }
@@ -146,7 +155,8 @@ fun PersonaListScreen(
                                             navController.navigate(
                                                 Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
                                             )
-                                        }
+                                        },
+                                        isCompact = isCompactView
                                     )
                                 }
                             }
@@ -222,53 +232,78 @@ private fun ArcanaHeader(arcana: String, accentColor: Color) {
 }
 
 @Composable
-private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit) {
+private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit, isCompact: Boolean = false) {
+    val context = LocalContext.current
+    val shouldLoadImages = rememberShouldLoadImages()
+    
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
+            .clip(RoundedCornerShape(if (isCompact) 8.dp else 10.dp))
             .background(SurfaceCard)
             .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 14.dp),
+            .padding(horizontal = if (isCompact) 12.dp else 16.dp, vertical = if (isCompact) 10.dp else 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Persona image thumbnail (only if images are available)
+        if (shouldLoadImages) {
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .personaImage(context, "p5", persona.name) // TODO: Use actual game ID
+                    .crossfade(true)
+                    .build(),
+                contentDescription = persona.name,
+                modifier = Modifier
+                    .size(if (isCompact) 36.dp else 48.dp)
+                    .clip(CircleShape)
+                    .background(Surface),
+                contentScale = ContentScale.Crop
+            )
+            
+            Spacer(Modifier.width(if (isCompact) 10.dp else 12.dp))
+        }
+        
         // Level badge
         Surface(
-            shape = RoundedCornerShape(8.dp),
+            shape = RoundedCornerShape(if (isCompact) 6.dp else 8.dp),
             color = accentColor.copy(alpha = 0.15f)
         ) {
             Text(
                 text  = "${persona.level}",
-                style = MaterialTheme.typography.labelLarge,
+                style = if (isCompact) MaterialTheme.typography.labelMedium else MaterialTheme.typography.labelLarge,
                 color = accentColor,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                modifier = Modifier.padding(horizontal = if (isCompact) 8.dp else 10.dp, vertical = if (isCompact) 4.dp else 6.dp)
             )
         }
 
-        Spacer(Modifier.width(14.dp))
+        Spacer(Modifier.width(if (isCompact) 10.dp else 14.dp))
 
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text  = persona.name,
-                style = MaterialTheme.typography.titleMedium,
+                style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
                 color = TextPrimary
             )
-            Text(
-                text  = persona.arcana ?: "Unknown",
-                style = MaterialTheme.typography.bodyMedium,
-                color = TextSecondary
-            )
+            if (!isCompact) {
+                Text(
+                    text  = persona.arcana ?: "Unknown",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = TextSecondary
+                )
+            }
         }
 
         // Skill count hint
-        val skillCount = persona.skills?.size ?: 0
-        if (skillCount > 0) {
-            Text(
-                text  = "$skillCount skills",
-                style = MaterialTheme.typography.labelSmall,
-                color = TextDisabled
-            )
+        if (!isCompact) {
+            val skillCount = persona.skills?.size ?: 0
+            if (skillCount > 0) {
+                Text(
+                    text  = "$skillCount skills",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = TextDisabled
+                )
+            }
         }
     }
 }

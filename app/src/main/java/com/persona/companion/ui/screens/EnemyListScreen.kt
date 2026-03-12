@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -16,14 +17,19 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.EnemyFilterSheet
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.EnemyListViewModel
+import com.persona.companion.utils.enemyImage
+import com.persona.companion.utils.rememberShouldLoadImages
 
 enum class EnemyTab {
     ENEMIES, MINI_BOSSES, MAIN_BOSSES
@@ -36,18 +42,21 @@ fun EnemyListScreen(
     gameId: String,
     gameTitle: String,
     enemyPath: String?,
+    aigisEnemyPath: String? = null,
     onBack: () -> Unit,
     onEnemyClick: (Enemy) -> Unit,
     viewModel: EnemyListViewModel = viewModel()
 ) {
     val context = LocalContext.current
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val isCompactView = remember { userPrefs.isCompactView() }
     val state by viewModel.state.collectAsState()
     var selectedTab by remember { mutableStateOf(EnemyTab.ENEMIES) }
     var searchQuery by remember { mutableStateOf("") }
     var showFilterSheet by remember { mutableStateOf(false) }
     
-    LaunchedEffect(enemyPath) {
-        viewModel.loadEnemies(enemyPath, gameId)
+    LaunchedEffect(enemyPath, aigisEnemyPath) {
+        viewModel.loadEnemies(enemyPath, aigisEnemyPath, gameId, seriesId)
     }
     
     // Filter enemies by category and search
@@ -247,7 +256,8 @@ fun EnemyListScreen(
                             items(filteredEnemies) { enemy ->
                                 EnemyCard(
                                     enemy = enemy,
-                                    onClick = { onEnemyClick(enemy) }
+                                    onClick = { onEnemyClick(enemy) },
+                                    isCompact = isCompactView
                                 )
                             }
                         }
@@ -283,32 +293,56 @@ private fun getElementsForGame(gameId: String): List<String> {
 @Composable
 fun EnemyCard(
     enemy: Enemy,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    isCompact: Boolean = false
 ) {
+    val context = LocalContext.current
+    val shouldLoadImages = rememberShouldLoadImages()
+    
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(if (isCompact) 8.dp else 12.dp))
             .background(SurfaceCard)
             .clickable(onClick = onClick)
-            .padding(16.dp),
+            .padding(if (isCompact) 12.dp else 16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Enemy image thumbnail (only if images are available)
+        if (shouldLoadImages) {
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .enemyImage(context, "p5r", enemy.name) // TODO: Use actual game ID
+                    .crossfade(true)
+                    .build(),
+                contentDescription = enemy.name,
+                modifier = Modifier
+                    .size(if (isCompact) 36.dp else 48.dp)
+                    .clip(CircleShape)
+                    .background(Surface),
+                contentScale = ContentScale.Crop
+            )
+            
+            Spacer(Modifier.width(if (isCompact) 10.dp else 12.dp))
+        }
+        
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = enemy.name,
-                style = MaterialTheme.typography.titleMedium,
+                style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 color = TextPrimary
             )
-            Spacer(Modifier.height(4.dp))
+            if (!isCompact) {
+                Spacer(Modifier.height(4.dp))
+            }
             Text(
                 text = "${enemy.arcana} • Lv. ${enemy.level}",
-                style = MaterialTheme.typography.bodyMedium,
+                style = if (isCompact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
                 color = TextSecondary
             )
-            if (enemy.area.isNotEmpty() && enemy.area != "Unknown") {
+            if (!isCompact && enemy.area.isNotEmpty() && enemy.area != "Unknown") {
                 Spacer(Modifier.height(2.dp))
                 Text(
                     text = enemy.area,
@@ -324,11 +358,13 @@ fun EnemyCard(
                 style = MaterialTheme.typography.bodySmall,
                 color = TextSecondary
             )
-            Text(
-                text = "${enemy.exp} EXP",
-                style = MaterialTheme.typography.bodySmall,
-                color = TextDisabled
-            )
+            if (!isCompact) {
+                Text(
+                    text = "${enemy.exp} EXP",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = TextDisabled
+                )
+            }
         }
     }
 }

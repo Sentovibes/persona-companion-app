@@ -7,7 +7,9 @@ object FilterUtils {
     fun filterAndSortPersonas(
         personas: List<Persona>,
         filters: PersonaFilters,
-        favorites: Set<String>
+        favorites: Set<String>,
+        seriesId: String = "",
+        gameId: String = ""
     ): List<Persona> {
         var filtered = personas
         
@@ -35,7 +37,7 @@ object FilterUtils {
         
         // Favorites only
         if (filters.showFavoritesOnly) {
-            filtered = filtered.filter { favorites.contains(getPersonaId(it)) }
+            filtered = filtered.filter { favorites.contains(getPersonaId(seriesId, gameId, it)) }
         }
         
         // Sort
@@ -69,7 +71,9 @@ object FilterUtils {
         enemies: List<Enemy>,
         filters: EnemyFilters,
         favorites: Set<String>,
-        elements: List<String>
+        elements: List<String>,
+        seriesId: String = "",
+        gameId: String = ""
     ): List<Enemy> {
         var filtered = enemies
         
@@ -105,7 +109,7 @@ object FilterUtils {
         
         // Favorites only
         if (filters.showFavoritesOnly) {
-            filtered = filtered.filter { favorites.contains(getEnemyId(it)) }
+            filtered = filtered.filter { favorites.contains(getEnemyId(seriesId, gameId, it)) }
         }
         
         // Sort
@@ -140,7 +144,9 @@ object FilterUtils {
         }
     }
     
-    fun getPersonaId(persona: Persona): String = "${persona.name}_${persona.arcana}_${persona.level}"
+    fun getPersonaId(seriesId: String, gameId: String, persona: Persona): String = 
+        "${seriesId}_${gameId}_${persona.name}"
     
-    fun getEnemyId(enemy: Enemy): String = "${enemy.name}_${enemy.level}"
+    fun getEnemyId(seriesId: String, gameId: String, enemy: Enemy): String = 
+        "${seriesId}_${gameId}_${enemy.name}"
 }

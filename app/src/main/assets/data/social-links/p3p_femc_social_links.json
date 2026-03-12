@@ -1,0 +1,1090 @@
+{
+  "Fool": {
+    "Rank 1: Auto": { "April 20": 0 },
+    "Rank 2: Auto": { "After entering Tartarus": 0 },
+    "Rank 3: Auto": { "May 9": 0 },
+    "Rank 4: Auto": { "July 7": 0 },
+    "Rank 5: Auto": { "July 22": 0 },
+    "Rank 6: Auto": { "November 2": 0 },
+    "Rank 7: Auto": { "November 4": 0 },
+    "Rank 8: Auto": {},
+    "Rank 9: Auto": { "November 28": 0 },
+    "Rank 10: Auto": { "December 31": 0 }
+  },
+  "Magician": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: C'mon, let's go in!": 15,
+      "Q2: I'm... sorry?": 10
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Q1: Where do guy friends go?": 5,
+      "Q2: You know a lot about coffee. OR You've got good taste.": 15,
+      "Q3: Hot cocoa.": 15,
+      "Q4: Maybe I should give it a try, then.": 10
+    },
+    "Rank 4": {
+      "Next Rank": 30,
+      "Q1: Ramen!": 5,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q4: That's not true!": 5
+    },
+    "Rank 5": {
+      "Next Rank": 30,
+      "Q1: Thanks for the food!": 15,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 6": {
+      "Next Rank": 35,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Q4: Thanks. OR I'm counting on you.": 15
+    },
+    "Rank 7": {
+      "Next Rank": 35,
+      "Q1: Shut it, jerk.": 15,
+      "Q2: You'll be a great man.": 15,
+      "Q3: Your terrible jokes? OR Your brown-nosing abilities?": 5,
+      "Q4: Of course. OR Sometimes...": 10
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Q1: Any": 5,
+      "Q2: You're on fire!": 15,
+      "Q3: You actually did it.": 15,
+      "Q4: I think I understand.": 10,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "Q2: Thank you!": 15,
+      "Any_2": 0,
+      "Q4: Any": 10
+    },
+    "Rank 10": {}
+  },
+  "Priestess": {
+    "Rank 1": {
+      "Requires Courage Rank 2 (Ordinary)": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Do you need any help?": 10,
+      "Any_1": 0
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: Let's do our best.": 15,
+      "Q2: Any": 0,
+      "Any_1": 0,
+      "Q4: Any": 10
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Q1: You're good with machines.": 10,
+      "Q2: Any": 10
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Q1: Let's make it together.": 10,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q4: You did your best, too.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Q2: You really did your best.": 15
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Q2: Just try harder next time.": 10,
+      "Q3: Any": 5
+    },
+    "Rank 8": {
+      "Next Rank": 35,
+      "Any_1": 0
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "Q2: Any": 15
+    },
+    "Rank 10": {
+      "Q1: Any": 10,
+      "Q2: Any": 15,
+      "Q3: Any": 10
+    }
+  },
+  "Empress": {
+    "Rank 1": {
+      "Requires Academic Rank 6 (Genius)": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Any": 5
+    },
+    "Rank 3": {
+      "Next Rank": 22,
+      "Q1: Anyways, let's eat.": 5,
+      "Q2: Does that make you happy?": 15,
+      "Q3: Any": 5,
+      "Q4: Okay, I will.": 5
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Q1: You seem troubled...": 5,
+      "Q2: To be with your true love.": 15,
+      "Any_1": 0
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Q1: Was it boring?": 5,
+      "Q2: Motorcycle?": 15,
+      "Q3: Can I ride with you someday?": 15
+    },
+    "Rank 6": {
+      "Next Rank": 22,
+      "Q1: Looking for something? OR Not feeling well?": 5,
+      "Q2: It's the first I've heard...": 5,
+      "Q3: You should reconsider!": 15
+    },
+    "Rank 7": {
+      "Next Rank": 22,
+      "Q1: I enjoy myself.": 10
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: How dare you!?": 15,
+      "Q4: Any": 15,
+      "Any_3": 0
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Q1: You were cool.": 15
+    },
+    "Rank 10": {
+      "Q1: Any": 15
+    }
+  },
+  "Emperor": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: How pointless.": 15
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: You shouldn't fight.": 5
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Q2: Working hard, huh?": 15
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "Q1: They were all mean.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Q2: Any": 5
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "Q1: A strict punishment.": 15
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Q2: I'm not the culprit.": 15
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Q1: Any": 15
+    },
+    "Rank 10": {
+      "Q1: They were praising you.": 15,
+      "Q2: Any": 15
+    }
+  },
+  "Hierophant": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: I'm from Gekkoukan...": 5,
+      "Q2: Thank you.": 15,
+      "Any_1": 0,
+      "Q4: It's okay.": 10,
+      "Any_2": 0
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Q1: Looking for something?": 5,
+      "Q2: I'll help look for it.": 15,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Q1: Any": 15,
+      "Any_1": 0,
+      "Q3: That makes me worry...": 5
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "Q1: It's what you 'beleave'.": 5,
+      "Q2: Any": 5
+    },
+    "Rank 6": {
+      "Next Rank": 20,
+      "Q1: Please stop fighting.": 15,
+      "Any_1": 0
+    },
+    "Rank 7": {
+      "Next Rank": 20,
+      "Q1: Any": 5,
+      "Q2: Thank goodness...": 5,
+      "Q3: Any": 5
+    },
+    "Rank 8": {
+      "Next Rank": 20,
+      "Q1: Any": 5,
+      "Any_1": 0,
+      "Q3: Any": 15
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "Q1: Any": 5,
+      "Any_1": 0
+    },
+    "Rank 10": {
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: Why!?": 15,
+      "Any_3": 0
+    }
+  },
+  "Lovers": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Roses, no question. OR I like gerbera.": 15
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Any_1": 0
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Q1: Are you all right?": 15
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Q1: No?": 15,
+      "Q2: Isn't it because we're friends?": 15
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 8": {
+      "Next Rank": 35,
+      "Q1: Let's get a matching set!": 15,
+      "Any_1": 0
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Q1: You won't have a problem with that.": 15
+    },
+    "Rank 10": {
+      "Q1: I like classical music. OR I mainly listen to foreign music. OR I'm a total JPop fan.": 15,
+      "Any_1": 0
+    }
+  },
+  "Chariot": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Any": 10,
+      "Any_1": 0
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: That ain't happening.": 10
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Q1: Any": 10,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q4: Don't let it get to you!": 10,
+      "Q5: Nope.": 10
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0,
+      "Q5: Any": 15
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "Q1: Any": 10,
+      "Q2: I have no idea.": 10,
+      "Q3: Are you sure you're okay?": 10
+    },
+    "Rank 8": {
+      "Next Rank": 0,
+      "Q1: Any": 10,
+      "Q2: That's the spirit! OR It'll work out for you!": 10,
+      "Any_1": 0
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "Q2: Thanks.": 10
+    },
+    "Rank 10": {}
+  },
+  "Justice": {
+    "Rank 1": {
+      "Requires Courage Rank 6 (Badass)": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: You shouldn't be a picky eater.": 10,
+      "Any_1": 0,
+      "Q3: Any": 15,
+      "Q4: I like action shows too.": 15
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: Want to come earlier next time?": 15,
+      "Q2: Honey?": 5,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q5: I just can't stop reading them...": 15,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 4": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Q2: It's true.": 10,
+      "Any_2": 0,
+      "Q4: Nope, not at all.": 5
+    },
+    "Rank 5": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Q2: Actually, I want to hear more.": 15,
+      "Q3: I'll buy you a different series.": 5,
+      "Any_2": 0,
+      "Q5: You're okay the way you are.": 10,
+      "Q6: That's not true.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Q2: Any": 10,
+      "Q3: That's just how I am.": 10
+    },
+    "Rank 6.5": {
+      "Q1: I'm with you.": 0
+    },
+    "Rank 7 Platonic": {
+      "Next Rank": 35,
+      "Q1: I have one. OR Who cares about stuff like that!": 0
+    },
+    "Rank 8 Platonic": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: You're a special friend.": 15
+    },
+    "Rank 9 Platonic": {
+      "Next Rank": 40,
+      "Q1: There's no rush.": 15
+    },
+    "Rank 10 Platonic": {
+      "Q1: Any": 0
+    },
+    "Rank 7 Romantic": {
+      "Next Rank": 35,
+      "Q1: Unfortunately, I don't have one.": 0,
+      "Q2: He's right in front of me.": 0,
+      "Q3: Not at all.": 0
+    },
+    "Rank 8 Romantic": {
+      "Next Rank": 40,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: It's because I like you.": 0,
+      "Q4: I'm not lying!": 0
+    },
+    "Rank 8.5 Romantic": {
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: Wanna hold hands?": 15
+    },
+    "Rank 9 Romantic": {
+      "Next Rank": 55,
+      "Any_1": 0,
+      "Q2: I didn't mind at all.": 15,
+      "Q3: You're fine the way you are.": 15,
+      "Q4: Don't worry, I'll wait for you.": 15
+    },
+    "Rank 10 Romantic": {
+      "Q1: Any": 0,
+      "Q2: Any": 0,
+      "Any_1": 0
+    }
+  },
+  "Hermit": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Of course! OR That's my job.": 10,
+      "Any_1": 0,
+      "Q3: You should've come talk to me.": 10
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: Let's stay here a little longer. OR I wanna go home.": 10,
+      "Any_1": 0,
+      "Q3: Any": 10
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Q2: Any": 5,
+      "Q3: I can understand that.": 15
+    },
+    "Rank 5": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: I don't mind at all.": 10,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 6": {
+      "Next Rank": 22,
+      "Any_1": 0,
+      "Q2: Any": 5,
+      "Q3: Let them talk.": 15,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0,
+      "Any_5": 0,
+      "Any_6": 0
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: Don't worry about it.": 15,
+      "Any_3": 0,
+      "Any_4": 0
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Q1: Any": 15,
+      "Q2: Any": 15,
+      "Any_1": 0
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Q1: Any": 15,
+      "Q2: I believe you.": 15,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0,
+      "Any_5": 0
+    },
+    "Rank 10": {
+      "Any_1": 0,
+      "Q2: Any": 0
+    }
+  },
+  "Fortune": {
+    "Rank 1: Auto": {},
+    "Rank 2: Auto": {},
+    "Rank 3": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: I think I understand.": 0,
+      "Q3: Is school fun?": 0
+    },
+    "Rank 4": {
+      "Next Rank": 0,
+      "Q1: It's because I'm here with you.": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 5": {
+      "Next Rank": 0,
+      "Q1: What makes you happy?": 0,
+      "Q2: Is it because it's flowing?": 0,
+      "Q3: Any": 0,
+      "Any_1": 0,
+      "Q5: Okay.": 0
+    },
+    "Rank 6": {
+      "Next Rank": 0,
+      "Q1: I had fun too.": 0,
+      "Q2: I didn't notice at all.": 0,
+      "Any_1": 0
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Q1: I'm all right.": 0,
+      "Any_1": 0
+    },
+    "Rank 8 Platonic": {
+      "Next Rank": 0,
+      "Q1: We'll just have to not be seen.": 0,
+      "Q2: You're Ryoji.": 0,
+      "Q3: As a friend, then...": 0
+    },
+    "Rank 9 Platonic": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 8 Romantic": {
+      "Next Rank": 0,
+      "Q1: We'll just have to not be seen.": 0,
+      "Q2: You're Ryoji.": 0,
+      "Q3: Okay.": 0
+    },
+    "Rank 9 Romantic": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: Any": 0,
+      "Q3: Any": 0
+    },
+    "Rank 10: Auto": {}
+  },
+  "Strength": {
+    "Rank 1": {
+      "Requires Priestess Rank 1": 0
+    },
+    "Rank 2": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Q2: Does it feel good?": 5
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: Pick it up": 5,
+      "Q2: Any": 5,
+      "Any_1": 0
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Q4: Can you do it boy?": 5,
+      "Any_4": 0,
+      "Any_5": 0,
+      "Any_6": 0,
+      "Any_7": 0
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "Q1: We're with you.": 5,
+      "Q2: Saying hi to the priest?": 5
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: It's all right now.": 5
+    },
+    "Rank 7": {
+      "Next Rank": 25,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0,
+      "Q5: Glad we found his owner.": 5
+    },
+    "Rank 8": {
+      "Next Rank": 30,
+      "Q1: Brushed him": 5,
+      "Q2: The back": 5
+    },
+    "Rank 9": {
+      "Next Rank": 50,
+      "Any_1": 0,
+      "Q2: He sees us as friends.": 5
+    },
+    "Rank 10": {}
+  },
+  "Hanged-Man": {
+    "Rank 1": {
+      "Requires Mad Bull & Weird Takoyaki": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Sure, let's go.": 15,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 3": {
+      "Next Rank": 20,
+      "Any_1": 0,
+      "Q2: Don't worry, he'll be there.": 5
+    },
+    "Rank 4": {
+      "Next Rank": 20,
+      "Q1: Good for you! OR Of course, they love you!": 15
+    },
+    "Rank 5": {
+      "Next Rank": 20,
+      "Q1: That's mean!": 15,
+      "Q2: That isn't true.": 5
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Q1: Calm down, okay? OR You've already decided?": 5,
+      "Q2: That's good enough.": 15
+    },
+    "Rank 7": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Any_2": 0
+    },
+    "Rank 8": {
+      "Next Rank": 30,
+      "Q1: How about hamburgers?": 5,
+      "Q2: Good girl!": 15,
+      "Q3: Your dad.": 15
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "Q1: Any": 15
+    },
+    "Rank 10": {
+      "Q1: I won't forget.": 15
+    }
+  },
+  "Death": {
+    "Rank 1: Auto": {},
+    "Rank 2: Auto": {},
+    "Rank 3: Auto": {},
+    "Rank 4: Auto": {},
+    "Rank 5: Auto": {},
+    "Rank 6: Auto": {},
+    "Rank 7: Auto": {},
+    "Rank 8: Auto": {},
+    "Rank 9: Auto": {},
+    "Rank 10: Auto": {}
+  },
+  "Temperance": {
+    "Rank 1": {
+      "Requires Hierophant Rank 3, Academic Rank 2": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Any": 5,
+      "Q2: It sure is!": 15
+    },
+    "Rank 3": {
+      "Next Rank": 15,
+      "Q1: Any": 5,
+      "Q2: How about a kimono?": 15
+    },
+    "Rank 4": {
+      "Next Rank": 15,
+      "Q1: You look down.": 15,
+      "Any_1": 0
+    },
+    "Rank 5": {
+      "Next Rank": 15,
+      "Q1: Sure.": 5,
+      "Q2: Stay here.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 15,
+      "Any_1": 0,
+      "Q2: Why don't you rest?": 5,
+      "Q3: Any": 5,
+      "Q4: I'm behind you.": 15
+    },
+    "Rank 7": {
+      "Next Rank": 10,
+      "Q1: It's a nice idea.": 15
+    },
+    "Rank 8": {
+      "Next Rank": 22,
+      "Q1: He'll agree!": 15
+    },
+    "Rank 9": {
+      "Next Rank": 22,
+      "Q1: What is France like?": 15
+    },
+    "Rank 10": {
+      "Q1: Any": 15,
+      "Q2: Any": 15
+    }
+  },
+  "Devil": {
+    "Rank 1": {
+      "Requires Hermit Rank 2, Charm Rank 2, 40000 yen": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: Placebo!": 0,
+      "Q2: Any": 0
+    },
+    "Rank 3": {
+      "Next Rank": 0,
+      "Q1: I am.": 0
+    },
+    "Rank 4": {
+      "Next Rank": 0,
+      "Q1: Any": 0
+    },
+    "Rank 5": {
+      "Next Rank": 0,
+      "Q1: Who?": 0,
+      "Any_1": 0,
+      "Q3: It's all about money...": 0
+    },
+    "Rank 6": {
+      "Next Rank": 0,
+      "Q1: Sounds like fun!": 0
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Q1: Kind of...": 0,
+      "Q2: The organic one.": 0
+    },
+    "Rank 8": {
+      "Next Rank": 0,
+      "Q1: Good for you.": 0
+    },
+    "Rank 9": {
+      "Next Rank": 0,
+      "Q1: Are you going to donate?": 0
+    },
+    "Rank 10": {}
+  },
+  "Tower": {
+    "Rank 1": {
+      "Requires Chariot Rank 3, Courage Rank 4": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: I don't need to tell you.": 15,
+      "Q2: What should I call you?": 5
+    },
+    "Rank 3": {
+      "Next Rank": 25,
+      "Q1: I have no friends.": 15
+    },
+    "Rank 4": {
+      "Next Rank": 25,
+      "Q1: I've always wanted to try that.": 15
+    },
+    "Rank 5": {
+      "Next Rank": 25,
+      "Q1: I get by.": 5,
+      "Q2: There isn't.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 30,
+      "Q1: You should get home.": 15,
+      "Q2: What about your workers?": 5
+    },
+    "Rank 7": {
+      "Next Rank": 30,
+      "Q1: You probably shouldn't.": 15
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Q1: Dad?": 5,
+      "Q2: I was with friends. OR I don't need to tell you!": 5,
+      "Any_1": 0,
+      "Q4: You're just running away.": 5
+    },
+    "Rank 9": {
+      "Next Rank": 40,
+      "Q1: Any": 5,
+      "Q2: Any": 5,
+      "Q3: Any": 5
+    },
+    "Rank 10": {
+      "Q1: Any": 15
+    }
+  },
+  "Star": {
+    "Rank 1": {
+      "Requires Charm Rank 4": 0
+    },
+    "Rank 2": {
+      "Next Rank": 15,
+      "Q1: Any": 5,
+      "Q2: Don't catch a cold.": 5,
+      "Q3: I bet you can't either, senpai!": 15
+    },
+    "Rank 3": {
+      "Next Rank": 25,
+      "Q1: Let's go, Senpai!": 10,
+      "Q2: Yes, it was great.": 10,
+      "Q3: Any": 5,
+      "Any_1": 0
+    },
+    "Rank 4": {
+      "Next Rank": 30,
+      "Q1: I'm bored. OR Are you feeling sick?": 10,
+      "Any_1": 0,
+      "Q3: It's all right. (Friendship) OR Don't get the wrong idea, Senpai. (Lovers)": 5,
+      "Q4: Any": 5,
+      "Any_2": 0
+    },
+    "Rank 5": {
+      "Next Rank": 30,
+      "Q1: Any": 5,
+      "Q2: Did you not like it?": 5,
+      "Any_1": 0,
+      "Q4: It's not your fault, Senpai.": 15,
+      "Any_2": 0
+    },
+    "Rank 6": {
+      "Next Rank": 35,
+      "Any_1": 0,
+      "Q2: He's just a child.": 10,
+      "Q3: You're normal. (Friendship) OR You're charming. (Lovers)": 5
+    },
+    "Rank 7": {
+      "Next Rank": 35,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: Do I seem unreliable?": 10,
+      "Q4: What's the matter? OR Should I still be the leader?": 5
+    },
+    "Rank 8": {
+      "Next Rank": 40,
+      "Q1: I'm happy to be with you.": 10,
+      "Any_1": 0,
+      "Q3: That's not true!": 5
+    },
+    "Rank 9 Platonic": {
+      "Next Rank": 55,
+      "Q1: Do you come here often?": 5,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q4: That's just how things are. OR That is pretty odd.": 15
+    },
+    "Rank 9 Romantic": {
+      "Next Rank": 55,
+      "Q1: Do you come here often?": 5,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q4: You're in love.": 0,
+      "Q5: Yes!": 0
+    },
+    "Rank 10": {}
+  },
+  "Moon": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: Yes, of course!": 10,
+      "Q3: I hope so...": 10
+    },
+    "Rank 3": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: You're so kind-hearted.": 5
+    },
+    "Rank 4": {
+      "Next Rank": 0,
+      "Q1: Any": 10,
+      "Q2: Any": 10,
+      "Q3: This is delicious. OR I feel so lucky...": 10,
+      "Any_1": 0
+    },
+    "Rank 5": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Q4: Why did we come here today?": 5,
+      "Q5: Any": 5,
+      "Q6: I'm looking forward to it. OR I'll help out too.": 10
+    },
+    "Rank 6": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: I'll help, too. OR Is it ready yet?": 10,
+      "Any_2": 0,
+      "Q4: Any": 10
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: I have my hopes up, too.": 10,
+      "Q4: Definitely!": 15,
+      "Q5: It's fun being with you.": 5
+    },
+    "Rank 8": {
+      "Next Rank": 0,
+      "Q1: I'm glad that you came back.": 5
+    },
+    "Rank 9": {
+      "Next Rank": 0,
+      "Q1: Let's talk about something fun... OR Should I tell a scary story?": 10,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0,
+      "Any_4": 0,
+      "Any_5": 0,
+      "Any_6": 0
+    },
+    "Rank 10": {
+      "Requires retrieving pocketwatch": 0,
+      "Q1: Any": 0,
+      "Q2: I'll be by his side. OR We'll be by his side.": 0
+    }
+  },
+  "Sun": {
+    "Rank 1": {
+      "Requires Academic Rank 4, Hanged Man Rank 4": 0
+    },
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: You think so?": 0,
+      "Q2: You may be right.": 0
+    },
+    "Rank 3": {
+      "Next Rank": 0,
+      "Q1: I don't know.": 0,
+      "Q2: Talking makes it hurt worse.": 0
+    },
+    "Rank 4": {
+      "Next Rank": 0,
+      "Q1: I love reading!": 0,
+      "Q2: Not if it's boring.": 0
+    },
+    "Rank 5": {
+      "Next Rank": 0,
+      "Q1: Don't push yourself!": 0
+    },
+    "Rank 6": {
+      "Next Rank": 0,
+      "Q1: That sounds wonderful.": 0,
+      "Q2: Sounds interesting.": 0
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Q1: It's a gloomy story.": 0
+    },
+    "Rank 8": {
+      "Next Rank": 0,
+      "Q1: Stay at his side": 0,
+      "Q2: Why!?": 0
+    },
+    "Rank 9": {
+      "Next Rank": 0,
+      "Q1: You finished the story?": 0
+    },
+    "Rank 10": {}
+  },
+  "Judgement": {
+    "Rank 1: Auto": { "December 31": 0 },
+    "Rank 2: Auto": { "Reach Tartarus Floor 215": 0 },
+    "Rank 3: Auto": { "Tartarus Floor 220 Post-Battle": 0 },
+    "Rank 4: Auto": { "Reach Tartarus Floor 224": 0 },
+    "Rank 5: Auto": { "Tartarus Floor 228 Post-Battle": 0 },
+    "Rank 6: Auto": { "Tartarus Floor 236 Post-Battle": 0 },
+    "Rank 7: Auto": { "Reach Tartarus Floor 240": 0 },
+    "Rank 8: Auto": { "Tartarus Floor 244 Post-Battle": 0 },
+    "Rank 9: Auto": { "Tartarus Floor 252 Post-Battle": 0 },
+    "Rank 10: Auto": { "Reach Tartarus Floor 254": 0 }
+  },
+  "Aeon": {
+    "Rank 1": {},
+    "Rank 2": {
+      "Next Rank": 0,
+      "Q1: I like it.": 15
+    },
+    "Rank 3": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Q2: That's not true.": 5
+    },
+    "Rank 4": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Q3: Sure.": 15
+    },
+    "Rank 5": {
+      "Next Rank": 0,
+      "Q1: You may be right.": 15
+    },
+    "Rank 6": {
+      "Next Rank": 0,
+      "Q1: He wanted to date you. OR No you didn't.": 15
+    },
+    "Rank 7": {
+      "Next Rank": 0,
+      "Any_1": 0,
+      "Any_2": 0,
+      "Any_3": 0
+    },
+    "Rank 8": {
+      "Next Rank": 0,
+      "Q1: Not yet...": 5,
+      "Any_1": 0
+    },
+    "Rank 9": {
+      "Next Rank": 30,
+      "Q1: Yeah, huh.": 15
+    },
+    "Rank 10": {
+      "Any_1": 0,
+      "Any_2": 0
+    }
+  }
+}

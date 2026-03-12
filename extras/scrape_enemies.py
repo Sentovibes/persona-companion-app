@@ -1,141 +1,90 @@
-"""
-Enemy and Boss Data Scraper for Persona Games
-Scrapes boss data from Megami Tensei Wiki
-"""
-
-import requests
-from bs4 import BeautifulSoup
-import json
+import os
 import time
-import re
+import requests
 
-class PersonaBossScraper:
-    def __init__(self):
-        self.base_url = "https://megamitensei.fandom.com"
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+def api_download_enemy(enemy_name, game_prefix="P3", save_folder="wiki_rips"):
+    # game_prefix can be "P3" for FES/Portable, "P3R" for Reload, "PQ2", etc.
+    if not os.path.exists(save_folder):
+        os.makedirs(save_folder)
+
+    # Professional API Header
+    headers = {'User-Agent': 'PersonaCompanionApp/1.0 (Data Extraction Tool)'}
+    base_url = "https://megatenwiki.com/api.php"
+    clean_name = enemy_name.strip().replace(" ", "_")
+
+    try:
+        # STEP 1: Ask the API for the list of images on the page
+        print(f"--> API Fetching: {enemy_name}")
+        params_1 = {
+            "action": "parse",
+            "page": clean_name,
+            "prop": "images", # We ONLY want the image array, saves data!
+            "format": "json"
         }
-    
-    def scrape_boss_page(self, url):
-        """Scrape a boss list page"""
-        print(f"Scraping: {url}")
-        try:
-            response = requests.get(url, headers=self.headers)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.content, 'html.parser')
-            
-            bosses = []
-            
-            # Find all tables with boss data
-            tables = soup.find_all('table', class_='wikitable')
-            
-            for table in tables:
-                rows = table.find_all('tr')[1:]  # Skip header
+        res_1 = requests.get(base_url, params=params_1, headers=headers, timeout=10).json()
+
+        if "error" in res_1:
+            print(f"    [!] 404 DEAD LINK: API says '{clean_name}' doesn't exist.")
+            return
+
+        image_list = res_1["parse"]["images"]
+        
+        # Look for the specific game's model (e.g., "P3_Cowardly_Maya_Model.png")
+        target_file = None
+        for img in image_list:
+            # We want the main model, not a Slash_Icon or a Confuse_Icon
+            if img.startswith(f"{game_prefix}_") and ("Model" in img or "Render" in img):
+                target_file = img
+                break
                 
-                for row in rows:
-                    cols = row.find_all(['td', 'th'])
-                    if len(cols) < 2:
-                        continue
-                    
-                    # Extract boss name (usually first column)
-                    name_cell = cols[0]
-                    name = self.clean_text(name_cell.get_text())
-                    
-                    if not name or len(name) < 2:
-                        continue
-                    
-                    # Try to extract level and HP
-                    level = 0
-                    hp = 0
-                    
-                    for col in cols:
-                        text = self.clean_text(col.get_text())
-                        # Look for level
-                        if 'lv' in text.lower() or 'level' in text.lower():
-                            level = self.parse_number(text)
-                        # Look for HP
-                        if 'hp' in text.lower():
-                            hp = self.parse_number(text)
-                    
-                    boss = {
-                        "name": name,
-                        "arcana": "Boss",
-                        "level": level if level > 0 else 99,
-                        "hp": hp if hp > 0 else 9999,
-                        "sp": 999,
-                        "stats": {
-                            "strength": 99,
-                            "magic": 99,
-                            "endurance": 99,
-                            "agility": 99,
-                            "luck": 99
-                        },
-                        "resists": "----------",
-                        "skills": [],
-                        "area": "Story Boss",
-                        "exp": 0,
-                        "drops": {
-                            "gem": "-",
-                            "item": "-"
-                        }
-                    }
-                    
-                    bosses.append(boss)
-            
-            return bosses
-        except Exception as e:
-            print(f"  Error: {e}")
-            return []
-    
-    def clean_text(self, text):
-        """Clean up text from HTML"""
-        return text.strip().replace('\n', ' ').replace('\xa0', ' ').replace('  ', ' ')
-    
-    def parse_number(self, text):
-        """Extract number from text"""
-        text = self.clean_text(text)
-        # Remove commas and extract digits
-        text = text.replace(',', '')
-        match = re.search(r'\d+', text)
-        return int(match.group()) if match else 0
-    
-    def save_to_json(self, data, filename):
-        """Save data to JSON file"""
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-        print(f"  Saved: {filename} ({len(data)} bosses)")
+        # Fallback: If there's no specific game prefix, just grab the first main image
+        if not target_file:
+            for img in image_list:
+                if "Model" in img or "Render" in img:
+                    target_file = img
+                    break
 
-def main():
-    scraper = PersonaBossScraper()
-    
-    # Boss pages on the wiki
-    boss_pages = {
-        'p3_bosses': 'https://megamitensei.fandom.com/wiki/List_of_Persona_3_Bosses',
-        'p4_bosses': 'https://megamitensei.fandom.com/wiki/List_of_Persona_4_Bosses',
-        'p5_bosses': 'https://megamitensei.fandom.com/wiki/List_of_Persona_5_Bosses',
-    }
-    
-    print("="*60)
-    print("Persona Boss Data Scraper")
-    print("="*60)
-    print()
-    
-    for game_id, url in boss_pages.items():
-        print(f"Processing {game_id}...")
-        bosses = scraper.scrape_boss_page(url)
-        
-        if bosses:
-            scraper.save_to_json(bosses, f"extras/{game_id}.json")
-        else:
-            print(f"  No bosses found for {game_id}")
-        
-        print()
-        time.sleep(2)  # Be nice to the server
-    
-    print("="*60)
-    print("Scraping complete!")
-    print("="*60)
+        if not target_file:
+            print(f"    [!] FAILED: Found the page, but no 3D Model image matched '{game_prefix}'.")
+            return
 
-if __name__ == "__main__":
-    main()
+        # STEP 2: Ask the API for the direct, uncompressed URL of that file
+        params_2 = {
+            "action": "query",
+            "titles": f"File:{target_file}",
+            "prop": "imageinfo",
+            "iiprop": "url",
+            "format": "json"
+        }
+        res_2 = requests.get(base_url, params=params_2, headers=headers, timeout=10).json()
 
+        # Navigate the JSON tree to get the URL
+        pages = res_2["query"]["pages"]
+        page_id = list(pages.keys())[0]
+
+        if page_id == "-1":
+            print(f"    [!] FAILED: API could not resolve the file URL.")
+            return
+
+        img_url = pages[page_id]["imageinfo"][0]["url"]
+
+        # STEP 3: Download the raw file!
+        safe_name = enemy_name.lower().replace(" ", "_")
+        ext = ".png" if ".png" in img_url.lower() else ".jpg"
+        final_path = os.path.join(save_folder, f"{safe_name}{ext}")
+
+        img_data = requests.get(img_url, headers=headers, timeout=15).content
+        with open(final_path, 'wb') as f:
+            f.write(img_data)
+
+        print(f"    ✅ SAVED: {safe_name}{ext}")
+        time.sleep(1) # Still good practice to be polite to the API
+
+    except Exception as e:
+        print(f"    ❌ CRASH: Error -> {e}")
+
+# --- Test it on your missing list ---
+# missing = ["Glorious Hand", "Luxury Hand", "Opulent Hand", "Cowardly Maya"]
+# for enemy in missing:
+#     # Using "P3" prefix since you are pulling the P3FES data
+#     api_download_enemy(enemy, game_prefix="P3", save_folder="p3fes_enemies")

@@ -2,6 +2,7 @@ package com.persona.companion.models
 
 data class Enemy(
     val name: String,
+    val persona_name: String? = null,  // For P5/P5R enemies - the actual demon name for images
     val arcana: String,
     val level: Int,
     val hp: Int,

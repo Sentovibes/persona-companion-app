@@ -1,0 +1,689 @@
+{
+  "April": {
+    "Classroom": {
+      "4/14": [
+        {
+          "Question": "What is the year before 1 AD called?",
+          "Answer": "1 BC",
+          "Choice": 0
+        }
+      ],
+      "4/18": [
+        {
+          "Question": "The word \"alphabet\" comes from the the word \"alpha\" and what other one?",
+          "Answer": "Beta",
+          "Choice": 0
+        }
+      ],
+      "4/20": [
+        {
+          "Question": "(Yosuke) \"C'mon, man, help me here!\"",
+          "Answer": "Three",
+          "Choice": 0
+        }
+      ],
+      "4/23": [
+        {
+          "Question": "(Yosuke, again) \"What's this ergonomic bubble she's asking about!?\"",
+          "Answer": "Tulip Mania",
+          "Choice": 0
+        }
+      ],
+      "4/25": [
+        {
+          "Question": "What's it called when you gain more muscle after getting sore through exercise?",
+          "Answer": "Overcompensation",
+          "Choice": 0
+        }
+      ],
+      "4/26": [
+        {
+          "Question": "(Chie) \"I don't think I've heard of any of these?\"",
+          "Answer": "Marriage numbers",
+          "Choice": 0
+        }
+      ],
+      "4/30": [
+        {
+          "Question": "What is the greatest canyon in the solar system?",
+          "Answer": "Valles Marineris",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "May": {
+    "Classroom": {
+      "5/7": [
+        {
+          "Question": "Do you know how Soseki Natsume translated the English phrase “I love you” into Japanese?",
+          "Answer": "The moon is beautiful, isn’t it?",
+          "Choice": 0
+        }
+      ],
+      "5/26": [
+        {
+          "Question": "Tell me how the theory that the pyramids were built by slaves was disproven!/Something about laborers?",
+          "Answer": "Attendance Logs.",
+          "Choice": 3
+        }
+      ]
+    },
+    "Exam": {
+      "5/9": [
+        {
+          "Question": "What is it called when muscles grow after exercise?",
+          "Answer": "Overcompensation.",
+          "Choice": 0
+        },
+        {
+          "Question": "What is the year before 1 A.D. called?",
+          "Answer": "1 B.C.",
+          "Choice": 0
+        }
+      ],
+      "5/10": [
+        {
+          "Question": "Which of these numbers does not exist?",
+          "Answer": "Marriage numbers",
+          "Choice": 0
+        },
+        {
+          "Question": "Who translated “I love you” as “The moon is beautiful, isn’t it?”",
+          "Answer": "Soseki Natsume.",
+          "Choice": 0
+        }
+      ],
+      "5/11": [
+        {
+          "Question": "Who said, “As soon as laws are necessary for men, they are no longer fit for freedom?”",
+          "Answer": "Pythagoras.",
+          "Choice": 0
+        },
+        {
+          "Question": "Which of the following is the highest mountain in the solar system?",
+          "Answer": "Olympus Mons.",
+          "Choice": 0
+        }
+      ],
+      "5/12": [
+        {
+          "Question": "Final day of midterms",
+          "Answer": "Automatic based on Knowledge stat",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "June": {
+    "Classroom": {
+      "6/8": [
+        {
+          "Question": "(Yukiko) What sport is “heikin-dai”?",
+          "Answer": "Balance Beam.",
+          "Choice": 0
+        }
+      ],
+      "6/13": [
+        {
+          "Question": "What kind of exercise is a sprint classified as?",
+          "Answer": "Anaerobics.",
+          "Choice": 0
+        }
+      ],
+      "6/15": [
+        {
+          "Question": "Tell me what morale is!",
+          "Answer": "Cheerfulness of a group.",
+          "Choice": 0
+        }
+      ],
+      "6/20": [
+        {
+          "Question": "What period did Japan first implement Bonus pay?",
+          "Answer": "Meiji.",
+          "Choice": 0
+        }
+      ],
+      "6/27": [
+        {
+          "Question": "Answer this: What is identity?",
+          "Answer": "Individuality.",
+          "Choice": 0
+        }
+      ],
+      "6/30": [
+        {
+          "Question": "Which one of these is the name of a real river?",
+          "Answer": "Pis Pis River.",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "July": {
+    "Classroom": {
+      "7/4": [
+        {
+          "Question": "Who said this: “Man is but a reed, the most feeble thing in nature; but he is a thinking reed?”",
+          "Answer": "Pascal.",
+          "Choice": 0
+        }
+      ],
+      "7/7": [
+        {
+          "Question": "What is the beginning of “Gakumon no Susume” a reference to?",
+          "Answer": "The U.S. Declaration of Independence.",
+          "Choice": 0
+        }
+      ],
+      "7/13": [
+        {
+          "Question": "What is the medical term for brainfreeze?",
+          "Answer": "Sphenopalatine Ganglioneuralgia.",
+          "Choice": 0
+        }
+      ],
+      "7/14": [
+        {
+          "Question": "Which famous Heian-ero monk famously used a wrong version of the kanji?",
+          "Answer": "Kuukai.",
+          "Choice": 0
+        }
+      ],
+      "7/15": [
+        {
+          "Question": "Which line can a typhoon never cross?",
+          "Answer": "The equator.",
+          "Choice": 0
+        }
+      ],
+      "7/16": [
+        {
+          "Question": "Tell me what makes the king of hearts look different from the other kings in a standard deck of cards.",
+          "Answer": "He has no mustache.",
+          "Choice": 0
+        }
+      ]
+    },
+    "Exam": {
+      "7/19": [
+        {
+          "Question": "What is morale?",
+          "Answer": "Cheerfulness in a group.",
+          "Choice": 0
+        },
+        {
+          "Question": "What sport is “heikin-dai”?",
+          "Answer": "Balance Beam.",
+          "Choice": 0
+        }
+      ],
+      "7/20": [
+        {
+          "Question": "It is said, “Even Kobo made mistakes in writing.” Which Kanji did he make a mistake on?",
+          "Answer": "The first choice",
+          "Choice": 1
+        },
+        {
+          "Question": "In which period did Japan first implement bonus pay?",
+          "Answer": "Meiji",
+          "Choice": 0
+        }
+      ],
+      "7/21": [
+        {
+          "Question": "Which king in a deck of cards is missing a mustache?",
+          "Answer": "King of Hearts.",
+          "Choice": 0
+        },
+        {
+          "Question": "Who said this: “Man is but a reed, the most feeble thing in nature; but he is a thinking reed”?",
+          "Answer": "Pascal",
+          "Choice": 0
+        }
+      ],
+      "7/22": [
+        {
+          "Question": "Which one of these is the name of a real river?",
+          "Answer": "Pis Pis River",
+          "Choice": 0
+        },
+        {
+          "Question": "What is the beginning of “Gakumon no Susume” a reference to?",
+          "Answer": "The U.S. Declaration of Independence.",
+          "Choice": 0
+        }
+      ],
+      "7/23": [
+        {
+          "Question": "Final day of midterms",
+          "Answer": "Automatic based on Knowledge stat",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "September": {
+    "Classroom": {
+      "9/1": [
+        {
+          "Question": "“Venison” is the meat of which animal?",
+          "Answer": "All of the Above.",
+          "Choice": 0
+        }
+      ],
+      "9/5": [
+        {
+          "Question": "Which of the following is a kigo for fall?",
+          "Answer": "Brisk.",
+          "Choice": 0
+        }
+      ],
+      "9/17": [
+        {
+          "Question": "How short was history’s shortest war?",
+          "Answer": "40 minutes.",
+          "Choice": 0
+        }
+      ],
+      "9/20": [
+        {
+          "Question": "What do you call somebody who’s between ninety and one hundred years old?",
+          "Answer": "A nonagenarian.",
+          "Choice": 0
+        }
+      ],
+      "9/28": [
+        {
+          "Question": "Do you know the answer?",
+          "Answer": "Throat.",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "October": {
+    "Classroom": {
+      "10/4": [
+        {
+          "Question": "Which of these sports also uses an anchor?",
+          "Answer": "Tug of war.",
+          "Choice": 0
+        }
+      ],
+      "10/5": [
+        {
+          "Question": "Did you know the answer?",
+          "Answer": "The right edge.",
+          "Choice": 0
+        }
+      ],
+      "10/8": [
+        {
+          "Question": "Tell me what bird’s name means “coward” in English!",
+          "Answer": "Chicken.",
+          "Choice": 0
+        }
+      ],
+      "10/11": [
+        {
+          "Question": "What did Napoleon have invented?",
+          "Answer": "Glass jars.",
+          "Choice": 0
+        }
+      ],
+      "10/12": [
+        {
+          "Question": "Do you know what vegetable was used to make the first Jack o’ Lantern?",
+          "Answer": "Turnips.",
+          "Choice": 0
+        }
+      ],
+      "10/13": [
+        {
+          "Question": "What kind of fish was I talking about?",
+          "Answer": "Ojisan.",
+          "Choice": 0
+        }
+      ]
+    },
+    "Exam": {
+      "10/14": [
+        {
+          "Question": "What part of the body contains the “Adam’s Apple”?",
+          "Answer": "Throat.",
+          "Choice": 0
+        },
+        {
+          "Question": "Where would you find Japan on a map made in a foreign country?",
+          "Answer": "The right edge.",
+          "Choice": 0
+        }
+      ],
+      "10/15": [
+        {
+          "Question": "How short was history’s shortest war?",
+          "Answer": "40 Minutes.",
+          "Choice": 0
+        },
+        {
+          "Question": "“Venison” is the meat of what animal?",
+          "Answer": "All of the above.",
+          "Choice": 0
+        }
+      ],
+      "10/17": [
+        {
+          "Question": "What is the Japanese name for “panda”?",
+          "Answer": "Black and white bears.",
+          "Choice": 0
+        },
+        {
+          "Question": "Which bird is falsely known for being cowardly in the English phrase “to stick one’s head in the sand”?",
+          "Answer": "Ostrich.",
+          "Choice": 0
+        }
+      ],
+      "10/18": [
+        {
+          "Question": "What was the name of the Wasan textbook that came out in the Edo period?",
+          "Answer": "Math Girl.",
+          "Choice": 0
+        },
+        {
+          "Question": "What did Napoleon have invented?",
+          "Answer": "Glass Jars.",
+          "Choice": 0
+        }
+      ],
+      "10/19": [
+        {
+          "Question": "Which season is the adjective “brisk” a kigo for?",
+          "Answer": "Fall.",
+          "Choice": 0
+        },
+        {
+          "Question": "What is “Dragon’s Blood”?",
+          "Answer": "Plant Resin.",
+          "Choice": 0
+        }
+      ],
+      "10/20": [
+        {
+          "Question": "Final day of midterms",
+          "Answer": "Automatic based on Knowledge stat",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "November": {
+    "Classroom": {
+      "11/1": [
+        {
+          "Question": "Tell me what the “figure” in “figure skating” refers to!",
+          "Answer": "Geometric Shapes.",
+          "Choice": 0
+        }
+      ],
+      "11/4": [
+        {
+          "Question": "Sorry, I have no idea.",
+          "Answer": "A cuckoo.",
+          "Choice": 0
+        }
+      ],
+      "11/7": [
+        {
+          "Question": "Which country do you think the South Pole belongs to?",
+          "Answer": "No country.",
+          "Choice": 0
+        }
+      ],
+      "11/11": [
+        {
+          "Question": "What desert is the Welwitschia from?",
+          "Answer": "Namib.",
+          "Choice": 0
+        }
+      ],
+      "11/17": [
+        {
+          "Question": "Is that even in a textbook? The roots of “bridal”? What…?",
+          "Answer": "Bride ale.",
+          "Choice": 0
+        }
+      ],
+      "11/22": [
+        {
+          "Question": "Do you know what an “atlas” is?",
+          "Answer": "A book of maps.",
+          "Choice": 0
+        }
+      ],
+      "11/24": [
+        {
+          "Question": "0, 1, 1, 2, 3, 5, 8, 13… what is this sequence called?",
+          "Answer": "Fibonacci Sequence.",
+          "Choice": 0
+        }
+      ],
+      "11/25": [
+        {
+          "Question": "There are over 130 ancient pyramids in Egypt, but do you know who’s buried in the biggest one?",
+          "Answer": "Khufu.",
+          "Choice": 0
+        }
+      ],
+      "11/26": [
+        {
+          "Question": "Which one of these is considered a “rice cake”?",
+          "Answer": "Mochi.",
+          "Choice": 0
+        }
+      ]
+    },
+    "Exam": {
+      "11/28": [
+        {
+          "Question": "What does French food stem from?",
+          "Answer": "Italian Food.",
+          "Choice": 0
+        },
+        {
+          "Question": "What does the “figure” in “figure skating” refer to?",
+          "Answer": "Geometric Shapes.",
+          "Choice": 0
+        }
+      ],
+      "11/29": [
+        {
+          "Question": "Who is buried in the biggest pyramid in Egypt?",
+          "Answer": "Khufu",
+          "Choice": 0
+        },
+        {
+          "Question": "What is a book of maps called?",
+          "Answer": "Atlas",
+          "Choice": 0
+        }
+      ],
+      "11/30": [
+        {
+          "Question": "What word has the words “bride ale” as its roots?",
+          "Answer": "Bridal.",
+          "Choice": 0
+        },
+        {
+          "Question": "What kind of bird is a “kanko-dori”?",
+          "Answer": "A cuckoo.",
+          "Choice": 0
+        }
+      ],
+      "12/1": [
+        {
+          "Question": "Which country does the South Pole belong to?",
+          "Answer": "No Country.",
+          "Choice": 0
+        },
+        {
+          "Question": "0, 1, 1, 2, 3, 5, 8, 13… What is this sequence called?",
+          "Answer": "The Fibonacci Sequence.",
+          "Choice": 0
+        }
+      ],
+      "12/2": [
+        {
+          "Question": "What desert is the Welwitschia found in?",
+          "Answer": "Namib.",
+          "Choice": 0
+        },
+        {
+          "Question": "Which of these is considered a “rice cake”?",
+          "Answer": "Mochi.",
+          "Choice": 0
+        }
+      ],
+      "12/3": [
+        {
+          "Question": "Final day of finals",
+          "Answer": "Automatic based on Knowledge stat",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "December": {
+    "Classroom": {
+      "12/9": [
+        {
+          "Question": "Do you know what color a fuzzy-wuzzy polar bear’s fur really is?",
+          "Answer": "Transparent.",
+          "Choice": 0
+        }
+      ],
+      "12/10": [
+        {
+          "Question": "What determines whether a hair grows curly or straight?",
+          "Answer": "The cross-section.",
+          "Choice": 0
+        }
+      ],
+      "12/17": [
+        {
+          "Question": "Huh? What? I wasn’t listening… Help!",
+          "Answer": "Compassion makes you look better.",
+          "Choice": 0
+        }
+      ],
+      "12/21": [
+        {
+          "Question": "Will you tell me if you know the answer?",
+          "Answer": "VII.",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "January": {
+    "Classroom": {
+      "1/10": [
+        {
+          "Question": "Tell me, what are you supposed to put on top of a kagami mochi?",
+          "Answer": "An Orange.",
+          "Choice": 0
+        }
+      ],
+      "1/14": [
+        {
+          "Question": "“Toso” is a traditional drink for the new year, but what does the name mean?",
+          "Answer": "Bury the Demons.",
+          "Choice": 0
+        }
+      ],
+      "1/19": [
+        {
+          "Question": "In the Thai and Vietnamese Zodiacs, which animal is used in the place of the rabbit?",
+          "Answer": "Cat.",
+          "Choice": 0
+        }
+      ],
+      "1/25": [
+        {
+          "Question": "European snow in spring…? Do you know?",
+          "Answer": "Red.",
+          "Choice": 0
+        }
+      ],
+      "1/30": [
+        {
+          "Question": "What’s the next unit of measurement up from a terabyte?",
+          "Answer": "Petabyte.",
+          "Choice": 0
+        }
+      ]
+    }
+  },
+  "February": {
+    "Classroom": {
+      "2/1": [
+        {
+          "Question": "What color were the pyramids originally?",
+          "Answer": "White.",
+          "Choice": 0
+        }
+      ]
+    },
+    "Exam": {
+      "2/6": [
+        {
+          "Question": "The word “alphabet” comes from the words “alpha” and what other one?",
+          "Answer": "Beta.",
+          "Choice": 0
+        },
+        {
+          "Question": "How was the theory that the pyramids were built by slaves disproven?",
+          "Answer": "Attendance logs.",
+          "Choice": 0
+        }
+      ],
+      "2/7": [
+        {
+          "Question": "What drink name means “bury demons”?",
+          "Answer": "Toso",
+          "Choice": 0
+        },
+        {
+          "Question": "What is the medical term for brainfreeze?",
+          "Answer": "Sphenopalatine Ganglioneuralgia.",
+          "Choice": 0
+        }
+      ],
+      "2/8": [
+        {
+          "Question": "What is the Japanese Zodiac equivalent to the “cat” in the Thai and Vietnamese Zodiacs?",
+          "Answer": "Rabbit.",
+          "Choice": 0
+        },
+        {
+          "Question": "What vegetable was first used to make Jack o’ Lanterns?",
+          "Answer": "Turnips",
+          "Choice": 0
+        }
+      ],
+      "2/9": [
+        {
+          "Question": "What color were the pyramids when they were first built?",
+          "Answer": "White.",
+          "Choice": 0
+        },
+        {
+          "Question": "What gets mixed with snow in Europe that sometimes causes it to turn red?",
+          "Answer": "The Sahara Desert Sand.",
+          "Choice": 0
+        }
+      ]
+    }
+  }
+}

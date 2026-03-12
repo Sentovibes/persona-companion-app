@@ -5,6 +5,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -81,6 +83,27 @@ fun HomeScreen(navController: NavController) {
             )
 
             Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 80.dp else 56.dp))
+            
+            // Quick access buttons
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                QuickAccessButton(
+                    icon = Icons.Default.Favorite,
+                    label = "Favorites",
+                    onClick = { navController.navigate(Screen.Favorites.route) },
+                    modifier = Modifier.weight(1f)
+                )
+                QuickAccessButton(
+                    icon = Icons.Default.History,
+                    label = "Recent",
+                    onClick = { navController.navigate(Screen.RecentlyViewed.route) },
+                    modifier = Modifier.weight(1f)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 48.dp else 32.dp))
 
             // Series cards - adaptive layout
             AdaptiveSeriesLayout(
@@ -170,6 +193,46 @@ private fun SeriesCard(
                     fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
                 ),
                 color = Color.White.copy(alpha = 0.7f)
+            )
+        }
+    }
+}
+
+@Composable
+private fun QuickAccessButton(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val textScale = rememberTextScaleFactor()
+    
+    Box(
+        modifier = modifier
+            .height(56.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(SurfaceCard)
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = label,
+                tint = TextPrimary,
+                modifier = Modifier.size(20.dp)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(
+                text = label,
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
+                ),
+                color = TextPrimary,
+                fontWeight = FontWeight.Medium
             )
         }
     }
