@@ -79,9 +79,6 @@ cd persona-companion-app
 ./gradlew assembleRelease
 ```
 
-## Screenshots
-
-[Add your screenshots here]
 
 ## Credits
 
