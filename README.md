@@ -1,6 +1,6 @@
 # Persona Companion App
 
-A comprehensive companion and reference app for the mainline Persona series. Version 5.0 marks the final major feature release, providing complete databases for personas, enemies, social links, and classroom answers.
+A comprehensive companion and reference app for the mainline Persona series. Version 5.0 marks the final major feature release, providing complete databases for personas, enemies, social links, confidants, and classroom answers.
 
 ## Supported Games
 
@@ -23,9 +23,9 @@ A comprehensive companion and reference app for the mainline Persona series. Ver
 
 - Full persona compendium with stats, skills, and fusion recipes
 - Enemy database detailing weaknesses, resistances, and drop items
-- Social Links/Confidants guides with dialogue choices and point values
-- Classroom answers for all supported titles
-- Advanced filtering capabilities (game, arcana, level, etc.)
+- Social Links and Confidants with complete dialogue choices and point values
+- Classroom answers for all supported titles with correct solutions
+- Advanced filtering capabilities (game, arcana, level, DLC, Episode Aigis)
 
 ### HD Images (Optional)
 
@@ -39,7 +39,7 @@ The app is fully functional offline without images, but supports high-quality as
 
 - **Favorites & History** - Save frequently used personas/enemies and access recently viewed items
 - **Smart Filtering** - Toggle DLC personas, Episode Aigis content, and P3P protagonist routes
-- **Share Functionality** - Share personas, enemies, and social links with full details
+- **Share Functionality** - Share personas, enemies, social links, and confidants with full details including boss phases
 - **OLED Dark Theme** - Built-in dark mode optimized for battery saving on OLED screens
 - **Automatic Updates** - Built-in update checker to stay current with new releases
 
