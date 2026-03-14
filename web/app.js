@@ -248,7 +248,8 @@ function personaRow(name, p, color) {
 
 /* ── Enemies ───────────────────────────────────────────────────────────────── */
 function renderEnemies(data, q, color, el) {
-    const all = Object.entries(data);
+    // Enemies JSON is an array [{name,...}], not a keyed object
+    const all = Array.isArray(data) ? data.map(e => [e.name, e]) : Object.entries(data);
     const enemies    = all.filter(([,e]) => !e.isMiniBoss && !e.isBoss);
     const miniBosses = all.filter(([,e]) => e.isMiniBoss);
     const mainBosses = all.filter(([,e]) => e.isBoss);
