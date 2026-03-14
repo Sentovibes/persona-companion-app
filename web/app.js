@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── Navigation ────────────────────────────────────────────────────────────── */
+function isTablet() { return window.innerWidth >= 840; }
+
 function navigate(to, payload) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById('screen-'+to).classList.add('active');
@@ -82,6 +84,36 @@ function navigate(to, payload) {
     if (to==='sldetail')    buildSlDetailScreen();
     if (to==='fusion')      buildFusionScreen();
     if (to==='settings')    buildSettingsScreen();
+    updateRailState(to);
+}
+
+/* ── Rail Navigation ───────────────────────────────────────────────────────── */
+function railNav(section) {
+    if (!S.game) return;
+    if (section === 'personas')       { S.listMode='personas';  navigate('list'); }
+    else if (section === 'fusion')    { openFusion(); }
+    else if (section === 'enemies')   { S.listMode='enemies';   navigate('list'); }
+    else if (section === 'sl')        { openSocialLinks(); }
+    else if (section === 'classroom') { S.listMode='classroom'; navigate('list'); }
+}
+
+function updateRailState(screenName) {
+    // Show/hide game-specific rail items
+    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class'];
+    gameItems.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = S.game ? 'flex' : 'none';
+    });
+    // Map screen → rail item id
+    const screenToRail = {
+        home: 'rail-home', game: 'rail-home',
+        list: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='classroom'?'rail-class':null,
+        detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':null,
+        fusion: 'rail-fusion', sociallinks: 'rail-sl', sldetail: 'rail-sl',
+    };
+    document.querySelectorAll('.rail-item').forEach(el => el.classList.remove('active'));
+    const activeId = screenToRail[screenName];
+    if (activeId) document.getElementById(activeId)?.classList.add('active');
 }
 
 /* ── Home ──────────────────────────────────────────────────────────────────── */
@@ -377,8 +409,23 @@ function renderSlList(color) {
 
 function openSlDetail(arcana) {
     S.slDetail = arcana;
-    navigate('sldetail');
+    if (isTablet()) {
+        showSlDetailPane();
+    } else {
+        navigate('sldetail');
+    }
 }
+
+function showSlDetailPane() {
+    if (!S.slDetail||!S.slData) return;
+    document.getElementById('slDetailPlaceholder').style.display = 'none';
+    const paneContent = document.getElementById('slDetailPaneContent');
+    paneContent.style.display = 'flex';
+    document.getElementById('slDetailTitle').textContent = S.slDetail;
+    buildSlDetailScreen(); // writes to #slDetailContent
+}
+
+function renderSlDetailInPane() {} // no-op, kept for compat
 
 function buildSlDetailScreen() {
     if (!S.slDetail||!S.slData) return;
@@ -387,22 +434,24 @@ function buildSlDetailScreen() {
     const entry  = S.slData.find(([a])=>a===S.slDetail);
     if (!entry) return;
     const [arcana, data] = entry;
-    document.getElementById('slDetailTitle').textContent = arcana;
+
+    // Phone screen uses slDetailContentPhone, tablet pane uses slDetailContent
+    const phoneEl = document.getElementById('slDetailContentPhone');
+    const paneEl  = document.getElementById('slDetailContent');
+    if (phoneEl) { document.getElementById('slDetailTitlePhone').textContent = arcana; }
 
     const rankKeys = Object.keys(data).filter(k=>
         !['P4G Exclusive','P5R Exclusive','P5R Reworked'].includes(k) && typeof data[k]==='object'
     );
 
     let html = '';
-    rankKeys.forEach((rankKey, i) => {
+    rankKeys.forEach((rankKey) => {
         const rank = data[rankKey];
         const nextRank = rank['Next Rank']||0;
         const isAuto = rankKey.toLowerCase().includes('auto');
         html += `<div class="section-card">
             <div class="section-title" style="color:${color}">${rankKey}${isAuto?' (Auto)':''}</div>`;
         if (nextRank) html += `<div class="info-row"><div class="info-label">Points to next</div><div class="info-val">${nextRank}</div></div>`;
-
-        // Dialogue choices
         Object.entries(rank).forEach(([k,v]) => {
             if (k==='Next Rank'||typeof v==='object') return;
             if (k.match(/^[QA]?[0-9]+[:.]/)||k.startsWith('Phone')||k.startsWith('Any')) {
@@ -418,8 +467,9 @@ function buildSlDetailScreen() {
         });
         html += `</div>`;
     });
-    document.getElementById('slDetailContent').innerHTML = html||`<div class="empty-state">No rank data</div>`;
-    document.getElementById('slDetailContent').scrollTop = 0;
+    const content = html||`<div class="empty-state">No rank data</div>`;
+    if (paneEl)  { paneEl.innerHTML = content; paneEl.scrollTop = 0; }
+    if (phoneEl) { phoneEl.innerHTML = content; phoneEl.scrollTop = 0; }
 }
 
 function onSlSearch(val) {
@@ -436,7 +486,11 @@ function openPersona(name) {
     const data = S.rawData[key];
     if (!data||!data[name]) return;
     S.detail = {type:'persona', name, data:data[name]};
-    navigate('detail');
+    if (isTablet()) {
+        showListDetailPane();
+    } else {
+        navigate('detail');
+    }
 }
 function openEnemy(name) {
     const key = `enemies_${S.game}`;
@@ -445,14 +499,20 @@ function openEnemy(name) {
     const enemy = Array.isArray(data)?data.find(e=>e.name===name):data[name];
     if (!enemy) return;
     S.detail = {type:'enemy', name, data:enemy};
-    navigate('detail');
+    if (isTablet()) {
+        showListDetailPane();
+    } else {
+        navigate('detail');
+    }
 }
 
-function buildDetailScreen() {
-    if (!S.detail) return;
+function showListDetailPane() {
     const series = SERIES.find(s=>s.id===S.series);
     const color  = series?.color||'#2196F3';
-    document.getElementById('detailTitle').textContent = S.detail.name;
+    document.getElementById('listDetailPlaceholder').style.display = 'none';
+    const paneContent = document.getElementById('listDetailContent');
+    paneContent.style.display = 'flex';
+    document.getElementById('listDetailTitle').textContent = S.detail.name;
     const favId = `${S.game}_${S.detail.name}`;
     const isFav = S.favorites.has(favId);
     document.getElementById('favBtn').textContent = isFav?'♥':'♡';
@@ -461,8 +521,23 @@ function buildDetailScreen() {
     else renderEnemyDetail(S.detail.name, S.detail.data, color);
 }
 
-function renderPersonaDetail(name, p, color) {
-    const el = document.getElementById('detailContent');
+function renderDetailInPane() {} // no-op, kept for compat
+
+function buildDetailScreen() {
+    if (!S.detail) return;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    document.getElementById('detailTitle').textContent = S.detail.name;
+    const favId = `${S.game}_${S.detail.name}`;
+    const isFav = S.favorites.has(favId);
+    document.getElementById('favBtnPhone').textContent = isFav?'♥':'♡';
+    document.getElementById('favBtnPhone').style.color  = isFav?color:'';
+    if (S.detail.type==='persona') renderPersonaDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
+    else renderEnemyDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
+}
+
+function renderPersonaDetail(name, p, color, containerId) {
+    const el = document.getElementById(containerId||'detailContent');
     const stats = p.stats||[];
     const maxStat = stats.length?Math.max(...stats,1):1;
     const statLabels = ['STR','MAG','END','AGI','LUK'];
@@ -529,8 +604,8 @@ function renderPersonaDetail(name, p, color) {
     el.scrollTop = 0;
 }
 
-function renderEnemyDetail(name, e, color) {
-    const el = document.getElementById('detailContent');
+function renderEnemyDetail(name, e, color, containerId) {
+    const el = document.getElementById(containerId||'detailContent');
     const elems = ELEMENTS[S.series]||ELEMENTS.p5;
     let html = `<div class="section-card">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -674,8 +749,13 @@ function toggleFavorite() {
     if (!S.detail) return;
     const id=`${S.game}_${S.detail.name}`;
     const c=SERIES.find(s=>s.id===S.series)?.color||'#f00';
-    if (S.favorites.has(id)) { S.favorites.delete(id); document.getElementById('favBtn').textContent='♡'; document.getElementById('favBtn').style.color=''; }
-    else { S.favorites.add(id); document.getElementById('favBtn').textContent='♥'; document.getElementById('favBtn').style.color=c; }
+    const isFav = S.favorites.has(id);
+    if (isFav) { S.favorites.delete(id); } else { S.favorites.add(id); }
+    // Update whichever fav button is visible
+    ['favBtn','favBtnPhone'].forEach(btnId => {
+        const btn = document.getElementById(btnId);
+        if (btn) { btn.textContent=isFav?'♡':'♥'; btn.style.color=isFav?'':c; }
+    });
     localStorage.setItem('favs', JSON.stringify([...S.favorites]));
 }
 function shareDetail() {
@@ -788,7 +868,72 @@ function selectFusionPersona(name) {
     S.fusion.selected = { name, data: p };
     S.fusion.recipes  = calcFusionRecipes(name);
     const series = SERIES.find(s=>s.id===S.series);
-    renderFusionResults(series?.color||'#2196F3');
+    const color = series?.color||'#2196F3';
+    if (isTablet()) {
+        showFusionDetailPane(color);
+    } else {
+        renderFusionResults(color);
+    }
+}
+
+function showFusionDetailPane(color) {
+    const { selected, recipes } = S.fusion;
+    if (!selected) return;
+    document.getElementById('fusionDetailPlaceholder').style.display = 'none';
+    const paneContent = document.getElementById('fusionDetailContent');
+    paneContent.style.display = 'flex';
+    document.getElementById('fusionDetailTitle').textContent = selected.name;
+
+    const p = selected.data;
+    const level = p.level??p.lvl??'?';
+    const arcana = p.arcana||p.race||'Unknown';
+    const el = document.getElementById('fusionRecipeContent');
+
+    let html = `<div class="fusion-selected-card" style="border-left:4px solid ${color};margin:0">
+        <div class="fusion-selected-info">
+            <div class="fusion-selected-name">${selected.name}</div>
+            <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
+        </div>
+    </div>`;
+
+    if (!recipes || !recipes.length) {
+        html += `<div class="empty-state">No fusion recipes found${!S.settings.showDlc?' (DLC off)':''}</div>`;
+    } else {
+        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found</div>`;
+        html += recipes.map(combo => {
+            if (combo.length === 2) {
+                return `<div class="fusion-recipe-card" style="margin:0 0 8px">
+                    ${combo.map((ing, i) => `
+                        ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
+                        <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
+                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                        </div>`).join('')}
+                </div>`;
+            } else {
+                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="margin:0 0 8px">
+                    ${combo.map((ing, i) => `
+                        ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
+                        <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
+                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                        </div>`).join('')}
+                </div>`;
+            }
+        }).join('');
+    }
+    el.innerHTML = html;
+    el.scrollTop = 0;
+}
+
+function renderFusionResultsInPane(color) { showFusionDetailPane(color); } // compat alias
+function clearFusionSelectionPane() {
+    S.fusion.selected = null;
+    S.fusion.recipes  = null;
+    document.getElementById('fusionDetailPlaceholder').style.display = '';
+    document.getElementById('fusionDetailContent').style.display = 'none';
+    const series = SERIES.find(s=>s.id===S.series);
+    renderFusionPersonaList(series?.color||'#2196F3');
 }
 
 function calcFusionRecipes(targetName) {
@@ -873,8 +1018,12 @@ function renderFusionResults(color) {
 function clearFusionSelection() {
     S.fusion.selected = null;
     S.fusion.recipes  = null;
-    const series = SERIES.find(s=>s.id===S.series);
-    renderFusionPersonaList(series?.color||'#2196F3');
+    if (isTablet()) {
+        clearFusionSelectionPane();
+    } else {
+        const series = SERIES.find(s=>s.id===S.series);
+        renderFusionPersonaList(series?.color||'#2196F3');
+    }
 }
 
 function onFusionSearch(val) {

@@ -10,114 +10,208 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="app-shell">
 
-<!-- HOME -->
-<div id="screen-home" class="screen active">
-    <div class="top-bar">
-        <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
-        <div class="top-bar-actions">
-            <button class="icon-btn" onclick="navigate('settings')" title="Settings">⚙</button>
+    <!-- NAVIGATION RAIL (tablet/desktop) -->
+    <nav id="nav-rail">
+        <div class="rail-logo">PERSONA<br>COMP.</div>
+        <button class="rail-item" id="rail-home"     onclick="navigate('home')"     title="Home">
+            <span class="rail-item-icon">🏠</span>Home
+        </button>
+        <button class="rail-item" id="rail-personas" onclick="railNav('personas')"  title="Personas" style="display:none">
+            <span class="rail-item-icon">📖</span>Personas
+        </button>
+        <button class="rail-item" id="rail-fusion"   onclick="railNav('fusion')"    title="Fusion" style="display:none">
+            <span class="rail-item-icon">✨</span>Fusion
+        </button>
+        <button class="rail-item" id="rail-enemies"  onclick="railNav('enemies')"   title="Enemies" style="display:none">
+            <span class="rail-item-icon">🛡</span>Enemies
+        </button>
+        <button class="rail-item" id="rail-sl"       onclick="railNav('sl')"        title="Social Links" style="display:none">
+            <span class="rail-item-icon">👥</span>Links
+        </button>
+        <button class="rail-item" id="rail-class"    onclick="railNav('classroom')" title="Classroom" style="display:none">
+            <span class="rail-item-icon">🎓</span>Class
+        </button>
+        <div class="rail-spacer"></div>
+        <button class="rail-item" onclick="navigate('settings')" title="Settings">
+            <span class="rail-item-icon">⚙</span>Settings
+        </button>
+    </nav>
+
+    <!-- CONTENT AREA -->
+    <div id="content-area">
+
+        <!-- HOME -->
+        <div id="screen-home" class="screen active">
+            <div class="top-bar">
+                <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
+                <div class="top-bar-actions">
+                    <button class="icon-btn" onclick="navigate('settings')" title="Settings">⚙</button>
+                </div>
+            </div>
+            <div class="home-content">
+                <div class="series-list" id="seriesList"></div>
+                <div class="home-footer">Community-driven · Open source</div>
+            </div>
         </div>
-    </div>
-    <div class="home-content">
-        <div class="series-list" id="seriesList"></div>
-        <div class="home-footer">Community-driven · Open source</div>
-    </div>
-</div>
 
-<!-- GAME SELECTION -->
-<div id="screen-game" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
-        <span class="top-bar-title" id="gameScreenTitle"></span>
-    </div>
-    <div class="game-list" id="gameList"></div>
-</div>
-
-<!-- CATEGORY SCREEN (mirrors Android CategoryScreen) -->
-<div id="screen-category" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('game', S.series)">←</button>
-        <span class="top-bar-title" id="categoryTitle"></span>
-    </div>
-    <div class="category-list" id="categoryList"></div>
-</div>
-
-<!-- LIST SCREEN -->
-<div id="screen-list" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
-        <span class="top-bar-title" id="listScreenTitle"></span>
-    </div>
-    <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input id="searchInput" class="search-input" type="text" placeholder="Search…" oninput="onSearch(this.value)">
-        <button class="search-clear" id="searchClear" onclick="clearSearch()" style="display:none">✕</button>
-    </div>
-    <div class="sort-bar" id="sortBar"></div>
-    <div class="tab-bar" id="tabBar" style="display:none"></div>
-    <div id="listContent" class="list-content"></div>
-</div>
-
-<!-- DETAIL SCREEN -->
-<div id="screen-detail" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" id="detailBackBtn" onclick="navigate('list')">←</button>
-        <span class="top-bar-title" id="detailTitle"></span>
-        <div class="top-bar-actions">
-            <button class="icon-btn" id="favBtn" onclick="toggleFavorite()" title="Favorite">♡</button>
-            <button class="icon-btn" onclick="shareDetail()" title="Share">↗</button>
+        <!-- GAME SELECTION -->
+        <div id="screen-game" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
+                <span class="top-bar-title" id="gameScreenTitle"></span>
+            </div>
+            <div class="game-list" id="gameList"></div>
         </div>
-    </div>
-    <div id="detailContent" class="detail-content"></div>
-</div>
 
-<!-- SOCIAL LINKS LIST -->
-<div id="screen-sociallinks" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
-        <span class="top-bar-title" id="slTitle"></span>
-    </div>
-    <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input id="slSearch" class="search-input" type="text" placeholder="Search…" oninput="onSlSearch(this.value)">
-        <button class="search-clear" id="slSearchClear" onclick="clearSlSearch()" style="display:none">✕</button>
-    </div>
-    <div id="slContent" class="list-content"></div>
-</div>
+        <!-- CATEGORY -->
+        <div id="screen-category" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('game', S.series)">←</button>
+                <span class="top-bar-title" id="categoryTitle"></span>
+            </div>
+            <div class="category-list" id="categoryList"></div>
+        </div>
 
-<!-- SOCIAL LINK DETAIL -->
-<div id="screen-sldetail" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('sociallinks')">←</button>
-        <span class="top-bar-title" id="slDetailTitle"></span>
-    </div>
-    <div id="slDetailContent" class="detail-content"></div>
-</div>
+        <!-- LIST (personas / enemies / classroom) — two-pane on tablet -->
+        <div id="screen-list" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" id="listBackBtn" onclick="navigate('category')">←</button>
+                <span class="top-bar-title" id="listScreenTitle"></span>
+            </div>
+            <div class="two-pane-body">
+                <!-- Left pane: list -->
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input id="searchInput" class="search-input" type="text" placeholder="Search…" oninput="onSearch(this.value)">
+                        <button class="search-clear" id="searchClear" onclick="clearSearch()" style="display:none">✕</button>
+                    </div>
+                    <div class="sort-bar" id="sortBar"></div>
+                    <div class="tab-bar" id="tabBar" style="display:none"></div>
+                    <div id="listContent" class="list-content"></div>
+                </div>
+                <!-- Right pane: detail (tablet only) -->
+                <div class="pane-detail" id="listDetailPane">
+                    <div class="detail-placeholder" id="listDetailPlaceholder">
+                        <div class="detail-placeholder-icon">📖</div>
+                        <div>Select an item to view details</div>
+                    </div>
+                    <div id="listDetailContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar" style="position:sticky;top:0;z-index:10">
+                            <span class="top-bar-title" id="listDetailTitle"></span>
+                            <div class="top-bar-actions">
+                                <button class="icon-btn" id="favBtn" onclick="toggleFavorite()" title="Favorite">♡</button>
+                                <button class="icon-btn" onclick="shareDetail()" title="Share">↗</button>
+                            </div>
+                        </div>
+                        <div id="detailContent" class="detail-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- FUSION CALCULATOR -->
-<div id="screen-fusion" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
-        <span class="top-bar-title">Fusion Calculator</span>
-    </div>
-    <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input id="fusionSearch" class="search-input" type="text" placeholder="Search by name or arcana…" oninput="onFusionSearch(this.value)">
-        <button class="search-clear" id="fusionSearchClear" onclick="clearFusionSearch()" style="display:none">✕</button>
-    </div>
-    <div id="fusionContent" class="list-content"></div>
-</div>
+        <!-- DETAIL (phone only — tablet uses pane-detail inside screen-list) -->
+        <div id="screen-detail" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('list')">←</button>
+                <span class="top-bar-title" id="detailTitle"></span>
+                <div class="top-bar-actions">
+                    <button class="icon-btn" id="favBtnPhone" onclick="toggleFavorite()" title="Favorite">♡</button>
+                    <button class="icon-btn" onclick="shareDetail()" title="Share">↗</button>
+                </div>
+            </div>
+            <div id="detailContentPhone" class="detail-content"></div>
+        </div>
 
-<!-- SETTINGS -->
-<div id="screen-settings" class="screen">
-    <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
-        <span class="top-bar-title">Settings</span>
-    </div>
-    <div class="detail-content" id="settingsContent"></div>
-</div>
+        <!-- FUSION CALCULATOR — two-pane on tablet -->
+        <div id="screen-fusion" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+                <span class="top-bar-title">Fusion Calculator</span>
+            </div>
+            <div class="two-pane-body">
+                <!-- Left pane: persona list -->
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input id="fusionSearch" class="search-input" type="text" placeholder="Search by name or arcana…" oninput="onFusionSearch(this.value)">
+                        <button class="search-clear" id="fusionSearchClear" onclick="clearFusionSearch()" style="display:none">✕</button>
+                    </div>
+                    <div id="fusionContent" class="list-content"></div>
+                </div>
+                <!-- Right pane: recipes (tablet only) -->
+                <div class="pane-detail" id="fusionDetailPane">
+                    <div class="detail-placeholder" id="fusionDetailPlaceholder">
+                        <div class="detail-placeholder-icon">✨</div>
+                        <div>Select a persona to see fusion recipes</div>
+                    </div>
+                    <div id="fusionDetailContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar" style="position:sticky;top:0;z-index:10">
+                            <span class="top-bar-title" id="fusionDetailTitle"></span>
+                            <div class="top-bar-actions">
+                                <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">✕</button>
+                            </div>
+                        </div>
+                        <div id="fusionRecipeContent" class="detail-content" style="gap:8px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- SOCIAL LINKS LIST — two-pane on tablet -->
+        <div id="screen-sociallinks" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+                <span class="top-bar-title" id="slTitle"></span>
+            </div>
+            <div class="two-pane-body">
+                <!-- Left pane: SL list -->
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input id="slSearch" class="search-input" type="text" placeholder="Search…" oninput="onSlSearch(this.value)">
+                        <button class="search-clear" id="slSearchClear" onclick="clearSlSearch()" style="display:none">✕</button>
+                    </div>
+                    <div id="slContent" class="list-content"></div>
+                </div>
+                <!-- Right pane: SL detail (tablet only) -->
+                <div class="pane-detail" id="slDetailPane">
+                    <div class="detail-placeholder" id="slDetailPlaceholder">
+                        <div class="detail-placeholder-icon">👥</div>
+                        <div>Select a social link to view details</div>
+                    </div>
+                    <div id="slDetailPaneContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar" style="position:sticky;top:0;z-index:10">
+                            <span class="top-bar-title" id="slDetailTitle"></span>
+                        </div>
+                        <div id="slDetailContent" class="detail-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL LINK DETAIL (phone only) -->
+        <div id="screen-sldetail" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('sociallinks')">←</button>
+                <span class="top-bar-title" id="slDetailTitlePhone"></span>
+            </div>
+            <div id="slDetailContentPhone" class="detail-content"></div>
+        </div>
+
+        <!-- SETTINGS -->
+        <div id="screen-settings" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
+                <span class="top-bar-title">Settings</span>
+            </div>
+            <div class="detail-content" id="settingsContent"></div>
+        </div>
+
+    </div><!-- /content-area -->
+</div><!-- /app-shell -->
 <script src="app.js"></script>
 </body>
 </html>
