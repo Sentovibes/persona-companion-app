@@ -285,8 +285,23 @@ function renderEnemies(data, q, color, el) {
 }
 
 /* ── Classroom ─────────────────────────────────────────────────────────────── */
+function flattenClassroom(data) {
+    // Structure: { Month: { Classroom: { date: [{Question,Answer}] } } }
+    if (Array.isArray(data)) return data;
+    const items = [];
+    Object.entries(data).forEach(([month, monthData]) => {
+        if (typeof monthData !== 'object') return;
+        const inner = monthData.Classroom || monthData;
+        Object.entries(inner).forEach(([date, qas]) => {
+            if (!Array.isArray(qas)) return;
+            qas.forEach(qa => items.push({ Date: date, ...qa }));
+        });
+    });
+    return items;
+}
+
 function renderClassroom(data, q, el) {
-    let items = Object.values(data);
+    let items = flattenClassroom(data);
     if (q) items = items.filter(qa =>
         (qa.Question||'').toLowerCase().includes(q) || (qa.Answer||'').toLowerCase().includes(q)
     );
@@ -311,8 +326,11 @@ function openPersona(name) {
 function openEnemy(name) {
     const key = `enemies_${S.game}`;
     const data = S.rawData[key];
-    if (!data || !data[name]) return;
-    S.detail = { type: 'enemy', name, data: data[name] };
+    if (!data) return;
+    // Enemies JSON is an array
+    const enemy = Array.isArray(data) ? data.find(e => e.name === name) : data[name];
+    if (!enemy) return;
+    S.detail = { type: 'enemy', name, data: enemy };
     navigate('detail');
 }
 
@@ -388,13 +406,14 @@ function renderPersonaDetail(name, p, color) {
         html += `</div>`;
     }
 
-    // Affinities
+    // Affinities - parse resists string (mirrors Android Persona.kt)
+    const aff = parsePersonaAffinities(p, S.game);
     const affinities = [
-        { label:'Weak',    list: p.weaknesses,  color:'#E57373' },
-        { label:'Resists', list: p.resistances, color:'#81C784' },
-        { label:'Null',    list: p.nullifies,   color:'#B0BEC5' },
-        { label:'Repel',   list: p.repels,      color:'#64B5F6' },
-        { label:'Absorb',  list: p.absorbs,     color:'#FFD54F' },
+        { label:'Weak',    list: aff.weak,   color:'#E57373' },
+        { label:'Resists', list: aff.resist, color:'#81C784' },
+        { label:'Null',    list: aff.null_,  color:'#B0BEC5' },
+        { label:'Repel',   list: aff.repel,  color:'#64B5F6' },
+        { label:'Absorb',  list: aff.absorb, color:'#FFD54F' },
     ].filter(a => a.list && a.list.length);
 
     if (affinities.length) {
@@ -480,6 +499,42 @@ function renderEnemyDetail(name, e, color) {
 
     el.innerHTML = html;
     el.scrollTop = 0;
+}
+
+/* ── Persona Affinity Parser (mirrors Android Persona.kt) ─────────────────── */
+function parsePersonaAffinities(p, gameId) {
+    // P3R format: direct arrays on the object
+    if (p.weak || p.reflects || p.absorbs || p.nullifies) {
+        return {
+            weak:   p.weak      || [],
+            resist: Array.isArray(p.resists) ? p.resists : [],
+            null_:  p.nullifies || [],
+            repel:  p.reflects  || [],
+            absorb: p.absorbs   || [],
+        };
+    }
+    // Old format: resists is a string like "--dxaw----"
+    const resistStr = typeof p.resists === 'string' ? p.resists : '';
+    if (!resistStr) return { weak:[], resist:[], null_:[], repel:[], absorb:[] };
+
+    const isP3 = p.heart != null || p.cardlvl != null || (gameId||'').startsWith('p3');
+    const isP5 = p.trait != null || p.item != null || (gameId||'').startsWith('p5');
+    let elems;
+    if (isP3 || (resistStr.length === 10 && !isP5)) {
+        elems = ['Slash','Strike','Pierce','Fire','Ice','Elec','Wind','Light','Dark','Almighty'];
+    } else if (resistStr.length === 7) {
+        elems = ['Phys','Fire','Ice','Elec','Wind','Light','Dark'];
+    } else if (resistStr.length === 8) {
+        elems = ['Phys','Fire','Ice','Elec','Wind','Light','Dark','Almighty'];
+    } else {
+        elems = ['Phys','Gun','Fire','Ice','Elec','Wind','Psy','Nuke','Bless','Curse'];
+    }
+    const result = { weak:[], resist:[], null_:[], repel:[], absorb:[] };
+    const map = { w:'weak', s:'resist', n:'null_', r:'repel', d:'absorb' };
+    resistStr.split('').forEach((c, i) => {
+        if (i < elems.length && map[c]) result[map[c]].push(elems[i]);
+    });
+    return result;
 }
 
 /* ── Helpers ───────────────────────────────────────────────────────────────── */
