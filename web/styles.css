@@ -44,8 +44,7 @@ body {
 ══════════════════════════════════════════════════════════════════════════════ */
 #app-shell {
     display: flex;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /* ── Navigation Rail (tablet/desktop only) ─────────────────────────────────── */
@@ -84,18 +83,21 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
     min-width: 0;
     overflow: hidden;
 }
 
 /* ── Screens ───────────────────────────────────────────────────────────────── */
-.screen { display:none; flex-direction:column; flex:1; min-height:100vh; }
+.screen { display:none; flex-direction:column; flex:1; height:100%; overflow:hidden; }
 .screen.active { display:flex; }
-/* Screens with two-pane-body need bounded height so inner panes can scroll */
-#screen-list.active,
-#screen-fusion.active,
-#screen-sociallinks.active { min-height:0; height:100vh; }
+/* home/game/category/settings scroll naturally */
+#screen-home.active,
+#screen-game.active,
+#screen-category.active,
+#screen-detail.active,
+#screen-sldetail.active,
+#screen-settings.active { overflow-y:auto; height:auto; min-height:100%; }
 
 /* ── Top Bar ───────────────────────────────────────────────────────────────── */
 .top-bar {
@@ -111,6 +113,7 @@ body {
 }
 .top-bar-title-home { font-size: 1rem; font-weight: 900; letter-spacing: 2px; color: var(--text); }
 .top-bar-title-home span { color: var(--text2); font-weight: 400; }
+.app-logo { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; margin-right: 4px; }
 .top-bar-actions { display:flex; gap:4px; margin-left:auto; }
 .icon-btn {
     width:40px; height:40px; border-radius:50%; border:none;
