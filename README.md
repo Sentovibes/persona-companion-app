@@ -45,9 +45,26 @@ The app is fully functional offline without images, but supports high-quality as
 
 ## Installation
 
+### Android App
+
 1. Download the latest APK from the [Releases](https://github.com/Sentovibes/persona-companion-app/releases) tab
 2. Install on your Android device (requires Android 8.0+)
 3. Optionally download HD images from Settings
+
+### Web Version
+
+Access the web version directly in your browser (no installation required):
+
+**[https://sentovibes.github.io/persona-companion-app/web/](https://sentovibes.github.io/persona-companion-app/web/)**
+
+The web version includes:
+- Full persona and enemy databases
+- Classroom answers
+- Search and filtering
+- Responsive design for mobile and desktop
+- Works offline after first load
+
+Note: Images and fusion calculator are not available in the web version.
 
 ## HD Images Setup
 
