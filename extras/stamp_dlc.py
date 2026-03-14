@@ -1,6 +1,6 @@
 """
 Stamps isDlc: true onto DLC personas in the app's persona JSON files.
-Source of truth: megaten-fusion-tool dlc-data.json files.
+Source of truth: megaten-fusion-tool dlc-data.json / demon-unlocks.json files.
 """
 import json
 
@@ -12,10 +12,18 @@ with open(f'{MEGATEN}/p5/data/dlc-data.json') as f:
 with open(f'{MEGATEN}/p5/data/roy-dlc-data.json') as f:
     p5r_dlc = set(json.load(f).keys())
 
-# P3 and P4 have no DLC personas per megaten-tool
+# P3R DLC: read from demon-unlocks.json, category "Downloadable Content"
+with open(f'{MEGATEN}/p3r/data/demon-unlocks.json') as f:
+    p3r_unlocks = json.load(f)
+p3r_dlc = set()
+for entry in p3r_unlocks:
+    if entry.get('category') == 'Downloadable Content':
+        p3r_dlc.update(entry['conditions'].keys())
+
 targets = [
-    ('app/src/main/assets/data/persona5/personas.json',      p5_dlc),
+    ('app/src/main/assets/data/persona5/personas.json',       p5_dlc),
     ('app/src/main/assets/data/persona5/royal_personas.json', p5r_dlc),
+    ('app/src/main/assets/data/persona3/reload_personas.json', p3r_dlc),
 ]
 
 for path, dlc_names in targets:
@@ -39,3 +47,4 @@ for path, dlc_names in targets:
 print('\nDone! DLC personas now have isDlc: true in the JSON.')
 print('Note: Only Arsene (P5R) will show 0 recipes when DLC is off - that is correct,')
 print('      since all its recipes require a DLC ingredient.')
+print('P3R: 21 DLC personas (P5 crossover sets + P4 sets)')

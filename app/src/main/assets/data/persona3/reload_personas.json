@@ -15,7 +15,13 @@
       "Maragidyne": 81,
       "Drain Ice": 83
     },
-    "stats": [53, 61, 48, 33, 46]
+    "stats": [
+      53,
+      61,
+      48,
+      33,
+      46
+    ]
   },
   "Alice": {
     "heart": "Soul Sea Drop",
@@ -33,7 +39,13 @@
       "Endure Light": 72,
       "Megidolaon": 74
     },
-    "stats": [35, 62, 31, 51, 44]
+    "stats": [
+      35,
+      62,
+      31,
+      51,
+      44
+    ]
   },
   "Alilat": {
     "heart": "Black Pillar Shard",
@@ -51,7 +63,13 @@
       "Inferno": 89,
       "Repel Pierce": 91
     },
-    "stats": [51, 70, 60, 51, 51]
+    "stats": [
+      51,
+      70,
+      60,
+      51,
+      51
+    ]
   },
   "Ananta": {
     "heart": "Soul Sea Drop",
@@ -69,7 +87,13 @@
       "Growth 3": 77,
       "Drain Slash": 80
     },
-    "stats": [51, 51, 68, 35, 42]
+    "stats": [
+      51,
+      51,
+      68,
+      35,
+      42
+    ]
   },
   "Anat": {
     "inherits": "windA",
@@ -85,7 +109,14 @@
       "Mediarahan": 57,
       "Enduring Soul": 59
     },
-    "stats": [36, 39, 33, 37, 23]
+    "stats": [
+      36,
+      39,
+      33,
+      37,
+      23
+    ],
+    "isDlc": true
   },
   "Angel": {
     "inherits": "lightA",
@@ -99,7 +130,13 @@
       "Patra": 6,
       "Resist Charm": 8
     },
-    "stats": [4, 5, 3, 4, 3]
+    "stats": [
+      4,
+      5,
+      3,
+      4,
+      3
+    ]
   },
   "Anubis": {
     "inherits": "lidarkA",
@@ -115,7 +152,13 @@
       "Growth 2": 44,
       "Resist Dark": 45
     },
-    "stats": [27, 35, 30, 21, 26]
+    "stats": [
+      27,
+      35,
+      30,
+      21,
+      26
+    ]
   },
   "Apsaras": {
     "inherits": "iceB",
@@ -130,7 +173,13 @@
       "Resist Freeze": 7,
       "Cadenza": 5217
     },
-    "stats": [2, 4, 2, 3, 2]
+    "stats": [
+      2,
+      4,
+      2,
+      3,
+      2
+    ]
   },
   "Ara Mitama": {
     "inherits": "elecA",
@@ -145,7 +194,13 @@
       "Rakunda": 8,
       "Rage Boost": 10
     },
-    "stats": [8, 3, 4, 5, 5]
+    "stats": [
+      8,
+      3,
+      4,
+      5,
+      5
+    ]
   },
   "Arahabaki": {
     "heart": "Clay God Fragment",
@@ -163,7 +218,13 @@
       "Virus Breath": 72,
       "Repel Strike": 76
     },
-    "stats": [47, 52, 53, 32, 36]
+    "stats": [
+      47,
+      52,
+      53,
+      32,
+      36
+    ]
   },
   "Archangel": {
     "inherits": "lightA",
@@ -178,7 +239,13 @@
       "Holy Arrow": 13,
       "Apt Pupil": 15
     },
-    "stats": [8, 8, 8, 7, 6]
+    "stats": [
+      8,
+      8,
+      8,
+      7,
+      6
+    ]
   },
   "Arsene": {
     "inherits": "darkA",
@@ -194,7 +261,14 @@
       "Maeiga": 27,
       "Survival Trick": 29
     },
-    "stats": [17, 17, 14, 18, 11]
+    "stats": [
+      17,
+      17,
+      14,
+      18,
+      11
+    ],
+    "isDlc": true
   },
   "Astarte": {
     "inherits": "iceA",
@@ -210,7 +284,14 @@
       "Single-Target Boost": 58,
       "Myriad Arrows": 60
     },
-    "stats": [42, 36, 33, 33, 31]
+    "stats": [
+      42,
+      36,
+      33,
+      33,
+      31
+    ],
+    "isDlc": true
   },
   "Asura": {
     "heart": "Carnage King's Gear",
@@ -228,7 +309,13 @@
       "God's Hand": 90,
       "Firm Stance": 91
     },
-    "stats": [75, 55, 58, 50, 54]
+    "stats": [
+      75,
+      55,
+      58,
+      50,
+      54
+    ]
   },
   "Atavaka": {
     "heart": "Wisdom King's Locks",
@@ -246,7 +333,13 @@
       "Mediarahan": 77,
       "Firm Stance": 79
     },
-    "stats": [63, 37, 64, 39, 35]
+    "stats": [
+      63,
+      37,
+      64,
+      39,
+      35
+    ]
   },
   "Atropos": {
     "heart": "Soul Sea Drop",
@@ -264,7 +357,13 @@
       "Wind Amp": 61,
       "Soul Link": 62
     },
-    "stats": [26, 45, 32, 36, 40]
+    "stats": [
+      26,
+      45,
+      32,
+      36,
+      40
+    ]
   },
   "Attis": {
     "heart": "Sacrifice God Wrap",
@@ -282,7 +381,13 @@
       "Megidolaon": 77,
       "Enduring Soul": 79
     },
-    "stats": [45, 53, 51, 57, 32]
+    "stats": [
+      45,
+      53,
+      51,
+      57,
+      32
+    ]
   },
   "Baal Zebul": {
     "inherits": "iceD",
@@ -298,7 +403,13 @@
       "Maeigaon": 76,
       "Panta Rhei": 78
     },
-    "stats": [51, 56, 45, 42, 41]
+    "stats": [
+      51,
+      56,
+      45,
+      42,
+      41
+    ]
   },
   "Baphomet": {
     "inherits": "elecD",
@@ -314,7 +425,13 @@
       "Dark Boost": 34,
       "Endure Light": 36
     },
-    "stats": [20, 25, 22, 16, 19]
+    "stats": [
+      20,
+      25,
+      22,
+      16,
+      19
+    ]
   },
   "Barong": {
     "inherits": "elecA",
@@ -330,7 +447,13 @@
       "Auto Masuku": 67,
       "Drain Elec": 69
     },
-    "stats": [43, 55, 41, 31, 32]
+    "stats": [
+      43,
+      55,
+      41,
+      31,
+      32
+    ]
   },
   "Beelzebub": {
     "heart": "Lord of Flies Wings",
@@ -348,7 +471,13 @@
       "Concentrate": 85,
       "Dark Amp": 87
     },
-    "stats": [50, 62, 50, 60, 52]
+    "stats": [
+      50,
+      62,
+      50,
+      60,
+      52
+    ]
   },
   "Belphegor": {
     "inherits": "iceD",
@@ -364,7 +493,13 @@
       "Endure Light": 57,
       "Maeigaon": 59
     },
-    "stats": [34, 43, 38, 28, 29]
+    "stats": [
+      34,
+      43,
+      38,
+      28,
+      29
+    ]
   },
   "Berith": {
     "inherits": "windA",
@@ -379,7 +514,13 @@
       "Dodge Fire": 16,
       "Assault Dive": 18
     },
-    "stats": [12, 7, 10, 11, 6]
+    "stats": [
+      12,
+      7,
+      10,
+      11,
+      6
+    ]
   },
   "Bishamonten": {
     "inherits": "fireL",
@@ -395,7 +536,13 @@
       "Primal Force": 64,
       "Pierce Amp": 66
     },
-    "stats": [50, 38, 45, 36, 30]
+    "stats": [
+      50,
+      38,
+      45,
+      36,
+      30
+    ]
   },
   "Black Frost": {
     "heart": "Black Frostite",
@@ -415,7 +562,13 @@
       "Resist Light": 43,
       "King and I": 5217
     },
-    "stats": [22, 34, 23, 25, 20]
+    "stats": [
+      22,
+      34,
+      23,
+      25,
+      20
+    ]
   },
   "Byakko": {
     "heart": "King of Beasts Fang",
@@ -433,7 +586,13 @@
       "Mabufudyne": 67,
       "Enduring Soul": 69
     },
-    "stats": [45, 44, 50, 39, 30]
+    "stats": [
+      45,
+      44,
+      50,
+      39,
+      30
+    ]
   },
   "Captain Kidd": {
     "inherits": "elecA",
@@ -449,7 +608,14 @@
       "Zionga": 21,
       "Swift Strike": 23
     },
-    "stats": [14, 8, 16, 12, 11]
+    "stats": [
+      14,
+      8,
+      16,
+      12,
+      11
+    ],
+    "isDlc": true
   },
   "Carmen": {
     "inherits": "fireA",
@@ -465,7 +631,14 @@
       "Charm Boost": 22,
       "Maragion": 24
     },
-    "stats": [8, 18, 12, 14, 12]
+    "stats": [
+      8,
+      18,
+      12,
+      14,
+      12
+    ],
+    "isDlc": true
   },
   "Cendrillon": {
     "inherits": "lightA",
@@ -481,7 +654,14 @@
       "Vidyaraja's Blessing": 40,
       "Tempest Slash": 42
     },
-    "stats": [25, 22, 20, 28, 20]
+    "stats": [
+      25,
+      22,
+      20,
+      28,
+      20
+    ],
+    "isDlc": true
   },
   "Chernobog": {
     "heart": "Soul Sea Drop",
@@ -499,7 +679,13 @@
       "Shift Amp": 60,
       "Brave Blade": 61
     },
-    "stats": [48, 41, 31, 35, 32]
+    "stats": [
+      48,
+      41,
+      31,
+      35,
+      32
+    ]
   },
   "Chi You": {
     "heart": "Bull Warrior Horns",
@@ -517,7 +703,13 @@
       "Arms Master": 91,
       "Drain Strike": 93
     },
-    "stats": [69, 50, 63, 53, 60]
+    "stats": [
+      69,
+      50,
+      63,
+      53,
+      60
+    ]
   },
   "Chimera": {
     "inherits": "fireB",
@@ -532,7 +724,13 @@
       "Sukunda": 12,
       "Auto Tarukaja": 14
     },
-    "stats": [8, 4, 12, 4, 6]
+    "stats": [
+      8,
+      4,
+      12,
+      4,
+      6
+    ]
   },
   "Clotho": {
     "heart": "Soul Sea Droplet",
@@ -550,7 +748,13 @@
       "Soul Chain": 40,
       "Samarecarm": 42
     },
-    "stats": [20, 29, 22, 24, 26]
+    "stats": [
+      20,
+      29,
+      22,
+      24,
+      26
+    ]
   },
   "Cu Chulainn": {
     "heart": "Fetching Hero's Comb",
@@ -569,7 +773,13 @@
       "Myriad Arrows": 45,
       "Shift Amp": 46
     },
-    "stats": [33, 29, 24, 26, 21]
+    "stats": [
+      33,
+      29,
+      24,
+      26,
+      21
+    ]
   },
   "Cybele": {
     "heart": "Earth Goddess Ring",
@@ -587,7 +797,13 @@
       "Light Amp": 71,
       "Spell Master": 73
     },
-    "stats": [39, 54, 40, 42, 45]
+    "stats": [
+      39,
+      54,
+      40,
+      42,
+      45
+    ]
   },
   "Daisoujou": {
     "inherits": "almighty",
@@ -603,7 +819,13 @@
       "Hama Boost": 63,
       "Null Dark": 65
     },
-    "stats": [33, 49, 38, 31, 42]
+    "stats": [
+      33,
+      49,
+      38,
+      31,
+      42
+    ]
   },
   "Dakini": {
     "inherits": "slashB",
@@ -618,7 +840,13 @@
       "Strike Boost": 41,
       "High Counter": 43
     },
-    "stats": [36, 22, 16, 29, 18]
+    "stats": [
+      36,
+      22,
+      16,
+      29,
+      18
+    ]
   },
   "Decarabia": {
     "inherits": "almighty",
@@ -635,7 +863,13 @@
       "Null Slash": 60,
       "Best Friends": 5217
     },
-    "stats": [35, 35, 35, 35, 35]
+    "stats": [
+      35,
+      35,
+      35,
+      35,
+      35
+    ]
   },
   "Dionysus": {
     "inherits": "elecA",
@@ -651,7 +885,13 @@
       "Heat Wave": 52,
       "Regenerate 3": 54
     },
-    "stats": [30, 38, 26, 30, 33]
+    "stats": [
+      30,
+      38,
+      26,
+      30,
+      33
+    ]
   },
   "Dominion": {
     "heart": "Soul Sea Droplet",
@@ -669,7 +909,13 @@
       "Light Boost": 46,
       "Kougaon": 47
     },
-    "stats": [25, 32, 24, 26, 26]
+    "stats": [
+      25,
+      32,
+      24,
+      26,
+      26
+    ]
   },
   "Eligor": {
     "inherits": "windA",
@@ -684,7 +930,13 @@
       "Maragion": 35,
       "Life Aid": 36
     },
-    "stats": [26, 21, 24, 20, 15]
+    "stats": [
+      26,
+      21,
+      24,
+      20,
+      15
+    ]
   },
   "Flauros": {
     "heart": "Soul Sea Droplet",
@@ -702,7 +954,13 @@
       "Herculean Strike": 36,
       "Evade Wind": 38
     },
-    "stats": [27, 25, 20, 18, 16]
+    "stats": [
+      27,
+      25,
+      20,
+      18,
+      16
+    ]
   },
   "Forneus": {
     "inherits": "windA",
@@ -718,7 +976,13 @@
       "Dodge Ice": 12,
       "Best Friends": 5217
     },
-    "stats": [5, 6, 7, 6, 4]
+    "stats": [
+      5,
+      6,
+      7,
+      6,
+      4
+    ]
   },
   "Fortuna": {
     "heart": "Soul Sea Driblet",
@@ -736,7 +1000,13 @@
       "Rakukaja": 18,
       "Wind Boost": 20
     },
-    "stats": [7, 17, 10, 13, 11]
+    "stats": [
+      7,
+      17,
+      10,
+      13,
+      11
+    ]
   },
   "Futsunushi": {
     "heart": "Sword God Steel",
@@ -754,7 +1024,13 @@
       "Brave Blade": 78,
       "Unshaken Will": 81
     },
-    "stats": [62, 49, 50, 42, 35]
+    "stats": [
+      62,
+      49,
+      50,
+      42,
+      35
+    ]
   },
   "Gabriel": {
     "heart": "Soul Sea Drop",
@@ -772,7 +1048,13 @@
       "Ice Amp": 66,
       "Diamond Dust": 68
     },
-    "stats": [40, 52, 35, 41, 37]
+    "stats": [
+      40,
+      52,
+      35,
+      41,
+      37
+    ]
   },
   "Ganesha": {
     "inherits": "lightA",
@@ -788,7 +1070,13 @@
       "Endure": 55,
       "Repel Pierce": 57
     },
-    "stats": [39, 31, 34, 20, 40]
+    "stats": [
+      39,
+      31,
+      34,
+      20,
+      40
+    ]
   },
   "Ganga": {
     "inherits": "iceA",
@@ -804,7 +1092,13 @@
       "Diarama": 44,
       "Endure Dark": 46
     },
-    "stats": [24, 30, 26, 22, 28]
+    "stats": [
+      24,
+      30,
+      26,
+      22,
+      28
+    ]
   },
   "Garuda": {
     "inherits": "windL",
@@ -819,7 +1113,13 @@
       "Magarudyne": 67,
       "Panta Rhei": 70
     },
-    "stats": [45, 41, 35, 51, 36]
+    "stats": [
+      45,
+      41,
+      35,
+      51,
+      36
+    ]
   },
   "Genbu": {
     "heart": "Soul Sea Driblet",
@@ -837,7 +1137,13 @@
       "Anti-Ice Master": 33,
       "Resist Wind": 35
     },
-    "stats": [18, 17, 30, 12, 20]
+    "stats": [
+      18,
+      17,
+      30,
+      12,
+      20
+    ]
   },
   "Girimekhala": {
     "inherits": "elecD",
@@ -853,7 +1159,13 @@
       "Mamudoon": 44,
       "Repel Slash": 46
     },
-    "stats": [36, 26, 28, 20, 20]
+    "stats": [
+      36,
+      26,
+      28,
+      20,
+      20
+    ]
   },
   "Goemon": {
     "inherits": "iceA",
@@ -869,7 +1181,14 @@
       "Blade of Fury": 31,
       "Mabufula": 32
     },
-    "stats": [24, 16, 18, 17, 13]
+    "stats": [
+      24,
+      16,
+      18,
+      17,
+      13
+    ],
+    "isDlc": true
   },
   "Gurulu": {
     "inherits": "darkA",
@@ -885,7 +1204,13 @@
       "Poison Mist": 18,
       "Poison Boost": 19
     },
-    "stats": [13, 8, 10, 12, 6]
+    "stats": [
+      13,
+      8,
+      10,
+      12,
+      6
+    ]
   },
   "Hanuman": {
     "inherits": "elecA",
@@ -901,7 +1226,13 @@
       "Evade Slash": 40,
       "Endure": 41
     },
-    "stats": [30, 17, 24, 22, 22]
+    "stats": [
+      30,
+      17,
+      24,
+      22,
+      22
+    ]
   },
   "Hariti": {
     "inherits": "recovery",
@@ -916,7 +1247,13 @@
       "Amrita Shower": 52,
       "Invigorate 3": 54
     },
-    "stats": [24, 42, 31, 28, 33]
+    "stats": [
+      24,
+      42,
+      31,
+      28,
+      33
+    ]
   },
   "Hecate": {
     "inherits": "fireA",
@@ -932,7 +1269,14 @@
       "Concentrate": 46,
       "Drain Fire": 48
     },
-    "stats": [22, 35, 24, 26, 26]
+    "stats": [
+      22,
+      35,
+      24,
+      26,
+      26
+    ],
+    "isDlc": true
   },
   "Hecatoncheires": {
     "inherits": "darkA",
@@ -948,7 +1292,13 @@
       "Heat Wave": 51,
       "Auto Maraku": 53
     },
-    "stats": [37, 24, 48, 20, 25]
+    "stats": [
+      37,
+      24,
+      48,
+      20,
+      25
+    ]
   },
   "Helel": {
     "inherits": "fireL",
@@ -965,7 +1315,13 @@
       "Almighty Boost": 95,
       "Armageddon": 5217
     },
-    "stats": [63, 63, 62, 58, 58]
+    "stats": [
+      63,
+      63,
+      62,
+      58,
+      58
+    ]
   },
   "Hell Biker": {
     "heart": "Hell's Muffler",
@@ -983,7 +1339,13 @@
       "Evade Light": 70,
       "Enduring Soul": 71
     },
-    "stats": [48, 51, 50, 40, 22]
+    "stats": [
+      48,
+      51,
+      50,
+      40,
+      22
+    ]
   },
   "High Pixie": {
     "inherits": "elecA",
@@ -998,7 +1360,13 @@
       "Tarukaja": 23,
       "Dodge Wind": 25
     },
-    "stats": [11, 20, 10, 13, 13]
+    "stats": [
+      11,
+      20,
+      10,
+      13,
+      13
+    ]
   },
   "Horus": {
     "heart": "Eye of Wadjet",
@@ -1016,7 +1384,13 @@
       "Amrita Shower": 71,
       "Evade Dark": 73
     },
-    "stats": [42, 53, 34, 48, 40]
+    "stats": [
+      42,
+      53,
+      34,
+      48,
+      40
+    ]
   },
   "Houou": {
     "heart": "Soul Sea Drop",
@@ -1034,7 +1408,13 @@
       "Null Pierce": 74,
       "Salvation": 77
     },
-    "stats": [35, 57, 39, 54, 41]
+    "stats": [
+      35,
+      57,
+      39,
+      54,
+      41
+    ]
   },
   "Hua Po": {
     "heart": "Soul Sea Driblet",
@@ -1051,7 +1431,13 @@
       "Resist Freeze": 21,
       "Fire Boost": 23
     },
-    "stats": [8, 21, 13, 17, 11]
+    "stats": [
+      8,
+      21,
+      13,
+      17,
+      11
+    ]
   },
   "Incubus": {
     "inherits": "ailment",
@@ -1067,7 +1453,13 @@
       "Maragion": 40,
       "Drain Ability": 42
     },
-    "stats": [22, 30, 20, 21, 28]
+    "stats": [
+      22,
+      30,
+      20,
+      21,
+      28
+    ]
   },
   "Inugami": {
     "inherits": "ailment",
@@ -1081,7 +1473,13 @@
       "Maragi": 12,
       "Media": 14
     },
-    "stats": [4, 8, 7, 7, 11]
+    "stats": [
+      4,
+      8,
+      7,
+      7,
+      11
+    ]
   },
   "Izanagi": {
     "inherits": "elecA",
@@ -1097,7 +1495,14 @@
       "Evade Slash": 50,
       "Soul Shift": 52
     },
-    "stats": [31, 30, 25, 31, 28]
+    "stats": [
+      31,
+      30,
+      25,
+      31,
+      28
+    ],
+    "isDlc": true
   },
   "Jack Frost": {
     "heart": "Jacktite",
@@ -1115,7 +1520,13 @@
       "Ice Boost": 13,
       "Jack Brothers": 5217
     },
-    "stats": [5, 9, 8, 6, 4]
+    "stats": [
+      5,
+      9,
+      8,
+      6,
+      4
+    ]
   },
   "Jack-o'-Lantern": {
     "heart": "Jacktite",
@@ -1133,7 +1544,13 @@
       "Agilao": 21,
       "Jack Brothers": 5217
     },
-    "stats": [8, 15, 9, 9, 11]
+    "stats": [
+      8,
+      15,
+      9,
+      9,
+      11
+    ]
   },
   "Jatayu": {
     "heart": "Soul Sea Drop",
@@ -1151,7 +1568,13 @@
       "Amrita Shower": 59,
       "Magarudyne": 61
     },
-    "stats": [33, 40, 30, 50, 28]
+    "stats": [
+      33,
+      40,
+      30,
+      50,
+      28
+    ]
   },
   "Jikokuten": {
     "inherits": "lightB",
@@ -1167,7 +1590,13 @@
       "Slash Boost": 34,
       "Endure Dark": 35
     },
-    "stats": [27, 13, 25, 12, 17]
+    "stats": [
+      27,
+      13,
+      25,
+      12,
+      17
+    ]
   },
   "Johanna": {
     "inherits": "windA",
@@ -1183,7 +1612,14 @@
       "Megido": 32,
       "Gigantic Fist": 33
     },
-    "stats": [19, 19, 17, 21, 15]
+    "stats": [
+      19,
+      19,
+      17,
+      21,
+      15
+    ],
+    "isDlc": true
   },
   "Kaguya": {
     "inherits": "iceA",
@@ -1199,7 +1635,14 @@
       "Amrita Shower": 38,
       "Diarahan": 39
     },
-    "stats": [19, 32, 28, 19, 11]
+    "stats": [
+      19,
+      32,
+      28,
+      19,
+      11
+    ],
+    "isDlc": true
   },
   "Kaiwan": {
     "inherits": "darkA",
@@ -1215,7 +1658,13 @@
       "Invigorate 2": 46,
       "Evade Pierce": 47
     },
-    "stats": [23, 28, 25, 25, 32]
+    "stats": [
+      23,
+      28,
+      25,
+      25,
+      32
+    ]
   },
   "Kali": {
     "heart": "Soul Sea Drop",
@@ -1233,7 +1682,13 @@
       "High Counter": 67,
       "Vorpal Blade": 70
     },
-    "stats": [53, 30, 34, 48, 34]
+    "stats": [
+      53,
+      30,
+      34,
+      48,
+      34
+    ]
   },
   "Kamu Susano-o": {
     "inherits": "iceA",
@@ -1249,7 +1704,14 @@
       "Shift Amp": 51,
       "Vorpal Blade": 53
     },
-    "stats": [40, 25, 30, 30, 23]
+    "stats": [
+      40,
+      25,
+      30,
+      30,
+      23
+    ],
+    "isDlc": true
   },
   "Kikuri-Hime": {
     "heart": "Soul Sea Drop",
@@ -1267,7 +1729,13 @@
       "Samarecarm": 65,
       "Mediarahan": 67
     },
-    "stats": [29, 50, 34, 41, 39]
+    "stats": [
+      29,
+      50,
+      34,
+      41,
+      39
+    ]
   },
   "King Frost": {
     "inherits": "iceA",
@@ -1284,7 +1752,13 @@
       "Null Ice": 39,
       "King and I": 5217
     },
-    "stats": [18, 31, 26, 14, 20]
+    "stats": [
+      18,
+      31,
+      26,
+      14,
+      20
+    ]
   },
   "Kohryu": {
     "heart": "God Dragon Whiskers",
@@ -1302,7 +1776,13 @@
       "Tetrakarn": 75,
       "Spell Master": 77
     },
-    "stats": [44, 53, 58, 31, 40]
+    "stats": [
+      44,
+      53,
+      58,
+      31,
+      40
+    ]
   },
   "Koumokuten": {
     "inherits": "windB",
@@ -1318,7 +1798,13 @@
       "Vile Assault": 56,
       "Enduring Soul": 57
     },
-    "stats": [40, 35, 40, 25, 29]
+    "stats": [
+      40,
+      35,
+      40,
+      25,
+      29
+    ]
   },
   "Kumbhanda": {
     "inherits": "darkA",
@@ -1334,7 +1820,13 @@
       "Magarudyne": 65,
       "Insta-Heal": 67
     },
-    "stats": [48, 44, 39, 45, 20]
+    "stats": [
+      48,
+      44,
+      39,
+      45,
+      20
+    ]
   },
   "Kurama Tengu": {
     "inherits": "windA",
@@ -1349,7 +1841,13 @@
       "Garudyne": 49,
       "Null Dizzy": 51
     },
-    "stats": [26, 32, 25, 37, 25]
+    "stats": [
+      26,
+      32,
+      25,
+      37,
+      25
+    ]
   },
   "Kushi Mitama": {
     "inherits": "iceA",
@@ -1365,7 +1863,13 @@
       "Magarula": 32,
       "Marakunda": 33
     },
-    "stats": [16, 22, 18, 13, 22]
+    "stats": [
+      16,
+      22,
+      18,
+      13,
+      22
+    ]
   },
   "Lachesis": {
     "heart": "Soul Sea Droplet",
@@ -1383,7 +1887,13 @@
       "Marakunda": 47,
       "Evade Elec": 49
     },
-    "stats": [22, 37, 23, 30, 29]
+    "stats": [
+      22,
+      37,
+      23,
+      30,
+      29
+    ]
   },
   "Lakshmi": {
     "heart": "Goddess Water Lily",
@@ -1401,7 +1911,13 @@
       "Mabufudyne": 77,
       "Salvation": 80
     },
-    "stats": [39, 61, 38, 45, 52]
+    "stats": [
+      39,
+      61,
+      38,
+      45,
+      52
+    ]
   },
   "Lamia": {
     "heart": "Soul Sea Driblet",
@@ -1418,7 +1934,13 @@
       "Poison Mist": 28,
       "Stagnant Air": 30
     },
-    "stats": [15, 20, 16, 14, 17]
+    "stats": [
+      15,
+      20,
+      16,
+      14,
+      17
+    ]
   },
   "Leanan Sidhe": {
     "inherits": "recovery",
@@ -1434,7 +1956,13 @@
       "Marin Karin": 25,
       "Null Charm": 26
     },
-    "stats": [12, 22, 13, 15, 14]
+    "stats": [
+      12,
+      22,
+      13,
+      15,
+      14
+    ]
   },
   "Legion": {
     "inherits": "almighty",
@@ -1450,7 +1978,13 @@
       "Confuse Boost": 30,
       "Resist Pierce": 31
     },
-    "stats": [16, 14, 26, 9, 20]
+    "stats": [
+      16,
+      14,
+      26,
+      9,
+      20
+    ]
   },
   "Lilim": {
     "inherits": "elecD",
@@ -1464,7 +1998,13 @@
       "Life Drain": 11,
       "Mazio": 13
     },
-    "stats": [4, 10, 4, 6, 7]
+    "stats": [
+      4,
+      10,
+      4,
+      6,
+      7
+    ]
   },
   "Lilith": {
     "heart": "Soul Sea Drop",
@@ -1482,7 +2022,13 @@
       "Demonic Decree": 70,
       "Drain Wind": 72
     },
-    "stats": [35, 56, 38, 44, 35]
+    "stats": [
+      35,
+      56,
+      38,
+      44,
+      35
+    ]
   },
   "Loa": {
     "heart": "Soul Sea Droplet",
@@ -1500,7 +2046,13 @@
       "Marakunda": 37,
       "Mudo Boost": 38
     },
-    "stats": [21, 26, 24, 19, 18]
+    "stats": [
+      21,
+      26,
+      24,
+      19,
+      18
+    ]
   },
   "Loki": {
     "inherits": "almighty",
@@ -1518,7 +2070,13 @@
       "Spell Master": 76,
       "Trickster": 5217
     },
-    "stats": [48, 60, 45, 42, 28]
+    "stats": [
+      48,
+      60,
+      45,
+      42,
+      28
+    ]
   },
   "Loki A": {
     "inherits": "darkA",
@@ -1534,7 +2092,14 @@
       "Akasha Arts": 64,
       "Megidolaon": 66
     },
-    "stats": [44, 42, 33, 38, 33]
+    "stats": [
+      44,
+      42,
+      33,
+      38,
+      33
+    ],
+    "isDlc": true
   },
   "Lucifer": {
     "heart": "Fallen Angel Wing",
@@ -1552,7 +2117,13 @@
       "Diamond Dust": 94,
       "Resist Phys": 96
     },
-    "stats": [70, 70, 61, 51, 55]
+    "stats": [
+      70,
+      70,
+      61,
+      51,
+      55
+    ]
   },
   "Mada": {
     "inherits": "fireA",
@@ -1569,7 +2140,13 @@
       "Amrita Shower": 62,
       "Strike Amp": 64
     },
-    "stats": [42, 48, 45, 33, 28]
+    "stats": [
+      42,
+      48,
+      45,
+      33,
+      28
+    ]
   },
   "Magatsu-Izanagi": {
     "inherits": "fireA",
@@ -1585,7 +2162,14 @@
       "Maziodyne": 54,
       "Heat Riser": 56
     },
-    "stats": [42, 39, 36, 28, 17]
+    "stats": [
+      42,
+      39,
+      36,
+      28,
+      17
+    ],
+    "isDlc": true
   },
   "Mara": {
     "heart": "Mara's Head",
@@ -1603,7 +2187,13 @@
       "Pierce Amp": 80,
       "Drain Light": 82
     },
-    "stats": [60, 50, 50, 48, 39]
+    "stats": [
+      60,
+      50,
+      50,
+      48,
+      39
+    ]
   },
   "Masakado": {
     "heart": "Emperor's Sake Cup",
@@ -1621,7 +2211,13 @@
       "Arms Master": 84,
       "Unshaken Will": 86
     },
-    "stats": [67, 46, 55, 43, 48]
+    "stats": [
+      67,
+      46,
+      55,
+      43,
+      48
+    ]
   },
   "Matador": {
     "inherits": "iceD",
@@ -1637,7 +2233,13 @@
       "Dekunda": 26,
       "Blade of Fury": 28
     },
-    "stats": [17, 14, 12, 23, 10]
+    "stats": [
+      17,
+      14,
+      12,
+      23,
+      10
+    ]
   },
   "Melchizedek": {
     "heart": "Immortal Angel Core",
@@ -1655,7 +2257,13 @@
       "God's Hand": 71,
       "Akasha Arts": 73
     },
-    "stats": [54, 47, 47, 35, 31]
+    "stats": [
+      54,
+      47,
+      47,
+      35,
+      31
+    ]
   },
   "Mercurius": {
     "inherits": "windA",
@@ -1671,7 +2279,14 @@
       "Anti-Electric Master": 47,
       "Salvation": 49
     },
-    "stats": [23, 31, 22, 33, 27]
+    "stats": [
+      23,
+      31,
+      22,
+      33,
+      27
+    ],
+    "isDlc": true
   },
   "Messiah": {
     "heart": "Savior's Augite",
@@ -1690,7 +2305,13 @@
       "Null Phys": 96,
       "Magic Ability": 98
     },
-    "stats": [65, 70, 62, 59, 59]
+    "stats": [
+      65,
+      70,
+      62,
+      59,
+      59
+    ]
   },
   "Metatron": {
     "heart": "Contract Angel Wing",
@@ -1708,7 +2329,13 @@
       "Light Amp": 92,
       "Repel Elec": 94
     },
-    "stats": [60, 65, 65, 55, 53]
+    "stats": [
+      60,
+      65,
+      65,
+      55,
+      53
+    ]
   },
   "Michael": {
     "heart": "Archangel Wings",
@@ -1726,7 +2353,13 @@
       "Heat Riser": 75,
       "Drain Pierce": 77
     },
-    "stats": [56, 48, 46, 37, 42]
+    "stats": [
+      56,
+      48,
+      46,
+      37,
+      42
+    ]
   },
   "Milady": {
     "inherits": "iceA",
@@ -1742,7 +2375,14 @@
       "Tetrakarn": 40,
       "Makarakarn": 41
     },
-    "stats": [27, 24, 22, 22, 20]
+    "stats": [
+      27,
+      24,
+      22,
+      22,
+      20
+    ],
+    "isDlc": true
   },
   "Mishaguji": {
     "inherits": "fireA",
@@ -1758,7 +2398,13 @@
       "Vile Assault": 52,
       "Null Strike": 54
     },
-    "stats": [36, 35, 30, 24, 26]
+    "stats": [
+      36,
+      35,
+      30,
+      24,
+      26
+    ]
   },
   "Mithras": {
     "inherits": "windA",
@@ -1775,7 +2421,13 @@
       "Swift Strike": 29,
       "Scarlet Havoc": 5217
     },
-    "stats": [16, 19, 15, 14, 15]
+    "stats": [
+      16,
+      19,
+      15,
+      14,
+      15
+    ]
   },
   "Mitra": {
     "inherits": "windL",
@@ -1790,7 +2442,13 @@
       "Kouga": 26,
       "Dodge Elec": 27
     },
-    "stats": [13, 19, 16, 10, 15]
+    "stats": [
+      13,
+      19,
+      16,
+      10,
+      15
+    ]
   },
   "Mokoi": {
     "inherits": "ailment",
@@ -1805,7 +2463,13 @@
       "Charm Boost": 21,
       "Evil Smile": 23
     },
-    "stats": [7, 7, 12, 16, 22]
+    "stats": [
+      7,
+      7,
+      12,
+      16,
+      22
+    ]
   },
   "Mot": {
     "inherits": "elecD",
@@ -1821,7 +2485,13 @@
       "Mudo Boost": 61,
       "Megidola": 63
     },
-    "stats": [37, 42, 44, 29, 33]
+    "stats": [
+      37,
+      42,
+      44,
+      29,
+      33
+    ]
   },
   "Mother Harlot": {
     "heart": "Soul Sea Drop",
@@ -1839,7 +2509,13 @@
       "Debilitate": 82,
       "Diamond Dust": 83
     },
-    "stats": [44, 65, 60, 36, 42]
+    "stats": [
+      44,
+      65,
+      60,
+      36,
+      42
+    ]
   },
   "Mothman": {
     "inherits": "ailment",
@@ -1854,7 +2530,13 @@
       "Elec Boost": 34,
       "Megido": 36
     },
-    "stats": [15, 25, 18, 27, 22]
+    "stats": [
+      15,
+      25,
+      18,
+      27,
+      22
+    ]
   },
   "Naga": {
     "inherits": "darkA",
@@ -1869,7 +2551,13 @@
       "Eerie Sound": 21,
       "Invigorate 1": 22
     },
-    "stats": [14, 10, 11, 14, 9]
+    "stats": [
+      14,
+      10,
+      11,
+      14,
+      9
+    ]
   },
   "Naga Raja": {
     "inherits": "iceA",
@@ -1885,7 +2573,13 @@
       "Confuse Boost": 46,
       "Null Pierce": 48
     },
-    "stats": [33, 31, 22, 27, 23]
+    "stats": [
+      33,
+      31,
+      22,
+      27,
+      23
+    ]
   },
   "Narcissus": {
     "heart": "Soul Sea Driblet",
@@ -1903,7 +2597,13 @@
       "Growth 1": 27,
       "Dodge Slash": 28
     },
-    "stats": [12, 18, 10, 17, 20]
+    "stats": [
+      12,
+      18,
+      10,
+      17,
+      20
+    ]
   },
   "Nebiros": {
     "heart": "Unholy Wooden Doll",
@@ -1921,7 +2621,13 @@
       "Fear Boost": 55,
       "Mamudoon": 57
     },
-    "stats": [28, 42, 31, 31, 37]
+    "stats": [
+      28,
+      42,
+      31,
+      31,
+      37
+    ]
   },
   "Neko Shogun": {
     "inherits": "strikeB",
@@ -1936,7 +2642,13 @@
       "Swift Strike": 20,
       "Resist Dizzy": 22
     },
-    "stats": [15, 12, 10, 14, 8]
+    "stats": [
+      15,
+      12,
+      10,
+      14,
+      8
+    ]
   },
   "Nekomata": {
     "inherits": "windA",
@@ -1951,7 +2663,13 @@
       "Marin Karin": 6,
       "Maragi": 8
     },
-    "stats": [4, 4, 2, 5, 2]
+    "stats": [
+      4,
+      4,
+      2,
+      5,
+      2
+    ]
   },
   "Nidhoggr": {
     "inherits": "elecD",
@@ -1967,7 +2685,13 @@
       "Ailment Boost": 51,
       "Null Light": 53
     },
-    "stats": [36, 29, 43, 21, 28]
+    "stats": [
+      36,
+      29,
+      43,
+      21,
+      28
+    ]
   },
   "Nigi Mitama": {
     "inherits": "windA",
@@ -1982,7 +2706,13 @@
       "Sharp Student": 15,
       "Recarm": 17
     },
-    "stats": [6, 10, 9, 10, 8]
+    "stats": [
+      6,
+      10,
+      9,
+      10,
+      8
+    ]
   },
   "Norn": {
     "heart": "Second Hand of Fate",
@@ -2000,7 +2730,13 @@
       "Soul Link": 70,
       "Salvation": 72
     },
-    "stats": [37, 60, 40, 37, 40]
+    "stats": [
+      37,
+      60,
+      40,
+      37,
+      40
+    ]
   },
   "Oberon": {
     "heart": "Soul Sea Driblet",
@@ -2017,7 +2753,13 @@
       "Survive Dark": 19,
       "Zionga": 21
     },
-    "stats": [11, 15, 9, 12, 8]
+    "stats": [
+      11,
+      15,
+      9,
+      12,
+      8
+    ]
   },
   "Odin": {
     "heart": "Eyepatch of Wisdom",
@@ -2035,7 +2777,13 @@
       "Concentrate": 78,
       "Spell Master": 80
     },
-    "stats": [44, 63, 42, 46, 49]
+    "stats": [
+      44,
+      63,
+      42,
+      46,
+      49
+    ]
   },
   "Okuninushi": {
     "inherits": "elecA",
@@ -2051,7 +2799,13 @@
       "Agidyne": 47,
       "Evade Fire": 49
     },
-    "stats": [35, 32, 29, 24, 19]
+    "stats": [
+      35,
+      32,
+      29,
+      24,
+      19
+    ]
   },
   "Omoikane": {
     "inherits": "elecL",
@@ -2065,7 +2819,13 @@
       "Resist Shock": 10,
       "Auto Rakukaja": 12
     },
-    "stats": [4, 8, 6, 4, 6]
+    "stats": [
+      4,
+      8,
+      6,
+      4,
+      6
+    ]
   },
   "Oni": {
     "heart": "Soul Sea Driblet",
@@ -2083,7 +2843,13 @@
       "Counterstrike": 34,
       "Dizzy Boost": 36
     },
-    "stats": [30, 13, 26, 21, 19]
+    "stats": [
+      30,
+      13,
+      26,
+      21,
+      19
+    ]
   },
   "Onmoraki": {
     "inherits": "darkA",
@@ -2098,7 +2864,13 @@
       "Growth 1": 11,
       "Magaru": 13
     },
-    "stats": [4, 7, 6, 10, 4]
+    "stats": [
+      4,
+      7,
+      6,
+      10,
+      4
+    ]
   },
   "Orobas": {
     "inherits": "fireA",
@@ -2114,7 +2886,13 @@
       "Resist Ice": 44,
       "Survival Trick": 45
     },
-    "stats": [22, 33, 22, 28, 19]
+    "stats": [
+      22,
+      33,
+      22,
+      28,
+      19
+    ]
   },
   "Orpheus": {
     "inherits": "windA",
@@ -2128,7 +2906,13 @@
       "Tarunda": 5,
       "Cadenza": 5217
     },
-    "stats": [2, 2, 2, 3, 2]
+    "stats": [
+      2,
+      2,
+      2,
+      3,
+      2
+    ]
   },
   "Orpheus Telos": {
     "inherits": "almighty",
@@ -2138,7 +2922,13 @@
     "skills": {
       "Victory Cry": 0.1
     },
-    "stats": [63, 63, 63, 63, 63]
+    "stats": [
+      63,
+      63,
+      63,
+      63,
+      63
+    ]
   },
   "Orthrus": {
     "inherits": "fireB",
@@ -2154,7 +2944,13 @@
       "Eerie Sound": 31,
       "Matarukaja": 32
     },
-    "stats": [22, 14, 20, 18, 15]
+    "stats": [
+      22,
+      14,
+      20,
+      18,
+      15
+    ]
   },
   "Ose": {
     "inherits": "almighty",
@@ -2170,7 +2966,13 @@
       "Life Aid": 45,
       "Tempest Slash": 47
     },
-    "stats": [32, 23, 28, 25, 22]
+    "stats": [
+      32,
+      23,
+      28,
+      25,
+      22
+    ]
   },
   "Pale Rider": {
     "inherits": "darkA",
@@ -2186,7 +2988,13 @@
       "Survive Light": 26,
       "Null Fear": 28
     },
-    "stats": [20, 18, 13, 17, 11]
+    "stats": [
+      20,
+      18,
+      13,
+      17,
+      11
+    ]
   },
   "Parvati": {
     "heart": "Soul Sea Droplet",
@@ -2204,7 +3012,13 @@
       "Divine Grace": 52,
       "Bufudyne": 53
     },
-    "stats": [26, 40, 26, 31, 31]
+    "stats": [
+      26,
+      40,
+      26,
+      31,
+      31
+    ]
   },
   "Pazuzu": {
     "inherits": "windD",
@@ -2220,7 +3034,13 @@
       "Masukunda": 59,
       "Ailment Boost": 61
     },
-    "stats": [34, 42, 35, 32, 34]
+    "stats": [
+      34,
+      42,
+      35,
+      32,
+      34
+    ]
   },
   "Pisaca": {
     "inherits": "iceD",
@@ -2235,7 +3055,13 @@
       "Maeiha": 18,
       "Mamudo": 19
     },
-    "stats": [10, 13, 16, 9, 7]
+    "stats": [
+      10,
+      13,
+      16,
+      9,
+      7
+    ]
   },
   "Pixie": {
     "inherits": "recovery",
@@ -2249,7 +3075,13 @@
       "Tarukaja": 5,
       "Resist Confuse": 6
     },
-    "stats": [2, 2, 2, 4, 3]
+    "stats": [
+      2,
+      2,
+      2,
+      4,
+      3
+    ]
   },
   "Power": {
     "inherits": "lightA",
@@ -2265,7 +3097,13 @@
       "Dodge Dark": 29,
       "Revolution": 30
     },
-    "stats": [20, 16, 15, 16, 15]
+    "stats": [
+      20,
+      16,
+      15,
+      16,
+      15
+    ]
   },
   "Principality": {
     "inherits": "lightA",
@@ -2280,7 +3118,13 @@
       "Dodge Elec": 19,
       "Mahama": 21
     },
-    "stats": [11, 13, 7, 12, 12]
+    "stats": [
+      11,
+      13,
+      7,
+      12,
+      12
+    ]
   },
   "Qitian Dasheng": {
     "inherits": "iceA",
@@ -2296,7 +3140,13 @@
       "Akasha Arts": 72,
       "Evade Strike": 73
     },
-    "stats": [52, 38, 39, 50, 41]
+    "stats": [
+      52,
+      38,
+      39,
+      50,
+      41
+    ]
   },
   "Queen Medb": {
     "inherits": "lidarkA",
@@ -2312,7 +3162,13 @@
       "Dodge Pierce": 31,
       "Matarunda": 33
     },
-    "stats": [14, 26, 15, 19, 17]
+    "stats": [
+      14,
+      26,
+      15,
+      19,
+      17
+    ]
   },
   "Quetzalcoatl": {
     "inherits": "windL",
@@ -2328,7 +3184,13 @@
       "Resist Ailments": 50,
       "Ice Amp": 51
     },
-    "stats": [25, 35, 33, 30, 25]
+    "stats": [
+      25,
+      35,
+      33,
+      30,
+      25
+    ]
   },
   "Rakshasa": {
     "inherits": "elecB",
@@ -2343,7 +3205,13 @@
       "Counter": 18,
       "Getsu-ei": 20
     },
-    "stats": [17, 8, 13, 11, 6]
+    "stats": [
+      17,
+      8,
+      13,
+      11,
+      6
+    ]
   },
   "Rangda": {
     "heart": "Soul Sea Droplet",
@@ -2361,7 +3229,13 @@
       "Maeiga": 54,
       "Evade Ice": 56
     },
-    "stats": [33, 39, 28, 30, 30]
+    "stats": [
+      33,
+      39,
+      28,
+      30,
+      30
+    ]
   },
   "Raphael": {
     "inherits": "windL",
@@ -2377,7 +3251,13 @@
       "Angelic Grace": 64,
       "Heat Riser": 66
     },
-    "stats": [46, 42, 37, 31, 40]
+    "stats": [
+      46,
+      42,
+      37,
+      31,
+      40
+    ]
   },
   "Robin Hood": {
     "inherits": "lightA",
@@ -2393,7 +3273,14 @@
       "Kougaon": 41,
       "Eigaon": 42
     },
-    "stats": [25, 27, 22, 24, 20]
+    "stats": [
+      25,
+      27,
+      22,
+      24,
+      20
+    ],
+    "isDlc": true
   },
   "Saki Mitama": {
     "inherits": "recovery",
@@ -2409,7 +3296,13 @@
       "Null Shock": 39,
       "Divine Grace": 41
     },
-    "stats": [16, 30, 20, 22, 28]
+    "stats": [
+      16,
+      30,
+      20,
+      22,
+      28
+    ]
   },
   "Samael": {
     "inherits": "elecD",
@@ -2425,7 +3318,13 @@
       "Megido": 44,
       "Ghastly Wail": 46
     },
-    "stats": [26, 31, 27, 21, 25]
+    "stats": [
+      26,
+      31,
+      27,
+      21,
+      25
+    ]
   },
   "Sandalphon": {
     "heart": "Prayer Angel Garland",
@@ -2443,7 +3342,13 @@
       "Salvation": 84,
       "Drain Dark": 87
     },
-    "stats": [53, 53, 67, 46, 49]
+    "stats": [
+      53,
+      53,
+      67,
+      46,
+      49
+    ]
   },
   "Sandman": {
     "inherits": "almighty",
@@ -2458,7 +3363,13 @@
       "Confuse Boost": 24,
       "Resist Elec": 26
     },
-    "stats": [13, 13, 15, 15, 20]
+    "stats": [
+      13,
+      13,
+      15,
+      15,
+      20
+    ]
   },
   "Sarasvati": {
     "heart": "Soul Sea Driblet",
@@ -2476,7 +3387,13 @@
       "Mediarama": 35,
       "Masukukaja": 36
     },
-    "stats": [17, 26, 16, 24, 22]
+    "stats": [
+      17,
+      26,
+      16,
+      24,
+      22
+    ]
   },
   "Satan": {
     "inherits": "elecA",
@@ -2494,7 +3411,13 @@
       "Black Viper": 89,
       "Armageddon": 5217
     },
-    "stats": [55, 68, 52, 43, 53]
+    "stats": [
+      55,
+      68,
+      52,
+      43,
+      53
+    ]
   },
   "Satanael": {
     "inherits": "almighty",
@@ -2510,7 +3433,14 @@
       "Heat Riser": 93,
       "Almighty Boost": 95
     },
-    "stats": [63, 60, 57, 56, 56]
+    "stats": [
+      63,
+      60,
+      57,
+      56,
+      56
+    ],
+    "isDlc": true
   },
   "Sati": {
     "heart": "Soul Sea Driblet",
@@ -2528,7 +3458,13 @@
       "Anti-Fire Master": 33,
       "Evade Ice": 35
     },
-    "stats": [13, 27, 13, 21, 20]
+    "stats": [
+      13,
+      27,
+      13,
+      21,
+      20
+    ]
   },
   "Saturnus": {
     "heart": "Black Sun Candle",
@@ -2546,7 +3482,13 @@
       "Heat Riser": 80,
       "Repel Ice": 82
     },
-    "stats": [43, 70, 45, 51, 41]
+    "stats": [
+      43,
+      70,
+      45,
+      51,
+      41
+    ]
   },
   "Scathach": {
     "heart": "Preceptress Silk",
@@ -2564,7 +3506,13 @@
       "Invigorate 3": 79,
       "Auto Mataru": 81
     },
-    "stats": [55, 58, 40, 49, 42]
+    "stats": [
+      55,
+      58,
+      40,
+      49,
+      42
+    ]
   },
   "Seiryu": {
     "heart": "Soul Sea Droplet",
@@ -2581,7 +3529,13 @@
       "Amrita Drop": 41,
       "Bufudyne": 43
     },
-    "stats": [24, 31, 27, 21, 18]
+    "stats": [
+      24,
+      31,
+      27,
+      21,
+      18
+    ]
   },
   "Seiten Taisei A": {
     "inherits": "elecA",
@@ -2597,7 +3551,14 @@
       "Gigantic Fist": 44,
       "Auto Mataru": 46
     },
-    "stats": [30, 20, 33, 24, 20]
+    "stats": [
+      30,
+      20,
+      33,
+      24,
+      20
+    ],
+    "isDlc": true
   },
   "Setanta": {
     "inherits": "iceL",
@@ -2613,7 +3574,13 @@
       "Shift Boost": 33,
       "Resist Fire": 34
     },
-    "stats": [26, 19, 17, 21, 15]
+    "stats": [
+      26,
+      19,
+      17,
+      21,
+      15
+    ]
   },
   "Seth": {
     "inherits": "darkA",
@@ -2629,7 +3596,13 @@
       "Maragidyne": 66,
       "Repel Ice": 68
     },
-    "stats": [47, 49, 42, 29, 35]
+    "stats": [
+      47,
+      49,
+      42,
+      29,
+      35
+    ]
   },
   "Shiisaa": {
     "inherits": "iceL",
@@ -2644,7 +3617,13 @@
       "Dodge Fire": 27,
       "Herculean Strike": 29
     },
-    "stats": [15, 15, 19, 16, 11]
+    "stats": [
+      15,
+      15,
+      19,
+      16,
+      11
+    ]
   },
   "Shiki-Ouji": {
     "inherits": "iceA",
@@ -2660,7 +3639,13 @@
       "Evade Wind": 49,
       "Null Fire": 51
     },
-    "stats": [33, 28, 28, 25, 28]
+    "stats": [
+      33,
+      28,
+      28,
+      25,
+      28
+    ]
   },
   "Shiva": {
     "heart": "Destroyer's Drums",
@@ -2678,7 +3663,13 @@
       "God's Hand": 86,
       "Ali Dance": 88
     },
-    "stats": [63, 57, 48, 57, 55]
+    "stats": [
+      63,
+      57,
+      48,
+      57,
+      55
+    ]
   },
   "Siegfried": {
     "heart": "Nibelung Ore",
@@ -2697,7 +3688,13 @@
       "Slash Amp": 61,
       "Scarlet Havoc": 5217
     },
-    "stats": [44, 29, 38, 36, 25]
+    "stats": [
+      44,
+      29,
+      38,
+      36,
+      25
+    ]
   },
   "Silky": {
     "inherits": "iceA",
@@ -2711,7 +3708,13 @@
       "Baisudi": 7,
       "Sharp Student": 9
     },
-    "stats": [3, 7, 3, 4, 5]
+    "stats": [
+      3,
+      7,
+      3,
+      4,
+      5
+    ]
   },
   "Skadi": {
     "heart": "Shadow Lipstick",
@@ -2729,7 +3732,13 @@
       "Ice Amp": 72,
       "Drain Fire": 75
     },
-    "stats": [52, 58, 33, 40, 40]
+    "stats": [
+      52,
+      58,
+      33,
+      40,
+      40
+    ]
   },
   "Slime": {
     "inherits": "almighty",
@@ -2744,7 +3753,13 @@
       "Fire Break": 15,
       "Survive Light": 16
     },
-    "stats": [10, 6, 14, 6, 7]
+    "stats": [
+      10,
+      6,
+      14,
+      6,
+      7
+    ]
   },
   "Succubus": {
     "heart": "Soul Sea Droplet",
@@ -2762,7 +3777,13 @@
       "Eigaon": 51,
       "Evade Light": 53
     },
-    "stats": [26, 41, 28, 33, 27]
+    "stats": [
+      26,
+      41,
+      28,
+      33,
+      27
+    ]
   },
   "Surt": {
     "heart": "Muspell Rock",
@@ -2780,7 +3801,13 @@
       "Inferno": 64,
       "Fire Amp": 66
     },
-    "stats": [43, 51, 40, 28, 34]
+    "stats": [
+      43,
+      51,
+      40,
+      28,
+      34
+    ]
   },
   "Susano-o": {
     "heart": "Susano-o's Cloth",
@@ -2799,7 +3826,13 @@
       "Repel Light": 84,
       "Trickster": 5217
     },
-    "stats": [71, 35, 43, 49, 55]
+    "stats": [
+      71,
+      35,
+      43,
+      49,
+      55
+    ]
   },
   "Suzaku": {
     "heart": "Soul Sea Drop",
@@ -2817,7 +3850,13 @@
       "Fast Heal": 59,
       "Fire Amp": 61
     },
-    "stats": [31, 40, 32, 42, 31]
+    "stats": [
+      31,
+      40,
+      32,
+      42,
+      31
+    ]
   },
   "Take-Mikazuchi": {
     "inherits": "elecB",
@@ -2833,7 +3872,13 @@
       "Getsu-ei": 27,
       "Mazionga": 28
     },
-    "stats": [18, 17, 13, 15, 14]
+    "stats": [
+      18,
+      17,
+      13,
+      15,
+      14
+    ]
   },
   "Take-Minakata": {
     "heart": "Soul Sea Driblet",
@@ -2851,7 +3896,13 @@
       "Dodge Strike": 24,
       "Elec Boost": 25
     },
-    "stats": [14, 14, 21, 10, 10]
+    "stats": [
+      14,
+      14,
+      21,
+      10,
+      10
+    ]
   },
   "Tam Lin": {
     "inherits": "lightA",
@@ -2866,7 +3917,13 @@
       "Mazio": 17,
       "Survive Dark": 18
     },
-    "stats": [12, 11, 8, 10, 5]
+    "stats": [
+      12,
+      11,
+      8,
+      10,
+      5
+    ]
   },
   "Thanatos": {
     "heart": "Jaw of Death",
@@ -2884,7 +3941,13 @@
       "Brave Blade": 82,
       "Megidolaon": 84
     },
-    "stats": [52, 66, 53, 45, 40]
+    "stats": [
+      52,
+      66,
+      53,
+      45,
+      40
+    ]
   },
   "Thor": {
     "heart": "Thunder Whetstone",
@@ -2901,7 +3964,13 @@
       "Elec Amp": 68,
       "God's Hand": 71
     },
-    "stats": [54, 50, 42, 30, 35]
+    "stats": [
+      54,
+      50,
+      42,
+      30,
+      35
+    ]
   },
   "Thoth": {
     "inherits": "lidarkA",
@@ -2917,7 +3986,13 @@
       "Megido": 44,
       "Concentrate": 45
     },
-    "stats": [20, 40, 20, 25, 25]
+    "stats": [
+      20,
+      40,
+      20,
+      25,
+      25
+    ]
   },
   "Throne": {
     "inherits": "lightA",
@@ -2933,7 +4008,13 @@
       "Hama Boost": 55,
       "Mahamaon": 57
     },
-    "stats": [39, 35, 30, 30, 33]
+    "stats": [
+      39,
+      35,
+      30,
+      30,
+      33
+    ]
   },
   "Thunderbird": {
     "inherits": "lidarkA",
@@ -2948,7 +4029,13 @@
       "Ziodyne": 39,
       "Null Elec": 41
     },
-    "stats": [18, 28, 18, 32, 21]
+    "stats": [
+      18,
+      28,
+      18,
+      32,
+      21
+    ]
   },
   "Titania": {
     "heart": "Soul Sea Droplet",
@@ -2965,7 +4052,13 @@
       "Concentrate": 53,
       "Mabufudyne": 55
     },
-    "stats": [19, 45, 23, 34, 36]
+    "stats": [
+      19,
+      45,
+      23,
+      34,
+      36
+    ]
   },
   "Trumpeter": {
     "inherits": "almighty",
@@ -2981,7 +4074,13 @@
       "Mediarahan": 63,
       "Debilitate": 65
     },
-    "stats": [44, 44, 37, 35, 33]
+    "stats": [
+      44,
+      44,
+      37,
+      35,
+      33
+    ]
   },
   "Unicorn": {
     "heart": "Soul Sea Driblet",
@@ -2998,7 +4097,13 @@
       "Auto Rakukaja": 15,
       "Resist Rage": 16
     },
-    "stats": [5, 10, 12, 8, 7]
+    "stats": [
+      5,
+      10,
+      12,
+      8,
+      7
+    ]
   },
   "Uriel": {
     "inherits": "fireL",
@@ -3014,7 +4119,13 @@
       "Mahamaon": 61,
       "Heaven's Blade": 63
     },
-    "stats": [47, 42, 35, 36, 30]
+    "stats": [
+      47,
+      42,
+      35,
+      36,
+      30
+    ]
   },
   "Valkyrie": {
     "inherits": "iceL",
@@ -3029,7 +4140,13 @@
       "Vacuum Slash": 13,
       "Fatal End": 15
     },
-    "stats": [11, 7, 6, 8, 5]
+    "stats": [
+      11,
+      7,
+      6,
+      8,
+      5
+    ]
   },
   "Vanadis": {
     "inherits": "lightA",
@@ -3045,7 +4162,14 @@
       "Brave Blade": 62,
       "Ali Dance": 64
     },
-    "stats": [43, 38, 30, 42, 33]
+    "stats": [
+      43,
+      38,
+      30,
+      42,
+      33
+    ],
+    "isDlc": true
   },
   "Vasuki": {
     "inherits": "elecA",
@@ -3061,7 +4185,13 @@
       "Counterstrike": 42,
       "Mahamaon": 44
     },
-    "stats": [27, 27, 35, 15, 17]
+    "stats": [
+      27,
+      27,
+      35,
+      15,
+      17
+    ]
   },
   "Virtue": {
     "inherits": "lightA",
@@ -3076,7 +4206,13 @@
       "Light Boost": 35,
       "Makouga": 37
     },
-    "stats": [21, 24, 15, 22, 22]
+    "stats": [
+      21,
+      24,
+      15,
+      22,
+      22
+    ]
   },
   "Vishnu": {
     "heart": "Preservation Conch",
@@ -3094,7 +4230,13 @@
       "Ali Dance": 82,
       "Salvation": 84
     },
-    "stats": [65, 55, 50, 53, 42]
+    "stats": [
+      65,
+      55,
+      50,
+      53,
+      42
+    ]
   },
   "White Rider": {
     "inherits": "fireA",
@@ -3110,7 +4252,13 @@
       "Null Fear": 49,
       "Evade Dark": 51
     },
-    "stats": [36, 27, 30, 27, 25]
+    "stats": [
+      36,
+      27,
+      30,
+      27,
+      25
+    ]
   },
   "Yakshini": {
     "inherits": "iceA",
@@ -3125,7 +4273,13 @@
       "Multi-Target Boost": 36,
       "Deathbound": 37
     },
-    "stats": [33, 16, 13, 25, 18]
+    "stats": [
+      33,
+      16,
+      13,
+      25,
+      18
+    ]
   },
   "Yamata-no-Orochi": {
     "heart": "Soul Sea Driblet",
@@ -3143,7 +4297,13 @@
       "Marakukaja": 29,
       "Cruel Attack": 30
     },
-    "stats": [19, 19, 17, 13, 14]
+    "stats": [
+      19,
+      19,
+      17,
+      13,
+      14
+    ]
   },
   "Yatagarasu": {
     "inherits": "fireL",
@@ -3159,7 +4319,13 @@
       "Infuriate": 28,
       "Masukunda": 30
     },
-    "stats": [16, 16, 14, 24, 13]
+    "stats": [
+      16,
+      16,
+      14,
+      24,
+      13
+    ]
   },
   "Yurlungur": {
     "heart": "Rainbow Snake Scale",
@@ -3177,7 +4343,13 @@
       "Makougaon": 75,
       "Evade Dark": 77
     },
-    "stats": [41, 45, 63, 42, 38]
+    "stats": [
+      41,
+      45,
+      63,
+      42,
+      38
+    ]
   },
   "Zorro": {
     "inherits": "windA",
@@ -3193,7 +4365,14 @@
       "Divine Grace": 25,
       "Magarula": 27
     },
-    "stats": [13, 17, 13, 15, 15]
+    "stats": [
+      13,
+      17,
+      13,
+      15,
+      15
+    ],
+    "isDlc": true
   },
   "Zouchouten": {
     "inherits": "elecB",
@@ -3209,6 +4388,12 @@
       "Rebellion": 18,
       "Swift Strike": 19
     },
-    "stats": [14, 7, 13, 6, 10]
+    "stats": [
+      14,
+      7,
+      13,
+      6,
+      10
+    ]
   }
 }
