@@ -56,13 +56,16 @@ const S = {
     screen: 'home',
     series: null, game: null, tab: 'personas',
     rawData: {}, sort: 'arcana', enemyTab: 'enemies',
-    query: '', detail: null, favorites: new Set()
+    query: '', detail: null, favorites: new Set(),
+    settings: { showDlc: true, showEpisodeAigis: true }
 };
 
 /* ── Boot ──────────────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     buildHome();
     S.favorites = new Set(JSON.parse(localStorage.getItem('favs') || '[]'));
+    const saved = localStorage.getItem('settings');
+    if (saved) S.settings = { ...S.settings, ...JSON.parse(saved) };
 });
 
 /* ── Navigation ────────────────────────────────────────────────────────────── */
@@ -70,10 +73,11 @@ function navigate(to, payload) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById('screen-' + to).classList.add('active');
     S.screen = to;
-    if (to === 'home')   buildHome();
-    if (to === 'game')   buildGameScreen(payload);
-    if (to === 'list')   buildListScreen(payload);
-    if (to === 'detail') buildDetailScreen(payload);
+    if (to === 'home')     buildHome();
+    if (to === 'game')     buildGameScreen(payload);
+    if (to === 'list')     buildListScreen(payload);
+    if (to === 'detail')   buildDetailScreen(payload);
+    if (to === 'settings') buildSettingsScreen();
 }
 
 function goBackFromList() {
@@ -204,9 +208,12 @@ function renderList(data, color) {
 
 /* ── Personas ──────────────────────────────────────────────────────────────── */
 function renderPersonas(data, q, color, el) {
-    let items = Object.entries(data).filter(([name, p]) =>
-        !q || name.toLowerCase().includes(q) || (p.arcana||'').toLowerCase().includes(q)
-    );
+    // Filter by DLC / Episode Aigis settings
+    let items = Object.entries(data).filter(([name, p]) => {
+        if (!S.settings.showDlc && p.isDlc) return false;
+        if (!S.settings.showEpisodeAigis && p.episodeAigis) return false;
+        return !q || name.toLowerCase().includes(q) || (p.arcana||'').toLowerCase().includes(q);
+    });
 
     if (items.length === 0) { showEmpty('No personas found'); return; }
 
@@ -594,6 +601,39 @@ function shareDetail() {
 }
 
 function toggleFilter() { /* placeholder */ }
+
+/* ── Settings Screen ───────────────────────────────────────────────────────── */
+function buildSettingsScreen() {
+    const el = document.getElementById('settingsContent');
+    el.innerHTML = `
+    <div class="section-card">
+        <div class="section-title">Content Filters</div>
+        <div class="setting-row" onclick="toggleSetting('showDlc')">
+            <div class="setting-info">
+                <div class="setting-label">Show DLC Personas</div>
+                <div class="setting-desc">Include DLC personas in lists and fusion</div>
+            </div>
+            <div class="toggle ${S.settings.showDlc ? 'on' : ''}" id="toggle-showDlc"></div>
+        </div>
+        <div class="setting-row" onclick="toggleSetting('showEpisodeAigis')">
+            <div class="setting-info">
+                <div class="setting-label">Show Episode Aigis Personas</div>
+                <div class="setting-desc">Include Episode Aigis personas (P3R)</div>
+            </div>
+            <div class="toggle ${S.settings.showEpisodeAigis ? 'on' : ''}" id="toggle-showEpisodeAigis"></div>
+        </div>
+    </div>`;
+}
+
+function toggleSetting(key) {
+    S.settings[key] = !S.settings[key];
+    localStorage.setItem('settings', JSON.stringify(S.settings));
+    // Update toggle UI
+    const el = document.getElementById('toggle-' + key);
+    if (el) el.classList.toggle('on', S.settings[key]);
+    // Bust cached persona data so filters apply on next load
+    Object.keys(S.rawData).forEach(k => { if (k.startsWith('personas_')) delete S.rawData[k]; });
+}
 
 function showLoading() {
     document.getElementById('listContent').innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`;

@@ -82556,7 +82556,8 @@
         "Sudama",
         "Unicorn"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Ariadne Picaro": {
     "arcana": "Fortune",
@@ -82822,7 +82823,8 @@
         "Ariadne",
         "Asterius Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Asterius": {
     "arcana": "Fortune",
@@ -83128,7 +83130,8 @@
         "Titania",
         "Tsukiyomi Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Asterius Picaro": {
     "arcana": "Fortune",
@@ -83418,7 +83421,8 @@
         "White Rider",
         "Yoshitsune"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Izanagi": {
     "arcana": "Fool",
@@ -83624,7 +83628,8 @@
         "Izanagi Picaro",
         "Orpheus Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Izanagi Picaro": {
     "arcana": "Fool",
@@ -83818,7 +83823,8 @@
         "Orpheus",
         "Orpheus Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Kaguya": {
     "arcana": "Moon",
@@ -83996,7 +84002,8 @@
         "Slime",
         "Izanagi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Kaguya Picaro": {
     "arcana": "Moon",
@@ -84114,7 +84121,8 @@
         "Succubus",
         "Tsukiyomi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Magatsu-Izanagi": {
     "arcana": "Tower",
@@ -84296,7 +84304,8 @@
         "Thoth",
         "Tsukiyomi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Magatsu-Izanagi Picaro": {
     "arcana": "Tower",
@@ -84590,7 +84599,8 @@
         "Yamata-no-Orochi",
         "Ariadne"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Messiah": {
     "arcana": "Judgement",
@@ -84721,7 +84731,8 @@
         "Shiva",
         "Messiah Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Messiah Picaro": {
     "arcana": "Judgement",
@@ -84768,7 +84779,8 @@
         "Metatron",
         "Raphael"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus": {
     "arcana": "Fool",
@@ -84950,7 +84962,8 @@
         "Shiki-Ouji",
         "Take-Minakata"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus Picaro": {
     "arcana": "Fool",
@@ -85164,7 +85177,8 @@
         "Sandman",
         "Zouchouten"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Thanatos": {
     "arcana": "Death",
@@ -85338,7 +85352,8 @@
         "Valkyrie",
         "Vishnu"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Thanatos Picaro": {
     "arcana": "Death",
@@ -85532,7 +85547,8 @@
         "Yurlungur",
         "Messiah Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Tsukiyomi": {
     "arcana": "Moon",
@@ -86046,7 +86062,8 @@
         "Yatagarasu",
         "Zouchouten"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Tsukiyomi Picaro": {
     "arcana": "Moon",
@@ -86408,6 +86425,7 @@
         "Yamata-no-Orochi",
         "Magatsu-Izanagi"
       ]
-    ]
+    ],
+    "isDlc": true
   }
 }

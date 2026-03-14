@@ -96126,7 +96126,8 @@
         "Stone of Scone",
         "Ariadne Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Ariadne Picaro": {
     "arcana": "Fortune",
@@ -96344,7 +96345,8 @@
         "Ariadne",
         "Asterius Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Asterius": {
     "arcana": "Fortune",
@@ -96618,7 +96620,8 @@
         "Titania",
         "Tsukiyomi Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Asterius Picaro": {
     "arcana": "Fortune",
@@ -96928,7 +96931,8 @@
         "Vohu Manah",
         "Yurlungur"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Athena": {
     "arcana": "Chariot",
@@ -97643,7 +97647,8 @@
         "Skadi",
         "Thunderbird"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Athena Picaro": {
     "arcana": "Chariot",
@@ -98078,7 +98083,8 @@
         "Thor",
         "Athena"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Izanagi": {
     "arcana": "Fool",
@@ -98320,7 +98326,8 @@
         "Orpheus F Picaro",
         "Orpheus Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Izanagi Picaro": {
     "arcana": "Fool",
@@ -98518,7 +98525,8 @@
         "Orpheus",
         "Orpheus Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Izanagi-no-Okami": {
     "arcana": "World",
@@ -98539,7 +98547,8 @@
       "Heat Up": 83,
       "Salvation": 84,
       "Almighty Boost": 85
-    }
+    },
+    "isDlc": true
   },
   "Izanagi-no-Okami Picaro": {
     "arcana": "World",
@@ -98560,7 +98569,8 @@
       "Enduring Soul": 92,
       "Salvation": 93,
       "Almighty Boost": 94
-    }
+    },
+    "isDlc": true
   },
   "Kaguya": {
     "arcana": "Moon",
@@ -98758,7 +98768,8 @@
         "Slime",
         "Izanagi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Kaguya Picaro": {
     "arcana": "Moon",
@@ -98900,7 +98911,8 @@
         "Kaguya",
         "Tsukiyomi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Magatsu-Izanagi": {
     "arcana": "Tower",
@@ -99106,7 +99118,8 @@
         "Thoth",
         "Tsukiyomi"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Magatsu-Izanagi Picaro": {
     "arcana": "Tower",
@@ -99404,7 +99417,8 @@
         "Yamata-no-Orochi",
         "Ariadne"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Messiah": {
     "arcana": "Judgement",
@@ -99539,7 +99553,8 @@
         "Shiva",
         "Messiah Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Messiah Picaro": {
     "arcana": "Judgement",
@@ -99642,7 +99657,8 @@
         "Ongyo-Ki",
         "Yoshitsune"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus": {
     "arcana": "Fool",
@@ -99856,7 +99872,8 @@
         "Rakshasa",
         "Sandman"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus F": {
     "arcana": "Fool",
@@ -99954,7 +99971,8 @@
         "Izanagi",
         "Orpheus F Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus F Picaro": {
     "arcana": "Fool",
@@ -100060,7 +100078,8 @@
         "Izanagi",
         "Orpheus F"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Orpheus Picaro": {
     "arcana": "Fool",
@@ -100334,7 +100353,8 @@
         "Sandman",
         "Zouchouten"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Raoul": {
     "arcana": "Fool",
@@ -102761,7 +102781,8 @@
         "Messiah Picaro",
         "Tsukiyomi Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Thanatos": {
     "arcana": "Death",
@@ -102987,7 +103008,8 @@
         "Yurlungur",
         "Messiah"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Thanatos Picaro": {
     "arcana": "Death",
@@ -103213,7 +103235,8 @@
         "Yurlungur",
         "Messiah Picaro"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Tsukiyomi": {
     "arcana": "Moon",
@@ -103871,7 +103894,8 @@
         "Vasuki",
         "Zouchouten"
       ]
-    ]
+    ],
+    "isDlc": true
   },
   "Tsukiyomi Picaro": {
     "arcana": "Moon",
@@ -104317,6 +104341,7 @@
         "Yamata-no-Orochi",
         "Magatsu-Izanagi"
       ]
-    ]
+    ],
+    "isDlc": true
   }
 }

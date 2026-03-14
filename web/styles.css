@@ -510,3 +510,39 @@ body {
     text-align: center;
 }
 .section-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── Settings ──────────────────────────────────────────────────────────────── */
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--divider);
+}
+.setting-row:last-child { border-bottom: none; }
+.setting-info { flex: 1; }
+.setting-label { font-size: 0.9375rem; color: var(--text); }
+.setting-desc  { font-size: 0.75rem; color: var(--text2); margin-top: 2px; }
+
+.toggle {
+    width: 44px; height: 24px;
+    border-radius: 12px;
+    background: var(--divider);
+    position: relative;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    top: 2px; left: 2px;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+.toggle.on { background: #4CAF50; }
+.toggle.on::after { transform: translateX(20px); }
