@@ -212,7 +212,7 @@ function renderPersonas(data, q, color, el) {
     let items = Object.entries(data).filter(([name, p]) => {
         if (!S.settings.showDlc && p.isDlc) return false;
         if (!S.settings.showEpisodeAigis && p.episodeAigis) return false;
-        return !q || name.toLowerCase().includes(q) || (p.arcana||'').toLowerCase().includes(q);
+        return !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q);
     });
 
     if (items.length === 0) { showEmpty('No personas found'); return; }
@@ -221,7 +221,7 @@ function renderPersonas(data, q, color, el) {
     if (S.sort === 'arcana') {
         const grouped = {};
         items.forEach(([name, p]) => {
-            const a = p.arcana || 'Unknown';
+            const a = p.arcana || p.race || 'Unknown';
             if (!grouped[a]) grouped[a] = [];
             grouped[a].push([name, p]);
         });
@@ -233,7 +233,7 @@ function renderPersonas(data, q, color, el) {
             grouped[arcana].forEach(([name, p]) => { html += personaRow(name, p, color); });
         });
     } else {
-        if (S.sort === 'level') items.sort((a,b) => (a[1].level||0)-(b[1].level||0));
+        if (S.sort === 'level') items.sort((a,b) => ((a[1].level ?? a[1].lvl ?? 0)-(b[1].level ?? b[1].lvl ?? 0)));
         if (S.sort === 'name')  items.sort((a,b) => a[0].localeCompare(b[0]));
         items.forEach(([name, p]) => { html += personaRow(name, p, color); });
     }
@@ -242,12 +242,13 @@ function renderPersonas(data, q, color, el) {
 }
 
 function personaRow(name, p, color) {
+    const level = p.level ?? p.lvl ?? '?';
     const skills = p.skills ? Object.keys(p.skills).length : 0;
     return `<div class="row-card" onclick="openPersona('${esc(name)}')">
-        <div class="level-badge" style="background:${color}22;color:${color}">${p.level||'?'}</div>
+        <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
         <div class="row-main">
             <div class="row-name">${name}</div>
-            <div class="row-sub">${p.arcana||'Unknown'}</div>
+            <div class="row-sub">${p.arcana || p.race || 'Unknown'}</div>
         </div>
         ${skills ? `<div class="row-hint">${skills} skills</div>` : ''}
     </div>`;
@@ -362,16 +363,18 @@ function renderPersonaDetail(name, p, color) {
     const stats = p.stats || [];
     const maxStat = stats.length ? Math.max(...stats, 1) : 1;
     const statLabels = ['STR','MAG','END','AGI','LUK'];
+    const level = p.level ?? p.lvl ?? '?';
+    const arcana = p.arcana || p.race || 'Unknown';
 
     let html = `
     <div class="detail-hero">
         <div class="detail-level-box" style="background:${color}22">
             <div class="detail-level-label" style="color:${color}">Lv.</div>
-            <div class="detail-level-num" style="color:${color}">${p.level||'?'}</div>
+            <div class="detail-level-num" style="color:${color}">${level}</div>
         </div>
         <div class="detail-hero-info">
             <div class="detail-hero-name">${name}</div>
-            <div class="detail-hero-arcana">${p.arcana||'Unknown'} Arcana</div>
+            <div class="detail-hero-arcana">${arcana} Arcana</div>
             ${p.trait ? `<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>` : ''}
         </div>
     </div>`;
