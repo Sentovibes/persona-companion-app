@@ -1,878 +1,3789 @@
 {
   "Fool": {
-    "Rank 1: Auto": {},
-    "Rank 2: Auto": {},
-    "Rank 3: Auto": {},
-    "Rank 4: Auto": {},
-    "Rank 5: Auto": {},
-    "Rank 6: Auto": {},
-    "Rank 7: Auto": {},
-    "Rank 8: Auto": {},
-    "Rank 9: Auto": {},
-    "Rank 10: Auto": {}
+    "Rank 1: Auto": { "Requirements": "Automatic on April 20" },
+    "Rank 2: Auto": { "Requirements": "After entering Tartarus for the first time & returning to the ground floor." },
+    "Rank 3: Auto": { "Requirements": "Automatic on May 9" },
+    "Rank 4: Auto": { "Requirements": "Automatic on July 7" },
+    "Rank 5: Auto": { "Requirements": "Automatic on July 22" },
+    "Rank 6: Auto": { "Requirements": "Automatic on November 2" },
+    "Rank 7: Auto": { "Requirements": "Automatic on November 4" },
+    "Rank 8: Auto": { "Requirements": "Automatic" },
+    "Rank 9: Auto": { "Requirements": "Automatic on November 28" },
+    "Rank 10: Auto": { "Requirements": "Automatic on December 31" }
   },
   "Magician": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "No OR That's a secret": 7,
-      "I like older women OR I like them all": 7
+    "Details": {
+      "Trigger": "Automatic on April 23",
+      "Schedule": "Tue, Thu, Fri",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "What, life?": 22,
-      "Go for it": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"No.\" / \"That's a secret.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I like older women.\" / \"I like them all.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"What, life?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Go for it.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Good luck.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I agree.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I have 30-year goals.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Ask what's wrong", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Bride-To-Be Magazine.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"That's great. Congrats!\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you in trouble?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"You should go with her.\" / \"You should talk to her.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Confront Emiri", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "Good luck": 22
-    },
-    "Rank 5": {
-      "Next Rank": 15,
-      "I agree": 22
-    },
-    "Rank 6": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "I have 30-year goals": 22
-    },
-    "Rank 7": {
-      "Next Rank": 22,
-      "Ask what's wrong": 7,
-      "Bride-To-Be Magazine": 7,
-      "That's great. Congrats!": 7
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "Are you in trouble?": 22,
-      "You should go with her OR You should talk to her": 7
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "Confrount Emiri": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "1",
+        "Question": "Not bad... Not bad at all! But, there are some things you could do to look better...",
+        "Choices": [
+          { "Answer": "Like what?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "2",
+        "Question": "By the way, are you picky about your food?",
+        "Choices": [
+          { "Answer": "I'm a pretty picky eater.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Well, whaddya think? Isn't that a great plan!?",
+        "Choices": [
+          { "Answer": "Think of something else.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "D-Don't laugh, okay...? But, uh, I wanted to know if, um... if you've ever kissed a girl before...",
+        "Choices": [
+          { "Answer": "No, never.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "She must be afraid of catching it from me... But, it's not contagious, is it?",
+        "Choices": [
+          { "Answer": "No, it's not.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "That was the last beef bowl I'm ever gonna eat!",
+        "Choices": [
+          { "Answer": "Why?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "...Do you think I can make her happy?",
+        "Choices": [
+          { "Answer": "Just do your best.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Maybe I caught it or something...",
+        "Choices": [
+          { "Answer": "Don't worry about it.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Can you just forget about it?",
+        "Choices": [
+          { "Answer": "Sure.", "Points": 30 }
+        ]
+      }
+    ]
   },
   "Priestess": {
-    "Rank 1": {
-      "Requires Courage Rank 6 (MAX)": 0
+    "Details": {
+      "Trigger": "Requires Fortune Rank 1, Requires Courage Rank 6 (Badass)",
+      "Schedule": "Mon, Fri, Sat",
+      "Time of Day": "Daytime",
+      "Location": "2nd Floor School Corridor (Next to Classroom 2-E)"
     },
-    "Rank 2": {
-      "Next Rank": 1,
-      "Sure": 22
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sure.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I believe in you.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Oh, I don't think so.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You did a great job.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Okay.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 35,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I want to be with you too.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 55,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I'll be by your side.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "I believe in you": 22,
-      "Any_1": 7
-    },
-    "Rank 4": {
-      "Next Rank": 22,
-      "Any_1": 0,
-      "On, I don't think so": 22
-    },
-    "Rank 5": {
-      "Next Rank": 30,
-      "You did a great job": 22,
-      "Any_1": 7
-    },
-    "Rank 6": {
-      "Next Rank": 30,
-      "Okay": 22
-    },
-    "Rank 7": {
-      "Next Rank": 35,
-      "Any_1": 0,
-      "Any_2": 0
-    },
-    "Date 1": {
-      "Yeah, I'm not too bad": 45
-    },
-    "Rank 8": {
-      "Next Rank": 40,
-      "Any_1": 7,
-      "I Want to be with you too": 22
-    },
-    "Date 2": {
-      "N-No, I haven't": 45
-    },
-    "Rank 9": {
-      "Next Rank": 55,
-      "Any_1": 0,
-      "Any_2": 0
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Do you like sweets?",
+        "Choices": [
+          { "Answer": "I love them.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Which do you like better, Japanese food or American food?",
+        "Choices": [
+          { "Answer": "Japanese food.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Do you prefer watching movies at the theater or at home on DVD?",
+        "Choices": [
+          { "Answer": "At home on DVD.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "What do you usually do on your days off?",
+        "Choices": [
+          { "Answer": "Spend time with friends.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Would you want me to cook you something with powdered habu venom in it, Protagonist-kun?",
+        "Choices": [
+          { "Answer": "Nah, that sounds gross.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "Have you ever filleted a fish before?",
+        "Choices": [
+          { "Answer": "Yeah, I'm not too bad.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "So, do you think there's any way to connect music to cooking?",
+        "Choices": [
+          { "Answer": "Yeah, I think so.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "You've been awfully friendly with the girls around here lately, haven't you...",
+        "Choices": [
+          { "Answer": "N-No, I haven't.", "Points": 30 }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      { "Item": "Glass Vase", "Points": 50 },
+      { "Item": "Brand Bag", "Points": 50 },
+      { "Item": "Red Pine Bonsai", "Points": 10 },
+      { "Item": "Mini Cactus", "Points": 10 },
+      { "Item": "Brand Purse", "Points": 10 },
+      { "Item": "Brand Watch", "Points": 10 },
+      { "Item": "Teddy Bear", "Points": 10 },
+      { "Item": "Japanese Doll", "Points": 10 },
+      { "Item": "Kaleidoscope", "Points": 10 },
+      { "Item": "Book Cover", "Points": 10 },
+      { "Item": "Ganesha Bank", "Points": 10 }
+    ]
   },
   "Empress": {
-    "Rank 1": {
-      "Requires Academics Rank 6 (MAX)": 0,
-      "First place in at least one exam needed": 0
+    "Details": {
+      "Trigger": "Requires Academic Rank 6 (Genius)",
+      "Schedule": "Tue, Thu, Sat",
+      "Time of Day": "Daytime",
+      "Location": "1st Floor, Near Faculty Office"
     },
-    "Rank 2": {
-      "Next Rank": 1,
-      "Any_1": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Ask her to treat you", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Does that make you happy?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Agree to forget about it", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Did something happen?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"It's the result of love.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I'm glad you enjoyed it.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"A motorcycle?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Let's go for a ride.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Looking for a specific book?\" / \"Can I get a book for you?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's news to me!\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"You have to reconsider.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Let's do it!\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Say something to the guy", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"That makes me happy.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 3": {
-      "Next Rank": 21,
-      "Ask her to treat you": 7,
-      "Does that make you happy?": 22,
-      "Any_1": 7,
-      "Agree to forget about it": 7
-    },
-    "Rank 4": {
-      "Next Rank": 21,
-      "Did something happen?": 7,
-      "It's the result of love": 22,
-      "Any_1": 0
-    },
-    "Rank 5": {
-      "Next Rank": 21,
-      "I'm glad you enjoyed it": 22,
-      "A motorcycle?": 22,
-      "Let's go for a ride": 22
-    },
-    "Rank 6": {
-      "Next Rank": 21,
-      "Can I get a book for you?": 22,
-      "That's news to me!": 7,
-      "You have to reconsider": 22
-    },
-    "Rank 7": {
-      "Next Rank": 21,
-      "Let's do it": 22
-    },
-    "Rank 8": {
-      "Next Rank": 21,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Say something to the guy": 22,
-      "Any_3": 22
-    },
-    "Rank 9": {
-      "Next Rank": 21,
-      "That makes me happy": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "...Or is it just my imagination?",
+        "Choices": [
+          { "Answer": "Don't worry about it.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "How much does a game like that cost?",
+        "Choices": [
+          { "Answer": "You have a motorcycle.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Are you in a hurry to go home?",
+        "Choices": [
+          { "Answer": "...Why?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Would you mind telling me who your favorite musical artist is?",
+        "Choices": [
+          { "Answer": "Why?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "To be honest, I don't know what I'm doing... What is it that I'm feeling for you...?",
+        "Choices": [
+          { "Answer": "Don't worry about it.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "Since manga aren't that expensive, why don't people just buy them?",
+        "Choices": [
+          { "Answer": "Lack of storage space.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Are you interested in anyone...?",
+        "Choices": [
+          { "Answer": "Yeah, you!", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Protagonist...",
+        "Choices": [
+          { "Answer": "Did you use my name?", "Points": 30 }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      { "Item": "Japanese Doll", "Points": 50 },
+      { "Item": "Goggle-eyed Doll", "Points": 50 },
+      { "Item": "Red Pine Bonsai", "Points": 10 },
+      { "Item": "Perfume", "Points": 10 },
+      { "Item": "Brand Purse", "Points": 10 },
+      { "Item": "Brand Watch", "Points": 10 },
+      { "Item": "Brand Bag", "Points": 10 },
+      { "Item": "Teddy Bear", "Points": 10 },
+      { "Item": "Kaleidoscope", "Points": 10 },
+      { "Item": "Book Cover", "Points": 10 },
+      { "Item": "Lucky Charm", "Points": 10 }
+    ]
   },
   "Emperor": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "It's a waste of time": 22
+    "Details": {
+      "Schedule": "Mon, Wed, Fri",
+      "Time of Day": "Daytime",
+      "Location": "Student Council Room opposite of Class 2-F"
     },
-    "Rank 3": {
-      "Next Rank": 1,
-      "Any_1": 7
-    },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "Good work": 22
-    },
-    "Rank 5": {
-      "Next Rank": 15,
-      "They can be pretty cruel": 22
-    },
-    "Rank 6": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "But I just got here": 22
-    },
-    "Rank 7": {
-      "Next Rank": 15,
-      "He should suffer": 22
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "Any_1": 0,
-      "It wasn't me": 22
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "Don't blame yourself": 22
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"It's a waste of time.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Stop fighting.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Good work.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"They can be pretty cruel.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"But, I just got here...\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"He should suffer.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"It wasn't me.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"So-so.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Hierophant": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Tell him": 7,
-      "Thanks": 22,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0
+    "Details": {
+      "Trigger": "Requires talking to them and going to school to retrieve a persimmon leaf.",
+      "Schedule": "Tue, Wed, Thu, Fri, Sat, Sun",
+      "Time of Day": "Daytime",
+      "Location": "Bookworms Used Books at the Iwatodai Strip Mall"
     },
-    "Rank 3": {
-      "Next Rank": 20,
-      "Looking for something?": 7,
-      "I'll help you look": 22,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0,
-      "Any_4": 0
-    },
-    "Rank 4": {
-      "Next Rank": 20,
-      "Any_1": 22,
-      "Any_2": 0,
-      "Now, you have me worried": 7
-    },
-    "Rank 5": {
-      "Next Rank": 20,
-      "I'll root out the truth!": 7,
-      "Any_1": 7
-    },
-    "Rank 6": {
-      "Next Rank": 20,
-      "Please stop quarreling": 22,
-      "Any_1": 0
-    },
-    "Rank 7": {
-      "Next Rank": 20,
-      "Ask why she's crying": 7,
-      "That's great": 7,
-      "Any_1": 7
-    },
-    "Rank 8": {
-      "Next Rank": 20,
-      "Any_1": 7,
-      "Any_2": 0,
-      "Any_3": 22
-    },
-    "Rank 9": {
-      "Next Rank": 30,
-      "Any_1": 7,
-      "Any_2": 0
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Tell him", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Thanks!\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              { "Answer": "Receive Melon Bread", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Looking for something?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I'll help you look.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 7",
+            "Choices": [
+              { "Answer": "Receive Medicine", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Now, you have me worried.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Receive Cylon Tea", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I'll 'root' out the truth!\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Receive Crab Bread", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Please stop quarreling.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Receive Fried Bread", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Ask why she's crying", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's great.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Receive Cielo Mist", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"What!?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Lovers": {
-    "Rank 1": {
-      "Requires Charm Rank 6 (MAX)": 0
+    "Details": {
+      "Trigger": "Requires Charm Rank 6 (Charismatic)",
+      "Schedule": "Mon, Wed, Thu, Sat",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
     },
-    "Rank 2": {
-      "Next Rank": 1,
-      "Pink's cute": 22,
-      "that's messed up": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Pink's cute.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's messed up.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you alright?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"Sorry.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Anytime.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 35,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sounds good.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Alright.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 55,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"......\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "Any_1": 0
-    },
-    "Rank 4": {
-      "Next Rank": 22,
-      "Are you alright?": 22
-    },
-    "Rank 5": {
-      "Next Rank": 30,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0,
-      "Try to cheer her up": 22
-    },
-    "Rank 6": {
-      "Next Rank": 30,
-      "Anytime": 22
-    },
-    "Rank 7": {
-      "Next Rank": 35,
-      "Sounds good": 22
-    },
-    "Rank 8": {
-      "Next Rank": 40,
-      "Alright": 22,
-      "Any_1": 0
-    },
-    "Date 1": {
-      "It's a healthy appetite": 45
-    },
-    "Rank 9": {
-      "Next Rank": 55,
-      "......": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Um... Did you have fun today? I mean, am I fun to be with?",
+        "Choices": [
+          { "Answer": "Did you have fun?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Do YOU like strawberry rice cake with red beans?",
+        "Choices": [
+          { "Answer": "I love it.", "Points": 15 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Is it weird for me to be worried about my parents at my age...?",
+        "Choices": [
+          { "Answer": "Leave the bags to me.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Are you a saver, Protagonist-kun?",
+        "Choices": [
+          { "Answer": "Every month.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Not that I have anything special planned. I was just curious.",
+        "Choices": [
+          { "Answer": "Meeting with friends.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "What's your favorite color, Protagonist?",
+        "Choices": [
+          { "Answer": "Green.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "...eat more than a normal girl, huh?",
+        "Choices": [
+          { "Answer": "It's a healthy appetite.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "But no one knows about us, huh...",
+        "Choices": [
+          { "Answer": "Some people do.", "Points": 30 }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      { "Item": "Perfume", "Points": 50 },
+      { "Item": "Brand Purse", "Points": 50 },
+      { "Item": "Brand Watch", "Points": 50 },
+      { "Item": "Brand Bag", "Points": 50 },
+      { "Item": "Rose Bouquet", "Points": 10 },
+      { "Item": "Glass Vase", "Points": 10 },
+      { "Item": "Teddy Bear", "Points": 10 },
+      { "Item": "Jack Frost Doll", "Points": 10 }
+    ]
   },
   "Chariot": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Toughen up": 7,
-      "Any_1": 0,
-      "Any_2": 0
+    "Details": {
+      "Trigger": "Earliest possible on April 24. Forced to by May 27",
+      "Schedule": "Mon, Tue, Thu, Fri",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "Are you sure you're okay?": 7,
-      "Will it heal?": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Toughen up.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Talk to her (Strength Flag)", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              { "Answer": "Wanna walk home together? (Strength Flag)", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you sure you're OK?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Will it heal?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Talk to her (Initiate Strength Social Link)", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Wanna walk home together? (Initiate Strength Social Link)", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              { "Answer": "Sure. (Initiate Strength Social Link)", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That sucks.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"The hospital again?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Let him use your shoulder", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Suck it up.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Is it that important?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"What about your knee?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"How's your knee?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"You need to toughen up.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Look away", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I'm fine.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"What about the big meet?\"", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "That sucks": 22
-    },
-    "Rank 5": {
-      "Next Rank": 15,
-      "The hospital again?": 7,
-      "Let him use your shoulder": 22
-    },
-    "Rank 6": {
-      "Next Rank": 15,
-      "Suck it up": 7,
-      "Is it that important?": 7,
-      "What will happen to your knee?": 7
-    },
-    "Rank 7": {
-      "Next Rank": 22,
-      "How's your knees?": 7,
-      "You need to toughen up": 22
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "Look away": 7
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "I'm fine": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "I'm ready to go, 24/7, ya know? It's called \"dedication,\" man.",
+        "Choices": [
+          { "Answer": "That's crazy.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "I'm trying to cut down on carbs.",
+        "Choices": [
+          { "Answer": "Are you on a diet?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "I get even more nervous when I think about winning...",
+        "Choices": [
+          { "Answer": "Winning isn't everything.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "...Anyway, sorry about that.",
+        "Choices": [
+          { "Answer": "Why bother with them?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Any ideas?",
+        "Choices": [
+          { "Answer": "A game.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "...You know, with Apathy Syndrome?",
+        "Choices": [
+          { "Answer": "You're worrying me.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Man, I'm seriously confused. I'm not sure why I'm putting myself through this...",
+        "Choices": [
+          { "Answer": "That's just who you are.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Do you think I can win at regionals?",
+        "Choices": [
+          { "Answer": "There's no way.", "Points": 30 }
+        ]
+      }
+    ]
   },
   "Justice": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Don't worry about it": 22,
-      "I read the classics OR I read manga": 7,
-      "Not really": 7
+    "Details": {
+      "Trigger": "Earliest possible on May 7. Requires Emperor Rank 1. Requires having spoken to her 3x (different days) prior.",
+      "Schedule": "Tue, Thu, Sat",
+      "Time of Day": "Daytime",
+      "Location": "Student Council Room (Opposite of Class 2-F)"
     },
-    "Rank 3": {
-      "Next Rank": 22,
-      "How rude": 7,
-      "I agree": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Don't worry about it.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I read the classics.\" / \"I read manga.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Not really.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"How rude.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I agree.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Speak to her calmly", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"So, how was it?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"It's just a coincidence.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Don't be hard on yourself.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Hold her hand", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Is it good?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"What do you mean?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You're not to blame.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"We have to do something...\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Talk to the teacher.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Don't worry, she'll help us.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"What's wrong?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Thank you.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 4": {
-      "Next Rank": 22,
-      "Any_1": 0,
-      "Speak to her calmly": 22
-    },
-    "Rank 5": {
-      "Next Rank": 22,
-      "So, how was it?": 22,
-      "It's just a coincidence": 7,
-      "Don't be so hard on yourself": 7,
-      "Hold her hand": 22
-    },
-    "Rank 6": {
-      "Next Rank": 30,
-      "Is it good?": 22,
-      "What do you mean?": 7
-    },
-    "Date 1": {
-      "There's no thief": 45
-    },
-    "Rank 7": {
-      "Next Rank": 30,
-      "You're not to blame": 7,
-      "We have to do something": 7
-    },
-    "Rank 8": {
-      "Next Rank": 30,
-      "Any_1": 0,
-      "Talk to the teacher": 7
-    },
-    "Date 2": {
-      "I'm thinking about it": 45
-    },
-    "Rank 9": {
-      "Next Rank": 40,
-      "Don't worry , she'll help us": 7,
-      "Wait and see what happens": 7,
-      "Any_1": 0,
-      "What's wrong?": 7
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "I kept thinking, \"What if Protagonist-san doesn't show up...\"",
+        "Choices": [
+          { "Answer": "Don't worry so much.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "There's not much point in getting together if all we're going to do is read, right?",
+        "Choices": [
+          { "Answer": "There's always next time.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "I-I was afraid that I might see that guy from before who tried to, um...",
+        "Choices": [
+          { "Answer": "I'll help you again.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Your coffee is going to get cold.",
+        "Choices": [
+          { "Answer": "Do you want sugar?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "I want to be like that too...",
+        "Choices": [
+          { "Answer": "You can do it.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "It's sad to think that there might be a thief in our school...",
+        "Choices": [
+          { "Answer": "There's no thief.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "I'm sorry... I wanted to handle this myself, but...",
+        "Choices": [
+          { "Answer": "I'd be glad to help.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Are you planning to get a driver's license, Protagonist-san...?",
+        "Choices": [
+          { "Answer": "I'm thinking about it.", "Points": 30 }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      { "Item": "Brand Watch", "Points": 50 },
+      { "Item": "Brand Bag", "Points": 50 },
+      { "Item": "Book Cover", "Points": 50 },
+      { "Item": "Rose Bouquet", "Points": 10 },
+      { "Item": "Mini Cactus", "Points": 10 },
+      { "Item": "Glass Vase", "Points": 10 },
+      { "Item": "Perfume", "Points": 10 },
+      { "Item": "Brand Purse", "Points": 10 },
+      { "Item": "Teddy Bear", "Points": 10 },
+      { "Item": "Japanese Doll", "Points": 10 },
+      { "Item": "Kaleidoscope", "Points": 10 },
+      { "Item": "Jack Frost Doll", "Points": 10 },
+      { "Item": "Ganesha Bank", "Points": 10 }
+    ]
   },
   "Hermit": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Of course": 33,
-      "The outdoors are overrated": 7
+    "Details": {
+      "Trigger": "Available starting April 29",
+      "Schedule": "Sunday (and Holidays)",
+      "Time of Day": "Daytime (Entire Day)",
+      "Location": "Laptop in Protagonist's Room (Play the MMORPG)"
     },
-    "Rank 3": {
-      "Next Rank": 20,
-      "Oh really?": 7,
-      "So you don't like your job?": 22
-    },
-    "Rank 4": {
-      "Next Rank": 20,
-      "Why don't we get married?": 22
-    },
-    "Rank 5": {
-      "Next Rank": 20,
-      "Don't you mean S.O.B.": 22,
-      "You're a drunken boxing sensei OR Are you a teacher?": 7
-    },
-    "Rank 6": {
-      "Next Rank": 20,
-      "Which bastard?": 22
-    },
-    "Rank 7": {
-      "Next Rank": 20,
-      "Guys only go for younger chicks": 22,
-      "Any_1": 7
-    },
-    "Rank 8": {
-      "Next Rank": 20,
-      "Hurry up and tell me already": 22,
-      "What is he like?": 7
-    },
-    "Rank 9": {
-      "Next Rank": 20,
-      "No way!": 7,
-      "Any_1": 0,
-      "What are you planning?": 7
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Of course.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Sunshine is overrated.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh really? o_O\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"So you don't like your job?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Why don't we get married?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Who's Mr. E?\" / \"Don't you mean S.O.B.?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"A drunken master?\" / \"Are you a teacher?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Which bastard?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Guys like younger chicks.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Hurry up and tell me.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"What is he like?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"No way!\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"What are you planning?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh, no worries.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"I'll miss you.\"", "Points": 15 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Fortune": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Any_1": 0,
-      "Any_2": 0
+    "Details": {
+      "Trigger": "Available starting June 17",
+      "Schedule": "Tue, Wed, Thu",
+      "Time of Day": "Daytime",
+      "Location": "1st Floor Laboratory Hallway, Outside Club Room"
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "Great job!": 22,
-      "Any_1": 0
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Great job!\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Complaining here won't help.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Do whatever you want.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you gonna be a doctor?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Yeah, I'm fine.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Try to stop him", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Any_1": 7,
-      "Complaining won't help": 22
-    },
-    "Rank 5": {
-      "Next Rank": 15,
-      "You should tell your dad": 22
-    },
-    "Rank 6": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "Do whatever you want": 22
-    },
-    "Rank 7": {
-      "Next Rank": 15,
-      "Are you gonna be a doctor?": 22
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "Yeah, I'm fine": 22,
-      "Any_1": 0,
-      "Any_2": 0
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "Try to stop him": 22,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0,
-      "Any_4": 0
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Their rules are so annoying... We would never have beef bowls at home.",
+        "Choices": [
+          { "Answer": "Let's eat here again.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "D-Do you think it's okay for me to be in the finals?",
+        "Choices": [
+          { "Answer": "You just did your best.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Hey, we should organize an outdoor photo session, one of these days.",
+        "Choices": [
+          { "Answer": "That would be cool.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "What would I list as my occupation on a survey...?",
+        "Choices": [
+          { "Answer": "Celebrity.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Then he tells me to study abroad! Ugh! I'm so confused!",
+        "Choices": [
+          { "Answer": "Don't blame him.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "I mean, I won't just be visiting there, I'll be living there...",
+        "Choices": [
+          { "Answer": "Think of your new art style.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "So... would... would you mind calling me... Brother...?",
+        "Choices": [
+          { "Answer": "Okay, Brother.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "I think that a person should do the best he can with the life he's been written.",
+        "Choices": [
+          { "Answer": "Yeah, I agree.", "Points": 30 }
+        ]
+      }
+    ]
   },
   "Strength": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "What happened?": 7,
-      "I agree": 22,
-      "That's true": 7
+    "Details": {
+      "Trigger": "Earliest possible on April 24. Requires Chariot Rank 2 (Greet & ask to walk home with her after Chariot Rank 1 & 2 events)",
+      "Schedule": "Wed, Sat",
+      "Time of Day": "Daytime",
+      "Location": "Outside Classroom 2-F"
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "Not really": 7,
-      "Any_1": 7,
-      "Let's go": 7
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"What happened?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I agree.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"That's true.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Not really.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Let's go.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"No worries.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"I'm honored.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Do you know him?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Let's hope for the best.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 35,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you relieved?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Sure.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"A boy.\" / \"A girl.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Forget about what?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"An instructor?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's true.\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "Any_2": 0,
-      "No worries": 7,
-      "I'm honored": 22
-    },
-    "Rank 5": {
-      "Next Rank": 22,
-      "Any_1": 7,
-      "Do you know him?": 7,
-      "It's up to you": 7
-    },
-    "Rank 6": {
-      "Next Rank": 22,
-      "Let's hope for the best": 7
-    },
-    "Date 1": {
-      "You'll find something": 45
-    },
-    "Rank 7": {
-      "Next Rank": 35,
-      "Are you relieved?": 7,
-      "Sure": 22
-    },
-    "Rank 8": {
-      "Next Rank": 40,
-      "Any_1": 0,
-      "A boy OR A girl": 7
-    },
-    "Date 2": {
-      "Will you wipe it off?": 45
-    },
-    "Rank 9": {
-      "Next Rank": 40,
-      "Forget about what?": 7,
-      "An instructor?": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "What about me?",
+        "Choices": [
+          { "Answer": "You look smart.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "I wonder what I'll be doing at this time next year...",
+        "Choices": [
+          { "Answer": "Studying for exams.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Hey, Protagonist-kun. Do you think it's true that stones can have mysterious powers?",
+        "Choices": [
+          { "Answer": "It's total BS.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "What do you think? Am I ready?",
+        "Choices": [
+          { "Answer": "You're very responsible.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "I envy them, since i don't have anything I'm really passionate about...",
+        "Choices": [
+          { "Answer": "You'll find something.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "You still have some time, right? What do you wanna do now?",
+        "Choices": [
+          { "Answer": "Go to the cafe.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Protagonist, you have some sauce on your mouth.",
+        "Choices": [
+          { "Answer": "Will you wipe it off?", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "I feel so motivated now!",
+        "Choices": [
+          { "Answer": "It's only the beginning.", "Points": 30 }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      { "Item": "Brand Purse", "Points": 50 },
+      { "Item": "Brand Watch", "Points": 50 },
+      { "Item": "Brand Bag", "Points": 50 },
+      { "Item": "Mini Cactus", "Points": 10 },
+      { "Item": "Teddy Bear", "Points": 10 },
+      { "Item": "Kaleidoscope", "Points": 10 },
+      { "Item": "Lucky Charm", "Points": 10 }
+    ]
   },
-  "Hanged Man": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Sure, let's go": 22,
-      "Any_1": 0,
-      "Any_2": 0
+  "Hanged-Man": {
+    "Details": {
+      "Trigger": "Earliest possible on May 6. Requires having given her Weird Takoyaki & Mad Bull prior.",
+      "Schedule": "Mon, Wed, Sat",
+      "Time of Day": "Daytime",
+      "Location": "Playground at Naganaki Shrine"
     },
-    "Rank 3": {
-      "Next Rank": 20,
-      "Any_1": 0,
-      "Don't worry, he'll be there": 7
-    },
-    "Rank 4": {
-      "Next Rank": 20,
-      "I'm happy for you OR Nobody could forget you": 22
-    },
-    "Rank 5": {
-      "Next Rank": 20,
-      "That's terrible": 22,
-      "That isn't true": 7
-    },
-    "Rank 6": {
-      "Next Rank": 30,
-      "Calm down OR Sounds like a plan": 7,
-      "You don't need that stuff": 22
-    },
-    "Rank 7": {
-      "Next Rank": 15,
-      "Any_1": 0,
-      "Any_2": 0
-    },
-    "Rank 8": {
-      "Next Rank": 30,
-      "Hamburgers": 7,
-      "Yeah, you did good": 22,
-      "Choose your dad": 22
-    },
-    "Rank 9": {
-      "Next Rank": 30,
-      "We're friends forever": 22
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sure, let's go.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Don't worry, he'll be there.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I'm happy for you.\" / \"Nobody could forget you.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"That's terrible.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That isn't true.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Calm down.\" / \"Sounds like a plan.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That should be enough.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Hamburgers.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Yeah, you did good.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Choose your dad.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"We're friends forever.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I bet you will.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Sure thing.\"", "Points": 15 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Death": {
-    "Rank 1: Auto": {},
-    "Rank 2: Auto": {},
-    "Rank 3: Auto": {},
-    "Rank 4: Auto": {},
-    "Rank 5: Auto": {},
-    "Rank 6: Auto": {},
-    "Rank 7: Auto": {},
-    "Rank 8: Auto": {},
-    "Rank 9: Auto": {},
-    "Rank 10: Auto": {}
+    "Rank 1: Auto": { "Requirements": "Automatic on June 12" },
+    "Rank 3: Auto": { "Requirements": "Automatic on July 12" },
+    "Rank 5: Auto": { "Requirements": "Automatic on August 7" },
+    "Rank 6: Auto": { "Requirements": "Automatic on September 12" },
+    "Rank 8: Auto": { "Requirements": "Automatic on October 6" },
+    "Rank 10: Auto": { "Requirements": "Automatic on November 4" }
   },
   "Temperance": {
-    "Rank 1": {
-      "Requires Academics Rank 2": 0
+    "Details": {
+      "Trigger": "Earliest possible on May 8. Requires Hierophant Rank 3 and Academic Rank 2 (Average)",
+      "Schedule": "Tue, Wed, Fri",
+      "Time of Day": "Daytime",
+      "Location": "In front of Class 2-F or the Home Economics Room in 1F, Laboratory Hallway"
     },
-    "Rank 2": {
-      "Next Rank": 1,
-      "Any_1": 7,
-      "Yeah, Japan is great": 22
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Yeah, Japan is great.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Something traditional?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you alright?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sure.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Then, stay.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Take a break.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Support him", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 10,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"That's a good idea.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"He'll agree for sure.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Ask about his country", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "Any_1": 7,
-      "Something traditional?": 22
-    },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Are you alright?": 22,
-      "Any_1": 0
-    },
-    "Rank 5": {
-      "Next Rank": 14,
-      "Sure": 7,
-      "Then stay": 7
-    },
-    "Rank 6": {
-      "Next Rank": 16,
-      "Take a break": 7,
-      "Let's go": 7,
-      "Support him": 22
-    },
-    "Rank 7": {
-      "Next Rank": 6,
-      "That's a good idea": 22
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "He'll agree for sure": 22
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "Ask about his country": 22
-    },
-    "Rank 10": {}
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Who iz dis... \"true self\"?",
+        "Choices": [
+          { "Answer": "It doesn't exist.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "'ow about you, Protagonist-sama? Do you like ze sound of ze crickets?",
+        "Choices": [
+          { "Answer": "Very much.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "I zink zat I miss my 'ome...",
+        "Choices": [
+          { "Answer": "Stay in Japan.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "'e reminded me of my uncle! I 'ad some bad flashbacks...",
+        "Choices": [
+          { "Answer": "Don't worry.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Doesn't anyone play zem anymore?",
+        "Choices": [
+          { "Answer": "Yeah, on New Year's.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "I must 'urry and complete zhe kimono.",
+        "Choices": [
+          { "Answer": "Just relax.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "What eez it made of? It looks like insect eggs...",
+        "Choices": [
+          { "Answer": "It's beans.", "Points": 30 }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "What do you like to eat wiz rice, Protagonist-sama?",
+        "Choices": [
+          { "Answer": "Sushi.", "Points": 30 }
+        ]
+      }
+    ]
   },
   "Devil": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Placebo": 22,
-      "Any_1": 7
+    "Details": {
+      "Trigger": "Earliest possible on May 16. Requires Hermit Rank 4, Charm Rank 4 (Smooth). Need to pay him ¥20,000, then ¥10,000 twice more across 3 separate days to initiate.",
+      "Schedule": "Tue, Sat",
+      "Time of Day": "Evening",
+      "Location": "Paulownia Mall"
     },
-    "Rank 3": {
-      "Maybe a little": 22
-    },
-    "Rank 4": {
-      "I sure have": 22
-    },
-    "Rank 5": {
-      "Who're you talking about?": 7,
-      "Any_1": 0,
-      "Is it always about money?": 7
-    },
-    "Rank 6": {
-      "Sounds fun": 22
-    },
-    "Rank 7": {
-      "Sort of?": 7,
-      "The organic one": 22
-    },
-    "Rank 8": {
-      "Oh really?": 22
-    },
-    "Rank 9": {
-      "Are you going to donate?": 22
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Placebo.\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Maybe a little.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I sure have!\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Who're you talking about?\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Is it always about money?\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sounds fun.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sort of...\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"The organic one.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh, really?\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you going to donate?\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Absolutely...\"", "Points": 0 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Tower": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "None of your business": 22,
-      "I'm sorry, um?": 7
+    "Details": {
+      "Trigger": "Earliest possible on May 23. Requires Strength Rank 4 (Talk after reaching Rank 4 to learn about Unconventional Monk) and Courage Rank 2 (Ordinary). Speak to bartender at Club Escapade and help take the customers' orders to initiate.",
+      "Schedule": "Thu, Fri, Sat, Sun",
+      "Time of Day": "Evening",
+      "Location": "Club Escapade (Paulownia Mall)"
     },
-    "Rank 3": {
-      "Next Rank": 25,
-      "I don't have any friends": 22
-    },
-    "Rank 4": {
-      "Next Rank": 25,
-      "Yeah that might look cool": 22
-    },
-    "Rank 5": {
-      "Next Rank": 25,
-      "I have enough": 7,
-      "Yes": 22
-    },
-    "Rank 6": {
-      "Next Rank": 30,
-      "You should go home": 22,
-      "What about the others?": 7
-    },
-    "Rank 7": {
-      "Next Rank": 30,
-      "I don't think you should": 22
-    },
-    "Rank 8": {
-      "Next Rank": 40,
-      "Dad?": 22,
-      "I was with a friend OR None of your business": 7,
-      "Any_1": 0,
-      "Are you running away?": 7
-    },
-    "Rank 9": {
-      "Next Rank": 40,
-      "Any_1": 7,
-      "Any_2": 7,
-      "Any_3": 7
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"None of your business.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I'm sorry, um...\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 25,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I don't have any friends.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 25,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Yeah, that might look cool.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 25,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I have enough.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"No.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You should go home.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"What about the others?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I don't think you should.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Dad?\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"I was with a friend.\" / \"None of your business.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"Are you running away?\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 40,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Star": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Yeah, no problem": 7,
-      "Myself really": 22
+    "Details": {
+      "Trigger": "Available starting August 5. Requires Courage Rank 4 (Tough)",
+      "Schedule": "Wed, Fri, Sun",
+      "Time of Day": "Daytime",
+      "Location": "Iwatodai Strip Mall"
     },
-    "Rank 3": {
-      "Next Rank": 20,
-      "Any_1": 7,
-      "Any_2": 7
-    },
-    "Rank 4": {
-      "Next Rank": 20,
-      "Any_1": 7,
-      "Sounds like a good plan": 7,
-      "Yeah, I bet she would be": 7
-    },
-    "Rank 5": {
-      "Next Rank": 20,
-      "Are you okay?": 7,
-      "We should come here again": 7
-    },
-    "Rank 6": {
-      "Next Rank": 20,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0,
-      "Hey, no problem": 22
-    },
-    "Rank 7": {
-      "Next Rank": 30,
-      "I don't mind": 7,
-      "Any_1": 7,
-      "Any_2": 0,
-      "Don't give up!": 22
-    },
-    "Rank 8": {
-      "Next Rank": 30,
-      "You should get some more": 22,
-      "Any_1": 7
-    },
-    "Rank 9": {
-      "Next Rank": 30,
-      "And you won?": 7,
-      "Do a victory celebration": 7,
-      "Any_1": 7,
-      "Thank him for his generosity": 7
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"No pressure, huh?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Myself, really.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Sounds like a good plan.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"Yeah, I bet she would be.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you okay?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"We should come here again.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 20,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"Hey, no problem.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I don't mind.\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "\"Don't give up!\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You should get some more.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"And you won?\"", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Do a victory celebration", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 5 }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              { "Answer": "Thank him for his generosity", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Moon": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "Sure, okay": 22
+    "Details": {
+      "Trigger": "Earliest possible on April 28. Requires Magician Rank 3, Charm Rank 2 (Unpolished), and Odd Morsel. Correctly answer: Pheromone Coffee, Red, Hagakure Bowl.",
+      "Schedule": "Mon, Tue, Wed, Fri, Sat, Sun",
+      "Time of Day": "Daytime",
+      "Location": "Paulownia Mall"
     },
-    "Rank 3": {
-      "Next Rank": 15,
-      "You are the Gourmet King": 22
-    },
-    "Rank 4": {
-      "Next Rank": 15,
-      "Oh, are you sick?": 22
-    },
-    "Rank 5": {
-      "Next Rank": 22,
-      "Yeah, that's right": 22
-    },
-    "Rank 6": {
-      "Next Rank": 22,
-      "Are you feeling sick?": 22
-    },
-    "Rank 7": {
-      "Next Rank": 22,
-      "Wiped off the face of ??": 22,
-      "Any_1": 0
-    },
-    "Rank 8": {
-      "Next Rank": 22,
-      "Oh brother": 22
-    },
-    "Rank 9": {
-      "Next Rank": 5,
-      "Any_1": 0,
-      "Any_2": 0
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Sure, okay.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You are the Gourmet King!\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh, are you sick?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Yeah, that's right.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Are you feeling sick?\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Wiped off the face of...!?", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 22,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh brother.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 15,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 15 }
+            ]
+          }
+        ]
+      }
+    }
   },
   "Sun": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Really": 7,
-      "That's a good point": 7
+    "Details": {
+      "Trigger": "Earliest possible on August 9. Requires Hanged-Man Rank 3 and Academic Rank 4 (Smart). Retrieve Red Fountain Pen from Koromaru.",
+      "Schedule": "Sunday",
+      "Time of Day": "Daytime",
+      "Location": "Naganaki Shrine"
     },
-    "Rank 3": {
-      "I don't know": 7,
-      "Try not to talk so much": 7
-    },
-    "Rank 4": {
-      "Yeah, I like reading": 22,
-      "If it's boring, I stop reading": 7
-    },
-    "Rank 5": {
-      "Reprimand Akinari": 22
-    },
-    "Rank 6": {
-      "Hey, that's cool": 22,
-      "It sounds interesting": 22
-    },
-    "Rank 7": {
-      "It sounds really depressing": 22
-    },
-    "Rank 8": {
-      "Stay at his side": 7,
-      "What are you thinking?": 7
-    },
-    "Rank 9": {
-      "Oh, did you finish the story?": 7
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"...Really?\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's a good point.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I don't know.\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"Try not to talk so much.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Yeah, I like reading.\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"If it's boring, I stop reading.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Reprimand Akinari", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Hey, that's cool.\"", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"It sounds interesting.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"It sounds really depressing.\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Stay at his side", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"What are you thinking?\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"Oh, did you finish the story?\"", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A"
+      }
+    }
+  },
+  "Judgement": {
+    "Rank 1: Auto": { "Requirements": "December 31" },
+    "Rank 2: Auto": { "Requirements": "Reach Tartarus Floor 215." },
+    "Rank 3: Auto": { "Requirements": "Tartarus Floor 220 Post-Battle." },
+    "Rank 4: Auto": { "Requirements": "Reach Tartarus Floor 224." },
+    "Rank 5: Auto": { "Requirements": "Tartarus Floor 228 Post-Battle." },
+    "Rank 6: Auto": { "Requirements": "Tartarus Floor 236 Post-Battle." },
+    "Rank 7: Auto": { "Requirements": "Reach Tartarus Floor 240." },
+    "Rank 8: Auto": { "Requirements": "Tartarus Floor 244 Post-Battle." },
+    "Rank 9: Auto": { "Requirements": "Tartarus Floor 252 Post-Battle." },
+    "Rank 10: Auto": { "Requirements": "Reach Tartarus Floor 254." }
   },
   "Aeon": {
-    "Rank 1": {},
-    "Rank 2": {
-      "Next Rank": 1,
-      "I like it": 22
+    "Details": {
+      "Trigger": "Available starting January 8",
+      "Schedule": "Mon, Tue, Wed, Thur, Fri, Sat (More Available Near the End of January)",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
     },
-    "Rank 3": {
-      "Next Rank": 1,
-      "Any_1": 0,
-      "That’s not true": 7
-    },
-    "Rank 4": {
-      "Next Rank": 1,
-      "Any_1": 0,
-      "All right": 22
-    },
-    "Rank 5": {
-      "Next Rank": 1,
-      "You may be right": 22
-    },
-    "Rank 6": {
-      "Next Rank": 1,
-      "No, you didn't OR He saw me as a boyfriend": 22
-    },
-    "Rank 7": {
-      "Next Rank": 1,
-      "Any_1": 0,
-      "Any_2": 0,
-      "Any_3": 0
-    },
-    "Rank 8": {
-      "Next Rank": 1,
-      "I'm doing it now": 22,
-      "Any_1": 15
-    },
-    "Rank 9": {
-      "Next Rank": 22,
-      "You're right": 22
-    },
-    "Rank 10": {}
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I like it.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "\"That's not true.\"", "Points": 5 }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "\"All right.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You may be right.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"No you didn't.\" / \"He saw me as a boyfriend.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Next Pts": 0,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"I'm doing it now.\"", "Points": 15 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Next Pts": 30,
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "\"You're right.\"", "Points": 15 }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Next Pts": "N/A",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              { "Answer": "Any", "Points": 0 }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
