@@ -11,28 +11,21 @@
 </head>
 <body>
 
-<!-- HOME SCREEN -->
+<!-- HOME -->
 <div id="screen-home" class="screen active">
     <div class="top-bar">
+        <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
         <div class="top-bar-actions">
             <button class="icon-btn" onclick="navigate('settings')" title="Settings">⚙</button>
         </div>
     </div>
     <div class="home-content">
-        <div class="home-header">
-            <div class="home-title">PERSONA</div>
-            <div class="home-subtitle">COMPANION</div>
-        </div>
-        <div class="quick-access">
-            <button class="quick-btn" onclick="navigate('favorites')">♥ Favorites</button>
-            <button class="quick-btn" onclick="navigate('recent')">⏱ Recent</button>
-        </div>
         <div class="series-list" id="seriesList"></div>
         <div class="home-footer">Community-driven · Open source</div>
     </div>
 </div>
 
-<!-- GAME SELECTION SCREEN -->
+<!-- GAME SELECTION -->
 <div id="screen-game" class="screen">
     <div class="top-bar">
         <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
@@ -41,16 +34,21 @@
     <div class="game-list" id="gameList"></div>
 </div>
 
-<!-- LIST SCREEN (personas / enemies / social links / classroom) -->
+<!-- CATEGORY SCREEN (mirrors Android CategoryScreen) -->
+<div id="screen-category" class="screen">
+    <div class="top-bar">
+        <button class="icon-btn back-btn" onclick="navigate('game', S.series)">←</button>
+        <span class="top-bar-title" id="categoryTitle"></span>
+    </div>
+    <div class="category-list" id="categoryList"></div>
+</div>
+
+<!-- LIST SCREEN -->
 <div id="screen-list" class="screen">
     <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="goBackFromList()">←</button>
+        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
         <span class="top-bar-title" id="listScreenTitle"></span>
-        <div class="top-bar-actions">
-            <button class="icon-btn accent-icon" id="filterBtn" title="Filter">⊟</button>
-        </div>
     </div>
-    <div class="section-tabs" id="sectionTabs"></div>
     <div class="search-wrap">
         <span class="search-icon">🔍</span>
         <input id="searchInput" class="search-input" type="text" placeholder="Search…" oninput="onSearch(this.value)">
@@ -64,7 +62,7 @@
 <!-- DETAIL SCREEN -->
 <div id="screen-detail" class="screen">
     <div class="top-bar">
-        <button class="icon-btn back-btn" onclick="navigate('list')">←</button>
+        <button class="icon-btn back-btn" id="detailBackBtn" onclick="navigate('list')">←</button>
         <span class="top-bar-title" id="detailTitle"></span>
         <div class="top-bar-actions">
             <button class="icon-btn" id="favBtn" onclick="toggleFavorite()" title="Favorite">♡</button>
@@ -74,7 +72,30 @@
     <div id="detailContent" class="detail-content"></div>
 </div>
 
-<!-- SETTINGS SCREEN -->
+<!-- SOCIAL LINKS LIST -->
+<div id="screen-sociallinks" class="screen">
+    <div class="top-bar">
+        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+        <span class="top-bar-title" id="slTitle"></span>
+    </div>
+    <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input id="slSearch" class="search-input" type="text" placeholder="Search…" oninput="onSlSearch(this.value)">
+        <button class="search-clear" id="slSearchClear" onclick="clearSlSearch()" style="display:none">✕</button>
+    </div>
+    <div id="slContent" class="list-content"></div>
+</div>
+
+<!-- SOCIAL LINK DETAIL -->
+<div id="screen-sldetail" class="screen">
+    <div class="top-bar">
+        <button class="icon-btn back-btn" onclick="navigate('sociallinks')">←</button>
+        <span class="top-bar-title" id="slDetailTitle"></span>
+    </div>
+    <div id="slDetailContent" class="detail-content"></div>
+</div>
+
+<!-- SETTINGS -->
 <div id="screen-settings" class="screen">
     <div class="top-bar">
         <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
