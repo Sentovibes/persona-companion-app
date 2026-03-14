@@ -18,6 +18,7 @@ class FusionCalculator(
     /**
      * Get all fusion recipes for a target persona
      * Prioritizes special fusions if they exist
+     * Only returns recipes where ALL ingredient personas are available
      */
     fun calculateFusionsFor(targetPersona: Persona): List<FusionRecipe> {
         val recipes = mutableListOf<FusionRecipe>()
@@ -28,6 +29,7 @@ class FusionCalculator(
             // This persona has special fusions - use ONLY those
             for (recipe in specialRecipeData) {
                 val personas = recipe.mapNotNull { personaMap[it] }
+                // Only include recipe if ALL personas are available (not filtered out)
                 if (personas.size == recipe.size) {
                     recipes.add(FusionRecipe(personas))
                 }
@@ -45,6 +47,7 @@ class FusionCalculator(
             val persona1 = personaMap[recipe[0]]
             val persona2 = personaMap[recipe[1]]
             
+            // Only include recipe if BOTH personas are available (not filtered out)
             if (persona1 != null && persona2 != null) {
                 recipes.add(FusionRecipe(listOf(persona1, persona2)))
             }

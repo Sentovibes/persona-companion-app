@@ -3,6 +3,7 @@ package com.persona.companion.ui.viewmodels
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.persona.companion.data.AppPreferences
 import com.persona.companion.fusion.FusionCalculator
 import com.persona.companion.fusion.FusionRecipe
 import com.persona.companion.models.FusionChart
@@ -28,14 +29,26 @@ class FusionViewModel : ViewModel() {
     val state: StateFlow<FusionState> = _state.asStateFlow()
     
     private var fusionCalculator: FusionCalculator? = null
+    private var appPreferences: AppPreferences? = null
     
     fun loadData(context: Context, seriesId: String, gameId: String, dataPath: String) {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, errorMessage = null)
             
             try {
+                // Initialize preferences
+                appPreferences = AppPreferences(context)
+                val settings = appPreferences!!.getSettings()
+                
                 // Load personas
-                val personas = JsonLoader.loadPersonas(context, dataPath)
+                val allPersonas = JsonLoader.loadPersonas(context, dataPath)
+                
+                // Filter personas based on settings
+                val personas = allPersonas.filter { persona ->
+                    val includeDlc = settings.showDlc || persona.isDlc != true
+                    val includeAigis = settings.showEpisodeAigis || persona.episodeAigis != true
+                    includeDlc && includeAigis
+                }
                 
                 // Load fusion recipes
                 val recipePath = when (gameId) {

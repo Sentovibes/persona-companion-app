@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Persona Companion</h1>
+            <p class="subtitle">Complete database for Persona 3, 4, and 5</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab active" data-tab="personas">Personas</button>
+            <button class="tab" data-tab="enemies">Enemies</button>
+            <button class="tab" data-tab="social-links">Social Links</button>
+            <button class="tab" data-tab="classroom">Classroom</button>
+        </nav>
+
+        <div class="game-selector">
+            <select id="gameSelect">
+                <option value="">Select a game...</option>
+                <option value="p3fes">Persona 3 FES</option>
+                <option value="p3p">Persona 3 Portable</option>
+                <option value="p3r">Persona 3 Reload</option>
+                <option value="p4">Persona 4</option>
+                <option value="p4g">Persona 4 Golden</option>
+                <option value="p5">Persona 5</option>
+                <option value="p5r">Persona 5 Royal</option>
+            </select>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+
+        <div id="content" class="content">
+            <p class="placeholder">Select a game to get started</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
