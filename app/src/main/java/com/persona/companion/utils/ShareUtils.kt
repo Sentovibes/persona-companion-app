@@ -305,13 +305,16 @@ object ShareUtils {
                     appendLine("Availability: ${rank.availability}")
                 }
                 
-                if (rank.choices.isNotEmpty()) {
+                if (rank.dialogues.isNotEmpty()) {
                     appendLine()
-                    appendLine("Dialogue Choices:")
-                    rank.choices.forEach { choice ->
-                        val phonePrefix = if (choice.isPhoneChoice) "📱 " else ""
-                        val pointsText = if (choice.points > 0) "+${choice.points}" else "${choice.points}"
-                        appendLine("  $phonePrefix${choice.text} ($pointsText pts)")
+                    rank.dialogues.forEach { dialogue ->
+                        val showLabel = !dialogue.question.matches(Regex("Dialogue \\d+"))
+                        if (showLabel) appendLine("  ${dialogue.question}")
+                        dialogue.choices.forEach { choice ->
+                            val phonePrefix = if (choice.isPhoneChoice) "[Phone] " else ""
+                            val pointsText = if (choice.points > 0) "+${choice.points}" else "—"
+                            appendLine("  $phonePrefix${choice.text} ($pointsText pts)")
+                        }
                     }
                 }
                 

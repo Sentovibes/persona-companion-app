@@ -6,8 +6,19 @@ package com.persona.companion.models
 data class SocialLink(
     val arcana: String,
     val ranks: List<SocialLinkRank>,
-    val isP4GExclusive: Boolean = false,  // True for Aeon and Jester in P4G
-    val isP5RExclusive: Boolean = false   // True for Faith and Councillor in P5R
+    val details: SocialLinkDetails? = null,
+    val isP4GExclusive: Boolean = false,
+    val isP5RExclusive: Boolean = false
+)
+
+/**
+ * Schedule/location info shown at the top of a social link
+ */
+data class SocialLinkDetails(
+    val trigger: String? = null,
+    val schedule: String? = null,
+    val timeOfDay: String? = null,
+    val location: String? = null
 )
 
 /**
@@ -15,13 +26,19 @@ data class SocialLink(
  */
 data class SocialLinkRank(
     val rankNumber: Int,
-    val rankName: String,  // e.g., "Rank 1", "Rank 2", etc.
-    val isAuto: Boolean,   // True if rank up is automatic
-    val nextRankPoints: Int = 0,  // Points needed for next rank
-    val requirements: String? = null,  // Requirements to unlock/progress
-    val choices: List<DialogueChoice> = emptyList(),
-    val location: String? = null,
-    val availability: String? = null
+    val rankName: String,
+    val isAuto: Boolean,
+    val nextRankPoints: Int = 0,
+    val requirements: String? = null,
+    val dialogues: List<SocialLinkDialogue> = emptyList()
+)
+
+/**
+ * A dialogue prompt with one or more answer choices
+ */
+data class SocialLinkDialogue(
+    val question: String,
+    val choices: List<DialogueChoice>
 )
 
 /**
