@@ -95,6 +95,20 @@
     <div id="slDetailContent" class="detail-content"></div>
 </div>
 
+<!-- FUSION CALCULATOR -->
+<div id="screen-fusion" class="screen">
+    <div class="top-bar">
+        <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+        <span class="top-bar-title">Fusion Calculator</span>
+    </div>
+    <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input id="fusionSearch" class="search-input" type="text" placeholder="Search by name or arcana…" oninput="onFusionSearch(this.value)">
+        <button class="search-clear" id="fusionSearchClear" onclick="clearFusionSearch()" style="display:none">✕</button>
+    </div>
+    <div id="fusionContent" class="list-content"></div>
+</div>
+
 <!-- SETTINGS -->
 <div id="screen-settings" class="screen">
     <div class="top-bar">

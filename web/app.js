@@ -56,6 +56,7 @@ const S = {
     detail:null, favorites:new Set(),
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
+    fusion:{ personas:null, query:'', selected:null, recipes:null },
     settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE' }
 };
 
@@ -79,6 +80,7 @@ function navigate(to, payload) {
     if (to==='detail')      buildDetailScreen();
     if (to==='sociallinks') buildSocialLinksScreen();
     if (to==='sldetail')    buildSlDetailScreen();
+    if (to==='fusion')      buildFusionScreen();
     if (to==='settings')    buildSettingsScreen();
 }
 
@@ -127,10 +129,10 @@ function buildCategoryScreen() {
     const slLabel = isP5 ? 'Confidants' : 'Social Links';
 
     const categories = [
-        { label:'Personas',        icon:'📖', available:true,  action:()=>{ S.listMode='personas'; navigate('list'); } },
-        { label:'Fusion Calculator',icon:'✨', available:false, action:null },
-        { label:'Enemies',         icon:'🛡', available:true,  action:()=>{ S.listMode='enemies';  navigate('list'); } },
-        { label:slLabel,           icon:'👥', available:true,  action:()=>openSocialLinks() },
+        { label:'Personas',         icon:'📖', available:true,  action:()=>{ S.listMode='personas'; navigate('list'); } },
+        { label:'Fusion Calculator',icon:'✨', available:true,  action:()=>openFusion() },
+        { label:'Enemies',          icon:'🛡', available:true,  action:()=>{ S.listMode='enemies';  navigate('list'); } },
+        { label:slLabel,            icon:'👥', available:true,  action:()=>openSocialLinks() },
         { label:'Classroom Answers',icon:'🎓', available:true,  action:()=>{ S.listMode='classroom'; navigate('list'); } },
     ];
 
@@ -163,6 +165,11 @@ function openSocialLinks() {
     // P5/P5R shared file, filter by game inside
     S.slData = null; S.slQuery = '';
     navigate('sociallinks');
+}
+
+function openFusion() {
+    S.fusion = { personas:null, query:'', selected:null, recipes:null };
+    navigate('fusion');
 }
 
 /* ── List Screen ───────────────────────────────────────────────────────────── */
@@ -679,3 +686,202 @@ function shareDetail() {
 function showLoading() { document.getElementById('listContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
 function showEmpty(msg) { document.getElementById('listContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
 function esc(s) { return s.replace(/'/g,"\\'"); }
+
+/* ── Fusion Calculator ─────────────────────────────────────────────────────── */
+const FUSION_RECIPE_PATHS = {
+    p3fes:'./data/fusion-recipes/p3fes-recipes.json', p3p:'./data/fusion-recipes/p3p-recipes.json',
+    p3r:'./data/fusion-recipes/p3r-recipes.json',     p4:'./data/fusion-recipes/p4-recipes.json',
+    p4g:'./data/fusion-recipes/p4g-recipes.json',     p5:'./data/fusion-recipes/p5-recipes.json',
+    p5r:'./data/fusion-recipes/p5r-recipes.json'
+};
+const SPECIAL_PATHS = {
+    p3fes:'./data/special-fusions/p3-special.json', p3p:'./data/special-fusions/p3-special.json',
+    p3r:'./data/special-fusions/p3r-special.json',  p4:'./data/special-fusions/p4-special.json',
+    p4g:'./data/special-fusions/p4-special.json',   p5:'./data/special-fusions/p5-special.json',
+    p5r:'./data/special-fusions/p5r-special.json'
+};
+
+async function buildFusionScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    const el     = document.getElementById('fusionContent');
+
+    // Load personas + recipes if not cached
+    if (!S.fusion.personas) {
+        el.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading fusion data…</div></div>`;
+        try {
+            // Load personas
+            const pRes = await fetch(PERSONA_PATHS[S.game]);
+            if (!pRes.ok) throw new Error('Failed to load personas');
+            const allPersonas = await pRes.json();
+
+            // Filter DLC / EpisodeAigis
+            const personaMap = {};
+            Object.entries(allPersonas).forEach(([name, p]) => {
+                if (!S.settings.showDlc && p.isDlc) return;
+                if (!S.settings.showEpisodeAigis && p.episodeAigis) return;
+                personaMap[name] = p;
+            });
+
+            // Load recipes
+            const rRes = await fetch(FUSION_RECIPE_PATHS[S.game]);
+            if (!rRes.ok) throw new Error('Failed to load recipes');
+            const recipeData = await rRes.json();
+
+            // Load special fusions
+            let specialData = {};
+            try {
+                const sRes = await fetch(SPECIAL_PATHS[S.game]);
+                if (sRes.ok) specialData = await sRes.json();
+            } catch(e) {}
+
+            S.fusion.personaMap  = personaMap;
+            S.fusion.recipeData  = recipeData;
+            S.fusion.specialData = specialData;
+            S.fusion.personas    = Object.keys(personaMap).sort((a,b)=>a.localeCompare(b));
+        } catch(e) {
+            el.innerHTML = `<div class="empty-state">Failed to load: ${e.message}</div>`;
+            return;
+        }
+    }
+
+    if (S.fusion.selected) {
+        renderFusionResults(color);
+    } else {
+        renderFusionPersonaList(color);
+    }
+}
+
+function renderFusionPersonaList(color) {
+    const el = document.getElementById('fusionContent');
+    const q  = S.fusion.query.toLowerCase();
+    document.getElementById('fusionSearch').value = S.fusion.query;
+    document.getElementById('fusionSearchClear').style.display = q ? 'block' : 'none';
+
+    let items = S.fusion.personas || [];
+    if (q) items = items.filter(name => {
+        const p = S.fusion.personaMap[name];
+        return name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q);
+    });
+
+    if (!items.length) { el.innerHTML = `<div class="empty-state">No personas found</div>`; return; }
+
+    el.innerHTML = `<div class="fusion-hint">Select a persona to see fusion recipes</div>` +
+        items.map(name => {
+            const p = S.fusion.personaMap[name];
+            const level = p.level??p.lvl??'?';
+            const arcana = p.arcana||p.race||'Unknown';
+            return `<div class="row-card" onclick="selectFusionPersona('${esc(name)}')">
+                <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
+                <div class="row-main">
+                    <div class="row-name">${name}</div>
+                    <div class="row-sub">${arcana}</div>
+                </div>
+                <div class="row-hint" style="color:${color}">›</div>
+            </div>`;
+        }).join('');
+}
+
+function selectFusionPersona(name) {
+    const p = S.fusion.personaMap[name];
+    if (!p) return;
+    S.fusion.selected = { name, data: p };
+    S.fusion.recipes  = calcFusionRecipes(name);
+    const series = SERIES.find(s=>s.id===S.series);
+    renderFusionResults(series?.color||'#2196F3');
+}
+
+function calcFusionRecipes(targetName) {
+    const recipes = [];
+    const personaMap = S.fusion.personaMap;
+
+    // Check special fusions first
+    const special = S.fusion.specialData[targetName];
+    if (special && special.length) {
+        for (const combo of special) {
+            const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
+            if (personas.length === combo.length) recipes.push(personas);
+        }
+        return recipes;
+    }
+
+    // Normal recipes
+    const recipeEntry = S.fusion.recipeData[targetName];
+    if (!recipeEntry) return recipes;
+    const combos = recipeEntry.recipes || recipeEntry;
+    if (!Array.isArray(combos)) return recipes;
+
+    for (const combo of combos) {
+        if (!Array.isArray(combo)) continue;
+        const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
+        if (personas.length === combo.length) recipes.push(personas);
+    }
+    return recipes;
+}
+
+function renderFusionResults(color) {
+    const el = document.getElementById('fusionContent');
+    const { selected, recipes } = S.fusion;
+    if (!selected) return;
+
+    const p = selected.data;
+    const level = p.level??p.lvl??'?';
+    const arcana = p.arcana||p.race||'Unknown';
+
+    let html = `
+    <div class="fusion-selected-card" style="border-left:4px solid ${color}">
+        <div class="fusion-selected-info">
+            <div class="fusion-selected-name">${selected.name}</div>
+            <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
+        </div>
+        <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">✕</button>
+    </div>`;
+
+    if (!recipes || !recipes.length) {
+        html += `<div class="empty-state" style="margin-top:24px">No fusion recipes found${!S.settings.showDlc?' (DLC off — some recipes hidden)':''}</div>`;
+    } else {
+        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found</div>`;
+        html += recipes.map(combo => {
+            if (combo.length === 2) {
+                // Horizontal 2-persona layout
+                return `<div class="fusion-recipe-card">
+                    ${combo.map((ing, i) => `
+                        ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
+                        <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
+                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                        </div>`).join('')}
+                </div>`;
+            } else {
+                // Vertical layout for 3+ personas
+                return `<div class="fusion-recipe-card fusion-recipe-card--vertical">
+                    ${combo.map((ing, i) => `
+                        ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
+                        <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
+                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                        </div>`).join('')}
+                </div>`;
+            }
+        }).join('');
+    }
+
+    el.innerHTML = html;
+    el.scrollTop = 0;
+}
+
+function clearFusionSelection() {
+    S.fusion.selected = null;
+    S.fusion.recipes  = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderFusionPersonaList(series?.color||'#2196F3');
+}
+
+function onFusionSearch(val) {
+    S.fusion.query = val;
+    document.getElementById('fusionSearchClear').style.display = val?'block':'none';
+    if (S.fusion.selected) return; // don't interfere with results view
+    const series = SERIES.find(s=>s.id===S.series);
+    renderFusionPersonaList(series?.color||'#2196F3');
+}
+function clearFusionSearch() { document.getElementById('fusionSearch').value=''; onFusionSearch(''); }
