@@ -64,7 +64,7 @@ body {
 }
 .rail-item:hover { background: rgba(255,255,255,.06); color: var(--text); }
 .rail-item.active { background: rgba(255,255,255,.1); color: var(--text); }
-.rail-item-icon { font-size: 1.25rem; }
+.rail-icon { width:22px; height:22px; fill:currentColor; flex-shrink:0; }
 .rail-spacer { flex: 1; }
 
 /* ── Content Area ──────────────────────────────────────────────────────────── */
@@ -152,7 +152,7 @@ body {
 .category-row:hover { background:var(--raised); }
 .category-row--locked { opacity:.4; cursor:default; }
 .category-row--locked:hover { background:var(--card); }
-.category-icon  { font-size:1.25rem; width:28px; text-align:center; }
+.category-icon  { display:flex; align-items:center; justify-content:center; width:28px; color:var(--text2); flex-shrink:0; }
 .category-label { flex:1; font-size:1rem; font-weight:500; }
 .category-chevron { font-size:1.4rem; }
 .category-soon  { font-size:.75rem; color:var(--text3); background:var(--raised); padding:3px 8px; border-radius:6px; }
@@ -165,7 +165,7 @@ body {
     padding:0 12px; transition:border-color .2s; flex-shrink:0;
 }
 .search-wrap:focus-within { border-color:var(--accent); }
-.search-icon { color:var(--text2); font-size:1rem; flex-shrink:0; }
+.search-icon-svg { color:var(--text2); flex-shrink:0; }
 .search-input {
     flex:1; background:transparent; border:none; outline:none;
     color:var(--text); font-size:1rem; padding:13px 10px; font-family:inherit;
@@ -328,21 +328,20 @@ body {
     #nav-rail { display:flex; }
     #content-area { margin-left: var(--rail-w); }
 
-    /* Constrain content width */
+    /* No max-width cap — fill the space */
     .home-content,
     .game-list,
-    .category-list { max-width: 720px; margin: 0 auto; width: 100%; padding: 24px 32px; }
+    .category-list { padding: 24px 40px; }
 
     .series-list { flex-direction:row; flex-wrap:wrap; gap:16px; }
-    .series-card { flex:1 1 calc(50% - 8px); min-width:240px; min-height:100px; margin:0; }
+    .series-card { flex:1 1 calc(33% - 12px); min-width:240px; min-height:110px; margin:0; }
 
     .game-btn { border-radius:var(--r-xl); }
 
     /* Two-pane: show detail pane */
     .pane-list {
-        width: 380px;
-        min-width: 320px;
-        max-width: 420px;
+        width: 400px;
+        min-width: 340px;
         flex: none;
         border-right: 1px solid var(--divider);
     }
@@ -357,20 +356,15 @@ body {
         overflow: hidden;
     }
     .pane-detail .detail-content {
-        padding: 24px 32px;
-        max-width: 800px;
+        padding: 24px 40px;
     }
 
     /* Phone-only screens hidden on tablet */
     #screen-detail,
     #screen-sldetail { display: none !important; }
 
-    /* Detail screen: wider content (fallback if somehow shown) */
-    #screen-detail .detail-content,
-    #screen-sldetail .detail-content { max-width: 800px; margin: 0 auto; padding: 24px 32px; }
-
     /* Settings */
-    #screen-settings .detail-content { max-width: 600px; margin: 0 auto; padding: 24px 32px; }
+    #screen-settings .detail-content { max-width: 700px; margin: 0 auto; padding: 24px 40px; }
 
     /* Fusion pane */
     .fusion-selected-card,
@@ -379,7 +373,16 @@ body {
 }
 
 @media (min-width: 1200px) {
-    :root { --rail-w: 88px; }
-    .pane-list { width: 420px; max-width: 480px; }
-    .home-content, .game-list, .category-list { max-width: 900px; }
+    :root { --rail-w: 96px; }
+    .rail-item { width: 80px; font-size: .7rem; }
+    .pane-list { width: 480px; }
+    .home-content, .game-list, .category-list { padding: 32px 56px; }
+    .pane-detail .detail-content { padding: 32px 56px; }
+    #screen-settings .detail-content { padding: 32px 56px; }
+}
+
+@media (min-width: 1600px) {
+    :root { --rail-w: 104px; }
+    .pane-list { width: 560px; }
+    .home-content, .game-list, .category-list { padding: 40px 72px; }
 }

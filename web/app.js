@@ -160,21 +160,31 @@ function buildCategoryScreen() {
     const isP5 = S.series==='p5';
     const slLabel = isP5 ? 'Confidants' : 'Social Links';
 
+    const CAT_ICONS = {
+        'Personas':         `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>`,
+        'Fusion Calculator':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>`,
+        'Enemies':          `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`,
+        'Social Links':     `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
+        'Confidants':       `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
+        'Classroom Answers':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`,
+    };
+    const CHEVRON_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+
     const categories = [
-        { label:'Personas',         icon:'📖', available:true,  action:()=>{ S.listMode='personas'; navigate('list'); } },
-        { label:'Fusion Calculator',icon:'✨', available:true,  action:()=>openFusion() },
-        { label:'Enemies',          icon:'🛡', available:true,  action:()=>{ S.listMode='enemies';  navigate('list'); } },
-        { label:slLabel,            icon:'👥', available:true,  action:()=>openSocialLinks() },
-        { label:'Classroom Answers',icon:'🎓', available:true,  action:()=>{ S.listMode='classroom'; navigate('list'); } },
+        { label:'Personas',         available:true, action:()=>{ S.listMode='personas'; navigate('list'); } },
+        { label:'Fusion Calculator',available:true, action:()=>openFusion() },
+        { label:'Enemies',          available:true, action:()=>{ S.listMode='enemies';  navigate('list'); } },
+        { label:slLabel,            available:true, action:()=>openSocialLinks() },
+        { label:'Classroom Answers',available:true, action:()=>{ S.listMode='classroom'; navigate('list'); } },
     ];
 
     document.getElementById('categoryList').innerHTML = categories.map(c => `
         <div class="category-row ${c.available?'':'category-row--locked'}"
              onclick="${c.available&&c.action ? 'categoryAction(\''+c.label+'\')' : ''}">
-            <span class="category-icon">${c.icon}</span>
+            <span class="category-icon">${CAT_ICONS[c.label]||''}</span>
             <span class="category-label" style="${c.available?'color:var(--text)':'color:var(--text3)'}">${c.label}</span>
             ${c.available
-                ? `<span class="category-chevron" style="color:${color}">›</span>`
+                ? `<span class="category-chevron" style="color:${color}">${CHEVRON_SVG}</span>`
                 : `<span class="category-soon">Soon</span>`}
         </div>`).join('');
 
@@ -515,8 +525,10 @@ function showListDetailPane() {
     document.getElementById('listDetailTitle').textContent = S.detail.name;
     const favId = `${S.game}_${S.detail.name}`;
     const isFav = S.favorites.has(favId);
-    document.getElementById('favBtn').textContent = isFav?'♥':'♡';
-    document.getElementById('favBtn').style.color  = isFav?color:'';
+    const heartFilled = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+    const heartEmpty = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>`;
+    document.getElementById('favBtn').innerHTML = isFav ? heartFilled : heartEmpty;
+    document.getElementById('favBtn').style.color = isFav ? color : '';
     if (S.detail.type==='persona') renderPersonaDetail(S.detail.name, S.detail.data, color);
     else renderEnemyDetail(S.detail.name, S.detail.data, color);
 }
@@ -530,8 +542,10 @@ function buildDetailScreen() {
     document.getElementById('detailTitle').textContent = S.detail.name;
     const favId = `${S.game}_${S.detail.name}`;
     const isFav = S.favorites.has(favId);
-    document.getElementById('favBtnPhone').textContent = isFav?'♥':'♡';
-    document.getElementById('favBtnPhone').style.color  = isFav?color:'';
+    const heartFilled = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+    const heartEmpty = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>`;
+    document.getElementById('favBtnPhone').innerHTML = isFav ? heartFilled : heartEmpty;
+    document.getElementById('favBtnPhone').style.color = isFav ? color : '';
     if (S.detail.type==='persona') renderPersonaDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
     else renderEnemyDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
 }
@@ -557,7 +571,7 @@ function renderPersonaDetail(name, p, color, containerId) {
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;
-    if (p.unlock) html += `<div class="unlock-box"><div class="unlock-icon">🔒</div><div><div class="unlock-label">Unlock</div><div class="unlock-text">${p.unlock}</div></div></div>`;
+    if (p.unlock) html += `<div class="unlock-box"><div class="unlock-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div><div><div class="unlock-label">Unlock</div><div class="unlock-text">${p.unlock}</div></div></div>`;
 
     if (stats.length>=5) {
         html += `<div class="section-card"><div class="section-title">Base Stats</div>`;
@@ -749,12 +763,14 @@ function toggleFavorite() {
     if (!S.detail) return;
     const id=`${S.game}_${S.detail.name}`;
     const c=SERIES.find(s=>s.id===S.series)?.color||'#f00';
-    const isFav = S.favorites.has(id);
-    if (isFav) { S.favorites.delete(id); } else { S.favorites.add(id); }
-    // Update whichever fav button is visible
+    const wasFav = S.favorites.has(id);
+    if (wasFav) { S.favorites.delete(id); } else { S.favorites.add(id); }
+    const nowFav = !wasFav;
+    const heartFilled = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+    const heartEmpty = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>`;
     ['favBtn','favBtnPhone'].forEach(btnId => {
         const btn = document.getElementById(btnId);
-        if (btn) { btn.textContent=isFav?'♡':'♥'; btn.style.color=isFav?'':c; }
+        if (btn) { btn.innerHTML = nowFav ? heartFilled : heartEmpty; btn.style.color = nowFav ? c : ''; }
     });
     localStorage.setItem('favs', JSON.stringify([...S.favorites]));
 }

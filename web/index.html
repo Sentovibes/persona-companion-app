@@ -16,26 +16,26 @@
     <nav id="nav-rail">
         <div class="rail-logo">PERSONA<br>COMP.</div>
         <button class="rail-item" id="rail-home"     onclick="navigate('home')"     title="Home">
-            <span class="rail-item-icon">🏠</span>Home
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Home
         </button>
         <button class="rail-item" id="rail-personas" onclick="railNav('personas')"  title="Personas" style="display:none">
-            <span class="rail-item-icon">📖</span>Personas
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>Personas
         </button>
         <button class="rail-item" id="rail-fusion"   onclick="railNav('fusion')"    title="Fusion" style="display:none">
-            <span class="rail-item-icon">✨</span>Fusion
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>Fusion
         </button>
         <button class="rail-item" id="rail-enemies"  onclick="railNav('enemies')"   title="Enemies" style="display:none">
-            <span class="rail-item-icon">🛡</span>Enemies
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Enemies
         </button>
         <button class="rail-item" id="rail-sl"       onclick="railNav('sl')"        title="Social Links" style="display:none">
-            <span class="rail-item-icon">👥</span>Links
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>Links
         </button>
         <button class="rail-item" id="rail-class"    onclick="railNav('classroom')" title="Classroom" style="display:none">
-            <span class="rail-item-icon">🎓</span>Class
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>Class
         </button>
         <div class="rail-spacer"></div>
         <button class="rail-item" onclick="navigate('settings')" title="Settings">
-            <span class="rail-item-icon">⚙</span>Settings
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>Settings
         </button>
     </nav>
 
@@ -47,7 +47,9 @@
             <div class="top-bar">
                 <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
                 <div class="top-bar-actions">
-                    <button class="icon-btn" onclick="navigate('settings')" title="Settings">⚙</button>
+                    <button class="icon-btn" onclick="navigate('settings')" title="Settings">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    </button>
                 </div>
             </div>
             <div class="home-content">
@@ -59,7 +61,9 @@
         <!-- GAME SELECTION -->
         <div id="screen-game" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('home')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="gameScreenTitle"></span>
             </div>
             <div class="game-list" id="gameList"></div>
@@ -68,7 +72,9 @@
         <!-- CATEGORY -->
         <div id="screen-category" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('game', S.series)">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('game', S.series)">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="categoryTitle"></span>
             </div>
             <div class="category-list" id="categoryList"></div>
@@ -77,33 +83,39 @@
         <!-- LIST (personas / enemies / classroom) — two-pane on tablet -->
         <div id="screen-list" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" id="listBackBtn" onclick="navigate('category')">←</button>
+                <button class="icon-btn back-btn" id="listBackBtn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="listScreenTitle"></span>
             </div>
             <div class="two-pane-body">
-                <!-- Left pane: list -->
                 <div class="pane-list">
                     <div class="search-wrap">
-                        <span class="search-icon">🔍</span>
-                        <input id="searchInput" class="search-input" type="text" placeholder="Search…" oninput="onSearch(this.value)">
-                        <button class="search-clear" id="searchClear" onclick="clearSearch()" style="display:none">✕</button>
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="searchInput" class="search-input" type="text" placeholder="Search..." oninput="onSearch(this.value)">
+                        <button class="search-clear" id="searchClear" onclick="clearSearch()" style="display:none">&#x2715;</button>
                     </div>
                     <div class="sort-bar" id="sortBar"></div>
                     <div class="tab-bar" id="tabBar" style="display:none"></div>
                     <div id="listContent" class="list-content"></div>
                 </div>
-                <!-- Right pane: detail (tablet only) -->
                 <div class="pane-detail" id="listDetailPane">
                     <div class="detail-placeholder" id="listDetailPlaceholder">
-                        <div class="detail-placeholder-icon">📖</div>
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>
+                        </div>
                         <div>Select an item to view details</div>
                     </div>
                     <div id="listDetailContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
                         <div class="top-bar" style="position:sticky;top:0;z-index:10">
                             <span class="top-bar-title" id="listDetailTitle"></span>
                             <div class="top-bar-actions">
-                                <button class="icon-btn" id="favBtn" onclick="toggleFavorite()" title="Favorite">♡</button>
-                                <button class="icon-btn" onclick="shareDetail()" title="Share">↗</button>
+                                <button class="icon-btn" id="favBtn" onclick="toggleFavorite()" title="Favorite">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <button class="icon-btn" onclick="shareDetail()" title="Share">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                                </button>
                             </div>
                         </div>
                         <div id="detailContent" class="detail-content"></div>
@@ -112,14 +124,20 @@
             </div>
         </div>
 
-        <!-- DETAIL (phone only — tablet uses pane-detail inside screen-list) -->
+        <!-- DETAIL (phone only) -->
         <div id="screen-detail" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('list')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('list')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="detailTitle"></span>
                 <div class="top-bar-actions">
-                    <button class="icon-btn" id="favBtnPhone" onclick="toggleFavorite()" title="Favorite">♡</button>
-                    <button class="icon-btn" onclick="shareDetail()" title="Share">↗</button>
+                    <button class="icon-btn" id="favBtnPhone" onclick="toggleFavorite()" title="Favorite">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </button>
+                    <button class="icon-btn" onclick="shareDetail()" title="Share">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                    </button>
                 </div>
             </div>
             <div id="detailContentPhone" class="detail-content"></div>
@@ -128,30 +146,32 @@
         <!-- FUSION CALCULATOR — two-pane on tablet -->
         <div id="screen-fusion" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title">Fusion Calculator</span>
             </div>
             <div class="two-pane-body">
-                <!-- Left pane: persona list -->
                 <div class="pane-list">
                     <div class="search-wrap">
-                        <span class="search-icon">🔍</span>
-                        <input id="fusionSearch" class="search-input" type="text" placeholder="Search by name or arcana…" oninput="onFusionSearch(this.value)">
-                        <button class="search-clear" id="fusionSearchClear" onclick="clearFusionSearch()" style="display:none">✕</button>
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="fusionSearch" class="search-input" type="text" placeholder="Search by name or arcana..." oninput="onFusionSearch(this.value)">
+                        <button class="search-clear" id="fusionSearchClear" onclick="clearFusionSearch()" style="display:none">&#x2715;</button>
                     </div>
                     <div id="fusionContent" class="list-content"></div>
                 </div>
-                <!-- Right pane: recipes (tablet only) -->
                 <div class="pane-detail" id="fusionDetailPane">
                     <div class="detail-placeholder" id="fusionDetailPlaceholder">
-                        <div class="detail-placeholder-icon">✨</div>
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                        </div>
                         <div>Select a persona to see fusion recipes</div>
                     </div>
                     <div id="fusionDetailContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
                         <div class="top-bar" style="position:sticky;top:0;z-index:10">
                             <span class="top-bar-title" id="fusionDetailTitle"></span>
                             <div class="top-bar-actions">
-                                <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">✕</button>
+                                <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">&#x2715;</button>
                             </div>
                         </div>
                         <div id="fusionRecipeContent" class="detail-content" style="gap:8px"></div>
@@ -163,23 +183,25 @@
         <!-- SOCIAL LINKS LIST — two-pane on tablet -->
         <div id="screen-sociallinks" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('category')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="slTitle"></span>
             </div>
             <div class="two-pane-body">
-                <!-- Left pane: SL list -->
                 <div class="pane-list">
                     <div class="search-wrap">
-                        <span class="search-icon">🔍</span>
-                        <input id="slSearch" class="search-input" type="text" placeholder="Search…" oninput="onSlSearch(this.value)">
-                        <button class="search-clear" id="slSearchClear" onclick="clearSlSearch()" style="display:none">✕</button>
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="slSearch" class="search-input" type="text" placeholder="Search..." oninput="onSlSearch(this.value)">
+                        <button class="search-clear" id="slSearchClear" onclick="clearSlSearch()" style="display:none">&#x2715;</button>
                     </div>
                     <div id="slContent" class="list-content"></div>
                 </div>
-                <!-- Right pane: SL detail (tablet only) -->
                 <div class="pane-detail" id="slDetailPane">
                     <div class="detail-placeholder" id="slDetailPlaceholder">
-                        <div class="detail-placeholder-icon">👥</div>
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        </div>
                         <div>Select a social link to view details</div>
                     </div>
                     <div id="slDetailPaneContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
@@ -195,7 +217,9 @@
         <!-- SOCIAL LINK DETAIL (phone only) -->
         <div id="screen-sldetail" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('sociallinks')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('sociallinks')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title" id="slDetailTitlePhone"></span>
             </div>
             <div id="slDetailContentPhone" class="detail-content"></div>
@@ -204,7 +228,9 @@
         <!-- SETTINGS -->
         <div id="screen-settings" class="screen">
             <div class="top-bar">
-                <button class="icon-btn back-btn" onclick="navigate('home')">←</button>
+                <button class="icon-btn back-btn" onclick="navigate('home')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
                 <span class="top-bar-title">Settings</span>
             </div>
             <div class="detail-content" id="settingsContent"></div>
