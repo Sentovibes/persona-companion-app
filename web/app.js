@@ -386,7 +386,7 @@ async function buildSocialLinksScreen() {
             const r = await fetch(path);
             if (!r.ok) throw new Error(r.statusText);
             const raw = await r.json();
-            // Filter P5/P5R exclusives
+            // Filter P5/P5R and P4/P4G exclusives
             S.slData = Object.entries(raw).filter(([arcana, data]) => {
                 if (data['P5R Exclusive'] && S.game==='p5') return false;
                 if (data['P4G Exclusive'] && S.game==='p4') return false;
@@ -406,15 +406,29 @@ function renderSlList(color) {
     if (q) items = items.filter(([arcana])=>arcana.toLowerCase().includes(q));
     if (!items.length) { document.getElementById('slContent').innerHTML=`<div class="empty-state">No results</div>`; return; }
     document.getElementById('slContent').innerHTML = items.map(([arcana, data]) => {
-        const ranks = Object.keys(data).filter(k=>!['P4G Exclusive','P5R Exclusive','P5R Reworked'].includes(k)&&typeof data[k]==='object');
+        const rankCount = countRanks(data);
         return `<div class="row-card" onclick="openSlDetail('${esc(arcana)}')">
             <div class="row-main">
                 <div class="row-name">${arcana}</div>
-                <div class="row-sub">${ranks.length} ranks</div>
+                <div class="row-sub">${rankCount} ranks</div>
             </div>
-            <div class="level-badge" style="background:${color}22;color:${color}">Rank ${ranks.length}</div>
+            <div class="level-badge" style="background:${color}22;color:${color}">Rank ${rankCount}</div>
         </div>`;
     }).join('');
+}
+
+/* Count total ranks across both auto and progression formats */
+function countRanks(data) {
+    let count = 0;
+    Object.keys(data).forEach(key => {
+        if (['P4G Exclusive','P5R Exclusive','P5R Reworked','Details'].includes(key)) return;
+        if (key === 'Rank Up Progression') {
+            count += Object.keys(data[key]).length;
+        } else if (typeof data[key] === 'object') {
+            count++;
+        }
+    });
+    return count;
 }
 
 function openSlDetail(arcana) {
@@ -445,40 +459,77 @@ function buildSlDetailScreen() {
     if (!entry) return;
     const [arcana, data] = entry;
 
-    // Phone screen uses slDetailContentPhone, tablet pane uses slDetailContent
     const phoneEl = document.getElementById('slDetailContentPhone');
     const paneEl  = document.getElementById('slDetailContent');
-    if (phoneEl) { document.getElementById('slDetailTitlePhone').textContent = arcana; }
-
-    const rankKeys = Object.keys(data).filter(k=>
-        !['P4G Exclusive','P5R Exclusive','P5R Reworked'].includes(k) && typeof data[k]==='object'
-    );
+    if (phoneEl) document.getElementById('slDetailTitlePhone').textContent = arcana;
 
     let html = '';
-    rankKeys.forEach((rankKey) => {
-        const rank = data[rankKey];
-        const nextRank = rank['Next Rank']||0;
-        const isAuto = rankKey.toLowerCase().includes('auto');
-        html += `<div class="section-card">
-            <div class="section-title" style="color:${color}">${rankKey}${isAuto?' (Auto)':''}</div>`;
-        if (nextRank) html += `<div class="info-row"><div class="info-label">Points to next</div><div class="info-val">${nextRank}</div></div>`;
-        Object.entries(rank).forEach(([k,v]) => {
-            if (k==='Next Rank'||typeof v==='object') return;
-            if (k.match(/^[QA]?[0-9]+[:.]/)||k.startsWith('Phone')||k.startsWith('Any')) {
-                const pts = parseInt(v)||0;
-                const ptColor = pts>=3?'#4CAF50':pts>0?color:'var(--text3)';
-                html += `<div class="skill-row">
-                    <div class="skill-name" style="font-size:.875rem">${k}</div>
-                    <div class="skill-level" style="color:${ptColor}">${pts>0?'+'+pts+' pts':'—'}</div>
-                </div>`;
-            } else if (typeof v==='string'&&v&&!k.match(/Exclusive|Reworked/)) {
-                html += `<div class="info-row"><div class="info-label">${k}</div><div class="info-val">${v}</div></div>`;
-            }
+
+    // ── Details block (Schedule / Location / Trigger) ──────────────────────
+    if (data.Details && typeof data.Details === 'object') {
+        html += `<div class="section-card">`;
+        Object.entries(data.Details).forEach(([k, v]) => {
+            html += `<div class="info-row"><div class="info-label">${k}</div><div class="info-val" style="text-align:right;max-width:60%">${v}</div></div>`;
         });
         html += `</div>`;
+    }
+
+    // ── Auto ranks at top level ─────────────────────────────────────────────
+    Object.entries(data).forEach(([rankKey, rankVal]) => {
+        if (['P4G Exclusive','P5R Exclusive','P5R Reworked','Details','Rank Up Progression'].includes(rankKey)) return;
+        if (typeof rankVal !== 'object') return;
+        const isAuto = rankKey.toLowerCase().includes('auto');
+        html += `<div class="section-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                <div class="section-title" style="color:${color};margin-bottom:0">${rankKey}</div>
+                ${isAuto ? `<span style="font-size:.7rem;font-weight:700;color:#4CAF50;background:rgba(76,175,80,.15);padding:3px 8px;border-radius:6px">AUTO</span>` : ''}
+            </div>`;
+        if (rankVal.Requirements) {
+            html += `<div class="info-row"><div class="info-label">Requirements</div><div class="info-val" style="text-align:right;max-width:65%">${rankVal.Requirements}</div></div>`;
+        }
+        html += `</div>`;
     });
-    const content = html||`<div class="empty-state">No rank data</div>`;
-    if (paneEl)  { paneEl.innerHTML = content; paneEl.scrollTop = 0; }
+
+    // ── Rank Up Progression ─────────────────────────────────────────────────
+    if (data['Rank Up Progression'] && typeof data['Rank Up Progression'] === 'object') {
+        Object.entries(data['Rank Up Progression']).forEach(([rankKey, rankVal]) => {
+            if (typeof rankVal !== 'object') return;
+            html += `<div class="section-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                    <div class="section-title" style="color:${color};margin-bottom:0">${rankKey}</div>
+                    ${rankVal['Next Pts'] > 0 ? `<span style="font-size:.75rem;color:var(--text2)">${rankVal['Next Pts']} pts needed</span>` : ''}
+                </div>`;
+
+            if (rankVal.Requirements) {
+                html += `<div class="info-row" style="margin-bottom:8px"><div class="info-label">Requirements</div><div class="info-val" style="text-align:right;max-width:65%">${rankVal.Requirements}</div></div>`;
+            }
+
+            // Dialogues
+            if (Array.isArray(rankVal.Dialogues)) {
+                rankVal.Dialogues.forEach(dialogue => {
+                    const isPhone = (dialogue.Question||'').toLowerCase().includes('phone');
+                    if (dialogue.Question && dialogue.Question !== 'Dialogue 1' && dialogue.Question !== 'Dialogue 2' && dialogue.Question !== 'Dialogue 3') {
+                        html += `<div style="font-size:.8rem;color:var(--text2);margin:8px 0 4px;font-style:italic">${dialogue.Question}</div>`;
+                    }
+                    if (Array.isArray(dialogue.Choices)) {
+                        dialogue.Choices.forEach(choice => {
+                            const pts = choice.Points || 0;
+                            const ptColor = pts >= 10 ? '#4CAF50' : pts > 0 ? color : 'var(--text3)';
+                            const ptLabel = pts > 0 ? `+${pts}` : pts === 0 && choice.Answer === 'Any' ? '—' : `${pts}`;
+                            html += `<div class="skill-row" style="margin-bottom:6px">
+                                <div class="skill-name" style="font-size:.875rem;font-weight:400">${isPhone ? '📱 ' : ''}${choice.Answer}</div>
+                                <div class="skill-level" style="color:${ptColor};font-weight:700;font-size:.8rem;flex-shrink:0;margin-left:8px">${ptLabel}</div>
+                            </div>`;
+                        });
+                    }
+                });
+            }
+            html += `</div>`;
+        });
+    }
+
+    const content = html || `<div class="empty-state">No data available</div>`;
+    if (paneEl)  { paneEl.innerHTML  = content; paneEl.scrollTop  = 0; }
     if (phoneEl) { phoneEl.innerHTML = content; phoneEl.scrollTop = 0; }
 }
 
