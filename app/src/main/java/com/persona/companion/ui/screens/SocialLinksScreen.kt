@@ -12,6 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -31,8 +32,16 @@ fun SocialLinksScreen(
     val socialLinksData by viewModel.socialLinksData.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
+    val context = LocalContext.current
     
-    LaunchedEffect(gameId) {
+    // Re-load when gameId changes OR when protagonist preference changes (for P3P)
+    val protagonist = if (gameId == "p3p") {
+        remember { com.persona.companion.data.UserPreferences(context).getP3PProtagonist().name }
+    } else {
+        ""
+    }
+    
+    LaunchedEffect(gameId, protagonist) {
         viewModel.loadSocialLinks(gameId)
     }
     

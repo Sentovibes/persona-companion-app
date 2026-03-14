@@ -232,7 +232,7 @@ fun ImagesSettingsSection() {
                     // Import button (to re-import/update)
                     OutlinedButton(
                         onClick = {
-                            filePickerLauncher.launch("application/zip")
+                            filePickerLauncher.launch("*/*")
                         },
                         modifier = Modifier.weight(1f)
                     ) {
@@ -284,7 +284,7 @@ fun ImagesSettingsSection() {
                     // Import button
                     OutlinedButton(
                         onClick = {
-                            filePickerLauncher.launch("application/zip")
+                            filePickerLauncher.launch("*/*")
                         },
                         modifier = Modifier.weight(1f)
                     ) {

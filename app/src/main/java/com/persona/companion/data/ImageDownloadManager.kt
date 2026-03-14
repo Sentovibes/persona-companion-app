@@ -616,14 +616,11 @@ object ImageDownloadManager {
             
             Log.d(TAG, "ZIP file size: $actualSize bytes")
             
-            // For imports, allow size to be within 10% of expected size
-            val minSize = (BuildConfig.IMAGES_ZIP_SIZE * 0.9).toLong()
-            val maxSize = (BuildConfig.IMAGES_ZIP_SIZE * 1.1).toLong()
-            
-            if (actualSize < minSize || actualSize > maxSize) {
+            // Only reject if the file is suspiciously small (< 1 MB) — don't enforce exact size
+            if (actualSize < 1_000_000L) {
                 zipFile.delete()
                 val error = DownloadError.IntegrityError(
-                    "ZIP file size is incorrect (expected ~${BuildConfig.IMAGES_ZIP_SIZE / 1_000_000} MB, got ${actualSize / 1_000_000} MB)",
+                    "ZIP file is too small (${actualSize / 1000} KB) — make sure you selected the correct images.zip",
                     BuildConfig.IMAGES_ZIP_SIZE,
                     actualSize
                 )

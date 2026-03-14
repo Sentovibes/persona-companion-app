@@ -38,6 +38,7 @@ fun SettingsScreen(
     val settings by vm.settings.collectAsState()
     val context = LocalContext.current
     val userPrefs = remember { UserPreferences(context) }
+    var p3pProtagonist by remember { mutableStateOf(userPrefs.getP3PProtagonist()) }
     val scope = rememberCoroutineScope()
     
     var isCheckingUpdate by remember { mutableStateOf(false) }
@@ -77,8 +78,9 @@ fun SettingsScreen(
 
             item {
                 P3PProtagonistSelector(
-                    selectedProtagonist = userPrefs.getP3PProtagonist(),
+                    selectedProtagonist = p3pProtagonist,
                     onProtagonistChange = { protagonist ->
+                        p3pProtagonist = protagonist
                         userPrefs.setP3PProtagonist(protagonist)
                     }
                 )
@@ -114,7 +116,7 @@ fun SettingsScreen(
             item {
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    text = "Note: Changes will apply when you reload the persona list",
+                    text = "Note: DLC filter changes apply when you navigate to a persona list",
                     style = MaterialTheme.typography.bodySmall,
                     color = TextDisabled,
                     modifier = Modifier.padding(horizontal = 16.dp)

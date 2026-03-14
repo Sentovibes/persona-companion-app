@@ -45,7 +45,7 @@ fun PersonaListScreen(
 ) {
     val context = LocalContext.current
     val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
-    val isCompactView = remember { userPrefs.isCompactView() }
+    var isCompactView by remember { mutableStateOf(userPrefs.isCompactView()) }
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
     val state   by vm.state.collectAsState()
