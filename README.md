@@ -55,7 +55,7 @@ The app is fully functional offline without images, but supports high-quality as
 
 Access the web version directly in your browser (no installation required):
 
-**[https://sentovibes.github.io/persona-companion-app/web/](https://sentovibes.github.io/persona-companion-app/web/)**
+**[https://sentovibes.github.io/persona-companion-app/](https://sentovibes.github.io/persona-companion-app/)**
 
 The web version includes:
 - Full persona and enemy databases
