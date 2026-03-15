@@ -4,14 +4,27 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.callbackFlow
 
 class UserPreferences(context: Context) {
     private val prefs: SharedPreferences = context.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
     private val gson = Gson()
     
     // Dark mode
-    fun isDarkMode(): Boolean = prefs.getBoolean("dark_mode", false)
+    fun isDarkMode(): Boolean = prefs.getBoolean("dark_mode", true)
     fun setDarkMode(enabled: Boolean) = prefs.edit().putBoolean("dark_mode", enabled).apply()
+
+    // Reactive dark mode — emits whenever the value changes
+    val darkModeFlow: Flow<Boolean> = callbackFlow {
+        trySend(isDarkMode())
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "dark_mode") trySend(isDarkMode())
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
     
     // Compact view
     fun isCompactView(): Boolean = prefs.getBoolean("compact_view", false)

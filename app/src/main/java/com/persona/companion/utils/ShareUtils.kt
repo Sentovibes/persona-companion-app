@@ -297,14 +297,6 @@ object ShareUtils {
                     appendLine("Points needed: ${rank.nextRankPoints}")
                 }
                 
-                if (rank.location != null) {
-                    appendLine("Location: ${rank.location}")
-                }
-                
-                if (rank.availability != null) {
-                    appendLine("Availability: ${rank.availability}")
-                }
-                
                 if (rank.dialogues.isNotEmpty()) {
                     appendLine()
                     rank.dialogues.forEach { dialogue ->

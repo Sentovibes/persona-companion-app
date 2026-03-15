@@ -36,28 +36,34 @@ fun RecentlyViewedScreen(navController: NavController) {
     var selectedTab by remember { mutableStateOf(0) }
     val tabs = listOf("Personas", "Enemies")
     
-    // Load recent personas
-    val recentPersonaItems = remember { userPrefs.getRecentPersonas() }
-    val recentPersonas = remember(recentPersonaItems) {
-        recentPersonaItems.mapNotNull { item ->
-            val game = SeriesData.findGame(item.seriesId, item.gameId)
-            game?.let {
-                personaRepo.getPersonaByName(it.dataPath, item.name)?.let { persona ->
-                    Triple(item.seriesId, item.gameId, persona)
+    // Load recent personas async
+    var recentPersonas by remember { mutableStateOf<List<Triple<String, String, Persona>>>(emptyList()) }
+    LaunchedEffect(Unit) {
+        val items = userPrefs.getRecentPersonas()
+        recentPersonas = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            items.mapNotNull { item ->
+                val game = SeriesData.findGame(item.seriesId, item.gameId)
+                game?.let {
+                    personaRepo.getPersonaByName(it.dataPath, item.name)?.let { persona ->
+                        Triple(item.seriesId, item.gameId, persona)
+                    }
                 }
             }
         }
     }
-    
-    // Load recent enemies
-    val recentEnemyItems = remember { userPrefs.getRecentEnemies() }
-    val recentEnemies = remember(recentEnemyItems) {
-        recentEnemyItems.mapNotNull { item ->
-            val game = SeriesData.findGame(item.seriesId, item.gameId)
-            game?.enemyPath?.let { enemyPath ->
-                val enemies = JsonLoader.loadEnemies(context, enemyPath)
-                enemies.find { it.name == item.name }?.let { enemy ->
-                    Triple(item.seriesId, item.gameId, enemy)
+
+    // Load recent enemies async
+    var recentEnemies by remember { mutableStateOf<List<Triple<String, String, Enemy>>>(emptyList()) }
+    LaunchedEffect(Unit) {
+        val items = userPrefs.getRecentEnemies()
+        recentEnemies = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            items.mapNotNull { item ->
+                val game = SeriesData.findGame(item.seriesId, item.gameId)
+                game?.enemyPath?.let { enemyPath ->
+                    val enemies = JsonLoader.loadEnemies(context, enemyPath)
+                    enemies.find { it.name == item.name }?.let { enemy ->
+                        Triple(item.seriesId, item.gameId, enemy)
+                    }
                 }
             }
         }

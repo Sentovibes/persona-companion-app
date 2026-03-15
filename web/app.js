@@ -147,6 +147,7 @@ function buildGameScreen(seriesId) {
 function selectGame(seriesId, gameId) {
     S.series = seriesId; S.game = gameId;
     S.query=''; S.sort='arcana'; S.enemyTab='enemies';
+    S.fusion = { personas:null, query:'', selected:null, recipes:null }; // reset on game change
     navigate('category');
 }
 
@@ -274,8 +275,26 @@ function renderList(data, color) {
 
 /* ── Personas ──────────────────────────────────────────────────────────────── */
 function renderPersonas(data, q, color, el) {
+    const DLC_NAMES = {
+        p3r: new Set(['Arsene','Captain Kidd','Zorro','Carmen','Goemon','Johanna','Milady',
+                      'Robin Hood','Cendrillon','Satanael','Seiten Taisei A','Mercurius',
+                      'Hecate','Kamu Susano-o','Anat','Astarte','Loki A','Vanadis',
+                      'Izanagi','Magatsu-Izanagi','Kaguya']),
+        p5:  new Set(['Izanagi','Izanagi Picaro','Orpheus','Orpheus Picaro','Ariadne',
+                      'Ariadne Picaro','Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                      'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                      'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro']),
+        p5r: new Set(['Orpheus F','Orpheus F Picaro','Izanagi','Izanagi Picaro','Orpheus',
+                      'Orpheus Picaro','Raoul','Athena','Athena Picaro','Ariadne','Ariadne Picaro',
+                      'Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                      'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                      'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro',
+                      'Izanagi-no-Okami','Izanagi-no-Okami Picaro'])
+    };
+    const gameDlc = DLC_NAMES[S.game] || new Set();
     let items = Object.entries(data).filter(([name, p]) => {
-        if (!S.settings.showDlc && p.isDlc) return false;
+        const isDlc = p.isDlc || gameDlc.has(name);
+        if (!S.settings.showDlc && isDlc) return false;
         if (!S.settings.showEpisodeAigis && p.episodeAigis) return false;
         return !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q);
     });
@@ -835,11 +854,11 @@ function showEmpty(msg) { document.getElementById('listContent').innerHTML=`<div
 function esc(s) { return s.replace(/'/g,"\\'"); }
 
 /* ── Fusion Calculator ─────────────────────────────────────────────────────── */
-const FUSION_RECIPE_PATHS = {
-    p3fes:'./data/fusion-recipes/p3fes-recipes.json', p3p:'./data/fusion-recipes/p3p-recipes.json',
-    p3r:'./data/fusion-recipes/p3r-recipes.json',     p4:'./data/fusion-recipes/p4-recipes.json',
-    p4g:'./data/fusion-recipes/p4g-recipes.json',     p5:'./data/fusion-recipes/p5-recipes.json',
-    p5r:'./data/fusion-recipes/p5r-recipes.json'
+const FUSION_CHART_PATHS = {
+    p3fes:'./data/fusion-charts/p3-fusion-chart.json',      p3p:'./data/fusion-charts/p3p-fusion-chart.json',
+    p3r:'./data/fusion-charts/p3r-fusion-chart.json',        p4:'./data/fusion-charts/p4-base-fusion-chart.json',
+    p4g:'./data/fusion-charts/p4-fusion-chart.json',         p5:'./data/fusion-charts/p5-base-fusion-chart.json',
+    p5r:'./data/fusion-charts/p5-fusion-chart.json'
 };
 const SPECIAL_PATHS = {
     p3fes:'./data/special-fusions/p3-special.json', p3p:'./data/special-fusions/p3-special.json',
@@ -847,14 +866,15 @@ const SPECIAL_PATHS = {
     p4g:'./data/special-fusions/p4-special.json',   p5:'./data/special-fusions/p5-special.json',
     p5r:'./data/special-fusions/p5r-special.json'
 };
+// P3R/P5/P5R use a triangular matrix; all others are square
+const IS_TRIANGULAR = { p3r:true, p5:true, p5r:true };
 
 async function buildFusionScreen() {
     const series = SERIES.find(s=>s.id===S.series);
     const color  = series?.color||'#2196F3';
     const el     = document.getElementById('fusionContent');
 
-    // Load personas + recipes if not cached
-    if (!S.fusion.personas) {
+    if (!S.fusion.personas || !S.fusion.fissionTable) {
         el.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading fusion data…</div></div>`;
         try {
             // Load personas
@@ -862,28 +882,112 @@ async function buildFusionScreen() {
             if (!pRes.ok) throw new Error('Failed to load personas');
             const allPersonas = await pRes.json();
 
+            // DLC persona names per game (fallback for JSONs without isDlc field)
+            const DLC_NAMES = {
+                p3fes: new Set(),
+                p3p:   new Set(),
+                p3r:   new Set(['Arsene','Captain Kidd','Zorro','Carmen','Goemon','Johanna','Milady',
+                                'Robin Hood','Cendrillon','Satanael','Seiten Taisei A','Mercurius',
+                                'Hecate','Kamu Susano-o','Anat','Astarte','Loki A','Vanadis',
+                                'Izanagi','Magatsu-Izanagi','Kaguya']),
+                p4:    new Set(),
+                p4g:   new Set(),
+                p5:    new Set(['Izanagi','Izanagi Picaro','Orpheus','Orpheus Picaro','Ariadne',
+                                'Ariadne Picaro','Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                                'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                                'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro']),
+                p5r:   new Set(['Orpheus F','Orpheus F Picaro','Izanagi','Izanagi Picaro','Orpheus',
+                                'Orpheus Picaro','Raoul','Athena','Athena Picaro','Ariadne','Ariadne Picaro',
+                                'Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                                'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                                'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro',
+                                'Izanagi-no-Okami','Izanagi-no-Okami Picaro'])
+            };
+            const gameDlc = DLC_NAMES[S.game] || new Set();
+
             // Filter DLC / EpisodeAigis
             const personaMap = {};
             Object.entries(allPersonas).forEach(([name, p]) => {
-                if (!S.settings.showDlc && p.isDlc) return;
+                const isDlc = p.isDlc || gameDlc.has(name);
+                if (!S.settings.showDlc && isDlc) return;
                 if (!S.settings.showEpisodeAigis && p.episodeAigis) return;
-                personaMap[name] = p;
+                personaMap[name] = { ...p, name };
             });
 
-            // Load recipes
-            const rRes = await fetch(FUSION_RECIPE_PATHS[S.game]);
-            if (!rRes.ok) throw new Error('Failed to load recipes');
-            const recipeData = await rRes.json();
+            // Load fusion chart
+            const cRes = await fetch(FUSION_CHART_PATHS[S.game]);
+            if (!cRes.ok) throw new Error('Failed to load fusion chart');
+            const chart = await cRes.json();
 
             // Load special fusions
             let specialData = {};
             try {
-                const sRes = await fetch(SPECIAL_PATHS[S.game]);
+                const sRes = await fetch(SPECIAL_PATHS[S.game] + '?v=' + Date.now());
                 if (sRes.ok) specialData = await sRes.json();
             } catch(e) {}
 
+            // Pre-sort fusable personas by level per arcana for fast lookup
+            // Exclude party/accident/special fusion-only personas from ingredient pool
+            // Also exclude element demons (empty special list)
+            const NON_FUSABLE = new Set(['party','accident','special']);
+            const elemDemonNames = new Set(
+                Object.entries(specialData)
+                    .filter(([, v]) => Array.isArray(v) && v.length === 0)
+                    .map(([k]) => k)
+            );
+            const byArcana = {};
+            Object.entries(personaMap).forEach(([name, p]) => {
+                if (NON_FUSABLE.has(p.fusion)) return;
+                if (elemDemonNames.has(name)) return;
+                const a = p.arcana || p.race || '';
+                if (!byArcana[a]) byArcana[a] = [];
+                byArcana[a].push({ name, data: p });
+            });
+            Object.values(byArcana).forEach(arr => arr.sort((a,b) => (a.data.level??a.data.lvl??0) - (b.data.level??b.data.lvl??0)));
+
+            // Build fission table: resultArcana -> { arcanaA -> [arcanaB, ...] }
+            // Square charts: upper triangle only; triangular charts: full table
+            const fissionTable = {};
+            const _races = chart.races, _table = chart.table;
+            const _triangular = IS_TRIANGULAR[S.game] || false;
+            if (_triangular) {
+                // Triangular: row i has i+1 columns, raceB = races[c]
+                for (let idxA = 0; idxA < _races.length; idxA++) {
+                    const raceA = _races[idxA];
+                    const row = _table[idxA];
+                    if (!row) continue;
+                    for (let c = 0; c < row.length; c++) {
+                        if (c === idxA) continue;
+                        const raceB = _races[c];
+                        const raceR = row[c];
+                        if (!raceR || raceR === '-') continue;
+                        if (!fissionTable[raceR]) fissionTable[raceR] = {};
+                        if (!fissionTable[raceR][raceA]) fissionTable[raceR][raceA] = [];
+                        if (!fissionTable[raceR][raceA].includes(raceB)) fissionTable[raceR][raceA].push(raceB);
+                    }
+                }
+            } else {
+                // Square: upper triangle only
+                for (let idxA = 0; idxA < _races.length; idxA++) {
+                    const raceA = _races[idxA];
+                    const row = _table[idxA];
+                    if (!row) continue;
+                    for (let idxB = idxA; idxB < _races.length; idxB++) {
+                        if (idxB === idxA) continue;
+                        const raceB = _races[idxB];
+                        const raceR = row[idxB];
+                        if (!raceR || raceR === '-') continue;
+                        if (!fissionTable[raceR]) fissionTable[raceR] = {};
+                        if (!fissionTable[raceR][raceA]) fissionTable[raceR][raceA] = [];
+                        if (!fissionTable[raceR][raceA].includes(raceB)) fissionTable[raceR][raceA].push(raceB);
+                    }
+                }
+            }
+            S.fusion.fissionTable = fissionTable;
+
             S.fusion.personaMap  = personaMap;
-            S.fusion.recipeData  = recipeData;
+            S.fusion.chart       = chart;
+            S.fusion.byArcana    = byArcana;
             S.fusion.specialData = specialData;
             S.fusion.personas    = Object.keys(personaMap).sort((a,b)=>a.localeCompare(b));
         } catch(e) {
@@ -893,7 +997,7 @@ async function buildFusionScreen() {
     }
 
     if (S.fusion.selected) {
-        renderFusionResults(color);
+        renderFusionResults(SERIES.find(s=>s.id===S.series)?.color||'#2196F3');
     } else {
         renderFusionPersonaList(color);
     }
@@ -963,9 +1067,22 @@ function showFusionDetailPane(color) {
         </div>
     </div>`;
 
+    if (p.unlock) {
+        html += `<div class="unlock-box" style="margin:8px 0">
+            <div class="unlock-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+            <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
+        </div>`;
+    }
+
     if (!recipes || !recipes.length) {
         html += `<div class="empty-state">No fusion recipes found${!S.settings.showDlc?' (DLC off)':''}</div>`;
     } else {
+        if (p.unlock) {
+            html += `<div class="unlock-box" style="margin:8px 0">
+                <div class="unlock-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+                <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
+            </div>`;
+        }
         html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found</div>`;
         html += recipes.map(combo => {
             if (combo.length === 2) {
@@ -1005,29 +1122,108 @@ function clearFusionSelectionPane() {
 
 function calcFusionRecipes(targetName) {
     const recipes = [];
-    const personaMap = S.fusion.personaMap;
+    const { personaMap, chart, byArcana, specialData, fissionTable } = S.fusion;
+    const target = personaMap[targetName];
+    if (!target) return recipes;
 
-    // Check special fusions first
-    const special = S.fusion.specialData[targetName];
+    // Special fusions — return early
+    const special = specialData[targetName];
     if (special && special.length) {
+        // Element demons have empty special list — skip them
         for (const combo of special) {
             const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
             if (personas.length === combo.length) recipes.push(personas);
         }
         return recipes;
     }
+    // Element demons (empty special list) have no recipes
+    if (special && special.length === 0) return recipes;
 
-    // Normal recipes
-    const recipeEntry = S.fusion.recipeData[targetName];
-    if (!recipeEntry) return recipes;
-    const combos = recipeEntry.recipes || recipeEntry;
-    if (!Array.isArray(combos)) return recipes;
+    const targetArcana = target.arcana || target.race;
+    const targetLevel  = target.level  ?? target.lvl ?? 0;
+    if (!targetArcana || !chart) return recipes;
 
-    for (const combo of combos) {
-        if (!Array.isArray(combo)) continue;
-        const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
-        if (personas.length === combo.length) recipes.push(personas);
+    // resultLvls excludes special-recipe personas (mirrors getResultDemonLvls)
+    const resultLvls = (byArcana[targetArcana] || [])
+        .filter(p => !specialData[p.name])
+        .map(p => p.data.level ?? p.data.lvl ?? 0)
+        .sort((a,b) => a-b);
+    const targetLvlIndex = resultLvls.indexOf(targetLevel);
+    if (targetLvlIndex < 0) return recipes;
+
+    // ── Same-arcana (per-nonelem-fissions.ts: splitWithSameRace) ──
+    // minResultLvl = 2*(targetLvl - 1),  maxResultLvl = 2*(nextLvl - 1)
+    const sameMinLvl = 2 * (targetLevel - 1);
+    const sameMaxLvl = targetLvlIndex + 1 < resultLvls.length
+        ? 2 * (resultLvls[targetLvlIndex + 1] - 1) : 200;
+    const sameNextLvl = targetLvlIndex + 2 < resultLvls.length
+        ? 2 * (resultLvls[targetLvlIndex + 2] - 1) : 200;
+
+    // ingLvls = all arcana levels except target (mirrors getIngredientDemonLvls)
+    const ingLvls = (byArcana[targetArcana] || [])
+        .map(p => p.data.level ?? p.data.lvl ?? 0)
+        .filter(l => l !== targetLevel)
+        .sort((a,b) => a-b);
+
+    // Extra recipe: ingLvlM x ingLvl2 (per-nonelem-fissions.ts lines 22-28)
+    const ingLvlM = sameMaxLvl / 2 + 1; // maxResultLvl/2 + lvlModifier(1)
+    for (const lvl2 of ingLvls) {
+        if (ingLvlM < lvl2 && ingLvlM + lvl2 < sameNextLvl) {
+            const pM = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === ingLvlM);
+            const p2 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl2);
+            if (pM && p2) recipes.push([{name:pM.name,data:pM.data},{name:p2.name,data:p2.data}]);
+        }
     }
+
+    // Normal same-arcana pairs
+    for (let i = 0; i < ingLvls.length; i++) {
+        const lvl1 = ingLvls[i];
+        for (let j = i + 1; j < ingLvls.length; j++) {
+            const lvl2 = ingLvls[j];
+            const sum = lvl1 + lvl2;
+            if (sum >= sameMinLvl && sum < sameMaxLvl) {
+                const p1 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl1);
+                const p2 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl2);
+                if (p1 && p2) recipes.push([{name:p1.name,data:p1.data},{name:p2.name,data:p2.data}]);
+            }
+        }
+    }
+
+    // ── Cross-arcana (smt-nonelem-fissions.ts: splitWithDiffRace) ──
+    // minResultLvl = 2*(prevTargetLvl - 0.5)  (or 0)
+    // maxResultLvl = 2*(targetLvl - 0.5)  only if next result exists, else 200
+    const prevTargetLvl = targetLvlIndex > 0 ? resultLvls[targetLvlIndex - 1] : null;
+    const nextTargetLvl = targetLvlIndex + 1 < resultLvls.length ? resultLvls[targetLvlIndex + 1] : null;
+    const crossMinLvl = prevTargetLvl != null ? 2 * prevTargetLvl - 1 : 0;
+    const crossMaxLvl = nextTargetLvl != null ? 2 * targetLevel - 1 : 200;
+
+    const fissions = (fissionTable && fissionTable[targetArcana]) || {};
+    const seen = new Set();
+
+    for (const [raceA, raceBsList] of Object.entries(fissions)) {
+        const lvlsA = (byArcana[raceA]||[]).map(p => p.data.level??p.data.lvl??0);
+        for (const lvlA of lvlsA) {
+            const minLvlB = crossMinLvl - lvlA;
+            const maxLvlB = crossMaxLvl - lvlA;
+            for (const raceB of raceBsList) {
+                if (raceA === raceB) continue; // same-arcana handled above
+                const lvlsB = (byArcana[raceB]||[]).map(p => p.data.level??p.data.lvl??0);
+                for (const lvlB of lvlsB) {
+                    if (lvlB > minLvlB && lvlB <= maxLvlB && (raceA !== raceB || lvlA < lvlB)) {
+                        const pA = (byArcana[raceA]||[]).find(p => (p.data.level??p.data.lvl??0) === lvlA);
+                        const pB = (byArcana[raceB]||[]).find(p => (p.data.level??p.data.lvl??0) === lvlB);
+                        if (!pA || !pB) continue;
+                        const key = pA.name <= pB.name ? `${pA.name}|${pB.name}` : `${pB.name}|${pA.name}`;
+                        if (!seen.has(key)) {
+                            seen.add(key);
+                            recipes.push([{name:pA.name,data:pA.data},{name:pB.name,data:pB.data}]);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     return recipes;
 }
 
@@ -1048,6 +1244,13 @@ function renderFusionResults(color) {
         </div>
         <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">✕</button>
     </div>`;
+
+    if (p.unlock) {
+        html += `<div class="unlock-box" style="margin:8px 0">
+            <div class="unlock-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+            <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
+        </div>`;
+    }
 
     if (!recipes || !recipes.length) {
         html += `<div class="empty-state" style="margin-top:24px">No fusion recipes found${!S.settings.showDlc?' (DLC off — some recipes hidden)':''}</div>`;

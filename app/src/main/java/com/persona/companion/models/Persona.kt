@@ -45,7 +45,8 @@ data class Persona(
     // Unlock requirements and special flags
     val unlock: String? = null,
     val episodeAigis: Boolean? = null,
-    val isDlc: Boolean? = null
+    val isDlc: Boolean? = null,
+    val fusion: String? = null  // "party", "accident", "special", or null
 ) {
     val weaknesses: List<String> get() {
         // P3 Reload format uses direct lists

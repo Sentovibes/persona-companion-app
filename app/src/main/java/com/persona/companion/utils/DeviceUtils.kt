@@ -4,7 +4,10 @@ import android.app.UiModeManager
 import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
@@ -148,12 +151,20 @@ fun rememberScreenSize(): ScreenSize {
 }
 
 /**
- * Composable to check if images should be loaded
+ * Composable to check if images should be loaded.
+ * Loads asynchronously on IO dispatcher to avoid blocking the main thread.
  */
 @Composable
 fun rememberShouldLoadImages(): Boolean {
     val context = LocalContext.current
-    return remember { DeviceUtils.shouldLoadImages(context) }
+    // Default to false until the IO check completes — avoids blocking composition
+    var result by remember { mutableStateOf(BuildConfig.INCLUDE_IMAGES) }
+    androidx.compose.runtime.LaunchedEffect(Unit) {
+        result = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            DeviceUtils.shouldLoadImages(context)
+        }
+    }
+    return result
 }
 
 /**

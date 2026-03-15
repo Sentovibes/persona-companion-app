@@ -35,40 +35,44 @@ fun FavoritesScreen(navController: NavController) {
     var selectedTab by remember { mutableStateOf(0) }
     val tabs = listOf("Personas", "Enemies")
     
-    // Load favorite personas
-    val favoritePersonaIds = remember { userPrefs.getFavoritePersonas() }
-    val favoritePersonas = remember(favoritePersonaIds) {
-        favoritePersonaIds.mapNotNull { id ->
-            // Parse ID format: "seriesId_gameId_personaName"
-            val parts = id.split("_", limit = 3)
-            if (parts.size == 3) {
-                val (seriesId, gameId, name) = parts
-                val game = SeriesData.findGame(seriesId, gameId)
-                game?.let {
-                    personaRepo.getPersonaByName(it.dataPath, name)?.let { persona ->
-                        Triple(seriesId, gameId, persona)
+    // Load favorite personas async
+    var favoritePersonas by remember { mutableStateOf<List<Triple<String, String, Persona>>>(emptyList()) }
+    LaunchedEffect(Unit) {
+        val ids = userPrefs.getFavoritePersonas()
+        favoritePersonas = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            ids.mapNotNull { id ->
+                val parts = id.split("_", limit = 3)
+                if (parts.size == 3) {
+                    val (seriesId, gameId, name) = parts
+                    val game = SeriesData.findGame(seriesId, gameId)
+                    game?.let {
+                        personaRepo.getPersonaByName(it.dataPath, name)?.let { persona ->
+                            Triple(seriesId, gameId, persona)
+                        }
                     }
-                }
-            } else null
+                } else null
+            }
         }
     }
-    
-    // Load favorite enemies
-    val favoriteEnemyIds = remember { userPrefs.getFavoriteEnemies() }
-    val favoriteEnemies = remember(favoriteEnemyIds) {
-        favoriteEnemyIds.mapNotNull { id ->
-            // Parse ID format: "seriesId_gameId_enemyName"
-            val parts = id.split("_", limit = 3)
-            if (parts.size == 3) {
-                val (seriesId, gameId, name) = parts
-                val game = SeriesData.findGame(seriesId, gameId)
-                game?.enemyPath?.let { enemyPath ->
-                    val enemies = JsonLoader.loadEnemies(context, enemyPath)
-                    enemies.find { it.name == name }?.let { enemy ->
-                        Triple(seriesId, gameId, enemy)
+
+    // Load favorite enemies async
+    var favoriteEnemies by remember { mutableStateOf<List<Triple<String, String, Enemy>>>(emptyList()) }
+    LaunchedEffect(Unit) {
+        val ids = userPrefs.getFavoriteEnemies()
+        favoriteEnemies = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            ids.mapNotNull { id ->
+                val parts = id.split("_", limit = 3)
+                if (parts.size == 3) {
+                    val (seriesId, gameId, name) = parts
+                    val game = SeriesData.findGame(seriesId, gameId)
+                    game?.enemyPath?.let { enemyPath ->
+                        val enemies = JsonLoader.loadEnemies(context, enemyPath)
+                        enemies.find { it.name == name }?.let { enemy ->
+                            Triple(seriesId, gameId, enemy)
+                        }
                     }
-                }
-            } else null
+                } else null
+            }
         }
     }
     

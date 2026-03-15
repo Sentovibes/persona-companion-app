@@ -134,6 +134,7 @@ fun PersonaListScreen(
                                         PersonaRow(
                                             persona     = persona,
                                             accentColor = series.color,
+                                            gameId      = gameId,
                                             onClick     = {
                                                 navController.navigate(
                                                     Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
@@ -151,6 +152,7 @@ fun PersonaListScreen(
                                     PersonaRow(
                                         persona     = persona,
                                         accentColor = series.color,
+                                        gameId      = gameId,
                                         onClick     = {
                                             navController.navigate(
                                                 Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
@@ -232,7 +234,7 @@ private fun ArcanaHeader(arcana: String, accentColor: Color) {
 }
 
 @Composable
-private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit, isCompact: Boolean = false) {
+private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = "", onClick: () -> Unit, isCompact: Boolean = false) {
     val context = LocalContext.current
     val shouldLoadImages = rememberShouldLoadImages()
     
@@ -249,7 +251,7 @@ private fun PersonaRow(persona: Persona, accentColor: Color, onClick: () -> Unit
         if (shouldLoadImages) {
             AsyncImage(
                 model = ImageRequest.Builder(context)
-                    .personaImage(context, "p5", persona.name) // TODO: Use actual game ID
+                    .personaImage(context, gameId, persona.name)
                     .crossfade(true)
                     .build(),
                 contentDescription = persona.name,

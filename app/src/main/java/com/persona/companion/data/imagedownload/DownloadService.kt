@@ -2,6 +2,7 @@ package com.persona.companion.data.imagedownload
 
 import android.content.Context
 import android.util.Log
+import com.persona.companion.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -61,9 +62,8 @@ class DownloadService(
                 return@withContext downloadZip(destinationFile, 0, onProgress)
             }
             
-            // Create connection with appropriate range header
+            // Create connection with appropriate range header (follows redirects)
             connection = createConnection(cdnUrl, if (shouldResume) resumeFrom else 0)
-            connection.connect()
             
             val responseCode = connection.responseCode
             Log.d(TAG, "Response code: $responseCode")
@@ -98,17 +98,11 @@ class DownloadService(
             } else {
                 contentLength
             }
-            
-            if (totalBytes <= 0) {
-                return@withContext Result.failure(
-                    Exception(DownloadError.NetworkError(
-                        "Invalid content length",
-                        IOException("Content-Length: $totalBytes")
-                    ).toUserMessage())
-                )
-            }
-            
-            Log.d(TAG, "Total bytes to download: $totalBytes, content length: $contentLength")
+
+            // If server doesn't provide Content-Length, use the configured size as estimate
+            val effectiveTotalBytes = if (totalBytes <= 0) BuildConfig.IMAGES_ZIP_SIZE else totalBytes
+
+            Log.d(TAG, "Total bytes to download: $effectiveTotalBytes, content length: $contentLength")
             
             // Open input stream from connection
             connection.inputStream.use { input ->
@@ -119,7 +113,7 @@ class DownloadService(
                     var bytesRead: Int
                     
                     // Report initial progress
-                    onProgress(bytesDownloaded, totalBytes)
+                    onProgress(bytesDownloaded, effectiveTotalBytes)
                     
                     // Read and write data in chunks
                     while (input.read(buffer).also { bytesRead = it } != -1) {
@@ -127,7 +121,7 @@ class DownloadService(
                         bytesDownloaded += bytesRead
                         
                         // Report progress
-                        onProgress(bytesDownloaded, totalBytes)
+                        onProgress(bytesDownloaded, effectiveTotalBytes)
                     }
                     
                     output.flush()
@@ -203,27 +197,44 @@ class DownloadService(
     
     /**
      * Creates an HTTP connection with appropriate headers and timeouts.
-     * 
+     * Follows redirects manually to handle HTTPS→HTTPS redirects correctly.
+     *
      * @param url The URL to connect to
      * @param rangeStart The byte position to start from (0 for full download)
      * @return Configured HttpURLConnection
      */
     private fun createConnection(url: String, rangeStart: Long): HttpURLConnection {
-        val connection = URL(url).openConnection() as HttpURLConnection
-        
-        // Set timeouts
-        connection.connectTimeout = CONNECTION_TIMEOUT_MS
-        connection.readTimeout = READ_TIMEOUT_MS
-        
-        // Set request method
-        connection.requestMethod = "GET"
-        
-        // Add range header if resuming
-        if (rangeStart > 0) {
-            connection.setRequestProperty("Range", "bytes=$rangeStart-")
-            Log.d(TAG, "Added Range header: bytes=$rangeStart-")
+        var currentUrl = url
+        var connection: HttpURLConnection
+        var redirectCount = 0
+        val maxRedirects = 10
+
+        while (true) {
+            connection = URL(currentUrl).openConnection() as HttpURLConnection
+            connection.connectTimeout = CONNECTION_TIMEOUT_MS
+            connection.readTimeout = READ_TIMEOUT_MS
+            connection.requestMethod = "GET"
+            connection.instanceFollowRedirects = false // handle manually
+
+            if (rangeStart > 0) {
+                connection.setRequestProperty("Range", "bytes=$rangeStart-")
+                Log.d(TAG, "Added Range header: bytes=$rangeStart-")
+            }
+
+            connection.connect()
+            val code = connection.responseCode
+            if (code in 300..399) {
+                val location = connection.getHeaderField("Location") ?: break
+                connection.disconnect()
+                currentUrl = location
+                redirectCount++
+                if (redirectCount > maxRedirects) break
+                Log.d(TAG, "Redirecting to: $location")
+            } else {
+                break
+            }
         }
-        
+
         return connection
     }
 }

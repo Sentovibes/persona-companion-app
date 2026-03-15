@@ -17,21 +17,19 @@ object ImageUtils {
      */
     fun loadImageFromAssets(context: Context, imagePath: String): Bitmap? {
         return try {
+            // Always check filesDir first (downloaded images)
+            val downloadedFile = File(context.filesDir, imagePath)
+            if (downloadedFile.exists()) {
+                return BitmapFactory.decodeFile(downloadedFile.absolutePath)
+            }
+            // Fallback: try assets (only works if images were bundled)
             if (BuildConfig.INCLUDE_IMAGES) {
-                // Images bundled in APK: Load from assets
                 val inputStream: InputStream = context.assets.open(imagePath)
                 val bitmap = BitmapFactory.decodeStream(inputStream)
                 inputStream.close()
                 bitmap
             } else {
-                // Images not bundled: Load from downloaded files
-                val downloadedFile = File(context.filesDir, imagePath)
-                if (downloadedFile.exists()) {
-                    BitmapFactory.decodeFile(downloadedFile.absolutePath)
-                } else {
-                    // No fallback - images must be downloaded
-                    null
-                }
+                null
             }
         } catch (e: Exception) {
             Log.d(TAG, "Image not found: $imagePath")

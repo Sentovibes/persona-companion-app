@@ -134,7 +134,7 @@ fun SettingsScreen(
             }
 
             item {
-                ImagesSettingsSection()
+                ImagesSettingsSection(vm = vm)
             }
             
             // Debug info button (only in debug builds)

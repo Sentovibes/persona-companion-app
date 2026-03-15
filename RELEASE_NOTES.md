@@ -1,3 +1,37 @@
+# Release Notes - v5.1.0
+
+## Bug Fix Release
+
+### Fusion Calculator
+- Fixed fusion accuracy across all 7 games — P3FES, P3P, P3R, P4, P4G, P5, P5R all verified against megaten-fusion-tool reference data
+- Fixed asymmetric fission table bug causing some recipes to be missed
+- Fixed same-arcana fusion logic
+- Fixed triangular chart handling for P3R, P5, P5R
+- Fixed element demon exclusion from ingredient and result pools
+- Added missing DLC personas for P5 (18) and P5R (25)
+- Added element demon entries to P5 and P5R special fusion data
+- Fixed P5 base fusion chart (was incorrectly using P5R chart)
+- P4G: 7 Hanged-arcana personas show more recipes than reference tool — confirmed as a data bug in the reference tool, our data is correct
+
+### Persona & Enemy Lists
+- Fixed name sort — clicking Name sort now works on first tap (was requiring two taps)
+- Fixed level sort — same double-tap issue resolved
+- Fixed persona image in list rows using wrong game ID (was hardcoded to P5)
+
+### Persona & Enemy Detail Screen
+- Fixed images not showing in detail screen after downloading image pack
+- Detail screen now uses the same Coil image loader as the list (consistent behaviour)
+- Fixed image loading running on wrong thread (could silently fail)
+
+### Always Dark Theme
+- Removed light mode — app always uses dark theme regardless of system setting
+
+---
+
+**Full Changelog**: https://github.com/Sentovibes/persona-companion-app/compare/v5.0.0...v5.1.0
+
+---
+
 # Release Notes - v5.0.0
 
 ## Major Release - Social Links, Confidants & Classroom Answers

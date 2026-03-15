@@ -1,18 +1,14 @@
 package com.persona.companion.ui.screens
 
-import android.graphics.Bitmap
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -20,13 +16,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import com.persona.companion.R
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
 import com.persona.companion.data.UserPreferences
@@ -38,9 +35,11 @@ import com.persona.companion.ui.components.ProfileImage
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
-import com.persona.companion.utils.ImageUtils
+import com.persona.companion.utils.personaImage
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberShouldLoadImages
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,10 +56,14 @@ fun PersonaDetailScreen(
     val deviceType = rememberDeviceType()
     val shouldLoadImages = rememberShouldLoadImages()
 
-    val persona = remember(personaName, game.dataPath) {
-        PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
+    var persona by remember { mutableStateOf<com.persona.companion.models.Persona?>(null) }
+
+    LaunchedEffect(personaName, game.dataPath) {
+        persona = withContext(kotlinx.coroutines.Dispatchers.IO) {
+            PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
+        }
     }
-    
+
     val personaId = persona?.let { FilterUtils.getPersonaId(seriesId, gameId, it) } ?: ""
     var isFavorite by remember { mutableStateOf(userPrefs.isFavoritePersona(personaId)) }
     var showFullImage by remember { mutableStateOf(false) }
@@ -83,11 +86,12 @@ fun PersonaDetailScreen(
                     }
                 },
                 actions = {
-                    if (persona != null) {
+                    val p = persona
+                    if (p != null) {
                         IconButton(onClick = {
                             com.persona.companion.utils.ShareUtils.sharePersona(
-                                context, 
-                                persona, 
+                                context,
+                                p,
                                 game.title
                             )
                         }) {
@@ -117,9 +121,10 @@ fun PersonaDetailScreen(
             )
         }
     ) { padding ->
-        if (persona == null) {
+        val p = persona
+        if (p == null) {
             Box(modifier = Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                Text("Persona not found.", color = TextSecondary)
+                CircularProgressIndicator()
             }
             return@Scaffold
         }
@@ -128,7 +133,7 @@ fun PersonaDetailScreen(
             modifier = Modifier.padding(padding),
             statsContent = {
                 PersonaStatsContent(
-                    persona = persona, 
+                    persona = p,
                     series = series,
                     gameId = gameId,
                     onImageClick = { showFullImage = true }
@@ -136,15 +141,15 @@ fun PersonaDetailScreen(
             },
             imageContent = {
                 if (shouldLoadImages) {
-                    PersonaImageDisplay(persona = persona, deviceType = deviceType, gameId = gameId)
+                    PersonaImageDisplay(persona = p, deviceType = deviceType, gameId = gameId)
                 }
             }
         )
-        
+
         // Show full-size image dialog when clicked (phone only)
         if (showFullImage && deviceType == DeviceType.PHONE) {
             FullImageDialog(
-                name = persona.name,
+                name = p.name,
                 isEnemy = false,
                 gameId = gameId,
                 onDismiss = { showFullImage = false }
@@ -188,17 +193,16 @@ private fun PersonaStatsContent(persona: Persona, series: PersonaSeries, gameId:
 @Composable
 private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType, gameId: String) {
     val context = LocalContext.current
-    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
-    
-    // Load image
-    LaunchedEffect(persona.name, gameId) {
-        val imagePath = ImageUtils.getImagePath(persona.name, isEnemy = false, gameId = gameId)
-        bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
+
+    val model = remember(persona.name, gameId) {
+        ImageRequest.Builder(context)
+            .personaImage(context, gameId, persona.name)
+            .crossfade(true)
+            .build()
     }
-    
+
     when (deviceType) {
         DeviceType.PHONE -> {
-            // Phone: Small circular profile image
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -206,56 +210,18 @@ private fun PersonaImageDisplay(persona: Persona, deviceType: DeviceType, gameId
                     .background(SurfaceCard),
                 contentAlignment = Alignment.Center
             ) {
-                ProfileImage(
-                    name = persona.name,
-                    isEnemy = false,
-                    size = 64,
-                    gameId = gameId
-                )
+                ProfileImage(name = persona.name, isEnemy = false, size = 64, gameId = gameId)
             }
         }
-        
         DeviceType.TABLET, DeviceType.TV, DeviceType.CAST -> {
-            // Tablet/TV: Full-size image that fits content
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                if (bitmap != null) {
-                    Image(
-                        bitmap = bitmap!!.asImageBitmap(),
-                        contentDescription = persona.name,
-                        modifier = Modifier.fillMaxSize(),
-                        contentScale = ContentScale.Fit
-                    )
-                } else {
-                    // Fallback if no image
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .clip(RoundedCornerShape(16.dp))
-                            .background(SurfaceCard),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Person,
-                                contentDescription = "No image",
-                                tint = TextSecondary.copy(alpha = 0.3f),
-                                modifier = Modifier.size(120.dp)
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Text(
-                                text = persona.name,
-                                style = MaterialTheme.typography.headlineMedium,
-                                color = TextSecondary
-                            )
-                        }
-                    }
-                }
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                AsyncImage(
+                    model = model,
+                    contentDescription = persona.name,
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Fit,
+                    error = androidx.compose.ui.res.painterResource(R.drawable.placeholder_persona)
+                )
             }
         }
     }

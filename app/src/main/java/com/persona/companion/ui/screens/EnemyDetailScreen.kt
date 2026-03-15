@@ -8,6 +8,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import com.persona.companion.data.SeriesData
+import com.persona.companion.utils.JsonLoader
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
@@ -46,6 +50,37 @@ import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberShouldLoadImages
 import com.persona.companion.utils.rememberTextScaleFactor
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun EnemyDetailScreen(
+    seriesId: String,
+    gameId: String,
+    enemyName: String,
+    onBack: () -> Unit
+) {
+    val context = LocalContext.current
+    var enemy by remember { mutableStateOf<Enemy?>(null) }
+
+    LaunchedEffect(seriesId, gameId, enemyName) {
+        enemy = withContext(Dispatchers.IO) {
+            val game = SeriesData.findGame(seriesId, gameId)
+            val enemies = if (game?.enemyPath != null)
+                JsonLoader.loadEnemies(context, game.enemyPath)
+            else emptyList()
+            enemies.find { it.name == enemyName }
+        }
+    }
+
+    if (enemy != null) {
+        EnemyDetailScreen(enemy = enemy!!, gameId = gameId, onBack = onBack)
+    } else {
+        // Loading state
+        Box(modifier = androidx.compose.ui.Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) {
+            CircularProgressIndicator()
+        }
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -499,12 +534,13 @@ private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType, gameId: 
     val context = LocalContext.current
     var bitmap by remember { mutableStateOf<Bitmap?>(null) }
     
-    // Load image
+    // Load image on IO dispatcher
     LaunchedEffect(enemy.name, gameId) {
-        // Use persona_name for P5/P5R enemies, otherwise use name
-        val nameForImage = enemy.persona_name ?: enemy.name
-        val imagePath = ImageUtils.getImagePath(nameForImage, isEnemy = true, gameId = gameId)
-        bitmap = ImageUtils.loadImageFromAssets(context, imagePath)
+        bitmap = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            val nameForImage = enemy.persona_name ?: enemy.name
+            val imagePath = ImageUtils.getImagePath(nameForImage, isEnemy = true, gameId = gameId)
+            ImageUtils.loadImageFromAssets(context, imagePath)
+        }
     }
     
     when (deviceType) {

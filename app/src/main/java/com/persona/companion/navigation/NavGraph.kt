@@ -221,24 +221,12 @@ fun NavGraph(navController: NavHostController) {
             val seriesId  = back.arguments?.getString("seriesId")  ?: return@composable
             val gameId    = back.arguments?.getString("gameId")    ?: return@composable
             val enemyName = back.arguments?.getString("enemyName") ?: return@composable
-            
-            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
-            val enemies = if (game?.enemyPath != null) {
-                com.persona.companion.utils.JsonLoader.loadEnemies(
-                    androidx.compose.ui.platform.LocalContext.current,
-                    game.enemyPath
-                )
-            } else emptyList()
-            
-            val enemy = enemies.find { it.name.replace("/", "|") == enemyName }
-            
-            if (enemy != null) {
-                EnemyDetailScreen(
-                    enemy = enemy,
-                    gameId = gameId,
-                    onBack = { navController.popBackStack() }
-                )
-            }
+            EnemyDetailScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                enemyName = enemyName.replace("|", "/"),
+                onBack = { navController.popBackStack() }
+            )
         }
         
         composable(

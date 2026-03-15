@@ -30,13 +30,12 @@ fun ImageRequest.Builder.personaImage(
     name: String
 ): ImageRequest.Builder {
     val imagePath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
+    // Check downloaded files first, then fall back to assets
     val downloadedFile = File(context.filesDir, imagePath)
-    
-    // Simple: if file exists, load it. Otherwise, use placeholder.
-    return if (downloadedFile.exists()) {
-        this.data(downloadedFile)
-    } else {
-        this.data(R.drawable.placeholder_persona)
+    return when {
+        downloadedFile.exists() -> this.data(downloadedFile)
+        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$imagePath")
+        else -> this.data(R.drawable.placeholder_persona)
     }
 }
 
@@ -55,12 +54,10 @@ fun ImageRequest.Builder.enemyImage(
 ): ImageRequest.Builder {
     val imagePath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
     val downloadedFile = File(context.filesDir, imagePath)
-    
-    // Simple: if file exists, load it. Otherwise, use placeholder.
-    return if (downloadedFile.exists()) {
-        this.data(downloadedFile)
-    } else {
-        this.data(R.drawable.placeholder_enemy)
+    return when {
+        downloadedFile.exists() -> this.data(downloadedFile)
+        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$imagePath")
+        else -> this.data(R.drawable.placeholder_enemy)
     }
 }
 

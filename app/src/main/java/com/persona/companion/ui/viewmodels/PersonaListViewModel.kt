@@ -86,7 +86,7 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
                 val debug = "Path: $dataPath\nAigis Path: $aigisDataPath\nLoaded: ${all.size} personas\nFiltered: ${filtered.size} personas\nFirst 3: ${filtered.take(3).map { it.name }}"
                 _state.update { it.copy(
                     personas = filtered, 
-                    filtered = applyFiltersAndSort(filtered, it.filters, it.favorites, it.query, it.seriesId, it.gameId), 
+                    filtered = applyFiltersAndSort(filtered, it.filters, it.favorites, it.query, it.seriesId, it.gameId, it.sortBy), 
                     isLoading = false, 
                     debugInfo = debug
                 ) }
@@ -108,7 +108,7 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
 
     fun setSortOption(sortBy: SortOption) {
         _state.update { current ->
-            current.copy(sortBy = sortBy, filtered = applyFiltersAndSort(current.personas, current.filters, current.favorites, current.query, current.seriesId, current.gameId))
+            current.copy(sortBy = sortBy, filtered = applyFiltersAndSort(current.personas, current.filters, current.favorites, current.query, current.seriesId, current.gameId, sortBy))
         }
     }
     
@@ -137,9 +137,9 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
         favorites: Set<String>,
         query: String,
         seriesId: String,
-        gameId: String
+        gameId: String,
+        sortBy: SortOption = _state.value.sortBy
     ): List<Persona> {
-        // First apply search query
         var filtered = if (query.isBlank()) {
             personas
         } else {
@@ -150,8 +150,16 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
             }
         }
         
-        // Then apply filters and sort
-        filtered = FilterUtils.filterAndSortPersonas(filtered, filters, favorites, seriesId, gameId)
+        // Map ViewModel SortOption → PersonaSortOption so the sort bar chips work
+        val sortedFilters = filters.copy(
+            sortOption = when (sortBy) {
+                SortOption.LEVEL  -> com.persona.companion.models.PersonaSortOption.LEVEL_ASC
+                SortOption.NAME   -> com.persona.companion.models.PersonaSortOption.NAME_ASC
+                SortOption.ARCANA -> com.persona.companion.models.PersonaSortOption.ARCANA
+            }
+        )
+
+        filtered = FilterUtils.filterAndSortPersonas(filtered, sortedFilters, favorites, seriesId, gameId)
         
         return filtered
     }
