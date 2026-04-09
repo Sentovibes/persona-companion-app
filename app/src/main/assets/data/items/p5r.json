@@ -1,0 +1,3231 @@
+{
+  "persona5RoyalItems": {
+    "consumables": {
+      "hpRecovery": [
+        {
+          "name": "Medicine",
+          "buy": "500",
+          "effect": "Restores 50 HP to 1 ally.",
+          "location": "Takemi Medical Clinic, Chests",
+          "sell": ""
+        },
+        {
+          "name": "Ointment",
+          "buy": "1200",
+          "effect": "Restores 100 HP to 1 ally.",
+          "location": "Takemi Medical Clinic, Chests",
+          "sell": ""
+        },
+        {
+          "name": "Macca Leaf",
+          "buy": "2400",
+          "effect": "Restores 200 HP to 1 ally.",
+          "location": "Takemi Medical Clinic, Chests",
+          "sell": ""
+        },
+        {
+          "name": "Life Stone",
+          "sell": "200",
+          "effect": "Restores 30% HP to 1 ally.",
+          "location": "Mementos, Palaces",
+          "buy": ""
+        },
+        {
+          "name": "Bead",
+          "sell": "1000",
+          "effect": "Fully restores HP to 1 ally.",
+          "location": "Chests, Negotiations",
+          "buy": ""
+        },
+        {
+          "name": "Value Medicine",
+          "buy": "1500",
+          "effect": "Restores 50 HP to party.",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Medical Gear",
+          "buy": "3600",
+          "effect": "Restores 100 HP to party.",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Macca Balm",
+          "buy": "7200",
+          "effect": "Restores 200 HP to party.",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Bead Chain",
+          "sell": "3000",
+          "effect": "Fully restores HP to party.",
+          "location": "Chests, Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Soma",
+          "sell": "5000",
+          "effect": "Fully restores HP and SP to party.",
+          "location": "Jose's Shop, Rare Chests",
+          "buy": ""
+        },
+        {
+          "name": "Tonic",
+          "buy": "100",
+          "effect": "Restores 50 HP to 1 ally. Low side effect chance.",
+          "location": "Vending Machines",
+          "sell": ""
+        },
+        {
+          "name": "Muscle Drink",
+          "buy": "800",
+          "effect": "Restores 100 HP to 1 ally. May cause side effect.",
+          "location": "Vending Machines, Shibuya",
+          "sell": ""
+        },
+        {
+          "name": "Odd Morsel",
+          "sell": "10",
+          "effect": "Restores 100 HP to 1 ally. Causes status ailment.",
+          "location": "Mementos",
+          "buy": ""
+        },
+        {
+          "name": "Rancid Gravy",
+          "sell": "50",
+          "effect": "Restores 200 HP to 1 ally. Causes status ailment.",
+          "location": "Mementos",
+          "buy": ""
+        },
+        {
+          "name": "Big Bang Burger",
+          "buy": "500",
+          "effect": "Restores 50 HP to 1 ally.",
+          "location": "Big Bang Burger",
+          "sell": ""
+        },
+        {
+          "name": "Earth Burger",
+          "buy": "1200",
+          "effect": "Restores 100 HP to 1 ally.",
+          "location": "Big Bang Burger",
+          "sell": ""
+        },
+        {
+          "name": "Mars Burger",
+          "buy": "2500",
+          "effect": "Restores 200 HP to 1 ally.",
+          "location": "Big Bang Burger",
+          "sell": ""
+        },
+        {
+          "name": "Saturn Burger",
+          "buy": "5000",
+          "effect": "Fully restores HP to 1 ally.",
+          "location": "Big Bang Burger",
+          "sell": ""
+        },
+        {
+          "name": "Jagariko",
+          "buy": "150",
+          "effect": "Restores 20 HP to 1 ally.",
+          "location": "Convenience Store",
+          "sell": ""
+        },
+        {
+          "name": "Super Choco",
+          "buy": "200",
+          "effect": "Restores 30 HP to 1 ally.",
+          "location": "Convenience Store",
+          "sell": ""
+        },
+        {
+          "name": "Kichijoji Menchi Katsu",
+          "buy": "200",
+          "effect": "Restores 50 HP to 1 ally.",
+          "location": "Kichijoji Meat Shop",
+          "sell": ""
+        },
+        {
+          "name": "Special Kichijoji Menchi Katsu",
+          "buy": "400",
+          "effect": "Restores 100 HP to 1 ally.",
+          "location": "Kichijoji Meat Shop",
+          "sell": ""
+        },
+        {
+          "name": "Strawberry Daifuku",
+          "buy": "800",
+          "effect": "Restores 20 HP to party.",
+          "location": "Kichijoji Sweets Shop",
+          "sell": ""
+        },
+        {
+          "name": "Mitarashi Dango",
+          "buy": "1500",
+          "effect": "Restores 50 HP to party.",
+          "location": "Kichijoji Sweets Shop",
+          "sell": ""
+        }
+      ],
+      "spRecovery": [
+        {
+          "name": "Soul Drop",
+          "sell": "200",
+          "effect": "Restores 10 SP to 1 ally.",
+          "location": "Chests, Palaces",
+          "buy": ""
+        },
+        {
+          "name": "Snuff Soul",
+          "sell": "1000",
+          "effect": "Restores 50 SP to 1 ally.",
+          "location": "Chests, Negotiations",
+          "buy": ""
+        },
+        {
+          "name": "Chewing Soul",
+          "sell": "2000",
+          "effect": "Restores 100 SP to 1 ally.",
+          "location": "Shady Commodities, Chests",
+          "buy": ""
+        },
+        {
+          "name": "Leblanc Coffee",
+          "effect": "Restores 30 SP to 1 ally.",
+          "location": "Brewed at Cafe Leblanc",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Leblanc Coffee (Master)",
+          "effect": "Restores 100 SP to 1 ally.",
+          "location": "Brewed at Cafe Leblanc (Hierophant Max)",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Leblanc Curry",
+          "effect": "Restores 20 SP to party.",
+          "location": "Cooked at Cafe Leblanc",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Leblanc Curry (Master)",
+          "effect": "Restores 100 SP to party.",
+          "location": "Cooked at Cafe Leblanc (Hierophant Max)",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Moonlight Carrot",
+          "effect": "Fully restores SP to 1 ally.",
+          "location": "Grown on Shujin Rooftop (Empress)",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sun Tomato",
+          "effect": "Fully restores SP to party.",
+          "location": "Grown on Shujin Rooftop (Empress)",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Arginade",
+          "buy": "100",
+          "effect": "Restores 5 SP to 1 ally.",
+          "location": "Vending Machines",
+          "sell": ""
+        },
+        {
+          "name": "Water of Rebirth",
+          "buy": "100",
+          "effect": "Restores 5 SP to 1 ally.",
+          "location": "Vending Machines",
+          "sell": ""
+        },
+        {
+          "name": "Placenta",
+          "buy": "300",
+          "effect": "Restores 10 SP to 1 ally.",
+          "location": "Vending Machines (Akihabara)",
+          "sell": ""
+        },
+        {
+          "name": "Udagawa Water",
+          "buy": "500",
+          "effect": "Restores 20 SP to 1 ally.",
+          "location": "Vending Machines (Shibuya)",
+          "sell": ""
+        },
+        {
+          "name": "Melon Pan",
+          "buy": "1000",
+          "effect": "Restores 10 SP to party.",
+          "location": "Shujin Academy Store",
+          "sell": ""
+        }
+      ],
+      "revival": [
+        {
+          "name": "Revival Bead",
+          "buy": "1000",
+          "effect": "Revives 1 ally with 50% HP.",
+          "location": "Takemi Medical Clinic, Chests",
+          "sell": ""
+        },
+        {
+          "name": "Balm of Life",
+          "buy": "4000",
+          "effect": "Revives 1 ally with full HP.",
+          "location": "Takemi Medical Clinic, Chests",
+          "sell": ""
+        },
+        {
+          "name": "Recarm Maker",
+          "effect": "Revives 1 ally with 50% HP.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Samarecarm Maker",
+          "effect": "Revives 1 ally with full HP.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Earth Bean",
+          "effect": "Revives party with full HP.",
+          "location": "Grown on Shujin Rooftop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Revival Water",
+          "sell": "500",
+          "effect": "Revives 1 ally with 50% HP.",
+          "location": "Jose's Shop",
+          "buy": ""
+        },
+        {
+          "name": "Drops of Life",
+          "sell": "2000",
+          "effect": "Revives 1 ally with full HP.",
+          "location": "Jose's Shop",
+          "buy": ""
+        }
+      ],
+      "ailmentRecovery": [
+        {
+          "name": "Relax Gel",
+          "buy": "800",
+          "effect": "Cures Confusion, Fear, Despair, Rage, Brainwash (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Alert Capsule",
+          "buy": "800",
+          "effect": "Cures Sleep, Dizzy, Forget, Hunger (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Cure Vial",
+          "buy": "800",
+          "effect": "Cures Poison, Burn, Freeze, Shock (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Hiranya",
+          "sell": "500",
+          "effect": "Cures all non-special ailments for 1 ally.",
+          "location": "Chests",
+          "buy": ""
+        },
+        {
+          "name": "Amrita Drop",
+          "sell": "1500",
+          "effect": "Cures all non-special ailments for 1 ally.",
+          "location": "Chests, Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Amrita Shower",
+          "sell": "3000",
+          "effect": "Cures all non-special ailments for party.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Nervousness Dispeller",
+          "buy": "300",
+          "effect": "Cures Despair (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Caffeine Patch",
+          "buy": "300",
+          "effect": "Cures Sleep (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        },
+        {
+          "name": "Cooling Spray",
+          "buy": "300",
+          "effect": "Cures Burn (1 ally).",
+          "location": "Takemi Medical Clinic",
+          "sell": ""
+        }
+      ],
+      "battleItemsAndTools": [
+        {
+          "name": "Lockpick",
+          "effect": "Opens locked chests.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Eternal Lockpick",
+          "effect": "Opens locked chests. Never breaks.",
+          "location": "Crafted at Desk (Magician Rank 6)",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Goho-M",
+          "effect": "Return to the Palace entrance.",
+          "location": "Crafted at Desk, Chests",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Smokescreen",
+          "effect": "Guarantees escape from battle.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Spotlight",
+          "effect": "Draws enemy attacks to 1 ally.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Limelight",
+          "effect": "Draws enemy attacks to 1 ally. Lasts longer.",
+          "location": "Crafted at Desk",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fire Magatama",
+          "sell": "100",
+          "effect": "50 Fire damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Ice Magatama",
+          "sell": "100",
+          "effect": "50 Ice damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Wind Magatama",
+          "sell": "100",
+          "effect": "50 Wind damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Elec Magatama",
+          "sell": "100",
+          "effect": "50 Elec damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Psy Magatama",
+          "sell": "100",
+          "effect": "50 Psy damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Nuke Magatama",
+          "sell": "100",
+          "effect": "50 Nuke damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Bless Magatama",
+          "sell": "100",
+          "effect": "50 Bless damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Curse Magatama",
+          "sell": "100",
+          "effect": "50 Curse damage to 1 foe.",
+          "location": "Chests, Crafted",
+          "buy": ""
+        },
+        {
+          "name": "Megido Bomb",
+          "sell": "500",
+          "effect": "100 Almighty damage to all foes.",
+          "location": "Crafted at Desk",
+          "buy": ""
+        },
+        {
+          "name": "Kagutsuchi Picatrix",
+          "sell": "300",
+          "effect": "150 Fire damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Niflheim Picatrix",
+          "sell": "300",
+          "effect": "150 Ice damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Thor Picatrix",
+          "sell": "300",
+          "effect": "150 Elec damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Garuda Picatrix",
+          "sell": "300",
+          "effect": "150 Wind damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Shiva Picatrix",
+          "sell": "300",
+          "effect": "150 Psy damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Vishnu Picatrix",
+          "sell": "300",
+          "effect": "150 Nuke damage to all foes.",
+          "location": "Shady Commodities",
+          "buy": ""
+        },
+        {
+          "name": "Physical Ointment",
+          "sell": "500",
+          "effect": "Repels 1 Physical attack.",
+          "location": "Takemi Medical Clinic",
+          "buy": ""
+        },
+        {
+          "name": "Magic Ointment",
+          "sell": "500",
+          "effect": "Repels 1 Magic attack.",
+          "location": "Takemi Medical Clinic",
+          "buy": ""
+        }
+      ]
+    },
+    "skillCards": {
+      "physicalAndGun": [
+        {
+          "name": "Lunge",
+          "location": "Electric Chair (Bicorn)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Cleave",
+          "location": "Electric Chair (Arsene)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Giant Slice",
+          "location": "Electric Chair (Dakini)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Power Slash",
+          "location": "Electric Chair (Archangel)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Assault Dive",
+          "location": "Electric Chair (Take-Minakata)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megaton Raid",
+          "location": "Electric Chair (Cerberus)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sword Dance",
+          "location": "Electric Chair (Michael)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Brave Blade",
+          "location": "Electric Chair (Futsunushi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "God's Hand",
+          "location": "Electric Chair (Zaou-Gongen)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vajra Blast",
+          "location": "Electric Chair (Kin-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vicious Strike",
+          "location": "Electric Chair (Yaksini)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Heat Wave",
+          "location": "Electric Chair (Okuninushi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Deathbound",
+          "location": "Electric Chair (Pale Rider)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agneyastra",
+          "location": "Electric Chair (Ardha)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vorpal Blade",
+          "location": "Electric Chair (Siegfried)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Snap",
+          "location": "Electric Chair (Obariyon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Double Shoot",
+          "location": "Electric Chair (Matador)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Triple Down",
+          "location": "Electric Chair (White Rider)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "One-shot Kill",
+          "location": "Electric Chair (Seth)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Riot Gun",
+          "location": "Electric Chair (Vishnu)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "magic": [
+        {
+          "name": "Agi",
+          "location": "Electric Chair (Jack-o'-Lantern)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agilao",
+          "location": "Electric Chair (Decarabia)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agidyne",
+          "location": "Electric Chair (Cerberus)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Inferno",
+          "location": "Electric Chair (Surt)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragi",
+          "location": "Electric Chair (Hua Po)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragion",
+          "location": "Electric Chair (Belial)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragidyne",
+          "location": "Electric Chair (Mara)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Blazing Hell",
+          "location": "Electric Chair (Mada)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufu",
+          "location": "Electric Chair (Apsaras)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufula",
+          "location": "Electric Chair (Belphegor)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufudyne",
+          "location": "Electric Chair (Emperor Frost)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Diamond Dust",
+          "location": "Electric Chair (Alilat)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufu",
+          "location": "Electric Chair (Sui-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufula",
+          "location": "Electric Chair (Byakko)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufudyne",
+          "location": "Electric Chair (Gabriel)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Age",
+          "location": "Electric Chair (Mother Harlot)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Zio",
+          "location": "Electric Chair (Agathion)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Zionga",
+          "location": "Electric Chair (Isis)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ziodyne",
+          "location": "Electric Chair (Raja Naga)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Thunder Reign",
+          "location": "Electric Chair (Odin)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mazio",
+          "location": "Electric Chair (Shiisaa)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mazionga",
+          "location": "Electric Chair (Mothman)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maziodyne",
+          "location": "Electric Chair (Thor)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wild Thunder",
+          "location": "Electric Chair (Odin - Alarm)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garu",
+          "location": "Electric Chair (Bicorn)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garula",
+          "location": "Electric Chair (Sandman)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garudyne",
+          "location": "Electric Chair (Garuda)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Panta Rhei",
+          "location": "Electric Chair (Baal)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magaru",
+          "location": "Electric Chair (Sudama)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magarula",
+          "location": "Electric Chair (Kurama Tengu)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magarudyne",
+          "location": "Electric Chair (Quetzalcoatl)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vacuum Wave",
+          "location": "Electric Chair (Vishnu - Alarm)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psi",
+          "location": "Electric Chair (Kodama)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psio",
+          "location": "Electric Chair (Leanan Sidhe)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psiodyne",
+          "location": "Electric Chair (Parvati)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psycho Force",
+          "location": "Electric Chair (Shiva)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mapsi",
+          "location": "Electric Chair (Shiki-Ouji)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mapsio",
+          "location": "Electric Chair (Kaiwan)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mapsiodyne",
+          "location": "Electric Chair (Forneus)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psycho Blast",
+          "location": "Electric Chair (Shiva - Alarm)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Frei",
+          "location": "Electric Chair (Makami)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Freila",
+          "location": "Electric Chair (Thoth)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Freidyne",
+          "location": "Electric Chair (Titania)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Cosmic Flare",
+          "location": "Electric Chair (Michael)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mafrei",
+          "location": "Electric Chair (Mithras)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mafreila",
+          "location": "Electric Chair (Mithra)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mafreidyne",
+          "location": "Electric Chair (Bishamonten)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Kouha",
+          "location": "Electric Chair (Angel)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Kougaon",
+          "location": "Electric Chair (Horus)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mahamaon",
+          "location": "Electric Chair (Melchizedek)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Eiha",
+          "location": "Electric Chair (Slime)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Eigaon",
+          "location": "Electric Chair (Nebiros)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mamudoon",
+          "location": "Electric Chair (Alice)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megido",
+          "location": "Electric Chair (Thoth)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megidola",
+          "location": "Electric Chair (Pale Rider)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megidolaon",
+          "location": "Electric Chair (Mot)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "supportAndRecovery": [
+        {
+          "name": "Dia",
+          "location": "Electric Chair (Pixie)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Diarama",
+          "location": "Electric Chair (High Pixie)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Diarahan",
+          "location": "Electric Chair (Sarasvati)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Media",
+          "location": "Electric Chair (Nigi Mitama)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mediarama",
+          "location": "Electric Chair (Kikuri-Hime)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mediarahan",
+          "location": "Electric Chair (Titania)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Salvation",
+          "location": "Electric Chair (Ishtar)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Amrita Drop",
+          "location": "Electric Chair (Scathach)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Amrita Shower",
+          "location": "Electric Chair (Lakshmi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Recarm",
+          "location": "Electric Chair (Leanan Sidhe)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Samarecarm",
+          "location": "Electric Chair (Norn)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tarukaja",
+          "location": "Electric Chair (Eligor)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rakukaja",
+          "location": "Electric Chair (Kin-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sukukaja",
+          "location": "Electric Chair (Kelpie)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Matarukaja",
+          "location": "Electric Chair (Ose)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Marakukaja",
+          "location": "Electric Chair (Kushinada)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Masukukaja",
+          "location": "Electric Chair (Kurama Tengu)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tarunda",
+          "location": "Electric Chair (Slime)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rakunda",
+          "location": "Electric Chair (Koropokguru)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sukunda",
+          "location": "Electric Chair (Obariyon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Matarunda",
+          "location": "Electric Chair (Baphomet)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Marakunda",
+          "location": "Electric Chair (Orobas)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Masukunda",
+          "location": "Electric Chair (Mandrake)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dekaja",
+          "location": "Electric Chair (Mokoi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dekunda",
+          "location": "Electric Chair (Angel)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tetrakarn",
+          "location": "Electric Chair (Bishamonten)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Makarakarn",
+          "location": "Electric Chair (Abaddon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Charge",
+          "location": "Electric Chair (Cu Chulainn)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Concentrate",
+          "location": "Electric Chair (Mot - Alarm)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "passive": [
+        {
+          "name": "Fire Boost",
+          "location": "Electric Chair (Decarabia)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fire Amp",
+          "location": "Electric Chair (Mada)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Boost",
+          "location": "Electric Chair (Lachesis)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Amp",
+          "location": "Electric Chair (King Frost)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Elec Boost",
+          "location": "Electric Chair (Naga)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Elec Amp",
+          "location": "Electric Chair (Oberon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wind Boost",
+          "location": "Electric Chair (Fuu-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wind Amp",
+          "location": "Electric Chair (Garuda)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psy Boost",
+          "location": "Electric Chair (Okuninushi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Psy Amp",
+          "location": "Electric Chair (Mara)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Nuke Boost",
+          "location": "Electric Chair (Phoenix)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Nuke Amp",
+          "location": "Electric Chair (Bishamonten)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bless Boost",
+          "location": "Electric Chair (Principality)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bless Amp",
+          "location": "Electric Chair (Power)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Curse Boost",
+          "location": "Electric Chair (Nue)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Curse Amp",
+          "location": "Electric Chair (Tsiyomi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Fire / Ice / Elec / Wind",
+          "location": "Electric Chair (Various)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Fire / Ice / Elec / Wind",
+          "location": "Electric Chair (Various)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Physical",
+          "location": "Electric Chair (Girimehkala)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Drain Physical",
+          "location": "Electric Chair (Abaddon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Arms Master",
+          "location": "Electric Chair (Tsiyomi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Spell Master",
+          "location": "Electric Chair (Kohryu)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ali Dance",
+          "location": "Electric Chair (Macabre)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Angelic Grace",
+          "location": "Electric Chair (Sandalphon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Apt Pupil",
+          "location": "Electric Chair (Sudama)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Enduring Soul",
+          "location": "Electric Chair (Attis)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Firm Stance",
+          "location": "Electric Chair (Ongyo-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Insta-Heal",
+          "location": "Electric Chair (Messiah)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 1",
+          "location": "Electric Chair (Clotho)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 2",
+          "location": "Electric Chair (Barong)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 3",
+          "location": "Electric Chair (Satan)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 1",
+          "location": "Electric Chair (Kin-Ki)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 2",
+          "location": "Electric Chair (Hecatoncheires)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 3",
+          "location": "Electric Chair (Quetzalcoatl)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Victory Cry",
+          "location": "Electric Chair (Izanagi-no-Okami Picaro)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ]
+    },
+    "essentials": {
+      "gifts": [
+        {
+          "name": "Heart Ring",
+          "buy": "88000",
+          "effect": "A romantic gift. +3 Confidant points (Romance).",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Heart Necklace",
+          "buy": "68000",
+          "effect": "A romantic gift. +3 Confidant points (Romance).",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Rose Bouquet",
+          "buy": "2400",
+          "effect": "A romantic gift. +3 Confidant points (Romance).",
+          "location": "Shinjuku",
+          "sell": ""
+        },
+        {
+          "name": "KGB Vest",
+          "buy": "4800",
+          "effect": "A practical gift. Best for Makoto.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Omni-Vitamin",
+          "buy": "4500",
+          "effect": "A healthy gift. Best for Takemi.",
+          "location": "Shibuya Discount Store",
+          "sell": ""
+        },
+        {
+          "name": "Truffles",
+          "buy": "2800",
+          "effect": "A sweet gift. Best for Ann/Haru.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Face Beautifier",
+          "buy": "9800",
+          "effect": "A cosmetic gift. Best for Ann/Kawakami.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Uji Matcha Flan",
+          "buy": "2400",
+          "effect": "A sweet gift. Best for Ann/Haru.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Castella",
+          "buy": "1500",
+          "effect": "A sweet gift. Best for Ann.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Sakura Fan",
+          "buy": "4800",
+          "effect": "An elegant gift. Best for Hifumi.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Motorbike Figure",
+          "buy": "3600",
+          "effect": "A hobbyist gift. Best for Makoto.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Robot Vacuum",
+          "buy": "44800",
+          "effect": "A practical gift. Best for Kawakami.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Black Mug",
+          "buy": "1800",
+          "effect": "A practical gift. Best for Takemi/Kawakami.",
+          "location": "Shinjuku",
+          "sell": ""
+        },
+        {
+          "name": "Designer Perfume",
+          "buy": "7800",
+          "effect": "An elegant gift. Best for Ann/Kawakami.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "Crimson Lipstick",
+          "buy": "6000",
+          "effect": "A cosmetic gift. Best for Ann.",
+          "location": "Underground Mall",
+          "sell": ""
+        },
+        {
+          "name": "48-Sided Rubik's Cube",
+          "buy": "3200",
+          "effect": "A puzzle gift. Best for Futaba.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Star Mirror",
+          "buy": "4000",
+          "effect": "A cosmetic gift. Best for Ann/Kawakami.",
+          "location": "Shinjuku",
+          "sell": ""
+        },
+        {
+          "name": "Super Noisy Alarm Clock",
+          "buy": "12000",
+          "effect": "A practical gift. Best for Kawakami.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Local Mascot Set",
+          "buy": "3600",
+          "effect": "A hobbyist gift. Best for Futaba.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Katana Keychain",
+          "buy": "3000",
+          "effect": "A hobbyist gift. Best for Yusuke.",
+          "location": "Akihabara",
+          "sell": ""
+        },
+        {
+          "name": "Silver Bangle",
+          "buy": "39800",
+          "effect": "An elegant gift. Best for Makoto/Ann.",
+          "location": "Shinjuku",
+          "sell": ""
+        },
+        {
+          "name": "All-Purpose Vitamins",
+          "buy": "4500",
+          "effect": "A healthy gift. Best for Takemi.",
+          "location": "Shibuya",
+          "sell": ""
+        }
+      ],
+      "books": [
+        {
+          "name": "Yoncha Wanderer",
+          "buy": "1800",
+          "effect": "Unlocks Yongen-Jaya spots.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Vague",
+          "buy": "1800",
+          "effect": "Unlocks Harajuku.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Nightlife Hotspots",
+          "buy": "1800",
+          "effect": "Unlocks Seaside Park.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Fishpond Spotter",
+          "buy": "1800",
+          "effect": "Unlocks Ichigaya.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Ghost Encounters",
+          "buy": "1800",
+          "effect": "Unlocks Maihama.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Theme Park Escapes",
+          "buy": "1800",
+          "effect": "Unlocks Destinyland.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Tokyo Shrines",
+          "buy": "1800",
+          "effect": "Unlocks Meiji Shrine.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Museum of Stars",
+          "buy": "1800",
+          "effect": "Unlocks Ueno.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Must-Visits",
+          "buy": "1800",
+          "effect": "Unlocks Asakusa.",
+          "location": "Shibuya Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Speed Reading",
+          "effect": "Read books twice as fast.",
+          "location": "Shujin Academy Library",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Essence of Fishing",
+          "buy": "2800",
+          "effect": "Improves fishing proficiency.",
+          "location": "Shinjuku Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Batting Science",
+          "buy": "2800",
+          "effect": "Use Third Eye at the batting cages.",
+          "location": "Shinjuku Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Game Secrets",
+          "buy": "2800",
+          "effect": "Makes playing retro games easier.",
+          "location": "Shinjuku Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Flowerpedia",
+          "buy": "2800",
+          "effect": "Learn flower language for the flower shop job.",
+          "location": "Shinjuku Bookstore",
+          "sell": ""
+        },
+        {
+          "name": "Billiards Book",
+          "effect": "Improves billiards technical shots.",
+          "location": "Kichijoji Sports Store",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Darts Book",
+          "effect": "Improves darts technical throws.",
+          "location": "Kichijoji Sports Store",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "dvdsAndGames": [
+        {
+          "name": "Bubbly Hills Cop",
+          "effect": "Raises Charm.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "ICU",
+          "effect": "Raises Kindness.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Running Dead",
+          "effect": "Raises Courage.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Not-so-hot Betsy",
+          "effect": "Raises Charm.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "X Fold",
+          "effect": "Raises Courage.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Guy MacGyver",
+          "effect": "Raises Proficiency.",
+          "location": "Shibuya Rental Shop",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Star Forneus",
+          "buy": "4800",
+          "effect": "Raises Courage. Video Game.",
+          "location": "Akihabara Retro Game Shop",
+          "sell": ""
+        },
+        {
+          "name": "Punch Ouch",
+          "buy": "4800",
+          "effect": "Raises Charm. Video Game.",
+          "location": "Akihabara Retro Game Shop",
+          "sell": ""
+        },
+        {
+          "name": "Train of Life",
+          "buy": "4800",
+          "effect": "Raises Kindness. Video Game.",
+          "location": "Akihabara Retro Game Shop",
+          "sell": ""
+        },
+        {
+          "name": "Golfer Sarutahiko",
+          "buy": "4800",
+          "effect": "Raises Proficiency. Video Game.",
+          "location": "Akihabara Retro Game Shop",
+          "sell": ""
+        },
+        {
+          "name": "Pro Darts",
+          "buy": "4800",
+          "effect": "Raises Proficiency. Video Game.",
+          "location": "Akihabara Retro Game Shop",
+          "sell": ""
+        }
+      ]
+    },
+    "keyItems": [
+      {
+        "name": "Phantom Thieves Calling Card",
+        "effect": "The official calling card of the Phantom Thieves.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Cell Key",
+        "effect": "Key to the Velvet Room cell.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Sayuri",
+        "effect": "The true painting by Madarame's mentor. (Emperor Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Morgana's Scarf",
+        "effect": "Unlocks Pickpocket for NG+. (Magician Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Sports Watch",
+        "effect": "Unlocks Harisen Recovery for NG+. (Chariot Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Fashion Magazine",
+        "effect": "Unlocks Crocodile Tears for NG+. (Lovers Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Buchi Calculator",
+        "effect": "Unlocks Shadow Calculus for NG+. (Priestess Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Dyed Teacup",
+        "effect": "Unlocks Soil Cultivation for NG+. (Empress Max)",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Promise Ring",
+        "effect": "Given by your romantic partner.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Red Will Seed",
+        "effect": "A crystallization of distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Green Will Seed",
+        "effect": "A crystallization of distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Blue Will Seed",
+        "effect": "A crystallization of distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Unfinished Map",
+        "effect": "A map drawn by Morgana for Palaces.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Kamoshida's Crown",
+        "effect": "The materialization of Kamoshida's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Madarame's Painting",
+        "effect": "The materialization of Madarame's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Kaneshiro's Briefcase",
+        "effect": "The materialization of Kaneshiro's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Wakaba's Promise",
+        "effect": "The materialization of Futaba's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Okumura's Model Kit",
+        "effect": "The materialization of Okumura's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Sae's Casino Coin",
+        "effect": "The materialization of Sae's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Shido's Steering Wheel",
+        "effect": "The materialization of Shido's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Maruki's Apple",
+        "effect": "The materialization of Maruki's distorted desires.",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      }
+    ],
+    "equipment": {
+      "weaponsMelee": [
+        {
+          "name": "Paradise Lost EX",
+          "for": "Joker",
+          "atk": 340,
+          "acc": 98,
+          "eff": "Reduce Curse dmg (High)",
+          "location": "Electric Chair (Satanael)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Punish Dagger",
+          "for": "Joker",
+          "atk": 250,
+          "acc": 95,
+          "eff": "Despair (High)",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Nataraja EX",
+          "for": "Joker",
+          "atk": 360,
+          "acc": 90,
+          "eff": "All stats +6",
+          "location": "Electric Chair (Metatron)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Copis",
+          "for": "Joker",
+          "atk": 110,
+          "acc": 92,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Baselard",
+          "for": "Joker",
+          "atk": 140,
+          "acc": 94,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Kukri",
+          "for": "Joker",
+          "atk": 180,
+          "acc": 92,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mortmain",
+          "for": "Joker",
+          "atk": 210,
+          "acc": 96,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Main Gauche",
+          "for": "Joker",
+          "atk": 260,
+          "acc": 94,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Claiomh Solais R",
+          "for": "Morgana",
+          "atk": 330,
+          "acc": 90,
+          "eff": "+50 SP",
+          "location": "Electric Chair (Mother Harlot)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bandit Sword",
+          "for": "Morgana",
+          "atk": 80,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Scimitar",
+          "for": "Morgana",
+          "atk": 130,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Shamshir",
+          "for": "Morgana",
+          "atk": 170,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Headhunter Bugle",
+          "for": "Morgana",
+          "atk": 220,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Imprisoned Mjolnir",
+          "for": "Ryuji",
+          "atk": 324,
+          "acc": 88,
+          "eff": "Elec attacks +",
+          "location": "Electric Chair (Thor)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ruyi Jingu Bang",
+          "for": "Ryuji",
+          "atk": 290,
+          "acc": 88,
+          "eff": "Auto-Tarukaja",
+          "location": "Electric Chair (Hanuman)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Iron Pipe",
+          "for": "Ryuji",
+          "atk": 70,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Heavy Tube",
+          "for": "Ryuji",
+          "atk": 120,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Super Mace",
+          "for": "Ryuji",
+          "atk": 190,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dainaraka Whip",
+          "for": "Ann",
+          "atk": 320,
+          "acc": 90,
+          "eff": "Freeze (High)",
+          "location": "Electric Chair (Black Frost)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Naraka Whip",
+          "for": "Ann",
+          "atk": 260,
+          "acc": 90,
+          "eff": "Freeze (Med)",
+          "location": "Electric Chair (Black Frost)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Skinripper",
+          "for": "Ann",
+          "atk": 110,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Chain Whip",
+          "for": "Ann",
+          "atk": 160,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Varna Whip",
+          "for": "Ann",
+          "atk": 230,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Usumidori R",
+          "for": "Yusuke",
+          "atk": 340,
+          "acc": 88,
+          "eff": "Fear (High)",
+          "location": "Electric Chair (Yoshitsune)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Senryou Yakusha",
+          "for": "Yusuke",
+          "atk": 160,
+          "acc": 90,
+          "eff": "Strength +5",
+          "location": "Electric Chair (Ame-no-Uzume)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Replica Katana",
+          "for": "Yusuke",
+          "atk": 90,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Red-hilted Katana",
+          "for": "Yusuke",
+          "atk": 140,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Hizamaru",
+          "for": "Yusuke",
+          "atk": 210,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Gordios",
+          "for": "Makoto",
+          "atk": 330,
+          "acc": 95,
+          "eff": "Crit Rate up (High)",
+          "location": "Electric Chair (Cybele)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sabazios",
+          "for": "Makoto",
+          "atk": 280,
+          "acc": 90,
+          "eff": "Crit Rate up (High)",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Brass Knuckles",
+          "for": "Makoto",
+          "atk": 120,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Iron Fists",
+          "for": "Makoto",
+          "atk": 170,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Metal Knuckles",
+          "for": "Makoto",
+          "atk": 220,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fleurs du Mal R",
+          "for": "Haru",
+          "atk": 345,
+          "acc": 86,
+          "eff": "Magic +6 / High Dizzy",
+          "location": "Electric Chair (Beelzebub)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Amazon Axe",
+          "for": "Haru",
+          "atk": 190,
+          "acc": 80,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Battle Axe",
+          "for": "Haru",
+          "atk": 240,
+          "acc": 80,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Heavy Axe",
+          "for": "Haru",
+          "atk": 280,
+          "acc": 80,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Hinokagutsuchi II",
+          "for": "Akechi",
+          "atk": 360,
+          "acc": 90,
+          "eff": "Burn (High)",
+          "location": "Electric Chair (Futsunushi)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Laser Blade",
+          "for": "Akechi",
+          "atk": 240,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Light Saber",
+          "for": "Akechi",
+          "atk": 280,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sword of Sinai II",
+          "for": "Sumire",
+          "atk": 365,
+          "acc": 95,
+          "eff": "Dizzy (High)",
+          "location": "Electric Chair (Sandalphon)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fleuret",
+          "for": "Sumire",
+          "atk": 200,
+          "acc": 95,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rapier",
+          "for": "Sumire",
+          "atk": 250,
+          "acc": 95,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Estoc",
+          "for": "Sumire",
+          "atk": 290,
+          "acc": 95,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "weaponsRanged": [
+        {
+          "name": "Tyrant Pistol EX",
+          "for": "Joker",
+          "atk": 390,
+          "acc": 98,
+          "eff": "Magic +15",
+          "location": "Electric Chair (Lucifer)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Nataraja EX",
+          "for": "Joker",
+          "atk": 360,
+          "acc": 90,
+          "eff": "All stats +6",
+          "location": "Electric Chair (Metatron)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tkachev",
+          "for": "Joker",
+          "atk": 110,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Makarov",
+          "for": "Joker",
+          "atk": 150,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sudarshana EX",
+          "for": "Morgana",
+          "atk": 330,
+          "acc": 90,
+          "eff": "Random Ailment (High)",
+          "location": "Electric Chair (Vishnu)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Slingshot",
+          "for": "Morgana",
+          "atk": 80,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bandit Slingshot",
+          "for": "Morgana",
+          "atk": 130,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megido Blaster",
+          "for": "Ryuji",
+          "atk": 380,
+          "acc": 85,
+          "eff": "Burn (High)",
+          "location": "Electric Chair (Shiva)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Shotgun",
+          "for": "Ryuji",
+          "atk": 100,
+          "acc": 80,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Pump-action",
+          "for": "Ryuji",
+          "atk": 150,
+          "acc": 80,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Gungnir",
+          "for": "Ann",
+          "atk": 340,
+          "acc": 90,
+          "eff": "Despair (Medium)",
+          "location": "Electric Chair (Odin)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Replica SMG",
+          "for": "Ann",
+          "atk": 90,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tommy Gun",
+          "for": "Ann",
+          "atk": 140,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Heaven's Gate",
+          "for": "Yusuke",
+          "atk": 370,
+          "acc": 88,
+          "eff": "Agility +15",
+          "location": "Electric Chair (Uriel)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Assault Rifle",
+          "for": "Yusuke",
+          "atk": 120,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "AK-47",
+          "for": "Yusuke",
+          "atk": 170,
+          "acc": 85,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Judge End",
+          "for": "Makoto",
+          "atk": 380,
+          "acc": 95,
+          "eff": "All stats +11",
+          "location": "Electric Chair (Michael)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Revolver",
+          "for": "Makoto",
+          "atk": 160,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Peacemaker",
+          "for": "Makoto",
+          "atk": 210,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Yagrush EX",
+          "for": "Haru",
+          "atk": 360,
+          "acc": 80,
+          "eff": "Shock (High)",
+          "location": "Electric Chair (Baal)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Grenade Launcher",
+          "for": "Haru",
+          "atk": 200,
+          "acc": 75,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "GL",
+          "for": "Haru",
+          "atk": 250,
+          "acc": 75,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ancient Force",
+          "for": "Akechi",
+          "atk": 380,
+          "acc": 90,
+          "eff": "Strength +15",
+          "location": "Electric Chair (Vohu Manah)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ray Gun",
+          "for": "Akechi",
+          "atk": 260,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sahasrara EX",
+          "for": "Sumire",
+          "atk": 380,
+          "acc": 90,
+          "eff": "All stats +7",
+          "location": "Electric Chair (Ardha)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Lever-action",
+          "for": "Sumire",
+          "atk": 240,
+          "acc": 90,
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "armor": [
+        {
+          "name": "Demon's Jacket",
+          "for": "Men",
+          "def": 220,
+          "eva": 18,
+          "eff": "Strength +5",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Haten Robe",
+          "for": "Women",
+          "def": 250,
+          "eva": 20,
+          "eff": "Magic +5",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sirius Armor EX",
+          "for": "Unisex",
+          "def": 330,
+          "eva": 10,
+          "eff": "Reduce Magic dmg (High)",
+          "location": "Electric Chair (Messiah)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tantric Oath",
+          "for": "Men",
+          "def": 325,
+          "eva": 18,
+          "eff": "Reduce Magic dmg (High)",
+          "location": "Electric Chair (Satan)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Lovely Witches Robe",
+          "for": "Women",
+          "def": 320,
+          "eva": 20,
+          "eff": "Reduce Magic dmg (High)",
+          "location": "Electric Chair (Mother Harlot)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Nekomata Coat",
+          "for": "Morgana",
+          "def": 310,
+          "eva": 25,
+          "eff": "Evade Magic (High)",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dragon's Heart",
+          "for": "Men",
+          "def": 280,
+          "eva": 15,
+          "eff": "Endurance +5",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Idol's Dress",
+          "for": "Women",
+          "def": 270,
+          "eva": 22,
+          "eff": "Agility +5",
+          "location": "Untouchable",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sooty Armor",
+          "for": "Unisex",
+          "def": 0,
+          "eva": 0,
+          "eff": "Wash at Kichijoji laundromat.",
+          "location": "Mementos",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Despair Coat",
+          "for": "Men",
+          "def": 180,
+          "eva": 12,
+          "eff": "Resist Despair",
+          "location": "Kichijoji Laundromat",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fearless Dress",
+          "for": "Women",
+          "def": 170,
+          "eva": 15,
+          "eff": "Resist Fear",
+          "location": "Kichijoji Laundromat",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "accessories": [
+        {
+          "name": "SP Adhesive 1 / 2 / 3",
+          "eff": "Restores 3 / 5 / 7 SP each turn.",
+          "location": "Takemi Medical Clinic",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "HP Adhesive 1 / 2 / 3",
+          "eff": "Restores 2% / 4% / 6% HP each turn.",
+          "location": "Takemi Medical Clinic",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ring of Vanity",
+          "eff": "Absorbs weaknesses. Allows casting of Bleeding Dry Brush.",
+          "location": "Jose (Madarame Will Seeds)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ring of Gluttony",
+          "eff": "Auto-Tetrakarn/Makarakarn. Allows casting of Vault Guardian.",
+          "location": "Jose (Kaneshiro Will Seeds)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ring of Envy",
+          "eff": "Auto-Concentrate. Allows casting of Masukukaja.",
+          "location": "Jose (Sae Will Seeds)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ring of Pride",
+          "eff": "Auto-Charge. Allows casting of Blood Scimitar.",
+          "location": "Jose (Shido Will Seeds)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Crystal of Lust",
+          "eff": "Allows casting of Diarama.",
+          "location": "Kamoshida Will Seeds",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Crystal of Wrath",
+          "eff": "Allows casting of Rebellion.",
+          "location": "Futaba Will Seeds",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Crystal of Greed",
+          "eff": "Allows casting of Attack Master.",
+          "location": "Okumura Will Seeds",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Crystal of Sorrow",
+          "eff": "Allows casting of Guiding Tentacle.",
+          "location": "Maruki Will Seeds",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Omnipotent Orb",
+          "eff": "Nullifies all magic attacks (except Almighty).",
+          "location": "Defeat Lavenza (NG+)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Divine Pillar",
+          "eff": "Halves all incoming damage, disables evasion.",
+          "location": "Defeat Reaper",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regent",
+          "eff": "Attack +3, Crit Rate Up, Magic +3",
+          "location": "Electric Chair (Regent)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Hope Diamond",
+          "eff": "All stats +3, Regenerate 3",
+          "location": "Electric Chair (Hope Diamond)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Crystal Skull",
+          "eff": "All stats +5, Angelic Grace",
+          "location": "Electric Chair (Crystal Skull)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Orichalcum",
+          "eff": "All stats +7, Evade Phys (High)",
+          "location": "Electric Chair (Orichalcum)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Team Glasses",
+          "eff": "Prevents Blind.",
+          "location": "Shady Commodities",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "St. Hermelin Badge",
+          "eff": "Nullifies Curse and Bless.",
+          "location": "DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Camera Lens",
+          "eff": "Increases chance of acquiring items.",
+          "location": "Shady Commodities",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate Patch",
+          "eff": "Restores SP in battle.",
+          "location": "Chests",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate Patch",
+          "eff": "Restores HP in battle.",
+          "location": "Chests",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fire Boost Ring",
+          "eff": "Increases Fire damage by 25%.",
+          "location": "Chests",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Boost Ring",
+          "eff": "Increases Ice damage by 25%.",
+          "location": "Chests",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wind Amp Ring",
+          "eff": "Increases Wind damage by 50%.",
+          "location": "Chests",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "outfits": [
+        {
+          "name": "Shujin Uniform",
+          "for": "All",
+          "location": "Default",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Phantom Thief Outfit",
+          "for": "All",
+          "location": "Story Progression",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Winter Clothes",
+          "for": "All",
+          "location": "Story Progression",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Summer Clothes",
+          "for": "All",
+          "location": "Story Progression",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Swimsuit",
+          "for": "All",
+          "location": "Story Progression",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maid Outfit",
+          "for": "Women",
+          "location": "DLC / Mementos",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Butler Suit",
+          "for": "Men",
+          "location": "DLC / Mementos",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Gekkoukan Uniform",
+          "for": "All",
+          "location": "Persona 3 Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Yasogami Uniform",
+          "for": "All",
+          "location": "Persona 4 Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Seven Sisters Uniform",
+          "for": "All",
+          "location": "Persona 2 Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "St. Hermelin Uniform",
+          "for": "All",
+          "location": "Persona 1 Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Featherman Suit",
+          "for": "All",
+          "location": "Featherman Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Velvet Room Uniform",
+          "for": "All",
+          "location": "Velvet Room Costume DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Demonica Suit",
+          "for": "All",
+          "location": "SMT Strange Journey DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Samurai Garb",
+          "for": "All",
+          "location": "SMT IV DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dance Outfit",
+          "for": "All",
+          "location": "Persona 5 Dancing DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Q2 Outfit",
+          "for": "All",
+          "location": "Persona Q2 DLC",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ]
+    }
+  }
+}

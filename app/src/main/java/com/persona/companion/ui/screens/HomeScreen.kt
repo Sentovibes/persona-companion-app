@@ -67,7 +67,7 @@ fun HomeScreen(navController: NavController) {
             Text(
                 text = "PERSONA",
                 style = MaterialTheme.typography.headlineLarge.copy(
-                    fontSize = (42.sp * textScale),
+                    fontSize = 42.sp,
                     letterSpacing = 6.sp,
                     fontWeight = FontWeight.ExtraBold
                 ),
@@ -76,7 +76,6 @@ fun HomeScreen(navController: NavController) {
             Text(
                 text = "COMPANION",
                 style = MaterialTheme.typography.labelLarge.copy(
-                    fontSize = (MaterialTheme.typography.labelLarge.fontSize * textScale),
                     letterSpacing = 10.sp
                 ),
                 color = TextSecondary
@@ -129,9 +128,7 @@ fun HomeScreen(navController: NavController) {
 
             Text(
                 text = "Community-driven • Open source",
-                style = MaterialTheme.typography.labelSmall.copy(
-                    fontSize = (MaterialTheme.typography.labelSmall.fontSize * textScale)
-                ),
+                style = MaterialTheme.typography.labelSmall,
                 color = TextDisabled
             )
         }
@@ -171,7 +168,7 @@ private fun SeriesCard(
             modifier = Modifier
                 .align(Alignment.CenterEnd)
                 .padding(end = 20.dp),
-            fontSize = (72.sp * textScale),
+            fontSize = 72.sp,
             fontWeight = FontWeight.ExtraBold,
             color = Color.White.copy(alpha = 0.12f)
         )
@@ -181,17 +178,13 @@ private fun SeriesCard(
         ) {
             Text(
                 text = series.title,
-                style = MaterialTheme.typography.titleLarge.copy(
-                    fontSize = (MaterialTheme.typography.titleLarge.fontSize * textScale)
-                ),
+                style = MaterialTheme.typography.titleLarge,
                 color = Color.White,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = "${series.games.size} game${if (series.games.size != 1) "s" else ""}",
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                ),
+                style = MaterialTheme.typography.bodyMedium,
                 color = Color.White.copy(alpha = 0.7f)
             )
         }
@@ -228,9 +221,7 @@ private fun QuickAccessButton(
             Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = label,
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                ),
+                style = MaterialTheme.typography.bodyMedium,
                 color = TextPrimary,
                 fontWeight = FontWeight.Medium
             )

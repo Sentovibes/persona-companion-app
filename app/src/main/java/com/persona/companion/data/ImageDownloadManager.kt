@@ -31,6 +31,7 @@ object ImageDownloadManager {
     
     /**
      * Check if images have been successfully downloaded and extracted.
+     * Also returns false if the downloaded version is older than the current required version.
      */
     fun areImagesDownloaded(context: Context): Boolean {
         val prefs = ImageDownloadPreferences(context)
@@ -38,8 +39,14 @@ object ImageDownloadManager {
         
         Log.d(TAG, "areImagesDownloaded: markedAsDownloaded=$markedAsDownloaded")
         
-        // Verify files actually exist
         if (markedAsDownloaded) {
+            // Check if the downloaded version is outdated
+            val downloadedVersion = prefs.getDownloadedVersion()
+            if (downloadedVersion != null && downloadedVersion != BuildConfig.IMAGES_VERSION) {
+                Log.w(TAG, "Images version mismatch: downloaded=$downloadedVersion, required=${BuildConfig.IMAGES_VERSION}")
+                // Don't clear state — let the UI show an update prompt instead
+                return false
+            }
             // ZIP extracts to filesDir with "images/" folder inside
             val imagesDir = File(context.filesDir, "images")
             Log.d(TAG, "Checking images dir: ${imagesDir.absolutePath}")
@@ -76,6 +83,16 @@ object ImageDownloadManager {
         return markedAsDownloaded
     }
     
+    /**
+     * Check if a newer image version is available but old images are still installed.
+     */
+    fun isImageUpdateAvailable(context: Context): Boolean {
+        val prefs = ImageDownloadPreferences(context)
+        if (!prefs.areImagesDownloaded()) return false
+        val downloadedVersion = prefs.getDownloadedVersion() ?: return false
+        return downloadedVersion != BuildConfig.IMAGES_VERSION
+    }
+
     /**
      * Get the current download status including version, timestamp, and storage size.
      */

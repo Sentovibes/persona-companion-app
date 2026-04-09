@@ -24,6 +24,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.persona.companion.BuildConfig
 import com.persona.companion.data.ImageDownloadManager
@@ -39,6 +40,10 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
     val downloadProgress by vm.downloadProgress.collectAsState()
     val isImporting by vm.isDownloading.collectAsState()
     val errorMessage by vm.errorMessage.collectAsState()
+
+    val updateAvailable = remember(downloadStatus) {
+        ImageDownloadManager.isImageUpdateAvailable(context)
+    }
 
     var showDeleteConfirmation by remember { mutableStateOf(false) }
 
@@ -99,11 +104,19 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
                     }
                     downloadStatus.isDownloaded -> {
                         val sizeMB = downloadStatus.storageSize / 1_000_000
-                        Text(
-                            text = "Downloaded • $sizeMB MB • Version ${downloadStatus.version}",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = TextSecondary
-                        )
+                        if (updateAvailable) {
+                            Text(
+                                text = "Update available (v${BuildConfig.IMAGES_VERSION}) — re-import to get fixed images",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        } else {
+                            Text(
+                                text = "Downloaded • $sizeMB MB • Version ${downloadStatus.version}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = TextSecondary
+                            )
+                        }
                     }
                     else -> {
                         val estimatedSizeMB = BuildConfig.IMAGES_ZIP_SIZE / 1_000_000
@@ -165,7 +178,7 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
         if (!isImporting) {
             Spacer(Modifier.height(12.dp))
 
-            if (!downloadStatus.isDownloaded) {
+            if (!downloadStatus.isDownloaded || updateAvailable) {
                 // Step 1: download link
                 Text(
                     text = buildAnnotatedString {

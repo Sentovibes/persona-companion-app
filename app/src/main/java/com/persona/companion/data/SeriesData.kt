@@ -25,19 +25,28 @@ object SeriesData {
                     id = "p3fes",
                     title = "Persona 3 FES",
                     dataPath = "data/persona3/personas.json",
-                    enemyPath = "data/enemies/p3fes_enemies.json"
+                    enemyPath = "data/enemies/p3fes_enemies.json",
+                    skillPath = "data/skills/p3fes_skills.json",
+                    itemPath = "data/items/p3fes_items.json",
+                    socialLinkPath = "data/social_links/p3_social_links.json"
                 ),
                 Game(
                     id = "p3p",
                     title = "Persona 3 Portable",
                     dataPath = "data/persona3/portable_personas.json",
-                    enemyPath = "data/enemies/p3p_enemies.json"
+                    enemyPath = "data/enemies/p3p_enemies.json",
+                    skillPath = "data/skills/p3p_skills.json",
+                    itemPath = "data/items/p3p_items.json",
+                    socialLinkPath = "data/social_links/p3_social_links.json"
                 ),
                 Game(
                     id = "p3r",
                     title = "Persona 3 Reload",
                     dataPath = "data/persona3/reload_personas.json",
-                    enemyPath = "data/enemies/p3r_enemies.json"
+                    enemyPath = "data/enemies/p3r_enemies.json",
+                    skillPath = "data/skills/p3r_skills.json",
+                    itemPath = "data/items/p3r_items.json",
+                    socialLinkPath = "data/social_links/p3_social_links.json"
                 )
             )
         ),
@@ -51,13 +60,19 @@ object SeriesData {
                     id = "p4",
                     title = "Persona 4",
                     dataPath = "data/persona4/personas.json",
-                    enemyPath = "data/enemies/p4_enemies.json"
+                    enemyPath = "data/enemies/p4_enemies.json",
+                    skillPath = "data/skills/p4_skills.json",
+                    itemPath = "data/items/p4_items.json",
+                    socialLinkPath = "data/social_links/p4_social_links.json"
                 ),
                 Game(
                     id = "p4g",
                     title = "Persona 4 Golden",
                     dataPath = "data/persona4/golden_personas.json",
-                    enemyPath = "data/enemies/p4g_enemies.json"
+                    enemyPath = "data/enemies/p4g_enemies.json",
+                    skillPath = "data/skills/p4g_skills.json",
+                    itemPath = "data/items/p4g_items.json",
+                    socialLinkPath = "data/social_links/p4_social_links.json"
                 )
             )
         ),
@@ -71,13 +86,19 @@ object SeriesData {
                     id = "p5",
                     title = "Persona 5",
                     dataPath = "data/persona5/personas.json",
-                    enemyPath = "data/enemies/p5_enemies.json"
+                    enemyPath = "data/enemies/p5_enemies.json",
+                    skillPath = "data/skills/p5_skills.json",
+                    itemPath = "data/items/p5_items.json",
+                    socialLinkPath = "data/social_links/p5+p5r_social_links.json"
                 ),
                 Game(
                     id = "p5r",
                     title = "Persona 5 Royal",
                     dataPath = "data/persona5/royal_personas.json",
-                    enemyPath = "data/enemies/p5r_enemies.json"
+                    enemyPath = "data/enemies/p5r_enemies.json",
+                    skillPath = "data/skills/p5r_skills.json",
+                    itemPath = "data/items/p5r_items.json",
+                    socialLinkPath = "data/social_links/p5+p5r_social_links.json"
                 )
             )
         )

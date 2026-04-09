@@ -1,5 +1,7 @@
 package com.persona.companion.utils
 
+import androidx.compose.ui.unit.sp
+
 import com.persona.companion.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -19,10 +21,14 @@ object UpdateChecker {
     
     suspend fun checkForUpdates(): Result<UpdateInfo> = withContext(Dispatchers.IO) {
         try {
-            val connection = URL(GITHUB_API_URL).openConnection()
+            val connection = URL(GITHUB_API_URL).openConnection() as java.net.HttpURLConnection
             connection.setRequestProperty("Accept", "application/vnd.github.v3+json")
             connection.connectTimeout = 10000
             connection.readTimeout = 10000
+            
+            if (connection.responseCode == 403) {
+                return@withContext Result.failure(java.io.IOException("Rate limit exceeded"))
+            }
             
             val response = connection.getInputStream().bufferedReader().use { it.readText() }
             val json = JSONObject(response)

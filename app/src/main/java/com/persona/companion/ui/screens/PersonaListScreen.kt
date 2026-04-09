@@ -22,6 +22,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
@@ -30,6 +31,7 @@ import com.persona.companion.data.SeriesData
 import com.persona.companion.models.Persona
 import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.components.PersonaFilterSheet
+import com.persona.companion.ui.components.WeaknessRow
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.PersonaListViewModel
 import com.persona.companion.utils.personaImage
@@ -118,6 +120,7 @@ fun PersonaListScreen(
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxSize()
+                            .imePadding()
                             .padding(horizontal = 16.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         contentPadding = PaddingValues(vertical = 12.dp)
@@ -287,12 +290,16 @@ private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = ""
                 style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
                 color = TextPrimary
             )
-            if (!isCompact) {
-                Text(
-                    text  = persona.arcana ?: "Unknown",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = TextSecondary
-                )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (!isCompact) {
+                    Text(
+                        text  = persona.arcana ?: "Unknown",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = TextSecondary
+                    )
+                    Spacer(Modifier.width(8.dp))
+                }
+                WeaknessRow(persona.weaknesses)
             }
         }
 

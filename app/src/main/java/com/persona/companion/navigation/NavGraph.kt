@@ -20,6 +20,8 @@ import com.persona.companion.ui.screens.RecentlyViewedScreen
 import com.persona.companion.ui.screens.SettingsScreen
 import com.persona.companion.ui.screens.SocialLinkDetailScreen
 import com.persona.companion.ui.screens.SocialLinksScreen
+import com.persona.companion.ui.screens.SkillListScreen
+import com.persona.companion.ui.screens.ItemListScreen
 
 // ---------------------------------------------------------------------------
 // Route definitions
@@ -49,8 +51,7 @@ sealed class Screen(val route: String) {
 
     object PersonaDetail : Screen("persona_detail/{seriesId}/{gameId}/{personaName}") {
         fun createRoute(seriesId: String, gameId: String, personaName: String): String {
-            // Encode slashes so they don't break the route
-            val safeName = personaName.replace("/", "|")
+            val safeName = java.net.URLEncoder.encode(personaName, "UTF-8")
             return "persona_detail/$seriesId/$gameId/$safeName"
         }
     }
@@ -63,10 +64,11 @@ sealed class Screen(val route: String) {
         fun createRoute(seriesId: String, gameId: String) = "enemy_list/$seriesId/$gameId"
     }
     
-    object EnemyDetail : Screen("enemy_detail/{seriesId}/{gameId}/{enemyName}") {
-        fun createRoute(seriesId: String, gameId: String, enemyName: String): String {
-            val safeName = enemyName.replace("/", "|")
-            return "enemy_detail/$seriesId/$gameId/$safeName"
+    object EnemyDetail : Screen("enemy_detail/{seriesId}/{gameId}/{enemyName}/{enemyArea}") {
+        fun createRoute(seriesId: String, gameId: String, name: String, area: String): String {
+            val safeName = java.net.URLEncoder.encode(name, "UTF-8")
+            val safeArea = java.net.URLEncoder.encode(area, "UTF-8")
+            return "enemy_detail/$seriesId/$gameId/$safeName/$safeArea"
         }
     }
     
@@ -76,13 +78,21 @@ sealed class Screen(val route: String) {
     
     object SocialLinkDetail : Screen("social_link_detail/{seriesId}/{gameId}/{arcana}") {
         fun createRoute(seriesId: String, gameId: String, arcana: String): String {
-            val safeArcana = arcana.replace("/", "|")
+            val safeArcana = java.net.URLEncoder.encode(arcana, "UTF-8")
             return "social_link_detail/$seriesId/$gameId/$safeArcana"
         }
     }
     
     object ClassroomAnswers : Screen("classroom_answers/{seriesId}/{gameId}") {
         fun createRoute(seriesId: String, gameId: String) = "classroom_answers/$seriesId/$gameId"
+    }
+
+    object SkillList : Screen("skill_list/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "skill_list/$seriesId/$gameId"
+    }
+
+    object ItemList : Screen("item_list/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "item_list/$seriesId/$gameId"
     }
 }
 
@@ -133,7 +143,7 @@ fun NavGraph(navController: NavHostController) {
             )
         ) { back ->
             val seriesId = back.arguments?.getString("seriesId") ?: return@composable
-            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
             CategoryScreen(navController, seriesId, gameId)
         }
 
@@ -145,7 +155,7 @@ fun NavGraph(navController: NavHostController) {
             )
         ) { back ->
             val seriesId = back.arguments?.getString("seriesId") ?: return@composable
-            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
             PersonaListScreen(navController, seriesId, gameId)
         }
 
@@ -159,8 +169,9 @@ fun NavGraph(navController: NavHostController) {
         ) { back ->
             val seriesId    = back.arguments?.getString("seriesId")    ?: return@composable
             val gameId      = back.arguments?.getString("gameId")      ?: return@composable
-            val personaName = back.arguments?.getString("personaName") ?: return@composable
-            PersonaDetailScreen(navController, seriesId, gameId, personaName.replace("|", "/"))
+            val personaNameRaw = back.arguments?.getString("personaName") ?: return@composable
+            val personaName = java.net.URLDecoder.decode(personaNameRaw, "UTF-8")
+            PersonaDetailScreen(navController, seriesId, gameId, personaName)
         }
         
         composable(
@@ -205,7 +216,7 @@ fun NavGraph(navController: NavHostController) {
                 aigisEnemyPath = game?.aigisEnemyPath,
                 onBack = { navController.popBackStack() },
                 onEnemyClick = { enemy ->
-                    navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name))
+                    navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name, enemy.area))
                 }
             )
         }
@@ -215,16 +226,23 @@ fun NavGraph(navController: NavHostController) {
             arguments = listOf(
                 navArgument("seriesId")  { type = NavType.StringType },
                 navArgument("gameId")    { type = NavType.StringType },
-                navArgument("enemyName") { type = NavType.StringType }
+                navArgument("enemyName") { type = NavType.StringType },
+                navArgument("enemyArea") { type = NavType.StringType }
             )
         ) { back ->
-            val seriesId  = back.arguments?.getString("seriesId")  ?: return@composable
-            val gameId    = back.arguments?.getString("gameId")    ?: return@composable
-            val enemyName = back.arguments?.getString("enemyName") ?: return@composable
+            val seriesId    = back.arguments?.getString("seriesId")  ?: return@composable
+            val gameId      = back.arguments?.getString("gameId")    ?: return@composable
+            val enemyNameRaw = back.arguments?.getString("enemyName") ?: return@composable
+            val enemyAreaRaw = back.arguments?.getString("enemyArea") ?: return@composable
+            
+            val enemyName = java.net.URLDecoder.decode(enemyNameRaw, "UTF-8")
+            val enemyArea = java.net.URLDecoder.decode(enemyAreaRaw, "UTF-8")
+
             EnemyDetailScreen(
                 seriesId = seriesId,
                 gameId = gameId,
-                enemyName = enemyName.replace("|", "/"),
+                enemyName = enemyName,
+                enemyArea = enemyArea,
                 onBack = { navController.popBackStack() }
             )
         }
@@ -261,11 +279,12 @@ fun NavGraph(navController: NavHostController) {
         ) { back ->
             val seriesId = back.arguments?.getString("seriesId") ?: return@composable
             val gameId   = back.arguments?.getString("gameId")   ?: return@composable
-            val arcana   = back.arguments?.getString("arcana")   ?: return@composable
+            val arcanaRaw = back.arguments?.getString("arcana")   ?: return@composable
+            val arcana = java.net.URLDecoder.decode(arcanaRaw, "UTF-8")
             
             SocialLinkDetailScreen(
                 gameId = gameId,
-                arcana = arcana.replace("|", "/"),
+                arcana = arcana,
                 onBack = { navController.popBackStack() }
             )
         }
@@ -285,6 +304,44 @@ fun NavGraph(navController: NavHostController) {
             ClassroomAnswersScreen(
                 gameId = gameId,
                 gameName = game?.title ?: "",
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.SkillList.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            
+            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
+            
+            SkillListScreen(
+                gameId = gameId,
+                gameName = game?.title ?: "",
+                skillPath = game?.skillPath,
+                personaPath = game?.dataPath,
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.ItemList.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            
+            ItemListScreen(
+                seriesId = seriesId,
+                gameId = gameId,
                 onBack = { navController.popBackStack() }
             )
         }

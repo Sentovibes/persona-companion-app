@@ -1,0 +1,3340 @@
+{
+  "items": [
+    {
+      "name": "Amethyst",
+      "description": "A shiny, purple gemstone.",
+      "effect": "A shiny, purple gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Amethyst",
+      "description": "A shiny, purple gemstone.",
+      "effect": "A shiny, purple gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Amethyst",
+      "description": "A shiny, purple gemstone.",
+      "effect": "A shiny, purple gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Amethyst",
+      "description": "A shiny, purple gemstone.",
+      "effect": "A shiny, purple gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Aquamarine",
+      "description": "A transparent, turquoise gemstone.",
+      "effect": "A transparent, turquoise gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Aquamarine",
+      "description": "A transparent, turquoise gemstone.",
+      "effect": "A transparent, turquoise gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Aquamarine",
+      "description": "A transparent, turquoise gemstone.",
+      "effect": "A transparent, turquoise gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Aquamarine",
+      "description": "A transparent, turquoise gemstone.",
+      "effect": "A transparent, turquoise gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Onyx",
+      "description": "A black gemstone whose name is Greek for \"claw.\"",
+      "effect": "A black gemstone whose name is Greek for \"claw.\"",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Onyx",
+      "description": "A black gemstone whose name is Greek for \"claw.\"",
+      "effect": "A black gemstone whose name is Greek for \"claw.\"",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Onyx",
+      "description": "A black gemstone whose name is Greek for \"claw.\"",
+      "effect": "A black gemstone whose name is Greek for \"claw.\"",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Onyx",
+      "description": "A black gemstone whose name is Greek for \"claw.\"",
+      "effect": "A black gemstone whose name is Greek for \"claw.\"",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Turquoise",
+      "description": "A bluish-green opaque gemstone.",
+      "effect": "A bluish-green opaque gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Turquoise",
+      "description": "A bluish-green opaque gemstone.",
+      "effect": "A bluish-green opaque gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Turquoise",
+      "description": "A bluish-green opaque gemstone.",
+      "effect": "A bluish-green opaque gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Turquoise",
+      "description": "A bluish-green opaque gemstone.",
+      "effect": "A bluish-green opaque gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Emerald",
+      "description": "A sparkling, green gemstone.",
+      "effect": "A sparkling, green gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Emerald",
+      "description": "A sparkling, green gemstone.",
+      "effect": "A sparkling, green gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Emerald",
+      "description": "A sparkling, green gemstone.",
+      "effect": "A sparkling, green gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Emerald",
+      "description": "A sparkling, green gemstone.",
+      "effect": "A sparkling, green gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Opal",
+      "description": "A white gemstone that reflects many colors.",
+      "effect": "A white gemstone that reflects many colors.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Opal",
+      "description": "A white gemstone that reflects many colors.",
+      "effect": "A white gemstone that reflects many colors.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Opal",
+      "description": "A white gemstone that reflects many colors.",
+      "effect": "A white gemstone that reflects many colors.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Opal",
+      "description": "A white gemstone that reflects many colors.",
+      "effect": "A white gemstone that reflects many colors.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Garnet",
+      "description": "A deep violet gemstone.",
+      "effect": "A deep violet gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Garnet",
+      "description": "A deep violet gemstone.",
+      "effect": "A deep violet gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Garnet",
+      "description": "A deep violet gemstone.",
+      "effect": "A deep violet gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Garnet",
+      "description": "A deep violet gemstone.",
+      "effect": "A deep violet gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Sapphire",
+      "description": "A deep blue gemstone.",
+      "effect": "A deep blue gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Sapphire",
+      "description": "A deep blue gemstone.",
+      "effect": "A deep blue gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Sapphire",
+      "description": "A deep blue gemstone.",
+      "effect": "A deep blue gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Sapphire",
+      "description": "A deep blue gemstone.",
+      "effect": "A deep blue gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Diamond",
+      "description": "A beautiful, colorless gemstone.",
+      "effect": "A beautiful, colorless gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Diamond",
+      "description": "A beautiful, colorless gemstone.",
+      "effect": "A beautiful, colorless gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Diamond",
+      "description": "A beautiful, colorless gemstone.",
+      "effect": "A beautiful, colorless gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Diamond",
+      "description": "A beautiful, colorless gemstone.",
+      "effect": "A beautiful, colorless gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Topaz",
+      "description": "A pale brown gemstone.",
+      "effect": "A pale brown gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Topaz",
+      "description": "A pale brown gemstone.",
+      "effect": "A pale brown gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Topaz",
+      "description": "A pale brown gemstone.",
+      "effect": "A pale brown gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Topaz",
+      "description": "A pale brown gemstone.",
+      "effect": "A pale brown gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Pearl",
+      "description": "A shiny, white gemstone.",
+      "effect": "A shiny, white gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Pearl",
+      "description": "A shiny, white gemstone.",
+      "effect": "A shiny, white gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Ruby",
+      "description": "A deep red gemstone.",
+      "effect": "A deep red gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Ruby",
+      "description": "A deep red gemstone.",
+      "effect": "A deep red gemstone.",
+      "price": "",
+      "location": "",
+      "category": "Other"
+    },
+    {
+      "name": "Wealth Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Wealth Hand (Thebel)",
+      "category": "Other"
+    },
+    {
+      "name": "Treasure Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Treasure Hand (Arqa)",
+      "category": "Other"
+    },
+    {
+      "name": "Supreme Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Supreme Hand (Yabbashah)",
+      "category": "Other"
+    },
+    {
+      "name": "Opulent Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Opulent Hand (Tziah)",
+      "category": "Other"
+    },
+    {
+      "name": "Luxury Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Luxury Hand (Harabah)",
+      "category": "Other"
+    },
+    {
+      "name": "Glorious Coin",
+      "description": "Dusty old coin. It might be valuable.",
+      "effect": "Dusty old coin. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Glorious Hand (Adamah)",
+      "category": "Other"
+    },
+    {
+      "name": "Empress's Mask",
+      "description": "Golden mask. It might be valuable.",
+      "effect": "Golden mask. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Venus Eagle (Thebel 5F; x3)",
+      "category": "Other"
+    },
+    {
+      "name": "Vibrant Cloth",
+      "description": "Colorful cloth. It might be valuable.",
+      "effect": "Colorful cloth. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Crying Table (Arqa 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Beetle Horn",
+      "description": "Large insect horn. It might be valuable.",
+      "effect": "Large insect horn. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Golden Beetle (Arqa 47F; x3)",
+      "category": "Other"
+    },
+    {
+      "name": "Golden Beard",
+      "description": "An oddly-shaped beard. It might be valuable.",
+      "effect": "An oddly-shaped beard. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Furious Gigas (Yabbashah 72F)",
+      "category": "Other"
+    },
+    {
+      "name": "Massive Wheel",
+      "description": "Big tank wheel. It might be valuable.",
+      "effect": "Big tank wheel. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Arcane Turret (Tziah 122F)",
+      "category": "Other"
+    },
+    {
+      "name": "Dense Rock",
+      "description": "Abnormally hard rock. It might be valuable.",
+      "effect": "Abnormally hard rock. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Judgement Sword (Harabah 171F)",
+      "category": "Other"
+    },
+    {
+      "name": "Broken Heart",
+      "description": "A cracked heart. It might be valuable.",
+      "effect": "A cracked heart. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Royal Dancer (Harabah 201F)",
+      "category": "Other"
+    },
+    {
+      "name": "Fine Statuette",
+      "description": "A very small sculpture. It might be valuable.",
+      "effect": "A very small sculpture. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Jotun of Grief (Adamah 252F)",
+      "category": "Other"
+    },
+    {
+      "name": "Shadow Shard",
+      "description": "Black stone fragment. It might be valuable.",
+      "effect": "Black stone fragment. It might be valuable.",
+      "price": "",
+      "location": "Common Chest (Yabbashah)",
+      "category": "Other"
+    },
+    {
+      "name": "Shadow Crystal",
+      "description": "Shiny black crystal. It might be valuable.",
+      "effect": "Shiny black crystal. It might be valuable.",
+      "price": "",
+      "location": "Common Chest (Tziah)\nCommon Chest (Empyrean 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Steel Right Arm",
+      "description": "Mighty steel right arm. It might be valuable.",
+      "effect": "Mighty steel right arm. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Immortal Gigas (Malebolge 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Broken Wheel",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Brilliant Cyclops (Cocytus 9F)",
+      "category": "Other"
+    },
+    {
+      "name": "Shining Beard",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Death Castle (Caina 7F; x2)",
+      "category": "Other"
+    },
+    {
+      "name": "Ebon Heart",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Harem Dancer (Caina 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Ice Element",
+      "description": "Mysterious freezing lump. It might be valuable.",
+      "effect": "Mysterious freezing lump. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Ice Raven (Antenora 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Thunder Element",
+      "description": "Mysterious sparking lump. It might be valuable.",
+      "effect": "Mysterious sparking lump. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Judgement Sword (Antenora 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Fire Element",
+      "description": "Mysterious burning lump. It might be valuable.",
+      "effect": "Mysterious burning lump. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Brave Wheel (Antenora 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Throne of Ruin",
+      "description": "A floating throne. It might be valuable.",
+      "effect": "A floating throne. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Primitive Idol (Antenora 20F)",
+      "category": "Other"
+    },
+    {
+      "name": "Burning Grail",
+      "description": "Cup with eternal flame. It might be valuable.",
+      "effect": "Cup with eternal flame. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Crying Table (Ptolomea 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Scarlet Choker",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Neo Minotaur (Ptolomea 17F)",
+      "category": "Other"
+    },
+    {
+      "name": "Infernal Armor",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Spastic Turret  (Judecca 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Bloody Horse",
+      "description": "",
+      "effect": "",
+      "price": "",
+      "location": "Dropped by Jotun of Blood (Judecca 16F)",
+      "category": "Other"
+    },
+    {
+      "name": "All-Seeing Eye",
+      "description": "An omniscient eye. It might be valuable.",
+      "effect": "An omniscient eye. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Acheron Seeker (Empyrean 8F; x2)",
+      "category": "Other"
+    },
+    {
+      "name": "White Quillon",
+      "description": "Shiny and white. It might be valuable.",
+      "effect": "Shiny and white. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Kaiden Musha (Empyrean 19F)",
+      "category": "Other"
+    },
+    {
+      "name": "Black Quillon",
+      "description": "Shiny and black. It might be valuable.",
+      "effect": "Shiny and black. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Onnen Musha (Empyrean 19F)",
+      "category": "Other"
+    },
+    {
+      "name": "Red Quillon",
+      "description": "Shiny and red. It might be valuable.",
+      "effect": "Shiny and red. It might be valuable.",
+      "price": "",
+      "location": "Dropped by Tenjin Musha (Empyrean 19F)",
+      "category": "Other"
+    },
+    {
+      "name": "Beetle Shell",
+      "description": "Hard shell obtained from a Grave Beetle.",
+      "effect": "Hard shell obtained from a Grave Beetle.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Lantern",
+      "description": "Lantern obtained from a Phantom Mage.",
+      "effect": "Lantern obtained from a Phantom Mage.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Bronze Figurine",
+      "description": "Figurine dropped by the Bronze Dice.",
+      "effect": "Figurine dropped by the Bronze Dice.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Snake Scale",
+      "description": "A Lustful Snake's black scale.",
+      "effect": "A Lustful Snake's black scale.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Relic Fragment",
+      "description": "Fragment from a Creation Relic.",
+      "effect": "Fragment from a Creation Relic.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Greasy Gear",
+      "description": "Gear obtained from a Wild Drive.",
+      "effect": "Gear obtained from a Wild Drive.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Tiara's Hair",
+      "description": "Strand of silver hair from a Shouting Tiara.",
+      "effect": "Strand of silver hair from a Shouting Tiara.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Knight's Reins",
+      "description": "A Champion Knight's black reins.",
+      "effect": "A Champion Knight's black reins.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Empress's Mirror",
+      "description": "Hand mirror dropped by an Elegant Mother.",
+      "effect": "Hand mirror dropped by an Elegant Mother.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Gold Handguard",
+      "description": "Handguard dropped by a Hakurou Musha.",
+      "effect": "Handguard dropped by a Hakurou Musha.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Gold Ring",
+      "description": "Golden ring dropped by a Wondrous Magus.",
+      "effect": "Golden ring dropped by a Wondrous Magus.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Red Armor Plate",
+      "description": "Armor plate dropped by a Scarlet Turret.",
+      "effect": "Armor plate dropped by a Scarlet Turret.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Pink Feather",
+      "description": "Pink feather of a Devoted Cupid.",
+      "effect": "Pink feather of a Devoted Cupid.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Moon Tablet",
+      "description": "Stone tablet dropped by a Ruinous Idol.",
+      "effect": "Stone tablet dropped by a Ruinous Idol.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Sand of Time",
+      "description": "Sand from inside Perpetual Sand.",
+      "effect": "Sand from inside Perpetual Sand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Rainbow Hair",
+      "description": "A Daring Gigas's multicolored hair.",
+      "effect": "A Daring Gigas's multicolored hair.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Bloody Button",
+      "description": "Old button obtained from The Reaper.",
+      "effect": "Old button obtained from The Reaper.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Lead Medal",
+      "description": "Dropped by the Wealth Hand.",
+      "effect": "Dropped by the Wealth Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Steel Medal",
+      "description": "Dropped by the Treasure Hand.",
+      "effect": "Dropped by the Treasure Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Bronze Medal",
+      "description": "Dropped by the Supreme Hand.",
+      "effect": "Dropped by the Supreme Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Silver Medal",
+      "description": "Dropped by the Opulent Hand.",
+      "effect": "Dropped by the Opulent Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Gold Medal",
+      "description": "Dropped by the Luxury Hand.",
+      "effect": "Dropped by the Luxury Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Platinum Medal",
+      "description": "Dropped by the Glorious Hand.",
+      "effect": "Dropped by the Glorious Hand.",
+      "price": "",
+      "location": "",
+      "category": "Consumable"
+    },
+    {
+      "name": "Velvet Key",
+      "description": "A key that unlocks the door to the Velvet Room.",
+      "effect": "A key that unlocks the door to the Velvet Room.",
+      "price": "",
+      "location": "Received from Igor",
+      "category": "Consumable"
+    },
+    {
+      "name": "Persimmon Leaf",
+      "description": "A fallen leaf from a young tree.",
+      "effect": "A fallen leaf from a young tree.",
+      "price": "",
+      "location": "Examine the tree in Gekkoukan High School's first floor corridor after speaking with the old couple at the Bookworms Used Books",
+      "category": "Consumable"
+    },
+    {
+      "name": "Handmade Choker",
+      "description": "A choker Kenji made. Enables fusion of Surt.",
+      "effect": "A choker Kenji made. Enables fusion of Surt.",
+      "price": "",
+      "location": "Complete Magician Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Headphones",
+      "description": "The headphones Fuuka made. Enables fusion of Scathach.",
+      "effect": "The headphones Fuuka made. Enables fusion of Scathach.",
+      "price": "",
+      "location": "Complete Priestess Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Motorcycle Key",
+      "description": "The key to Mitsuru's motorcycle. Enables fusion of Alilat.",
+      "effect": "The key to Mitsuru's motorcycle. Enables fusion of Alilat.",
+      "price": "",
+      "location": "Complete Empress Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Cheap Lighter",
+      "description": "Proof Hidetoshi solved the smoking incident. Enables fusion of Odin.",
+      "effect": "Proof Hidetoshi solved the smoking incident. Enables fusion of Odin.",
+      "price": "",
+      "location": "Complete Emperor Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Persimmon Fruit",
+      "description": "Fruit from Bunkichi's son's tree. Enables fusion of Kohryu.",
+      "effect": "Fruit from Bunkichi's son's tree. Enables fusion of Kohryu.",
+      "price": "",
+      "location": "Complete Hierophant Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Yukari's Strap",
+      "description": "Yukari's treasured cell phone strap. Enables fusion of Cybele.",
+      "effect": "Yukari's treasured cell phone strap. Enables fusion of Cybele.",
+      "price": "",
+      "location": "Complete Lovers Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Sports Tape",
+      "description": "A roll of sports tape from Kazushi. Enables fusion of Thor.",
+      "effect": "A roll of sports tape from Kazushi. Enables fusion of Thor.",
+      "price": "",
+      "location": "Complete Chariot Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Manga",
+      "description": "A manga by Chihiro's favorite artist. Enables fusion of Melchizedek.",
+      "effect": "A manga by Chihiro's favorite artist. Enables fusion of Melchizedek.",
+      "price": "",
+      "location": "Complete Justice Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Screenshot Data",
+      "description": "The message Maya left in the MMORPG. Enables fusion of Arahabaki.",
+      "effect": "The message Maya left in the MMORPG. Enables fusion of Arahabaki.",
+      "price": "",
+      "location": "Complete Hermit Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Award Letter",
+      "description": "Notification of Keisuke's prize. Enables fusion of Norn.",
+      "effect": "Notification of Keisuke's prize. Enables fusion of Norn.",
+      "price": "",
+      "location": "Complete Fortune Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Kid's Letter",
+      "description": "Letters from the kids Yuko trained. Enables fusion of Siegfried.",
+      "effect": "Letters from the kids Yuko trained. Enables fusion of Siegfried.",
+      "price": "",
+      "location": "Complete Strength Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Bead Ring",
+      "description": "The ring Maiko made. Enables fusion of Attis.",
+      "effect": "The ring Maiko made. Enables fusion of Attis.",
+      "price": "",
+      "location": "Complete Hanged Man Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Money Pouch",
+      "description": "Pouch Bebe made from Japanese cloth. Enables fusion of Yurlungur.",
+      "effect": "Pouch Bebe made from Japanese cloth. Enables fusion of Yurlungur.",
+      "price": "",
+      "location": "Complete Temperance Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Thank-you Letter",
+      "description": "Letter President Tanaka received. Enables fusion of Beelzebub.",
+      "effect": "Letter President Tanaka received. Enables fusion of Beelzebub.",
+      "price": "",
+      "location": "Complete Devil Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Reserve Tag",
+      "description": "Mutatsu's bottle tag. Enables fusion of Chi You.",
+      "effect": "Mutatsu's bottle tag. Enables fusion of Chi You.",
+      "price": "",
+      "location": "Complete Tower Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Car Key",
+      "description": "A car key received from Mamoru. Enables fusion of Helel.",
+      "effect": "A car key received from Mamoru. Enables fusion of Helel.",
+      "price": "",
+      "location": "Complete Star Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Gourmet License",
+      "description": "A license received from Nozomi. Enables fusion of Sandalphon.",
+      "effect": "A license received from Nozomi. Enables fusion of Sandalphon.",
+      "price": "",
+      "location": "Complete Moon Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Worn Notebook",
+      "description": "A notebook containing Akinari's story. Enables fusion of Asura.",
+      "effect": "A notebook containing Akinari's story. Enables fusion of Asura.",
+      "price": "",
+      "location": "Complete Sun Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Charred Screw",
+      "description": "Broken component from Aigis' body. Enables fusion of Metatron.",
+      "effect": "Broken component from Aigis' body. Enables fusion of Metatron.",
+      "price": "",
+      "location": "Complete Aeon Social Link",
+      "category": "Consumable"
+    },
+    {
+      "name": "Torn Black Cloth",
+      "description": "Enables the fusion of Pale Rider (13.0Death).",
+      "effect": "Enables the fusion of Pale Rider (13.0Death).",
+      "price": "",
+      "location": "Elizabeth's Request #8",
+      "category": "Consumable"
+    },
+    {
+      "name": "Sugar Key",
+      "description": "Enables the fusion of King Frost (04.0Emperor).",
+      "effect": "Enables the fusion of King Frost (04.0Emperor).",
+      "price": "",
+      "location": "Elizabeth's Request #22",
+      "category": "Consumable"
+    },
+    {
+      "name": "Machine Core",
+      "description": "Enables the fusion of Nata Taishi (07.0Chariot).",
+      "effect": "Enables the fusion of Nata Taishi (07.0Chariot).",
+      "price": "",
+      "location": "Elizabeth's Request #29",
+      "category": "Consumable"
+    },
+    {
+      "name": "Marionette",
+      "description": "Enables the fusion of Nebiros (09.0Hermit).",
+      "effect": "Enables the fusion of Nebiros (09.0Hermit).",
+      "price": "",
+      "location": "Elizabeth's Request #42",
+      "category": "Consumable"
+    },
+    {
+      "name": "Lily Petal",
+      "description": "Enables the fusion of Lilith (15.0Devil).",
+      "effect": "Enables the fusion of Lilith (15.0Devil).",
+      "price": "",
+      "location": "Elizabeth's Request #48",
+      "category": "Consumable"
+    },
+    {
+      "name": "Masakados",
+      "description": "Enables the fusion of Masakado (16.0Tower).",
+      "effect": "Enables the fusion of Masakado (16.0Tower).",
+      "price": "",
+      "location": "Elizabeth's Request #52",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 01",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Thebel 16F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 02",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Arqa 40F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 03",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Arqa 64F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 04",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Yabbashah 89F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 05",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Yabbashah 114F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 06",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Tziah 139F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 07",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Tziah 164F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Old Document 08",
+      "description": "A 10-year-old document found in Tartarus.",
+      "effect": "A 10-year-old document found in Tartarus.",
+      "price": "",
+      "location": "Fixed Chest (Harabah 214F)",
+      "category": "Consumable"
+    },
+    {
+      "name": "Anatomical Model",
+      "description": "Creepy plastic model of the human body.",
+      "effect": "Creepy plastic model of the human body.",
+      "price": "",
+      "location": "Visit the Laboratory in Gekkoukan High School’s first floor hallway",
+      "category": "Consumable"
+    },
+    {
+      "name": "Kanetsugu's Helm",
+      "description": "Replica of a Sengoku-era helm.",
+      "effect": "Replica of a Sengoku-era helm.",
+      "price": "",
+      "location": "Visit the Faculty Office in Gekkoukan High School seven times",
+      "category": "Consumable"
+    },
+    {
+      "name": "Pine Resin",
+      "description": "Powder used for archery. Looks like pine resin.",
+      "effect": "Powder used for archery. Looks like pine resin.",
+      "price": "",
+      "location": "Receive from Yukari on 5/2",
+      "category": "Consumable"
+    },
+    {
+      "name": "Handheld Game",
+      "description": "The \"Odin Cube\" disc is already in the tray.",
+      "effect": "The \"Odin Cube\" disc is already in the tray.",
+      "price": "",
+      "location": "Receive from Junpei on 5/14",
+      "category": "Consumable"
+    },
+    {
+      "name": "Fencing Epee",
+      "description": "The triangular tip of the sword is hard to bend.",
+      "effect": "The triangular tip of the sword is hard to bend.",
+      "price": "",
+      "location": "Receive from Mitsuru on 5/26",
+      "category": "Consumable"
+    },
+    {
+      "name": "Amateur Protein",
+      "description": "Very effective protein for amateur athletes.",
+      "effect": "Very effective protein for amateur athletes.",
+      "price": "",
+      "location": "Receive from Akihiko on 6/16",
+      "category": "Consumable"
+    },
+    {
+      "name": "Glasses Wipe",
+      "description": "It's wiped things besides his glasses…",
+      "effect": "It's wiped things besides his glasses…",
+      "price": "",
+      "location": "Receive from Ikutsuki on 6/20",
+      "category": "Consumable"
+    },
+    {
+      "name": "Poinsettia",
+      "description": "A plant with red leaves.",
+      "effect": "A plant with red leaves.",
+      "price": "",
+      "location": "Receive from Fuuka on 6/27",
+      "category": "Consumable"
+    },
+    {
+      "name": "Fruit Knife",
+      "description": "It seems old, but it's perfectly maintained.",
+      "effect": "It seems old, but it's perfectly maintained.",
+      "price": "",
+      "location": "Receive from Shinjiro on 9/17",
+      "category": "Consumable"
+    },
+    {
+      "name": "Machine Oil",
+      "description": "Used to maintain Aigis' advanced weaponry.",
+      "effect": "Used to maintain Aigis' advanced weaponry.",
+      "price": "",
+      "location": "Receive from Aigis on 10/1",
+      "category": "Consumable"
+    },
+    {
+      "name": "Small Cheongsam",
+      "description": "Enables the fusion of Hua Po (01.0Magician).",
+      "effect": "Enables the fusion of Hua Po (01.0Magician).",
+      "price": "",
+      "location": "Elizabeth's Request #56",
+      "category": "Consumable"
+    },
+    {
+      "name": "Blue Scale",
+      "description": "Enables the fusion of Empusa (10.0Fortune).",
+      "effect": "Enables the fusion of Empusa (10.0Fortune).",
+      "price": "",
+      "location": "Elizabeth's Request #57",
+      "category": "Consumable"
+    },
+    {
+      "name": "Book of Ancients",
+      "description": "Enables the fusion of Thoth (14.0Temperance).",
+      "effect": "Enables the fusion of Thoth (14.0Temperance).",
+      "price": "",
+      "location": "Elizabeth's Request #58",
+      "category": "Consumable"
+    },
+    {
+      "name": "Red Muffler",
+      "description": "Enables the fusion of Hell Biker (12.0Hanged Man).",
+      "effect": "Enables the fusion of Hell Biker (12.0Hanged Man).",
+      "price": "",
+      "location": "Elizabeth's Request #59",
+      "category": "Consumable"
+    },
+    {
+      "name": "Rainbow Feather",
+      "description": "Enables the fusion of Kartikeya (17.0Star).",
+      "effect": "Enables the fusion of Kartikeya (17.0Star).",
+      "price": "",
+      "location": "Elizabeth's Request #60",
+      "category": "Consumable"
+    },
+    {
+      "name": "Cipher's Mask",
+      "description": "Enables the fusion of Orpheus Telos (00.0Fool).",
+      "effect": "Enables the fusion of Orpheus Telos (00.0Fool).",
+      "price": "",
+      "location": "Max all Social Links (Level 10)\nReceive from Igor",
+      "category": "Consumable"
+    },
+    {
+      "name": "Key",
+      "description": "Key that emerged from the heart of a determined soul. Combine with other keys to escape the Abyss of Time.",
+      "effect": "Key that emerged from the heart of a determined soul. Combine with other keys to escape the Abyss of Time.",
+      "price": "",
+      "location": "Finish Empyrean section in the Desert of Doors",
+      "category": "Consumable"
+    },
+    {
+      "name": "True Key",
+      "description": "Key that opens the door to the outside world. Puts you in charge of the best course of action to escape the Abyss of Time.",
+      "effect": "Key that opens the door to the outside world. Puts you in charge of the best course of action to escape the Abyss of Time.",
+      "price": "",
+      "location": "Defeat all opponents in Colosseo Purgatorio",
+      "category": "Consumable"
+    },
+    {
+      "name": "Platinum Bookmark",
+      "description": "Elizabeth's treasured bookmark.",
+      "effect": "Elizabeth's treasured bookmark.",
+      "price": "",
+      "location": "Elizabeth's Request #55",
+      "category": "Consumable"
+    },
+    {
+      "name": "Turtleneck",
+      "description": "A turtleneck sweater.",
+      "effect": "A turtleneck sweater.",
+      "price": "",
+      "location": "Fuuka default\n(cannot be removed)",
+      "category": "Other"
+    },
+    {
+      "name": "Zip Hoodie",
+      "description": "A zip-up hooded sweatshirt.",
+      "effect": "A zip-up hooded sweatshirt.",
+      "price": "Sell: 600",
+      "location": "Ken default",
+      "category": "Other"
+    },
+    {
+      "name": "Knit Cardigan",
+      "description": "A cardigan made of wool.",
+      "effect": "A cardigan made of wool.",
+      "price": "Sell: 600",
+      "location": "Yukari default",
+      "category": "Other"
+    },
+    {
+      "name": "Dress Shirt",
+      "description": "A formal shirt worn with a suit.",
+      "effect": "A formal shirt worn with a suit.",
+      "price": "Sell: 600",
+      "location": "Junpei default",
+      "category": "Other"
+    },
+    {
+      "name": "Ruffled Blouse",
+      "description": "A frilly blouse.",
+      "effect": "A frilly blouse.",
+      "price": "Sell: 600",
+      "location": "Mitsuru default",
+      "category": "Other"
+    },
+    {
+      "name": "Plain Shirt",
+      "description": "A simple shirt.",
+      "effect": "A simple shirt.",
+      "price": "Sell: 600",
+      "location": "Protagonist default",
+      "category": "Other"
+    },
+    {
+      "name": "Red Vest",
+      "description": "A buttoned sweater vest.",
+      "effect": "A buttoned sweater vest.",
+      "price": "Sell: 600",
+      "location": "Akihiko default",
+      "category": "Other"
+    },
+    {
+      "name": "Long Pea Coat",
+      "description": "A long, thick coat.",
+      "effect": "A long, thick coat.",
+      "price": "Sell: 600",
+      "location": "Shinjiro default",
+      "category": "Other"
+    },
+    {
+      "name": "Rash Guard",
+      "description": "A highly elastic shirt.",
+      "effect": "A highly elastic shirt.",
+      "price": "3,500 / 2,625 | Sell: 875",
+      "location": "Police Station (4/21)\nCommon Chest (Thebel 7F, 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Camo Shirt*",
+      "description": "Great for field combat.",
+      "effect": "Great for field combat.",
+      "price": "3,700 / 2,775 | Sell: 925",
+      "location": "Police Station (4/21)\nCommon Chest (Thebel 7F, 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Amenity Suit",
+      "description": "A very comfortable suit.",
+      "effect": "A very comfortable suit.",
+      "price": "9,600 / 7,200 | Sell: 2,400",
+      "location": "Police Station (Lv 9)\nCommon Chest (Arqa 20F, 28F)",
+      "category": "Other"
+    },
+    {
+      "name": "Shirt of Chivalry*",
+      "description": "A traditional Japanese shirt for men.",
+      "effect": "A traditional Japanese shirt for men.",
+      "price": "Sell: 1,000",
+      "location": "Rare Chest (Thebel 7F, 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Bulletproof Shirt",
+      "description": "Firearm-resistant vest.",
+      "effect": "Firearm-resistant vest.",
+      "price": "10,000 / 7,500 | Sell: 2,500",
+      "location": "Junpei default (\"The Answer\")\nPolice Station (Lv 9)\nCommon Chest (Arqa 28F)",
+      "category": "Other"
+    },
+    {
+      "name": "Metal Protector",
+      "description": "A set of protective pads.",
+      "effect": "A set of protective pads.",
+      "price": "14,600 / 10,950 | Sell: 3,650",
+      "location": "Akihiko default (\"The Answer\")\nKen default (\"The Answer\")\nPolice Station (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")\nCommon Chest (46F, 51F)",
+      "category": "Other"
+    },
+    {
+      "name": "W.Uniform Aigis *",
+      "description": "Winter uniform for Aigis.",
+      "effect": "Winter uniform for Aigis.",
+      "price": "10,000",
+      "location": "School Vendor (Saturdays)\nElizabeth's Request #77",
+      "category": "Other"
+    },
+    {
+      "name": "All-purpose Apron",
+      "description": "Women's clothing for cooking or battle.",
+      "effect": "Women's clothing for cooking or battle.",
+      "price": "5,980 | Sell: 2,600",
+      "location": "Tanaka's Amazing Commodities (5/24)",
+      "category": "Other"
+    },
+    {
+      "name": "High-cut Armor *",
+      "description": "Armor that looks like a bikini.",
+      "effect": "Armor that looks like a bikini.",
+      "price": "Sell: 2,800",
+      "location": "Elizabeth's Request #6\nRare Chest (Arqa 20F, 28F, 55F, 61F)",
+      "category": "Other"
+    },
+    {
+      "name": "Master's Garment",
+      "description": "Only masters may wear this.",
+      "effect": "Only masters may wear this.",
+      "price": "15,600 / 11,700 | Sell: 3,900",
+      "location": "Yukari default (\"The Answer\")\nPolice Station (Lv 17)\nCommon Chest (Arqa 46F, 51F)\nCommon Chest (Malebolge 4F)",
+      "category": "Other"
+    },
+    {
+      "name": "Tigerhide Belt",
+      "description": "Men's belt made from tiger hide.",
+      "effect": "Men's belt made from tiger hide.",
+      "price": "Sell: 13,000",
+      "location": "Elizabeth's Request #23\nShuffle Time (Sword 4; \"The Answer\")\nRare Chest (Yabbashah 68F, 84F)",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Main *",
+      "description": "Winter outfit for <protagonist>.",
+      "effect": "Winter outfit for <protagonist>.",
+      "price": "",
+      "location": "Elizabeth's Request #71",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Junpei *",
+      "description": "Winter outfit for Junpei.",
+      "effect": "Winter outfit for Junpei.",
+      "price": "",
+      "location": "Elizabeth's Request #73",
+      "category": "Other"
+    },
+    {
+      "name": "S.Outfit Junpei *",
+      "description": "Summer outfit for Junpei.",
+      "effect": "Summer outfit for Junpei.",
+      "price": "",
+      "location": "Elizabeth's Request #68",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Akihiko *",
+      "description": "Winter outfit for Akihiko.",
+      "effect": "Winter outfit for Akihiko.",
+      "price": "",
+      "location": "Elizabeth's Request #74",
+      "category": "Other"
+    },
+    {
+      "name": "S.Outfit Akihiko *",
+      "description": "Summer outfit for Akihiko.",
+      "effect": "Summer outfit for Akihiko.",
+      "price": "",
+      "location": "Elizabeth's Request #69",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Ken *",
+      "description": "Winter outfit for Ken.",
+      "effect": "Winter outfit for Ken.",
+      "price": "",
+      "location": "Elizabeth's Request #76",
+      "category": "Other"
+    },
+    {
+      "name": "S.Outfit Yukari *",
+      "description": "Summer outfit for Yukari.",
+      "effect": "Summer outfit for Yukari.",
+      "price": "",
+      "location": "Elizabeth's Request #67",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Yukari *",
+      "description": "Winter outfit for Yukari.",
+      "effect": "Winter outfit for Yukari.",
+      "price": "",
+      "location": "Elizabeth's Request #72",
+      "category": "Other"
+    },
+    {
+      "name": "W.Outfit Mitsuru *",
+      "description": "Winter outfit for Mitsuru.",
+      "effect": "Winter outfit for Mitsuru.",
+      "price": "",
+      "location": "Elizabeth's Request #75",
+      "category": "Other"
+    },
+    {
+      "name": "S.Outfit Mitsuru *",
+      "description": "Summer outfit for Mitsuru.",
+      "effect": "Summer outfit for Mitsuru.",
+      "price": "Sell: 2,500",
+      "location": "Elizabeth's Request #70\nRare Chest (Antenora 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Nacre Torso",
+      "description": "Torso for Metis made from mother-of-pearl.",
+      "effect": "Torso for Metis made from mother-of-pearl.",
+      "price": "Sell: 4,250",
+      "location": "Metis default\nCommon Chest (Malebolge 4F)",
+      "category": "Other"
+    },
+    {
+      "name": "Amigo Poncho",
+      "description": "Cape-like outfit that covers the body.",
+      "effect": "Cape-like outfit that covers the body.",
+      "price": "22,000 / 16,500 | Sell: 5,500",
+      "location": "Police Station (Lv 26)\nCommon Chest (Yabbashah 66F, 68F, 84F)\nCommon Chest (Malebolge 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Bulletproof Vest",
+      "description": "Firearm-resistant vest.",
+      "effect": "Firearm-resistant vest.",
+      "price": "14,800 / 24,000 / 18,000 | Sell: 6,000",
+      "location": "Tanaka's Amazing Commodities (7/5)\nPolice Station (Lv 26)\nCommon Chest (68F, 84F)\nCommon Chest (Malebolge 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Rock Dog Suit",
+      "description": "Dog suit with a punk rock design.",
+      "effect": "Dog suit with a punk rock design.",
+      "price": "10,000 | Sell: 2,500",
+      "location": "Koromaru default (\"The Answer\")\nPolice Station\nShuffle Time (Sword 3/4; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Bisque Torso",
+      "description": "Torso for Metis made from ceramic.",
+      "effect": "Torso for Metis made from ceramic.",
+      "price": "25,000 | Sell: 6,250",
+      "location": "Police Station\nCommon Chest (Malebolge 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Aramid Semi-Shell",
+      "description": "Armor that protects Aigis' torso.",
+      "effect": "Armor that protects Aigis' torso.",
+      "price": "Sell: 4,250\n8,500",
+      "location": "Aigis default\nCommon Chest (Malebolge 2F)",
+      "category": "Other"
+    },
+    {
+      "name": "Tetra Jammer",
+      "description": "Armor with a talisman attached to it.",
+      "effect": "Armor with a talisman attached to it.",
+      "price": "37,900 / 28,425 | Sell: 9,475",
+      "location": "Mitsuru default (\"The Answer\")\nPolice Station (8/26)\nCommon Chest (91F, 105F)",
+      "category": "Other"
+    },
+    {
+      "name": "Aramid Full-Shell",
+      "description": "Armor that protects Aigis' entire body.",
+      "effect": "Armor that protects Aigis' entire body.",
+      "price": "52,000 / 39,750 / 25,000 | Sell: 6,250",
+      "location": "Police Station (7/24)\nCommon Chest (91F, 105F)\nCommon Chest (Malebolge 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Dog Suit",
+      "description": "Normal dog clothes.",
+      "effect": "Normal dog clothes.",
+      "price": "53,000 | Sell: 13,250",
+      "location": "Koromaru default\nPolice Station\nCommon Chest (Cocytus 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Robe of Salvation",
+      "description": "Robe inscribed with holy scriptures.",
+      "effect": "Robe inscribed with holy scriptures.",
+      "price": "40,000 / 30,000 | Sell: 10,000",
+      "location": "Police Station (8/26)\nCommon Chest (91F, 105F)\nCommon Chest (Cocytus 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Leather Dog Suit",
+      "description": "A dog suit made from leather.",
+      "effect": "A dog suit made from leather.",
+      "price": "60,000 / 45,000 | Sell: 15,000",
+      "location": "Police Station (8/8)\nCommon Chest (91F, 105F)\nCommon Chest (Caina 16F)",
+      "category": "Other"
+    },
+    {
+      "name": "Emergency Vest",
+      "description": "Protects from all natural disasters.",
+      "effect": "Protects from all natural disasters.",
+      "price": "29,800",
+      "location": "Tanaka's Amazing Commodities (8/16)",
+      "category": "Other"
+    },
+    {
+      "name": "Hero's Knickers",
+      "description": "Knickers worn by manly heroes of the past.",
+      "effect": "Knickers worn by manly heroes of the past.",
+      "price": "Sell: 13,000",
+      "location": "Shuffle Time (Sword 4; \"The Answer\")\nRare Chest (91F, 105F)\nRare Chest (Cocytus 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Blue Shorts *",
+      "description": "A bathing suit for <protagonist>.",
+      "effect": "A bathing suit for <protagonist>.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Red Shorts *",
+      "description": "A bathing suit for Junpei.",
+      "effect": "A bathing suit for Junpei.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Blue Swimwear *",
+      "description": "A bathing suit for Akihiko.",
+      "effect": "A bathing suit for Akihiko.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Baseball Jersey *",
+      "description": "Summer clothes for Ken.",
+      "effect": "Summer clothes for Ken.",
+      "price": "300,000 / 225,000 | Sell: 75,000\n2,500",
+      "location": "Police Station (7/24)\nRare Chest (Antenora 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Pink Bikini *",
+      "description": "A bathing suit for Yukari.",
+      "effect": "A bathing suit for Yukari.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Elegant Bikini *",
+      "description": "A bathing suit for Mitsuru.",
+      "effect": "A bathing suit for Mitsuru.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Sky Sundress *",
+      "description": "A one-piece dress for Aigis.",
+      "effect": "A one-piece dress for Aigis.",
+      "price": "300,000 / 225,000 | Sell: 75,000",
+      "location": "Police Station (7/24)",
+      "category": "Other"
+    },
+    {
+      "name": "Bulletproof Torso",
+      "description": "Torso for Metis made from synthetic fibers.",
+      "effect": "Torso for Metis made from synthetic fibers.",
+      "price": "60,000 | Sell: 15,000",
+      "location": "Police Station\nCommon Chest (Cocytus 2F)",
+      "category": "Other"
+    },
+    {
+      "name": "Mantle of Wind",
+      "description": "A mantle that's as light as the wind.",
+      "effect": "A mantle that's as light as the wind.",
+      "price": "63,400 / 47,550 | Sell: 15,850",
+      "location": "Police Station (9/23)\nCommon Chest (121F, 130F)",
+      "category": "Other"
+    },
+    {
+      "name": "Metal Dog Suit",
+      "description": "A dog suit made of metal.",
+      "effect": "A dog suit made of metal.",
+      "price": "Sell: 17,000",
+      "location": "Rare Chest (120F, 123F, 137F)\nShuffle Time (Sword 5; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Robe of Warding",
+      "description": "A robe that radiates an invisible shield.",
+      "effect": "A robe that radiates an invisible shield.",
+      "price": "65,600 / 49,200 | Sell: 16,400",
+      "location": "Police Station (9/23)\nCommon Chest (121F, 130F)\nCommon Chest (Caina 18F)",
+      "category": "Other"
+    },
+    {
+      "name": "Rangda Robe",
+      "description": "Women's clothes that ward off disasters.",
+      "effect": "Women's clothes that ward off disasters.",
+      "price": "Sell: 17,000",
+      "location": "Rare Chest (121F, 130F)\nRare Chest (Caina 16F)\nShuffle Time (Sword 5; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Aramid Plate",
+      "description": "Steel plate armor for Aigis.",
+      "effect": "Steel plate armor for Aigis.",
+      "price": "68,000 / 52,500 / 60,000 | Sell: 17,500\n15,000",
+      "location": "Police Station (9/23)\nCommon Chest (120F, 123F, 137F)\nCommon Chest (Cocytus 2F)",
+      "category": "Other"
+    },
+    {
+      "name": "Chevalier Torso",
+      "description": "Torso for Metis made from metal plating.",
+      "effect": "Torso for Metis made from metal plating.",
+      "price": "70,000 | Sell: 17,500",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Maid Outfit (A) *",
+      "description": "Maid outfit for Aigis.",
+      "effect": "Maid outfit for Aigis.",
+      "price": "Sell: 2,500",
+      "location": "Elizabeth's Request #84",
+      "category": "Other"
+    },
+    {
+      "name": "Light Dog Suit",
+      "description": "A very light dog suit.",
+      "effect": "A very light dog suit.",
+      "price": "94,000 / 70,500 | Sell: 23,500",
+      "location": "Police Station (11/2)\nCommon Chest (140F, 148F)",
+      "category": "Other"
+    },
+    {
+      "name": "Defender Cloak",
+      "description": "A cloak that covers the entire body.",
+      "effect": "A cloak that covers the entire body.",
+      "price": "108,000 / 81,000",
+      "location": "Police Station (11/2)\nCommon Chest (144F, 154F)",
+      "category": "Other"
+    },
+    {
+      "name": "Titanium Dog Suit",
+      "description": "A dog suit made of titanium.",
+      "effect": "A dog suit made of titanium.",
+      "price": "140,000 / 105,000 | Sell: 35,000",
+      "location": "Police Station (Lv 55)\nCommon Chest (170F, 176F, 182F)",
+      "category": "Other"
+    },
+    {
+      "name": "Gigantic Armor",
+      "description": "Very heavy, but durable armor.",
+      "effect": "Very heavy, but durable armor.",
+      "price": "116,800 / 87,600 | Sell: 29,200",
+      "location": "Police Station (11/2)\nCommon Chest (144F, 154F)",
+      "category": "Other"
+    },
+    {
+      "name": "S.Outfit Main *",
+      "description": "Summer clothes for <protagonist>.",
+      "effect": "Summer clothes for <protagonist>.",
+      "price": "",
+      "location": "Elizabeth's Request #66",
+      "category": "Other"
+    },
+    {
+      "name": "Stealth Shirt",
+      "description": "Men's shirt that cloaks the wearer.",
+      "effect": "Men's shirt that cloaks the wearer.",
+      "price": "Sell: 62,500",
+      "location": "Rare Chest (193F, 208F)\nShuffle Time (Sword 8; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Zircon Torso",
+      "description": "Torso for Metis made from diamond.",
+      "effect": "Torso for Metis made from diamond.",
+      "price": "120,000 | Sell: 30,000",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Aramid Compound",
+      "description": "Steel plate armor for Aigis' front and back.",
+      "effect": "Steel plate armor for Aigis' front and back.",
+      "price": "120,000 / 90,000 / 70,000 | Sell: 17,500",
+      "location": "Police Station (11/2)\nCommon Chest (145F, 153F, 162F)",
+      "category": "Other"
+    },
+    {
+      "name": "Cross Dog Suit",
+      "description": "Dog suit with a cross drawn on it.",
+      "effect": "Dog suit with a cross drawn on it.",
+      "price": "200,000 / 150,000 | Sell: 50,000",
+      "location": "Police Station (Lv 60)\nCommon Chest (196F, 205F)",
+      "category": "Other"
+    },
+    {
+      "name": "Kukai's Vestment",
+      "description": "The vestment of the famous monk, Kukai.",
+      "effect": "The vestment of the famous monk, Kukai.",
+      "price": "155,000 / 116,250",
+      "location": "Police Station (11/30)\nCommon Chest (170F, 176F, 182F)",
+      "category": "Other"
+    },
+    {
+      "name": "Sid's Jacket",
+      "description": "A black studded leather jacket for men.",
+      "effect": "A black studded leather jacket for men.",
+      "price": "128,000",
+      "location": "Tanaka's Amazing Commodities (11/15)",
+      "category": "Other"
+    },
+    {
+      "name": "Battle Leotard",
+      "description": "Light battle armor for females.",
+      "effect": "Light battle armor for females.",
+      "price": "Sell: 47,500",
+      "location": "Shuffle Time (Sword 7; \"The Answer\")\nRare Chest (167F, 174F, 189F)",
+      "category": "Other"
+    },
+    {
+      "name": "Kaiser Armor",
+      "description": "Armor with beautiful decorations.",
+      "effect": "Armor with beautiful decorations.",
+      "price": "169,000 / 126,750 | Sell: 42,250",
+      "location": "Police Station (11/30)\nCommon Chest (170F, 176F, 182F)",
+      "category": "Other"
+    },
+    {
+      "name": "Carbon Jacket",
+      "description": "Hard leather jacket for men.",
+      "effect": "Hard leather jacket for men.",
+      "price": "229,000 / 171,750 | Sell: 57,250",
+      "location": "Police Station (Lv 60)\nCommon Chest (196F, 205F)",
+      "category": "Other"
+    },
+    {
+      "name": "Spiked Bra",
+      "description": "Bra with spikes attached.",
+      "effect": "Bra with spikes attached.",
+      "price": "Sell: 62,500",
+      "location": "Rare Chest (199F, 206F, 212F)\nShuffle Time (Sword 8; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Ergo Scale",
+      "description": "Scaled armor for Aigis.",
+      "effect": "Scaled armor for Aigis.",
+      "price": "190,000 / 142,500 / 130,000 | Sell: 32,500",
+      "location": "Police Station (Lv 55)\nCommon Chest (167F, 174F, 189F)",
+      "category": "Other"
+    },
+    {
+      "name": "Jacquedrose",
+      "description": "Torso for Metis made by a skilled craftsman.",
+      "effect": "Torso for Metis made by a skilled craftsman.",
+      "price": "170,000 | Sell: 42,500",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Phantom Robe",
+      "description": "Robe made from translucent cloth.",
+      "effect": "Robe made from translucent cloth.",
+      "price": "242,000 / 181,500",
+      "location": "Police Station (Lv 60)\nCommon Chest (196F, 205F)",
+      "category": "Other"
+    },
+    {
+      "name": "Powered Dog Suit",
+      "description": "Mechanical body armor for dogs.",
+      "effect": "Mechanical body armor for dogs.",
+      "price": "304,000 / 228,000 | Sell: 76,000",
+      "location": "Police Station (Lv 65)\nCommon Chest (219F, 225F, 230F)\nCommon Chest (Empyrean 15F, 20F, 22F, 23F)",
+      "category": "Other"
+    },
+    {
+      "name": "Vermelies",
+      "description": "Torso for Metis made by a master craftsman.",
+      "effect": "Torso for Metis made by a master craftsman.",
+      "price": "240,000 | Sell: 60,000",
+      "location": "Police Station\nCommon Chest (Judecca 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Final Armor",
+      "description": "Armor made from OOPArts.",
+      "effect": "Armor made from OOPArts.",
+      "price": "320,000 / 240,000 | Sell: 80,000",
+      "location": "Police Station (Lv 65)\nCommon Chest (219F, 225F, 230F)\nCommon Chest (Empyrean 7F)",
+      "category": "Other"
+    },
+    {
+      "name": "Maid Outfit (Y) *",
+      "description": "Maid outfit for Yukari.",
+      "effect": "Maid outfit for Yukari.",
+      "price": "",
+      "location": "Elizabeth's Request #82",
+      "category": "Other"
+    },
+    {
+      "name": "Maid Outfit (M) *",
+      "description": "Maid outfit for Mitsuru.",
+      "effect": "Maid outfit for Mitsuru.",
+      "price": "",
+      "location": "Elizabeth's Request #83",
+      "category": "Other"
+    },
+    {
+      "name": "Demon's Mail",
+      "description": "Armor made from demon's hide.",
+      "effect": "Armor made from demon's hide.",
+      "price": "330,000 / 247,500 | Sell: 82,500",
+      "location": "Police Station (Lv 65)\nShuffle Time (Sword 9; \"The Answer\")\nCommon Chest (219F, 225F, 230F)\nCommon Chest (Empyrean 20F, 22F, 23F)",
+      "category": "Other"
+    },
+    {
+      "name": "Powered Suit",
+      "description": "Men's suit that amplifies one's strength.",
+      "effect": "Men's suit that amplifies one's strength.",
+      "price": "Sell: 88,000",
+      "location": "Rare Chest (219F, 225F, 230F)\nRare Chest (Empyrean 11F, 14F, 20F)",
+      "category": "Other"
+    },
+    {
+      "name": "Ergo Armor",
+      "description": "Armor made from special steel for Aigis.",
+      "effect": "Armor made from special steel for Aigis.",
+      "price": "240,000 / 195,000 / 175,000 | Sell: 65,000\n43,750",
+      "location": "Police Station (Lv 60)\nCommon Chest (199F, 206F, 212F)\nCommon Chest (Ptolomea 11F)",
+      "category": "Other"
+    },
+    {
+      "name": "Dark Dog Suit",
+      "description": "A dog suit that's been dyed black.",
+      "effect": "A dog suit that's been dyed black.",
+      "price": "320,000 / 240,000 | Sell: 80,000",
+      "location": "Police Station (Lv 70)\nCommon Chest (241F, 247F, 255F)",
+      "category": "Other"
+    },
+    {
+      "name": "Silver Plate",
+      "description": "Armor with silver decorations.",
+      "effect": "Armor with silver decorations.",
+      "price": "347,000 / 260,250 / 218,000 | Sell: 86,750",
+      "location": "Police Station (Lv 70)\nTanaka's Amazing Commodities (12/27)\nCommon Chest (241F, 247F, 255F)",
+      "category": "Other"
+    },
+    {
+      "name": "Oceanus Scale",
+      "description": "Torso for Metis made from divine scales.",
+      "effect": "Torso for Metis made from divine scales.",
+      "price": "330,000 | Sell: 82,500",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Papal Robe",
+      "description": "A robe blessed by a Pope.",
+      "effect": "A robe blessed by a Pope.",
+      "price": "347,000 / 270,000 | Sell: 90,000",
+      "location": "Police Station (Lv 70)\nCommon Chest (241F, 247F, 255F)\nRare Chest (Empyrean 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Lunar Dog Suit",
+      "description": "Dog suit with a moon embroidered on it.",
+      "effect": "Dog suit with a moon embroidered on it.",
+      "price": "",
+      "location": "Rare Chest (237F, 245F, 253F)\nRare Chest (Empyrean 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Fifth Number",
+      "description": "Flanked equipment for Aigis.",
+      "effect": "Flanked equipment for Aigis.",
+      "price": "352,000 / 262,500 / 260,000 | Sell: 65,000",
+      "location": "Police Station (Lv 65)\nCommon Chest (216F, 221F, 234F)\nCommon Chest (Judecca 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Papillon Method",
+      "description": "Colorful armor for Aigis.",
+      "effect": "Colorful armor for Aigis.",
+      "price": "400,000 / 300,000 / 360,000 | Sell: 90,000",
+      "location": "Police Station (Lv 70)\nCommon Chest (237F, 245F, 253F)\nCommon Chest (Empyrean 11F, 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Joruri Tengu",
+      "description": "A legendary warrior's torso for Metis.",
+      "effect": "A legendary warrior's torso for Metis.",
+      "price": "350,000 | Sell: 87,500",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Eternal Plate",
+      "description": "Women's armor that lasts forever.",
+      "effect": "Women's armor that lasts forever.",
+      "price": "",
+      "location": "Shuffle Time (Sword 9; \"The Answer\")\nRare Chest (Monad 4F, 7F)",
+      "category": "Other"
+    },
+    {
+      "name": "Soul of Athena",
+      "description": "Goddess' chestplate for Aigis.",
+      "effect": "Goddess' chestplate for Aigis.",
+      "price": "400,000 | Sell: 100,000",
+      "location": "Police Station (\"The Answer\")\nHeart Item (Messiah)",
+      "category": "Other"
+    },
+    {
+      "name": "Aura Dog Suit",
+      "description": "Dog suit that emits a mysterious light.",
+      "effect": "Dog suit that emits a mysterious light.",
+      "price": "",
+      "location": "Heart Item (Messiah)\nCommon Chest (Empyrean 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Hallowed Plate",
+      "description": "Savior's armor, worn only by men.",
+      "effect": "Savior's armor, worn only by men.",
+      "price": "Sell: 12,500",
+      "location": "Rare Chest (Monad 2F, 9F)\nCommon Chest (Empyrean 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Aigis Armor v.100",
+      "description": "The ultimate prototype armor for Aigis.",
+      "effect": "The ultimate prototype armor for Aigis.",
+      "price": "Sell: 50,000",
+      "location": "Rare Chest (Empyrean 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Meseauzer",
+      "description": "A divine torso for Metis.",
+      "effect": "A divine torso for Metis.",
+      "price": "Sell: 50,000",
+      "location": "Rare Chest (Empyrean 25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Armor of Light",
+      "description": "Armor engraved with a pentacle symbol.",
+      "effect": "Armor engraved with a pentacle symbol.",
+      "price": "",
+      "location": "Heart Item (Messiah)",
+      "category": "Other"
+    },
+    {
+      "name": "Engineer Boots",
+      "description": "Solidly made work boots.",
+      "effect": "Solidly made work boots.",
+      "price": "Sell: 500",
+      "location": "Protagonist default",
+      "category": "Other"
+    },
+    {
+      "name": "Brown Loafers",
+      "description": "An ordinary pair of loafers.",
+      "effect": "An ordinary pair of loafers.",
+      "price": "Sell: 500",
+      "location": "Yukari default",
+      "category": "Other"
+    },
+    {
+      "name": "Knee-high Boots",
+      "description": "Long, black boots.",
+      "effect": "Long, black boots.",
+      "price": "Sell: 500",
+      "location": "Mitsuru default",
+      "category": "Other"
+    },
+    {
+      "name": "Straight Tip",
+      "description": "Boots with a horizontal line over the toes.",
+      "effect": "Boots with a horizontal line over the toes.",
+      "price": "Sell: 500",
+      "location": "Junpei default",
+      "category": "Other"
+    },
+    {
+      "name": "Inverse Shoes",
+      "description": "Classic-model sneakers.",
+      "effect": "Classic-model sneakers.",
+      "price": "Sell: 500",
+      "location": "Akihiko default",
+      "category": "Other"
+    },
+    {
+      "name": "Soccer Shoes",
+      "description": "Shoes for playing indoor soccer.",
+      "effect": "Shoes for playing indoor soccer.",
+      "price": "Sell: 500",
+      "location": "Ken default",
+      "category": "Other"
+    },
+    {
+      "name": "Western Boots",
+      "description": "Low-heeled boots.",
+      "effect": "Low-heeled boots.",
+      "price": "Sell: 500",
+      "location": "Shinjiro default",
+      "category": "Other"
+    },
+    {
+      "name": "Black Loafers",
+      "description": "A pair of plain black loafers",
+      "effect": "A pair of plain black loafers",
+      "price": "Sell: 500",
+      "location": "Fuuka default",
+      "category": "Other"
+    },
+    {
+      "name": "Rubber Sole",
+      "description": "Boots with thick soles.",
+      "effect": "Boots with thick soles.",
+      "price": "2,400 / 1,800 | Sell: 600",
+      "location": "Police Station (4/21)\nCommon Chest (Thebel 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "High-tech Sandals",
+      "description": "Sandals with many bumps.",
+      "effect": "Sandals with many bumps.",
+      "price": "2,800 / 2,100 | Sell: 700",
+      "location": "Police Station (4/21)\nCommon Chest",
+      "category": "Other"
+    },
+    {
+      "name": "Rugged Geta",
+      "description": "A manly pair of geta, for men.",
+      "effect": "A manly pair of geta, for men.",
+      "price": "",
+      "location": "Rare Chest (Thebel 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Leather Boots",
+      "description": "Boots made out of leather.",
+      "effect": "Boots made out of leather.",
+      "price": "6,200 / 4,650 | Sell: 1,550",
+      "location": "Police Station (Lv 9)\nCommon Chest",
+      "category": "Other"
+    },
+    {
+      "name": "Inline Skates",
+      "description": "Shoes with a single row of wheels.",
+      "effect": "Shoes with a single row of wheels.",
+      "price": "6,400 / 4,800 | Sell: 1,600",
+      "location": "Police Station (Lv 9)\nCommon Chest (35F)",
+      "category": "Other"
+    },
+    {
+      "name": "Health Sandals",
+      "description": "Sandals that massage your pressure points.",
+      "effect": "Sandals that massage your pressure points.",
+      "price": "3,980 | Sell: 1,700",
+      "location": "Tanaka's Amazing Commodities (5/31)",
+      "category": "Other"
+    },
+    {
+      "name": "Mechanical Geta",
+      "description": "Geta made with the latest technology.",
+      "effect": "Geta made with the latest technology.",
+      "price": "9,300 / 6,975 | Sell: 2,325",
+      "location": "Police Station (Lv 17)\nCommon Chest\nRare Chest (Malebolge 5F)",
+      "category": "Other"
+    },
+    {
+      "name": "Combat Boots",
+      "description": "Boots from military surplus.",
+      "effect": "Boots from military surplus.",
+      "price": "10,100 / 7,575 | Sell: 2,525",
+      "location": "Yukari default (\"The Answer\")\nAkihiko default (\"The Answer\")\nKen default (\"The Answer\")\nPolice Station (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")\nCommon Chest (Yabbashah 61F)",
+      "category": "Other"
+    },
+    {
+      "name": "Beast Leggings",
+      "description": "Leopard-print leggings for women.",
+      "effect": "Leopard-print leggings for women.",
+      "price": "Sell: 2,700",
+      "location": "Shuffle Time (Sword 2; \"The Answer\")\nRare Chest (71F, 81F)",
+      "category": "Other"
+    },
+    {
+      "name": "Pearlite Legs",
+      "description": "Processed iron leg parts for Aigis.",
+      "effect": "Processed iron leg parts for Aigis.",
+      "price": "Sell: 3,000",
+      "location": "Aigis default",
+      "category": "Other"
+    },
+    {
+      "name": "Solid Pied",
+      "description": "Resin leg parts for Metis.",
+      "effect": "Resin leg parts for Metis.",
+      "price": "Sell: 3,000",
+      "location": "Metis default",
+      "category": "Other"
+    },
+    {
+      "name": "Crimson Greaves",
+      "description": "Greaves colored a dark red.",
+      "effect": "Greaves colored a dark red.",
+      "price": "14,000 / 10,500 | Sell: 3,500",
+      "location": "Police Station (Lv 26)\nCommon Chest (Yabbashah 71F)",
+      "category": "Other"
+    },
+    {
+      "name": "Max Safety Shoes",
+      "description": "Strong enough to take any punishment.",
+      "effect": "Strong enough to take any punishment.",
+      "price": "10,000 | Sell: 4,000",
+      "location": "Junpei default (\"The Answer\")\nTanaka's Amazing Commodities (7/12)\nRare Chest (Malebolge 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Magic Sandals",
+      "description": "Sandals that boost the wearer's magic.",
+      "effect": "Sandals that boost the wearer's magic.",
+      "price": "15,200 / 11,400 | Sell: 3,800",
+      "location": "Police Station (Lv 26)\nCommon Chest\nCommon Chest (Malebolge 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Warrior's Boots",
+      "description": "Men's greaves, worn by a veteran warrior.",
+      "effect": "Men's greaves, worn by a veteran warrior.",
+      "price": "Sell: 4,200",
+      "location": "Shuffle Time (Sword 3; \"The Answer\")\nRare Chest (96F, 103F)\nRare Chest (Malebolge 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Fullerene Legs",
+      "description": "Molecularly cohesive leg parts for Aigis.",
+      "effect": "Molecularly cohesive leg parts for Aigis.",
+      "price": "35,000 / 26,250 | Sell: 8,750",
+      "location": "Police Station (7/24)\nCommon Chest (Malebolge 11F)",
+      "category": "Other"
+    },
+    {
+      "name": "Bisque Pied",
+      "description": "Light ceramic leg parts for Metis.",
+      "effect": "Light ceramic leg parts for Metis.",
+      "price": "35,000 | Sell: 8,750",
+      "location": "Police Station\nCommon Chest (Malebolge 11F)",
+      "category": "Other"
+    },
+    {
+      "name": "Cyber Shoes",
+      "description": "Shoes made with modern technology.",
+      "effect": "Shoes made with modern technology.",
+      "price": "24,000 / 18,000 | Sell: 6,000",
+      "location": "Mitsuru default (\"The Answer\")\nPolice Station (8/26)\nCommon Chest",
+      "category": "Other"
+    },
+    {
+      "name": "Silent Sandals",
+      "description": "Sandals worn by ninjas.",
+      "effect": "Sandals worn by ninjas.",
+      "price": "28,000 / 21,000 | Sell: 7,000",
+      "location": "Police Station (8/26)\nCommon Chest",
+      "category": "Other"
+    },
+    {
+      "name": "Dragon Boots",
+      "description": "Men's boots embroidered with dragons.",
+      "effect": "Men's boots embroidered with dragons.",
+      "price": "20,000",
+      "location": "Tanaka's Amazing Commodities (8/23)",
+      "category": "Other"
+    },
+    {
+      "name": "Ceramic Legs",
+      "description": "Ceramic leg parts for Aigis.",
+      "effect": "Ceramic leg parts for Aigis.",
+      "price": "40,000 / 30,000 | Sell: 10,000",
+      "location": "Police Station (9/23)\nShuffle Time (Sword 4; \"The Answer\")\nCommon Chest (120F, 123F, 137F)\nCommon Chest (Cocytus 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Alumina Pied",
+      "description": "Light alloy leg parts for Metis.",
+      "effect": "Light alloy leg parts for Metis.",
+      "price": "40,000 | Sell: 10,000",
+      "location": "Police Station\nCommon Chest (Cocytus 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Needle Shoes",
+      "description": "Shoes with needles on the soles.",
+      "effect": "Shoes with needles on the soles.",
+      "price": "40,000 / 30,000 | Sell: 10,000",
+      "location": "Police Station (9/23)",
+      "category": "Other"
+    },
+    {
+      "name": "Jet Boots",
+      "description": "Boots with jet engines attached.",
+      "effect": "Boots with jet engines attached.",
+      "price": "45,600 / 34,200 | Sell: 11,400",
+      "location": "Police Station (9/23)",
+      "category": "Other"
+    },
+    {
+      "name": "Cobalt Legs",
+      "description": "Cobalt leg parts for Aigis.",
+      "effect": "Cobalt leg parts for Aigis.",
+      "price": "53,000 / 39,750 | Sell: 13,250",
+      "location": "Police Station (11/2)\nCommon Chest (145F, 153F)",
+      "category": "Other"
+    },
+    {
+      "name": "Titanium Pied",
+      "description": "Titanium leg parts for Metis.",
+      "effect": "Titanium leg parts for Metis.",
+      "price": "53,000 | Sell: 13,250",
+      "location": "Police Station\nCommon Chest (Caina 4F)",
+      "category": "Other"
+    },
+    {
+      "name": "Greaves of Dawn",
+      "description": "Exceptionally durable greaves.",
+      "effect": "Exceptionally durable greaves.",
+      "price": "68,800 / 51,600 | Sell: 17,200",
+      "location": "Police Station (11/2)",
+      "category": "Other"
+    },
+    {
+      "name": "Assassin's Shoes",
+      "description": "Very light shoes.",
+      "effect": "Very light shoes.",
+      "price": "75,200 / 56,400 | Sell: 18,800",
+      "location": "Police Station (11/2)\nCommon Chest (140F)",
+      "category": "Other"
+    },
+    {
+      "name": "R/C Geta",
+      "description": "Can supposedly be remote-controlled...",
+      "effect": "Can supposedly be remote-controlled...",
+      "price": "47,800",
+      "location": "Tanaka's Amazing Commodities (10/11)",
+      "category": "Other"
+    },
+    {
+      "name": "Vernal Sandals",
+      "description": "Sandals with a fresh scent.",
+      "effect": "Sandals with a fresh scent.",
+      "price": "Sell: 12,400",
+      "location": "Rare Chest (Tziah 116F, 124F, 133F)",
+      "category": "Other"
+    },
+    {
+      "name": "Quick Pumps",
+      "description": "Lightweight pumps for women.",
+      "effect": "Lightweight pumps for women.",
+      "price": "Sell: 12,400",
+      "location": "Shuffle Time (Sword 6; \"The Answer\")\nCommon Chest (Tziah 140F)\nRare Chest (148F)",
+      "category": "Other"
+    },
+    {
+      "name": "Titanium Legs",
+      "description": "Lightweight leg parts for Aigis.",
+      "effect": "Lightweight leg parts for Aigis.",
+      "price": "80,000 / 60,000 | Sell: 20,000",
+      "location": "Police Station (Lv 55)\nCommon Chest (167F)",
+      "category": "Other"
+    },
+    {
+      "name": "Zircon Pied",
+      "description": "Zirconium leg parts for Metis.",
+      "effect": "Zirconium leg parts for Metis.",
+      "price": "80,000 | Sell: 20,000",
+      "location": "Police Station\nCommon Chest (Antenora 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Killer Cleats",
+      "description": "Shoes with vicious-looking spikes.",
+      "effect": "Shoes with vicious-looking spikes.",
+      "price": "112,000 / 84,000 | Sell: 28,000",
+      "location": "Police Station (11/30)\nCommon Chest (178F)",
+      "category": "Other"
+    },
+    {
+      "name": "Lion Sandals",
+      "description": "Sandals with a lion drawn on them.",
+      "effect": "Sandals with a lion drawn on them.",
+      "price": "120,000 / 90,000 | Sell: 30,000",
+      "location": "Police Station (11/30)",
+      "category": "Other"
+    },
+    {
+      "name": "Mirage Sandals",
+      "description": "Sandals with dazzling silver ornaments.",
+      "effect": "Sandals with dazzling silver ornaments.",
+      "price": "192,000 / 144,000 | Sell: 48,000",
+      "location": "Police Station (Lv 60)\nCommon Chest (Harabah 193F, 209F)",
+      "category": "Other"
+    },
+    {
+      "name": "Cermet Legs",
+      "description": "Alloyed leg parts for Aigis.",
+      "effect": "Alloyed leg parts for Aigis.",
+      "price": "150,000 / 112,500 | Sell: 37,500",
+      "location": "Police Station (Lv 60)\nCommon Chest (221F, 234F)\nCommon Chest (Ptolomea 11F)",
+      "category": "Other"
+    },
+    {
+      "name": "Baskins",
+      "description": "Imitation dancing shoes for Metis.",
+      "effect": "Imitation dancing shoes for Metis.",
+      "price": "150,000 | Sell: 37,500",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "Shoes of Bane",
+      "description": "Hitmen's favorite shoes.",
+      "effect": "Hitmen's favorite shoes.",
+      "price": "200,000 / 150,00 / 79,800 | Sell: 50,000",
+      "location": "Police Station (Lv 60)\nTanaka's Amazing Commodities (11/22)\nCommon Chest (193F)",
+      "category": "Other"
+    },
+    {
+      "name": "Sexy Heels",
+      "description": "Heels that make women supersexy.",
+      "effect": "Heels that make women supersexy.",
+      "price": "Sell: 54,000",
+      "location": "Shuffle Time (Sword 8; \"The Answer\")\nRare Chest (167F, 174F, 189F, 193F)\nRare Chest (Ptolomea 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Idaten's Sandals",
+      "description": "Unbelievably light pair of sandals.",
+      "effect": "Unbelievably light pair of sandals.",
+      "price": "200,000 / 150,000 | Sell: 50,000",
+      "location": "Police Station (1/3)\nCommon Chest (227F, 235F)\nCommon Chest (Empyrean (17F)",
+      "category": "Other"
+    },
+    {
+      "name": "Ergo Legs",
+      "description": "Consolidated leg parts for Aigis.",
+      "effect": "Consolidated leg parts for Aigis.",
+      "price": "240,000 / 180,000 | Sell: 60,000",
+      "location": "Police Station (Lv 65)",
+      "category": "Other"
+    },
+    {
+      "name": "Leprechaun Toe",
+      "description": "Magical leg parts for Metis.",
+      "effect": "Magical leg parts for Metis.",
+      "price": "240,000 | Sell: 60,000",
+      "location": "Police Station",
+      "category": "Other"
+    },
+    {
+      "name": "War God's Boots",
+      "description": "A war god's spirit dwells in these boots.",
+      "effect": "A war god's spirit dwells in these boots.",
+      "price": "216,000 / 162,000 | Sell: 54,000",
+      "location": "Police Station (Level 65)\nRare Chest (Empyrean 15F, 17F, 20F, 22F, 23F)",
+      "category": "Other"
+    },
+    {
+      "name": "Goddess Boots",
+      "description": "Women's boots that lend beauty.",
+      "effect": "Women's boots that lend beauty.",
+      "price": "Sell: 56,000",
+      "location": "Shuffle Time (Sword 9; \"The Answer\")\nRare Chest (227F)\nRare Chest (Empyrean 15F, 17F, 20F, 22F, 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Kugelbein",
+      "description": "Leg parts for Aigis from the Beast God.",
+      "effect": "Leg parts for Aigis from the Beast God.",
+      "price": "260,000 / 195,000 | Sell: 65,000",
+      "location": "Police Station (Lv 70)\nCommon Chest (Empyrean 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Blood Aries",
+      "description": "Crimson leg parts for Metis.",
+      "effect": "Crimson leg parts for Metis.",
+      "price": "260,000 | Sell: 65,000",
+      "location": "Police Station\nCommon Chest (Empyrean 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Holy Shoes",
+      "description": "Boots that have been blessed.",
+      "effect": "Boots that have been blessed.",
+      "price": "224,000 / 1680,000 | Sell: 56,000",
+      "location": "Police Station (Level 70)\nRare Chest (Empyrean 22F)",
+      "category": "Other"
+    },
+    {
+      "name": "Hanzo's Sandals",
+      "description": "A famous ninja's sandals.",
+      "effect": "A famous ninja's sandals.",
+      "price": "235,000 / 176,250 | Sell: 58,750",
+      "location": "Police Station (Level 70)",
+      "category": "Other"
+    },
+    {
+      "name": "Swan Legs",
+      "description": "Angelic leg parts for Aigis.",
+      "effect": "Angelic leg parts for Aigis.",
+      "price": "300,000 | Sell: 75,000",
+      "location": "Police Station\nHeart Item (Messiah)\nCommon Chest (Empyrean 22F)",
+      "category": "Other"
+    },
+    {
+      "name": "Ella's Slippers",
+      "description": "Mysterious glass leg parts for Metis.",
+      "effect": "Mysterious glass leg parts for Metis.",
+      "price": "300,000 | Sell: 75,000",
+      "location": "Police Station\nCommon Chest (Empyrean 20F-24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Bare Paws",
+      "description": "The paw pads are very soft to the touch.",
+      "effect": "The paw pads are very soft to the touch.",
+      "price": "",
+      "location": "Koromaru default\n(cannot be removed)",
+      "category": "Other"
+    },
+    {
+      "name": "Eternal Shoes",
+      "description": "Women's boots that last forever.",
+      "effect": "Women's boots that last forever.",
+      "price": "",
+      "location": "Rare Chest (Monad 3F, 8F)",
+      "category": "Other"
+    },
+    {
+      "name": "Hallowed Boots",
+      "description": "Savior's boots worn only by men.",
+      "effect": "Savior's boots worn only by men.",
+      "price": "",
+      "location": "Rare Chest (Monad 5F-6F)\nRare Chest (Empyrean 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Centurion",
+      "description": "Supreme pitch-black leg parts for Metis.",
+      "effect": "Supreme pitch-black leg parts for Metis.",
+      "price": "Sell: 25",
+      "location": "Rare Chest (Empyrean 24F-25F)",
+      "category": "Other"
+    },
+    {
+      "name": "Shoes of Light",
+      "description": "Shoes with pentacle symbols.",
+      "effect": "Shoes with pentacle symbols.",
+      "price": "",
+      "location": "Heart Item (Messiah)",
+      "category": "Other"
+    },
+    {
+      "name": "Portable Player",
+      "description": "Portable music player.",
+      "effect": "Portable music player.",
+      "price": "Sell: 750",
+      "location": "Protagonist default",
+      "category": "Other"
+    },
+    {
+      "name": "Heart Choker",
+      "description": "Heart-shaped choker.",
+      "effect": "Heart-shaped choker.",
+      "price": "Sell: 750",
+      "location": "Yukari default",
+      "category": "Other"
+    },
+    {
+      "name": "Silver Necklace",
+      "description": "Simple necklace.",
+      "effect": "Simple necklace.",
+      "price": "Sell: 750",
+      "location": "Junpei default",
+      "category": "Other"
+    },
+    {
+      "name": "Leather Gloves",
+      "description": "Thin leather gloves.",
+      "effect": "Thin leather gloves.",
+      "price": "Sell: 750",
+      "location": "Akihiko default",
+      "category": "Other"
+    },
+    {
+      "name": "Fancy Nails",
+      "description": "Jewel-encrusted nails.",
+      "effect": "Jewel-encrusted nails.",
+      "price": "Sell: 750",
+      "location": "Mitsuru default",
+      "category": "Other"
+    },
+    {
+      "name": "Bead Necklace",
+      "description": "Necklace made from a string of beads.",
+      "effect": "Necklace made from a string of beads.",
+      "price": "",
+      "location": "Fuuka default\n(cannot be removed)",
+      "category": "Other"
+    },
+    {
+      "name": "Red Ribbon",
+      "description": "Big red ribbon.",
+      "effect": "Big red ribbon.",
+      "price": "Sell: 750",
+      "location": "Aigis default",
+      "category": "Other"
+    },
+    {
+      "name": "Koromaru Wings",
+      "description": "Made from angel wings.",
+      "effect": "Made from angel wings.",
+      "price": "Sell: 750",
+      "location": "Koromaru default",
+      "category": "Other"
+    },
+    {
+      "name": "Wristband",
+      "description": "Athletic wristband.",
+      "effect": "Athletic wristband.",
+      "price": "Sell: 750",
+      "location": "Ken default",
+      "category": "Other"
+    },
+    {
+      "name": "Beanie",
+      "description": "Simple knit cap.",
+      "effect": "Simple knit cap.",
+      "price": "Sell: 750",
+      "location": "Shinjiro default",
+      "category": "Other"
+    },
+    {
+      "name": "Silver Ring",
+      "description": "Simply designed silver ring.",
+      "effect": "Simply designed silver ring.",
+      "price": "Sell: 750",
+      "location": "Metis default",
+      "category": "Other"
+    },
+    {
+      "name": "Platinum Watch",
+      "description": "Made out of very expensive materials.",
+      "effect": "Made out of very expensive materials.",
+      "price": "16,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Power Band",
+      "description": "Strength increases by 1.",
+      "effect": "Strength increases by 1.",
+      "price": "1,000 / 750 | Sell: 250",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Mega Power Band",
+      "description": "Strength increases by 2.",
+      "effect": "Strength increases by 2.",
+      "price": "3,000 | Sell: 750",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Giga Power Band",
+      "description": "Strength increases by 3.",
+      "effect": "Strength increases by 3.",
+      "price": "2,980 / 7,000 | Sell: 1,750",
+      "location": "Tanaka's Amazing Commodities (5/10)\nBe Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Guard Band",
+      "description": "Endurance increases by 1.",
+      "effect": "Endurance increases by 1.",
+      "price": "1,000 / 750 | Sell: 250",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Mega Guard Band",
+      "description": "Endurance increases by 2.",
+      "effect": "Endurance increases by 2.",
+      "price": "3,000 | Sell: 750",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Giga Guard Band",
+      "description": "Endurance increases by 3.",
+      "effect": "Endurance increases by 3.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Magic Band",
+      "description": "Magic increases by 1.",
+      "effect": "Magic increases by 1.",
+      "price": "1,000 / 750 | Sell: 250",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Mega Magic Band",
+      "description": "Magic increases by 2.",
+      "effect": "Magic increases by 2.",
+      "price": "3,000 | Sell: 750",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Giga Magic Band",
+      "description": "Magic increases by 3.",
+      "effect": "Magic increases by 3.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Speed Band",
+      "description": "Agility increases by 1.",
+      "effect": "Agility increases by 1.",
+      "price": "1,000 / 750 | Sell: 250",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Mega Speed Band",
+      "description": "Agility increases by 2.",
+      "effect": "Agility increases by 2.",
+      "price": "3,000 | Sell: 750",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Giga Speed Band",
+      "description": "Agility increases by 3.",
+      "effect": "Agility increases by 3.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Luck Band",
+      "description": "Luck increases by 1.",
+      "effect": "Luck increases by 1.",
+      "price": "1,000 / 750 | Sell: 250",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Mega Luck Band",
+      "description": "Luck increases by 2.",
+      "effect": "Luck increases by 2.",
+      "price": "3,000 | Sell: 750",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Giga Luck Band",
+      "description": "Luck increases by 3.",
+      "effect": "Luck increases by 3.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Frenzy Beads",
+      "description": "Increases damage of normal attacks during Rage.",
+      "effect": "Increases damage of normal attacks during Rage.",
+      "price": "",
+      "location": "Common Chest (Arqa 35F)\nCommon Chest (Caina 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Warrior's Seal",
+      "description": "Low chance to counter physical attacks.",
+      "effect": "Low chance to counter physical attacks.",
+      "price": "",
+      "location": "Rare Chest (Arqa 17F, 26F, 33F, 42F)\nRare Chest (Malebolge 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Slash Ward",
+      "description": "Increases dodge against Slash attacks.",
+      "effect": "Increases dodge against Slash attacks.",
+      "price": "2,980 / 7,000 | Sell: 1,750",
+      "location": "Tanaka's Amazing Commodities (5/3)\nBe Blue V (Lv 17)\nShuffle Time (Sword 4; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Strike Ward",
+      "description": "Increases dodge against Strikes.",
+      "effect": "Increases dodge against Strikes.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nRare Chest (Caina 4F, 5F)",
+      "category": "Other"
+    },
+    {
+      "name": "Pierce Ward",
+      "description": "Increases dodge against Piercing.",
+      "effect": "Increases dodge against Piercing.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 4; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Slash Repeller",
+      "description": "Higher chance of dodge against Slash attacks.",
+      "effect": "Higher chance of dodge against Slash attacks.",
+      "price": "Sell: 9,000",
+      "location": "Shuffle Time (Sword 6; \"The Answer\")\nCommon Chest (Harabah)",
+      "category": "Other"
+    },
+    {
+      "name": "Strike Repeller",
+      "description": "Higher chance of dodge against Strikes.",
+      "effect": "Higher chance of dodge against Strikes.",
+      "price": "Sell: 9,000",
+      "location": "Shuffle Time (Sword 6; \"The Answer\")\nCommon Chest (Harabah)",
+      "category": "Other"
+    },
+    {
+      "name": "Pierce Repeller",
+      "description": "Higher chance of dodge against Piercing.",
+      "effect": "Higher chance of dodge against Piercing.",
+      "price": "Sell: 9,000",
+      "location": "Common Chest (Harabah)",
+      "category": "Other"
+    },
+    {
+      "name": "Flame Charm",
+      "description": "Increases dodge against Fire attacks.",
+      "effect": "Increases dodge against Fire attacks.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")\nRare Chest (Malebolge 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Ice Charm",
+      "description": "Increases dodge against Ice attacks.",
+      "effect": "Increases dodge against Ice attacks.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")\nRare Chest (Malebolge 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Thunder Charm",
+      "description": "Increases dodge against Electricity.",
+      "effect": "Increases dodge against Electricity.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Wind Charm",
+      "description": "Increases dodge against Wind attacks.",
+      "effect": "Increases dodge against Wind attacks.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 2; \"The Answer\")\nCommon Chest (Malebolge 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Eye of Flame",
+      "description": "Higher chance of dodge against Fire attacks.",
+      "effect": "Higher chance of dodge against Fire attacks.",
+      "price": "Sell: 9,000",
+      "location": "Be Blue V (7/3)\nShuffle Time (Sword 7)\nShuffle Time (Sword 2; \"The Answer\")\nRare Chest (Antenora 1F)",
+      "category": "Other"
+    },
+    {
+      "name": "Eye of Ice",
+      "description": "Higher chance of dodge against Ice attacks.",
+      "effect": "Higher chance of dodge against Ice attacks.",
+      "price": "Sell: 9,000",
+      "location": "Shuffle Time (Sword 7)\nRare Chest (Antenora 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Eye of Thunder",
+      "description": "Higher chance of dodge against Electricity attacks.",
+      "effect": "Higher chance of dodge against Electricity attacks.",
+      "price": "Sell: 9,000",
+      "location": "Shuffle Time (Sword 7)\nShuffle Time (Sword 5; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Eye of Wind",
+      "description": "Higher chance of dodge against Wind attacks.",
+      "effect": "Higher chance of dodge against Wind attacks.",
+      "price": "Sell: 9,000",
+      "location": "Shuffle Time (Sword 7)\nShuffle Time (Sword 5; \"The Answer\")\nRare Chest (Antenora 6F)",
+      "category": "Other"
+    },
+    {
+      "name": "Shadow Sensor",
+      "description": "Lowers enemy's rate of surprise attack.",
+      "effect": "Lowers enemy's rate of surprise attack.",
+      "price": "",
+      "location": "Rare Chest (167F, 189F)",
+      "category": "Other"
+    },
+    {
+      "name": "Masakado's Hair",
+      "description": "Increases Evade against Physical attacks.",
+      "effect": "Increases Evade against Physical attacks.",
+      "price": "",
+      "location": "Heart Item (Masakado)",
+      "category": "Other"
+    },
+    {
+      "name": "Book of Enoch",
+      "description": "Double dodge against all magical attacks, excluding light, darkness and almighty.",
+      "effect": "Double dodge against all magical attacks, excluding light, darkness and almighty.",
+      "price": "",
+      "location": "Heart Item (Metatron)",
+      "category": "Other"
+    },
+    {
+      "name": "Barbaric Bracers",
+      "description": "Increase chance of dodging by a lot.",
+      "effect": "Increase chance of dodging by a lot.",
+      "price": "",
+      "location": "Heart Item (Chi You)",
+      "category": "Other"
+    },
+    {
+      "name": "Divine Pillar",
+      "description": "Lowers damage received but cannot dodge.",
+      "effect": "Lowers damage received but cannot dodge.",
+      "price": "",
+      "location": "Heart Item (Alilat)",
+      "category": "Other"
+    },
+    {
+      "name": "Black God's Rock",
+      "description": "Nullifies Slash damage.",
+      "effect": "Nullifies Slash damage.",
+      "price": "",
+      "location": "Heart Item (Chernobog)",
+      "category": "Other"
+    },
+    {
+      "name": "Kohryuu's Scale",
+      "description": "Nullifies Strike damage.",
+      "effect": "Nullifies Strike damage.",
+      "price": "",
+      "location": "Heart Item (Kohryu)",
+      "category": "Other"
+    },
+    {
+      "name": "Mystic Rock",
+      "description": "Nullifies Pierce damage.",
+      "effect": "Nullifies Pierce damage.",
+      "price": "",
+      "location": "Heart Item (Seiten Taisei)",
+      "category": "Other"
+    },
+    {
+      "name": "Blazing Flame",
+      "description": "Nullifies Fire damage.",
+      "effect": "Nullifies Fire damage.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Surt)",
+      "category": "Other"
+    },
+    {
+      "name": "Frozen Stone",
+      "description": "Nullifies Ice damage.",
+      "effect": "Nullifies Ice damage.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Gabriel)",
+      "category": "Other"
+    },
+    {
+      "name": "Lightning Gloves",
+      "description": "Nullifies Electricity damage.",
+      "effect": "Nullifies Electricity damage.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Thor)",
+      "category": "Other"
+    },
+    {
+      "name": "Storm Ring",
+      "description": "Nullifies Wind damage.",
+      "effect": "Nullifies Wind damage.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Jatayu)",
+      "category": "Other"
+    },
+    {
+      "name": "Radiant Halo",
+      "description": "Nullifies Light.",
+      "effect": "Nullifies Light.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Melchizedek)",
+      "category": "Other"
+    },
+    {
+      "name": "Ring of Darkness",
+      "description": "Nullifies Darkness.",
+      "effect": "Nullifies Darkness.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Thanatos)",
+      "category": "Other"
+    },
+    {
+      "name": "Omnipotent Orb",
+      "description": "Nullifies all kinds of attacks except Almighty.",
+      "effect": "Nullifies all kinds of attacks except Almighty.",
+      "price": "",
+      "location": "Heart Item (Messiah)\nElizabeth's Request #55",
+      "category": "Other"
+    },
+    {
+      "name": "Frost Cap",
+      "description": "Prevents you from being Frozen.",
+      "effect": "Prevents you from being Frozen.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Jack Frost)\nShuffle Time (Sword 6; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Lightning Armlet",
+      "description": "Prevents you from being Shocked.",
+      "effect": "Prevents you from being Shocked.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Take-Minakata / Take-Mikazuchi)\nShuffle Time (Sword 6; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Narcissus Flower",
+      "description": "Prevents you from becoming Charmed.",
+      "effect": "Prevents you from becoming Charmed.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Narcissus)\nShuffle Time (Sword 8; \"The Answer\")\nRare Chest (Empyrean 6F, 7F)",
+      "category": "Other"
+    },
+    {
+      "name": "Staunch Anklets",
+      "description": "Prevents you from becoming Distressed.",
+      "effect": "Prevents you from becoming Distressed.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Flauros)\nShuffle Time (Sword 7; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Unbreakable Cage",
+      "description": "Prevents you from becoming Panicked.",
+      "effect": "Prevents you from becoming Panicked.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Legion)\nShuffle Time (Sword 7; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Serpent's Eye",
+      "description": "Prevents you from becoming Frightened.",
+      "effect": "Prevents you from becoming Frightened.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Yamatano-orochi)\nShuffle Time (Sword 7; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Ring of Serenity",
+      "description": "Prevents you from becoming Enraged.",
+      "effect": "Prevents you from becoming Enraged.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Fortuna)\nShuffle Time (Sword 7; \"The Answer\")\nRare Chest (Judecca 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Alicorn",
+      "description": "Prevents you from being Poisoned.",
+      "effect": "Prevents you from being Poisoned.",
+      "price": "Sell: 4,000",
+      "location": "Heart Item (Unicorn)\nShuffle Time (Sword 6; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Tome of the Void",
+      "description": "Protects you from ailments.",
+      "effect": "Protects you from ailments.",
+      "price": "",
+      "location": "Heart Item (Abaddon)",
+      "category": "Other"
+    },
+    {
+      "name": "Fire Bracers",
+      "description": "Increases Fire damage.",
+      "effect": "Increases Fire damage.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Agni Bracers",
+      "description": "Increases Fire damage by a large amount.",
+      "effect": "Increases Fire damage by a large amount.",
+      "price": "36,000 | Sell: 9,000",
+      "location": "Be Blue V (Lv 26)",
+      "category": "Other"
+    },
+    {
+      "name": "Ice Bracers",
+      "description": "Increases Ice damage.",
+      "effect": "Increases Ice damage.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Varuna Bracers",
+      "description": "Increases Ice damage by a large amount.",
+      "effect": "Increases Ice damage by a large amount.",
+      "price": "36,000 / 17,800 | Sell: 9,000",
+      "location": "Be Blue V (Lv 26)\nTanaka's Amazing Commodities (8/30)",
+      "category": "Other"
+    },
+    {
+      "name": "Thunder Bracers",
+      "description": "Increases Electricity damage.",
+      "effect": "Increases Electricity damage.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Indra Bracers",
+      "description": "Increases Electricity dmg by a large amount.",
+      "effect": "Increases Electricity dmg by a large amount.",
+      "price": "36,000 / 17,800 | Sell: 9,000",
+      "location": "Be Blue V (Lv 26)\nTanaka's Amazing Commodities (10/18)\nCommon Chest (Tziah)",
+      "category": "Other"
+    },
+    {
+      "name": "Wind Bracers",
+      "description": "Increases Wind damage.",
+      "effect": "Increases Wind damage.",
+      "price": "7,000 | Sell: 1,750",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Vayu Bracers",
+      "description": "Increases Wind damage by a large amount.",
+      "effect": "Increases Wind damage by a large amount.",
+      "price": "36,000 | Sell: 9,000",
+      "location": "Be Blue V (Lv 26)\nCommon Chest (Tziah)",
+      "category": "Other"
+    },
+    {
+      "name": "War God's Seal",
+      "description": "Medium chance to counter attacks.",
+      "effect": "Medium chance to counter attacks.",
+      "price": "",
+      "location": "Common Chest (Adamah)",
+      "category": "Other"
+    },
+    {
+      "name": "Berserker's Seal",
+      "description": "High chance to counter physical attacks.",
+      "effect": "High chance to counter physical attacks.",
+      "price": "39,800 | Sell: 20,000",
+      "location": "Tanaka's Amazing Commodities (11/1)\nElizabeth's Request #31\nElizabeth's Request #44\nShuffle Time (Sword 8; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Life Ring",
+      "description": "Increases max HP by 10%.",
+      "effect": "Increases max HP by 10%.",
+      "price": "3,000 / 2,250 | Sell: 750",
+      "location": "Be Blue V (4/21)\nShuffle Time (Sword 4; \"The Answer\")",
+      "category": "Other"
+    },
+    {
+      "name": "Energy Ring",
+      "description": "Increases max HP by 20%.",
+      "effect": "Increases max HP by 20%.",
+      "price": "10,000 | Sell: 2,500",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Vitality Ring",
+      "description": "Increases max HP by 30%.",
+      "effect": "Increases max HP by 30%.",
+      "price": "30,000 | Sell: 7,500",
+      "location": "Be Blue V (Lv 17)",
+      "category": "Other"
+    },
+    {
+      "name": "Spirit Ring",
+      "description": "Increases Max SP by 10%.",
+      "effect": "Increases Max SP by 10%.",
+      "price": "3,000 / 2,250 | Sell: 750",
+      "location": "Be Blue V (4/21)",
+      "category": "Other"
+    },
+    {
+      "name": "Spell Ring",
+      "description": "Increases Max SP by 20%.",
+      "effect": "Increases Max SP by 20%.",
+      "price": "10,000 | Sell: 2,500",
+      "location": "Be Blue V (Lv 9)",
+      "category": "Other"
+    },
+    {
+      "name": "Magic Ring",
+      "description": "Increases Max SP by 30%.",
+      "effect": "Increases Max SP by 30%.",
+      "price": "30,000 | Sell: 7,500",
+      "location": "Be Blue V (Lv 17)\nShuffle Time (Sword 9; \"The Answer\")\nRare Chest (Empyrean 24F)",
+      "category": "Other"
+    },
+    {
+      "name": "Power Enhancer",
+      "description": "Gain Tarukaja at beginning of battle.",
+      "effect": "Gain Tarukaja at beginning of battle.",
+      "price": "16,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 9)\nShuffle Time (Sword 3; \"The Answer\")\nRare Chest (Cocytus 3F)",
+      "category": "Other"
+    },
+    {
+      "name": "Guard Enhancer",
+      "description": "Gain Rakukaja at beginning of battle.",
+      "effect": "Gain Rakukaja at beginning of battle.",
+      "price": "16,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 9)\nShuffle Time (Sword 3; \"The Answer\")\nCommon Chest (Cocytus 2F)",
+      "category": "Other"
+    },
+    {
+      "name": "Speed Enhancer",
+      "description": "Gain Sukukaja at beginning of battle.",
+      "effect": "Gain Sukukaja at beginning of battle.",
+      "price": "16,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 9)\nShuffle Time (Sword 3; \"The Answer\")\nCommon Chest (Cocytus 4F, 6F, 10F)",
+      "category": "Other"
+    },
+    {
+      "name": "Prayer Beads",
+      "description": "Low revival chance for death from Darkness.",
+      "effect": "Low revival chance for death from Darkness.",
+      "price": "16,000 / 10,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 9)\nTanaka's Amazing Commodities (9/13)",
+      "category": "Other"
+    },
+    {
+      "name": "Rosary",
+      "description": "Low revival chance for Light-induced death.",
+      "effect": "Low revival chance for Light-induced death.",
+      "price": "16,000 | Sell: 4,000",
+      "location": "Be Blue V (Lv 9)\nCommon Chest (Cocytus 13F)",
+      "category": "Other"
+    },
+    {
+      "name": "Land Badge",
+      "description": "Restores a tiny bit of HP every turn.",
+      "effect": "Restores a tiny bit of HP every turn.",
+      "price": "24,800 | Sell: 4,000",
+      "location": "Tanaka's Amazing Commodities (6/21)\nElizabeth's Request #13\nShuffle Time (Sword 3; \"The Answer\")\nRare Chest (Cocytus 12F)",
+      "category": "Other"
+    },
+    {
+      "name": "Earth Badge",
+      "description": "Restores a little bit of HP every turn.",
+      "effect": "Restores a little bit of HP every turn.",
+      "price": "Sell: 20,000",
+      "location": "Shuffle Time (Sword 5; \"The Answer\")\nCommon Chest (Adamah)\nRare Chest (Antenora 23F)",
+      "category": "Other"
+    },
+    {
+      "name": "Space Badge",
+      "description": "Restores a bit of HP every turn.",
+      "effect": "Restores a bit of HP every turn.",
+      "price": "Sell: 97,000",
+      "location": "Elizabeth's Request #43\nElizabeth's Request #45",
+      "category": "Other"
+    },
+    {
+      "name": "Mage's Mark",
+      "description": "Restores a tiny bit of SP every turn.",
+      "effect": "Restores a tiny bit of SP every turn.",
+      "price": "39,800",
+      "location": "Tanaka's Amazing Commodities (7/19)",
+      "category": "Other"
+    },
+    {
+      "name": "Sorcerer's Mark",
+      "description": "Restores a little bit of SP every turn.",
+      "effect": "Restores a little bit of SP every turn.",
+      "price": "Sell: 20,000",
+      "location": "Shuffle Time (Sword 5; \"The Answer\")\nCommon Chest (Adamah)",
+      "category": "Other"
+    },
+    {
+      "name": "Wizard's Mark",
+      "description": "Restores a bit of SP every turn.",
+      "effect": "Restores a bit of SP every turn.",
+      "price": "",
+      "location": "Elizabeth's Request #36",
+      "category": "Other"
+    },
+    {
+      "name": "Sigma Drive",
+      "description": "Lowers chance of sustaining crit hit.",
+      "effect": "Lowers chance of sustaining crit hit.",
+      "price": "89,800 | Sell: 44,000",
+      "location": "Tanaka's Amazing Commodities (11/29)\nElizabeth's Request #9\nRare Chest (Arqa 55F)\nCommon Chest (Cocytus 14F)",
+      "category": "Other"
+    },
+    {
+      "name": "Omega Drive",
+      "description": "Increases chance of dealing critical hits.",
+      "effect": "Increases chance of dealing critical hits.",
+      "price": "89,800 | Sell: 44,000",
+      "location": "Tanaka's Amazing Commodities (12/13)\nElizabeth's Request #50\nShuffle Time (Sword 8; \"The Answer\")\nRare Chest (Empyrean 20F)",
+      "category": "Other"
+    },
+    {
+      "name": "Rudra Ring",
+      "description": "Halves cost of HP when using physical skills.",
+      "effect": "Halves cost of HP when using physical skills.",
+      "price": "",
+      "location": "Heart Item (Shiva)",
+      "category": "Other"
+    },
+    {
+      "name": "Chakra Ring",
+      "description": "Halves cost of SP when using magical skills.",
+      "effect": "Halves cost of SP when using magical skills.",
+      "price": "",
+      "location": "Heart Item (Vishnu)",
+      "category": "Other"
+    },
+    {
+      "name": "Draupnir",
+      "description": "Increases healing by a large amount.",
+      "effect": "Increases healing by a large amount.",
+      "price": "Sell: 44,000",
+      "location": "Heart Item (Odin)",
+      "category": "Other"
+    },
+    {
+      "name": "Spirit Bracers",
+      "description": "Grants 1 HP when HP reaches 0. 1 time.",
+      "effect": "Grants 1 HP when HP reaches 0. 1 time.",
+      "price": "Sell: 44,000",
+      "location": "Heart Item (Titan)\nElizabeth's Request #40\nRare Chest (Ptolomea 19F)",
+      "category": "Other"
+    },
+    {
+      "name": "Sacrificial Idol",
+      "description": "Grants full HP when HP reaches 0. 1 time.",
+      "effect": "Grants full HP when HP reaches 0. 1 time.",
+      "price": "Sell: 213,500",
+      "location": "Elizabeth's Request #51",
+      "category": "Other"
+    },
+    {
+      "name": "Indigo Cape",
+      "description": "Increases chance of escape.",
+      "effect": "Increases chance of escape.",
+      "price": "Sell: 20,000",
+      "location": "Heart Item (Pyro Jack)\nRare Chest (165F, 178F, 187F)",
+      "category": "Other"
+    }
+  ]
+}

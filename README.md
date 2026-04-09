@@ -1,124 +1,84 @@
-# Persona Companion App
+# 🎭 Persona Companion App v6.0.0
 
-A comprehensive companion and reference app for the mainline Persona series. Version 5.0 marks the final major feature release, providing complete databases for personas, enemies, social links, confidants, and classroom answers.
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
+[![Version](https://img.shields.io/badge/Version-6.0.0--WIP-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
+[![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
-## Supported Games
+> The ultimate, all-in-one "Absolute Perfection" reference tool for the Persona series.
 
-- **Persona 3 FES** - Full compendium, enemies, social links, and classroom answers
-- **Persona 3 Portable** - Male MC & FeMC social links, personas, enemies, and classroom answers
-- **Persona 3 Reload** - Complete compendium, including Episode Aigis DLC
-- **Persona 4 Golden** - Full compendium, enemies, social links, and classroom answers
-- **Persona 5 / Persona 5 Royal** - Complete compendium, enemies, confidants, and classroom answers
+The **Persona Companion App** is a high-performance, native Android application (built with Jetpack Compose & Material 3) designed to be your best friend during a Persona playthrough. From the deep dark of Tartarus to the neon streets of Shibuya, we've got you covered.
 
-## Features
+---
 
-### Multi-Device Support
+## 💎 New in v6.0.0: The "Item Compendium" Update
+We have unified and standardized the item databases across the entire series.
+- **5,000+ Items** processed into a lightning-fast universal format.
+- **P5 Royal**: 1,873 items (Standardized shorthand schema).
+- **P3 Reload**: 1,229 items (Fully mapped).
+- **P4 Golden**: 1,196 items (All categories fixed).
+- **P3 FES/Portable**: 690 items (Unified database).
 
-- **Phone Mode** - Touch-optimized interface with compact layouts
-- **Tablet Mode** - Dual-pane layouts to take advantage of larger screens
-- **Android TV** - D-pad navigation with scaled text and images
-- **Cast Mode** - Stream data directly to your TV via Chromecast
+---
 
-### Browse & Search
+## 🎮 Supported Titles
 
-- Full persona compendium with stats, skills, and fusion recipes
-- Enemy database detailing weaknesses, resistances, and drop items
-- Social Links and Confidants with complete dialogue choices and point values
-- Classroom answers for all supported titles with correct solutions
-- Advanced filtering capabilities (game, arcana, level, DLC, Episode Aigis)
+| Game | Features | Theme |
+| :--- | :--- | :--- |
+| **Persona 3 Reload** | Full Compendium, Episode Aigis | 🔵 Indigo Blue |
+| **Persona 5 Royal** | Confidants, Itemization, DLC | 🔴 Rebellion Red |
+| **Persona 4 Golden** | Quests, Social Links, Fusion | 🟡 Investigation Yellow |
+| **Persona 3 FES/P** | Both MC Routes, Requests | 💠 Sea Blue |
 
-### HD Images (Optional)
+---
 
-The app is fully functional offline without images, but supports high-quality assets if you want them. Image spaces automatically hide if the pack isn't installed.
+## 🔥 Key Features
 
-- Download the 1.3GB image pack directly from Settings
-- Alternatively, import a local images.zip file
-- Includes persona/enemy profile pictures and a full-size image viewer on mobile
+### 📚 Comprehensive Databases
+- **Persona Compendium**: Stats, full skillsets, and advanced fusion recipes.
+- **Enemy Bestiary**: Weaknesses, resistances, and standard/rare drop items.
+- **Social Link Guides**: Optimized dialogue choices to max out your ranks.
+- **Classroom Answers**: Never miss a point on exams across all titles.
 
-### Quality of Life
+### 📱 Premium UX/UI
+- **Multi-Device**: Optimized for Phones, Tablets, Android TV, and ChromeCast.
+- **Smart Filters**: Filter by Arcana, Level, DLC status, or Element.
+- **HD Image Support**: Optional 1.3GB HD asset pack for full immersion.
+- **OLED Dark Mode**: True black themes for battery efficiency and night gaming.
 
-- **Favorites & History** - Save frequently used personas/enemies and access recently viewed items
-- **Smart Filtering** - Toggle DLC personas, Episode Aigis content, and P3P protagonist routes
-- **Share Functionality** - Share personas, enemies, social links, and confidants with full details including boss phases
-- **OLED Dark Theme** - Built-in dark mode optimized for battery saving on OLED screens
-- **Automatic Updates** - Built-in update checker to stay current with new releases
+---
 
-## Installation
-
-### Android App
-
-1. Download the latest APK from the [Releases](https://github.com/Sentovibes/persona-companion-app/releases) tab
-2. Install on your Android device (requires Android 8.0+)
-3. Optionally download HD images from Settings
-
-### Web Version
-
-Access the web version directly in your browser (no installation required):
-
-**[https://sentovibes.github.io/persona-companion-app/web/](https://sentovibes.github.io/persona-companion-app/web/)**
-
-The web version includes:
-- Full persona and enemy databases
-- Classroom answers
-- Search and filtering
-- Responsive design for mobile and desktop
-- Works offline after first load
-
-Note: Images and fusion calculator are not available in the web version.
-
-## HD Images Setup
-
-If you want the visual assets, you have two options:
-
-### Option 1: In-App Download
-
-1. Open **Settings > HD Images**
-2. Tap **Download** (Note: this is a 1.3GB file)
-3. Wait for the extraction to complete
-
-### Option 2: Import Local File
-
-1. Download `images.zip` from [persona-companion-images](https://github.com/Sentovibes/persona-companion-images/releases)
-2. Open **Settings > HD Images** in the app
-3. Tap **Import** and select the downloaded ZIP file
-
-## Building from Source
+## 🛠️ Building & Development
 
 ```bash
 # Clone the repository
 git clone https://github.com/Sentovibes/persona-companion-app.git
-cd persona-companion-app
 
-# Build debug APK (includes images)
+# Build the core app
 ./gradlew assembleDebug
-
-# Build release APK (no images)
-./gradlew assembleRelease
 ```
 
-
-## Credits
-
-- Data sourced from the [Megaten Fusion Tool](https://github.com/aqiu384/megaten-fusion-tool)
-- Images compiled from various Persona wikis and community sources
-- Built natively with Jetpack Compose and Material 3
-
-## Support
-
-If you found this app useful during your playthroughs, consider supporting the project:
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
-
-## License & Legal
-
-This is a fan-made project and is not affiliated with, endorsed by, or connected to Atlus or SEGA.
-
-Released under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Bugs & Feedback
-
-If you run into crashes or data inaccuracies, please [open an issue](https://github.com/Sentovibes/persona-companion-app/issues).
+### Data Pipeline
+We use a custom Python pipeline (`tmp/convert_to_app_format.py`) to keep our master JSON records in the root synchronized with the Android assets.
 
 ---
 
-Made with care for Persona fans
+## 🗺️ Roadmap: What's Next?
+- [ ] **Forward Fusion Calculator**: Select any two Personas to see the result.
+- [ ] **Custom Persona Build Planner**: Save your "Ultimate Builds" to your local roster.
+- [ ] **Shadow Negotiation Guide**: Upbeat? Timid? Never fail a negotiation again.
+- [ ] **Daily Schedule Helper**: Track missable events and exam dates in real-time.
+
+---
+
+## 💖 Support the Project
+If this app helped you save a Social Link or find that one rare drop, consider buying the dev a coffee!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
+
+---
+
+## ⚖️ Legal
+This is a fan-made project and is **not** affiliated with, endorsed by, or connected to **Atlus** or **SEGA**.
+
+Made with care for the Persona community. 🃏

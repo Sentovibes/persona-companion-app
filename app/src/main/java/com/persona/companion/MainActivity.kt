@@ -77,6 +77,14 @@ class MainActivity : ComponentActivity() {
                                             updateInfo = info
                                             showUpdateDialog = true
                                         }
+                                    }.onFailure { e ->
+                                        if (e.message == "Rate limit exceeded") {
+                                            android.widget.Toast.makeText(
+                                                this@MainActivity, 
+                                                "Unable to check for updates: Rate limit exceeded", 
+                                                android.widget.Toast.LENGTH_LONG
+                                            ).show()
+                                        }
                                     }
                                 }
                             }

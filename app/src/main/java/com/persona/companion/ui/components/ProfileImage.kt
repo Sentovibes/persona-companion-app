@@ -48,8 +48,8 @@ fun ProfileImage(
         builder.crossfade(true).build()
     }
 
-    val painter = rememberAsyncImagePainter(model)
-    val hasImage = painter.state is AsyncImagePainter.State.Success
+    var hasImage by remember { mutableStateOf(false) }
+    var isLoading by remember { mutableStateOf(true) }
 
     Box(
         modifier = modifier
@@ -67,19 +67,25 @@ fun ProfileImage(
             contentDescription = name,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop,
+            placeholder = androidx.compose.ui.res.painterResource(
+                if (isEnemy) R.drawable.placeholder_enemy else R.drawable.placeholder_persona
+            ),
             error = androidx.compose.ui.res.painterResource(
                 if (isEnemy) R.drawable.placeholder_enemy else R.drawable.placeholder_persona
-            )
+            ),
+            onSuccess = { 
+                hasImage = true
+                isLoading = false
+            },
+            onError = {
+                hasImage = false
+                isLoading = false
+            },
+            onLoading = {
+                isLoading = true
+                hasImage = false
+            }
         )
-        // Show person icon only while loading and no image yet
-        if (painter.state is AsyncImagePainter.State.Loading || painter.state is AsyncImagePainter.State.Empty) {
-            Icon(
-                imageVector = Icons.Default.Person,
-                contentDescription = null,
-                tint = TextPrimary.copy(alpha = 0.3f),
-                modifier = Modifier.size((size * 0.6).dp)
-            )
-        }
     }
 
     // Full screen dialog

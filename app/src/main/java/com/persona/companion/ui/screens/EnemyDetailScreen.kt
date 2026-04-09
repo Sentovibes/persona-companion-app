@@ -35,6 +35,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.persona.companion.R
 import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
@@ -57,18 +58,19 @@ fun EnemyDetailScreen(
     seriesId: String,
     gameId: String,
     enemyName: String,
+    enemyArea: String = "Unknown",
     onBack: () -> Unit
 ) {
     val context = LocalContext.current
     var enemy by remember { mutableStateOf<Enemy?>(null) }
 
-    LaunchedEffect(seriesId, gameId, enemyName) {
+    LaunchedEffect(seriesId, gameId, enemyName, enemyArea) {
         enemy = withContext(Dispatchers.IO) {
             val game = SeriesData.findGame(seriesId, gameId)
             val enemies = if (game?.enemyPath != null)
                 JsonLoader.loadEnemies(context, game.enemyPath)
             else emptyList()
-            enemies.find { it.name == enemyName }
+            enemies.find { it.name == enemyName && it.area == enemyArea } ?: enemies.find { it.name == enemyName }
         }
     }
 
@@ -153,9 +155,7 @@ fun EnemyDetailScreen(
                     Text(
                         enemy.name, 
                         color = TextPrimary,
-                        style = MaterialTheme.typography.titleLarge.copy(
-                            fontSize = (MaterialTheme.typography.titleLarge.fontSize * textScale)
-                        )
+                        style = MaterialTheme.typography.titleLarge
                     ) 
                 },
                 navigationIcon = {
@@ -217,11 +217,11 @@ fun EnemyDetailScreen(
             }
         )
         
-        // Show full-size image dialog when clicked (phone only)
-        if (showFullImage && deviceType == DeviceType.PHONE) {
+        // Show full-size image dialog when clicked
+        if (showFullImage) {
             FullImageDialog(
                 name = enemy.persona_name ?: enemy.name,
-                isEnemy = true,
+                isEnemy = enemy.persona_name == null || enemy.isBoss || enemy.isMiniBoss,
                 gameId = gameId,
                 onDismiss = { showFullImage = false }
             )
@@ -254,7 +254,7 @@ private fun EnemyStatsContent(
             if (deviceType == DeviceType.PHONE && shouldLoadImages) {
                 ProfileImage(
                     name = enemy.persona_name ?: enemy.name,
-                    isEnemy = true,
+                    isEnemy = enemy.persona_name == null || enemy.isBoss || enemy.isMiniBoss,
                     size = 72,
                     gameId = gameId,
                     onClick = onImageClick
@@ -269,32 +269,24 @@ private fun EnemyStatsContent(
                 Column {
                     Text(
                         text = enemy.arcana,
-                        style = MaterialTheme.typography.titleMedium.copy(
-                            fontSize = (MaterialTheme.typography.titleMedium.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.titleMedium,
                         color = TextSecondary
                     )
                     Text(
                         text = "Level ${enemy.level}",
-                        style = MaterialTheme.typography.bodyLarge.copy(
-                            fontSize = (MaterialTheme.typography.bodyLarge.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyLarge,
                         color = TextPrimary
                     )
                 }
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
                         text = "${enemy.hp} HP",
-                        style = MaterialTheme.typography.bodyLarge.copy(
-                            fontSize = (MaterialTheme.typography.bodyLarge.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyLarge,
                         color = TextPrimary
                     )
                     Text(
                         text = "${enemy.sp} SP",
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyMedium,
                         color = TextSecondary
                     )
                 }
@@ -312,9 +304,7 @@ private fun EnemyStatsContent(
         ) {
             Text(
                 text = enemy.version,
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                ),
+                style = MaterialTheme.typography.bodyMedium,
                 color = TextSecondary,
                 modifier = Modifier.padding(16.dp)
             )
@@ -338,9 +328,7 @@ private fun EnemyStatsContent(
     SectionCard(title = "Resistances", textScale = textScale) {
         Text(
             text = parseResistances(enemy.resists, gameId),
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.bodyMedium,
             color = TextPrimary
         )
     }
@@ -353,9 +341,7 @@ private fun EnemyStatsContent(
             enemy.skills.forEach { skill ->
                 Text(
                     text = "• $skill",
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                    ),
+                    style = MaterialTheme.typography.bodyMedium,
                     color = TextPrimary,
                     modifier = Modifier.padding(vertical = 2.dp)
                 )
@@ -374,18 +360,14 @@ private fun EnemyStatsContent(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Resistances",
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                    ),
+                    style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = TextSecondary,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )
                 Text(
                     text = parseResistances(phase.resists, gameId),
-                    style = MaterialTheme.typography.bodySmall.copy(
-                        fontSize = (MaterialTheme.typography.bodySmall.fontSize * textScale)
-                    ),
+                    style = MaterialTheme.typography.bodySmall,
                     color = TextPrimary
                 )
                 
@@ -393,9 +375,7 @@ private fun EnemyStatsContent(
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = "Skills",
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
                         color = TextSecondary,
                         modifier = Modifier.padding(bottom = 4.dp)
@@ -404,8 +384,7 @@ private fun EnemyStatsContent(
                         Text(
                             text = "• $skill",
                             style = MaterialTheme.typography.bodySmall.copy(
-                                fontSize = (MaterialTheme.typography.bodySmall.fontSize * textScale)
-                            ),
+                            fontSize = MaterialTheme.typography.bodySmall.fontSize,                            ),
                             color = TextPrimary,
                             modifier = Modifier.padding(vertical = 2.dp)
                         )
@@ -417,9 +396,7 @@ private fun EnemyStatsContent(
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = "Parts",
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
                         color = TextSecondary,
                         modifier = Modifier.padding(bottom = 4.dp)
@@ -435,17 +412,13 @@ private fun EnemyStatsContent(
                         ) {
                             Text(
                                 text = part.name,
-                                style = MaterialTheme.typography.bodyMedium.copy(
-                                    fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                                ),
+                                style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = TextPrimary
                             )
                             Text(
                                 text = "HP: ${part.hp}",
-                                style = MaterialTheme.typography.bodySmall.copy(
-                                    fontSize = (MaterialTheme.typography.bodySmall.fontSize * textScale)
-                                ),
+                                style = MaterialTheme.typography.bodySmall,
                                 color = TextSecondary
                             )
                         }
@@ -468,18 +441,14 @@ private fun EnemyStatsContent(
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Resistances",
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                    ),
+                    style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = TextSecondary,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )
                 Text(
                     text = parseResistances(part.resists, gameId),
-                    style = MaterialTheme.typography.bodySmall.copy(
-                        fontSize = (MaterialTheme.typography.bodySmall.fontSize * textScale)
-                    ),
+                    style = MaterialTheme.typography.bodySmall,
                     color = TextPrimary
                 )
                 
@@ -487,9 +456,7 @@ private fun EnemyStatsContent(
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = "Skills",
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-                        ),
+                        style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Bold,
                         color = TextSecondary,
                         modifier = Modifier.padding(bottom = 4.dp)
@@ -498,8 +465,7 @@ private fun EnemyStatsContent(
                         Text(
                             text = "• $skill",
                             style = MaterialTheme.typography.bodySmall.copy(
-                                fontSize = (MaterialTheme.typography.bodySmall.fontSize * textScale)
-                            ),
+                            fontSize = MaterialTheme.typography.bodySmall.fontSize,                            ),
                             color = TextPrimary,
                             modifier = Modifier.padding(vertical = 2.dp)
                         )
@@ -537,8 +503,9 @@ private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType, gameId: 
     // Load image on IO dispatcher
     LaunchedEffect(enemy.name, gameId) {
         bitmap = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            val isEnemyImage = enemy.persona_name == null || enemy.isBoss || enemy.isMiniBoss
             val nameForImage = enemy.persona_name ?: enemy.name
-            val imagePath = ImageUtils.getImagePath(nameForImage, isEnemy = true, gameId = gameId)
+            val imagePath = ImageUtils.getImagePath(nameForImage, isEnemy = isEnemyImage, gameId = gameId)
             ImageUtils.loadImageFromAssets(context, imagePath)
         }
     }
@@ -553,9 +520,9 @@ private fun EnemyImagePlaceholder(enemy: Enemy, deviceType: DeviceType, gameId: 
                     .background(SurfaceCard),
                 contentAlignment = Alignment.Center
             ) {
-                ProfileImage(
+                com.persona.companion.ui.components.ProfileImage(
                     name = enemy.persona_name ?: enemy.name,
-                    isEnemy = true,
+                    isEnemy = enemy.persona_name == null || enemy.isBoss || enemy.isMiniBoss,
                     size = 64,
                     gameId = gameId
                 )
@@ -623,9 +590,7 @@ fun SectionCard(
     ) {
         Text(
             text = title,
-            style = MaterialTheme.typography.titleMedium.copy(
-                fontSize = (MaterialTheme.typography.titleMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
             color = TextPrimary,
             modifier = Modifier.padding(bottom = 12.dp)
@@ -644,16 +609,12 @@ fun StatRow(label: String, value: Int, textScale: Float = 1.0f) {
     ) {
         Text(
             text = label,
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.bodyMedium,
             color = TextSecondary
         )
         Text(
             text = value.toString(),
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
             color = TextPrimary
         )
@@ -670,16 +631,12 @@ fun InfoRow(label: String, value: String, textScale: Float = 1.0f) {
     ) {
         Text(
             text = label,
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.bodyMedium,
             color = TextSecondary
         )
         Text(
             text = value,
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontSize = (MaterialTheme.typography.bodyMedium.fontSize * textScale)
-            ),
+            style = MaterialTheme.typography.bodyMedium,
             color = TextPrimary
         )
     }

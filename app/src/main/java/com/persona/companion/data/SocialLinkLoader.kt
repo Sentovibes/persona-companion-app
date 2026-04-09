@@ -75,12 +75,23 @@ object SocialLinkLoader {
                 val key = topKeys.next()
                 if (key in listOf("P4G Exclusive", "P5R Exclusive", "P5R Reworked", "Details", "Rank Up Progression")) continue
                 val rankData = arcanaData.optJSONObject(key) ?: continue
+                val benefit = rankData.optJSONObject("Benefit")?.let { b ->
+                    com.persona.companion.models.SocialLinkBenefit(
+                        name = b.optString("Name", ""),
+                        description = b.optString("Description", "")
+                    )
+                }
+                val unlocks = rankData.optJSONArray("Unlocks")?.let { array ->
+                    List(array.length()) { i -> array.getString(i) }
+                }
                 ranks.add(
                     SocialLinkRank(
                         rankNumber    = rankNumber++,
                         rankName      = key,
                         isAuto        = key.contains("Auto", ignoreCase = true),
-                        requirements  = rankData.optString("Requirements").takeIf { it.isNotEmpty() }
+                        requirements  = rankData.optString("Requirements").takeIf { it.isNotEmpty() },
+                        benefit       = benefit,
+                        unlocks       = unlocks
                     )
                 )
             }
@@ -95,27 +106,49 @@ object SocialLinkLoader {
                     val nextPts      = rankData.optInt("Next Pts", 0)
                     val requirements = rankData.optString("Requirements").takeIf { it.isNotEmpty() }
                     val dialogues    = parseDialogues(rankData.optJSONArray("Dialogues"))
+                    val benefit      = rankData.optJSONObject("Benefit")?.let { b ->
+                        com.persona.companion.models.SocialLinkBenefit(
+                            name = b.optString("Name", ""),
+                            description = b.optString("Description", "")
+                        )
+                    }
+                    val unlocks      = rankData.optJSONArray("Unlocks")?.let { array ->
+                        List(array.length()) { i -> array.getString(i) }
+                    }
 
                     ranks.add(
                         SocialLinkRank(
-                            rankNumber    = rankNumber++,
-                            rankName      = rankKey,
-                            isAuto        = false,
+                            rankNumber     = rankNumber++,
+                            rankName       = rankKey,
+                            isAuto         = false,
                             nextRankPoints = nextPts,
-                            requirements  = requirements,
-                            dialogues     = dialogues
+                            requirements   = requirements,
+                            benefit        = benefit,
+                            unlocks        = unlocks,
+                            dialogues      = dialogues
                         )
                     )
                 }
             }
 
+            val thirdAwakening = arcanaData.optJSONObject("ThirdAwakening")?.let { t ->
+                com.persona.companion.models.ThirdAwakening(
+                    persona     = t.optString("Persona"),
+                    name        = t.optString("Name").takeIf { it.isNotEmpty() },
+                    description = t.optString("Description").takeIf { it.isNotEmpty() },
+                    requirement = t.optString("Requirement").takeIf { it.isNotEmpty() }
+                )
+            }
+
             socialLinks.add(
                 SocialLink(
-                    arcana         = arcana,
-                    ranks          = ranks,
-                    details        = details,
-                    isP4GExclusive = isP4GExclusive,
-                    isP5RExclusive = isP5RExclusive
+                    arcana          = arcana,
+                    ranks           = ranks,
+                    details         = details,
+                    isP4GExclusive  = isP4GExclusive,
+                    isP5RExclusive  = isP5RExclusive,
+                    ultimatePersona = arcanaData.optString("UltimatePersona").takeIf { it.isNotEmpty() },
+                    thirdAwakening  = thirdAwakening
                 )
             )
         }

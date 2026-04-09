@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
@@ -25,6 +26,7 @@ import com.persona.companion.models.Persona
 import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.JsonLoader
+import com.persona.companion.ui.components.WeaknessRow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -155,9 +157,10 @@ fun RecentlyViewedScreen(navController: NavController) {
                             items(recentEnemies) { (seriesId, gameId, enemy) ->
                                 EnemyRow(
                                     enemy = enemy,
+                                    gameId = gameId,
                                     onClick = {
                                         navController.navigate(
-                                            Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name)
+                                            Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name, enemy.area)
                                         )
                                     }
                                 )
@@ -202,17 +205,21 @@ private fun PersonaRow(persona: Persona, accentColor: androidx.compose.ui.graphi
                 color = TextPrimary,
                 fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
             )
-            Text(
-                text = persona.arcana ?: "Unknown",
-                style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = persona.arcana ?: "Unknown",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = TextSecondary
+                )
+                Spacer(Modifier.width(8.dp))
+                WeaknessRow(persona.weaknesses)
+            }
         }
     }
 }
 
 @Composable
-private fun EnemyRow(enemy: Enemy, onClick: () -> Unit) {
+private fun EnemyRow(enemy: Enemy, gameId: String = "", onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -242,11 +249,15 @@ private fun EnemyRow(enemy: Enemy, onClick: () -> Unit) {
                 color = TextPrimary,
                 fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
             )
-            Text(
-                text = enemy.arcana,
-                style = MaterialTheme.typography.bodySmall,
-                color = TextSecondary
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = enemy.arcana,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = TextSecondary
+                )
+                Spacer(Modifier.width(8.dp))
+                WeaknessRow(enemy.getWeaknesses(gameId))
+            }
         }
     }
 }

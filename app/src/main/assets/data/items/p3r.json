@@ -1,0 +1,170 @@
+{
+  "persona3ReloadItems": {
+    "consumables": [
+      {
+        "name": "Life Stone",
+        "effect": "Restores 30% of maximum HP to 1 ally.",
+        "buy": "",
+        "sell": "400",
+        "location": "Breakables (Thebel, Arqa, Yabbashah, Malebolge)"
+      },
+      {
+        "name": "Medicine",
+        "effect": "Restores 50 HP to 1 ally.",
+        "buy": "200",
+        "sell": "100",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Medical Powder",
+        "effect": "Restores 100 HP to 1 ally.",
+        "buy": "800",
+        "sell": "400",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Bead",
+        "effect": "Fully restores HP to 1 ally.",
+        "buy": "6000",
+        "sell": "3000",
+        "location": "Chests, Breakables"
+      },
+      {
+        "name": "Bead Chain",
+        "effect": "Fully restores HP to all allies.",
+        "buy": "15000",
+        "sell": "7500",
+        "location": "Chests"
+      },
+      {
+        "name": "Soma",
+        "effect": "Fully restores HP and SP to all allies.",
+        "buy": "",
+        "sell": "10000",
+        "location": "Rare Chests"
+      },
+      {
+        "name": "Soul Drop",
+        "effect": "Restores 10 SP to 1 ally.",
+        "buy": "1000",
+        "sell": "500",
+        "location": "Chests, Breakables"
+      },
+      {
+        "name": "Snuff Soul",
+        "effect": "Restores 50 SP to 1 ally.",
+        "buy": "4000",
+        "sell": "2000",
+        "location": "Chests"
+      },
+      {
+        "name": "Chewing Soul",
+        "effect": "Restores 100 SP to 1 ally.",
+        "buy": "8000",
+        "sell": "4000",
+        "location": "Rare Chests"
+      },
+      {
+        "name": "Amrita Soda",
+        "effect": "Cures all ailments except Down/Unconscious for 1 ally.",
+        "buy": "1500",
+        "sell": "750",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Patra Gem",
+        "effect": "Cures Fear, Confusion, and Charm for 1 ally.",
+        "buy": "500",
+        "sell": "250",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Me Patra Gem",
+        "effect": "Cures Fear, Confusion, and Charm for all allies.",
+        "buy": "1500",
+        "sell": "750",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Revival Bead",
+        "effect": "Revives 1 ally with 50% HP.",
+        "buy": "2000",
+        "sell": "1000",
+        "location": "Pharmacy"
+      },
+      {
+        "name": "Balm of Life",
+        "effect": "Revives 1 ally with full HP.",
+        "buy": "8000",
+        "sell": "4000",
+        "location": "Rare Chests"
+      }
+    ],
+    "gifts": [
+      {
+        "name": "Brand Purse",
+        "effect": "A high-end purse.",
+        "buy": "5000",
+        "sell": "2500",
+        "location": "Rafflesia"
+      },
+      {
+        "name": "Goggle-Eyed Idol",
+        "effect": "A strange clay figure.",
+        "buy": "",
+        "sell": "100",
+        "location": "Antique Shop"
+      }
+    ],
+    "skillCards": {
+      "physical": [
+        {
+          "name": "Cleave",
+          "effect": "Deals light Slash damage to 1 foe.",
+          "buy": "",
+          "sell": "500",
+          "location": "Shuffle Time"
+        },
+        {
+          "name": "Bash",
+          "effect": "Deals light Strike damage to 1 foe.",
+          "buy": "",
+          "sell": "500",
+          "location": "Shuffle Time"
+        }
+      ],
+      "magic": [
+        {
+          "name": "Agi",
+          "effect": "Deals light Fire damage to 1 foe.",
+          "buy": "",
+          "sell": "500",
+          "location": "Shuffle Time"
+        },
+        {
+          "name": "Bufu",
+          "effect": "Deals light Ice damage to 1 foe.",
+          "buy": "",
+          "sell": "500",
+          "location": "Shuffle Time"
+        }
+      ]
+    },
+    "materialsAndValuables": [
+      {
+        "name": "Gold Medal",
+        "effect": "A medal made of gold.",
+        "buy": "",
+        "sell": "1000",
+        "location": "Breakables"
+      },
+      {
+        "name": "Glass Shard",
+        "effect": "A sharp piece of glass.",
+        "buy": "",
+        "sell": "10",
+        "location": "Breakables"
+      }
+    ]
+  }
+}

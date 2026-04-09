@@ -21,11 +21,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.EnemyFilterSheet
+import com.persona.companion.ui.components.WeaknessRow
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.EnemyListViewModel
 import com.persona.companion.utils.enemyImage
@@ -249,13 +251,14 @@ fun EnemyListScreen(
                         }
                     } else {
                         LazyColumn(
-                            modifier = Modifier.fillMaxSize(),
+                            modifier = Modifier.fillMaxSize().imePadding(),
                             contentPadding = PaddingValues(16.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             items(filteredEnemies) { enemy ->
                                 EnemyCard(
                                     enemy = enemy,
+                                    gameId = gameId,
                                     onClick = { onEnemyClick(enemy) },
                                     isCompact = isCompactView
                                 )
@@ -293,6 +296,7 @@ private fun getElementsForGame(gameId: String): List<String> {
 @Composable
 fun EnemyCard(
     enemy: Enemy,
+    gameId: String = "",
     onClick: () -> Unit,
     isCompact: Boolean = false
 ) {
@@ -311,17 +315,11 @@ fun EnemyCard(
     ) {
         // Enemy image thumbnail (only if images are available)
         if (shouldLoadImages) {
-            AsyncImage(
-                model = ImageRequest.Builder(context)
-                    .enemyImage(context, "p5r", enemy.name) // TODO: Use actual game ID
-                    .crossfade(true)
-                    .build(),
-                contentDescription = enemy.name,
-                modifier = Modifier
-                    .size(if (isCompact) 36.dp else 48.dp)
-                    .clip(CircleShape)
-                    .background(Surface),
-                contentScale = ContentScale.Crop
+            com.persona.companion.ui.components.ProfileImage(
+                name = enemy.persona_name ?: enemy.name,
+                isEnemy = enemy.persona_name == null || enemy.isBoss || enemy.isMiniBoss,
+                size = if (isCompact) 36 else 48,
+                gameId = gameId
             )
             
             Spacer(Modifier.width(if (isCompact) 10.dp else 12.dp))
@@ -334,14 +332,15 @@ fun EnemyCard(
                 fontWeight = FontWeight.Bold,
                 color = TextPrimary
             )
-            if (!isCompact) {
-                Spacer(Modifier.height(4.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "${enemy.arcana} • Lv. ${enemy.level}",
+                    style = if (isCompact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
+                    color = TextSecondary
+                )
+                Spacer(Modifier.width(8.dp))
+                WeaknessRow(enemy.getWeaknesses(gameId))
             }
-            Text(
-                text = "${enemy.arcana} • Lv. ${enemy.level}",
-                style = if (isCompact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
-                color = TextSecondary
-            )
             if (!isCompact && enemy.area.isNotEmpty() && enemy.area != "Unknown") {
                 Spacer(Modifier.height(2.dp))
                 Text(

@@ -11,6 +11,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.School
@@ -65,7 +66,7 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
             label     = "Social Links / Confidants",
             icon      = Icons.Default.Groups,
             available = gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"),
-            route     = if (gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r")) 
+            route     = if (gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"))
                 Screen.SocialLinks.createRoute(seriesId, gameId) else null
         ),
         CategoryItem(
@@ -74,6 +75,18 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
             available = gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"),
             route     = if (gameId in listOf("p3fes", "p3p", "p3r", "p4", "p4g", "p5", "p5r"))
                 Screen.ClassroomAnswers.createRoute(seriesId, gameId) else null
+        ),
+        CategoryItem(
+            label     = "Skills",
+            icon      = Icons.Default.AutoAwesome,
+            available = game.skillPath != null,
+            route     = if (game.skillPath != null) Screen.SkillList.createRoute(seriesId, gameId) else null
+        ),
+        CategoryItem(
+            label     = "Items",
+            icon      = Icons.Default.Inventory2,
+            available = game.itemPath != null,
+            route     = if (game.itemPath != null) Screen.ItemList.createRoute(seriesId, gameId) else null
         )
     )
 

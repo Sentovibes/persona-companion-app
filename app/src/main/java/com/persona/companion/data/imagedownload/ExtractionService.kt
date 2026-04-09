@@ -49,9 +49,10 @@ class ExtractionService(private val context: Context) {
         try {
             Log.d(TAG, "Starting extraction of ${zipFile.absolutePath} to ${destinationDir.absolutePath}")
             
-            // Ensure destination directory exists
-            if (!destinationDir.exists()) {
-                destinationDir.mkdirs()
+            val tempDir = File(destinationDir, "images_temp")
+            if (tempDir.exists()) tempDir.deleteRecursively()
+            if (!tempDir.mkdirs()) {
+                throw IOException("Failed to create temporary extraction directory")
             }
             
             // Open ZIP file
@@ -80,7 +81,7 @@ class ExtractionService(private val context: Context) {
             
             // Extract each entry
             for (entry in entries) {
-                extractEntry(zipFileHandle, entry, destinationDir)
+                extractEntry(zipFileHandle, entry, tempDir)
                 filesExtracted++
                 
                 // Report progress
@@ -88,6 +89,26 @@ class ExtractionService(private val context: Context) {
             }
             
             Log.d(TAG, "Extraction completed successfully: $filesExtracted files extracted")
+            
+            // Move from temp to actual (the ZIP has an "images/" root)
+            val extractedImagesRoot = File(tempDir, "images")
+            val targetImagesFolder = File(destinationDir, "images")
+            
+            if (targetImagesFolder.exists()) targetImagesFolder.deleteRecursively()
+            
+            if (extractedImagesRoot.exists()) {
+                val success = extractedImagesRoot.renameTo(targetImagesFolder)
+                if (!success) {
+                    throw IOException("Failed to move atomic images extraction")
+                }
+            } else {
+                // If it doesn't have an "images" root, we just move everything inside tempDir to destinationDir
+                // But according to our code it does. We'll throw an error if it doesn't.
+                throw IOException("ZIP structure missing 'images' root directory")
+            }
+            
+            tempDir.deleteRecursively()
+            
             Result.success(Unit)
             
         } catch (e: ZipException) {

@@ -10,6 +10,9 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -17,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.persona.companion.ui.viewmodels.FusionViewModel
 
@@ -222,6 +226,19 @@ fun FusionResultsView(
                     Icon(Icons.Default.Close, "Clear")
                 }
             }
+            
+            // Adding Resistances here
+            state.selectedPersona?.let { persona ->
+                Column(modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)) {
+                    Text(
+                        text = "Resistances",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    PersonaResistancesRow(persona)
+                }
+            }
         }
         
         // Fusion recipes
@@ -353,6 +370,63 @@ fun FusionRecipeCard(
                         )
                     }
                 }
+            }
+        }
+    }
+}
+@Composable
+fun PersonaResistancesRow(persona: com.persona.companion.models.Persona) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        val elementalAffinities = listOf(
+            Triple("Phys", persona.weaknesses.contains("Phys"), persona.resistances.contains("Phys")),
+            Triple("Fire", persona.weaknesses.contains("Fire"), persona.resistances.contains("Fire")),
+            Triple("Ice", persona.weaknesses.contains("Ice"), persona.resistances.contains("Ice")),
+            Triple("Elec", persona.weaknesses.contains("Elec"), persona.resistances.contains("Elec")),
+            Triple("Wind", persona.weaknesses.contains("Wind"), persona.resistances.contains("Wind")),
+            Triple("Light", persona.weaknesses.contains("Light"), persona.resistances.contains("Light")),
+            Triple("Dark", persona.weaknesses.contains("Dark"), persona.resistances.contains("Dark"))
+        )
+
+        elementalAffinities.forEach { (name, isWeak, isResist) ->
+            ElementChip(name, isWeak, isResist)
+        }
+    }
+}
+
+@Composable
+fun ElementChip(name: String, isWeak: Boolean, isResist: Boolean) {
+    val iconRes = when (name) {
+        "Fire" -> com.persona.companion.R.drawable.ic_fire
+        "Ice" -> com.persona.companion.R.drawable.ic_ice
+        "Elec" -> com.persona.companion.R.drawable.ic_elec
+        "Wind" -> com.persona.companion.R.drawable.ic_wind
+        "Light" -> com.persona.companion.R.drawable.ic_light
+        "Dark" -> com.persona.companion.R.drawable.ic_dark
+        "Phys" -> com.persona.companion.R.drawable.ic_phys
+        else -> null
+    }
+
+    val tint = when {
+        isWeak -> Color(0xFFE57373)
+        isResist -> Color(0xFF81C784)
+        else -> MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.5f)
+    }
+
+    if (iconRes != null) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Icon(
+                painter = androidx.compose.ui.res.painterResource(id = iconRes),
+                contentDescription = name,
+                modifier = Modifier.size(16.dp),
+                tint = tint
+            )
+            if (isWeak) {
+                Text("Wk", fontSize = 8.sp, color = tint)
+            } else if (isResist) {
+                Text("Str", fontSize = 8.sp, color = tint)
             }
         }
     }

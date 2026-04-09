@@ -2,6 +2,8 @@ package com.persona.companion.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -20,6 +22,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -146,8 +149,8 @@ fun PersonaDetailScreen(
             }
         )
 
-        // Show full-size image dialog when clicked (phone only)
-        if (showFullImage && deviceType == DeviceType.PHONE) {
+        // Show full-size image dialog when clicked
+        if (showFullImage) {
             FullImageDialog(
                 name = p.name,
                 isEnemy = false,
@@ -329,15 +332,59 @@ private fun AffinitiesSection(persona: Persona) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun AffinityRow(label: String, elements: List<String>, chipColor: Color) {
     if (elements.isEmpty()) return
+
     Column {
         Text(text = label, style = MaterialTheme.typography.labelSmall, color = TextSecondary)
-        Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.padding(top = 4.dp)) {
+        FlowRow(
+            modifier = Modifier.padding(top = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
             elements.forEach { element ->
-                Surface(shape = RoundedCornerShape(6.dp), color = chipColor.copy(alpha = 0.2f)) {
-                    Text(text = element, style = MaterialTheme.typography.labelSmall, color = chipColor, modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp))
+                val iconRes = when (element) {
+                    "Fire" -> com.persona.companion.R.drawable.ic_fire
+                    "Ice" -> com.persona.companion.R.drawable.ic_ice
+                    "Elec" -> com.persona.companion.R.drawable.ic_elec
+                    "Wind", "Force" -> com.persona.companion.R.drawable.ic_wind
+                    "Light" -> com.persona.companion.R.drawable.ic_light
+                    "Dark" -> com.persona.companion.R.drawable.ic_dark
+                    "Almighty" -> com.persona.companion.R.drawable.ic_almighty
+                    "Psy" -> com.persona.companion.R.drawable.ic_psy
+                    "Nuclear" -> com.persona.companion.R.drawable.ic_nuke
+                    "Phys", "Slash", "Strike", "Pierce" -> com.persona.companion.R.drawable.ic_phys
+                    "Recovery" -> com.persona.companion.R.drawable.ic_recovery
+                    "Support" -> com.persona.companion.R.drawable.ic_support
+                    "Ailment" -> com.persona.companion.R.drawable.ic_ailment
+                    else -> null
+                }
+
+                Surface(
+                    shape = RoundedCornerShape(6.dp),
+                    color = chipColor.copy(alpha = 0.2f)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        if (iconRes != null) {
+                            Icon(
+                                painter = androidx.compose.ui.res.painterResource(id = iconRes),
+                                contentDescription = null,
+                                tint = chipColor,
+                                modifier = Modifier.size(12.dp)
+                            )
+                        }
+                        Text(
+                            text = element,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = chipColor
+                        )
+                    }
                 }
             }
         }

@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
@@ -164,7 +165,7 @@ fun FavoritesScreen(navController: NavController) {
                                     enemy = enemy,
                                     onClick = {
                                         navController.navigate(
-                                            Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name)
+                                            Screen.EnemyDetail.createRoute(seriesId, gameId, enemy.name, enemy.area)
                                         )
                                     }
                                 )

@@ -8,7 +8,9 @@ data class SocialLink(
     val ranks: List<SocialLinkRank>,
     val details: SocialLinkDetails? = null,
     val isP4GExclusive: Boolean = false,
-    val isP5RExclusive: Boolean = false
+    val isP5RExclusive: Boolean = false,
+    val ultimatePersona: String? = null,
+    val thirdAwakening: ThirdAwakening? = null
 )
 
 /**
@@ -30,7 +32,27 @@ data class SocialLinkRank(
     val isAuto: Boolean,
     val nextRankPoints: Int = 0,
     val requirements: String? = null,
+    val benefit: SocialLinkBenefit? = null,
+    val unlocks: List<String>? = null,
     val dialogues: List<SocialLinkDialogue> = emptyList()
+)
+
+/**
+ * Represents a specific ability or benefit unlocked at a rank
+ */
+data class SocialLinkBenefit(
+    val name: String,
+    val description: String
+)
+
+/**
+ * Represents a final Persona evolution (P4G Winter / P5R Third Semester)
+ */
+data class ThirdAwakening(
+    val persona: String,
+    val name: String? = null,
+    val description: String? = null,
+    val requirement: String? = null
 )
 
 /**

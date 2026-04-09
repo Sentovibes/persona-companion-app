@@ -2,6 +2,10 @@ package com.persona.companion.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.onStart
 
 data class AppSettings(
     val showDlc: Boolean = true,
@@ -17,6 +21,17 @@ class AppPreferences(context: Context) {
             showEpisodeAigis = prefs.getBoolean("show_episode_aigis", true)
         )
     }
+
+    fun getSettingsFlow(): Flow<AppSettings> = callbackFlow {
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "show_dlc" || key == "show_episode_aigis") {
+                trySend(getSettings())
+            }
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        trySend(getSettings())
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
     
     fun setShowDlc(show: Boolean) {
         prefs.edit().putBoolean("show_dlc", show).apply()
@@ -25,7 +40,7 @@ class AppPreferences(context: Context) {
     fun setShowEpisodeAigis(show: Boolean) {
         prefs.edit().putBoolean("show_episode_aigis", show).apply()
     }
-    
+
     fun getLastUpdateCheck(): Long {
         return prefs.getLong("last_update_check", 0)
     }

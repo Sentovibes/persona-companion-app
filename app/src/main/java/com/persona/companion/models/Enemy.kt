@@ -19,7 +19,20 @@ data class Enemy(
     val parts: List<BossPart>? = null,  // For bosses with multiple parts
     val isBoss: Boolean = false,
     val isMiniBoss: Boolean = false
-)
+) {
+    fun getWeaknesses(gameId: String = ""): List<String> {
+        val elements = when {
+            gameId.startsWith("p5") -> listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
+            gameId.startsWith("p4") -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+            gameId.startsWith("p3") -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+            else -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
+        }
+
+        return resists.mapIndexedNotNull { index, char ->
+            if (char == 'w' && index < elements.size) elements[index] else null
+        }
+    }
+}
 
 data class EnemyStats(
     val strength: Int,

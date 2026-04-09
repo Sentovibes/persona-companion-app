@@ -132,8 +132,18 @@ object ClassroomAnswerLoader {
             }
         }
         
-        // Sort by date (simple string sort works for most date formats)
-        questions.sortBy { it.date }
+        // Sort by date starting from April (month 4) for Japanese school year
+        questions.sortWith(compareBy(
+            { 
+                val monthStr = it.date.substringBefore("/").trim()
+                val month = monthStr.toIntOrNull() ?: 0
+                if (month >= 4) month - 4 else month + 8 
+            },
+            { 
+                val dayStr = it.date.substringAfter("/").trim()
+                dayStr.toIntOrNull() ?: 0 
+            }
+        ))
         
         return ClassroomData(gameId = gameId, questions = questions)
     }

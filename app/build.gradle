@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 14
-        versionName "5.1.0"
+        versionCode 15
+        versionName "5.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -46,10 +47,9 @@ android {
             
             // Cloud image download configuration
             // GitHub Releases (up to 2GB) or Internet Archive (unlimited)
-            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.0/images.zip"'
-            // Alternative: buildConfigField "String", "IMAGES_CDN_URL", '"https://archive.org/download/persona-companion-images/images.zip"'
-            buildConfigField "long", "IMAGES_ZIP_SIZE", "1310000000L"  // 1.31 GB
-            buildConfigField "String", "IMAGES_VERSION", '"1.0"'
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.5/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1062205358L"
+            buildConfigField "String", "IMAGES_VERSION", '"1.5"'
         }
         release {
             signingConfig signingConfigs.release
@@ -60,11 +60,9 @@ android {
             // Release excludes images - they will be downloaded from settings
             
             // Cloud image download configuration
-            // GitHub Releases (up to 2GB) or Internet Archive (unlimited)
-            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.0/images.zip"'
-            // Alternative: buildConfigField "String", "IMAGES_CDN_URL", '"https://archive.org/download/persona-companion-images/images.zip"'
-            buildConfigField "long", "IMAGES_ZIP_SIZE", "1310000000L"  // 1.31 GB
-            buildConfigField "String", "IMAGES_VERSION", '"1.0"'
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.5/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1062205358L"
+            buildConfigField "String", "IMAGES_VERSION", '"1.5"'
         }
     }
     
@@ -138,6 +136,12 @@ dependencies {
     
     // Image loading
     implementation 'io.coil-kt:coil-compose:2.5.0'
+
+    // Room Database
+    def room_version = "2.6.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     // Debug tools
     debugImplementation 'androidx.compose.ui:ui-tooling'

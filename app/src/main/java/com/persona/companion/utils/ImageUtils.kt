@@ -1,5 +1,7 @@
 package com.persona.companion.utils
 
+import androidx.compose.ui.unit.sp
+
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -70,14 +72,16 @@ object ImageUtils {
         }
         
         // Convert name to lowercase and replace special characters
+        // Note: hyphens are preserved as-is since persona filenames use them (e.g. ame-no-uzume.png)
         val safeName = cleanName.lowercase()
+            .replace("è", "e").replace("é", "e").replace("ā", "a")
+            .replace("ō", "o").replace("ū", "u").replace("î", "i")
             .replace(" ", "_")
-            .replace("-", "_")
             .replace("/", "_")
             .replace(":", "")
             .replace("?", "")
             .replace("'", "")
-            .replace("'", "")
+            .replace("\u2019", "")  // right single quotation mark
             .replace("&", "")
         
         val folder = if (isEnemy) "enemies_shared" else "personas_shared"
