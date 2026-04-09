@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://media.giphy.com/media/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
+</p>
+
 # Persona Companion App v6.0.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
@@ -11,6 +15,10 @@ The Persona Companion App is a high-performance, native Android application buil
 
 ---
 
+<p align="center">
+  <img src="https://media.giphy.com/media/Mk8jpXI3d53J6fFJBr/giphy.gif" width="600" alt="Persona 5 Royal Display" />
+</p>
+
 ## New in v6.0.0: The Item Compendium Update
 Universal standardization of item databases across the entire series.
 - 5,000+ Items processed into a universal format.
@@ -20,6 +28,10 @@ Universal standardization of item databases across the entire series.
 - P3 FES/Portable: 690 items.
 
 ---
+
+<p align="center">
+  <img src="https://media.giphy.com/media/emdOU5p5y6rKgsWSMp/giphy.gif" width="800" alt="Section Divider" />
+</p>
 
 ## Supported Titles
 
@@ -31,6 +43,10 @@ Universal standardization of item databases across the entire series.
 | Persona 3 FES/P | Both MC Routes, Requests | Sea Blue |
 
 ---
+
+<p align="center">
+  <img src="https://media.giphy.com/media/qXzaLPChUD5iOtg7kJ/giphy.gif" width="600" alt="Persona 3 Reload Display" />
+</p>
 
 ## Key Features
 
