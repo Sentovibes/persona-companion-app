@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Assignment
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Groups
@@ -87,6 +88,12 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
             icon      = Icons.Default.Inventory2,
             available = game.itemPath != null,
             route     = if (game.itemPath != null) Screen.ItemList.createRoute(seriesId, gameId) else null
+        ),
+        CategoryItem(
+            label     = "Side-Quests / Requests",
+            icon      = Icons.Default.Assignment,
+            available = game.requestPath != null,
+            route     = if (game.requestPath != null) Screen.RequestList.createRoute(seriesId, gameId) else null
         )
     )
 

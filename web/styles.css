@@ -243,6 +243,9 @@ body {
 .detail-hero-name   { font-size:1.5rem; font-weight:500; color:var(--text); }
 .detail-hero-arcana { font-size:.9375rem; color:var(--text2); margin-top:2px; }
 .detail-hero-trait  { font-size:.75rem; margin-top:4px; }
+.detail-hero-image-wrap { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: auto; max-width: 35%; height: 140px; }
+.detail-hero-image { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--r-md); transition: transform 0.3s ease; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); }
+.detail-hero-image:hover { transform: scale(1.1); }
 .section-card { background:var(--card); border-radius:var(--r-lg); padding:16px; }
 .section-title { font-size:1rem; font-weight:700; color:var(--text); margin-bottom:12px; }
 .stat-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }

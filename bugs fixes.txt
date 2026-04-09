@@ -1,0 +1,75 @@
+🐛 Known Issues & Bug Fixes Tracker
+
+This document tracks known bugs, architectural fragilities, and their proposed solutions.
+
+🔴 Critical / High Priority
+
+1. GitHub API Rate Limit Silent Failure (UpdateChecker.kt)
+
+The Bug: The app checks for updates using the unauthenticated GitHub API (/repos/.../releases/latest). GitHub strictly limits this to 60 requests per hour per IP.
+
+The Impact: If a user hits the limit, the connection throws a 403 Forbidden error. Because the network call is wrapped in a generic try-catch that returns Result.failure(e), the app fails silently. The user is never notified that the check failed.
+
+The Fix: - [ ] Catch HTTP 403 specifically and log it.
+
+[ ] Update the UI in MainActivity.kt to show a Toast or Snackbar ("Unable to check for updates: Rate limit exceeded") when this specific failure occurs, instead of doing nothing.
+
+2. Navigation Argument Corruption (NavGraph.kt)
+
+The Bug: When navigating to Persona, Enemy, or Social Link detail screens, the app replaces forward slashes / with pipes | to avoid breaking the Compose Navigation route structure (e.g., enemyName.replace("/", "|")).
+
+The Impact: If an enemy, persona, or DLC item legitimately contains a | character in its name (now or in future games), swapping | back to / will corrupt the lookup string, resulting in a blank screen or a crash due to a Null Pointer Exception.
+
+The Fix:
+
+[ ] Replace the manual .replace() hack with standard URL encoding.
+
+[ ] Encode before navigation: java.net.URLEncoder.encode(name, "UTF-8")
+
+[ ] Decode in the composable: java.net.URLDecoder.decode(navArgument, "UTF-8")
+
+🟡 Minor / Medium Priority
+
+3. Font Scaling "Double-Dip" Accessibility Bug (HomeScreen.kt)
+
+The Bug: Text sizes in Compose use .sp (scale-independent pixels), which Android automatically scales based on the user's system font size settings. In HomeScreen.kt, there are lines like fontSize = (42.sp * textScale).
+
+The Impact: If textScale is derived from the system font scale, you are scaling the text twice. For visually impaired users with large system fonts, the text will become massively oversized and break out of the UI bounds.
+
+The Fix: - [ ] Trust Jetpack Compose's native .sp handling. Remove the manual * textScale multipliers from .sp declarations.
+
+4. Interrupted 1.3GB Image Extraction State (ExtractionService.kt / ImageDownloadManager.kt)
+
+The Bug: Extracting a 1.3GB .zip file on a mobile device takes time and heavy disk I/O.
+
+The Impact: If the user minimizes the app and Android kills the service for RAM, or if the phone dies mid-extraction, the app might be left with a corrupted or half-extracted image directory.
+
+The Fix:
+
+[ ] Extract to a temporary folder first (e.g., images_temp/).
+
+[ ] Once the extraction finishes completely, rename images_temp/ to images/.
+
+[ ] On app launch, if images_temp/ exists, assume a failed extraction, delete it, and prompt the user to retry.
+
+🟢 UI / UX Polish
+
+5. Keyboard Overlap in Search
+
+The Bug: When searching large compendiums (like P5R Personas), opening the keyboard can obscure the bottom results.
+
+The Fix: - [ ] Ensure WindowCompat.setDecorFitsSystemWindows(window, false) is properly handled.
+
+[ ] Use Modifier.imePadding() on the main search lists (PersonaListScreen, EnemyListScreen) so the list scrolls up automatically when the keyboard appears.
+
+6. P3P / P3FES Enemy De-duplication Missing Cases
+
+The Bug: Looking at the JSON file names (e.g., p3fes_enemies_before_dedup.json), there are multiple versions of enemies (e.g., Tartarus bosses vs regular shadows).
+
+The Impact: If two enemies share the exact same name but have different stats/locations, searching for them by name in PersonaRepository.kt or EnemyRepository might only return the first one it finds (using .find { it.name == name }).
+
+The Fix: - [ ] When doing lookups, if an enemy has variants, ensure the lookup uses an ID or a combination of Name + Location rather than just Name.
+
+
+
+all images show low opacityof the placeholder image and in p5 enemies in the selection menu i cant see the enemy image only the placeholder image but insirde in the stats menu i cxan see tjem normally

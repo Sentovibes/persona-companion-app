@@ -46,7 +46,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p3r_enemies.json",
                     skillPath = "data/skills/p3r_skills.json",
                     itemPath = "data/items/p3r_items.json",
-                    socialLinkPath = "data/social_links/p3_social_links.json"
+                    socialLinkPath = "data/social_links/p3_social_links.json",
+                    requestPath = "data/requests/p3r_requests.json"
                 )
             )
         ),
@@ -72,7 +73,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p4g_enemies.json",
                     skillPath = "data/skills/p4g_skills.json",
                     itemPath = "data/items/p4g_items.json",
-                    socialLinkPath = "data/social_links/p4_social_links.json"
+                    socialLinkPath = "data/social_links/p4_social_links.json",
+                    requestPath = "data/requests/p4g_requests.json"
                 )
             )
         ),
@@ -98,7 +100,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p5r_enemies.json",
                     skillPath = "data/skills/p5r_skills.json",
                     itemPath = "data/items/p5r_items.json",
-                    socialLinkPath = "data/social_links/p5+p5r_social_links.json"
+                    socialLinkPath = "data/social_links/p5+p5r_social_links.json",
+                    requestPath = "data/requests/p5r_requests.json"
                 )
             )
         )

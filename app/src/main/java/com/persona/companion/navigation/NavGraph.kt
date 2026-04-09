@@ -94,6 +94,10 @@ sealed class Screen(val route: String) {
     object ItemList : Screen("item_list/{seriesId}/{gameId}") {
         fun createRoute(seriesId: String, gameId: String) = "item_list/$seriesId/$gameId"
     }
+
+    object RequestList : Screen("request_list/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "request_list/$seriesId/$gameId"
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -343,6 +347,30 @@ fun NavGraph(navController: NavHostController) {
                 seriesId = seriesId,
                 gameId = gameId,
                 onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.RequestList.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            
+            val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
+            
+            com.persona.companion.ui.screens.RequestListScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                gameTitle = game?.title ?: "",
+                requestPath = game?.requestPath,
+                onBack = { navController.popBackStack() },
+                onEnemyClick = { enemyName ->
+                    navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemyName, "Unknown"))
+                }
             )
         }
     }

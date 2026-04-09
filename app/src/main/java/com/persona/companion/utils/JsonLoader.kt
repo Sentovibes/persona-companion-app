@@ -80,4 +80,18 @@ object JsonLoader {
             com.persona.companion.models.BossData(emptyList(), emptyList())
         }
     }
+
+    fun loadRequests(context: Context, path: String): List<com.persona.companion.models.Request> {
+        return try {
+            Log.d(TAG, "Loading requests from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.Request>>() {}.type
+            val requests: List<com.persona.companion.models.Request> = gson.fromJson(json, type) ?: emptyList()
+            Log.d(TAG, "Loaded ${requests.size} requests")
+            requests
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading requests from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
 }

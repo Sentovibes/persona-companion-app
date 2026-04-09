@@ -4,11 +4,13 @@
 			"path": "."
 		},
 		{
-			"path": "../../../Downloads/megaten-fusion-tool-master/megaten-fusion-tool-master"
+			"path": "../../../Downloads/megaten-database-main (1)"
 		},
 		{
-			"path": "../../../Downloads/megaten-database-main"
+			"path": "../../../Downloads/megaten-fusion-tool-master/megaten-fusion-tool-master"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "persona-companion-app"
+	}
 }

@@ -1,0 +1,1012 @@
+[
+  {
+    "id": "1",
+    "name": "Bring me a Muscle Drink.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Soul Drop x5",
+    "remarks": "Buy from Aohige Pharmacy; Unlocks #9 & #10",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "2",
+    "name": "Retrieve the first old document.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "¥10,000",
+    "remarks": "Reach the top of Thebel Block (22F)",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "3",
+    "name": "Shadow Hunting Milestone",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Cure Water x3",
+    "remarks": "Defeat a total of 100 Shadows; Unlocks #15",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "4",
+    "name": "Treasure Hunting Milestone",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Snuff Soul x2",
+    "remarks": "Open a total of 50 treasure chests; Unlocks #16",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "5",
+    "name": "Create a Persona that's level 13 or above.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Bufula Gem x3",
+    "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #6 & #17",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "6",
+    "name": "Create a Persona with Kouha.",
+    "available": "Complete #5",
+    "deadline": "-",
+    "reward": "Fierce Sutra x2",
+    "remarks": "Obtain from Shuffle Time or fuse: Archangel / Unicorn",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "7",
+    "name": "Bring me a Juzumaru.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Makouha Skill Card",
+    "remarks": "Locked Chest (Arqa 36F) - Requires 2 Twilight Fragments",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "8",
+    "name": "Experiment with fortune telling.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "Speed Incense I",
+    "remarks": "Reach Rank 2 Courage (Ordinary), speak to the fortune teller in Club Escapade at night and pay ¥3,000 for a \"Rarity Fortune,\" then battle a rare Shadow",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "9",
+    "name": "I'd like to try all kinds of drinks.",
+    "available": "Complete #1",
+    "deadline": "-",
+    "reward": "Media Skill Card",
+    "remarks": "Collect 12 different drinks from vending machines; Unlocks #11",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "10",
+    "name": "I'd like to try a beef bowl.",
+    "available": "Complete #1",
+    "deadline": "-",
+    "reward": "Male Uniforms (W)",
+    "remarks": "Buy Umiushi Fan Book from Manga Star Net Café at the strip mall, register on dorm computer, then buy an Umiushi Beef Bowl; Unlocks #57",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "11",
+    "name": "Please prevail in the Big Eater Challenge.",
+    "available": "Complete #9",
+    "deadline": "-",
+    "reward": "Twilight Fragment x3",
+    "remarks": "After accepting the request, go to Wilduck Burger at night and choose the following options:\n• Look away from the burgers\n• Eat without stopping\n• Imagine something sour;\nUnlocks Weekend Wilduck Set available on Saturdays and Sundays; Unlocks #56",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "12",
+    "name": "Bring me pine resin.",
+    "available": "5/10",
+    "deadline": "6/6",
+    "reward": "Toy Bow",
+    "remarks": "Talk to Yukari in the dorm; Unlocks #13",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "13",
+    "name": "Bring me a handheld game console.",
+    "available": "Complete #12",
+    "deadline": "6/6",
+    "reward": "Pixel Vest",
+    "remarks": "Talk to Junpei in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "14",
+    "name": "Retrieve the second old document.",
+    "available": "5/10",
+    "deadline": "-",
+    "reward": "¥20,000",
+    "remarks": "Reach Floor 43 of Arqa Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "15",
+    "name": "Shadow Hunting Milestone #2",
+    "available": "Complete #3",
+    "deadline": "-",
+    "reward": "Umugi Water x3",
+    "remarks": "Defeat a total of 200 Shadows; Unlocks #22",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "16",
+    "name": "Treasure Hunting Milestone #2",
+    "available": "Complete #4",
+    "deadline": "-",
+    "reward": "Chewing Soul x2",
+    "remarks": "Open a total of 100 treasure chests; Unlocks #32",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "17",
+    "name": "Fusion Series #1: 04.0Emperor, Oberon",
+    "available": "Complete #5",
+    "deadline": "-",
+    "reward": "Female Uniforms (W)",
+    "remarks": "Silky + Archangel = Oberon (with Mazio); Unlocks #25 & #31",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "18",
+    "name": "I'd like to be gifted a bouquet of flowers.",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "Female Winter Garb",
+    "remarks": "Buy Rose Bouquet from Rafflesia at Port Island Station; Unlocks #19",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "19",
+    "name": "I want Jack Frost dolls.",
+    "available": "Complete #18",
+    "deadline": "-",
+    "reward": "Twilight Fragment x3",
+    "remarks": "Bring Elizabeth 3 Jack Frost dolls from the Crane Machine",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "20",
+    "name": "Bring me some potent medicine.",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "Steel Pipe",
+    "remarks": "Obtain from the nurse's office in Gekkoukan High School",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "21",
+    "name": "Retrieve the third old document.",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "¥30,000",
+    "remarks": "Reach Floor 69 of the Arqa Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "22",
+    "name": "Shadow Hunting Milestone #3",
+    "available": "Complete #15",
+    "deadline": "-",
+    "reward": "Bead x3",
+    "remarks": "Defeat a total of 300 Shadows; Unlocks #31",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "23",
+    "name": "Persona Fusion Milestone",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "Twilight Fragment x5",
+    "remarks": "Conduct a total of 20 Persona fusions; Unlocks #33",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "24",
+    "name": "Create a Persona that's level 23 or above.",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "Sugar Key",
+    "remarks": "Allows the creation of King Frost",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "25",
+    "name": "Fusion Series #2: 07.0Chariot, Mithras",
+    "available": "Complete #17",
+    "deadline": "-",
+    "reward": "Male Winter Garb",
+    "remarks": "Jack-o'-Lantern + Tam Lin; Level to 26 via Social Links or battles; Unlocks #35",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "26",
+    "name": "Bring me an Onimaru Kunitsuna.",
+    "available": "6/13",
+    "deadline": "-",
+    "reward": "Crit Rate Boost Skill Card",
+    "remarks": "Locked Chest (Arqa 54F)\nRequires 3 Twilight Fragments",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "27",
+    "name": "Bring me a triangular sword.",
+    "available": "6/13",
+    "deadline": "7/5",
+    "reward": "Gallant Sneakers",
+    "remarks": "Talk to Mitsuru in the dorm; Unlocks #28",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "28",
+    "name": "Bring me a protein not for pros.",
+    "available": "Complete #27",
+    "deadline": "7/5",
+    "reward": "Spiked Bat",
+    "remarks": "Talk to Akihiko in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "29",
+    "name": "I want to look fashionable.",
+    "available": "6/13",
+    "deadline": "7/5",
+    "reward": "Power Incense I x5",
+    "remarks": "After accepting the request, buy Designer Glasses from Escapade Luxuries in Club Escapade for ¥150,000",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "30",
+    "name": "Retrieve the fourth old document.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "¥40,000",
+    "remarks": "Reach Floor 91 of Yabbashah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "31",
+    "name": "Shadow Hunting Milestone #4",
+    "available": "Complete #22",
+    "deadline": "-",
+    "reward": "Kamimusubi Water x2",
+    "remarks": "Defeat a total of 450 Shadows; Unlocks #46",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "32",
+    "name": "Treasure Hunting Milestone #3",
+    "available": "Complete #16",
+    "deadline": "-",
+    "reward": "Snuff Soul x6",
+    "remarks": "Open a total of 150 treasure chests; Unlocks #47",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "33",
+    "name": "Persona Fusion Milestone #2",
+    "available": "Complete #23",
+    "deadline": "-",
+    "reward": "Twilight Fragment x5",
+    "remarks": "Conduct a total of 35 Persona fusions; Unlocks #48",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "34",
+    "name": "Create a Persona with Torrent Shot.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Attack Mirror x3",
+    "remarks": "Fuse Naga (Nekomata + Berith); Level to 19 via Social Links or battles\nUse Skill Card from either Shuffle Time or Mayoido Antiques",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "35",
+    "name": "Fusion Series #3: 09.0Hermit, Mothman",
+    "available": "Complete #25",
+    "deadline": "-",
+    "reward": "Maid Outfit *",
+    "remarks": "Hua Po (with Agilao) + Flauros\nMatador + Queen Medb; Use an Agilao Skill Card on Mothman",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "36",
+    "name": "Defeat a rare Shadow #1",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Onyx x7",
+    "remarks": "Defeat a Rare Shadow in the Yabbashah Block and bring 1 Rustic Coin to Elizabeth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "37",
+    "name": "Traverse the Monad Passage.",
+    "available": "Complete Monad Door on Floor 80 of the Yabbashah Block",
+    "deadline": "-",
+    "reward": "Black Sword x1",
+    "remarks": "Defeat all the Shadows within the Monad Passage on Floor 91 of the Yabbashah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "38",
+    "name": "I want to eat some chilled taiyaki.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Nihil Cloth x1",
+    "remarks": "Buy the School X Site Note from the Suspicious Man in Club Escapade, then use the URL on the shared computer in the dorm. Buy Lukewarm Taiyaki from the school vendor and put it in the refrigerator; Unlocks #52",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "39",
+    "name": "Let me hear music unique to Gekkoukan.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Female Uniforms (S)",
+    "remarks": "Enter the PA Room next to Class 2F in Gekkoukan High School; Unlocks #66",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "40",
+    "name": "I'd like to see a pair of Max Safety Shoes.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Twilight Fragment x3",
+    "remarks": "Buy from Tanaka's Amazing Commodities for ¥9,800 (7/12); Unlocks #41",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "41",
+    "name": "Bring me the mysterious person's autograph.",
+    "available": "Complete #40",
+    "deadline": "-",
+    "reward": "Nihil Blade x1",
+    "remarks": "Start President Tanaka's Social Link",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "42",
+    "name": "Please feed the cat.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Male Summer Garb",
+    "remarks": "Buy Super Cat Food from Aohige Pharmacy and feed the weak cat at the Port Island Station Outskirts 4 times",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "43",
+    "name": "Bring me a Christmas star.",
+    "available": "7/9",
+    "deadline": "8/4",
+    "reward": "Jack's Gloves",
+    "remarks": "Talk to Fuuka in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "44",
+    "name": "I wish to feel the ocean.",
+    "available": "7/9",
+    "deadline": "-",
+    "reward": "Amethyst x5",
+    "remarks": "In Yakushima on 7/20, pick up either the Pretty Seashell near the left side of the wooden bridge, the Strange Seaweed nestled in the water near the wooden bridge's right, Yakushima Wood from the driftwood on the shore near Fuuka, or the Small Crab from the water near the rocks; Only one needed",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "45",
+    "name": "Retrieve the fifth old document.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "¥50,000",
+    "remarks": "Reach Floor 118 of the Yabbashah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "46",
+    "name": "Shadow Hunting Milestone #5",
+    "available": "Complete #31",
+    "deadline": "-",
+    "reward": "Bead Chain x2",
+    "remarks": "Defeat a total of 600 Shadows; Unlocks #60",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "47",
+    "name": "Treasure Hunting Milestone #4",
+    "available": "Complete #32",
+    "deadline": "-",
+    "reward": "Precious Egg x2",
+    "remarks": "Open a total of 200 treasure chests",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "48",
+    "name": "Persona Fusion Milestone #3",
+    "available": "Complete #33",
+    "deadline": "-",
+    "reward": "Twilight Fragment x5",
+    "remarks": "Conduct a total of 50 Persona fusions",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "49",
+    "name": "Create a Persona that's level 38 or above.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "Marionette",
+    "remarks": "Allows the creation of Nebiros",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "50",
+    "name": "Perform King and I.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "Guard Incense II x3",
+    "remarks": "Fusion Spell Theurgy: King Frost + Black Frost",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "51",
+    "name": "Bring me an Outenta Mitsuyo.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "Multi-Target Boost Skill Card",
+    "remarks": "Create at Mayoido Antiques: Nihil Blade + Black Quartz x5",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "52",
+    "name": "I'd like try a home-cooked meal.",
+    "available": "Complete #38",
+    "deadline": "-",
+    "reward": "Legendary Cleaver",
+    "remarks": "Cook a meal with someone in the dorm and then give to Elizabeth; Unlocks #53",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "53",
+    "name": "I'd like to see a mysterious potato.",
+    "available": "Complete #52",
+    "deadline": "-",
+    "reward": "Ergotite Shard x1",
+    "remarks": "Grow a Tarukaja Potato using a Buff Potato Sprout on the dorm's rooftop garden and then give to Elizabeth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "54",
+    "name": "Attempt a hundred shrine visits.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "Lime Swimwear *",
+    "remarks": "Pray at Naganaki Shrine on three separate days; Does not use up any time; Unlocks #67",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "55",
+    "name": "I'd like to see proof of a bond.",
+    "available": "8/8",
+    "deadline": "-",
+    "reward": "Space Badge",
+    "remarks": "Reach max rank with any Social Link",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "56",
+    "name": "Look for the drink with my name.",
+    "available": "Complete #11",
+    "deadline": "-",
+    "reward": "AS Generic Material x1",
+    "remarks": "Go to Que Sera Sera at the Port Island Station Outskirts with high enough Charm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "57",
+    "name": "I'd like to try Aojiru.",
+    "available": "Complete #10",
+    "deadline": "-",
+    "reward": "Twilight Fragment x8",
+    "remarks": "After talking to the owner of Aohige Pharmacy, obtain the Vintage Yagen from Mayoido Antiques and trade it for the True Aohige Aojiru; Unlocks new items for sale at the pharmacy",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "58",
+    "name": "I wish to become a straw millionaire.",
+    "available": "8/8",
+    "deadline": "8/31",
+    "reward": "Turquoise x20",
+    "remarks": "After accepting the request, trade the Bandage Wrap to the delinquent at the Port Island Station Outskirts, trade his Student Handbook to the student at the station, trade the Irresistible Catnip to the boy at the strip mall, then bring the Cat Ear Headband to Elizabeth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "59",
+    "name": "Retrieve the sixth old document.",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "¥70,000",
+    "remarks": "Reach Floor 144 of the Yabbashah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "60",
+    "name": "Shadow Hunting Milestone #6",
+    "available": "Complete #46",
+    "deadline": "-",
+    "reward": "Soma",
+    "remarks": "Defeat a total of 800 Shadows",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "61",
+    "name": "Create a Persona that's level 46 or above.",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "Atrophying Sutra x2",
+    "remarks": "-",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "62",
+    "name": "Fusion Series #4: 06.0Lovers, Titania",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "Male Uniforms (S)",
+    "remarks": "Black Frost (with Matarukaja) + Dominion / Throne; Unlocks #71",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "63",
+    "name": "Fusion Series #5: 01.0Magician, Rangda",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "Female Summer Garb",
+    "remarks": "Thoth + Girimekhala; Level to 54+ via Social Links or battle; Unlocks #72",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "64",
+    "name": "Defeat a rare Shadow #2",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "Topaz x7",
+    "remarks": "Defeat a Rare Shadow in the Tziah Block, then bring 1 Sumptuous Coin to Elizabeth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "65",
+    "name": "Bring me an Ote-gine.",
+    "available": "9/10",
+    "deadline": "-",
+    "reward": "Quality Nihil Ore x1",
+    "remarks": "Valuable Chest (Tziah 143F)",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "66",
+    "name": "Bring me a giant, creepy doll.",
+    "available": "Complete #39",
+    "deadline": "-",
+    "reward": "Quality Nihil Blade x1",
+    "remarks": "Check the Laboratory in Gekkoukan's 1F Laboratory Hallway",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "67",
+    "name": "Find me a beautiful tile.",
+    "available": "Complete #54",
+    "deadline": "-",
+    "reward": "Scrub Brush",
+    "remarks": "Go to Mahjong Club \"Red Hawk\" at the Port Island Station Outskirts with high Courage and pick \"rock\"",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "68",
+    "name": "Bring me a fruit knife.",
+    "available": "9/10",
+    "deadline": "10/2",
+    "reward": "Bus Stop Sign",
+    "remarks": "Talk to Shinjiro in the dorm; Unlocks #69",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "69",
+    "name": "Bring me oil.",
+    "available": "Complete #68",
+    "deadline": "10/2",
+    "reward": "Rocket Punch",
+    "remarks": "Talk to Aigis in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "70",
+    "name": "Retrieve the seventh old document.",
+    "available": "10/6",
+    "deadline": "-",
+    "reward": "¥90,000",
+    "remarks": "Reach Floor 172 of the Tziah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "71",
+    "name": "Fusion Series #6: 11.0Strength, Siegfried",
+    "available": "Complete #62",
+    "deadline": "-",
+    "reward": "Sky Sundress *",
+    "remarks": "Hanuman (with Endure) + Atavaka\nHecatoncheires (Lvl 48 with Endure) + Shiki-Ouji",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "72",
+    "name": "Fusion Series #7: 05.0Hierophant, Daisoujou",
+    "available": "Complete #63",
+    "deadline": "-",
+    "reward": "Blue Shorts *",
+    "remarks": "Rangda + Succubus = Suzaku; Level to 56 via Social Links or battle; Suzaku (with Regenerate 3) + Hariti / Hecatoncheires\nQitian Dasheng (with Regenerate 3) + Thunderbird",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "73",
+    "name": "Bring me a Mikazuki Munechika.",
+    "available": "10/6",
+    "deadline": "-",
+    "reward": "Endure Skill Card",
+    "remarks": "Create at Mayoido Antiques: Quality Nihil Blade + Emerald x3 + Silver Quartz x2",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "74",
+    "name": "I'd like to try sushi.",
+    "available": "10/6",
+    "deadline": "-",
+    "reward": "Ergotite Chunk x1",
+    "remarks": "Check Inari Shrine at the Naganaki Shrine with high enough Academics",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "75",
+    "name": "Bring me a Sengoku-era helm.",
+    "available": "10/6",
+    "deadline": "-",
+    "reward": "Twilight Fragment x7",
+    "remarks": "Talk to Mr. Ono in the Faculty Office then visit the Faculty Office on 9 separate days",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "76",
+    "name": "Bring me a glasses wipe.",
+    "available": "10/6",
+    "deadline": "11/6",
+    "reward": "Garnet x5",
+    "remarks": "Talk to Ikutski in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "77",
+    "name": "I'd like to walk around Paulownia Mall.",
+    "available": "Complete 13 requests",
+    "deadline": "-",
+    "reward": "Small Cheongsam",
+    "remarks": "Go on a date with Elizabeth (Daytime, does not use up any time); Allows the creation of Hua Po",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "78",
+    "name": "I'd like to visit Iwatodai Station.",
+    "available": "Complete 29 requests",
+    "deadline": "-",
+    "reward": "Book of the Ancients",
+    "remarks": "Go on a date with Elizabeth; Allows the creation of Thoth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "79",
+    "name": "I'd like to visit Naganaki Shrine.",
+    "available": "Complete 45 requests",
+    "deadline": "-",
+    "reward": "Vitality Sash",
+    "remarks": "Go on a date with Elizabeth",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "80",
+    "name": "I'd like to visit Gekkoukan High.",
+    "available": "Complete 65 requests",
+    "deadline": "-",
+    "reward": "Sorcerer's Mark",
+    "remarks": "Go on a date with Elizabeth; Cannot be done on weekends or holidays",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "81",
+    "name": "I'd like to visit your room.",
+    "available": "Complete 80 requests",
+    "deadline": "-",
+    "reward": "Tyrant's Horn",
+    "remarks": "Go on a date with Elizabeth; Allows the creation of Lucifer",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "82",
+    "name": "Retrieve the last old document.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "¥120,000",
+    "remarks": "Reach Floor 198 of the Harabah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "83",
+    "name": "Retrieve the progress report.",
+    "available": "12/4",
+    "deadline": "-",
+    "reward": "¥150,000",
+    "remarks": "Chest (Harabah 226F)",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "84",
+    "name": "Create a Persona with Tempest Slash.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Empowering Sutra x3",
+    "remarks": "Fuse Ose (Mitra + Baphomet); Level to 47 via Social Links or battles",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "85",
+    "name": "Create a Persona with Auto-Maraku.",
+    "available": "12/4",
+    "deadline": "-",
+    "reward": "Debilitator Sutra x3",
+    "remarks": "Fuse Hecatoncheires (High Pixie + Atropos); Level to 53 via Social Links or battle\nFuse Ananta (Jatayu + Trumpeter)\nObtain and use an Auto-Maraku Skill Card from Shuffle Time",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "86",
+    "name": "Fusion Series #8: 13.0Death, Alice",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Maid Outfit *",
+    "remarks": "Special Fusion: Pixie + Lilim + Narcissus + Titania",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "87",
+    "name": "Fusion Series #9: 00.0Fool, Loki",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Masakados",
+    "remarks": "Succubus + Seth; Level to 75 via Social Links or battle; Allows the creation of Masakado",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "88",
+    "name": "Defeat a Greedy Shadow.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Life Aid",
+    "remarks": "Defeat a rare, giant Treasure Hand Shadow in the Harabah Block and bring Elizabeth 1 Gold Medal; A mini-game where you must pick the right direction to go three times in a row (automatic if using Fuuka's Tartarus Search)",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "89",
+    "name": "Bring me a Rai Kunimitsu.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Prime Nihil Ore x1",
+    "remarks": "Locked Chest (Harabah 184F)\nRequires 3 Twilight Fragments",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "90",
+    "name": "Bring me a Dojigiri Yasutsuna.",
+    "available": "12/4",
+    "deadline": "-",
+    "reward": "AS Refined Material x1",
+    "remarks": "Locked Chest (Harabah 212F)\nRequires 3 Twilight Fragments",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "91",
+    "name": "Bring me a Tonbo-kiri.",
+    "available": "1/1",
+    "deadline": "-",
+    "reward": "Nihil Black Model x2",
+    "remarks": "Create at Mayoido Antiques: Nihil Blade + Diamond x5 + Gold Quartz x2",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "92",
+    "name": "Go clean a restroom.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Maid Outfit *",
+    "remarks": "Head to Port Island Station and clean the restroom above the cinema (select \"Scrub hard\" twice)",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "93",
+    "name": "Go water the flowers.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Maid Outfit *",
+    "remarks": "Interact with the flowers on the school rooftop",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "94",
+    "name": "Bring me food for a furry friend.",
+    "available": "11/6",
+    "deadline": "11/30",
+    "reward": "Bone",
+    "remarks": "Talk to Koromaru in the dorm; Unlocks #95",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "95",
+    "name": "Bring me a Featherman R action figure.",
+    "available": "Complete #94",
+    "deadline": "11/30",
+    "reward": "Sacrificial Idol",
+    "remarks": "Talk to Ken in the dorm",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "96",
+    "name": "I'd like to try Oden Juice.",
+    "available": "11/6",
+    "deadline": "-",
+    "reward": "Winter Uniform",
+    "remarks": "Buy 1 of every vending machine drink during the Kyoto Trip on 11/17, then talk to the girl by the Persimmon tree in Gekkoukan's corridor",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "97",
+    "name": "Bring me my Christmas present.",
+    "available": "12/4",
+    "deadline": "12/25",
+    "reward": "Ruby x3",
+    "remarks": "After rescuing the missing person on Floor 56 of the Thebel Block on 6/26 and receiving a Letter of Thanks from Kurosawa, speak to the Eccentric Man on the second floor of the Iwatodai Strip Mall who will give you a Santa Hat and a Christmas Present",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "98",
+    "name": "Fusion Series #10: 16.0Tower, Masakado",
+    "available": "Complete all fusion-related tasks",
+    "deadline": "-",
+    "reward": "Nihil White Model x2",
+    "remarks": "Setanta (Lvl 31 with Charge) + Jack-o'-Lantern = Jikokuten; Jikokuten + Zouchouten + Koumokuten + Bishamonten",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "99",
+    "name": "Defeat the Shadow of the Void.",
+    "available": "Reach Floor 255",
+    "deadline": "-",
+    "reward": "Dead Moon's Husk x1",
+    "remarks": "Defeat the third and final Shadow in the Monad Passage on Floor 255 of the Adamah Block",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "100",
+    "name": "Bring me a Bloody Button.",
+    "available": "1/1",
+    "deadline": "-",
+    "reward": "Divine Pillar",
+    "remarks": "Defeat The Reaper",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  },
+  {
+    "id": "101",
+    "name": "Take out the ultimate adversary.",
+    "available": "Complete #100",
+    "deadline": "-",
+    "reward": "Omnipotent Orb",
+    "remarks": "Defeat Elizabeth within the Monad Depths on Floor 255 of the Adamah Block; Protagonist only",
+    "giver": "Elizabeth",
+    "location": "Velvet Room"
+  }
+]

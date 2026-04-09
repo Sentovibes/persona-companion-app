@@ -366,15 +366,39 @@ function renderEnemies(data, q, color, el) {
 /* ── Classroom ─────────────────────────────────────────────────────────────── */
 function flattenClassroom(data) {
     if (Array.isArray(data)) return data;
-    const items = [];
+    let items = [];
+    
+    // Extract everything first
     Object.entries(data).forEach(([month, monthData]) => {
-        if (typeof monthData!=='object') return;
-        const inner = monthData.Classroom||monthData;
-        Object.entries(inner).forEach(([date, qas]) => {
-            if (!Array.isArray(qas)) return;
-            qas.forEach(qa => items.push({Date:date,...qa}));
+        if (typeof monthData !== 'object') return;
+        
+        const types = monthData.Classroom || monthData.Exam ? ['Classroom', 'Exam'] : ['_root_'];
+        
+        types.forEach(type => {
+            const section = type === '_root_' ? monthData : monthData[type];
+            if (!section) return;
+            
+            Object.entries(section).forEach(([date, qas]) => {
+                if (Array.isArray(qas)) {
+                    qas.forEach(qa => items.push({ Date: date, ...qa }));
+                }
+            });
         });
     });
+
+    // Sort chronologically: April-Dec is Year 1, Jan-Mar is Year 2
+    items.sort((a, b) => {
+        if (!a.Date || !b.Date) return 0;
+        const [m1, d1] = a.Date.split('/').map(Number);
+        const [m2, d2] = b.Date.split('/').map(Number);
+        
+        const mon1 = (m1 < 4) ? m1 + 12 : m1;
+        const mon2 = (m2 < 4) ? m2 + 12 : m2;
+        
+        if (mon1 !== mon2) return mon1 - mon2;
+        return d1 - d2;
+    });
+
     return items;
 }
 
@@ -638,6 +662,7 @@ function renderPersonaDetail(name, p, color, containerId) {
             <div class="detail-hero-arcana">${arcana} Arcana</div>
             ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
         </div>
+        ${p.image ? `<div class="detail-hero-image-wrap"><img src="${p.image}" class="detail-hero-image" alt="${name}" onerror="this.parentElement.style.display='none'"></div>` : ''}
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;

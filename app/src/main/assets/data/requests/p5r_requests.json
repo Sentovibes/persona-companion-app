@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Beware the Clingy Ex-boyfriend*",
+    "available": "5/7",
+    "intel_required": "",
+    "target_name": "Natsuhiko Nakanohara",
+    "target_enemy": "Obariyon",
+    "location": "Qimranut: Area 1",
+    "difficulty": "D",
+    "reward": "Attachment Pearl (accessory)"
+  },
+  {
+    "name": "The Bark and Bite of a Bully*",
+    "available": "5/9",
+    "intel_required": "",
+    "target_name": "Daisuke Takanashi",
+    "target_enemy": "Jack Frost",
+    "location": "Aiyatsbus: Area 2",
+    "difficulty": "D",
+    "reward": "Protein (consumable)"
+  },
+  {
+    "name": "One Who Bullies Bullies*",
+    "available": "Complete previous mission, Moon Confidant rank 3",
+    "intel_required": "Eavesdrop on Takanashi and Sakoda near School Gate",
+    "target_name": "Yoshimori Sakoda",
+    "target_enemy": "Black Frost",
+    "location": "Aiyatsbus: Area 5",
+    "difficulty": "D",
+    "reward": "Evil Snow Crystal (key item)"
+  },
+  {
+    "name": "Phantom Thieves VS Burglary Ring",
+    "available": "6/18",
+    "intel_required": "",
+    "target_name": "Kazuya Makigami",
+    "target_enemy": "Mithras",
+    "location": "Aiyatsbus: Area 6",
+    "difficulty": "D",
+    "reward": "Old Key (key item)"
+  },
+  {
+    "name": "Sadism Is Just a Sign of Love*",
+    "available": "6/6",
+    "intel_required": "",
+    "target_name": "Hikari Shimizu",
+    "target_enemy": "Yaksini",
+    "location": "Aiyatsbus: Area 7",
+    "difficulty": "D",
+    "reward": "Whip Sword (weapon)"
+  },
+  {
+    "name": "Part-time Job, Full-time Hell*",
+    "available": "6/6",
+    "intel_required": "Moon Confidant Rank 4",
+    "target_name": "Nozomi Odo",
+    "target_enemy": "Setanta",
+    "location": "Chemdah: Area 1",
+    "difficulty": "C",
+    "reward": "Chinese Sweets (book)"
+  },
+  {
+    "name": "Bad Medicine",
+    "available": "Death Confidant rank 7",
+    "intel_required": "",
+    "target_name": "Shoichi Oyamada",
+    "target_enemy": "Thoth",
+    "location": "Chemdah: Area 2",
+    "difficulty": "C",
+    "reward": "Mediarama (card)"
+  },
+  {
+    "name": "Ending the Boyfriend's Abuse",
+    "available": "Confront Chihaya Mifune about fake Holy Stone",
+    "intel_required": "",
+    "target_name": "Yuya Uchimura",
+    "target_enemy": "Fuu-Ki",
+    "location": "Chemdah: Area 3",
+    "difficulty": "C",
+    "reward": "Sleep Stick (weapon)"
+  },
+  {
+    "name": "A Teacher Maid to Suffer",
+    "available": "Temperance Confidant Rank 8",
+    "intel_required": "",
+    "target_name": "Toshio and Hiromi Takase",
+    "target_enemy": "Oberon and Titania",
+    "location": "Chemdah: Area 7",
+    "difficulty": "C",
+    "reward": "Envy Chain (weapon)"
+  },
+  {
+    "name": "The Lovesick Cyberstalking Girl*",
+    "available": "7/10",
+    "intel_required": "",
+    "target_name": "Yumeko Mogami",
+    "target_enemy": "Bugs",
+    "location": "Chemdah: Area 8",
+    "difficulty": "C",
+    "reward": "Sticky Hairball (key item)"
+  },
+  {
+    "name": "Calling for Justice for Cats*",
+    "available": "8/11, Moon Confidant Rank 5",
+    "intel_required": "Work at Convenience Store",
+    "target_name": "Kazuo Tsuboi",
+    "target_enemy": "Pisaca",
+    "location": "Kaitul: Area 1",
+    "difficulty": "C",
+    "reward": "Blood Scimitar (weapon)"
+  },
+  {
+    "name": "Debunking the Psychic!",
+    "available": "Fortune Confidant Rank 7",
+    "intel_required": "",
+    "target_name": "Yuichi Fukurai",
+    "target_enemy": "Baphomet",
+    "location": "Kaitul: Area 3",
+    "difficulty": "C",
+    "reward": "Prophet's Hand (weapon)"
+  },
+  {
+    "name": "Shady Deal in the Shadows",
+    "available": "Hanged Man Confidant Rank 7",
+    "intel_required": "",
+    "target_name": "Akimitsu Tsuda",
+    "target_enemy": "Belphegor",
+    "location": "Kaitul: Area 4",
+    "difficulty": "C",
+    "reward": "Weird Wrap (armor)"
+  },
+  {
+    "name": "Who's Been Assaulting People?*",
+    "available": "8/5",
+    "intel_required": "Work at Flower Shop",
+    "target_name": "Taizo Naguri",
+    "target_enemy": "Kin-Ki",
+    "location": "Kaitul: Area 5",
+    "difficulty": "C",
+    "reward": "Charge (card)"
+  },
+  {
+    "name": "We Aren't Just Your Slaves*",
+    "available": "8/2",
+    "intel_required": "Work at Bar Crossroads",
+    "target_name": "Shinsuke Kishi",
+    "target_enemy": "Kumbhanda",
+    "location": "Kaitul: Area 8",
+    "difficulty": "C",
+    "reward": "Theme Park Escort (book)"
+  },
+  {
+    "name": "Fighting for Truth in Journalism",
+    "available": "Devil Confidant Rank 7",
+    "intel_required": "",
+    "target_name": "Shinpei Honjo",
+    "target_enemy": "Take-Minakata",
+    "location": "Kaitul: Area 9",
+    "difficulty": "C",
+    "reward": "Invigorate 3 (card)"
+  },
+  {
+    "name": "Who's Muscling in Yongen-Jaya?*",
+    "available": "8/30",
+    "intel_required": "",
+    "target_name": "Yasuo Jochi",
+    "target_enemy": "Ippon-Datara",
+    "location": "Kaitul: Area 10",
+    "difficulty": "C",
+    "reward": "Shitamachi Reborn (book)"
+  },
+  {
+    "name": "Man of Many Faces and Debts*",
+    "available": "9/19",
+    "intel_required": "Moon Confidant rank 8",
+    "target_name": "Fumio Akitsu",
+    "target_enemy": "Legion",
+    "location": "Akzeriyyuth: Area 3",
+    "difficulty": "B",
+    "reward": "Thermopylae (card)"
+  },
+  {
+    "name": "Winners Don't Use Cheats",
+    "available": "9/4",
+    "intel_required": "Talk to the gamer at Shibuya Arcade",
+    "target_name": "Yoshikuni Nejima",
+    "target_enemy": "Ose",
+    "location": "Akzeriyyuth: Area 5",
+    "difficulty": "B",
+    "reward": "Null Phys (card)"
+  },
+  {
+    "name": "Upstaging the Stage Mother",
+    "available": "Star Confidant Rank 7",
+    "intel_required": "",
+    "target_name": "Mitsuyo Togo",
+    "target_enemy": "Lilim",
+    "location": "Akzeriyyuth: Area 6",
+    "difficulty": "B",
+    "reward": "Bead Chain (consumable)"
+  },
+  {
+    "name": "The Killer Who Cleans Up Trash*",
+    "available": "10/14",
+    "intel_required": "",
+    "target_name": "Yohei Kiritani",
+    "target_enemy": "Rakshasa",
+    "location": "Akzeriyyuth: Area 12",
+    "difficulty": "B",
+    "reward": "High Counter (card)"
+  },
+  {
+    "name": "The Money-grubbing Uncle",
+    "available": "Hierophant Confidant Rank 8",
+    "intel_required": "Joker and Oracle only",
+    "target_name": "Youji Isshiki",
+    "target_enemy": "Girimekhala",
+    "location": "Adyeshach*",
+    "difficulty": "B",
+    "reward": "Venture Saber (weapon)"
+  },
+  {
+    "name": "Daughter's Just a Meal Ticket",
+    "available": "Hermit Confidant Rank 7",
+    "intel_required": "",
+    "target_name": "Kouta and Asami Magario",
+    "target_enemy": "Incubus and Succubus",
+    "location": "Adyeshach: Area 3",
+    "difficulty": "A",
+    "reward": "Growth 3 (card)"
+  },
+  {
+    "name": "A Mother's Aggression",
+    "available": "Tower Confidant Rank 8",
+    "intel_required": "",
+    "target_name": "Hanae Oda",
+    "target_enemy": "Dakini",
+    "location": "Adyeshach: Area 11",
+    "difficulty": "A",
+    "reward": "Soma (consumable)"
+  },
+  {
+    "name": "Swindling Old Folk is Pretty Low*",
+    "available": "11/25",
+    "intel_required": "",
+    "target_name": "Yoshihito Wakasa",
+    "target_enemy": "Chernobog",
+    "location": "Adyeshach: Area 13",
+    "difficulty": "A",
+    "reward": "Haten Robe (armor)"
+  },
+  {
+    "name": "The Head Honcho in Showbiz*",
+    "available": "12/3†",
+    "intel_required": "",
+    "target_name": "Shiro Asakura",
+    "target_enemy": "Mara",
+    "location": "Sheriruth: Area 14",
+    "difficulty": "S",
+    "reward": "Immortal Vest (armor)"
+  },
+  {
+    "name": "If Cats Disappeared from the City",
+    "available": "5/23†",
+    "intel_required": "Eavesdrop on Gentle-Looking Mother and Old Man in Yongen-Jaya",
+    "target_name": "Ryoko Aino",
+    "target_enemy": "Nekomata",
+    "location": "Aiyatsbus: Area 6",
+    "difficulty": "D",
+    "reward": "Cat Brooch (accessory)"
+  },
+  {
+    "name": "An Elderly's Meaning of Life",
+    "available": "6/5",
+    "intel_required": "Eavesdrop on Sake Reporter and Aproned Man in Kichijoji",
+    "target_name": "Heiji Ono",
+    "target_enemy": "Koropokkuru",
+    "location": "Aiyatsbus: Area 3",
+    "difficulty": "D",
+    "reward": "Nuisance Belt (accessory)"
+  },
+  {
+    "name": "Lady-Killer's Ballad*",
+    "available": "12/10",
+    "intel_required": "",
+    "target_name": "Hikaru Arihara",
+    "target_enemy": "Tam Lin",
+    "location": "Sheriruth: Area 8",
+    "difficulty": "A",
+    "reward": "Agitation Crown (accessory)"
+  },
+  {
+    "name": "A Small Cry for Help",
+    "available": "1/13",
+    "intel_required": "Reach Third Semester",
+    "target_name": "Kuniko Kagami",
+    "target_enemy": "Rangda",
+    "location": "Da'at: Area 3",
+    "difficulty": "S",
+    "reward": "Spiral Hell Ring (accessory)"
+  },
+  {
+    "name": "O My Young Sister, I Cry For You",
+    "available": "1/14",
+    "intel_required": "Reach Third Semester",
+    "target_name": "Nao Minamoto",
+    "target_enemy": "Yoshitsune",
+    "location": "Da'at: Area 7",
+    "difficulty": "S",
+    "reward": "Strength Up Ofuda x8"
+  },
+  {
+    "name": "An Idol and a Unicorn",
+    "available": "Next day after clearing final palace †",
+    "intel_required": "Eavesdrop on Lily-Nyan and Fuwa after receiving SNS",
+    "target_name": "Anji Fuwa",
+    "target_enemy": "Unicorn",
+    "location": "Da'at: Area 13",
+    "difficulty": "S",
+    "reward": "One-shot Kill (card)"
+  },
+  {
+    "name": "Fake-Man Show",
+    "available": "Next day after clearing final palace†",
+    "intel_required": "Eavesdrop on Kichijoji natives, then eavesdrop on a pair of students after receiving SNS",
+    "target_name": "Izuo Amasaki",
+    "target_enemy": "Macabre",
+    "location": "Da'at: Area 15",
+    "difficulty": "S",
+    "reward": "Eccentric Belt (accessory)"
+  }
+]

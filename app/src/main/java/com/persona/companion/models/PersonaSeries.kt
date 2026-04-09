@@ -10,6 +10,7 @@ data class Game(
     val skillPath: String? = null,
     val itemPath: String? = null,
     val socialLinkPath: String? = null,
+    val requestPath: String? = null,
     val aigisDataPath: String? = null,
     val aigisEnemyPath: String? = null
 )

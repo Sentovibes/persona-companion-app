@@ -1,15 +1,36 @@
 {
   "Fool": {
-    "Rank 1: Auto": { "Requirements": "Automatic on April 17" },
-    "Rank 2: Auto": { "Requirements": "Automatic on April 30" },
-    "Rank 3: Auto": { "Requirements": "Automatic on May 18" },
-    "Rank 4: Auto": { "Requirements": "Automatic on June 6" },
-    "Rank 5: Auto": { "Requirements": "Automatic on July 10" },
-    "Rank 6: Auto": { "Requirements": "Automatic on July 10" },
-    "Rank 7: Auto": { "Requirements": "Automatic on July 27" },
-    "Rank 8: Auto": { "Requirements": "Automatic on October 6" },
-    "Rank 9: Auto": { "Requirements": "Automatic on November 6" },
-    "Rank 10: Auto": { "Requirements": "Automatic on December 3" }
+    "Rank 1: Auto": {
+      "Requirements": "Automatic on April 17"
+    },
+    "Rank 2: Auto": {
+      "Requirements": "Automatic on April 30"
+    },
+    "Rank 3: Auto": {
+      "Requirements": "Automatic on May 18"
+    },
+    "Rank 4: Auto": {
+      "Requirements": "Automatic on June 6"
+    },
+    "Rank 5: Auto": {
+      "Requirements": "Automatic on July 10"
+    },
+    "Rank 6: Auto": {
+      "Requirements": "Automatic on July 10"
+    },
+    "Rank 7: Auto": {
+      "Requirements": "Automatic on July 27"
+    },
+    "Rank 8: Auto": {
+      "Requirements": "Automatic on October 6"
+    },
+    "Rank 9: Auto": {
+      "Requirements": "Automatic on November 6"
+    },
+    "Rank 10: Auto": {
+      "Requirements": "Automatic on December 3"
+    },
+    "UltimatePersona": "Izanagi-no-Okami"
   },
   "Magician": {
     "Details": {
@@ -20,11 +41,18 @@
     "Rank Up Progression": {
       "Rank 2": {
         "Next Pts": 10,
+        "Benefit": {
+          "Name": "Assist",
+          "Description": "Chance to perform a follow-up attack if the protagonist's attack doesn't knock down the enemy."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It must be tough.\"", "Points": 15 }
+              {
+                "Answer": "\"It must be tough.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -35,30 +63,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Hmm, you're looking hairier.\"", "Points": 15 }
+              {
+                "Answer": "\"Hmm, you're looking hairier.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 4": {
         "Next Pts": 20,
+        "Benefit": {
+          "Name": "Recovery",
+          "Description": "Chance to cure status ailments on party members during battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You're incredible.\"", "Points": 10 }
+              {
+                "Answer": "\"You're incredible.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"That's the spirit!\"", "Points": 5 }
+              {
+                "Answer": "\"That's the spirit!\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -69,30 +113,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Of course.\"", "Points": 15 }
+              {
+                "Answer": "\"Of course.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I will soon.\"", "Points": 15 }
+              {
+                "Answer": "\"I will soon.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 6": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Endure",
+          "Description": "Chance to withstand an otherwise fatal attack with 1 HP."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"No problem.\"", "Points": 15 }
+              {
+                "Answer": "\"No problem.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Man, you're mature.\"", "Points": 15 }
+              {
+                "Answer": "\"Man, you're mature.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -103,36 +163,55 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You were just upset.\"", "Points": 15 }
+              {
+                "Answer": "\"You were just upset.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 8": {
         "Next Pts": 20,
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any (Only if you chose 'You were just upset.' during Rank 7)", "Points": 0 }
+              {
+                "Answer": "Any (Only if you chose 'You were just upset.' during Rank 7)",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -143,35 +222,58 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Cheer up.\"", "Points": 5 }
+              {
+                "Answer": "\"Cheer up.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You're right.\"", "Points": 15 }
+              {
+                "Answer": "\"You're right.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 10": {
         "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Junes Receipt",
+          "Description": "Unlocks the fusion of Mada, the ultimate Persona of the Magician Arcana."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Takehaya Susano-o",
+      "Name": "Youthful Wind",
+      "Description": "Restores HP/Cures ailments for party and increases Hit/Evasion rate.",
+      "Requirement": "Talk to Yosuke in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Mada"
   },
   "Priestess": {
     "Details": {
@@ -182,17 +284,27 @@
     "Rank Up Progression": {
       "Rank 2": {
         "Next Pts": 10,
+        "Benefit": {
+          "Name": "Assist",
+          "Description": "Chance to perform a follow-up attack if the protagonist's attack doesn't knock down the enemy."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Sounds good.\"", "Points": 10 }
+              {
+                "Answer": "\"Sounds good.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -203,44 +315,72 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Good luck.\"", "Points": 10 }
+              {
+                "Answer": "\"Good luck.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Count me in!\"", "Points": 15 },
-              { "Answer": "\"I don't mind.\"", "Points": 5 }
+              {
+                "Answer": "\"Count me in!\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"I don't mind.\"",
+                "Points": 5
+              }
             ]
           }
         ]
       },
       "Rank 4": {
         "Next Pts": 20,
+        "Benefit": {
+          "Name": "Recovery",
+          "Description": "Chance to cure status ailments on party members during battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Let's eat!\"", "Points": 15 },
-              { "Answer": "Other Choices", "Points": 5 }
+              {
+                "Answer": "\"Let's eat!\"",
+                "Points": 15
+              },
+              {
+                "Answer": "Other Choices",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"There's always next time.\"", "Points": 10 }
+              {
+                "Answer": "\"There's always next time.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I'm having fun.\"", "Points": 10 }
+              {
+                "Answer": "\"I'm having fun.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -251,19 +391,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"What's all this for?\"", "Points": 5 }
+              {
+                "Answer": "\"What's all this for?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -274,53 +423,82 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Gotten any better yet?\"", "Points": 5 }
+              {
+                "Answer": "\"Gotten any better yet?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Keep practicing.\"", "Points": 5 }
+              {
+                "Answer": "\"Keep practicing.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"They care about you.\"", "Points": 10 }
+              {
+                "Answer": "\"They care about you.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 7": {
         "Next Pts": 35,
+        "Benefit": {
+          "Name": "Endure",
+          "Description": "Chance to withstand an otherwise fatal attack with 1 HP."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"They're not mistaken.\"", "Points": 15 }
+              {
+                "Answer": "\"They're not mistaken.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 8": {
         "Next Pts": 35,
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You were cool.\"", "Points": 15 }
+              {
+                "Answer": "\"You were cool.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -331,14 +509,25 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"For you...\"", "Points": 15 }
+              {
+                "Answer": "\"For you...\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I really like you.\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "Other Choices", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"I really like you.\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "Other Choices",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -349,19 +538,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"You'll protect me.\"", "Points": 15 }
+              {
+                "Answer": "\"You'll protect me.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -372,35 +570,73 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Thank you.\"", "Points": 15 }
+              {
+                "Answer": "\"Thank you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Sume-Omikami",
+      "Name": "Burning Petals",
+      "Description": "Severe Fire damage to all enemies.",
+      "Requirement": "Talk to Yukiko in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Scathach"
   },
   "Empress": {
     "Details": {
       "Trigger": "Enter the Velvet Room any time starting May 19. Requires Knowledge - Expert (Lv 3)"
     },
     "Rank Up Progression": {
-      "Rank 1": { "Requirements": "Knowledge - Expert (Lv 3)" },
-      "Rank 2": { "Requirements": "Make an Ippon-datara with Sukukaja" },
-      "Rank 3": { "Requirements": "Make a Matador with Mahama" },
-      "Rank 4": { "Requirements": "Make a Gdon with Rampage" },
-      "Rank 5": { "Requirements": "Make a Neko Shogun with Bufula" },
-      "Rank 6": { "Requirements": "Make a Black Frost with Auto-Sukukaja" },
-      "Rank 7": { "Requirements": "Make a Yatagarusu with Megido" },
-      "Rank 8": { "Requirements": "Make a Yatsufusa with Mediarama" },
-      "Rank 9": { "Requirements": "Make a Ganesha with Tetrakarn" },
-      "Rank 10": { "Requirements": "Make a Trumpeter with Mind Charge" }
-    }
+      "Rank 1": {
+        "Requirements": "Knowledge - Expert (Lv 3)"
+      },
+      "Rank 2": {
+        "Requirements": "Make an Ippon-datara with Sukukaja"
+      },
+      "Rank 3": {
+        "Requirements": "Make a Matador with Mahama"
+      },
+      "Rank 4": {
+        "Requirements": "Make a Gdon with Rampage"
+      },
+      "Rank 5": {
+        "Requirements": "Make a Neko Shogun with Bufula"
+      },
+      "Rank 6": {
+        "Requirements": "Make a Black Frost with Auto-Sukukaja"
+      },
+      "Rank 7": {
+        "Requirements": "Make a Yatagarusu with Megido"
+      },
+      "Rank 8": {
+        "Requirements": "Make a Yatsufusa with Mediarama"
+      },
+      "Rank 9": {
+        "Requirements": "Make a Ganesha with Tetrakarn"
+      },
+      "Rank 10": {
+        "Requirements": "Make a Trumpeter with Mind Charge",
+        "Benefit": {
+          "Name": "Proof of Power",
+          "Description": "Unlocks the fusion of Isis, the ultimate Persona of the Empress Arcana."
+        }
+      }
+    },
+    "UltimatePersona": "Isis"
   },
   "Emperor": {
     "Details": {
@@ -415,7 +651,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You just need to change.\"", "Points": 10 }
+              {
+                "Answer": "\"You just need to change.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -426,19 +665,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -449,19 +697,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Plenty.\"", "Points": 10 }
+              {
+                "Answer": "\"Plenty.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'll go with you.\"", "Points": 15 }
+              {
+                "Answer": "\"I'll go with you.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"You're giving him a new one?\"", "Points": 5 }
+              {
+                "Answer": "\"You're giving him a new one?\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -472,13 +729,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"It was pretty amazing.\"", "Points": 15 }
+              {
+                "Answer": "\"It was pretty amazing.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -489,7 +752,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -500,13 +766,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I want to learn too.\"", "Points": 15 }
+              {
+                "Answer": "\"I want to learn too.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -517,45 +789,78 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Kanji didn't do anything.\" / \"You got a warrant?\"", "Points": 15 }
+              {
+                "Answer": "\"Kanji didn't do anything.\" / \"You got a warrant?\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Believe it!\"", "Points": 15 },
-              { "Answer": "\"Tell him, Kanji.\"", "Points": 10 }
+              {
+                "Answer": "\"Believe it!\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"Tell him, Kanji.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 9": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"How was it?\"", "Points": 10 }
+              {
+                "Answer": "\"How was it?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Good for you.\"", "Points": 15 }
+              {
+                "Answer": "\"Good for you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 10": {
-        "Next Pts": "N/A"
+        "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Bike Key",
+          "Description": "Unlocks the fusion of Odin, the ultimate Persona of the Emperor Arcana."
+        }
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Takeji Zaiten",
+      "Name": "The Man's Way",
+      "Description": "Chance to Down and Dizzy all enemies.",
+      "Requirement": "Talk to Kanji in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Odin"
   },
   "Hierophant": {
     "Details": {
@@ -571,19 +876,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Working.\"", "Points": 15 }
+              {
+                "Answer": "\"Working.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Tell me about yourself.\"", "Points": 10 }
+              {
+                "Answer": "\"Tell me about yourself.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That's stretching it.\"", "Points": 15 }
+              {
+                "Answer": "\"That's stretching it.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -594,13 +908,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Fit or not, you're family.\" / \"I don't get it.\"", "Points": 10 }
+              {
+                "Answer": "\"Fit or not, you're family.\" / \"I don't get it.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -611,13 +931,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"With cream.\" / \"Surprise me.\"", "Points": 15 }
+              {
+                "Answer": "\"With cream.\" / \"Surprise me.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You don't have to do that.\"", "Points": 10 }
+              {
+                "Answer": "\"You don't have to do that.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -629,13 +955,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Can I help?\"", "Points": 10 }
+              {
+                "Answer": "\"Can I help?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Are you okay?\" / \"But Nanako...\"", "Points": 10 }
+              {
+                "Answer": "\"Are you okay?\" / \"But Nanako...\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -647,13 +979,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Then let's go outside.\"", "Points": 10 }
+              {
+                "Answer": "\"Then let's go outside.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -664,7 +1002,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"This is more important, huh?\"", "Points": 5 }
+              {
+                "Answer": "\"This is more important, huh?\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -675,14 +1016,23 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Want some coffee?\"", "Points": 10 }
+              {
+                "Answer": "\"Want some coffee?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Because you're a coward.\"", "Points": 15 },
-              { "Answer": "Other Choices", "Points": 5 }
+              {
+                "Answer": "\"Because you're a coward.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "Other Choices",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -693,13 +1043,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It was fun.\"", "Points": 10 }
+              {
+                "Answer": "\"It was fun.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Was it hard?\"", "Points": 15 }
+              {
+                "Answer": "\"Was it hard?\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -710,18 +1066,29 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"My name? That's okay...\"", "Points": 15 }
+              {
+                "Answer": "\"My name? That's okay...\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
-        ]
+        ],
+        "Benefit": {
+          "Name": "Lighter",
+          "Description": "Unlocks the fusion of Kohryu, the ultimate Persona of the Hierophant Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Kohryu"
   },
   "Lovers": {
     "Details": {
@@ -732,11 +1099,18 @@
     "Rank Up Progression": {
       "Rank 2": {
         "Next Pts": 10,
+        "Benefit": {
+          "Name": "Full Analysis",
+          "Description": "Reveals enemy skills and what they are weak against."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Just order takeout.\"", "Points": 10 }
+              {
+                "Answer": "\"Just order takeout.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -747,30 +1121,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"What are you looking for?\"", "Points": 15 }
+              {
+                "Answer": "\"What are you looking for?\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 4": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Healing Wave",
+          "Description": "Restores 5% of the party's HP after a successful battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Grab her hand and run", "Points": 15 }
+              {
+                "Answer": "Grab her hand and run",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Go along with her", "Points": 15 }
+              {
+                "Answer": "Go along with her",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I don't mind.\"", "Points": 15 }
+              {
+                "Answer": "\"I don't mind.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -781,66 +1171,104 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"All the time.\"", "Points": 15 }
+              {
+                "Answer": "\"All the time.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I don't know...\"", "Points": 15 }
+              {
+                "Answer": "\"I don't know...\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 6": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Stamina Song",
+          "Description": "Restores 10% of the party's HP after a successful battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Having second thoughts?\" / \"She'll understand.\"", "Points": 5 }
+              {
+                "Answer": "\"Having second thoughts?\" / \"She'll understand.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"If you're serious...\"", "Points": 15 }
+              {
+                "Answer": "\"If you're serious...\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 7": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Weakness Scan",
+          "Description": "Chance to reveal an enemy's weakness at the start of battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'm happy.\" / \"That part doesn't matter.\"", "Points": 5 }
+              {
+                "Answer": "\"I'm happy.\" / \"That part doesn't matter.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Laugh it off\"", "Points": 15 },
-              { "Answer": "Other Choices", "Points": 5 }
+              {
+                "Answer": "\"Laugh it off\"",
+                "Points": 15
+              },
+              {
+                "Answer": "Other Choices",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -851,33 +1279,62 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Hold her", "Points": 0, "Route": "Romance" },
-              { "Answer": "Stand there", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "Hold her",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "Stand there",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
       },
       "Rank 9": {
         "Next Pts": 45,
+        "Benefit": {
+          "Name": "Ultimate Analysis",
+          "Description": "Reveals all affinities and stats an enemy has, including their skills."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"\"Risette\" is Rise, too.\"", "Points": 15 }
+              {
+                "Answer": "\"\"Risette\" is Rise, too.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
       "Rank 10": {
-        "Next Pts": "N/A"
+        "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Tape of Girl's Voice",
+          "Description": "Unlocks the fusion of Ishtar, the ultimate Persona of the Lovers Arcana."
+        }
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Kouzeon",
+      "Name": "Complete Analysis",
+      "Description": "Reveals all enemy weaknesses and stats at the start of battle.",
+      "Requirement": "Talk to Rise in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Ishtar"
   },
   "Chariot": {
     "Details": {
@@ -888,17 +1345,27 @@
     "Rank Up Progression": {
       "Rank 2": {
         "Next Pts": 15,
+        "Benefit": {
+          "Name": "Assist",
+          "Description": "Chance to perform a follow-up attack if the protagonist's attack doesn't knock down the enemy."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Right.\"", "Points": 15 }
+              {
+                "Answer": "\"Right.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'm cool with it.\"", "Points": 10 }
+              {
+                "Answer": "\"I'm cool with it.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -909,29 +1376,57 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It's cute.\"", "Points": 15 },
-              { "Answer": "\"It's very feminine.\"", "Points": 10 },
-              { "Answer": "Take it off", "Points": 0 },
-              { "Answer": "Watch her", "Points": 0 }
+              {
+                "Answer": "\"It's cute.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"It's very feminine.\"",
+                "Points": 10
+              },
+              {
+                "Answer": "Take it off",
+                "Points": 0
+              },
+              {
+                "Answer": "Watch her",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 4": {
         "Next Pts": 20,
+        "Benefit": {
+          "Name": "Recovery",
+          "Description": "Chance to cure status ailments on party members during battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Quit bagging on her.\"", "Points": 15 },
-              { "Answer": "\"None of your business.\"", "Points": 5 }
+              {
+                "Answer": "\"Quit bagging on her.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"None of your business.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Hold Chie's hand", "Points": 15 },
-              { "Answer": "Crack a joke", "Points": 10 }
+              {
+                "Answer": "Hold Chie's hand",
+                "Points": 15
+              },
+              {
+                "Answer": "Crack a joke",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -942,31 +1437,50 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You look so happy.\"", "Points": 15 }
+              {
+                "Answer": "\"You look so happy.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'll look out for her.\"", "Points": 15 },
-              { "Answer": "\"I worry more for you.\"", "Points": 10 }
+              {
+                "Answer": "\"I'll look out for her.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"I worry more for you.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 6": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Endure",
+          "Description": "Chance to withstand an otherwise fatal attack with 1 HP."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Exactly.\"", "Points": 15 }
+              {
+                "Answer": "\"Exactly.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Of course.\"", "Points": 15 }
+              {
+                "Answer": "\"Of course.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -977,24 +1491,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"It's no trouble.\"", "Points": 5 }
+              {
+                "Answer": "\"It's no trouble.\"",
+                "Points": 5
+              }
             ]
           }
         ]
       },
       "Rank 8": {
         "Next Pts": 30,
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"That's the first step.\" / \"It's hard to face yourself.\"", "Points": 10 }
+              {
+                "Answer": "\"That's the first step.\" / \"It's hard to face yourself.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1005,65 +1532,109 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You protected that kid.\"", "Points": 15 }
+              {
+                "Answer": "\"You protected that kid.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Will you be my girlfriend?\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "\"I'm counting on you.\"", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"Will you be my girlfriend?\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "\"I'm counting on you.\"",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
       },
       "Rank 10 Romance": {
         "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Second Awakening",
+          "Description": "Tomoe awakens. Unlocks Futsunushi for fusion."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It was messier.\"", "Points": 10 }
+              {
+                "Answer": "\"It was messier.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"That sounds good.\"", "Points": 15 }
+              {
+                "Answer": "\"That sounds good.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Hug her", "Points": 0 }
+              {
+                "Answer": "Hug her",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 10 Friendship": {
         "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Second Awakening",
+          "Description": "Tomoe awakens. Unlocks Futsunushi for fusion."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Haraedo-no-Okami",
+      "Name": "Dragon Hustle",
+      "Description": "Increases Attack, Defense, and Hit/Evasion for the whole party.",
+      "Requirement": "Talk to Chie in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Futsunushi"
   },
   "Justice": {
     "Details": {
@@ -1078,19 +1649,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Go ahead and ask.\"", "Points": 10 }
+              {
+                "Answer": "\"Go ahead and ask.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"That's right.\"", "Points": 10 }
+              {
+                "Answer": "\"That's right.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I have you.\"", "Points": 15 }
+              {
+                "Answer": "\"I have you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1101,13 +1681,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I'll go buy some.\" / \"Let's go buy some together.\"", "Points": 15 }
+              {
+                "Answer": "\"I'll go buy some.\" / \"Let's go buy some together.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"It's not Nanako's fault.\"", "Points": 15 }
+              {
+                "Answer": "\"It's not Nanako's fault.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1119,25 +1705,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Is there anything else?\"", "Points": 10 }
+              {
+                "Answer": "\"Is there anything else?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"They go to heaven.\"", "Points": 15 }
+              {
+                "Answer": "\"They go to heaven.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I don't know.\"", "Points": 5 }
+              {
+                "Answer": "\"I don't know.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"He's protecting you.\"", "Points": 5 }
+              {
+                "Answer": "\"He's protecting you.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1148,20 +1746,32 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"A person you love a lot.\"", "Points": 15 }
+              {
+                "Answer": "\"A person you love a lot.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Did he say that?\"", "Points": 15 }
+              {
+                "Answer": "\"Did he say that?\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Listen to her talk", "Points": 15 },
-              { "Answer": "Talk with her", "Points": 10 }
+              {
+                "Answer": "Listen to her talk",
+                "Points": 15
+              },
+              {
+                "Answer": "Talk with her",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1173,13 +1783,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Swear to it", "Points": 5 }
+              {
+                "Answer": "Swear to it",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'll ask him with you.\"", "Points": 15 }
+              {
+                "Answer": "\"I'll ask him with you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1190,25 +1806,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Let's go look for her.\"", "Points": 10 }
+              {
+                "Answer": "\"Let's go look for her.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Let's go home.\"", "Points": 15 }
+              {
+                "Answer": "\"Let's go home.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1219,13 +1847,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I'll help you look for it.\"", "Points": 15 }
+              {
+                "Answer": "\"I'll help you look for it.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1236,19 +1870,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"He loves you, too.\"", "Points": 15 }
+              {
+                "Answer": "\"He loves you, too.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 10 }
+              {
+                "Answer": "Any",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Play with her", "Points": 15 }
+              {
+                "Answer": "Play with her",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1259,34 +1902,100 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Sure thing.\"", "Points": 10 }
+              {
+                "Answer": "\"Sure thing.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Let's do it.\"", "Points": 15 }
+              {
+                "Answer": "\"Let's do it.\"",
+                "Points": 15
+              }
             ]
           }
-        ]
+        ],
+        "Benefit": {
+          "Name": "House Key",
+          "Description": "Unlocks the fusion of Sraosha, the ultimate Persona of the Justice Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Sraosha"
   },
   "Hermit": {
     "Details": {
       "Trigger": "Automatic on May 5"
     },
     "Rank Up Progression": {
-      "Rank 2": { "Requirements": "Accept & Clear Quest 7: I Wish for Love" },
-      "Rank 3": { "Requirements": "Accept & Clear Quest 8: I Wish I Didn't Crave Snacks" },
-      "Rank 4": { "Requirements": "Accept & Clear Quest 9: We Wish Our Dog Would Return" },
-      "Rank 5": { "Requirements": "Accept & Clear Quest 10: I Wish I Had Friends" },
-      "Rank 6": { "Requirements": "Accept & Clear Quest 11: I Wish My Life Had Meaning Again" },
-      "Rank 7": { "Requirements": "Accept & Clear Quest 12: I Wish I Was Better at Speaking" },
-      "Rank 8": { "Requirements": "Accept & Clear Quest 13: I Wish I Didn't Fear Cats" },
-      "Rank 9": { "Requirements": "Accept & Clear Quest 14: I Wish My Wallet Would Return" },
-      "Rank 10": { "Requirements": "Accept & Clear Quest 15: I Wish to See the Samegawa's Guardian" }
-    }
+      "Rank 2": {
+        "Requirements": "Accept & Clear Quest 7: I Wish for Love",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 2)",
+          "Description": "Price reduced to 55 yen per SP."
+        }
+      },
+      "Rank 3": {
+        "Requirements": "Accept & Clear Quest 8: I Wish I Didn't Crave Snacks",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 3)",
+          "Description": "Price reduced to 50 yen per SP."
+        }
+      },
+      "Rank 4": {
+        "Requirements": "Accept & Clear Quest 9: We Wish Our Dog Would Return",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 4)",
+          "Description": "Price reduced to 45 yen per SP."
+        }
+      },
+      "Rank 5": {
+        "Requirements": "Accept & Clear Quest 10: I Wish I Had Friends",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 5)",
+          "Description": "Price reduced to 40 yen per SP."
+        }
+      },
+      "Rank 6": {
+        "Requirements": "Accept & Clear Quest 11: I Wish My Life Had Meaning Again",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 6)",
+          "Description": "Price reduced to 35 yen per SP."
+        }
+      },
+      "Rank 7": {
+        "Requirements": "Accept & Clear Quest 12: I Wish I Was Better at Speaking",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 7)",
+          "Description": "Price reduced to 30 yen per SP."
+        }
+      },
+      "Rank 8": {
+        "Requirements": "Accept & Clear Quest 13: I Wish I Didn't Fear Cats",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 8)",
+          "Description": "Price reduced to 25 yen per SP."
+        }
+      },
+      "Rank 9": {
+        "Requirements": "Accept & Clear Quest 14: I Wish My Wallet Would Return",
+        "Benefit": {
+          "Name": "Price Cut (Lvl 9)",
+          "Description": "Price reduced to 20 yen per SP."
+        }
+      },
+      "Rank 10": {
+        "Requirements": "Accept & Clear Quest 15: I Wish to See the Samegawa's Guardian",
+        "Benefit": {
+          "Name": "Sturdy Sheath",
+          "Description": "Unlocks the fusion of Ongyo-Ki, the ultimate Persona of the Hermit Arcana."
+        }
+      }
+    },
+    "UltimatePersona": "Ongyo-Ki"
   },
   "Fortune": {
     "Details": {
@@ -1297,23 +2006,36 @@
     "Rank Up Progression": {
       "Rank 2": {
         "Next Pts": 0,
+        "Benefit": {
+          "Name": "Assist",
+          "Description": "Chance to perform a follow-up attack if the protagonist's attack doesn't knock down the enemy."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"That's no fun.\"", "Points": 5 }
+              {
+                "Answer": "\"That's no fun.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Remember that card...?\"", "Points": 10 }
+              {
+                "Answer": "\"Remember that card...?\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1324,36 +2046,55 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"A challenge for a duel?\"", "Points": 10 }
+              {
+                "Answer": "\"A challenge for a duel?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 4": {
         "Next Pts": 25,
+        "Benefit": {
+          "Name": "Recovery",
+          "Description": "Chance to cure status ailments on party members during battle."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"That 'card' again?\"", "Points": 10 }
+              {
+                "Answer": "\"That 'card' again?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Let's catch him together.\"", "Points": 10 }
+              {
+                "Answer": "\"Let's catch him together.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1364,49 +2105,79 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Burn it.\"", "Points": 5 }
+              {
+                "Answer": "\"Burn it.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"A mailbox.\"", "Points": 5 }
+              {
+                "Answer": "\"A mailbox.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Good, you got it back.\"", "Points": 5 }
+              {
+                "Answer": "\"Good, you got it back.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"Let's do it.\"", "Points": 10 }
+              {
+                "Answer": "\"Let's do it.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 6": {
         "Next Pts": 40,
+        "Benefit": {
+          "Name": "Endure",
+          "Description": "Chance to withstand an otherwise fatal attack with 1 HP."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Because I look reliable.\" / \"Because I looked useless.\"", "Points": 5 }
+              {
+                "Answer": "\"Because I look reliable.\" / \"Because I looked useless.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"The numbers are important.\"", "Points": 10 }
+              {
+                "Answer": "\"The numbers are important.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I'm glad you're a girl.\"", "Points": 0, "Flag": "Romance Flag" },
-              { "Answer": "\"Your gender doesn't matter.\"", "Points": 15, "Route": "Friendship" }
+              {
+                "Answer": "\"I'm glad you're a girl.\"",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "\"Your gender doesn't matter.\"",
+                "Points": 15,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -1417,37 +2188,62 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Subtract '40' and '4'?\"", "Points": 5 }
+              {
+                "Answer": "\"Subtract '40' and '4'?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Don't be afraid.\"", "Points": 10 }
+              {
+                "Answer": "\"Don't be afraid.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 8": {
         "Next Pts": 20,
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I feel kinda sad.\"", "Points": 10 }
+              {
+                "Answer": "\"I feel kinda sad.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Protect Naoto", "Points": 0, "Flag": "Romance Flag" }
+              {
+                "Answer": "Protect Naoto",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Because I love you.\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "\"Because we're friends.\"", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"Because I love you.\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "\"Because we're friends.\"",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -1458,52 +2254,85 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Somewhere high.\"", "Points": 10 }
+              {
+                "Answer": "\"Somewhere high.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Throwing things away.\"", "Points": 10 }
+              {
+                "Answer": "\"Throwing things away.\"",
+                "Points": 10
+              }
             ]
           }
         ]
       },
       "Rank 10 Romantic": {
         "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Second Awakening",
+          "Description": "Yamato-Takeru awakens. Unlocks Norn for fusion."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Is it that interesting?\"", "Points": 15 }
+              {
+                "Answer": "\"Is it that interesting?\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I like it higher.\"", "Points": 0 }
+              {
+                "Answer": "\"I like it higher.\"",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 10 Platonic": {
         "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Second Awakening",
+          "Description": "Yamato-Takeru awakens. Unlocks Norn for fusion."
+        },
         "Dialogues": [
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It was exciting.\"", "Points": 15 }
+              {
+                "Answer": "\"It was exciting.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I want to be your partner.\" / \"You're MY assistant.\"", "Points": 15 }
+              {
+                "Answer": "\"I want to be your partner.\" / \"You're MY assistant.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "ThirdAwakening": {
+      "Persona": "Yamato Sumikami",
+      "Name": "Shield of Justice",
+      "Description": "Protects the party from all damage for one turn.",
+      "Requirement": "Talk to Naoto in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Norn"
   },
   "Strength (Basketball)": {
     "Details": {
@@ -1518,19 +2347,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Aiya.\" / \"Junes.\"", "Points": 15 }
+              {
+                "Answer": "\"Aiya.\" / \"Junes.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'm jealous.\"", "Points": 5 }
+              {
+                "Answer": "\"I'm jealous.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1541,19 +2379,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Just tell me how.\"", "Points": 15 }
+              {
+                "Answer": "\"Just tell me how.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"But it's just a sport...\" / \"I can see that.\"", "Points": 5 }
+              {
+                "Answer": "\"But it's just a sport...\" / \"I can see that.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Leave it to me.\"", "Points": 15 }
+              {
+                "Answer": "\"Leave it to me.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1564,13 +2411,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"That's good for you.\" / \"Cheer up, man.\"", "Points": 5 }
+              {
+                "Answer": "\"That's good for you.\" / \"Cheer up, man.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1581,13 +2434,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You've got some nerve...\" / \"Something wrong?\"", "Points": 5 }
+              {
+                "Answer": "\"You've got some nerve...\" / \"Something wrong?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You just need a rest.\" / \"Let's go do something fun.\"", "Points": 5 }
+              {
+                "Answer": "\"You just need a rest.\" / \"Let's go do something fun.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1598,19 +2457,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You're right.\"", "Points": 10 }
+              {
+                "Answer": "\"You're right.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1621,19 +2489,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1644,19 +2521,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Let's catch up to him.\"", "Points": 15 }
+              {
+                "Answer": "\"Let's catch up to him.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1667,19 +2553,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Don't jump to conclusions.\"", "Points": 5 }
+              {
+                "Answer": "\"Don't jump to conclusions.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "It was written recently?", "Points": 5 }
+              {
+                "Answer": "It was written recently?",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1690,18 +2585,25 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "UltimatePersona": "Zaou-Gongen"
   },
   "Strength (Soccer)": {
     "Details": {
@@ -1716,13 +2618,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Got it.\"", "Points": 0 }
+              {
+                "Answer": "\"Got it.\"",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Thanks for the help.\"", "Points": 15 }
+              {
+                "Answer": "\"Thanks for the help.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1733,7 +2641,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1744,7 +2655,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Right on.\"", "Points": 5 }
+              {
+                "Answer": "\"Right on.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1755,7 +2669,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I'm just getting warmed up.\"", "Points": 15 }
+              {
+                "Answer": "\"I'm just getting warmed up.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1766,8 +2683,14 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Anything for you guys.\"", "Points": 15 },
-              { "Answer": "\"No problem.\"", "Points": 5 }
+              {
+                "Answer": "\"Anything for you guys.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"No problem.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1778,32 +2701,50 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You treated last time.\"", "Points": 0 },
-              { "Answer": "\"Sounds good.\"", "Points": 5 }
+              {
+                "Answer": "\"You treated last time.\"",
+                "Points": 0
+              },
+              {
+                "Answer": "\"Sounds good.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Could be...\"", "Points": 5 }
+              {
+                "Answer": "\"Could be...\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"We've got a problem.\"", "Points": 5 }
+              {
+                "Answer": "\"We've got a problem.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1814,19 +2755,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Stop them", "Points": 5 }
+              {
+                "Answer": "Stop them",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That's his charm.\"", "Points": 15 }
+              {
+                "Answer": "\"That's his charm.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1837,7 +2787,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Could be.\" / \"I don't know.\"", "Points": 10 }
+              {
+                "Answer": "\"Could be.\" / \"I don't know.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1860,13 +2813,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Tired of the food?\"", "Points": 10 }
+              {
+                "Answer": "\"Tired of the food?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Making your parents happy.\" / \"I don't know.\"", "Points": 10 }
+              {
+                "Answer": "\"Making your parents happy.\" / \"I don't know.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1877,13 +2836,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Tell your own tale of failure", "Points": 15 }
+              {
+                "Answer": "Tell your own tale of failure",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I'll go tell them off.\" / \"Let the gossipers gossip.\"", "Points": 15 }
+              {
+                "Answer": "\"I'll go tell them off.\" / \"Let the gossipers gossip.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1894,13 +2859,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Talk back to the lady / Flatter the lady", "Points": 15 }
+              {
+                "Answer": "Talk back to the lady / Flatter the lady",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"It's not your fault.\"", "Points": 10 }
+              {
+                "Answer": "\"It's not your fault.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -1911,13 +2882,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"That's a good idea.\"", "Points": 15 }
+              {
+                "Answer": "\"That's a good idea.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -1928,13 +2905,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You're not the only one.\"", "Points": 15 }
+              {
+                "Answer": "\"You're not the only one.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1945,13 +2928,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I don't mind.\"", "Points": 15 }
+              {
+                "Answer": "\"I don't mind.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Take action.\"", "Points": 5 }
+              {
+                "Answer": "\"Take action.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -1962,13 +2951,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"We can't just ignore you.\"", "Points": 15 }
+              {
+                "Answer": "\"We can't just ignore you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -1979,19 +2974,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"People are different.\"", "Points": 15 }
+              {
+                "Answer": "\"People are different.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Just let it all out, Naoki.\"", "Points": 15 }
+              {
+                "Answer": "\"Just let it all out, Naoki.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2002,12 +3006,20 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I didn't do anything.\"", "Points": 15 }
+              {
+                "Answer": "\"I didn't do anything.\"",
+                "Points": 15
+              }
             ]
           }
-        ]
+        ],
+        "Benefit": {
+          "Name": "Class Ring",
+          "Description": "Unlocks the fusion of Attis, the ultimate Persona of the Hanged Man Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Attis"
   },
   "Death": {
     "Details": {
@@ -2029,8 +3041,14 @@
         "Requirements": "Talk to Old Man Daidara at Daidara Metalworks for Hisano's Letters"
       },
       "Rank 9": {},
-      "Rank 10": {}
-    }
+      "Rank 10": {
+        "Benefit": {
+          "Name": "Envelope",
+          "Description": "Unlocks the fusion of Mahakala, the ultimate Persona of the Death Arcana."
+        }
+      }
+    },
+    "UltimatePersona": "Mahakala"
   },
   "Temperance": {
     "Details": {
@@ -2046,13 +3064,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I hate kids.\"", "Points": 15 }
+              {
+                "Answer": "\"I hate kids.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2063,13 +3087,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2080,25 +3110,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You're right...\"", "Points": 15 }
+              {
+                "Answer": "\"You're right...\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Just let it go.\"", "Points": 5 }
+              {
+                "Answer": "\"Just let it go.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2109,13 +3151,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2126,25 +3174,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"Featherman R.\"", "Points": 15 }
+              {
+                "Answer": "\"Featherman R.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2155,25 +3215,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"You're both afraid.\"", "Points": 10 }
+              {
+                "Answer": "\"You're both afraid.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"That's not true.\"", "Points": 10 }
+              {
+                "Answer": "\"That's not true.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2184,13 +3256,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2201,25 +3279,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2230,12 +3320,20 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
-        ]
+        ],
+        "Benefit": {
+          "Name": "Boutique Receipt",
+          "Description": "Unlocks the fusion of Vishnu, the ultimate Persona of the Temperance Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Vishnu"
   },
   "Devil": {
     "Details": {
@@ -2251,7 +3349,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"What do you mean?\" / \"I'm not interested.\"", "Points": 5 }
+              {
+                "Answer": "\"What do you mean?\" / \"I'm not interested.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2262,19 +3363,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"For the money.\"", "Points": 10 }
+              {
+                "Answer": "\"For the money.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I do.\" / \"Right in front of me.\"", "Points": 5 }
+              {
+                "Answer": "\"I do.\" / \"Right in front of me.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Stop it!\"", "Points": 10 }
+              {
+                "Answer": "\"Stop it!\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2285,25 +3395,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2314,20 +3436,32 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It's like a soap opera.\"", "Points": 5 }
+              {
+                "Answer": "\"It's like a soap opera.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Comfort her", "Points": 15 },
-              { "Answer": "Cheer her up", "Points": 5 }
+              {
+                "Answer": "Comfort her",
+                "Points": 15
+              },
+              {
+                "Answer": "Cheer her up",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2338,19 +3472,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2361,7 +3504,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Hang in there.\"", "Points": 10 }
+              {
+                "Answer": "\"Hang in there.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2375,33 +3521,50 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
       },
       "Rank 10": {
-        "Next Pts": "N/A"
+        "Next Pts": "N/A",
+        "Benefit": {
+          "Name": "Charred Screw",
+          "Description": "Unlocks the fusion of Beelzebub, the ultimate Persona of the Devil Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Beelzebub"
   },
   "Tower": {
     "Details": {
@@ -2417,13 +3580,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "PE", "Points": 0 }
+              {
+                "Answer": "PE",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2434,19 +3603,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Sure I do.\"", "Points": 5 }
+              {
+                "Answer": "\"Sure I do.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I'll stay and help you.\"", "Points": 5 }
+              {
+                "Answer": "\"I'll stay and help you.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2457,13 +3635,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It's boring.\"", "Points": 10 }
+              {
+                "Answer": "\"It's boring.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Well, it is the countryside.\"", "Points": 10 }
+              {
+                "Answer": "\"Well, it is the countryside.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2474,13 +3658,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"That's just how it is.\"", "Points": 5 }
+              {
+                "Answer": "\"That's just how it is.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"You're not the only one!\"", "Points": 10 }
+              {
+                "Answer": "\"You're not the only one!\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2491,19 +3681,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"No, there isn't.\"", "Points": 5 }
+              {
+                "Answer": "\"No, there isn't.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Leave it to me.\"", "Points": 10 }
+              {
+                "Answer": "\"Leave it to me.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I don't mind.\"", "Points": 5 }
+              {
+                "Answer": "\"I don't mind.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2514,19 +3713,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That's not it.\"", "Points": 15 }
+              {
+                "Answer": "\"That's not it.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2537,14 +3745,23 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"What I like in a girl is...\"", "Points": 10 },
-              { "Answer": "\"The other day on TV, I saw...\"", "Points": 5 }
+              {
+                "Answer": "\"What I like in a girl is...\"",
+                "Points": 10
+              },
+              {
+                "Answer": "\"The other day on TV, I saw...\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2555,14 +3772,23 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"This guy.\"", "Points": 10 }
+              {
+                "Answer": "\"This guy.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Cheer him up", "Points": 10 },
-              { "Answer": "Ask what he's worried about", "Points": 5 }
+              {
+                "Answer": "Cheer him up",
+                "Points": 10
+              },
+              {
+                "Answer": "Ask what he's worried about",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -2573,31 +3799,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Kindly reason with him", "Points": 0 }
+              {
+                "Answer": "Kindly reason with him",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2608,24 +3849,84 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
-        ]
+        ],
+        "Benefit": {
+          "Name": "Winning Ball",
+          "Description": "Unlocks the fusion of Shiva, the ultimate Persona of the Tower Arcana."
+        }
       }
-    }
+    },
+    "UltimatePersona": "Shiva"
   },
   "Star": {
-    "Rank 1: Auto": { "Requirements": "June 24" },
-    "Rank 2: Auto": { "Requirements": "June 25 ~ July 7 (Clear Marukyu Striptease)" },
-    "Rank 3: Auto": { "Requirements": "July 26" },
-    "Rank 4: Auto": { "Requirements": "July 29 ~ August 12 (Clear Void Quest)" },
-    "Rank 5: Auto": { "Requirements": "September 8" },
-    "Rank 6: Auto": { "Requirements": "October 7" },
-    "Rank 7: Auto": { "Requirements": "October 11" },
-    "Rank 8: Auto": { "Requirements": "October 30" },
-    "Rank 9: Auto": { "Requirements": "November 6 ~ November 20 (Clear Heaven)" },
-    "Rank 10: Auto": { "Requirements": "December 5 Scene" }
+    "Details": {
+      "Trigger": "Automatic on June 24"
+    },
+    "Rank Up Progression": {
+      "Rank 1: Auto": {
+        "Requirements": "June 24"
+      },
+      "Rank 2: Auto": {
+        "Requirements": "June 24",
+        "Benefit": {
+          "Name": "Assist",
+          "Description": "Chance to perform a follow-up attack if the protagonist's attack doesn't knock down the enemy."
+        }
+      },
+      "Rank 3: Auto": {
+        "Requirements": "July 26"
+      },
+      "Rank 4: Auto": {
+        "Requirements": "July 26",
+        "Benefit": {
+          "Name": "Recovery",
+          "Description": "Chance to cure status ailments on party members during battle."
+        }
+      },
+      "Rank 5: Auto": {
+        "Requirements": "September 8"
+      },
+      "Rank 6: Auto": {
+        "Requirements": "October 7",
+        "Benefit": {
+          "Name": "Endure",
+          "Description": "Chance to withstand an otherwise fatal attack with 1 HP."
+        }
+      },
+      "Rank 7: Auto": {
+        "Requirements": "October 11"
+      },
+      "Rank 8: Auto": {
+        "Requirements": "October 30",
+        "Benefit": {
+          "Name": "Protect",
+          "Description": "Chance to shield the protagonist from an otherwise fatal attack."
+        }
+      },
+      "Rank 9: Auto": {
+        "Requirements": "November 25"
+      },
+      "Rank 10: Auto": {
+        "Requirements": "December 5",
+        "Benefit": {
+          "Name": "Second Awakening",
+          "Description": "Kamui awakens. Unlocks Helel for fusion."
+        }
+      }
+    },
+    "ThirdAwakening": {
+      "Persona": "Kamui-Moshiri",
+      "Name": "Kamui Miracle",
+      "Description": "Chance of a great effect. Or a great disaster...",
+      "Requirement": "Talk to Teddie in January (Rank 10 required)"
+    },
+    "UltimatePersona": "Helel"
   },
   "Moon": {
     "Details": {
@@ -2640,19 +3941,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"We'll have to come back.\"", "Points": 5 }
+              {
+                "Answer": "\"We'll have to come back.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Let's split one.\"", "Points": 10 }
+              {
+                "Answer": "\"Let's split one.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2663,19 +3973,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Come shopping with me.\" / \"Let's just chill.\"", "Points": 5 }
+              {
+                "Answer": "\"Come shopping with me.\" / \"Let's just chill.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Not exactly...\"", "Points": 10 }
+              {
+                "Answer": "\"Not exactly...\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2686,13 +4005,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Stop them", "Points": 0 }
+              {
+                "Answer": "Stop them",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2703,19 +4028,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Have a little confidence.\" / \"......\"", "Points": 5 }
+              {
+                "Answer": "\"Have a little confidence.\" / \"......\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "No problem.", "Points": 0 }
+              {
+                "Answer": "No problem.",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2726,27 +4060,49 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I'll be your boyfriend.\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "\"......\"", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"I'll be your boyfriend.\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "\"......\"",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"Sounds good.\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "\"Are you sure about that?\"", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"Sounds good.\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "\"Are you sure about that?\"",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -2757,19 +4113,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Cute clothes.\"", "Points": 15 }
+              {
+                "Answer": "\"Cute clothes.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Yep.\"", "Points": 5 }
+              {
+                "Answer": "\"Yep.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Of course you are.\"", "Points": 15 }
+              {
+                "Answer": "\"Of course you are.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2780,13 +4145,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"I don't mind.\"", "Points": 15 }
+              {
+                "Answer": "\"I don't mind.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2797,13 +4168,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Of course...\"", "Points": 15 }
+              {
+                "Answer": "\"Of course...\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Naturally...\"", "Points": 15 }
+              {
+                "Answer": "\"Naturally...\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2814,7 +4191,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Happens all the time.\" / \"You can be so cruel.\"", "Points": 15 }
+              {
+                "Answer": "\"Happens all the time.\" / \"You can be so cruel.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2825,25 +4205,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"Sure.\" / \"I knew the whole time.\"", "Points": 15 }
+              {
+                "Answer": "\"Sure.\" / \"I knew the whole time.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2854,13 +4246,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Thank you.\"", "Points": 15 }
+              {
+                "Answer": "\"Thank you.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2871,7 +4269,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2882,13 +4283,22 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Accept her", "Points": 0, "Route": "Romance" },
-              { "Answer": "Reject her", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "Accept her",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "Reject her",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "UltimatePersona": "Sandalphon"
   },
   "Sun (Drama)": {
     "Details": {
@@ -2904,19 +4314,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I'll give it my all!\"", "Points": 15 }
+              {
+                "Answer": "\"I'll give it my all!\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -2927,19 +4346,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -2950,19 +4378,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"No.\" / \"It was how you said it.\"", "Points": 5 }
+              {
+                "Answer": "\"No.\" / \"It was how you said it.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"Is something wrong?\" / \"I'll help.\"", "Points": 5 }
+              {
+                "Answer": "\"Is something wrong?\" / \"I'll help.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"I can't forget.\"", "Points": 10 }
+              {
+                "Answer": "\"I can't forget.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -2973,25 +4410,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 5 }
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Take care of yourself, too.\"", "Points": 5 }
+              {
+                "Answer": "\"Take care of yourself, too.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "\"Yes I do.\"", "Points": 10 }
+              {
+                "Answer": "\"Yes I do.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -3002,13 +4451,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"How is your mother?\"", "Points": 5 }
+              {
+                "Answer": "\"How is your mother?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3019,7 +4474,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"He's a kind father.\"", "Points": 15 }
+              {
+                "Answer": "\"He's a kind father.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3030,7 +4488,10 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Gently encourage her.\" / \"Cry together.\"", "Points": 15 }
+              {
+                "Answer": "\"Gently encourage her.\" / \"Cry together.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3041,19 +4502,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Think about it slowly.\" / \"You're always cheerful.\"", "Points": 15 }
+              {
+                "Answer": "\"Think about it slowly.\" / \"You're always cheerful.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3064,13 +4534,20 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Hug her.", "Points": 0, "Route": "Romance" }
+              {
+                "Answer": "Hug her.",
+                "Points": 0,
+                "Route": "Romance"
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3091,19 +4568,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Help out", "Points": 0 }
+              {
+                "Answer": "Help out",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3114,16 +4600,31 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You do have talent.\"", "Points": 10 },
-              { "Answer": "\"Effort is what matters.\"", "Points": 5 },
-              { "Answer": "\"Maybe you should give up.\"", "Points": 0 }
+              {
+                "Answer": "\"You do have talent.\"",
+                "Points": 10
+              },
+              {
+                "Answer": "\"Effort is what matters.\"",
+                "Points": 5
+              },
+              {
+                "Answer": "\"Maybe you should give up.\"",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Help out", "Points": 10 },
-              { "Answer": "Watch", "Points": 5 }
+              {
+                "Answer": "Help out",
+                "Points": 10
+              },
+              {
+                "Answer": "Watch",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -3134,19 +4635,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Forget about it today.\"", "Points": 10 }
+              {
+                "Answer": "\"Forget about it today.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That's a great attitude.\"", "Points": 5 }
+              {
+                "Answer": "\"That's a great attitude.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -3157,20 +4667,32 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Why don't you give up?\" / \"Alright, follow me!\"", "Points": 15 },
-              { "Answer": "\"Want me to help out?\"", "Points": 10 }
+              {
+                "Answer": "\"Why don't you give up?\" / \"Alright, follow me!\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"Want me to help out?\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"No, you're not.\"", "Points": 10 }
+              {
+                "Answer": "\"No, you're not.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Just hang in there.\"", "Points": 5 }
+              {
+                "Answer": "\"Just hang in there.\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -3181,14 +4703,23 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"It's okay to mess up.\"", "Points": 15 },
-              { "Answer": "\"Don't worry, you can do it!\"", "Points": 5 }
+              {
+                "Answer": "\"It's okay to mess up.\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"Don't worry, you can do it!\"",
+                "Points": 5
+              }
             ]
           }
         ]
@@ -3203,13 +4734,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Stick up for Ayane", "Points": 0 }
+              {
+                "Answer": "Stick up for Ayane",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Hold her", "Points": 15 }
+              {
+                "Answer": "Hold her",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3220,8 +4757,16 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Reveal your feelings for her", "Points": 15, "Route": "Romance" },
-              { "Answer": "Change the subject", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "Reveal your feelings for her",
+                "Points": 15,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "Change the subject",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -3232,8 +4777,14 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Wanna come to my house?\"", "Points": 15 },
-              { "Answer": "\"Wanna go grab some food?\"", "Points": 10 }
+              {
+                "Answer": "\"Wanna come to my house?\"",
+                "Points": 15
+              },
+              {
+                "Answer": "\"Wanna go grab some food?\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -3258,19 +4809,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That does sound annoying.\"", "Points": 10 }
+              {
+                "Answer": "\"That does sound annoying.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -3281,25 +4841,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Why don’t you come over for real?\"", "Points": 5 }
+              {
+                "Answer": "\"Why don’t you come over for real?\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"I’m a good cook.\"", "Points": 10 }
+              {
+                "Answer": "\"I’m a good cook.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3310,13 +4882,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Nope.\"", "Points": 5 }
+              {
+                "Answer": "\"Nope.\"",
+                "Points": 5
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "\"That was a surprise.\"", "Points": 15 }
+              {
+                "Answer": "\"That was a surprise.\"",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3327,19 +4905,28 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"You’re right.\"", "Points": 15 }
+              {
+                "Answer": "\"You’re right.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3350,28 +4937,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"That’s true.\"", "Points": 15 }
+              {
+                "Answer": "\"That’s true.\"",
+                "Points": 15
+              }
             ]
           }
         ]
       },
-      "Rank 7: Auto": { "Requirements": "Clear Heaven" },
-      "Rank 8: Auto": { "Requirements": "December 7 Evening Scene" },
-      "Rank 9: Auto": { "Requirements": "March 20 Scene" },
-      "Rank 10: Auto": { "Requirements": "March 20 Scene" }
-    }
+      "Rank 7: Auto": {
+        "Requirements": "Clear Heaven"
+      },
+      "Rank 8: Auto": {
+        "Requirements": "December 7 Evening Scene"
+      },
+      "Rank 9: Auto": {
+        "Requirements": "March 20 Scene"
+      },
+      "Rank 10: Auto": {
+        "Requirements": "March 20 Scene"
+      }
+    },
+    "UltimatePersona": "Magatsu-Izanagi"
   },
   "Aeon": {
     "P4G Exclusive": true,
@@ -3388,31 +4993,46 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3423,43 +5043,64 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Play around.\" / \"There's nothing to do.\"", "Points": 10 }
+              {
+                "Answer": "\"Play around.\" / \"There's nothing to do.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 6",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 7",
             "Choices": [
-              { "Answer": "\"Let's hurry.\"", "Points": 10 }
+              {
+                "Answer": "\"Let's hurry.\"",
+                "Points": 10
+              }
             ]
           }
         ]
@@ -3470,25 +5111,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"It's fun.\"", "Points": 10 }
+              {
+                "Answer": "\"It's fun.\"",
+                "Points": 10
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3499,25 +5152,37 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3529,37 +5194,55 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 6",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3570,49 +5253,73 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 5",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 6",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 7",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 8",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3623,13 +5330,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           }
         ]
@@ -3640,27 +5353,49 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 0 }
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 3",
             "Choices": [
-              { "Answer": "\"Because I love you.\"", "Points": 0, "Route": "Romance" },
-              { "Answer": "\"Because you're my friend.\"", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "\"Because I love you.\"",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "\"Because you're my friend.\"",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           },
           {
             "Question": "Dialogue 4",
             "Choices": [
-              { "Answer": "Hug her", "Points": 0, "Route": "Romance" },
-              { "Answer": "Don't hug her", "Points": 0, "Route": "Friendship" }
+              {
+                "Answer": "Hug her",
+                "Points": 0,
+                "Route": "Romance"
+              },
+              {
+                "Answer": "Don't hug her",
+                "Points": 0,
+                "Route": "Friendship"
+              }
             ]
           }
         ]
@@ -3672,13 +5407,19 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "\"Don't snoop around.\"", "Points": 15 }
+              {
+                "Answer": "\"Don't snoop around.\"",
+                "Points": 15
+              }
             ]
           },
           {
             "Question": "Dialogue 2",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
@@ -3690,11 +5431,15 @@
           {
             "Question": "Dialogue 1",
             "Choices": [
-              { "Answer": "Any", "Points": 15 }
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
             ]
           }
         ]
       }
-    }
+    },
+    "UltimatePersona": "Kaguya"
   }
 }
