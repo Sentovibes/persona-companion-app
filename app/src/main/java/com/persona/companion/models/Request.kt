@@ -6,8 +6,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Request(
     val name: String,
-    val available: String,
-    val reward: String,
+    val available: String? = null,
+    val reward: String? = null,
     
     // P3R / P4G
     val id: String? = null,

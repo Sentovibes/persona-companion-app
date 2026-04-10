@@ -108,7 +108,7 @@ fun RequestListScreen(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    items(requests, key = { it.name }) { request ->
+                    items(requests, key = { it.dbId }) { request ->
                         RequestCard(
                             request = request,
                             accentColor = accentColor,
