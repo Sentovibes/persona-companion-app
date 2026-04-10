@@ -31,10 +31,12 @@ fun RequestListScreen(
     gameId: String,
     gameTitle: String,
     requestPath: String?,
+    aigisRequestPath: String? = null,
     onBack: () -> Unit,
     onEnemyClick: (String) -> Unit
 ) {
     val series = remember(seriesId) { SeriesData.findSeries(seriesId) }
+    val game = remember(seriesId, gameId) { SeriesData.findGame(seriesId, gameId) }
     val accentColor = series?.color ?: AccentBlue
     
     val viewModel: RequestViewModel = viewModel()
@@ -42,8 +44,8 @@ fun RequestListScreen(
     val searchQuery by viewModel.searchQuery.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 
-    LaunchedEffect(gameId, requestPath) {
-        viewModel.loadRequests(gameId, requestPath)
+    LaunchedEffect(gameId, requestPath, aigisRequestPath) {
+        viewModel.loadRequests(gameId, requestPath, aigisRequestPath)
     }
 
     Scaffold(

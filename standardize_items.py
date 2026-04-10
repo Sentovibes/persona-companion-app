@@ -61,7 +61,18 @@ def parse_wiki_style(content, game_id):
         line = line.strip()
         if not line: continue
         
-        # Detect category
+        # Detect category (including === headers)
+        header_match = re.search(r'===\s*([^=]+)\s*===', line)
+        if header_match:
+            cat_name = header_match.group(1).strip()
+            if "Consumable" in cat_name: current_category = "Consumable"
+            elif "Weapon" in cat_name: current_category = "Weapon"
+            elif "Armor" in cat_name: current_category = "Armor"
+            elif "Accessory" in cat_name: current_category = "Accessory"
+            elif "Skill Card" in cat_name: current_category = "Skill Card"
+            elif "Material" in cat_name: current_category = "Material"
+            continue
+            
         for key, val in section_map.items():
             if key in line and len(line) < 30:
                 current_category = val
@@ -72,70 +83,90 @@ def parse_wiki_style(content, game_id):
         
         parts = re.split(r'\t+', line)
         
-        # Equipment Table Heuristic (mostly P4 Armor/Weapons)
-        # Typically: Name, User/Type, Def, Eva, Stats, Desc, Price...
-        if len(parts) >= 5:
-            name = parts[0]
-            # Validation: Name shouldn't be a number or a header
-            if name.replace(',', '').isdigit() or name.lower() in ["item", "name", "buy", "price"]: continue
+        if len(parts) >= 2:
+            name = parts[0].strip()
+            # Skip numbering like "1.1", "4.1.2", etc.
+            if re.match(r'^\d+(\.\d+)*$', name): continue
             
-            user = parts[1]
-            if user in ["Males", "Females", "Unisex", "Protagonist", "Yosuke", "Chie", "Yukiko", "Kanji", "Teddie", "Naoto"]:
-                # equipment format
-                stats = parts[4] if len(parts) > 4 else ""
-                desc = parts[5] if len(parts) > 5 else ""
-                price = parts[6] if len(parts) > 6 and parts[6].replace(',', '').isdigit() else None
-                loc = parts[-1] if len(parts) > 7 else ""
-            else:
-                # simple table format
-                desc = parts[1]
-                loc = parts[2] if len(parts) > 2 else ""
-                price = parts[3] if len(parts) > 3 and parts[3].replace(',', '').isdigit() else None
-                stats = ""
-
-            is_expansion = any(x in line for x in ["Episode Aigis", "The Answer", "Metis"])
-            
-            items.append({
-                "name": clean_text(name),
-                "description": clean_text(desc),
-                "stats": clean_text(stats),
-                "price": price,
-                "location": clean_text(loc),
-                "category": current_category,
-                "gameId": game_id,
-                "episodeAigis": is_expansion
-            })
-            
-        elif len(parts) >= 2 or " - " in line:
-            if " - " in line and len(parts) < 2:
-                p = line.split(" - ", 1)
-            else:
-                p = parts
-            
-            name = p[0].strip()
             if name.replace(',', '').isdigit() or name.lower() in ["item", "name", "buy", "price"] or len(name) > 50: continue
             
-            desc = p[1].strip() if len(p) > 1 else ""
-            is_expansion = any(x in line for x in ["Episode Aigis", "The Answer", "Metis"])
+            desc = parts[1]
+            price = parts[2] if len(parts) > 2 and parts[2].replace(',', '').isdigit() else None
+            sell = parts[3] if len(parts) > 3 and parts[3].replace(',', '').isdigit() else None
             
             items.append({
                 "name": clean_text(name),
                 "description": clean_text(desc),
+                "price": clean_text(price),
+                "sellPrice": clean_text(sell),
                 "category": current_category,
-                "gameId": game_id,
-                "episodeAigis": is_expansion
+                "gameId": game_id
             })
             
     return items
 
+def parse_p3p_json(content):
+    try:
+        data = json.loads(content)
+        items = []
+        
+        cat_map = {
+            "Expendables": "Consumable",
+            "HP": "Consumable",
+            "SP": "Consumable",
+            "HP & SP": "Consumable",
+            "Revival": "Consumable",
+            "Status": "Consumable",
+            "Battle": "Consumable",
+            "Food": "Consumable",
+            "Incense Cards": "Consumable",
+            "1h Sword": "Weapon",
+            "2h Sword": "Weapon",
+            "Spear": "Weapon",
+            "Bow": "Weapon",
+            "Knife": "Weapon",
+            "Fist": "Weapon",
+            "Gun": "Weapon",
+            "Heavy": "Weapon",
+            "Armor (Body)": "Armor",
+            "Armor (Feet)": "Armor",
+            "Accessories": "Accessory"
+        }
+        
+        for entry in data:
+            raw_cat = entry.get("category", "General")
+            raw_sub = entry.get("subcategory", "")
+            
+            category = cat_map.get(raw_cat, cat_map.get(raw_sub, "Other"))
+            
+            name = entry.get("name_item", entry.get("name_weapon", ""))
+            if not name: continue
+            
+            price_buy = entry.get("price_(¥)_buy", "")
+            if isinstance(price_buy, str) and "\n" in price_buy:
+                price_buy = price_buy.split("\n")[0]
+            
+            items.append({
+                "name": clean_text(name),
+                "description": clean_text(entry.get("info", "")),
+                "effect": clean_text(entry.get("effect", entry.get("info", ""))),
+                "price": clean_text(str(price_buy)),
+                "sellPrice": clean_text(str(entry.get("price_(¥)_sell", ""))),
+                "location": clean_text(entry.get("location", "")),
+                "attack": clean_text(str(entry.get("attack", ""))) if "attack" in entry else None,
+                "accuracy": clean_text(str(entry.get("accuracy", ""))) if "accuracy" in entry else None,
+                "category": category,
+                "gameId": "p3p"
+            })
+        return items
+    except Exception as e:
+        print(f"Error parsing P3P JSON: {e}")
+        return []
+
 def main():
     files = {
-        "p5r": "p5r itens.txt",
-        "p3r": "p3r items.txt",
-        "p3p": "p3p items.txt",
-        "p3fes": "p3fes items.txt",
-        "p4": "persona 4 items (not golden).txt",
-        "p4g": "persona 4 golden items(not base).txt"
+        "p3p": "p3p items.json",
+        "p3fes": "p3fes items.txt"
     }
     
     base_path = r"c:\Users\omare\Music\Persona-Companion-App\persona-companion-app"
@@ -144,13 +175,16 @@ def main():
     
     for game_id, filename in files.items():
         file_path = os.path.join(base_path, filename)
-        if not os.path.exists(file_path): continue
+        if not os.path.exists(file_path): 
+            print(f"Skipping {game_id}: {file_path} not found")
+            continue
             
+        print(f"Processing {game_id}...")
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        if game_id == "p5r":
-            items = parse_p5r(content)
+        if filename.endswith(".json"):
+            items = parse_p3p_json(content)
         else:
             items = parse_wiki_style(content, game_id)
             
@@ -170,3 +204,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

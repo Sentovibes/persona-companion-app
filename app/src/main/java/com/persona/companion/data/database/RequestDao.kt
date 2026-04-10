@@ -6,8 +6,11 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface RequestDao {
-    @Query("SELECT * FROM requests WHERE gameId = :gameId ORDER BY name ASC")
+    @Query("SELECT * FROM requests WHERE gameId = :gameId ORDER BY sortOrder ASC")
     fun getRequestsForGame(gameId: String): Flow<List<RequestEntity>>
+
+    @Query("SELECT * FROM requests WHERE gameId = :gameId ORDER BY sortOrder ASC")
+    suspend fun getRequestsForGameSync(gameId: String): List<RequestEntity>
 
     @Query("SELECT COUNT(*) FROM requests WHERE gameId = :gameId")
     suspend fun getRequestCount(gameId: String): Int

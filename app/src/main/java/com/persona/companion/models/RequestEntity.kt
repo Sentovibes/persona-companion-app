@@ -20,5 +20,7 @@ data class RequestEntity(
     val remarks: String?,
     val difficulty: String?,
     val gameId: String, // To differentiate between P3R, P4G, P5R
-    val isCompleted: Boolean = false
+    val sortOrder: Int, // Logical order from JSON
+    val isCompleted: Boolean = false,
+    val episodeAigis: Boolean? = false
 )

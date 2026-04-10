@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 class RequestViewModel(application: Application) : AndroidViewModel(application) {
     private val database = AppDatabase.getDatabase(application)
     private val repository = RequestRepository(application, database.requestDao())
+    private val prefs = com.persona.companion.data.AppPreferences(application)
 
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery
@@ -28,12 +29,17 @@ class RequestViewModel(application: Application) : AndroidViewModel(application)
             if (gameId == null) kotlinx.coroutines.flow.flowOf(emptyList())
             else repository.getRequests(gameId)
         },
-        _searchQuery
-    ) { requests, query ->
+        _searchQuery,
+        prefs.getSettingsFlow()
+    ) { requests, query, settings ->
+        val filteredBySettings = requests.filter { 
+            settings.showEpisodeAigis || it.episodeAigis != true 
+        }
+        
         if (query.isBlank()) {
-            requests
+            filteredBySettings
         } else {
-            requests.filter { 
+            filteredBySettings.filter { 
                 it.name.contains(query, ignoreCase = true) || 
                 it.remarks?.contains(query, ignoreCase = true) == true ||
                 it.reward.contains(query, ignoreCase = true)
@@ -44,13 +50,13 @@ class RequestViewModel(application: Application) : AndroidViewModel(application)
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
 
-    fun loadRequests(gameId: String, requestPath: String?) {
+    fun loadRequests(gameId: String, requestPath: String?, aigisRequestPath: String? = null) {
         _currentGameId.value = gameId
         if (requestPath == null) return
 
         viewModelScope.launch {
             _isLoading.value = true
-            repository.syncRequestsIfNeeded(gameId, requestPath)
+            repository.syncRequestsIfNeeded(gameId, requestPath, aigisRequestPath)
             _isLoading.value = false
         }
     }

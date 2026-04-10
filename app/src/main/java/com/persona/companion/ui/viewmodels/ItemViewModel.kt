@@ -33,7 +33,7 @@ class ItemViewModel(application: Application) : AndroidViewModel(application) {
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
 
-    fun loadItems(gameId: String, itemPath: String?) {
+    fun loadItems(gameId: String, itemPath: String?, aigisItemPath: String? = null) {
         if (itemPath == null) {
             _items.value = emptyList()
             return
@@ -41,7 +41,7 @@ class ItemViewModel(application: Application) : AndroidViewModel(application) {
 
         viewModelScope.launch {
             _isLoading.value = true
-            _items.value = repository.getItems(gameId, itemPath)
+            _items.value = repository.getItems(gameId, itemPath, aigisItemPath)
             _isLoading.value = false
         }
     }

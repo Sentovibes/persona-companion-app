@@ -367,6 +367,7 @@ fun NavGraph(navController: NavHostController) {
                 gameId = gameId,
                 gameTitle = game?.title ?: "",
                 requestPath = game?.requestPath,
+                aigisRequestPath = game?.aigisRequestPath,
                 onBack = { navController.popBackStack() },
                 onEnemyClick = { enemyName ->
                     navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemyName, "Unknown"))

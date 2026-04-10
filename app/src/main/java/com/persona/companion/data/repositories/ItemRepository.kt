@@ -14,32 +14,34 @@ class ItemRepository(private val context: Context) {
     private val database = AppDatabase.getDatabase(context)
     private val itemDao = database.itemDao()
 
-    suspend fun getItems(gameId: String, itemPath: String): List<Item> = withContext(Dispatchers.IO) {
+    suspend fun getItems(gameId: String, itemPath: String, aigisItemPath: String? = null): List<Item> = withContext(Dispatchers.IO) {
         try {
             Log.d("ItemRepository", "Loading items for $gameId from $itemPath")
             
-            // 1. Check if we already have items for this game in DB
+            // 1. Sync base items if needed
             val count = itemDao.getItemCount(gameId)
-            Log.d("ItemRepository", "Found $count items in DB for $gameId")
-            
-            if (count > 0) {
-                return@withContext itemDao.getItemsForGameSync(gameId)
+            if (count == 0 && itemPath.isNotEmpty()) {
+                Log.d("ItemRepository", "Syncing base items from JSON for $gameId...")
+                val jsonString = context.assets.open(itemPath).bufferedReader().use { it.readText() }
+                val data = gson.fromJson(jsonString, ItemData::class.java)
+                val itemsToSave = data.items.map { it.copy(id = 0, gameId = gameId, episodeAigis = false) }
+                itemDao.insertAll(itemsToSave)
             }
 
-            // 2. Otherwise load from JSON
-            Log.d("ItemRepository", "Syncing items from JSON for $gameId...")
-            val jsonString = context.assets.open(itemPath).bufferedReader().use { it.readText() }
-            val data = gson.fromJson(jsonString, ItemData::class.java)
-            
-            Log.d("ItemRepository", "Parsed ${data.items.size} items from JSON")
-            
-            // 3. Tag with gameId and save to DB
-            // We ensure id is not set so Room autogenerates
-            val itemsToSave = data.items.map { it.copy(id = 0, gameId = gameId) }
-            itemDao.insertAll(itemsToSave)
+            // 2. Sync Aigis items if needed
+            if (!aigisItemPath.isNullOrEmpty()) {
+                val aigisCount = itemDao.getItemsForGameSync(gameId).count { it.episodeAigis == true }
+                if (aigisCount == 0) {
+                    Log.d("ItemRepository", "Syncing Aigis items from JSON for $gameId...")
+                    val jsonString = context.assets.open(aigisItemPath).bufferedReader().use { it.readText() }
+                    val data = gson.fromJson(jsonString, ItemData::class.java)
+                    val itemsToSave = data.items.map { it.copy(id = 0, gameId = gameId, episodeAigis = true) }
+                    itemDao.insertAll(itemsToSave)
+                }
+            }
 
-            Log.d("ItemRepository", "Successfully saved ${itemsToSave.size} items to DB for $gameId")
-            itemsToSave.sortedBy { it.name }
+            // 3. Return all items for this game (filtering will happen in ViewModel)
+            itemDao.getItemsForGameSync(gameId).sortedBy { it.name }
         } catch (e: Exception) {
             Log.e("ItemRepository", "Error loading items for $gameId", e)
             emptyList()

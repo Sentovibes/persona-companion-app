@@ -78,8 +78,8 @@ fun ItemListScreen(
     var sortOption by remember { mutableStateOf(ItemSortOption.NAME) }
     var showSortMenu by remember { mutableStateOf(false) }
 
-    LaunchedEffect(gameId, game.itemPath) {
-        viewModel.loadItems(gameId, game.itemPath)
+    LaunchedEffect(gameId, game.itemPath, game.aigisItemPath) {
+        viewModel.loadItems(gameId, game.itemPath, game.aigisItemPath)
     }
 
     val filteredAndSortedItems = remember(items, searchQuery, selectedCategory, sortOption) {

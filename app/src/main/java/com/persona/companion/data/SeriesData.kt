@@ -28,7 +28,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p3fes_enemies.json",
                     skillPath = "data/skills/p3fes_skills.json",
                     itemPath = "data/items/p3fes_items.json",
-                    socialLinkPath = "data/social_links/p3_social_links.json"
+                    socialLinkPath = "data/social-links/p3fes_social_links.json",
+                    requestPath = "data/requests/p3fes_requests.json"
                 ),
                 Game(
                     id = "p3p",
@@ -37,7 +38,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p3p_enemies.json",
                     skillPath = "data/skills/p3p_skills.json",
                     itemPath = "data/items/p3p_items.json",
-                    socialLinkPath = "data/social_links/p3_social_links.json"
+                    socialLinkPath = "data/social-links/p3p_male_social_links.json",
+                    requestPath = "data/requests/p3p_requests.json"
                 ),
                 Game(
                     id = "p3r",
@@ -46,8 +48,11 @@ object SeriesData {
                     enemyPath = "data/enemies/p3r_enemies.json",
                     skillPath = "data/skills/p3r_skills.json",
                     itemPath = "data/items/p3r_items.json",
-                    socialLinkPath = "data/social_links/p3_social_links.json",
-                    requestPath = "data/requests/p3r_requests.json"
+                    socialLinkPath = "data/social-links/p3r_social_links.json",
+                    requestPath = "data/requests/p3r_requests.json",
+                    aigisDataPath = "data/persona3/personas.json",
+                    aigisRequestPath = "data/requests/aigis_requests.json",
+                    aigisItemPath = "data/items/p3fes_items.json"
                 )
             )
         ),
@@ -64,7 +69,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p4_enemies.json",
                     skillPath = "data/skills/p4_skills.json",
                     itemPath = "data/items/p4_items.json",
-                    socialLinkPath = "data/social_links/p4_social_links.json"
+                    socialLinkPath = "data/social_links/p4_social_links.json",
+                    requestPath = "data/requests/p4_requests.json"
                 ),
                 Game(
                     id = "p4g",
@@ -91,7 +97,8 @@ object SeriesData {
                     enemyPath = "data/enemies/p5_enemies.json",
                     skillPath = "data/skills/p5_skills.json",
                     itemPath = "data/items/p5_items.json",
-                    socialLinkPath = "data/social_links/p5+p5r_social_links.json"
+                    socialLinkPath = "data/social_links/p5+p5r_social_links.json",
+                    requestPath = "data/requests/p5r_requests.json"
                 ),
                 Game(
                     id = "p5r",

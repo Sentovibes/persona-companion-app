@@ -12,7 +12,9 @@ data class Game(
     val socialLinkPath: String? = null,
     val requestPath: String? = null,
     val aigisDataPath: String? = null,
-    val aigisEnemyPath: String? = null
+    val aigisEnemyPath: String? = null,
+    val aigisRequestPath: String? = null,
+    val aigisItemPath: String? = null
 )
 
 data class PersonaSeries(

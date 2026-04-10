@@ -22,5 +22,7 @@ data class Request(
     val target_name: String? = null,
     val target_enemy: String? = null,
     val location: String? = null,
-    val difficulty: String? = null
+    val difficulty: String? = null,
+    val sortOrder: Int? = null,
+    val episodeAigis: Boolean? = false
 ) : Parcelable

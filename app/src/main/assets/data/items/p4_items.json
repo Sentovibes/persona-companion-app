@@ -1174,7 +1174,7 @@
       "effect": "A key to open locked treasure chests.",
       "price": "19800 | Sell: 100",
       "location": "Tanaka's\nShuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Prize Sticker",
@@ -1334,7 +1334,7 @@
       "effect": "",
       "price": "",
       "location": "Beelzebub",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "God's Hand",
@@ -1430,7 +1430,7 @@
       "effect": "",
       "price": "",
       "location": "Thor",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Gigantic Fist",
@@ -1718,7 +1718,7 @@
       "effect": "",
       "price": "",
       "location": "Metatron",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Megidola",
@@ -1774,7 +1774,7 @@
       "effect": "",
       "price": "",
       "location": "Surt",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Ghastly Wail",
@@ -2630,7 +2630,7 @@
       "effect": "",
       "price": "",
       "location": "Odin",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Elec Amp",
@@ -5094,7 +5094,7 @@
       "effect": "",
       "price": "4800 | Sell: 960",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Spiked Bat",
@@ -5110,7 +5110,7 @@
       "effect": "",
       "price": "10000 | Sell: 2000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "5-Iron",
@@ -5126,7 +5126,7 @@
       "effect": "",
       "price": "13600 | Sell: 2720",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Cleaning Mop",
@@ -5142,7 +5142,7 @@
       "effect": "",
       "price": "14000 | Sell: 2800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Strange Sword",
@@ -5206,7 +5206,7 @@
       "effect": "",
       "price": "20000 | Sell: 4000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Myth-like Sword",
@@ -5222,7 +5222,7 @@
       "effect": "",
       "price": "24000 | Sell: 4800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Edge",
@@ -5270,7 +5270,7 @@
       "effect": "",
       "price": "32000 | Sell: 6400",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Beach Parasol",
@@ -5318,7 +5318,7 @@
       "effect": "",
       "price": "37600 | Sell: 7520",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Gardenia Sword",
@@ -5326,7 +5326,7 @@
       "effect": "",
       "price": "38000 | Sell: 7600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Krieg",
@@ -5390,7 +5390,7 @@
       "effect": "",
       "price": "54000 | Sell: 10800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Triumph",
@@ -5414,7 +5414,7 @@
       "effect": "",
       "price": "58000 | Sell: 11600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Futsuno Mitama",
@@ -5478,7 +5478,7 @@
       "effect": "",
       "price": "11800 | Sell: 2360",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Poison Kunai",
@@ -5486,7 +5486,7 @@
       "effect": "",
       "price": "12000 | Sell: 2400",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Reign Skinner",
@@ -5542,7 +5542,7 @@
       "effect": "",
       "price": "24000 | Sell: 4800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kitchen Knife",
@@ -5598,7 +5598,7 @@
       "effect": "",
       "price": "26900 | Sell: 5380",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Grilled Corn",
@@ -5662,7 +5662,7 @@
       "effect": "",
       "price": "34000 | Sell: 6800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bloody Kunai",
@@ -5670,7 +5670,7 @@
       "effect": "",
       "price": "37600 | Sell: 7520",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Castilla Knife",
@@ -5678,7 +5678,7 @@
       "effect": "",
       "price": "38000 | Sell: 7600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Titanium Wrench",
@@ -5734,7 +5734,7 @@
       "effect": "",
       "price": "50000 | Sell: 10000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Hattori",
@@ -5750,7 +5750,7 @@
       "effect": "",
       "price": "54000 | Sell: 10800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Ogre Tooth",
@@ -5798,7 +5798,7 @@
       "effect": "",
       "price": "7600 | Sell: 1520",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Spring Boots",
@@ -5814,7 +5814,7 @@
       "effect": "",
       "price": "11200 | Sell: 2240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Inline Skates",
@@ -5854,7 +5854,7 @@
       "effect": "",
       "price": "20000 | Sell: 4000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Strange Greaves",
@@ -5870,7 +5870,7 @@
       "effect": "",
       "price": "21200 | Sell: 4240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Adios Shoes",
@@ -5894,7 +5894,7 @@
       "effect": "",
       "price": "25600 | Sell: 5120",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Cowboy Boots",
@@ -5902,7 +5902,7 @@
       "effect": "",
       "price": "26800 | Sell: 5360",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Heavy Heels",
@@ -5910,7 +5910,7 @@
       "effect": "",
       "price": "28400 | Sell: 5680",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Bishamonten",
@@ -5990,7 +5990,7 @@
       "effect": "",
       "price": "41200 | Sell: 8240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mjolnir Boots",
@@ -5998,7 +5998,7 @@
       "effect": "",
       "price": "43600 | Sell: 8720",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Nice Shoes",
@@ -6014,7 +6014,7 @@
       "effect": "",
       "price": "45200 | Sell: 9040",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Animal Slippers",
@@ -6030,7 +6030,7 @@
       "effect": "",
       "price": "50000 | Sell: 10000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hero Legs",
@@ -6062,7 +6062,7 @@
       "effect": "",
       "price": "57600 | Sell: 11520",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Judgment Boots",
@@ -6070,7 +6070,7 @@
       "effect": "",
       "price": "59000 | Sell: 11800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Stella Greaves",
@@ -6078,7 +6078,7 @@
       "effect": "",
       "price": "61200 | Sell: 12240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Red-Leaf Gusoku",
@@ -6126,7 +6126,7 @@
       "effect": "",
       "price": "11200 | Sell: 2240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Festival Fan",
@@ -6142,7 +6142,7 @@
       "effect": "",
       "price": "12400 | Sell: 2480",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Table Tennis Racket",
@@ -6158,7 +6158,7 @@
       "effect": "",
       "price": "13800 | Sell: 2760",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Suzaku Feather",
@@ -6222,7 +6222,7 @@
       "effect": "",
       "price": "25600 | Sell: 5120",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Duchess",
@@ -6238,7 +6238,7 @@
       "effect": "",
       "price": "26800 | Sell: 5360",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bat Saucer",
@@ -6262,7 +6262,7 @@
       "effect": "",
       "price": "28000 | Sell: 5600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Mogari-Bue",
@@ -6286,7 +6286,7 @@
       "effect": "",
       "price": "25000 | Sell: 5000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Tambourine",
@@ -6334,7 +6334,7 @@
       "effect": "",
       "price": "38000 | Sell: 7600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Suzumushi",
@@ -6366,7 +6366,7 @@
       "effect": "",
       "price": "47200 | Sell: 9440",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kacho Fugetsu",
@@ -6470,7 +6470,7 @@
       "effect": "",
       "price": "24400 | Sell: 4880",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Photon Plate",
@@ -6478,7 +6478,7 @@
       "effect": "",
       "price": "28000 | Sell: 5600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Factory Sign",
@@ -6502,7 +6502,7 @@
       "effect": "",
       "price": "30000 | Sell: 6000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Feather Shield",
@@ -6526,7 +6526,7 @@
       "effect": "",
       "price": "31200 | Sell: 6240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Alloyed Plate",
@@ -6534,7 +6534,7 @@
       "effect": "",
       "price": "33000 | Sell: 6600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Bath Lid",
@@ -6550,7 +6550,7 @@
       "effect": "",
       "price": "35200 | Sell: 7040",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Scutum",
@@ -6582,7 +6582,7 @@
       "effect": "",
       "price": "42000 | Sell: 8400",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Demon Shield",
@@ -6742,7 +6742,7 @@
       "effect": "",
       "price": "26000 | Sell: 5200",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Crab Claw",
@@ -6766,7 +6766,7 @@
       "effect": "",
       "price": "30000 | Sell: 6000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Beach Ball",
@@ -6798,7 +6798,7 @@
       "effect": "",
       "price": "32800 | Sell: 6560",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Air Break",
@@ -6822,7 +6822,7 @@
       "effect": "",
       "price": "37200 | Sell: 7440",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Hyper Drill",
@@ -6854,7 +6854,7 @@
       "effect": "",
       "price": "43600 | Sell: 8720",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Chain Glove",
@@ -6862,7 +6862,7 @@
       "effect": "",
       "price": "46000 | Sell: 9200",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Frost Puppet",
@@ -6902,7 +6902,7 @@
       "effect": "",
       "price": "56800 | Sell: 11360",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Pyro Puppet",
@@ -6918,7 +6918,7 @@
       "effect": "",
       "price": "58800 | Sell: 11760",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Platinum Claw",
@@ -6926,7 +6926,7 @@
       "effect": "",
       "price": "60000 | Sell: 12000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Reindeer Hoof",
@@ -7334,7 +7334,7 @@
       "effect": "",
       "price": "6800 | Sell: 1360",
       "location": "Daidara Metalworks\nYukiko's Castle",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Survival Guard",
@@ -7342,7 +7342,7 @@
       "effect": "",
       "price": "7200 | Sell: 1440",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Lion Happi",
@@ -7358,7 +7358,7 @@
       "effect": "",
       "price": "22400 | Sell: 4480",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Charm Robe",
@@ -7366,7 +7366,7 @@
       "effect": "",
       "price": "15200 | Sell: 3040",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Metal Jacket",
@@ -7374,7 +7374,7 @@
       "effect": "",
       "price": "12800 | Sell: 2560",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Jingi Fundoshi",
@@ -7398,7 +7398,7 @@
       "effect": "",
       "price": "15600 | Sell: 3120",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Knifeproof Coat",
@@ -7406,7 +7406,7 @@
       "effect": "",
       "price": "16800 | Sell: 3360",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Doumaru",
@@ -7446,7 +7446,7 @@
       "effect": "",
       "price": "21600 | Sell: 4320",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hard Bolero",
@@ -7494,7 +7494,7 @@
       "effect": "",
       "price": "24800 | Sell: 4960",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Black Stone Mail",
@@ -7502,7 +7502,7 @@
       "effect": "",
       "price": "24000 | Sell: 4800",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Knight Scale",
@@ -7518,7 +7518,7 @@
       "effect": "",
       "price": "26400 | Sell: 5280",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hard Armor",
@@ -7526,7 +7526,7 @@
       "effect": "",
       "price": "28000 | Sell: 5600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Capital Robe",
@@ -7534,7 +7534,7 @@
       "effect": "",
       "price": "28400 | Sell: 5680",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Plate Mail",
@@ -7542,7 +7542,7 @@
       "effect": "",
       "price": "29800 | Sell: 5960",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Paladin Armor",
@@ -7606,7 +7606,7 @@
       "effect": "",
       "price": "42000 | Sell: 8400",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Niagra Climber",
@@ -7662,7 +7662,7 @@
       "effect": "",
       "price": "41200 | Sell: 8240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mythos Robe",
@@ -7670,7 +7670,7 @@
       "effect": "",
       "price": "42000 | Sell: 8400",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Dragon Scale",
@@ -7718,7 +7718,7 @@
       "effect": "",
       "price": "47200 | Sell: 9440",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Rune Dress",
@@ -7790,7 +7790,7 @@
       "effect": "",
       "price": "52800 | Sell: 10560",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mikagura Vest",
@@ -7798,7 +7798,7 @@
       "effect": "",
       "price": "53200 | Sell: 10640",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Kotodama Cape",
@@ -7806,7 +7806,7 @@
       "effect": "",
       "price": "54400 | Sell: 10880",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Uzume Robe",
@@ -7822,7 +7822,7 @@
       "effect": "",
       "price": "54800 | Sell: 10960",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Surcoat",
@@ -7886,7 +7886,7 @@
       "effect": "",
       "price": "61200 | Sell: 12240",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Godly Robe",
@@ -7958,7 +7958,7 @@
       "effect": "",
       "price": "3000 | Sell: 600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Power Belt",
@@ -8014,7 +8014,7 @@
       "effect": "",
       "price": "3000 | Sell: 600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Crow Charm",
@@ -8046,7 +8046,7 @@
       "effect": "",
       "price": "15000 | Sell: 3000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Demon Charm",
@@ -8070,7 +8070,7 @@
       "effect": "",
       "price": "3000 | Sell: 600",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Talisman",
@@ -8102,7 +8102,7 @@
       "effect": "",
       "price": "15000 | Sell: 3000",
       "location": "Daidara Metalworks",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Defense Essence",
@@ -8270,7 +8270,7 @@
       "effect": "",
       "price": "30000 | Sell: 6000",
       "location": "Daidara Metalworks\nVoid Quest",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Reprisal Chain",
@@ -8622,7 +8622,7 @@
       "effect": "",
       "price": "18000 | Sell: 3600",
       "location": "Daidara Metalworks\nVarious Dungeons",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Disguise Mask",
@@ -8630,7 +8630,7 @@
       "effect": "",
       "price": "18000 | Sell: 3600",
       "location": "Daidara Metalworks\nVarious Dungeons",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Awareness Note",
@@ -9014,7 +9014,7 @@
       "effect": "",
       "price": "25000 | Sell: 5000",
       "location": "Daidara Metalworks\nVoid Quest",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Earth Badge",
@@ -9022,7 +9022,7 @@
       "effect": "",
       "price": "30000 | Sell: 6000",
       "location": "Daidara Metalworks\nVarious Dungeons",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Space Badge",

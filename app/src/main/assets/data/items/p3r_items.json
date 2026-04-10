@@ -153,7 +153,7 @@
       "category": "Consumable"
     },
     {
-      "name": "Chicken Sauté",
+      "name": "Chicken Saut\u00e9",
       "description": "Restores 100 HP to all allies.",
       "effect": "Restores 100 HP to all allies.",
       "price": "",
@@ -582,7 +582,7 @@
       "effect": "Raises a Persona's Endurance by 1 / 2 / 3.",
       "price": "",
       "location": "Exams, Mayoido, Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Magic Incense I / II / III",
@@ -1550,7 +1550,7 @@
       "effect": "Might please someone.",
       "price": "Sell: 500",
       "location": "Shrine Fortune, Koromaru",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Bash",
@@ -1558,7 +1558,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Cleave",
@@ -1566,7 +1566,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Assault Dive",
@@ -1574,7 +1574,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Sonic Punch",
@@ -1582,7 +1582,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Gale Slash",
@@ -1590,7 +1590,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Zan-ei",
@@ -1598,7 +1598,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Double Fangs",
@@ -1606,7 +1606,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Kill Rush",
@@ -1614,7 +1614,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mighty Swing",
@@ -1622,7 +1622,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Fatal End",
@@ -1630,7 +1630,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Getsu-ei",
@@ -1638,7 +1638,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Heat Wave",
@@ -1646,7 +1646,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Cruel Attack",
@@ -1654,7 +1654,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Blade of Fury",
@@ -1662,7 +1662,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Vicious Strike",
@@ -1670,7 +1670,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Deathbound",
@@ -1678,7 +1678,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Tempest Slash",
@@ -1686,7 +1686,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Myriad Arrows",
@@ -1694,7 +1694,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Vorpal Blade",
@@ -1702,7 +1702,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Akasha Arts",
@@ -1710,7 +1710,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "God's Hand",
@@ -1718,7 +1718,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Brave Blade",
@@ -1726,7 +1726,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Primal Force",
@@ -1734,7 +1734,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Agi",
@@ -1742,7 +1742,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Bufu",
@@ -1750,7 +1750,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Zio",
@@ -1758,7 +1758,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Garu",
@@ -1766,7 +1766,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Kouha",
@@ -1774,7 +1774,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Eiha",
@@ -1782,7 +1782,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maragi",
@@ -1790,7 +1790,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mabufu",
@@ -1798,7 +1798,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mazio",
@@ -1806,7 +1806,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Magaru",
@@ -1814,7 +1814,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Makouha",
@@ -1822,7 +1822,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maeiha",
@@ -1830,7 +1830,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Agilao",
@@ -1838,7 +1838,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Bufula",
@@ -1846,7 +1846,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Zionga",
@@ -1854,7 +1854,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Garula",
@@ -1862,7 +1862,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Kouga",
@@ -1870,7 +1870,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Eiga",
@@ -1878,7 +1878,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maragion",
@@ -1886,7 +1886,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mabufula",
@@ -1894,7 +1894,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mazionga",
@@ -1902,7 +1902,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Magarula",
@@ -1910,7 +1910,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Makouga",
@@ -1918,7 +1918,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maeiga",
@@ -1926,7 +1926,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Agidyne",
@@ -1934,7 +1934,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Bufudyne",
@@ -1942,7 +1942,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Ziodyne",
@@ -1950,7 +1950,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Garudyne",
@@ -1958,7 +1958,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Kougaon",
@@ -1966,7 +1966,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Eigaon",
@@ -1974,7 +1974,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maragidyne",
@@ -1982,7 +1982,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mabufudyne",
@@ -1990,7 +1990,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maziodyne",
@@ -1998,7 +1998,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Magarudyne",
@@ -2006,7 +2006,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Makougaon",
@@ -2014,7 +2014,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Maeigaon",
@@ -2022,7 +2022,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Megido",
@@ -2030,7 +2030,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Megidola",
@@ -2038,7 +2038,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Megidolaon",
@@ -2046,7 +2046,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Hama",
@@ -2054,7 +2054,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mahama",
@@ -2062,7 +2062,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Hamaon",
@@ -2070,7 +2070,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mahamaon",
@@ -2078,7 +2078,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mudo",
@@ -2086,7 +2086,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mamudo",
@@ -2094,7 +2094,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mudoon",
@@ -2102,7 +2102,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mamudoon",
@@ -2110,7 +2110,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Dia",
@@ -2118,7 +2118,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Media",
@@ -2126,7 +2126,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Diarama",
@@ -2134,7 +2134,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mediarama",
@@ -2142,7 +2142,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Diarahan",
@@ -2150,7 +2150,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mediarahan",
@@ -2158,7 +2158,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Patra",
@@ -2166,7 +2166,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 1)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Me Patra",
@@ -2174,7 +2174,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Baisudi",
@@ -2182,7 +2182,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mabaisudi",
@@ -2190,7 +2190,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Amrita Drop",
@@ -2206,7 +2206,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Recarm",
@@ -2214,7 +2214,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Samarecarm",
@@ -2222,7 +2222,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Tarukaja",
@@ -2230,7 +2230,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Rakukaja",
@@ -2238,7 +2238,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Sukukaja",
@@ -2246,7 +2246,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Matarukaja",
@@ -2254,7 +2254,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Marakukaja",
@@ -2262,7 +2262,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Masukukaja",
@@ -2270,7 +2270,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Tarunda",
@@ -2278,7 +2278,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Rakunda",
@@ -2286,7 +2286,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Sukunda",
@@ -2294,7 +2294,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 2)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Matarunda",
@@ -2302,7 +2302,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Marakunda",
@@ -2310,7 +2310,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Masukunda",
@@ -2318,7 +2318,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Dekaja",
@@ -2326,7 +2326,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Dekunda",
@@ -2334,7 +2334,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Tetrakarn",
@@ -2342,7 +2342,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Makarakarn",
@@ -2350,7 +2350,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Concentrate",
@@ -2358,7 +2358,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Charge",
@@ -2366,7 +2366,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Dodge Fire / Ice / Elec / Wind / Strike / Slash / Pierce",
@@ -2374,7 +2374,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Evade Fire / Ice / Elec / Wind / Strike / Slash / Pierce",
@@ -2382,7 +2382,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Resist Fire / Ice / Elec / Wind / Light / Dark",
@@ -2390,7 +2390,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Null Fire / Ice / Elec / Wind / Light / Dark",
@@ -2398,7 +2398,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Absorb Fire / Ice / Elec / Wind",
@@ -2406,7 +2406,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Repel Fire / Ice / Elec / Wind / Light / Dark",
@@ -2414,7 +2414,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Fire / Ice / Elec / Wind / Light / Dark Boost",
@@ -2422,7 +2422,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Fire / Ice / Elec / Wind / Light / Dark Amp",
@@ -2430,7 +2430,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Apt Pupil",
@@ -2438,7 +2438,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Sharp Student",
@@ -2446,7 +2446,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Ali Dance",
@@ -2454,7 +2454,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Angelic Grace",
@@ -2462,7 +2462,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Arms Master",
@@ -2470,7 +2470,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Spell Master",
@@ -2478,7 +2478,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 10)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Endure",
@@ -2486,7 +2486,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Enduring Soul",
@@ -2502,7 +2502,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Endure Light / Dark",
@@ -2510,7 +2510,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Fast Heal",
@@ -2518,7 +2518,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 6)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Insta-Heal",
@@ -2526,7 +2526,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 9)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Unshaken Will",
@@ -2534,7 +2534,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Invigorate 1 / 2 / 3",
@@ -2542,7 +2542,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3 / 6 / 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Regenerate 1 / 2 / 3",
@@ -2550,7 +2550,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3 / 6 / 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Cool Breeze",
@@ -2558,7 +2558,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 5)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Life Aid",
@@ -2566,7 +2566,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Auto-Tarukaja / Rakukaja / Sukukaja",
@@ -2574,7 +2574,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 4)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Auto-Mataru / Maraku / Masuku",
@@ -2582,7 +2582,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 8)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Growth 1 / 2 / 3",
@@ -2590,7 +2590,7 @@
       "effect": "",
       "price": "",
       "location": "Shuffle Time (Sword 3 / 5 / 7)",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Malachite",
@@ -2678,7 +2678,7 @@
       "effect": "",
       "price": "",
       "location": "Given by Ikutsuki",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Nihil Blade",
@@ -2686,7 +2686,7 @@
       "effect": "",
       "price": "",
       "location": "Tartarus Chests",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Quality Nihil Blade",
@@ -2694,7 +2694,7 @@
       "effect": "",
       "price": "",
       "location": "Tartarus Chests",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Nihil Cloth",
@@ -2702,7 +2702,7 @@
       "effect": "",
       "price": "",
       "location": "Tartarus Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Quality Nihil Cloth",
@@ -2710,7 +2710,7 @@
       "effect": "",
       "price": "",
       "location": "Tartarus Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Nihil Ore",
@@ -2782,7 +2782,7 @@
       "effect": "",
       "price": "",
       "location": "Thor",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Mara's Head",
@@ -2849,12 +2849,12 @@
       "category": "Consumable"
     },
     {
-      "name": "Múspell Rock",
+      "name": "M\u00faspell Rock",
       "description": "",
       "effect": "",
       "price": "",
       "location": "Surt",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Earth Goddess Ring",
@@ -2862,7 +2862,7 @@
       "effect": "",
       "price": "",
       "location": "Cybele",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Shadow Lipstick",
@@ -2902,7 +2902,7 @@
       "effect": "",
       "price": "",
       "location": "Metatron",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Abyssal King Tooth",
@@ -2950,7 +2950,7 @@
       "effect": "",
       "price": "",
       "location": "Susano-o",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Black Sun Candle",
@@ -2966,7 +2966,7 @@
       "effect": "",
       "price": "",
       "location": "Futsunushi",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "God Dragon Whiskers",
@@ -3030,7 +3030,7 @@
       "effect": "",
       "price": "",
       "location": "Odin",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Prayer Angel Garland",
@@ -3086,7 +3086,7 @@
       "effect": "",
       "price": "",
       "location": "Beelzebub",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Shaft Fragment",
@@ -3246,7 +3246,7 @@
       "effect": "",
       "price": "Sell: 530",
       "location": "Justice Sword",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Cap of Wizardry",
@@ -3270,7 +3270,7 @@
       "effect": "",
       "price": "Sell: 290",
       "location": "Dancing Hand, Pink Hand",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Assailant's Choker",
@@ -3422,7 +3422,7 @@
       "effect": "",
       "price": "Sell: 370",
       "location": "Creation Relic",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Orb of Continuity",
@@ -3430,7 +3430,7 @@
       "effect": "",
       "price": "Sell: 700",
       "location": "Constancy Relic",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Vanguard's Horn",
@@ -3494,7 +3494,7 @@
       "effect": "",
       "price": "Sell: 650",
       "location": "Death Twins",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Crown of Vice",
@@ -3582,7 +3582,7 @@
       "effect": "",
       "price": "Sell: 520",
       "location": "Lustful Snake",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Steel Wheel",
@@ -3670,7 +3670,7 @@
       "effect": "",
       "price": "Sell: 630",
       "location": "Blue Sigil",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Samurai Helmet",
@@ -3710,7 +3710,7 @@
       "effect": "",
       "price": "Sell: 570",
       "location": "Mind Dice",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Iron-Lined Pants",
@@ -4013,7 +4013,7 @@
       "description": "Charm +4",
       "effect": "Charm +4",
       "price": "1200",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4021,7 +4021,7 @@
       "description": "Charm +4",
       "effect": "Charm +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4029,7 +4029,7 @@
       "description": "Academics +4",
       "effect": "Academics +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4037,7 +4037,7 @@
       "description": "Courage +4",
       "effect": "Courage +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4045,7 +4045,7 @@
       "description": "Courage +4",
       "effect": "Courage +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4053,7 +4053,7 @@
       "description": "+7 HP",
       "effect": "+7 HP",
       "price": "2000",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4061,7 +4061,7 @@
       "description": "+5 SP",
       "effect": "+5 SP",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4069,7 +4069,7 @@
       "description": "Unlocks Umiushi Takeout",
       "effect": "Unlocks Umiushi Takeout",
       "price": "400",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4077,7 +4077,7 @@
       "description": "Charm +4",
       "effect": "Charm +4",
       "price": "4000",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4085,7 +4085,7 @@
       "description": "Academics +4",
       "effect": "Academics +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4093,7 +4093,7 @@
       "description": "Courage +4",
       "effect": "Courage +4",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4101,7 +4101,7 @@
       "description": "Increases crop yield",
       "effect": "Increases crop yield",
       "price": "4500",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4109,7 +4109,7 @@
       "description": "Increases part-time job money",
       "effect": "Increases part-time job money",
       "price": "8000",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4117,7 +4117,7 @@
       "description": "HP +9",
       "effect": "HP +9",
       "price": "4000",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4125,7 +4125,7 @@
       "description": "SP +7",
       "effect": "SP +7",
       "price": "",
-      "location": "Manga Star Net Café",
+      "location": "Manga Star Net Caf\u00e9",
       "category": "Consumable"
     },
     {
@@ -4401,7 +4401,7 @@
       "category": "Consumable"
     },
     {
-      "name": "Fencing Épée*",
+      "name": "Fencing \u00c9p\u00e9e*",
       "description": "A slender sword.",
       "effect": "A slender sword.",
       "price": "",
@@ -4518,7 +4518,7 @@
       "effect": "A cloth used for treating injuries.",
       "price": "",
       "location": "Request",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Student Handbook",
@@ -4542,7 +4542,7 @@
       "effect": "A headband with cat ears.",
       "price": "",
       "location": "Iwatodai Strip Mall",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Letter of Thanks",
@@ -4630,7 +4630,7 @@
       "effect": "The Fool card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "High Priestess Tarot",
@@ -4638,7 +4638,7 @@
       "effect": "The High Priestess card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Empress Tarot",
@@ -4646,7 +4646,7 @@
       "effect": "The Empress card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Emperor Tarot",
@@ -4654,7 +4654,7 @@
       "effect": "The Emperor card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Hierophant Tarot",
@@ -4662,7 +4662,7 @@
       "effect": "The Hierophant card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Lovers Tarot",
@@ -4670,7 +4670,7 @@
       "effect": "The Lovers card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Chariot Tarot",
@@ -4678,7 +4678,7 @@
       "effect": "The Chariot card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Justice Tarot",
@@ -4686,7 +4686,7 @@
       "effect": "The Justice card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Hermit Tarot",
@@ -4694,7 +4694,7 @@
       "effect": "The Hermit card.",
       "price": "",
       "location": "Shuffle Time",
-      "category": "Consumable"
+      "category": "Skill Card"
     },
     {
       "name": "Temperance Tarot",
@@ -4774,7 +4774,7 @@
       "effect": "",
       "price": "3000",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Shortsword",
@@ -4846,7 +4846,7 @@
       "effect": "",
       "price": "",
       "location": "Given on 6/13",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Steel Pipe",
@@ -4878,7 +4878,7 @@
       "effect": "",
       "price": "3100",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Legendary Cleaver",
@@ -4942,7 +4942,7 @@
       "effect": "",
       "price": "23800 | Sell: 5950",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Amakuni",
@@ -4958,7 +4958,7 @@
       "effect": "",
       "price": "25300 | Sell: 6330",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kogarasumaru",
@@ -4974,7 +4974,7 @@
       "effect": "",
       "price": "7250",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Tajikarao Sword",
@@ -4982,7 +4982,7 @@
       "effect": "",
       "price": "29400 | Sell: 7350",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Qi Xing Dao",
@@ -4998,7 +4998,7 @@
       "effect": "",
       "price": "35900 | Sell: 8980",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Translucent Blade",
@@ -5006,7 +5006,7 @@
       "effect": "",
       "price": "39800 | Sell: 9950",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Dual Sword",
@@ -5014,7 +5014,7 @@
       "effect": "",
       "price": "41700 | Sell: 10430",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kaneshige",
@@ -5062,7 +5062,7 @@
       "effect": "",
       "price": "22500",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Practice Bow",
@@ -5070,7 +5070,7 @@
       "effect": "",
       "price": "Sell: 500",
       "location": "Yukari default",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "RainBow",
@@ -5086,7 +5086,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Poison Arrow Bow",
@@ -5094,7 +5094,7 @@
       "effect": "",
       "price": "Sell: 1250",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Siren's Song",
@@ -5126,7 +5126,7 @@
       "effect": "",
       "price": "Sell: 100",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "SEES Longbow",
@@ -5142,7 +5142,7 @@
       "effect": "",
       "price": "Sell: 2250",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Uta",
@@ -5158,7 +5158,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kamatha",
@@ -5198,7 +5198,7 @@
       "effect": "",
       "price": "18100 | Sell: 4530",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bow of Affection",
@@ -5206,7 +5206,7 @@
       "effect": "",
       "price": "4830",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Composite Bow",
@@ -5214,7 +5214,7 @@
       "effect": "",
       "price": "20800 | Sell: 5200",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Lightning Bow",
@@ -5222,7 +5222,7 @@
       "effect": "",
       "price": "22200 | Sell: 5550",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Great Bow",
@@ -5230,7 +5230,7 @@
       "effect": "",
       "price": "26100 | Sell: 6530",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Whirlwind Bow",
@@ -5238,7 +5238,7 @@
       "effect": "",
       "price": "Sell: 6750",
       "location": "Chest (Monad)",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bow of Serenity",
@@ -5246,7 +5246,7 @@
       "effect": "",
       "price": "27900 | Sell: 6980",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Hero's Bow",
@@ -5254,7 +5254,7 @@
       "effect": "",
       "price": "31500 | Sell: 7880",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kishin Bow",
@@ -5262,7 +5262,7 @@
       "effect": "",
       "price": "32500 | Sell: 8130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Calamity Bow",
@@ -5270,7 +5270,7 @@
       "effect": "",
       "price": "8850",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Circe's Bow",
@@ -5278,7 +5278,7 @@
       "effect": "",
       "price": "Sell: 8500",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Dreadnought",
@@ -5302,7 +5302,7 @@
       "effect": "",
       "price": "41900 | Sell: 10480",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Maki's Resolve",
@@ -5326,7 +5326,7 @@
       "effect": "",
       "price": "17000",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Imitation Katana",
@@ -5334,7 +5334,7 @@
       "effect": "",
       "price": "Sell: 600",
       "location": "Junpei default",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kishido Blade",
@@ -5342,7 +5342,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bastard Sword",
@@ -5350,7 +5350,7 @@
       "effect": "",
       "price": "3500 | Sell: 880",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Raikou",
@@ -5374,7 +5374,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "All-Purpose Katana",
@@ -5382,7 +5382,7 @@
       "effect": "",
       "price": "9000 | Sell: 2250",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Juzumaru",
@@ -5414,7 +5414,7 @@
       "effect": "",
       "price": "12000 | Sell: 3000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Claymore",
@@ -5438,7 +5438,7 @@
       "effect": "",
       "price": "16300 | Sell: 4080",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Tsubaki-maru",
@@ -5462,7 +5462,7 @@
       "effect": "",
       "price": "24150 | Sell: 6040",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Deathbringer",
@@ -5470,7 +5470,7 @@
       "effect": "",
       "price": "25700 | Sell: 6430",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Kaketsushinto",
@@ -5510,7 +5510,7 @@
       "effect": "",
       "price": "9300",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Crimson Greatsword",
@@ -5550,7 +5550,7 @@
       "effect": "",
       "price": "44000 | Sell: 11000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Tobi-botaru",
@@ -5574,7 +5574,7 @@
       "effect": "",
       "price": "17750",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Brass Gloves",
@@ -5582,7 +5582,7 @@
       "effect": "",
       "price": "Sell: 1000",
       "location": "Akihiko default",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Sonic Fist",
@@ -5590,7 +5590,7 @@
       "effect": "",
       "price": "5850 | Sell: 1460",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bladefist",
@@ -5614,7 +5614,7 @@
       "effect": "",
       "price": "",
       "location": "Given on 6/13",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Gusto Gloves",
@@ -5622,7 +5622,7 @@
       "effect": "",
       "price": "10250 | Sell: 2560",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Thunder Knuckles",
@@ -5630,7 +5630,7 @@
       "effect": "",
       "price": "4400",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Fists of Fury",
@@ -5646,7 +5646,7 @@
       "effect": "",
       "price": "12500 | Sell: 3130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Blood Baghnakh",
@@ -5662,7 +5662,7 @@
       "effect": "",
       "price": "Sell: 800",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Root Cestus",
@@ -5702,7 +5702,7 @@
       "effect": "",
       "price": "Sell: 5000",
       "location": "Monad Passage",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Titanic Knuckles",
@@ -5710,7 +5710,7 @@
       "effect": "",
       "price": "21450 | Sell: 5360",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Wings of Vanth",
@@ -5726,7 +5726,7 @@
       "effect": "",
       "price": "6150",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Rapid Bands",
@@ -5734,7 +5734,7 @@
       "effect": "",
       "price": "Sell: 6250",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Crusher Fist",
@@ -5742,7 +5742,7 @@
       "effect": "",
       "price": "26500 | Sell: 6630",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Diamond Knuckles",
@@ -5750,7 +5750,7 @@
       "effect": "",
       "price": "27900 | Sell: 6980",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Supreme Gloves",
@@ -5758,7 +5758,7 @@
       "effect": "",
       "price": "31900 | Sell: 7980",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Spirit Gloves",
@@ -5766,7 +5766,7 @@
       "effect": "",
       "price": "33200 | Sell: 8300",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Jack's Gauntlets",
@@ -5806,7 +5806,7 @@
       "effect": "",
       "price": "43100 | Sell: 10780",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Sabazios",
@@ -5822,7 +5822,7 @@
       "effect": "",
       "price": "3980",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Quarter Pike",
@@ -5910,7 +5910,7 @@
       "effect": "",
       "price": "18000 | Sell: 4500",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Elegant Fleuret",
@@ -6046,7 +6046,7 @@
       "effect": "",
       "price": "11750 | Sell: 2940",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Six-Shot",
@@ -6062,7 +6062,7 @@
       "effect": "",
       "price": "16500 | Sell: 4130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Orgone Rifle",
@@ -6070,7 +6070,7 @@
       "effect": "",
       "price": "20000 | Sell: 5000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Nucleus Rifle",
@@ -6078,7 +6078,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Flash Grenade",
@@ -6102,7 +6102,7 @@
       "effect": "",
       "price": "24600",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Rocket Punch",
@@ -6198,7 +6198,7 @@
       "effect": "",
       "price": "Sell: 13280",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Pandemonium",
@@ -6278,7 +6278,7 @@
       "effect": "",
       "price": "19800 | Sell: 380",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Grand Slasher",
@@ -6302,7 +6302,7 @@
       "effect": "",
       "price": "26150 | Sell: 6540",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Pesh Kabz",
@@ -6342,7 +6342,7 @@
       "effect": "",
       "price": "32700 | Sell: 8180",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Rai Kunimitsu",
@@ -6590,7 +6590,7 @@
       "effect": "",
       "price": "Sell: 7300",
       "location": "Shinjiro default",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Night Stalker",
@@ -6606,7 +6606,7 @@
       "effect": "",
       "price": "19800 | Sell: 4950",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Bus Stop Sign",
@@ -6630,7 +6630,7 @@
       "effect": "",
       "price": "5800",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Guillotine Axe",
@@ -6638,7 +6638,7 @@
       "effect": "",
       "price": "24500 | Sell: 6130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Gaea's Grace",
@@ -6702,7 +6702,7 @@
       "effect": "",
       "price": "19800",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Dress Shirt",
@@ -6710,7 +6710,7 @@
       "effect": "",
       "price": "Sell: 600",
       "location": "Junpei default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Plain Shirt",
@@ -6718,7 +6718,7 @@
       "effect": "",
       "price": "Sell: 600",
       "location": "Protagonist default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Knit Cardigan",
@@ -6742,7 +6742,7 @@
       "effect": "",
       "price": "4500 | Sell: 1130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hothead Shirt",
@@ -6750,7 +6750,7 @@
       "effect": "",
       "price": "",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Camo Shirt",
@@ -6758,7 +6758,7 @@
       "effect": "",
       "price": "7700 | Sell: 1930",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Red Vest",
@@ -6766,7 +6766,7 @@
       "effect": "",
       "price": "Sell: 2000",
       "location": "Akihiko default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Turtleneck",
@@ -6782,7 +6782,7 @@
       "effect": "",
       "price": "9000 | Sell: 2250",
       "location": "Ken default, Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Pixel Vest",
@@ -6790,7 +6790,7 @@
       "effect": "",
       "price": "Sell: 2330",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Metal Protector",
@@ -6862,7 +6862,7 @@
       "effect": "",
       "price": "Sell: 3200",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Muscle Shirt",
@@ -6870,7 +6870,7 @@
       "effect": "",
       "price": "Sell: 3380",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Amenity Suit",
@@ -6878,7 +6878,7 @@
       "effect": "",
       "price": "9800 | Sell: 2180",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Aramid Vest",
@@ -6886,7 +6886,7 @@
       "effect": "",
       "price": "14400 | Sell: 3600",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Robe of Salvation",
@@ -6894,7 +6894,7 @@
       "effect": "",
       "price": "13800 | Sell: 3450",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Dog Suit",
@@ -6902,7 +6902,7 @@
       "effect": "",
       "price": "Sell: 3850",
       "location": "Koromaru default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Jack Jumper",
@@ -6918,7 +6918,7 @@
       "effect": "",
       "price": "4050",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Army Vest",
@@ -6926,7 +6926,7 @@
       "effect": "",
       "price": "16500 | Sell: 4130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Zip Hoodie",
@@ -6966,7 +6966,7 @@
       "effect": "",
       "price": "18400 | Sell: 4600",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Slugger's Jacket",
@@ -6982,7 +6982,7 @@
       "effect": "",
       "price": "4800",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Sorcery Robe",
@@ -6990,7 +6990,7 @@
       "effect": "",
       "price": "4950",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mantle of Wind",
@@ -7022,7 +7022,7 @@
       "effect": "",
       "price": "5200",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Plate Mail",
@@ -7030,7 +7030,7 @@
       "effect": "",
       "price": "5330",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hard Dog Suit",
@@ -7038,7 +7038,7 @@
       "effect": "",
       "price": "21950 | Sell: 5490",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Robe of Warding",
@@ -7046,7 +7046,7 @@
       "effect": "",
       "price": "23000 | Sell: 5750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Rock Dog Suit",
@@ -7054,7 +7054,7 @@
       "effect": "",
       "price": "6200",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Chevalier Torso",
@@ -7094,7 +7094,7 @@
       "effect": "",
       "price": "24200 | Sell: 6050",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Phalanx Shell",
@@ -7118,7 +7118,7 @@
       "effect": "",
       "price": "24800 | Sell: 7250",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Aramid Harness",
@@ -7134,7 +7134,7 @@
       "effect": "",
       "price": "27300 | Sell: 6830",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Stealth Shirt",
@@ -7142,7 +7142,7 @@
       "effect": "",
       "price": "Sell: 6750",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Gigantic Armor",
@@ -7150,7 +7150,7 @@
       "effect": "",
       "price": "28500 | Sell: 7130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Aramid Compound",
@@ -7166,7 +7166,7 @@
       "effect": "",
       "price": "Sell: 7400",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Bullfighter's Cape",
@@ -7182,7 +7182,7 @@
       "effect": "",
       "price": "Sell: 7600",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Soul Dog Suit",
@@ -7190,7 +7190,7 @@
       "effect": "",
       "price": "29000 | Sell: 7250",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Kukai's Vestment",
@@ -7214,7 +7214,7 @@
       "effect": "",
       "price": "32500 | Sell: 8130",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Titanium Dog Suit",
@@ -7222,7 +7222,7 @@
       "effect": "",
       "price": "33200 | Sell: 8300",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Kaiser Armor",
@@ -7230,7 +7230,7 @@
       "effect": "",
       "price": "35800 | Sell: 8950",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Battle Leotard",
@@ -7246,7 +7246,7 @@
       "effect": "",
       "price": "9050",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Tetra Jammer",
@@ -7262,7 +7262,7 @@
       "effect": "",
       "price": "9280",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Ergo Lamellar",
@@ -7286,7 +7286,7 @@
       "effect": "",
       "price": "9050",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Powered Dog Suit",
@@ -7294,7 +7294,7 @@
       "effect": "",
       "price": "9200",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hero's Cape",
@@ -7310,7 +7310,7 @@
       "effect": "",
       "price": "35300 | Sell: 8830",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Phantom Robe",
@@ -7318,7 +7318,7 @@
       "effect": "",
       "price": "37300 | Sell: 9330",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Ergo Plate",
@@ -7358,7 +7358,7 @@
       "effect": "",
       "price": "39700 | Sell: 9930",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Final Armor",
@@ -7366,7 +7366,7 @@
       "effect": "",
       "price": "42500 | Sell: 10630",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Ergo Scale",
@@ -7382,7 +7382,7 @@
       "effect": "",
       "price": "10050",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Rune Vest",
@@ -7390,7 +7390,7 @@
       "effect": "",
       "price": "10450",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Sun Dog Suit",
@@ -7398,7 +7398,7 @@
       "effect": "",
       "price": "42100 | Sell: 10530",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Vaudevillian Cape",
@@ -7422,7 +7422,7 @@
       "effect": "",
       "price": "Sell: 10850",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Sid's Jacket",
@@ -7454,7 +7454,7 @@
       "effect": "",
       "price": "47200 | Sell: 11800",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Angel Armor",
@@ -7462,7 +7462,7 @@
       "effect": "",
       "price": "49750 | Sell: 12440",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Papal Robe",
@@ -7470,7 +7470,7 @@
       "effect": "",
       "price": "Sell: 12500",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Golden Dress",
@@ -7486,7 +7486,7 @@
       "effect": "",
       "price": "53200 | Sell: 13300",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Pink Duffle Coat",
@@ -7502,7 +7502,7 @@
       "effect": "",
       "price": "Sell: 12750",
       "location": "Fixed/Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Demon's Mail",
@@ -7510,7 +7510,7 @@
       "effect": "",
       "price": "51500 | Sell: 12880",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Lunar Dog Suit",
@@ -7518,7 +7518,7 @@
       "effect": "",
       "price": "49400 | Sell: 12350",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Ergo Compound",
@@ -7542,7 +7542,7 @@
       "effect": "",
       "price": "55000 | Sell: 13750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Ergo Alloy",
@@ -7558,7 +7558,7 @@
       "effect": "",
       "price": "Sell: 15500",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Divine Black Tights",
@@ -7574,7 +7574,7 @@
       "effect": "",
       "price": "16280",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Gaia Dog Suit",
@@ -7582,7 +7582,7 @@
       "effect": "",
       "price": "16580",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Papillon Method",
@@ -7614,7 +7614,7 @@
       "effect": "",
       "price": "17530",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Soul of Athena",
@@ -7630,7 +7630,7 @@
       "effect": "",
       "price": "18500",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Engineer Boots",
@@ -7638,7 +7638,7 @@
       "effect": "",
       "price": "Sell: 400",
       "location": "Protagonist default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Brown Loafers",
@@ -7670,7 +7670,7 @@
       "effect": "",
       "price": "Sell: 680",
       "location": "Akihiko default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "High-Tech Sandals",
@@ -7678,7 +7678,7 @@
       "effect": "",
       "price": "2700 | Sell: 680",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Inline Skates",
@@ -7726,7 +7726,7 @@
       "effect": "",
       "price": "6000 | Sell: 1500",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Pearlite Legs",
@@ -7742,7 +7742,7 @@
       "effect": "",
       "price": "Sell: 1580",
       "location": "Mitsuru default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mechanical Geta",
@@ -7758,7 +7758,7 @@
       "effect": "",
       "price": "3980 | Sell: 1200",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Free Walkers",
@@ -7782,7 +7782,7 @@
       "effect": "",
       "price": "8100 | Sell: 2030",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Boxing Shoes",
@@ -7790,7 +7790,7 @@
       "effect": "",
       "price": "Sell: 2330",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Magic Sandals",
@@ -7798,7 +7798,7 @@
       "effect": "",
       "price": "9300 | Sell: 2330",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Alnico Legs",
@@ -7814,7 +7814,7 @@
       "effect": "",
       "price": "Sell: 2700",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Max Safety Shoes",
@@ -7822,7 +7822,7 @@
       "effect": "",
       "price": "9800",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Electro Shoes",
@@ -7830,7 +7830,7 @@
       "effect": "",
       "price": "2550",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Genbu's Leggings",
@@ -7838,7 +7838,7 @@
       "effect": "",
       "price": "2450",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Dancing Heels",
@@ -7886,7 +7886,7 @@
       "effect": "",
       "price": "Sell: 3000",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Thunder Zori",
@@ -7902,7 +7902,7 @@
       "effect": "",
       "price": "Sell: 3200",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Titanium Pied",
@@ -7934,7 +7934,7 @@
       "effect": "",
       "price": "15000 | Sell: 3750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Soccer Shoes",
@@ -7942,7 +7942,7 @@
       "effect": "",
       "price": "Sell: 3750",
       "location": "Ken default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Fiber Legs",
@@ -7966,7 +7966,7 @@
       "effect": "",
       "price": "Sell: 3930",
       "location": "Shinjiro default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Insulated Tights",
@@ -7982,7 +7982,7 @@
       "effect": "",
       "price": "16400 | Sell: 4100",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Warrior's Boots",
@@ -7990,7 +7990,7 @@
       "effect": "",
       "price": "Sell: 4200",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Cobalt Legs",
@@ -8006,7 +8006,7 @@
       "effect": "",
       "price": "Sell: 4400",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Jet Boots",
@@ -8014,7 +8014,7 @@
       "effect": "",
       "price": "18800 | Sell: 4700",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Niello Legs",
@@ -8030,7 +8030,7 @@
       "effect": "",
       "price": "Sell: 5000",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Silent Sandals",
@@ -8038,7 +8038,7 @@
       "effect": "",
       "price": "3900",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Titanium Legs",
@@ -8054,7 +8054,7 @@
       "effect": "",
       "price": "21100 | Sell: 5280",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "R/C Geta",
@@ -8070,7 +8070,7 @@
       "effect": "",
       "price": "5550",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Zircaloy Legs",
@@ -8094,7 +8094,7 @@
       "effect": "",
       "price": "6200",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Devilish Pumps",
@@ -8134,7 +8134,7 @@
       "effect": "",
       "price": "28400 | Sell: 7100",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Shoes of Bane",
@@ -8142,7 +8142,7 @@
       "effect": "",
       "price": "39800 | Sell: 7900",
       "location": "Tanaka's",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mirage Sandals",
@@ -8150,7 +8150,7 @@
       "effect": "",
       "price": "Sell: 7490",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Lucky Boots",
@@ -8158,7 +8158,7 @@
       "effect": "",
       "price": "29950 | Sell: 7490",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Quick Pumps",
@@ -8198,7 +8198,7 @@
       "effect": "",
       "price": "33400 | Sell: 8350",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mysterious Geta",
@@ -8214,7 +8214,7 @@
       "effect": "",
       "price": "35300 | Sell: 8830",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Glory Boots",
@@ -8222,7 +8222,7 @@
       "effect": "",
       "price": "Sell: 8830",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Holy Shoes",
@@ -8230,7 +8230,7 @@
       "effect": "",
       "price": "Sell: 8830",
       "location": "Locked Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Hanzo's Sandals",
@@ -8238,7 +8238,7 @@
       "effect": "",
       "price": "Sell: 8830",
       "location": "Rare Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Godspeed Shoes",
@@ -8246,7 +8246,7 @@
       "effect": "",
       "price": "Sell: 8830",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Goddess Boots",
@@ -8254,7 +8254,7 @@
       "effect": "",
       "price": "Sell: 8830",
       "location": "Fixed Chest",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Kugelbein",
@@ -8278,7 +8278,7 @@
       "effect": "",
       "price": "39400 | Sell: 9850",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Dragon Boots",
@@ -8286,7 +8286,7 @@
       "effect": "",
       "price": "10500",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Fallen Angel Heels",
@@ -8302,7 +8302,7 @@
       "effect": "",
       "price": "10800",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Eternal Shoes",
@@ -8310,7 +8310,7 @@
       "effect": "",
       "price": "11550",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Bare Paws",
@@ -8334,7 +8334,7 @@
       "effect": "",
       "price": "15800",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Portable Player",
@@ -8358,7 +8358,7 @@
       "effect": "",
       "price": "Sell: 750",
       "location": "Junpei default",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Leather Gloves",
@@ -8366,7 +8366,7 @@
       "effect": "",
       "price": "Sell: 750",
       "location": "Akihiko default",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Fancy Nails",
@@ -8406,7 +8406,7 @@
       "effect": "",
       "price": "Sell: 750",
       "location": "Ken default",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Beanie",
@@ -8422,7 +8422,7 @@
       "effect": "",
       "price": "Sell: 750",
       "location": "Metis default",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Power Band",
@@ -8430,7 +8430,7 @@
       "effect": "",
       "price": "1000 | Sell: 250",
       "location": "Police Station, Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mega Power Band",
@@ -8438,7 +8438,7 @@
       "effect": "",
       "price": "Sell: 1250",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Giga Power Band",
@@ -8446,7 +8446,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Magic Band",
@@ -8454,7 +8454,7 @@
       "effect": "",
       "price": "1000 | Sell: 250",
       "location": "Police Station, Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mega Magic Band",
@@ -8462,7 +8462,7 @@
       "effect": "",
       "price": "Sell: 1250",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Giga Magic Band",
@@ -8470,7 +8470,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Guard Band",
@@ -8478,7 +8478,7 @@
       "effect": "",
       "price": "1000 | Sell: 250",
       "location": "Police Station, Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Mega Guard Band",
@@ -8486,7 +8486,7 @@
       "effect": "",
       "price": "Sell: 1250",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Giga Guard Band",
@@ -8494,7 +8494,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Proto-Choker",
@@ -8510,7 +8510,7 @@
       "effect": "",
       "price": "1000 | Sell: 250",
       "location": "Police Station, Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mega Speed Band",
@@ -8518,7 +8518,7 @@
       "effect": "",
       "price": "Sell: 1250",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Giga Speed Band",
@@ -8526,7 +8526,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Luck Band",
@@ -8534,7 +8534,7 @@
       "effect": "",
       "price": "1000 | Sell: 250",
       "location": "Police Station, Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mega Luck Band",
@@ -8542,7 +8542,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Giga Luck Band",
@@ -8550,7 +8550,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Master Band",
@@ -8558,7 +8558,7 @@
       "effect": "",
       "price": "12000 | Sell: 3000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mega Master Band",
@@ -8566,7 +8566,7 @@
       "effect": "",
       "price": "Sell: 2700",
       "location": "School Exam 2 Top Reward",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Micro Sash",
@@ -8614,7 +8614,7 @@
       "effect": "",
       "price": "5000 | Sell: 1250",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Fairy Talisman",
@@ -8622,7 +8622,7 @@
       "effect": "",
       "price": "10000 | Sell: 2500",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Spirit Talisman",
@@ -8630,7 +8630,7 @@
       "effect": "",
       "price": "Sell: 5000",
       "location": "Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Magic Talisman",
@@ -8638,7 +8638,7 @@
       "effect": "",
       "price": "",
       "location": "Missing person reward",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Queen's Alice Band",
@@ -8646,7 +8646,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Rousing Pendant",
@@ -8686,7 +8686,7 @@
       "effect": "",
       "price": "Sell: 1750",
       "location": "Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Cleave Brooch",
@@ -8702,7 +8702,7 @@
       "effect": "",
       "price": "Sell: 1750",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Stab Earrings",
@@ -8710,7 +8710,7 @@
       "effect": "",
       "price": "Sell: 1750",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Maim Earrings",
@@ -8718,7 +8718,7 @@
       "effect": "",
       "price": "7000",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Maim Brooch",
@@ -8734,7 +8734,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Blaze Brooch",
@@ -8750,7 +8750,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Thunder Earrings",
@@ -8758,7 +8758,7 @@
       "effect": "",
       "price": "Sell: 1750",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Gale Earrings",
@@ -8766,7 +8766,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Thunder Brooch",
@@ -8790,7 +8790,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Holy Brooch",
@@ -8806,7 +8806,7 @@
       "effect": "",
       "price": "Sell: 1750",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Wicked Brooch",
@@ -8822,7 +8822,7 @@
       "effect": "",
       "price": "",
       "location": "Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Slash Ward",
@@ -8886,7 +8886,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Eye of Flame",
@@ -8902,7 +8902,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Eye of Ice",
@@ -8918,7 +8918,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Wind Charm",
@@ -8926,7 +8926,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Eye of Wind",
@@ -8942,7 +8942,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Dark Charm",
@@ -8950,7 +8950,7 @@
       "effect": "",
       "price": "8000 | Sell: 2000",
       "location": "Police Station, Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Eye of Darkness",
@@ -8974,7 +8974,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Kohryu's Scale",
@@ -9014,7 +9014,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Weapon"
     },
     {
       "name": "Storm Ring",
@@ -9022,7 +9022,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Radiant Halo",
@@ -9038,7 +9038,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Rudra Ring",
@@ -9046,7 +9046,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Chakra Ring",
@@ -9054,7 +9054,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Sigma Drive",
@@ -9078,7 +9078,7 @@
       "effect": "",
       "price": "",
       "location": "Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Earth Badge",
@@ -9086,7 +9086,7 @@
       "effect": "",
       "price": "",
       "location": "Locked Chests",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Space Badge",
@@ -9094,7 +9094,7 @@
       "effect": "",
       "price": "12000",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Mage's Mark",
@@ -9150,7 +9150,7 @@
       "effect": "",
       "price": "2000 | Sell: 500",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Antistatic Charm",
@@ -9158,7 +9158,7 @@
       "effect": "",
       "price": "2000 | Sell: 500",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Quietude Charm",
@@ -9166,7 +9166,7 @@
       "effect": "",
       "price": "2000 | Sell: 500",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Immunity Charm",
@@ -9174,7 +9174,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Reason Charm",
@@ -9182,7 +9182,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Ascetic Charm",
@@ -9190,7 +9190,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Valor Charm",
@@ -9198,7 +9198,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Sangfroid Charm",
@@ -9206,7 +9206,7 @@
       "effect": "",
       "price": "3000 | Sell: 750",
       "location": "Police Station",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Ice Armlet",
@@ -9262,7 +9262,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Ring of Serenity",
@@ -9270,7 +9270,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Alarm Watch",
@@ -9406,7 +9406,7 @@
       "effect": "",
       "price": "100000 | Sell: 25000",
       "location": "Club Escapade, Missing person",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Earrings of Grit",
@@ -9414,7 +9414,7 @@
       "effect": "",
       "price": "200000 | Sell: 50000",
       "location": "Club Escapade",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Sacrificial Idol",
@@ -9430,7 +9430,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Amirite Necklace",
@@ -9438,7 +9438,7 @@
       "effect": "",
       "price": "500000 | Sell: 125000",
       "location": "Club Escapade, Missing person",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Tome of the Void",
@@ -9454,7 +9454,7 @@
       "effect": "",
       "price": "",
       "location": "Elizabeth Boss Defeat",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Power Enhancer",
@@ -9470,7 +9470,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Speed Enhancer",
@@ -9494,7 +9494,7 @@
       "effect": "",
       "price": "",
       "location": "Mayoido Antiques",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Speed Transmitter",
@@ -9590,7 +9590,7 @@
       "effect": "",
       "price": "",
       "location": "Default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Infiltration Outfit",
@@ -9606,7 +9606,7 @@
       "effect": "",
       "price": "",
       "location": "Default",
-      "category": "Consumable"
+      "category": "Accessory"
     },
     {
       "name": "Winged Dog Suit",
@@ -9614,7 +9614,7 @@
       "effect": "",
       "price": "",
       "location": "Default",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Heavy Combat Gear",
@@ -9646,7 +9646,7 @@
       "effect": "",
       "price": "",
       "location": "Given on 6/13",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Winter Uniform",
@@ -9654,7 +9654,7 @@
       "effect": "",
       "price": "",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Tuxedo",
@@ -9702,7 +9702,7 @@
       "effect": "",
       "price": "",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Summer Garb",
@@ -9742,7 +9742,7 @@
       "effect": "",
       "price": "",
       "location": "Elizabeth Request",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Female Summer Garb",
@@ -9814,7 +9814,7 @@
       "effect": "",
       "price": "",
       "location": "Locked Chest (112F)",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Alluring Armor",
@@ -9822,7 +9822,7 @@
       "effect": "",
       "price": "",
       "location": "Locked Chest (171F)",
-      "category": "Consumable"
+      "category": "Armor"
     },
     {
       "name": "Gekkoukan Jersey",
