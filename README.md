@@ -5,7 +5,7 @@
 # Persona Companion App v6.0.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/Version-6.0.0--blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-6.0.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
