@@ -116,7 +116,7 @@ We use a custom Python pipeline (`tmp/convert_to_app_format.py`) to keep our mas
 
 ---
 
-## 🗺️ Roadmap: What's Next?
+## Roadmap: What's Next?
 - [ ] **Forward Fusion Calculator**: Select any two Personas to see the result.
 - [ ] **Custom Persona Build Planner**: Save your "Ultimate Builds" to your local roster.
 - [ ] **Shadow Negotiation Guide**: Upbeat? Timid? Never fail a negotiation again.
@@ -124,14 +124,14 @@ We use a custom Python pipeline (`tmp/convert_to_app_format.py`) to keep our mas
 
 ---
 
-## 💖 Support the Project
+## Support the Project
 If this app helped you save a Social Link or find that one rare drop, consider buying the dev a coffee!
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
 
 ---
 
-## ⚖️ Legal
+## Legal
 This is a fan-made project and is **not** affiliated with, endorsed by, or connected to **Atlus** or **SEGA**.
 
-Made with care for the Persona community. 🃏
+Made with care for the Persona community.
