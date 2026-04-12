@@ -82,7 +82,7 @@ The companion now features a fully-fledged web application! This is perfect for 
 
 ### Use Online
 If hosted on GitHub Pages, you can access the live web version immediately without downloading anything:
- **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/web/)**
+ **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/)**
 
 ### Launching Locally
 1. Clone the repository or download the source code.
