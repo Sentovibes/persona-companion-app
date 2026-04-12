@@ -80,9 +80,9 @@ This update introduces a standardized universal format for all item and skill da
 
 The companion now features a fully-fledged web application! This is perfect for having the compendium open on a second monitor or tablet while gaming.
 
-### Play Online
+### Use Online
 If hosted on GitHub Pages, you can access the live web version immediately without downloading anything:
-👉 **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/web/)**
+ **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/web/)**
 
 ### Launching Locally
 1. Clone the repository or download the source code.
