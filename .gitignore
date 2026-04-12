@@ -46,11 +46,11 @@ Thumbs.db
 .DS_Store
 
 # Temporary/working files in root
-*.json
-*.webp
-*.png
-*.jpg
-*.jpeg
+/*.json
+/*.webp
+/*.png
+/*.jpg
+/*.jpeg
 
 # Keep assets
 !app/src/main/assets/**/*.json
@@ -63,3 +63,16 @@ images.zip
 *.apk
 import_logs.txt
 image_load_logs.txt
+
+# Node
+node_modules/
+scraper/node_modules/
+scraper/chrome_profile/
+package-lock.json
+scraper/package-lock.json
+scraper/done.json
+scraper/failed.json
+scraper/test_abaddon.jpg
+/docs/data/
+/extras/
+/.vscode/
