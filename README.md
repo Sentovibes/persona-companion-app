@@ -76,43 +76,21 @@ This update introduces a standardized universal format for all item and skill da
 
 ---
 
-## Web Version
+## Web Version (Live site)
 
-The companion can be run directly in your browser. This is perfect for use on a second monitor while gaming.
+The companion now features a fully-fledged web application! This is perfect for having the compendium open on a second monitor or tablet while gaming.
+
+### Play Online
+If hosted on GitHub Pages, you can access the live web version immediately without downloading anything:
+👉 **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/web/)**
 
 ### Launching Locally
-1. Navigate to the `web/` directory.
-2. Open `index.html` in any modern web browser.
-3. No server or internet connection required (fully local-first).
+1. Clone the repository or download the source code.
+2. Navigate to the `web/` directory.
+3. Serve the directory using a simple local server (e.g., `npx http-server` or VS Code Live Server).
+4. No heavy backend required—it's a fast, local-first Single Page Application!
 
 ---
-
-## Building from Source
-
-```bash
-# Clone the project
-git clone https://github.com/Sentovibes/persona-companion-app.git
-
-# Build the APK
-./gradlew assembleDebug
-```
-
----
-
-## Future Roadmap
-- [ ] Forward Fusion Calculator: Select any two Personas to determine the result.
-- [ ] Custom Build Planner: Save ultimate skill configurations to local storage.
-- [ ] Shadow Negotiation Guide: Decision-making assistance for Persona 5 interactions.
-- [ ] Daily Schedule Tracker: Calendar-based reminders for missable events.
-
----
-
-## Support and Legal
-This is a fan-made project and is not affiliated with, endorsed by, or connected to Atlus or SEGA.
-
-If this project helped your playthrough, consider supporting the continuous development:
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
 
 ## Building and Development
 
@@ -120,12 +98,9 @@ If this project helped your playthrough, consider supporting the continuous deve
 # Clone the repository
 git clone https://github.com/Sentovibes/persona-companion-app.git
 
-# Build the core app
+# Build the Android APK
 ./gradlew assembleDebug
 ```
-
-### Data Pipeline
-We use a custom Python pipeline (`tmp/convert_to_app_format.py`) to keep our master JSON records in the root synchronized with the Android assets.
 
 ---
 
@@ -145,6 +120,4 @@ If this app helped you save a Social Link or find that one rare drop, consider b
 ---
 
 ## Legal
-This is a fan-made project and is **not** affiliated with, endorsed by, or connected to **Atlus** or **SEGA**.
-
-Made with care for the Persona community.
+This is a fan-made project and is **not** affiliated with, endorsed by, or connected to **Atlus** or **SEGA**. Made with care for the Persona community.
