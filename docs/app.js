@@ -42,18 +42,81 @@ const SL_PATHS = {
     p5:'./data/social-links/p5+p5r_social_links.json',
     p5r:'./data/social-links/p5+p5r_social_links.json'
 };
+const ITEM_PATHS = {
+    p3fes:'./data/items/p3fes_items.json', p3p:'./data/items/p3p_items.json',
+    p3r:'./data/items/p3r_items.json', p4:'./data/items/p4_items.json',
+    p4g:'./data/items/p4g_items.json', p5:'./data/items/p5_items.json',
+    p5r:'./data/items/p5r_items.json'
+};
+const SKILL_PATHS = {
+    p3fes:'./data/skills/p3fes_skills.json', p3p:'./data/skills/p3p_skills.json',
+    p3r:'./data/skills/p3r_skills.json', p4:'./data/skills/p4_skills.json',
+    p4g:'./data/skills/p4g_skills.json', p5:'./data/skills/p5_skills.json',
+    p5r:'./data/skills/p5r_skills.json'
+};
+const REQUEST_PATHS = {
+    p3fes:'./data/requests/p3fes_requests.json', p3p:'./data/requests/p3p_requests.json',
+    p3r:'./data/requests/p3r_requests.json', p4:'./data/requests/p4_requests.json',
+    p4g:'./data/requests/p4g_requests.json', p5:'./data/requests/p5_requests.json',
+    p5r:'./data/requests/p5r_requests.json'
+};
 const ELEMENTS = {
     p3:['Slash','Strike','Pierce','Fire','Ice','Elec','Wind','Light','Dark','Almighty'],
     p4:['Phys','Fire','Ice','Elec','Wind','Light','Dark','Almighty'],
     p5:['Phys','Gun','Fire','Ice','Elec','Wind','Psy','Nuke','Bless','Curse']
 };
 
+const CAT_ICONS = {
+    'Personas':         `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>`,
+    'Fusion Calculator':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>`,
+    'Enemies':          `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`,
+    'Social Links':     `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
+    'Confidants':       `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
+    'Classroom Answers':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`,
+    'Items':            `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 7h-9l-3 3h-5V5h2V3c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v2h2v2zm-12-2h6V3H8v2zM3 10h18v10c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10zm2 2v6h14v-6H5z"/></svg>`,
+    'Skills':           `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+    'Requests & Quests': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5H8V7h5v2z"/></svg>`
+};
+
+function normalizeListData(raw, type) {
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw;
+    const ELEM_MAP = {
+        'fir':'Fire', 'ice':'Ice', 'win':'Wind', 'ele':'Elec', 'ble':'Bless', 'cur':'Curse', 'alm':'Almighty', 'nuk':'Nuke', 'psy':'Psy', 'ail':'Ailment',
+        'lig':'Light', 'dar':'Dark', 'phy':'Phys', 'gun':'Gun', 'rec':'Recovery', 'sup':'Support', 'pas':'Passive', 'sla':'Slash', 'pie':'Pierce', 'str':'Strike', 'spe':'Special'
+    };
+    if (type === 'skills' && typeof raw === 'object' && !raw.skills) {
+        return Object.keys(raw).map(id => {
+            const item = raw[id];
+            const parts = item.a || [];
+            const costs = item.b || [];
+            const effects = item.c || [];
+            return {
+                name: parts[0] || 'Unknown',
+                element: ELEM_MAP[parts[1]] || parts[1] || 'Other',
+                target: parts[2] || '-',
+                cost: costs[7] ? (costs[1] >= 1000 ? `${costs[7]} SP` : `${costs[7]}% HP`) : (costs[2] ? `${costs[2]} HP` : ''),
+                effect: effects[0] || effects[1] || '',
+                note: effects[2] || ''
+            };
+        });
+    }
+    if (raw.skills)   return Array.isArray(raw.skills) ? raw.skills : normalizeListData(raw.skills, 'skills');
+    if (raw.items)    return raw.items;
+    if (raw.requests) return raw.requests;
+    if (raw.quests)   return raw.quests;
+    return [];
+}
+
+const CHEVRON_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+
 /* ── State ─────────────────────────────────────────────────────────────────── */
 const S = {
     screen:'home', series:null, game:null,
-    listMode:null, // 'personas'|'enemies'|'classroom'
+    listMode:null, // 'personas'|'enemies'|'classroom'|'items'|'skills'|'requests'
     sort:'arcana', enemyTab:'enemies', query:'',
-    detail:null, favorites:new Set(),
+    itemQuery:'', skillQuery:'', requestQuery:'',
+    detail:null, favorites:new Set(), completedRequests:new Set(),
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
     fusion:{ personas:null, query:'', selected:null, recipes:null },
@@ -63,6 +126,7 @@ const S = {
 /* ── Boot ──────────────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     S.favorites = new Set(JSON.parse(localStorage.getItem('favs')||'[]'));
+    S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
     const saved = localStorage.getItem('settings');
     if (saved) S.settings = {...S.settings, ...JSON.parse(saved)};
     buildHome();
@@ -83,6 +147,9 @@ function navigate(to, payload) {
     if (to==='sociallinks') buildSocialLinksScreen();
     if (to==='sldetail')    buildSlDetailScreen();
     if (to==='fusion')      buildFusionScreen();
+    if (to==='items')       buildItemsScreen();
+    if (to==='skills')      buildSkillsScreen();
+    if (to==='requests')    buildRequestsScreen();
     if (to==='settings')    buildSettingsScreen();
     updateRailState(to);
 }
@@ -95,11 +162,14 @@ function railNav(section) {
     else if (section === 'enemies')   { S.listMode='enemies';   navigate('list'); }
     else if (section === 'sl')        { openSocialLinks(); }
     else if (section === 'classroom') { S.listMode='classroom'; navigate('list'); }
+    else if (section === 'items')     { S.listMode='items';     navigate('items'); }
+    else if (section === 'skills')    { S.listMode='skills';    navigate('skills'); }
+    else if (section === 'requests')  { S.listMode='requests';  navigate('requests'); }
 }
 
 function updateRailState(screenName) {
     // Show/hide game-specific rail items
-    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class'];
+    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests'];
     gameItems.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = S.game ? 'flex' : 'none';
@@ -108,7 +178,8 @@ function updateRailState(screenName) {
     const screenToRail = {
         home: 'rail-home', game: 'rail-home',
         list: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='classroom'?'rail-class':null,
-        detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':null,
+        items: 'rail-items', skills: 'rail-skills', requests: 'rail-requests',
+        detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='items'?'rail-items':S.listMode==='skills'?'rail-skills':null,
         fusion: 'rail-fusion', sociallinks: 'rail-sl', sldetail: 'rail-sl',
     };
     document.querySelectorAll('.rail-item').forEach(el => el.classList.remove('active'));
@@ -151,6 +222,8 @@ function selectGame(seriesId, gameId) {
     navigate('category');
 }
 
+
+
 /* ── Category Screen (mirrors Android CategoryScreen) ──────────────────────── */
 function buildCategoryScreen() {
     const series = SERIES.find(s=>s.id===S.series);
@@ -161,15 +234,6 @@ function buildCategoryScreen() {
     const isP5 = S.series==='p5';
     const slLabel = isP5 ? 'Confidants' : 'Social Links';
 
-    const CAT_ICONS = {
-        'Personas':         `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>`,
-        'Fusion Calculator':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>`,
-        'Enemies':          `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`,
-        'Social Links':     `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
-        'Confidants':       `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
-        'Classroom Answers':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`,
-    };
-    const CHEVRON_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
 
     const categories = [
         { label:'Personas',         available:true, action:()=>{ S.listMode='personas'; navigate('list'); } },
@@ -177,6 +241,9 @@ function buildCategoryScreen() {
         { label:'Enemies',          available:true, action:()=>{ S.listMode='enemies';  navigate('list'); } },
         { label:slLabel,            available:true, action:()=>openSocialLinks() },
         { label:'Classroom Answers',available:true, action:()=>{ S.listMode='classroom'; navigate('list'); } },
+        { label:'Items',            available:true, action:()=>{ S.listMode='items';     navigate('items'); } },
+        { label:'Skills',           available:true, action:()=>{ S.listMode='skills';    navigate('skills'); } },
+        { label:'Requests & Quests',available:true, action:()=>{ S.listMode='requests';  navigate('requests'); } },
     ];
 
     document.getElementById('categoryList').innerHTML = categories.map(c => `
@@ -254,7 +321,14 @@ async function loadAndRender(color) {
     if (!S.rawData[key]) {
         showLoading();
         try {
-            const paths = { personas:PERSONA_PATHS, enemies:ENEMY_PATHS, classroom:CLASSROOM_PATHS };
+            const paths = { 
+                personas: PERSONA_PATHS, 
+                enemies: ENEMY_PATHS, 
+                classroom: CLASSROOM_PATHS,
+                items: ITEM_PATHS,
+                skills: SKILL_PATHS,
+                requests: REQUEST_PATHS
+            };
             const path = paths[S.listMode]?.[S.game];
             if (!path) { showEmpty('No data available'); return; }
             const r = await fetch(path);
@@ -326,14 +400,28 @@ function personaRow(name, p, color) {
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
     const skills = p.skills ? Object.keys(p.skills).length : 0;
+    const weakRow = renderWeaknessRow(p, S.game);
     return `<div class="row-card" onclick="openPersona('${esc(name)}')">
         <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
         <div class="row-main">
             <div class="row-name">${name}</div>
             <div class="row-sub">${arcana}</div>
+            ${weakRow}
         </div>
         ${skills?`<div class="row-hint">${skills} skills</div>`:''}
     </div>`;
+}
+
+function renderWeaknessRow(p, gameId) {
+    const aff = parsePersonaAffinities(p, gameId);
+    const weak = aff.weak || [];
+    const res = aff.resist || [];
+    if (!weak.length && !res.length) return '';
+    let html = '<div class="weakness-row">';
+    weak.slice(0, 4).forEach(e => html += `<span class="weak-label">${e.slice(0,2)}</span>`);
+    res.slice(0, 2).forEach(e => html += `<span class="resist-label">${e.slice(0,2)}</span>`);
+    html += '</div>';
+    return html;
 }
 
 /* ── Enemies ───────────────────────────────────────────────────────────────── */
@@ -349,32 +437,76 @@ function renderEnemies(data, q, color, el) {
     let pool = S.enemyTab==='enemies'?enemies:S.enemyTab==='mini_bosses'?miniBosses:mainBosses;
     if (q) pool = pool.filter(([name,e])=>name.toLowerCase().includes(q)||(e.arcana||'').toLowerCase().includes(q)||(e.area||'').toLowerCase().includes(q));
     if (!pool.length) { showEmpty('No enemies found'); return; }
-    el.innerHTML = pool.map(([name,e])=>`
+    el.innerHTML = pool.map(([name,e])=>{
+        const elems = ELEMENTS[S.series]||ELEMENTS.p5;
+        const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
+        return `
         <div class="row-card" onclick="openEnemy('${esc(name)}')">
             <div class="row-main">
                 <div class="row-name">${name}</div>
                 <div class="row-sub">${e.arcana||'Shadow'} · Lv. ${e.level||'?'}</div>
+                ${resists}
                 ${e.area&&e.area!=='Unknown'?`<div class="row-hint" style="font-size:.75rem;color:var(--text3);margin-top:2px">${e.area}</div>`:''}
             </div>
             <div class="row-right">
                 <div class="row-hp">${e.hp||''} HP</div>
                 <div class="row-exp">${e.exp||''} EXP</div>
             </div>
-        </div>`).join('');
+        </div>`}).join('');
+}
+
+function parseResistSummary(str, elems) {
+    const map={w:'weak',s:'resist',r:'resist',n:'null',d:'absorb'};
+    const weak = [], res = [];
+    str.split('').forEach((c,i)=>{
+        if(i>=elems.length) return;
+        if(c==='w') weak.push(elems[i]);
+        else if(c==='s'||c==='r') res.push(elems[i]);
+    });
+    if(!weak.length && !res.length) return '';
+    let html = '<div class="weakness-row">';
+    weak.slice(0,4).forEach(e => html += `<span class="weak-label">${e.slice(0,2)}</span>`);
+    res.slice(0,2).forEach(e => html += `<span class="resist-label">${e.slice(0,2)}</span>`);
+    html += '</div>';
+    return html;
 }
 
 /* ── Classroom ─────────────────────────────────────────────────────────────── */
 function flattenClassroom(data) {
     if (Array.isArray(data)) return data;
-    const items = [];
+    let items = [];
+    
+    // Extract everything first
     Object.entries(data).forEach(([month, monthData]) => {
-        if (typeof monthData!=='object') return;
-        const inner = monthData.Classroom||monthData;
-        Object.entries(inner).forEach(([date, qas]) => {
-            if (!Array.isArray(qas)) return;
-            qas.forEach(qa => items.push({Date:date,...qa}));
+        if (typeof monthData !== 'object') return;
+        
+        const types = monthData.Classroom || monthData.Exam ? ['Classroom', 'Exam'] : ['_root_'];
+        
+        types.forEach(type => {
+            const section = type === '_root_' ? monthData : monthData[type];
+            if (!section) return;
+            
+            Object.entries(section).forEach(([date, qas]) => {
+                if (Array.isArray(qas)) {
+                    qas.forEach(qa => items.push({ Date: date, ...qa }));
+                }
+            });
         });
     });
+
+    // Sort chronologically: April-Dec is Year 1, Jan-Mar is Year 2
+    items.sort((a, b) => {
+        if (!a.Date || !b.Date) return 0;
+        const [m1, d1] = a.Date.split('/').map(Number);
+        const [m2, d2] = b.Date.split('/').map(Number);
+        
+        const mon1 = (m1 < 4) ? m1 + 12 : m1;
+        const mon2 = (m2 < 4) ? m2 + 12 : m2;
+        
+        if (mon1 !== mon2) return mon1 - mon2;
+        return d1 - d2;
+    });
+
     return items;
 }
 
@@ -547,6 +679,21 @@ function buildSlDetailScreen() {
         });
     }
 
+    if (data.UltimatePersona) {
+        html += `<div class="awakening-card" style="border-color:${color}">
+            <div class="awakening-title">Ultimate Persona</div>
+            <div class="awakening-name">${data.UltimatePersona}</div>
+            <div class="awakening-req">Unlocked at Rank 10</div>
+        </div>`;
+    }
+    if (data.ThirdAwakening) {
+        html += `<div class="awakening-card" style="border-color:#FFD700">
+            <div class="awakening-title">Third Awakening</div>
+            <div class="awakening-name">${data.ThirdAwakening.Persona || data.ThirdAwakening}</div>
+            <div class="awakening-req">${data.ThirdAwakening.Requirement || 'Third Semester Event'}</div>
+        </div>`;
+    }
+
     const content = html || `<div class="empty-state">No data available</div>`;
     if (paneEl)  { paneEl.innerHTML  = content; paneEl.scrollTop  = 0; }
     if (phoneEl) { phoneEl.innerHTML = content; phoneEl.scrollTop = 0; }
@@ -638,6 +785,7 @@ function renderPersonaDetail(name, p, color, containerId) {
             <div class="detail-hero-arcana">${arcana} Arcana</div>
             ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
         </div>
+        ${p.image ? `<div class="detail-hero-image-wrap"><img src="${p.image}" class="detail-hero-image" alt="${name}" onerror="this.parentElement.style.display='none'"></div>` : ''}
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;
@@ -689,53 +837,92 @@ function renderPersonaDetail(name, p, color, containerId) {
 }
 
 function renderEnemyDetail(name, e, color, containerId) {
+    console.log('Rendering enemy:', name, containerId);
     const el = document.getElementById(containerId||'detailContent');
+    if (!el) return;
+    const isBoss = e.isBoss || e.isMiniBoss;
     const elems = ELEMENTS[S.series]||ELEMENTS.p5;
-    let html = `<div class="section-card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div>
-                <div style="font-size:1rem;color:var(--text2)">${e.arcana||'Shadow'}</div>
-                <div style="font-size:1.125rem;color:var(--text);margin-top:2px">Level ${e.level||'?'}</div>
+
+    let html = '';
+    // Hero Section
+    if (isBoss) {
+        html += `<div class="boss-hero" style="background:${color}11">
+            ${e.image ? `<img src="${e.image}" class="boss-image" alt="${name}" onerror="this.style.display='none'">` : ''}
+            <div class="boss-name" style="color:${color}">${name}</div>
+            <div style="font-size:1rem;color:var(--text2);margin-top:4px">${e.arcana||'Shadow'} · Level ${e.level||'?'}</div>
+            <div class="boss-stats-grid">
+                <div class="boss-stat-box"><div class="boss-stat-val">${e.hp||'???'}</div><div class="boss-stat-label">HP</div></div>
+                <div class="boss-stat-box"><div class="boss-stat-val">${e.sp||'???'}</div><div class="boss-stat-label">SP</div></div>
             </div>
-            <div style="text-align:right">
-                <div style="font-size:1.125rem;color:var(--text)">${e.hp||0} HP</div>
-                <div style="font-size:.875rem;color:var(--text2)">${e.sp||0} SP</div>
+        </div>`;
+    } else {
+        html += `<div class="section-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                <div>
+                    <div style="font-size:1rem;color:var(--text2)">${e.arcana||'Shadow'}</div>
+                    <div style="font-size:1.125rem;color:var(--text);margin-top:2px">Level ${e.level||'?'}</div>
+                </div>
+                <div style="text-align:right">
+                    <div style="font-size:1.125rem;color:var(--text)">${e.hp||0} HP</div>
+                    <div style="font-size:.875rem;color:var(--text2)">${e.sp||0} SP</div>
+                </div>
             </div>
-        </div>
-    </div>`;
+            ${e.image ? `<div style="margin-top:16px;text-align:center"><img src="${e.image}" style="max-width:100%;max-height:180px;border-radius:8px" onerror="this.parentElement.style.display='none'"></div>` : ''}
+        </div>`;
+    }
+
     if (e.version) html += `<div class="desc-box">${e.version}</div>`;
-    if (e.stats) {
+    
+    // Stats (Safely handle missing stats object)
+    if (e.stats && typeof e.stats === 'object') {
         html += `<div class="section-card"><div class="section-title">Stats</div>`;
-        [['Strength',e.stats.strength],['Magic',e.stats.magic],['Endurance',e.stats.endurance],['Agility',e.stats.agility],['Luck',e.stats.luck]].forEach(([l,v])=>{
-            html += `<div class="info-row"><div class="info-label">${l}</div><div class="info-val">${v}</div></div>`;
+        const statLabels = {strength:'Strength', magic:'Magic', endurance:'Endurance', agility:'Agility', luck:'Luck'};
+        Object.entries(statLabels).forEach(([key, label]) => {
+            if (e.stats[key] != null) {
+                html += `<div class="info-row"><div class="info-label">${label}</div><div class="info-val">${e.stats[key]}</div></div>`;
+            }
         });
         html += `</div>`;
     }
-    if (e.resists) html += `<div class="section-card"><div class="section-title">Resistances</div><div class="resist-text">${parseResists(e.resists,elems)}</div></div>`;
-    if (e.skills&&e.skills.length) {
+
+    // Resistances
+    if (e.resists) {
+        html += `<div class="section-card"><div class="section-title">Resistances</div><div class="resist-text">${parseResists(e.resists, elems)}</div></div>`;
+    }
+
+    // Skills
+    if (e.skills && e.skills.length) {
         html += `<div class="section-card"><div class="section-title">Skills</div>`;
-        e.skills.forEach(s=>{ html += `<div class="skill-row"><div class="skill-name">${s}</div></div>`; });
+        e.skills.forEach(s => html += `<div class="skill-row"><div class="skill-name">${s}</div></div>`);
         html += `</div>`;
     }
-    if (e.phases&&e.phases.length) {
-        e.phases.forEach(ph=>{
-            html += `<div class="section-card"><div class="section-title">Phase: ${ph.name}</div>
-                <div class="info-row"><div class="info-label">HP</div><div class="info-val">${ph.hp}</div></div>
-                <div class="info-row"><div class="info-label">SP</div><div class="info-val">${ph.sp}</div></div>`;
-            if (ph.resists) html += `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem">Resistances</div><div class="resist-text">${parseResists(ph.resists,elems)}</div></div>`;
-            if (ph.skills?.length) { html += `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem">Skills</div>`; ph.skills.forEach(s=>{html+=`<div class="skill-row"><div class="skill-name">${s}</div></div>`;}); html+=`</div>`; }
-            html += `</div>`;
+
+    // Phases / Parts (Handle both names used in different games)
+    const phases = e.phases || e.parts || [];
+    if (phases.length) {
+        phases.forEach(ph => {
+            html += `<div class="section-card">
+                <div class="section-title" style="color:${color}">Phase: ${ph.name}</div>
+                ${ph.hp ? `<div class="info-row"><div class="info-label">HP</div><div class="info-val">${ph.hp}</div></div>` : ''}
+                ${ph.sp ? `<div class="info-row"><div class="info-label">SP</div><div class="info-val">${ph.sp}</div></div>` : ''}
+                ${ph.resists ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Resistances</div><div class="resist-text">${parseResists(ph.resists, elems)}</div></div>` : ''}
+                ${ph.skills && ph.skills.length ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Skills</div>${ph.skills.map(s=>`<div class="skill-row" style="font-size:.85rem"><div class="skill-name">${s}</div></div>`).join('')}</div>` : ''}
+            </div>`;
         });
     }
+
+    // Drops
     if (e.drops) {
         html += `<div class="section-card"><div class="section-title">Location & Drops</div>`;
-        if (e.area&&e.area!=='Unknown') html+=`<div class="info-row"><div class="info-label">Area</div><div class="info-val">${e.area}</div></div>`;
-        if (e.exp>0) html+=`<div class="info-row"><div class="info-label">EXP</div><div class="info-val">${e.exp}</div></div>`;
-        if (e.drops.gem!=='-') html+=`<div class="info-row"><div class="info-label">Gem</div><div class="info-val">${e.drops.gem}</div></div>`;
-        if (e.drops.item!=='-') html+=`<div class="info-row"><div class="info-label">Item</div><div class="info-val">${e.drops.item}</div></div>`;
+        if (e.area && e.area !== 'Unknown') html += `<div class="info-row"><div class="info-label">Area</div><div class="info-val">${e.area}</div></div>`;
+        if (e.exp > 0) html += `<div class="info-row"><div class="info-label">EXP</div><div class="info-val">${e.exp}</div></div>`;
+        if (e.drops.gem && e.drops.gem !== '-') html += `<div class="info-row"><div class="info-label">Gem</div><div class="info-val">${e.drops.gem}</div></div>`;
+        if (e.drops.item && e.drops.item !== '-') html += `<div class="info-row"><div class="info-label">Item</div><div class="info-val">${e.drops.item}</div></div>`;
+        if (e.drops.rare && e.drops.rare !== '-') html += `<div class="info-row" style="color:#FFD700"><div class="info-label" style="color:#FF9800">Rare Drop</div><div class="info-val">${e.drops.rare}</div></div>`;
         html += `</div>`;
     }
-    el.innerHTML = html;
+
+    el.innerHTML = html || '<div class="empty-state">No details available</div>';
     el.scrollTop = 0;
 }
 
@@ -1304,3 +1491,246 @@ function onFusionSearch(val) {
     renderFusionPersonaList(series?.color||'#2196F3');
 }
 function clearFusionSearch() { document.getElementById('fusionSearch').value=''; onFusionSearch(''); }
+
+/* ── Items ─────────────────────────────────────────────────────────────────── */
+async function buildItemsScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    document.getElementById('itemSearch').value = S.itemQuery;
+    document.getElementById('itemSearchClear').style.display = S.itemQuery ? 'block' : 'none';
+    
+    // Check if we need to load data
+    const key = `items_${S.game}`;
+    if (!S.rawData[key]) {
+        showLoadingItem();
+        try {
+            const r = await fetch(ITEM_PATHS[S.game]);
+            if (!r.ok) throw new Error(r.statusText);
+            const raw = await r.json();
+            S.rawData[key] = normalizeListData(raw, 'items');
+        } catch(e) { showEmptyItem('Failed to load: '+e.message); return; }
+    }
+    renderItems(S.rawData[key], color);
+}
+
+function renderItems(data, color) {
+    const q = S.itemQuery.toLowerCase();
+    const el = document.getElementById('itemContent');
+    let items = data.filter(it => it.name.toLowerCase().includes(q) || (it.category||'').toLowerCase().includes(q));
+    
+    if (!items.length) { el.innerHTML = `<div class="empty-state">No items found</div>`; return; }
+
+    // Group by category
+    const grouped = {};
+    items.forEach(it => {
+        const cat = it.category || 'Other';
+        if (!grouped[cat]) grouped[cat] = [];
+        grouped[cat].push(it);
+    });
+
+    el.innerHTML = Object.keys(grouped).sort().map(cat => `
+        <div class="arcana-header">
+            <div class="arcana-bar" style="background:${color}"></div>
+            <div class="arcana-label" style="color:${color}">${cat}</div>
+        </div>
+        ${grouped[cat].map(it => `
+            <div class="row-card" onclick="openItem('${esc(it.name)}')">
+                <div class="row-main">
+                    <div class="row-name">${it.name}</div>
+                    <div class="row-sub">${it.effect || it.description || ''}</div>
+                </div>
+                <div class="row-hint" style="color:${color}">›</div>
+            </div>`).join('')}
+    `).join('');
+}
+
+function openItem(name) {
+    const key = `items_${S.game}`;
+    const it = S.rawData[key].find(i => i.name === name);
+    if (!it) return;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    
+    document.getElementById('itemDetailPlaceholder').style.display = 'none';
+    document.getElementById('itemDetailContentWrap').style.display = 'flex';
+    document.getElementById('itemDetailTitle').textContent = it.name;
+    
+    let html = `
+        <div class="section-card">
+            <div class="section-title" style="color:${color}">${it.category || 'Item'}</div>
+            <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${it.effect || it.description || 'No effect listed'}</div></div>
+            ${it.price?`<div class="info-row"><div class="info-label">Price</div><div class="info-val">${it.price}</div></div>`:''}
+            ${it.location?`<div class="info-row"><div class="info-label">Location</div><div class="info-val">${it.location}</div></div>`:''}
+        </div>
+    `;
+    document.getElementById('itemDetailContent').innerHTML = html;
+}
+
+function onItemSearch(val) { S.itemQuery=val; document.getElementById('itemSearchClear').style.display=val?'block':'none'; buildItemsScreen(); }
+function clearItemSearch() { document.getElementById('itemSearch').value=''; onItemSearch(''); }
+function showLoadingItem() { document.getElementById('itemContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
+function showEmptyItem(msg) { document.getElementById('itemContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
+
+/* ── Skills ────────────────────────────────────────────────────────────────── */
+async function buildSkillsScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    document.getElementById('skillSearch').value = S.skillQuery;
+    document.getElementById('skillSearchClear').style.display = S.skillQuery ? 'block' : 'none';
+    
+    const key = `skills_${S.game}`;
+    if (!S.rawData[key]) {
+        showLoadingSkill();
+        try {
+            const r = await fetch(SKILL_PATHS[S.game]);
+            if (!r.ok) throw new Error(r.statusText);
+            const raw = await r.json();
+            S.rawData[key] = normalizeListData(raw, 'skills');
+        } catch(e) { showEmptySkill('Failed to load: '+e.message); return; }
+    }
+    renderSkills(S.rawData[key], color);
+}
+
+function renderSkills(data, color) {
+    const q = S.skillQuery.toLowerCase();
+    const el = document.getElementById('skillContent');
+    let items = data.filter(sk => sk.name.toLowerCase().includes(q) || (sk.element||sk.type||'').toLowerCase().includes(q));
+    
+    if (!items.length) { el.innerHTML = `<div class="empty-state">No skills found</div>`; return; }
+
+    const grouped = {};
+    items.forEach(sk => {
+        const cat = sk.element || sk.type || 'Other';
+        if (!grouped[cat]) grouped[cat] = [];
+        grouped[cat].push(sk);
+    });
+
+    el.innerHTML = Object.keys(grouped).sort().map(cat => `
+        <div class="arcana-header">
+            <div class="arcana-bar" style="background:${color}"></div>
+            <div class="arcana-label" style="color:${color}">${cat}</div>
+        </div>
+        ${grouped[cat].map(sk => `
+            <div class="row-card" onclick="openSkill('${esc(sk.name)}')">
+                <div class="row-main">
+                    <div class="row-name">${sk.name}</div>
+                    <div class="row-sub">${sk.effect || ''}</div>
+                </div>
+                <div class="row-hint">${sk.cost || ''}</div>
+            </div>`).join('')}
+    `).join('');
+}
+
+function openSkill(name) {
+    const key = `skills_${S.game}`;
+    const sk = S.rawData[key].find(s => s.name === name);
+    if (!sk) return;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    
+    document.getElementById('skillDetailPlaceholder').style.display = 'none';
+    document.getElementById('skillDetailContentWrap').style.display = 'flex';
+    document.getElementById('skillDetailTitle').textContent = sk.name;
+    
+    let html = `
+        <div class="section-card">
+            <div class="section-title" style="color:${color}">${sk.element || sk.type || 'Skill'}</div>
+            <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${sk.effect || 'No effect listed'}</div></div>
+            ${sk.cost?`<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>`:''}
+        </div>
+    `;
+    document.getElementById('skillDetailContent').innerHTML = html;
+}
+
+function onSkillSearch(val) { S.skillQuery=val; document.getElementById('skillSearchClear').style.display=val?'block':'none'; buildSkillsScreen(); }
+function clearSkillSearch() { document.getElementById('skillSearch').value=''; onSkillSearch(''); }
+function showLoadingSkill() { document.getElementById('skillContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
+function showEmptySkill(msg) { document.getElementById('skillContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
+
+/* ── Requests ──────────────────────────────────────────────────────────────── */
+async function buildRequestsScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    document.getElementById('requestSearch').value = S.requestQuery;
+    document.getElementById('requestSearchClear').style.display = S.requestQuery ? 'block' : 'none';
+    
+    const key = `requests_${S.game}`;
+    if (!S.rawData[key]) {
+        showLoadingRequest();
+        try {
+            const r = await fetch(REQUEST_PATHS[S.game]);
+            if (!r.ok) throw new Error(r.statusText);
+            const raw = await r.json();
+            S.rawData[key] = normalizeListData(raw, 'requests');
+        } catch(e) { showEmptyRequest('Failed to load: '+e.message); return; }
+    }
+    renderRequests(S.rawData[key], color);
+}
+
+function renderRequests(data, color) {
+    const q = S.requestQuery.toLowerCase();
+    const el = document.getElementById('requestContent');
+    let items = data.filter(req => req.name.toLowerCase().includes(q) || (req.giver||'').toLowerCase().includes(q));
+    
+    if (!items.length) { el.innerHTML = `<div class="empty-state">No requests found</div>`; return; }
+
+    el.innerHTML = items.map(req => {
+        const id = `${S.game}_req_${req.id || req.name}`;
+        const isDone = S.completedRequests.has(id);
+        return `
+            <div class="row-card ${isDone?'completed':''}" onclick="openRequest('${esc(req.name)}')" style="${isDone?'opacity:0.6;background:var(--bg2)':''}">
+                <div class="row-main">
+                    <div class="row-name" style="${isDone?'text-decoration:line-through;color:var(--text3)':''}">${req.name}</div>
+                    <div class="row-sub">${req.reward || '-'}</div>
+                </div>
+                ${isDone?`<div style="color:#4CAF50"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>`:''}
+            </div>`;
+    }).join('');
+}
+
+function openRequest(name) {
+    const key = `requests_${S.game}`;
+    const req = S.rawData[key].find(r => r.name === name);
+    if (!req) return;
+    S.currentRequest = req;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    
+    document.getElementById('requestDetailPlaceholder').style.display = 'none';
+    document.getElementById('requestDetailContentWrap').style.display = 'flex';
+    document.getElementById('requestDetailTitle').textContent = req.name;
+    
+    const id = `${S.game}_req_${req.id || req.name}`;
+    const isDone = S.completedRequests.has(id);
+    document.getElementById('requestCompleteBtn').style.color = isDone ? '#4CAF50' : '';
+    
+    let html = `
+        <div class="section-card">
+            <div class="section-title" style="color:${color}">${req.available || 'Request'}</div>
+            <div class="info-row"><div class="info-label">Reward</div><div class="info-val">${req.reward || '-'}</div></div>
+            ${req.deadline?`<div class="info-row"><div class="info-label">Deadline</div><div class="info-val">${req.deadline}</div></div>`:''}
+            ${req.giver||req.quest_giver?`<div class="info-row"><div class="info-label">Giver</div><div class="info-val">${req.giver||req.quest_giver}</div></div>`:''}
+            ${req.description?`<div class="desc-box" style="margin-top:12px">${req.description}</div>`:''}
+        </div>
+    `;
+    document.getElementById('requestDetailContent').innerHTML = html;
+}
+
+function toggleRequestComplete() {
+    if (!S.currentRequest) return;
+    const req = S.currentRequest;
+    const id = `${S.game}_req_${req.id || req.name}`;
+    if (S.completedRequests.has(id)) {
+        S.completedRequests.delete(id);
+    } else {
+        S.completedRequests.add(id);
+    }
+    localStorage.setItem('completed_requests', JSON.stringify([...S.completedRequests]));
+    openRequest(req.name);
+    buildRequestsScreen(); // refresh list
+}
+
+function onRequestSearch(val) { S.requestQuery=val; document.getElementById('requestSearchClear').style.display=val?'block':'none'; buildRequestsScreen(); }
+function clearRequestSearch() { document.getElementById('requestSearch').value=''; onRequestSearch(''); }
+function showLoadingRequest() { document.getElementById('requestContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
+function showEmptyRequest(msg) { document.getElementById('requestContent').innerHTML=`<div class="empty-state">${msg}</div>`; }

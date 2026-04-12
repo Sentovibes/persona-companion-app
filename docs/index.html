@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=602">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="6b5ab9f1-6ef3-4ffb-871b-ba8aa104c51a"></script>
 </head>
 <body>
@@ -30,6 +30,15 @@
         </button>
         <button class="rail-item" id="rail-sl"       onclick="railNav('sl')"        title="Social Links" style="display:none">
             <svg class="rail-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>Links
+        </button>
+        <button class="rail-item" id="rail-items"    onclick="railNav('items')"     title="Items" style="display:none">
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M20 13H4v-2h16v2zm0-4H4V7h16v2zm0 8H4v-2h16v2zM3 3v18h18V3H3z"/></svg>Items
+        </button>
+        <button class="rail-item" id="rail-skills"   onclick="railNav('skills')"    title="Skills" style="display:none">
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C14.65 13.55 12.04 18.44 11 21z"/></svg>Skills
+        </button>
+        <button class="rail-item" id="rail-requests" onclick="railNav('requests')"  title="Requests" style="display:none">
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Quests
         </button>
         <button class="rail-item" id="rail-class"    onclick="railNav('classroom')" title="Classroom" style="display:none">
             <svg class="rail-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>Class
@@ -145,6 +154,109 @@
             <div id="detailContentPhone" class="detail-content"></div>
         </div>
 
+        <!-- ITEMS LIST — two-pane on tablet -->
+        <div id="screen-items" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title">Items</span>
+            </div>
+            <div class="two-pane-body">
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="itemSearch" class="search-input" type="text" placeholder="Search items..." oninput="onItemSearch(this.value)">
+                        <button class="search-clear" id="itemSearchClear" onclick="clearItemSearch()" style="display:none">&#x2715;</button>
+                    </div>
+                    <div id="itemContent" class="list-content"></div>
+                </div>
+                <div class="pane-detail">
+                    <div class="detail-placeholder" id="itemDetailPlaceholder">
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M20 13H4v-2h16v2zm0-4H4V7h16v2zm0 8H4v-2h16v2zM3 3v18h18V3H3z"/></svg>
+                        </div>
+                        <div>Select an item to view details</div>
+                    </div>
+                    <div id="itemDetailContentWrap" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar"><span class="top-bar-title" id="itemDetailTitle"></span></div>
+                        <div id="itemDetailContent" class="detail-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS LIST — two-pane on tablet -->
+        <div id="screen-skills" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title">Skills</span>
+            </div>
+            <div class="two-pane-body">
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="skillSearch" class="search-input" type="text" placeholder="Search skills..." oninput="onSkillSearch(this.value)">
+                        <button class="search-clear" id="skillSearchClear" onclick="clearSkillSearch()" style="display:none">&#x2715;</button>
+                    </div>
+                    <div id="skillContent" class="list-content"></div>
+                </div>
+                <div class="pane-detail">
+                    <div class="detail-placeholder" id="skillDetailPlaceholder">
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C14.65 13.55 12.04 18.44 11 21z"/></svg>
+                        </div>
+                        <div>Select a skill to view details</div>
+                    </div>
+                    <div id="skillDetailContentWrap" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar"><span class="top-bar-title" id="skillDetailTitle"></span></div>
+                        <div id="skillDetailContent" class="detail-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REQUESTS LIST — two-pane on tablet -->
+        <div id="screen-requests" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title">Quests & Requests</span>
+            </div>
+            <div class="two-pane-body">
+                <div class="pane-list">
+                    <div class="search-wrap">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="requestSearch" class="search-input" type="text" placeholder="Search requests..." oninput="onRequestSearch(this.value)">
+                        <button class="search-clear" id="requestSearchClear" onclick="clearRequestSearch()" style="display:none">&#x2715;</button>
+                    </div>
+                    <div id="requestContent" class="list-content"></div>
+                </div>
+                <div class="pane-detail">
+                    <div class="detail-placeholder" id="requestDetailPlaceholder">
+                        <div class="detail-placeholder-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                        </div>
+                        <div>Select a request to view details</div>
+                    </div>
+                    <div id="requestDetailContentWrap" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+                        <div class="top-bar">
+                            <span class="top-bar-title" id="requestDetailTitle"></span>
+                            <div class="top-bar-actions">
+                                <button class="icon-btn" id="requestCompleteBtn" onclick="toggleRequestComplete()" title="Toggle Complete">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="requestDetailContent" class="detail-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- FUSION CALCULATOR — two-pane on tablet -->
         <div id="screen-fusion" class="screen">
             <div class="top-bar">
@@ -240,6 +352,7 @@
 
     </div><!-- /content-area -->
 </div><!-- /app-shell -->
-<script src="app.js?v=3"></script>
+    <!-- LIBS -->
+    <script src="app.js?v=602"></script>
 </body>
 </html>
