@@ -30,11 +30,12 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## New in v6.0.0: The Item Compendium Update
-This update introduces a standardized universal format for all item databases.
-- 5,000+ Items standardized across the series.
-- Full mapping for P5R (1,873 items), P3R (1,229), P4G (1,196), and P3F/P (690).
-- Fixed categorization for weapons, protectors, and consumables.
+## v6.0.0: The Item & Skill Synchronization Update
+This update introduces a standardized universal format for all item and skill databases, achieving parity between the Android and Web versions.
+- **5,000+ Items**: Standardized across the series with full mapping for P5R, P3R, P4G, and P3F/P.
+- **Comprehensive Skills**: Full database for all skills, elemental types, and costs.
+- **Request Trackers**: Dedicated quest and request trackers for all supported titles.
+- **Web Parity**: The web version now supports Items, Skills, and Requests with local save persistence.
 
 ---
 
@@ -58,6 +59,12 @@ This update introduces a standardized universal format for all item databases.
 - Smart Filtering: Advanced search by Arcana, Level, DLC, or Element.
 - Automatic Updates: Built-in checker to stay current with the latest data.
 
+### Web Experience (NEW)
+- **Universal Access**: Run the companion on any device with a modern browser.
+- **Responsive Design**: Supports Adaptive Rail navigation (Tablet/Desktop) and Stacked screens (Phone).
+- **Quest Tracking**: Mark requests as "Completed" directly in the web UI; state is persisted via `localStorage`.
+- **Offline Ready**: Local-first data architecture for fast, reliable reference.
+
 ---
 
 ## Installation
@@ -67,10 +74,16 @@ This update introduces a standardized universal format for all item databases.
 2. Install the APK on an Android device (Android 8.0+ required).
 3. Optional: Enable HD Image Support via the Settings menu.
 
-### HD Image Setup
-The app supports a high-quality 1.3GB image pack for full profile pictures and image viewing.
-1. Download the pack directly from Settings > HD Images.
-2. Alternatively, import a local zip file from the persona-companion-images repository.
+---
+
+## Web Version
+
+The companion can be run directly in your browser. This is perfect for use on a second monitor while gaming.
+
+### Launching Locally
+1. Navigate to the `web/` directory.
+2. Open `index.html` in any modern web browser.
+3. No server or internet connection required (fully local-first).
 
 ---
 
