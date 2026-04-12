@@ -1,0 +1,592 @@
+[
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Muscle Drink.",
+        "id": "1",
+        "reward": "Soul Drop x5",
+        "available": "-",
+        "remarks": "Buy from Aohige Pharmacy; Unlocks #1",
+        "sortOrder": 0
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me an Invigorate 2.",
+        "id": "2",
+        "reward": "Speed Incense I x3",
+        "available": "Complete #1",
+        "remarks": "Trade for at Mayoido Antiques: Onyx x5 & Turquoise x10; Unlocks #3",
+        "sortOrder": 1
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Dekaja Gem.",
+        "id": "3",
+        "reward": "Power Incense I x3",
+        "available": "Complete #2",
+        "remarks": "Trade for at Mayoido Antiques: Amethyst x3",
+        "sortOrder": 2
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Meteor Knuckles.",
+        "id": "4",
+        "reward": "Me Patra Skill Card",
+        "available": "-",
+        "remarks": "Open locked chest in Cocytus B9 (requires 2 Twilight Fragments)",
+        "sortOrder": 3
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Flash Grenade.",
+        "id": "5",
+        "reward": "Ergotite Shard x1",
+        "available": "Complete #4",
+        "remarks": "Open locked chest in Caina",
+        "sortOrder": 4
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Blazing Greatsword.",
+        "id": "6",
+        "reward": "",
+        "available": "",
+        "remarks": "Trade for at Mayoido Antiques",
+        "sortOrder": 5
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Gaea's Embrace.",
+        "id": "7",
+        "reward": "",
+        "available": "",
+        "remarks": "Open locked chest in Antenora",
+        "sortOrder": 6
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Hazakura.",
+        "id": "8",
+        "reward": "",
+        "available": "",
+        "remarks": "Trade for at Mayoido Antiques",
+        "sortOrder": 7
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me an Aristocracy.",
+        "id": "9",
+        "reward": "",
+        "available": "",
+        "remarks": "Open locked chest in Ptolomea",
+        "sortOrder": 8
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Circe's Bow.",
+        "id": "10",
+        "reward": "",
+        "available": "",
+        "remarks": "Open locked chest in Judecca",
+        "sortOrder": 9
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Pandemonium.",
+        "id": "11",
+        "reward": "",
+        "available": "",
+        "remarks": "Trade for at Mayoido Antiques",
+        "sortOrder": 10
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Perform All-Out Attacks.",
+        "id": "12",
+        "reward": "Malachite x10",
+        "available": "-",
+        "remarks": "Perform a total of 10 All-Out Attacks",
+        "sortOrder": 11
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona that's level 30 or above.",
+        "id": "13",
+        "reward": "Bufula Gem x3",
+        "available": "-",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #14",
+        "sortOrder": 12
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona that's level 38 or above.",
+        "id": "14",
+        "reward": "Trafuri Gem x5",
+        "available": "Complete #13",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #15",
+        "sortOrder": 13
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona that's level 46 or above.",
+        "id": "15",
+        "reward": "",
+        "available": "Complete #14",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #16",
+        "sortOrder": 14
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona that's level 54 or above.",
+        "id": "16",
+        "reward": "",
+        "available": "Complete #15",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock",
+        "sortOrder": 15
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona with Mabufu.",
+        "id": "17",
+        "reward": "Fierce Sutra x2",
+        "available": "-",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #18",
+        "sortOrder": 16
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona with Fatal End.",
+        "id": "18",
+        "reward": "Attack Mirror x3",
+        "available": "Complete #17",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #19",
+        "sortOrder": 17
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona with Gigantic Fist.",
+        "id": "19",
+        "reward": "Empowering Sutra x3",
+        "available": "Complete #18",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock; Unlocks #20",
+        "sortOrder": 18
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Create a Persona with Auto Masuku.",
+        "id": "20",
+        "reward": "",
+        "available": "Complete #19",
+        "remarks": "Does not need to be fused, only needs to be in Persona stock",
+        "sortOrder": 19
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #1: High Priestess, Sarasvati",
+        "id": "21",
+        "reward": "Winter Uniform",
+        "available": "-",
+        "remarks": "Have a Sarasvati with the skill Agilao (Lamia + Orpheus); Unlocks #22",
+        "sortOrder": 20
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #2: 06.0Lovers, Titania",
+        "id": "22",
+        "reward": "",
+        "available": "Complete #21",
+        "remarks": "Have a Titania with the skill Magarula (naturally learns); Unlocks #23",
+        "sortOrder": 21
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #3: 15.0Devil, Succubus",
+        "id": "23",
+        "reward": "",
+        "available": "Complete #22",
+        "remarks": "Have a Succubus with the skill Charm Boost (Jatayu + Narcissus); Unlocks #24",
+        "sortOrder": 22
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #4: 05.0Hierophant, Daisoujou",
+        "id": "24",
+        "reward": "",
+        "available": "Complete #23",
+        "remarks": "Have a Daisoujou with the skill Invigorate 3 (naturally learns); Unlocks #25",
+        "sortOrder": 23
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #5: 05.0Hierophant, Kohryu",
+        "id": "25",
+        "reward": "",
+        "available": "Complete #24",
+        "remarks": "Special fusion; Unlocks #26",
+        "sortOrder": 24
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Fusion Series #6: 16.0Tower, Masakado",
+        "id": "26",
+        "reward": "",
+        "available": "Complete #25",
+        "remarks": "Have a Masakado with the skill Unshaken Will (naturally learns)",
+        "sortOrder": 25
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Defeat a Rare Shadow #1",
+        "id": "27",
+        "reward": "",
+        "available": "",
+        "remarks": "Defeat a rare Shadow in Caina and bring back 1 Odd Coin; Unlocks #28",
+        "sortOrder": 26
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Defeat a Rare Shadow #2",
+        "id": "28",
+        "reward": "",
+        "available": "Complete #27",
+        "remarks": "Defeat a rare Shadow in Antenora and bring back 1 Rustic Coin",
+        "sortOrder": 27
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Defeat a Greedy Shadow",
+        "id": "29",
+        "reward": "",
+        "available": "",
+        "remarks": "Defeat a greedy Shadow in Ptolomea and bring back 1 Gold Medal",
+        "sortOrder": 28
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Lady's Stool.",
+        "id": "30",
+        "reward": "Moon Tarot",
+        "available": "Encounter first Monad Door",
+        "remarks": "Dropped by Elegant Mother within a Monad Door in Cocytus",
+        "sortOrder": 29
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Divine Fur.",
+        "id": "31",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Nemean Beast within a Monad Door in Caina",
+        "sortOrder": 30
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Ver III Restraints.",
+        "id": "32",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Minotaur III within a Monad Door in Antenora",
+        "sortOrder": 31
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me Golden Plates.",
+        "id": "33",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by World Balance within a Monad Door in Ptolomea",
+        "sortOrder": 32
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Red Wall Fragment.",
+        "id": "34",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Death Castle within a Monad Door in Ptolomea",
+        "sortOrder": 33
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me White Sand.",
+        "id": "35",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Eternal Sand within a Monad Door in Judecca",
+        "sortOrder": 34
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Throne of Mania.",
+        "id": "36",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Vehement Idol within a Monad Door in Judecca",
+        "sortOrder": 35
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Cap of Eminence.",
+        "id": "37",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Grand Magus within a Monad Door in Antenora",
+        "sortOrder": 36
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Shackle of Madness.",
+        "id": "38",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Crazy Twins within a Monad Door in Ptolomea",
+        "sortOrder": 37
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me an Emperor's Horn.",
+        "id": "39",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Emperor Beetle within a Monad Door in Ptolomea",
+        "sortOrder": 38
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me an Equal Balance.",
+        "id": "40",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Void Giant within a Monad Door in Ptolomea",
+        "sortOrder": 39
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Ruinous Rotary Leg.",
+        "id": "41",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Rampage Drive within a Monad Door in Ptolomea",
+        "sortOrder": 40
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Divine Candlestick.",
+        "id": "42",
+        "reward": "",
+        "available": "",
+        "remarks": "Dropped by Phantom King within a Monad Door in Empyrean",
+        "sortOrder": 41
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone",
+        "id": "43",
+        "reward": "Medical Powder x3",
+        "available": "-",
+        "remarks": "Defeat a total of 50 Shadows; Unlocks #44",
+        "sortOrder": 42
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone #2",
+        "id": "44",
+        "reward": "Umugi Water x3",
+        "available": "Complete #43",
+        "remarks": "Defeat a total of 100 Shadows; Unlocks #45",
+        "sortOrder": 43
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone #3",
+        "id": "45",
+        "reward": "Bead x2",
+        "available": "Complete #44",
+        "remarks": "Defeat a total of 150 Shadows; Unlocks #46",
+        "sortOrder": 44
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone #4",
+        "id": "46",
+        "reward": "Kamimusubi Water x2",
+        "available": "Complete #45",
+        "remarks": "Defeat a total of 200 Shadows; Unlocks #47",
+        "sortOrder": 45
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone #5",
+        "id": "47",
+        "reward": "Bead Chain x2",
+        "available": "Complete #46",
+        "remarks": "Defeat a total of 300 Shadows; Unlocks #48",
+        "sortOrder": 46
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Shadow Hunting Milestone #6",
+        "id": "48",
+        "reward": "Soma",
+        "available": "Complete #47",
+        "remarks": "Defeat a total of 400 Shadows",
+        "sortOrder": 47
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Treasure Hunting Milestone",
+        "id": "49",
+        "reward": "Snuff Soul x2",
+        "available": "-",
+        "remarks": "Open a total of 30 treasure chests; Unlocks #50",
+        "sortOrder": 48
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Treasure Hunting Milestone #2",
+        "id": "50",
+        "reward": "Chewing Soul x2",
+        "available": "Complete #49",
+        "remarks": "Open a total of 60 treasure chests; Unlocks #51",
+        "sortOrder": 49
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Treasure Hunting Milestone #3",
+        "id": "51",
+        "reward": "Snuff Soul x6",
+        "available": "Complete #50",
+        "remarks": "Open a total of 90 treasure chests; Unlocks #52",
+        "sortOrder": 50
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Treasure Hunting Milestone #4",
+        "id": "52",
+        "reward": "",
+        "available": "Complete #51",
+        "remarks": "Open a total of 120 treasure chests",
+        "sortOrder": 51
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Persona Fusion Milestone",
+        "id": "53",
+        "reward": "Amethyst x7",
+        "available": "-",
+        "remarks": "Conduct a total of 10 Persona fusions; Unlocks #54",
+        "sortOrder": 52
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Persona Fusion Milestone #2",
+        "id": "54",
+        "reward": "",
+        "available": "Complete #53",
+        "remarks": "Conduct a total of 20 Persona fusions; Unlocks #55",
+        "sortOrder": 53
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Persona Fusion Milestone #3",
+        "id": "55",
+        "reward": "",
+        "available": "Complete #54",
+        "remarks": "Conduct a total of 30 Persona fusions",
+        "sortOrder": 54
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Special Fusion Milestone",
+        "id": "56",
+        "reward": "Megido Gem x3",
+        "available": "-",
+        "remarks": "Conduct a total of 3 Special Fusions; Unlocks #57",
+        "sortOrder": 55
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Special Fusion Milestone #2",
+        "id": "57",
+        "reward": "",
+        "available": "Complete #56",
+        "remarks": "Conduct a total of 7 Special Fusions",
+        "sortOrder": 56
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Perform Dreamfest.",
+        "id": "58",
+        "reward": "",
+        "available": "",
+        "remarks": "Theurgy (Incubus + Succubus)",
+        "sortOrder": 57
+    },
+    {
+        "category": "List of Requests",
+        "subcategory": "Episode Aigis - The Answer",
+        "name": "Bring me a Bloody Button.",
+        "id": "59",
+        "reward": "",
+        "available": "",
+        "remarks": "Defeat the Reaper",
+        "sortOrder": 58
+    }
+]

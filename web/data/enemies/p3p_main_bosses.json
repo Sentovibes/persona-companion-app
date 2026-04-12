@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Arcana Priestess",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Empress",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "wnnnnnn-ww",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Emperor",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "nwwwwnn-nn",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Hierophant",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "---r-nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Lovers",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Chariot",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Justice",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Hermit",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "---d-nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Fortune",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Strength",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Arcana Hanged Man",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  },
+  {
+    "name": "Nyx Avatar",
+    "arcana": "Shadow",
+    "level": 1,
+    "hp": 100,
+    "sp": 50,
+    "stats": {
+      "strength": 10,
+      "magic": 10,
+      "endurance": 10,
+      "agility": 10,
+      "luck": 10
+    },
+    "resists": "-----nn---",
+    "skills": [],
+    "area": "Unknown",
+    "exp": 0,
+    "drops": {
+      "gem": "-",
+      "item": "-"
+    }
+  }
+]

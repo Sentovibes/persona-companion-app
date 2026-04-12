@@ -76,3 +76,16 @@ scraper/test_abaddon.jpg
 /docs/data/
 /extras/
 /.vscode/
+
+# Backups and temp data
+*.backup
+*_backup.json
+*_old.json
+*_new.json
+*_working.json
+*_clean.json
+*_base.json
+*_merged.json
+*_converted.json
+*_regular_only.json
+*_before_*.json

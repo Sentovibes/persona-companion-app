@@ -1,0 +1,4118 @@
+{
+  "persona3PortableItems": {
+    "expendableItems": {
+      "recovery": [
+        {
+          "name": "Medicine",
+          "buy": 300,
+          "sell": 150,
+          "location": "Aohige Pharmacy, Tartarus Chests",
+          "effect": "Slightly restores an ally's HP."
+        },
+        {
+          "name": "Medical Powder",
+          "buy": 1500,
+          "sell": 750,
+          "location": "Aohige Pharmacy, Tartarus Chests",
+          "effect": "Moderately restores an ally's HP."
+        },
+        {
+          "name": "Muscle Drink",
+          "buy": 1000,
+          "sell": 500,
+          "location": "Pharmacy, Tanaka's",
+          "effect": "Restores ally's HP (Med). Side effect."
+        },
+        {
+          "name": "Odd Morsel",
+          "sell": 500,
+          "location": "Tartarus Chests",
+          "effect": "Slightly restores an ally's HP. May cause side effect.",
+          "buy": ""
+        },
+        {
+          "name": "Rancid Gravy",
+          "sell": 500,
+          "location": "Tartarus Chests",
+          "effect": "Moderately restores an ally's HP. May cause side effect.",
+          "buy": ""
+        },
+        {
+          "name": "Coffee Cup",
+          "location": "Spend Christmas Eve with Ken",
+          "effect": "Moderately restores HP. Infinite use.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bead",
+          "sell": 2500,
+          "location": "Antiques, Tartarus Chests",
+          "effect": "Fully restores an ally's HP.",
+          "buy": ""
+        },
+        {
+          "name": "Fuuka's Cookie",
+          "location": "Spend Christmas Day with Fuuka",
+          "effect": "Supposedly it's edible.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Umugi Water",
+          "buy": 4980,
+          "sell": 500,
+          "location": "Tanaka's",
+          "effect": "Moderately restores party's HP."
+        },
+        {
+          "name": "Bead Chain",
+          "buy": 5980,
+          "sell": 5000,
+          "location": "Antiques, Tanaka's",
+          "effect": "Fully restores party's HP."
+        },
+        {
+          "name": "Music Box",
+          "location": "Spend Christmas Eve with Akihiko",
+          "effect": "Slightly restores SP. Infinite use.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Snuff Soul",
+          "sell": 1000,
+          "location": "Tartarus, Vision Quest",
+          "effect": "Slightly restores an ally's SP.",
+          "buy": ""
+        },
+        {
+          "name": "Chewing Soul",
+          "sell": 3000,
+          "location": "Antiques, Tartarus Chests",
+          "effect": "Moderately restores an ally's SP.",
+          "buy": ""
+        },
+        {
+          "name": "Precious Egg",
+          "buy": 5980,
+          "sell": 5000,
+          "location": "Antiques, Tartarus Chests",
+          "effect": "Fully restores an ally's SP."
+        },
+        {
+          "name": "Chocolate Cake",
+          "location": "Spend Christmas Day with Yukari",
+          "effect": "Firm and moist.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Special Drink",
+          "location": "Athletic Meet",
+          "effect": "Sports drink with supplements.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Soma",
+          "buy": 10000,
+          "location": "Tanaka's, Tartarus Chests",
+          "effect": "Fully restores party's HP and SP.",
+          "sell": ""
+        },
+        {
+          "name": "Champagne",
+          "location": "Spend Christmas Day with Mitsuru",
+          "effect": "Authentic non-alcoholic champagne.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dis-Poison",
+          "buy": 600,
+          "sell": 300,
+          "location": "Pharmacy",
+          "effect": "Neutralizes Poison (1 ally)."
+        },
+        {
+          "name": "Dis-Rage",
+          "buy": 700,
+          "sell": 350,
+          "location": "Pharmacy",
+          "effect": "Dispels Rage (1 ally)."
+        },
+        {
+          "name": "Dis-Charm",
+          "buy": 800,
+          "sell": 400,
+          "location": "Pharmacy",
+          "effect": "Dispels Charm (1 ally)."
+        },
+        {
+          "name": "Patra Gem",
+          "buy": 300,
+          "sell": 150,
+          "location": "Pharmacy",
+          "effect": "Dispels Panic, Fear, and Distress (1 ally)."
+        },
+        {
+          "name": "Me Patra Gem",
+          "buy": 900,
+          "sell": 450,
+          "location": "Pharmacy",
+          "effect": "Dispels Panic, Fear, and Distress (party)."
+        },
+        {
+          "name": "Revival Bead",
+          "buy": 1200,
+          "sell": 600,
+          "location": "Pharmacy",
+          "effect": "Revives an ally (50% HP)."
+        },
+        {
+          "name": "Balm of Life",
+          "buy": 49800,
+          "sell": 2000,
+          "location": "Antiques, Tanaka's",
+          "effect": "Revives an ally (100% HP)."
+        },
+        {
+          "name": "Medicated Patch",
+          "location": "Spend Christmas Day with Yuko",
+          "effect": "Yuko's home-made remedy.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Plume of Dusk",
+          "location": "Difficulty Reward",
+          "effect": "Restores party upon Protagonist death.",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "vendingAndFood": [
+        {
+          "name": "Dr. Salt",
+          "buy": 120,
+          "location": "Iwatodai Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Mad Bull",
+          "buy": 120,
+          "location": "Iwatodai Dormitory",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "SoBay",
+          "buy": 120,
+          "location": "Iwatodai Dormitory",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Moonkist",
+          "buy": 120,
+          "location": "Iwatodai Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Cielo Mist",
+          "buy": 120,
+          "location": "Iwatodai Dormitory",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Nastea",
+          "buy": 120,
+          "location": "Iwatodai Strip Mall",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "BauerBar",
+          "buy": 120,
+          "location": "Iwatodai Strip Mall",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Cylon Tea",
+          "buy": 120,
+          "location": "Port Island Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "1UP",
+          "buy": 120,
+          "location": "Iwatodai Strip Mall",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Starvicks",
+          "buy": 120,
+          "location": "Port Island Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Aguafeena",
+          "buy": 120,
+          "location": "Port Island Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Durian Soda",
+          "buy": 120,
+          "location": "Godaigo Inn",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Fountain Dew",
+          "buy": 120,
+          "location": "Iwatodai Station",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Jumbo Juice",
+          "buy": 120,
+          "location": "Godaigo Inn",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "V6",
+          "buy": 120,
+          "location": "Godaigo Inn",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Yakisoba Bread",
+          "buy": 100,
+          "location": "School Store (M/W/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Apple Strudel",
+          "buy": 100,
+          "location": "School Store (M/T/W/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Cutlet Sandwich",
+          "buy": 300,
+          "location": "School Store (T/W/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Melon Bread",
+          "buy": 100,
+          "location": "School Store (Th/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Crab Bread",
+          "buy": 80,
+          "location": "School Store (Th/F/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Fried Bread",
+          "buy": 80,
+          "location": "School Store (W/F/S)",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Namayatsuhashi",
+          "sell": 40,
+          "location": "Kyoto Trip Vendor",
+          "effect": "",
+          "buy": ""
+        },
+        {
+          "name": "Weird Takoyaki",
+          "buy": 400,
+          "location": "Octopia",
+          "effect": "",
+          "sell": ""
+        },
+        {
+          "name": "Instant Ramen",
+          "buy": 24000,
+          "location": "Tanaka's",
+          "effect": "",
+          "sell": ""
+        }
+      ],
+      "battleGems": [
+        {
+          "name": "Attack Mirror",
+          "sell": 1000,
+          "effect": "Reflect phys (party).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Magic Mirror",
+          "sell": 1000,
+          "effect": "Reflect magic (party).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Dekaja Gem",
+          "sell": 500,
+          "effect": "Null stat bonuses (foes).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Dekunda Gem",
+          "sell": 500,
+          "effect": "Null stat penalties (party).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Homunculus",
+          "sell": 1600,
+          "effect": "Prevents instant death.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Traesto Gem",
+          "sell": 500,
+          "effect": "Escape dungeon.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Trafuri Gem",
+          "sell": 500,
+          "effect": "Escape battle.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Firecracker",
+          "sell": 100,
+          "effect": "50 Fire damage.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "San-zun Tama",
+          "sell": 200,
+          "effect": "50 Fire damage (all).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Ice Cube",
+          "sell": 100,
+          "effect": "50 Ice damage.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Dry Ice",
+          "sell": 200,
+          "effect": "50 Ice damage (all).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Ball Lightning",
+          "sell": 100,
+          "effect": "50 Elec damage.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Tesla Coil",
+          "sell": 200,
+          "effect": "50 Elec damage (all).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Pinwheel",
+          "sell": 100,
+          "effect": "50 Wind damage.",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Yashichi",
+          "sell": 200,
+          "effect": "50 Wind damage (all).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Purifying Rice",
+          "sell": 170,
+          "effect": "Casts Hama (1 enemy).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Curse Paper",
+          "sell": 170,
+          "effect": "Casts Mudo (1 enemy).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Smart Bomb",
+          "sell": 250,
+          "effect": "100 Almighty damage (all).",
+          "buy": "",
+          "location": ""
+        },
+        {
+          "name": "Magic Bead",
+          "sell": 150,
+          "effect": "Deals 100 Almighty damage.",
+          "buy": "",
+          "location": ""
+        }
+      ]
+    },
+    "cardsAndFusion": {
+      "incenseCards": [
+        {
+          "name": "Str Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Strength.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mag Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Magic.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "End Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Endurance.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agi Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Agility.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Luc Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Luck.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "HP Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Max HP.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "SP Incense Card",
+          "location": "Antiques, Quests",
+          "effect": "Increases Max SP.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Blank Card",
+          "location": "Antiques",
+          "effect": "Used at the shrine to duplicate a skill card.",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "weaponFusionItems": [
+        {
+          "name": "Void Naginata",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Naginatas.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Sword",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for One-Handed Swords.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Bow",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Bows.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void 2H Sword",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Two-Handed Swords.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Spear",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Spears.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Axe",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Axes.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Gloves",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Fist weapons.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Gun",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Guns.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Bludgeon",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Bludgeons.",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Void Knife",
+          "location": "Shinshoudo Antiques",
+          "effect": "Crafting material for Knives.",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "fusionSpells": [
+        {
+          "name": "Cadenza",
+          "effect": "50% HP + Evasion Up (Party)",
+          "persona": "Orpheus + Apsaras",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Jack Brothers",
+          "effect": "High Down chance (All)",
+          "persona": "Jack Frost + Pyro Jack",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Justice",
+          "effect": "Halve enemy HP (All)",
+          "persona": "Angel + Archangel",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Frolic",
+          "effect": "Full HP + Charm chance (Party)",
+          "persona": "Pixie + Narcissus",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "King and I",
+          "effect": "Heavy Ice + Freeze (All)",
+          "persona": "Black Frost + King Frost",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Summer Dream",
+          "effect": "Random effect (All)",
+          "persona": "Titania + Oberon",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Best Friends",
+          "effect": "Tarukaja + Rakukaja + Sukukaja (1 Ally)",
+          "persona": "Forneus + Decarabia",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Thunder Call",
+          "effect": "Heavy Elec + Shock (All)",
+          "persona": "Thor + Take-Mikazuchi",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Valhalla",
+          "effect": "Invincible 1 turn, then 1 HP/SP (1 Ally)",
+          "persona": "Valkyrie + Odin",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Scarlet Havoc",
+          "effect": "Severe Slash (All)",
+          "persona": "Siegfried + Ares",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Shadow Hound",
+          "effect": "Severe Strike (All)",
+          "persona": "Cu Chulainn + Scathach",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Raktapaksha",
+          "effect": "Dekaja + Knock down (All)",
+          "persona": "Garuda + Gurr",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Trickster",
+          "effect": "Random ailment (All)",
+          "persona": "Susano-o + Loki",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Infinity",
+          "effect": "Invincible 1 turn (Party)",
+          "persona": "Vishnu + Ananta",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Ardhanari",
+          "effect": "Massive Fire (All)",
+          "persona": "Shiva + Parvati",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Armageddon",
+          "effect": "9999 Almighty damage (All)",
+          "persona": "Helel + Satan",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ]
+    },
+    "gemstones": [
+      {
+        "name": "Malachite",
+        "location": "Thebel, Arqa",
+        "effect": "Dark green with bands.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Amethyst",
+        "location": "Arqa, Yabbashah",
+        "effect": "Shiny purple.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Turquoise",
+        "location": "Arqa, Yabbashah, Tziah",
+        "effect": "Blue-green.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Aquamarine",
+        "location": "Yabbashah, Tziah",
+        "effect": "Pale blue.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Garnet",
+        "location": "Yabbashah, Tziah, Harabah",
+        "effect": "Deep red.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Onyx",
+        "location": "Tziah, Harabah",
+        "effect": "Black.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Opal",
+        "location": "Tziah, Harabah, Adamah",
+        "effect": "Milky white.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Diamond",
+        "location": "Harabah, Adamah",
+        "effect": "Colorless.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Ruby",
+        "location": "Harabah, Adamah",
+        "effect": "Brilliant red.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Sapphire",
+        "location": "Adamah",
+        "effect": "Deep blue.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Emerald",
+        "location": "Adamah",
+        "effect": "Deep green.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Pearl",
+        "location": "Adamah",
+        "effect": "White.",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Topaz",
+        "location": "Yabbashah",
+        "effect": "Pale brown.",
+        "buy": "",
+        "sell": ""
+      }
+    ],
+    "skillCards": {
+      "physical": [
+        {
+          "name": "Bash",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Cleave",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Zan-ei",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Getsu-ei",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Gale Slash",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mighty Swing",
+          "location": "Strength",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sonic Punch",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Assault Dive",
+          "location": "Strength",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Swift Strike",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Kill Rush",
+          "location": "Strength",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fatal End",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Blade of Fury",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Deathbound",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tempest Slash",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Myriad Arrows",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vorpal Blade",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Akasha Arts",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "God's Hand",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Pralaya",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Single Shot",
+          "location": "Justice",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Double Shot",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Holy Arrow",
+          "location": "Hierophant",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Torrent Shot",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Vile Assault",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "magic": [
+        {
+          "name": "Agi",
+          "location": "Magician",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agilao",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Agidyne",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragi",
+          "location": "Magician",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragion",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maragidyne",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ragnarok",
+          "location": "Surt (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufu",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufula",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Bufudyne",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufu",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufula",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mabufudyne",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Niflheim",
+          "location": "Skadi (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Zio",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Zionga",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ziodyne",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mazio",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mazionga",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Maziodyne",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Thunder Reign",
+          "location": "Odin (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garu",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garula",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Garudyne",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magaru",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magarula",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Magarudyne",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Panta Rhei",
+          "location": "Norn (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megido",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megidola",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Megidolaon",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Black Viper",
+          "location": "Satan (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Morning Star",
+          "location": "Helel (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Hama",
+          "location": "Justice",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Hamaon",
+          "location": "Justice",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mahama",
+          "location": "Justice",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mahamaon",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Samsara",
+          "location": "Daisoujou (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mudo",
+          "location": "Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mudoon",
+          "location": "Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mamudo",
+          "location": "Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mamudoon",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Die for Me!",
+          "location": "Alice (Level Up)",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "recoveryAndSupport": [
+        {
+          "name": "Dia",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Diarama",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Diarahan",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Media",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mediarama",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Mediarahan",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Patra",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Me Patra",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Posumudi",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Charmdi",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Enradi",
+          "location": "Priestess",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Recarm",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Samarecarm",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Amrita",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Salvation",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tarukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rakukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sukukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Matarukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Marakukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Masukukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tarunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rakunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sukunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Matarunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Marakunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Masukunda",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dekaja",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dekunda",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Rebellion",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Revolution",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Poisma",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Poison Mist",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Marin Karin",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sexy Dance",
+          "location": "Lovers",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Pulinpa",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Tentarafoo",
+          "location": "Devil",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evil Touch",
+          "location": "Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evil Smile",
+          "location": "Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ],
+      "passive": [
+        {
+          "name": "Dodge Fire",
+          "location": "Magician",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Fire",
+          "location": "Magician",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Fire",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Absorb Fire",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Fire",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dodge Ice",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Ice",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Ice",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Absorb Ice",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Ice",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dodge Elec",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Elec",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Elec",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Absorb Elec",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Elec",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dodge Wind",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Wind",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Wind",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Absorb Wind",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Wind",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Dodge Slash/Strike/Pierce",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Evade Slash/Strike/Pierce",
+          "location": "Strength",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Resist Light/Dark",
+          "location": "Justice/Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Null Light/Dark",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Repel Light/Dark",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fire Boost",
+          "location": "Magician",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fire Amp",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Boost",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ice Amp",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Elec Boost",
+          "location": "Hermit",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Elec Amp",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wind Boost",
+          "location": "Fortune",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Wind Amp",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Apt Pupil",
+          "location": "Chariot",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Sharp Student",
+          "location": "Hierophant",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Ali Dance",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Angelic Grace",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Arms Master",
+          "location": "Strength",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Spell Master",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Victory Cry",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Endure",
+          "location": "Hanged Man",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Enduring Soul",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Survive Light/Dark",
+          "location": "Justice/Death",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Endure Light/Dark",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Fast Heal",
+          "location": "Sun",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Insta-Heal",
+          "location": "Sun",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Unshaken Will",
+          "location": "Judgement",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 1",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 2",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Invigorate 3",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 1",
+          "location": "Sun",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 2",
+          "location": "Sun",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Regenerate 3",
+          "location": "Sun",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Cool Breeze",
+          "location": "Star",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Tarukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Rakukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Sukukaja",
+          "location": "Emperor",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Mataru",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Maraku",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        },
+        {
+          "name": "Auto-Masuku",
+          "location": "Tower",
+          "effect": "",
+          "buy": "",
+          "sell": ""
+        }
+      ]
+    },
+    "weapons": {
+      "maleProtagonist1HSwords": [
+        {
+          "name": "Short Sword",
+          "atk": 21,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Long Sword",
+          "atk": 34,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Bastard Sword",
+          "atk": 50,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Spatha",
+          "atk": 66,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Katzbalger",
+          "atk": 86,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Gladius",
+          "atk": 105,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Imitation Katana",
+          "atk": 128,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Scimitar",
+          "atk": 150,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Glimmering Sword",
+          "atk": 172,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Ote-gine",
+          "atk": 180,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Balmung",
+          "atk": 220,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Kusanagi",
+          "atk": 250,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Caladbolg",
+          "atk": 270,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Ascalon",
+          "atk": 300,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Durandal",
+          "atk": 330,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Excalibur",
+          "atk": 360,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Siegfried's Sword",
+          "atk": 380,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Lucifer's Blade",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "femaleProtagonistNaginatas": [
+        {
+          "name": "Naginata",
+          "atk": 23,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Glaive",
+          "atk": 36,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Halberd",
+          "atk": 72,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Guandao",
+          "atk": 108,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Partisan",
+          "atk": 133,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Trident",
+          "atk": 180,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Crescent Moon",
+          "atk": 200,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Dragon Glaive",
+          "atk": 220,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Valkyrie's Halberd",
+          "atk": 250,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Nihon-go",
+          "atk": 280,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Tonbo-kiri",
+          "atk": 340,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Vassal's Glaive",
+          "atk": 370,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Vel Vel Muruga",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "yukariBows": [
+        {
+          "name": "Short Bow",
+          "atk": 18,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Composite Bow",
+          "atk": 30,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Hankyu",
+          "atk": 43,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Rapid Bow",
+          "atk": 80,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Long Bow",
+          "atk": 110,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Cupid's Bow",
+          "atk": 180,
+          "acc": 88,
+          "eff": "Charm",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Yoichi's Bow",
+          "atk": 200,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Failnaught",
+          "atk": 230,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Lightning Bow",
+          "atk": 250,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Artemis' Bow",
+          "atk": 300,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Apollo's Bow",
+          "atk": 330,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Gandiva",
+          "atk": 360,
+          "acc": 88,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Quintessence Bow",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "junpei2HSwords": [
+        {
+          "name": "Two-handed Sword",
+          "atk": 25,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Great Sword",
+          "atk": 40,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Zweihander",
+          "atk": 60,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Nodachi",
+          "atk": 100,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Claymore",
+          "atk": 140,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Flamberge",
+          "atk": 180,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Titan Sword",
+          "atk": 210,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Kishin Sword",
+          "atk": 240,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Onimaru Kunitsuna",
+          "atk": 260,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Dojigiri Yasutsuna",
+          "atk": 290,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Mikazuki Munechika",
+          "atk": 320,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Juzumaru Tsunetsugu",
+          "atk": 350,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Oodenta Mitsuyo",
+          "atk": 380,
+          "acc": 85,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Masamune",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "akihikoFists": [
+        {
+          "name": "Leather Glove",
+          "atk": 20,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Brass Knuckles",
+          "atk": 32,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Iron Knuckles",
+          "atk": 45,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Needle Spike",
+          "atk": 85,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Steel Knuckles",
+          "atk": 115,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Baghnakh",
+          "atk": 140,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Jack's Gloves",
+          "atk": 160,
+          "acc": 90,
+          "eff": "Freeze",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Katar",
+          "atk": 180,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Jamadhar",
+          "atk": 210,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Dragon Claws",
+          "atk": 250,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "God's Hand",
+          "atk": 280,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Sabazios",
+          "atk": 300,
+          "acc": 90,
+          "eff": "Ice Boost",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Kaiser Knuckles",
+          "atk": 350,
+          "acc": 90,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Evil Gloves",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "mitsuruRapiers": [
+        {
+          "name": "Rapier",
+          "atk": 45,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Fleuret",
+          "atk": 65,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Estoc",
+          "atk": 105,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Epee",
+          "atk": 150,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Schiavona",
+          "atk": 180,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Flamberge Rapier",
+          "atk": 210,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Joyeuse",
+          "atk": 250,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Gorgon's Sword",
+          "atk": 280,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Tizona",
+          "atk": 310,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Almace",
+          "atk": 340,
+          "acc": 95,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Kokuseki Senjin",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "aigisGuns": [
+        {
+          "name": "Machine Gun",
+          "atk": 60,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Vulcan",
+          "atk": 100,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Chaingun",
+          "atk": 150,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Gatling Gun",
+          "atk": 200,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Rocket Punch",
+          "atk": 240,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Pandora",
+          "atk": 280,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Megido Fire",
+          "atk": 320,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Shiva's Cannon",
+          "atk": 350,
+          "acc": 80,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Metatronius",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "koromaruKnives": [
+        {
+          "name": "Kunai",
+          "atk": 70,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Tanto",
+          "atk": 110,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Dirk",
+          "atk": 160,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Dagger",
+          "atk": 210,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Main Gauche",
+          "atk": 240,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Misericorde",
+          "atk": 270,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Swordbreaker",
+          "atk": 300,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Peshawar",
+          "atk": 330,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Carnwennan",
+          "atk": 360,
+          "acc": 98,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Vajra",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "kenSpears": [
+        {
+          "name": "Spear",
+          "atk": 75,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Lance",
+          "atk": 115,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Trident",
+          "atk": 170,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Pike",
+          "atk": 210,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Guisarme",
+          "atk": 240,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Corseque",
+          "atk": 270,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Gae Bolg",
+          "atk": 300,
+          "acc": 92,
+          "eff": "Wind Boost",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Romphaia",
+          "atk": 330,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Longinus",
+          "atk": 360,
+          "acc": 92,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Pinaka",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ],
+      "shinjiroAxes": [
+        {
+          "name": "Axe",
+          "atk": 80,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Battle Axe",
+          "atk": 120,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Broadaxe",
+          "atk": 160,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Tomahawk",
+          "atk": 200,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Executioner's Axe",
+          "atk": 250,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Meteorite Axe",
+          "atk": 300,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Labrys",
+          "atk": 340,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Halberd of Terror",
+          "atk": 380,
+          "acc": 82,
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        },
+        {
+          "name": "Kintaro Axe",
+          "atk": 400,
+          "acc": 100,
+          "eff": "+10 Stats",
+          "effect": "",
+          "buy": "",
+          "sell": "",
+          "location": ""
+        }
+      ]
+    },
+    "bodyArmor": [
+      {
+        "name": "Kevlar Vest",
+        "def": 30,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Chain Mail",
+        "def": 45,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Breastplate",
+        "def": 60,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Cuirass",
+        "def": 90,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Power T-shirt",
+        "def": 120,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aura Dogi",
+        "def": 150,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Titanium Jacket",
+        "def": 180,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Assault Gear",
+        "def": 210,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Battle Leotard",
+        "def": 240,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Skelton T-shirt",
+        "def": 260,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Gigantic Armor",
+        "def": 280,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Radiant Halo",
+        "def": 300,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Spiked Bra",
+        "def": 320,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Shirt of Chivalry",
+        "def": 350,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Armor v1",
+        "def": 100,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Armor v2",
+        "def": 200,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Armor v3",
+        "def": 300,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Soul Shirt",
+        "def": 380,
+        "eva": 5,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Armor of Light",
+        "def": 400,
+        "eva": 5,
+        "eff": "Resist Magic",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Armor of Light (P)",
+        "def": 400,
+        "eva": 5,
+        "eff": "Resist Phys",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      }
+    ],
+    "legArmor": [
+      {
+        "name": "Leather Boots",
+        "def": 15,
+        "eva": 10,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Combat Boots",
+        "def": 30,
+        "eva": 10,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Greaves",
+        "def": 50,
+        "eva": 10,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Ninja Shoes",
+        "def": 80,
+        "eva": 20,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Jet Boots",
+        "def": 110,
+        "eva": 20,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Heavy Greaves",
+        "def": 130,
+        "eva": 15,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Ranger Boots",
+        "def": 140,
+        "eva": 15,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Legs v1",
+        "def": 60,
+        "eva": 10,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Legs v2",
+        "def": 100,
+        "eva": 15,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Aigis Legs v3",
+        "def": 140,
+        "eva": 20,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Shoes of Light",
+        "def": 100,
+        "eva": 30,
+        "eff": "Evade Magic",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Shoes of Light (P)",
+        "def": 100,
+        "eva": 30,
+        "eff": "Evade Phys",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Skanda's Footsteps",
+        "def": 100,
+        "eva": 35,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Swan Legs",
+        "def": 100,
+        "eva": 25,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Dragon Boots",
+        "def": 140,
+        "eva": 20,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Titanium Boots",
+        "def": 120,
+        "eva": 20,
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      }
+    ],
+    "accessories": [
+      {
+        "name": "Talisman",
+        "eff": "+End",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Power Ring",
+        "eff": "+Str",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Magic Ring",
+        "eff": "+Mag",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Vitality Ring",
+        "eff": "+HP",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Spirit Ring",
+        "eff": "+SP",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Space Badge",
+        "eff": "Regen 3",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Land Badge",
+        "eff": "Regen 1",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Earth Badge",
+        "eff": "Regen 2",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Mage's Mark",
+        "eff": "Invig 1",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Sorcerer's Mark",
+        "eff": "Invig 2",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Wizard's Mark",
+        "eff": "Invig 3",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Sigma Drive",
+        "eff": "Sharp Student",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Omega Drive",
+        "eff": "Apt Pupil",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Blessed Hands",
+        "eff": "Divine Grace",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Patient Collar",
+        "eff": "Endure",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Rebirth Prophecy",
+        "eff": "Enduring Soul",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Flame Vow",
+        "eff": "Fire Boost (20%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Snow Vow",
+        "eff": "Ice Boost (20%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Spark Vow",
+        "eff": "Elec Boost (20%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Gust Vow",
+        "eff": "Wind Boost (20%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Inferno Vow",
+        "eff": "Fire Boost (40%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Icicle Vow",
+        "eff": "Ice Boost (40%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Lightning Vow",
+        "eff": "Elec Boost (40%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Gale Vow",
+        "eff": "Wind Boost (40%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Kagutsuchi Vow",
+        "eff": "Fire Amp",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Kuraokami Vow",
+        "eff": "Ice Amp",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Takefutsu Vow",
+        "eff": "Elec Amp",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Shinatobe Vow",
+        "eff": "Wind Amp",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Fire Pin",
+        "eff": "Resist Fire (10%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Ice Pin",
+        "eff": "Resist Ice (10%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Thunder Pin",
+        "eff": "Resist Elec (10%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Wind Pin",
+        "eff": "Resist Wind (10%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Blaze Pin",
+        "eff": "Resist Fire (30%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Blizzard Pin",
+        "eff": "Resist Ice (30%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Volt Pin",
+        "eff": "Resist Elec (30%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Storm Pin",
+        "eff": "Resist Wind (30%)",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Rudra Ring",
+        "eff": "Arms Master",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Chakra Ring",
+        "eff": "Spell Master",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Divine Pillar",
+        "eff": "Firm Stance",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Barbaric Bracers",
+        "eff": "Ali Dance",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Berserker's Seal",
+        "eff": "High Counter",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Indra's Bracers",
+        "eff": "Elec Amp/Resist",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Varuna's Bracers",
+        "eff": "Ice Amp/Resist",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Agni's Bracers",
+        "eff": "Fire Amp/Resist",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Vayu's Bracers",
+        "eff": "Wind Amp/Resist",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Bracers of Light",
+        "eff": "Light/Dark Amp",
+        "effect": "",
+        "buy": "",
+        "sell": "",
+        "location": ""
+      },
+      {
+        "name": "Omnipotent Orb",
+        "eff": "Null All (except Almighty)",
+        "location": "Elizabeth/Theodore Boss",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      }
+    ],
+    "specialItems": [
+      {
+        "name": "Velvet Key",
+        "location": "Igor",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Contract's Key",
+        "location": "Igor",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Pine Resin",
+        "location": "Yukari (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Handheld Game",
+        "location": "Junpei (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Triangle Sword",
+        "location": "Mitsuru (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Protein",
+        "location": "Akihiko (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Glasses Wipe",
+        "location": "Ikutsuki (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Mahjong Tile",
+        "location": "Bar (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Sengoku-era Helm",
+        "location": "Faculty Office (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Oden Juice",
+        "location": "Kyoto Trip",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Fruit Knife",
+        "location": "Shinjiro (Request)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Poisonous Dart",
+        "location": "Tartarus Drop",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Juzu-maru",
+        "location": "Tartarus Chest (Thebel)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Onimaru Kunitsuna",
+        "location": "Tartarus Chest (Arqa)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Myohou Muramasa",
+        "location": "Tartarus Chest (Tziah)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Outenta Mitsuyo",
+        "location": "Tartarus Chest (Harabah)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Red Fountain Pen",
+        "location": "Koromaru (Akinari SL)",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Old Documents 01-08",
+        "location": "Tartarus Block Tops",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Charred Letter",
+        "location": "Vision Quest Boss",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Bloody Button",
+        "location": "Reaper Defeat",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Gourmet Guide",
+        "location": "Moon Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Shrine Charm",
+        "location": "Hanged Man Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Letter to Mitsuru",
+        "location": "Empress Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Worn-out Shoe",
+        "location": "Star Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Motorkey",
+        "location": "Chariot Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Persimmon Leaf",
+        "location": "Hierophant Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Hand-made Ticket",
+        "location": "Justice Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Knitted Scarf",
+        "location": "Priestess Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Knit Rabbit",
+        "location": "Lovers Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Silver Watch",
+        "location": "Emperor Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Four-leaf Clover",
+        "location": "Fortune Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Sports Tape",
+        "location": "Strength Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Leather Binders",
+        "location": "Tower Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Piggy Bank",
+        "location": "Devil Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Tattered Notebook",
+        "location": "Sun Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      },
+      {
+        "name": "Key to the Room",
+        "location": "Aeon Max",
+        "effect": "",
+        "buy": "",
+        "sell": ""
+      }
+    ]
+  }
+}
