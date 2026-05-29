@@ -73,7 +73,6 @@ scraper/package-lock.json
 scraper/done.json
 scraper/failed.json
 scraper/test_abaddon.jpg
-/docs/data/
 /extras/
 /.vscode/
 

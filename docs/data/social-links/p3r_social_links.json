@@ -1,0 +1,6779 @@
+{
+  "Fool": {
+    "Rank 1: Auto": {
+      "Requirements": "Automatic on April 18"
+    },
+    "Rank 2: Auto": {
+      "Requirements": "Automatic on April 20"
+    },
+    "Rank 3: Auto": {
+      "Requirements": "Automatic on May 9"
+    },
+    "Rank 4: Auto": {
+      "Requirements": "Automatic on July 7"
+    },
+    "Rank 5: Auto": {
+      "Requirements": "Automatic on July 22"
+    },
+    "Rank 6: Auto": {
+      "Requirements": "Automatic on November 2"
+    },
+    "Rank 7: Auto": {
+      "Requirements": "Automatic on November 4"
+    },
+    "Rank 8: Auto": {
+      "Requirements": "Automatic"
+    },
+    "Rank 9: Auto": {
+      "Requirements": "Automatic on November 28"
+    },
+    "Rank 10: Auto": {
+      "Requirements": "Automatic on December 31"
+    },
+    "UltimatePersona": "Susano-o"
+  },
+  "Magician": {
+    "Details": {
+      "Trigger": "Automatic on April 22",
+      "Schedule": "Tue, Thu, Fri (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "No way.",
+                "Points": 5
+              },
+              {
+                "Answer": "That's a secret.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'm into older women, too.",
+                "Points": 5
+              },
+              {
+                "Answer": "I like them all!",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "What, of life?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Good luck!",
+                "Points": 5
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Social Boost",
+          "Description": "Slightly higher point gains during hangouts."
+        }
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Good luck!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Okay...",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I've got plans already.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "What happened?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Bride-to-Be?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Congrats!",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you in trouble?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You should go with her.",
+                "Points": 5
+              },
+              {
+                "Answer": "You two should talk it out.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Let me handle this!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "......",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You've got this!",
+                "Points": 5
+              },
+              {
+                "Answer": "Want me to find you a girl?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Handmade Choker",
+          "Description": "Unlocks the fusion of Futsunushi, the ultimate Persona of the Magician Arcana."
+        }
+      }
+    },
+    "Phone Invitations": [
+      {
+        "Rank": "1",
+        "Question": "Not bad... Not bad at all! But, there are some things you could do to look better...",
+        "Choices": [
+          {
+            "Answer": "Like what?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "2",
+        "Question": "By the way, are you picky about your food?",
+        "Choices": [
+          {
+            "Answer": "I'm pretty picky.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Well? Whaddaya think? Perfect plan, right?",
+        "Choices": [
+          {
+            "Answer": "I've got a better plan...",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "D-don't laugh, ok...? But, uh, I wanted to know if, um... if you've ever kissed a girl before...",
+        "Choices": [
+          {
+            "Answer": "I haven't.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Maybe she's scared of catching it... Is it contagious?",
+        "Choices": [
+          {
+            "Answer": "No, it's not.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "That was the last beef bowl I'm ever gonna eat!",
+        "Choices": [
+          {
+            "Answer": "Why?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "Do you think I can make her happy?",
+        "Choices": [
+          {
+            "Answer": "Just do your best.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Maybe I caught it or something...",
+        "Choices": [
+          {
+            "Answer": "You shouldn't worry about it.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Can you just... forget that ever happened?",
+        "Choices": [
+          {
+            "Answer": "Sure.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Brand Wallet",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Watch",
+        "Points": 50
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 50
+      },
+      {
+        "Item": "Hyper-Metal Robot",
+        "Points": 50
+      },
+      {
+        "Item": "Mini Cactus",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      }
+    ],
+    "UltimatePersona": "Futsunushi"
+  },
+  "Priestess": {
+    "Details": {
+      "Trigger": "Earliest possible on June 19. Requires Fortune Rank 1 and Courage Rank 6 (Badass)",
+      "Schedule": "Mon, Fri, Sat (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "2F Classroom Hallway (Next to Classroom 2-E)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sure.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Sure thing.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Just a dash or two.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Just take it slow.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You're a hard worker.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "That's not true.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You did a great job.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'm glad I could help.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Can you make more sometime?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Of course.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's the spirit.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "That's messed up.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Is that the only reason?",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "That's probably it.",
+                "Points": 0,
+                "Flag": "Platonic Locked"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I love you, Fụuka.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'm always here for you.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I love them!",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Lacquered Box",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Priestess Arcana."
+        }
+      },
+      "Rank 8 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'll eat your ramen for you.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Of course.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Sure thing.",
+                "Points": 10
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose Romance Flag on Rank 6→7",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "We'll always be friends.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Sure.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I love them!",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Lacquered Box",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Priestess Arcana."
+        }
+      }
+    },
+    "Summer Festival": [
+      {
+        "Event": "August 17",
+        "Question": "I usually don't wear this kind of clothing, so I'm feeling a little uncomfortable...",
+        "Choices": [
+          {
+            "Answer": "You look great.",
+            "Points": 15
+          }
+        ]
+      }
+    ],
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Um, Protagonist-kun. Do you like sweets?",
+        "Choices": [
+          {
+            "Answer": "I do.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Which do you like more? Japanese food or western food?",
+        "Choices": [
+          {
+            "Answer": "Japanese food.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Do you prefer watching movies at the theater or at home on DVD?",
+        "Choices": [
+          {
+            "Answer": "At home on DVD.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "What do you usually do on days off like this, Protagonist-chan?",
+        "Choices": [
+          {
+            "Answer": "This, pretty much.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "He told me I should try using it in the cooking club...",
+        "Choices": [
+          {
+            "Answer": "Please don't.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "...Can you prepare fish, Protagonist-chan?",
+        "Choices": [
+          {
+            "Answer": "I'm too scared to try...",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Romantic Only": true,
+        "Question": "So, do you think there's any way to connect music to cooking in that same vein?",
+        "Choices": [
+          {
+            "Answer": "Yeah, I think so.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Romantic Only": true,
+        "Question": "You've been awfully friendly with different girls lately, haven't you?",
+        "Choices": [
+          {
+            "Answer": "N-No, I haven't.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Glass Vase",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Purse",
+        "Points": 50
+      },
+      {
+        "Item": "Red Pine Bonsai",
+        "Points": 10
+      },
+      {
+        "Item": "Mini Cactus",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Wallet",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Watch",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Japanese Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 10
+      },
+      {
+        "Item": "Ganesha Bank",
+        "Points": 10
+      },
+      {
+        "Item": "Book Cover",
+        "Points": 10
+      },
+      {
+        "Item": "Vintage Yagen",
+        "Points": 10
+      }
+    ]
+  },
+  "Empress": {
+    "Details": {
+      "Trigger": "Available starting November 21. Requires Academic Rank 6 (Genius)",
+      "Schedule": "Tue, Wed, Thu, Sat (Excluding Holidays). Also available during Mon & Fri until December 24",
+      "Time of Day": "Daytime",
+      "Location": "1F Faculty Office Hallway (Outside the Faculty Office)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Why not give it a try?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Are you happy?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "I heard nothing",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Did something happen?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "It's all for love.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Glad you enjoyed it.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "A motorcycle?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Let's go for a ride.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Looking for something specific? / Need some help?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I didn't know...",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "I'll do something about it.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I don't mind at all.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "That's up to you.",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "It's not meant to be.",
+                "Points": 0,
+                "Flag": "Platonic Locked"
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Don't insult her father!",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Don't give in.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 6 (Only if 'It's not meant to be.')",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It made me happy.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I love you too.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'll give it a try.",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Myriad Eggs",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Empress Arcana."
+        }
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's a relief.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose Romance Flag on Rank 7→8",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It made me happy.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I'm sorry, but...",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Great idea.",
+                "Points": 10
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Myriad Eggs",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Empress Arcana."
+        }
+      }
+    },
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "I didn't see many female customers there... Or was it just my imagination?",
+        "Choices": [
+          {
+            "Answer": "Does it really matter?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "How much does one of those arcade machines with a life-sized motorcycle cost?",
+        "Choices": [
+          {
+            "Answer": "But you have a real one.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Should we... head back now?",
+        "Choices": [
+          {
+            "Answer": "You don't want to?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Would you mind telling me who your favorite musical artist is?",
+        "Choices": [
+          {
+            "Answer": "Why?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "It seems I have a tendency to spill all my thoughts when I'm with you. I wonder why.",
+        "Choices": [
+          {
+            "Answer": "Don't worry about it.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "Since manga aren't that expensive, why don't people just buy them?",
+        "Choices": [
+          {
+            "Answer": "Lack of storage space.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Romantic Only": true,
+        "Question": "...interested in anyone?",
+        "Choices": [
+          {
+            "Answer": "Why do you ask?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Why did they give us this lemon on the side? I don't suppose it's dessert...",
+        "Choices": [
+          {
+            "Answer": "Squeeze it over your food.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Romantic Only": true,
+        "Question": "So, um, Protag- Oh no, I mean Protagonist...",
+        "Choices": [
+          {
+            "Answer": "You usually don't call me that.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Once everything is over... where would be a nice place to go?",
+        "Choices": [
+          {
+            "Answer": "You don't need a destination.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Japanese Doll",
+        "Points": 50
+      },
+      {
+        "Item": "Goggle-Eyed Idol",
+        "Points": 50
+      },
+      {
+        "Item": "Red Pine Bonsai",
+        "Points": 10
+      },
+      {
+        "Item": "Perfume",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Wallet",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Watch",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Purse",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 10
+      },
+      {
+        "Item": "Book Cover",
+        "Points": 10
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 10
+      },
+      {
+        "Item": "Vintage Yagen",
+        "Points": 10
+      }
+    ]
+  },
+  "Emperor": {
+    "Details": {
+      "Trigger": "Available starting April 27. After Mitsuru invites you to help out the Student Council, inform Ms Toriumi at the Faculty Office for permission, then head to the Student Council Room to initiate.",
+      "Schedule": "Mon, Wed, Fri (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "2F Classroom Hallway (Student Council Room)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sounds like nonsense.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Looks like you're hard at work.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "They're the worst.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "But I just got here...",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It seems too harsh.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "It wasn't me.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Not too shabby.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Cuirass",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Emperor Arcana."
+        }
+      }
+    }
+  },
+  "Hierophant": {
+    "Details": {
+      "Trigger": "Available starting April 25. Enter Bookworms bookstore to talk to them; retrieve a Persimmon Leaf from Gekkoukan High School, Corridor; then return.",
+      "Schedule": "Tue, Wed, Thu, Fri, Sat, Sun",
+      "Time of Day": "Daytime",
+      "Location": "Iwatodai Station Strip Mall 1F (Bookworms, Used Bookstore)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Makoto Yuki.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Thank you.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              {
+                "Answer": "Receive Melon Bread",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Looking for something?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Can I help?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 7",
+            "Choices": [
+              {
+                "Answer": "Receive Medicine",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I'm worried.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Receive Cylon Tea",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I wouldn't worry about it.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Receive Crab Bread",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Please don't fight.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Receive Fried Bread",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "What happened?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's great.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Receive Cielo Mist",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "But... why?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Book Cover",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Hierophant Arcana."
+        }
+      }
+    }
+  },
+  "Lovers": {
+    "Details": {
+      "Trigger": "Available starting July 25. Requires Charm Rank 6 (Charismatic)",
+      "Schedule": "Mon, Wed, Thu, Sat (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Cute pink.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's mean.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you okay?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Her boyfriend.",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "Other Responses",
+                "Points": 0,
+                "Flag": "Platonic Route"
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "I'm sorry.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Anytime.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I wouldn't mind.",
+                "Points": 5,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "Yeah...",
+                "Points": 0,
+                "Flag": "Platonic Route"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sounds good.",
+                "Points": 15,
+                "Flag": "Platonic Route"
+              },
+              {
+                "Answer": "Let's go just the two of us.",
+                "Points": 15,
+                "Flag": "Romance Flag"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "All right.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "......",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I love you.",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Too late.",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Gourd",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Lovers Arcana."
+        }
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "......",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose any Romance Flags",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "......",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You're a precious friend.",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "That's a relief.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'll go.",
+                "Points": 10
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Gourd",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Lovers Arcana."
+        }
+      }
+    },
+    "Summer Festival": [
+      {
+        "Event": "August 17",
+        "Question": "If I was gonna bother to wear one, I should've shopped around more before deciding...",
+        "Choices": [
+          {
+            "Answer": "You have a nicer figure.",
+            "Points": 15
+          }
+        ]
+      }
+    ],
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Oh, speaking of music, what do you usually listen to?",
+        "Choices": [
+          {
+            "Answer": "J-pop.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Do YOU like azuki strawberry daifuku!?",
+        "Choices": [
+          {
+            "Answer": "I love it.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Is it weird for me to be so hung up about my parents so much at my age?",
+        "Choices": [
+          {
+            "Answer": "Leave the bags to me.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "I-I'm not trying to pry, or anything. I was just curious...",
+        "Choices": [
+          {
+            "Answer": "Hang out with a friend.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "What's your favorite color, Protagonist-kun?",
+        "Choices": [
+          {
+            "Answer": "Green.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Yeah, I have a pretty big appetite, huh? Haha...",
+        "Choices": [
+          {
+            "Answer": "It's a healthy appetite.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Romantic Only": true,
+        "Question": "But no one knows about us, huh... Just like a manga.",
+        "Choices": [
+          {
+            "Answer": "Some people do.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Perfume",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Wallet",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Watch",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Purse",
+        "Points": 50
+      },
+      {
+        "Item": "Rose Bouquet",
+        "Points": 10
+      },
+      {
+        "Item": "Glass Vase",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      }
+    ]
+  },
+  "Chariot": {
+    "Details": {
+      "Trigger": "Available starting April 23 (Forced Rank 1 on May 28 if not started). Head to the School's Gym Hallway to start",
+      "Schedule": "Mon, Tue, Thu, Fri (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F / Gym Hallway"
+    },
+    "Rank Up Progression": {
+      "Rank 1": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Greet Yuko & invite her to walk home together (Strength Flag)",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Toughen up!",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Greet Yuko & invite her to walk home together (Strength Rank 1)",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you going to be okay?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Will it heal?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That really sucks.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Back from the hospital?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Take my shoulder!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Show some guts, man!",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Why go so far?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "What about your knee?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "How's your knee?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You have to get tougher!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "......",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I don't mind at all.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "What about the big meet?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Sports Tape",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Chariot Arcana."
+        }
+      }
+    },
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "That way, I'm ready to go 24/7, y'know? That's real dedication, man.",
+        "Choices": [
+          {
+            "Answer": "Impressive.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "I'm trying to cut down on carbs.",
+        "Choices": [
+          {
+            "Answer": "Are you on a diet?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "The more I want to win, I can just feel myself tense up...",
+        "Choices": [
+          {
+            "Answer": "Winning isn't everything.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Anyway... Sorry about all of that.",
+        "Choices": [
+          {
+            "Answer": "Gotta pick your battles.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Any ideas?",
+        "Choices": [
+          {
+            "Answer": "A video game.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "You know, that Apathy Syndrome thing.",
+        "Choices": [
+          {
+            "Answer": "That's worrying.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Man, why do I even bother anymore? What's the point of going through all this pain just to win...?",
+        "Choices": [
+          {
+            "Answer": "That's just who you are.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "With everything that's happening to me right now... do you really think I can still win the regionals next year?",
+        "Choices": [
+          {
+            "Answer": "Sounds impossible.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Mini Cactus",
+        "Points": 50
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 50
+      },
+      {
+        "Item": "Hyper-Metal Robot",
+        "Points": 50
+      },
+      {
+        "Item": "Red Pine Bonsai",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Vintage Yagen",
+        "Points": 10
+      }
+    ]
+  },
+  "Justice": {
+    "Details": {
+      "Trigger": "Earliest possible on May 7. Requires Emperor Rank 1. Talk to her across 3 separate days to initiate on 4th.",
+      "Schedule": "Tue, Thu, Sat (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "2F Classroom Hallway (Outside the Student Council Room)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Don't worry about it.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I read the classics. / I read manga.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I'm having fun.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "They have no shame.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I agree.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'm here for you.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'm all ears.",
+                "Points": 10
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Yeah, she's in love.",
+                "Points": 15,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "You're jumping to conclusions.",
+                "Points": 5,
+                "Flag": "Platonic Locked"
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Happy to help.",
+                "Points": 10
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4 (Only if 'Yeah, she's in love.')",
+            "Choices": [
+              {
+                "Answer": "Hold her hand",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Is it good?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "What do you mean?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It's gotta be a misunderstanding.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "We have to do something...",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I know you're innocent.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Don't worry, she'll help us.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "What's gotten into you?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "I feel the same, Chihiro.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Thank you.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Case Key",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Justice Arcana."
+        }
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Don't worry, she'll help us.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "I saw the whole thing.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose Romance Flag on Rank 4→5",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Don't worry, she'll help us.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "What's gotten into you?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "I like working with you, but...",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 6",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 10
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Case Key",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Justice Arcana."
+        }
+      }
+    },
+    "Summer Festival": [
+      {
+        "Event": "August 17",
+        "Question": "I don't have one myself though... How do you feel about yukatas, Protagonist-san?",
+        "Choices": [
+          {
+            "Answer": "I like them.",
+            "Points": 15
+          }
+        ]
+      }
+    ],
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "I kept thinking, \"What if he doesn't show up?\"",
+        "Choices": [
+          {
+            "Answer": "Try not to worry so much.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "There’s not much point in meeting up if we're both just going to read on our own, huh...?",
+        "Choices": [
+          {
+            "Answer": "We'll do better next time.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "I-I was afraid that I might see that guy from before who tried to, um...",
+        "Choices": [
+          {
+            "Answer": "I'd help you again.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "Um... Your coffee is going to get cold.",
+        "Choices": [
+          {
+            "Answer": "Do you want sugar?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "I... want to be like that too...",
+        "Choices": [
+          {
+            "Answer": "You can do it.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "It's sad to think there might be a thief at our school...",
+        "Choices": [
+          {
+            "Answer": "Don't worry, it wasn't a thief.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "It's just... ever since that money went missing, I've been feeling anxious whenever I'm alone...",
+        "Choices": [
+          {
+            "Answer": "I'm happy to help.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Romantic Only": true,
+        "Question": "What about you, Protagonist-san? Are you planning to get a driver's license?",
+        "Choices": [
+          {
+            "Answer": "I am.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Brand Watch",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Purse",
+        "Points": 50
+      },
+      {
+        "Item": "Book Cover",
+        "Points": 50
+      },
+      {
+        "Item": "Rose Bouquet",
+        "Points": 10
+      },
+      {
+        "Item": "Mini Cactus",
+        "Points": 10
+      },
+      {
+        "Item": "Glass Vase",
+        "Points": 10
+      },
+      {
+        "Item": "Perfume",
+        "Points": 10
+      },
+      {
+        "Item": "Brand Wallet",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Japanese Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Ganesha Bank",
+        "Points": 10
+      }
+    ]
+  },
+  "Hermit": {
+    "Details": {
+      "Trigger": "Available starting April 29",
+      "Schedule": "Sunday (and Certain Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "Desk in Protagonist's Room (Play the MMORPG)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Of course.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Sunshine is overrated.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Oh really? o_O",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You don't like your job?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Let's plan our wedding, then.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Who's Mr. E? / Do you mean S.O.B.?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "A drunken master? / Are you a teacher?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "What bastard?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Well, yeah.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Hurry up and tell me.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "What is he like?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "No way!",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "What are you planning?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Oh, no worries.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Is that why you're sorry?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I'll miss you.",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Scripture",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Hermit Arcana."
+        }
+      }
+    }
+  },
+  "Fortune": {
+    "Details": {
+      "Trigger": "Available starting June 17",
+      "Schedule": "Tue, Wed, Thu (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "1F Laboratory Hallway (Art Club Room)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You've got talent.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Complaining to me won't help you.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "It's your choice now.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Do you want to be a doctor?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It's okay, I'm fine.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You can't go!",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I understand.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Not at all.",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Calculator",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Fortune Arcana."
+        }
+      }
+    },
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "I doubt I'd ever see something like a beef bowl on the dinner table at home...",
+        "Choices": [
+          {
+            "Answer": "Let's eat here again, then.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "D-Do you think it's okay for me to be in the finals?",
+        "Choices": [
+          {
+            "Answer": "Yeah, you just did your best.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Hey, we should organize an outdoor sketching session one of these days.",
+        "Choices": [
+          {
+            "Answer": "That would be cool.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "What would I list as my occupation on a survey...?",
+        "Choices": [
+          {
+            "Answer": "Entertainment industry.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "This is all his fault! Why does he keep changing his mind!?",
+        "Choices": [
+          {
+            "Answer": "You shouldn't blame others.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "I mean, I won't just be visiting; I'll be living there...",
+        "Choices": [
+          {
+            "Answer": "Think of the new inspirations.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "So... I was wondering... what it'd be like if you called me something in that vein...",
+        "Choices": [
+          {
+            "Answer": "Okay, Brother.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Even if your life is predestined, I think you should give it your all while on that path.",
+        "Choices": [
+          {
+            "Answer": "You have a point.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Glass Vase",
+        "Points": 50
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 50
+      },
+      {
+        "Item": "Book Cover",
+        "Points": 50
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 50
+      },
+      {
+        "Item": "Hyper-Metal Robot",
+        "Points": 50
+      },
+      {
+        "Item": "Vintage Yagen",
+        "Points": 50
+      },
+      {
+        "Item": "Red Pine Bonsai",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Ganesha Bank",
+        "Points": 10
+      }
+    ]
+  },
+  "Strength": {
+    "Details": {
+      "Trigger": "Earliest possible on April 24. Requires Chariot Rank 2 (Greet & ask to walk home with her after Chariot Rank 1 & 2 events)",
+      "Schedule": "Wed, Sat (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "2F Classroom Hallway"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "What happened?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "It wasn't your fault.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "That's true.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Don't worry about it.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I'm honored.",
+                "Points": 5,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "I don't mind.",
+                "Points": 5,
+                "Flag": "Platonic Route"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Sure thing.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It's because you teach so well.",
+                "Points": 10
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You shouldn't change it.",
+                "Points": 5,
+                "Flag": "Platonic Route"
+              },
+              {
+                "Answer": "I trust whatever you decide, Yuko.",
+                "Points": 5,
+                "Flag": "Romance Flag"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "As long as we believe in them.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Wanna make that true?",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "Other Responses",
+                "Points": 0,
+                "Flag": "Platonic Route"
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Are you relieved?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Let's do it.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "A boy. / A girl.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "An instructor?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "It's because I love you.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "What does that mean?",
+                "Points": 5
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Trainers",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Strength Arcana."
+        }
+      },
+      "Rank 8 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "The cute one. / The reasonable one.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8 Platonic (ALT)": {
+        "Requirements": "If you chose any Romance Flags",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "A boy. / A girl.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "An instructor?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Thanks.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose any Romance Flags",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "An instructor?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "It's because you're a close friend.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 5",
+            "Choices": [
+              {
+                "Answer": "Okay, I will.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Want me to carry it?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's just how fulfilling it was.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Where's yours?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "If the opportunity arises.",
+                "Points": 5
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Trainers",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Strength Arcana."
+        }
+      },
+      "Rank 10 Platonic (ALT)": {
+        "Requirements": "If you chose any Romance Flags",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Want me to carry it?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's just how fulfilling it was.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Where's yours? / Thanks.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "If the opportunity arises.",
+                "Points": 5
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Trainers",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Strength Arcana."
+        }
+      }
+    },
+    "Summer Festival": [
+      {
+        "Event": "August 17",
+        "Question": "Don't you think I'd look good in one?",
+        "Choices": [
+          {
+            "Answer": "I'm sure you would.",
+            "Points": 15
+          }
+        ]
+      }
+    ],
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "Take me, for example. How's my outfit?",
+        "Choices": [
+          {
+            "Answer": "It's pretty slick.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "What!? No way! That's such bull! This has to be rigged or something!",
+        "Choices": [
+          {
+            "Answer": "Let's just calm down first.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Sure, I'm team manager and all, but I dunno if I'm ready to be a coach... What do you think?",
+        "Choices": [
+          {
+            "Answer": "You're very responsible.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "I wonder what I'll be doing then...",
+        "Choices": [
+          {
+            "Answer": "Studying for entrance exams.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "I'm a little envious... since I don't really have anything I'm passionate about.",
+        "Choices": [
+          {
+            "Answer": "You'll find something.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "You still have some time, right? What do you wanna do now?",
+        "Choices": [
+          {
+            "Answer": "Let's go to a café.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Romantic Only": true,
+        "Question": "Hey, Protagonist-kun, you got some sauce around your mouth.",
+        "Choices": [
+          {
+            "Answer": "It's a fashion statement.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "Hey, Protagonist-kun, you got some sauce around your mouth.",
+        "Choices": [
+          {
+            "Answer": "Will you wipe it off for me?",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Romantic Only": true,
+        "Question": "I must be in my prime!",
+        "Choices": [
+          {
+            "Answer": "This is only the beginning.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Brand Wallet",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Watch",
+        "Points": 50
+      },
+      {
+        "Item": "Brand Purse",
+        "Points": 50
+      },
+      {
+        "Item": "Mini Cactus",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Ganesha Bank",
+        "Points": 10
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 10
+      }
+    ]
+  },
+  "Hanged-Man": {
+    "Details": {
+      "Trigger": "Earliest possible on May 6. Requires having given her Weird Takoyaki & Mad Bull prior.",
+      "Schedule": "Mon, Wed, Sat",
+      "Time of Day": "Daytime",
+      "Location": "Playground at Naganaki Shrine"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sure, let's go.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Don't worry, he'll be there.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Good for you! / Of course, they love you!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "That's awful.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "They would never.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Calm down. / It's up to you.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That should be enough.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Hamburgers.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You're a good girl.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Your dad.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Friends forever.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'm sure you will.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Sure.",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Ultimate Persona",
+          "Description": "Unlocks the fusion of Attis, the ultimate Persona of the Hanged Man Arcana."
+        }
+      }
+    }
+  },
+  "Death": {
+    "Rank 1: Auto": {
+      "Requirements": "Automatic on June 12"
+    },
+    "Rank 2: Auto": {
+      "Requirements": "Automatic"
+    },
+    "Rank 3: Auto": {
+      "Requirements": "Automatic on July 12"
+    },
+    "Rank 4: Auto": {
+      "Requirements": "Automatic"
+    },
+    "Rank 5: Auto": {
+      "Requirements": "Automatic on August 7"
+    },
+    "Rank 6: Auto": {
+      "Requirements": "Automatic on September 12"
+    },
+    "Rank 7: Auto": {
+      "Requirements": "Automatic"
+    },
+    "Rank 8: Auto": {
+      "Requirements": "Automatic on October 6"
+    },
+    "Rank 9: Auto": {
+      "Requirements": "Automatic"
+    },
+    "Rank 10: Auto": {
+      "Requirements": "Automatic on November 4"
+    }
+  },
+  "Temperance": {
+    "Details": {
+      "Trigger": "Earliest possible on May 8. Requires Hierophant Rank 3 and Academic Rank 2 (Average)",
+      "Schedule": "Tue, Wed, Fri (Excluding the Week Before Exams & During Holidays)",
+      "Time of Day": "Daytime",
+      "Location": "2F Classroom Hallway / 1F Laboratory Hallway (Home Economics Room)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I totally agree.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "How about a kimono?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you alright?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sure.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Just stay in Japan!",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Why not take a break.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "I have your back!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "That's a great idea.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "He'll definitely agree!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Aren't you homesick?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Red Fabric",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Temperance Arcana."
+        }
+      }
+    },
+    "Phone Invitations": [
+      {
+        "Rank": "2",
+        "Question": "...I know! We can go there now! It is just a train ride away, is it not?",
+        "Choices": [
+          {
+            "Answer": "Sure, let's go.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "3",
+        "Question": "Do you like it, too, Protagonist-dono?",
+        "Choices": [
+          {
+            "Answer": "Yeah, I do.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "4",
+        "Question": "Perhaps I am feeling homesick...",
+        "Choices": [
+          {
+            "Answer": "You should stay in Japan.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "5",
+        "Question": "He looked just like my scary uncle! I did not want to think about him...",
+        "Choices": [
+          {
+            "Answer": "Don't worry about it.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "6",
+        "Question": "Does no one play those games anymore?",
+        "Choices": [
+          {
+            "Answer": "We do on New Year's.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "7",
+        "Question": "I must hurry and complete the kimono.",
+        "Choices": [
+          {
+            "Answer": "Just relax.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "8",
+        "Question": "What exactly is it? It just looks like the eggs of an insect to me.",
+        "Choices": [
+          {
+            "Answer": "It's beans.",
+            "Points": 30
+          }
+        ]
+      },
+      {
+        "Rank": "9",
+        "Question": "Speaking of rice... What is your favorite dish with it, Protagonist-dono?",
+        "Choices": [
+          {
+            "Answer": "Ochazuke.",
+            "Points": 30
+          }
+        ]
+      }
+    ],
+    "Gifts Guide": [
+      {
+        "Item": "Japanese Doll",
+        "Points": 50
+      },
+      {
+        "Item": "Goggle-Eyed Idol",
+        "Points": 50
+      },
+      {
+        "Item": "Ganesha Bank",
+        "Points": 50
+      },
+      {
+        "Item": "Lucky Charm",
+        "Points": 50
+      },
+      {
+        "Item": "Hyper-Metal Robot",
+        "Points": 50
+      },
+      {
+        "Item": "Red Pine Bonsai",
+        "Points": 10
+      },
+      {
+        "Item": "Glass Vase",
+        "Points": 10
+      },
+      {
+        "Item": "Teddy Bear",
+        "Points": 10
+      },
+      {
+        "Item": "Kaleidoscope",
+        "Points": 10
+      },
+      {
+        "Item": "Jack Frost Doll",
+        "Points": 10
+      },
+      {
+        "Item": "Vintage Yagen",
+        "Points": 10
+      }
+    ]
+  },
+  "Devil": {
+    "Details": {
+      "Trigger": "Earliest possible on May 16. Requires Hermit Rank 4, Charm Rank 4 (Smooth). Need to pay him ¥20,000, then ¥10,000 twice more across 3 separate days to initiate.",
+      "Schedule": "Tue, Sat",
+      "Time of Day": "Evening",
+      "Location": "Paulownia Mall"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Placebo.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Maybe a little.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sure have!",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Whose face?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "It's all about the money...",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sounds fun.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sort of...",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "The organic one.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Why would he say that?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you going to donate?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Benefit": {
+          "Name": "Business Card",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Devil Arcana."
+        }
+      }
+    }
+  },
+  "Tower": {
+    "Details": {
+      "Trigger": "Earliest possible on May 23. Requires Strength Rank 4 (Talk after reaching Rank 4 to learn about Unconventional Monk) and Courage Rank 2 (Ordinary). Speak to bartender at Club Escapade and help take the customers' orders to initiate.",
+      "Schedule": "Thu, Fri, Sat, Sun",
+      "Time of Day": "Evening",
+      "Location": "Club Escapade (Paulownia Mall)"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "None of your business.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "How should I address you?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I don't have any friends.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Yeah, that might look cool.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I have enough.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "No.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You should go home.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Do you have any coworkers?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You probably shouldn't...",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Dad?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I was with a friend. / None of your business.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Are you running away?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Prayer Beads",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Tower Arcana."
+        }
+      }
+    }
+  },
+  "Star": {
+    "Details": {
+      "Trigger": "Available starting August 5. Requires Courage Rank 4 (Tough)",
+      "Schedule": "Wed, Fri, Sun",
+      "Time of Day": "Daytime",
+      "Location": "Iwatodai Station Strip Mall 1F"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sounds like a lot of pressure.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Myself.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That would be amazing!",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Yeah, I bet it would.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you okay?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I'll come back here with you.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Don't worry, it's okay.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It's no problem at all.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Don't give up yet.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Do it!",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Did you win?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Congrats, man!",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Thanks!",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You're leaving today?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Blue Watch",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Star Arcana."
+        }
+      }
+    }
+  },
+  "Moon": {
+    "Details": {
+      "Trigger": "Earliest possible on April 28. Requires Magician Rank 3, Charm Rank 2, and Odd Morsel. Correctly answer: Pheromone Coffee, Red, Hagakure Bowl.",
+      "Schedule": "Every Day",
+      "Time of Day": "Daytime",
+      "Location": "Paulownia Mall"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sure, why not.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "The Gourmet King.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you feeling sick?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "That's right.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Are you sick?",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "The world is ending?",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "No, you're not.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 15
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Gourmet License",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Moon Arcana."
+        }
+      }
+    }
+  },
+  "Sun": {
+    "Details": {
+      "Trigger": "Earliest possible on August 9. Requires Hanged-Man Rank 3 and Academic Rank 4 (Smart). Retrieve Red Fountain Pen from Koromaru.",
+      "Schedule": "Sunday",
+      "Time of Day": "Daytime",
+      "Location": "Naganaki Shrine"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Really?",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "You have a point.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I couldn't say.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Try not to talk too much.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'd say so.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I stop if I get bored.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You need to listen to your body.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Sounds fine to me.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "It sounds interesting.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "It sounds really depressing.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Take as long as you need.",
+                "Points": 5
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Why did you stop?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You finished your story?",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10": {
+        "Benefit": {
+          "Name": "Signed Postcard",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Sun Arcana."
+        }
+      }
+    }
+  },
+  "Judgement": {
+    "Rank 1: Auto": {
+      "Requirements": "December 31"
+    },
+    "Rank 2: Auto": {
+      "Requirements": "Reach Tartarus Floor 227 (Adamah Block)."
+    },
+    "Rank 3: Auto": {
+      "Requirements": "Tartarus Floor 230 Post-Battle."
+    },
+    "Rank 4: Auto": {
+      "Requirements": "Tartarus Floor 236 Post-Battle."
+    },
+    "Rank 5: Auto": {
+      "Requirements": "Tartarus Floor 241 Post-Battle."
+    },
+    "Rank 6: Auto": {
+      "Requirements": "Tartarus Floor 246 Post-Battle."
+    },
+    "Rank 7: Auto": {
+      "Requirements": "Tartarus Floor 247 Post-Battle."
+    },
+    "Rank 8: Auto": {
+      "Requirements": "Tartarus Floor 253 Post-Battle."
+    },
+    "Rank 9: Auto": {
+      "Requirements": "Tartarus Floor 254 Post-Battle."
+    },
+    "Rank 10: Auto": {
+      "Requirements": "Tartarus Floor 255 Post-Battle."
+    }
+  },
+  "Aeon": {
+    "Details": {
+      "Trigger": "Available starting January 8",
+      "Schedule": "Mon, Tue, Wed, Thur, Fri, Sat (Except Jan 25)",
+      "Time of Day": "Daytime",
+      "Location": "Classroom 2-F"
+    },
+    "Rank Up Progression": {
+      "Rank 2": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I like it here.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 3": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "That's not true.",
+                "Points": 5
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 4": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I might have... / No, I haven't.",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2 (Only occurs if you answered 'I might have...')",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "All right.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 4",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 5": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You might be right.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 6": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "No you didn't. / He thought I was your boyfriend.",
+                "Points": 15
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 7": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 8": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "I'm doing it now.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "It's love.",
+                "Points": 0,
+                "Flag": "Romance Flag"
+              },
+              {
+                "Answer": "Because we're friends.",
+                "Points": 0,
+                "Flag": "Platonic Locked"
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You're right.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "I love you, too.",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Romantic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Prototype",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Aeon Arcana."
+        }
+      },
+      "Rank 9 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You’re right.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 9 Platonic (ALT)": {
+        "Requirements": "If you chose Romance Flag on Rank 7→8",
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "You're right.",
+                "Points": 15
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Sorry, but I can't...",
+                "Points": 0
+              }
+            ]
+          }
+        ]
+      },
+      "Rank 10 Platonic": {
+        "Dialogues": [
+          {
+            "Question": "Dialogue 1",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 2",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          },
+          {
+            "Question": "Dialogue 3",
+            "Choices": [
+              {
+                "Answer": "Any",
+                "Points": 0
+              }
+            ]
+          }
+        ],
+        "Benefit": {
+          "Name": "Prototype",
+          "Description": "Unlocks the fusion of the Ultimate Persona, the ultimate Persona of the Aeon Arcana."
+        }
+      }
+    }
+  },
+  "EXTRA: Social Link Phone Invitations": {
+    "4/26": [
+      "Magician (Kenji)"
+    ],
+    "5/4": [
+      "Chariot (Kazushi)"
+    ],
+    "5/5": [
+      "Magician (Kenji)"
+    ],
+    "5/24": [
+      "Magician (Kenji)",
+      "Chariot (Kazushi)"
+    ],
+    "5/31": [
+      "Justice (Chihiro)",
+      "Strength (Yuko)"
+    ],
+    "6/7": [
+      "Temperance (Bebe)",
+      "Chariot (Kazushi)"
+    ],
+    "6/14": [
+      "Magician (Kenji)",
+      "Chariot (Kazushi)"
+    ],
+    "6/21": [
+      "Justice (Chihiro)",
+      "Temperance (Bebe)"
+    ],
+    "6/28": [
+      "Priestess (Fụuka)"
+    ],
+    "7/5": [
+      "Justice (Chihiro)",
+      "Strength (Yuko)"
+    ],
+    "7/26": [
+      "Justice (Chihiro)",
+      "Temperance (Bebe)"
+    ],
+    "8/4": [
+      "Priestess (Fụuka)",
+      "Fortune (Keisuke)",
+      "Strength (Yuko)"
+    ],
+    "8/5": [
+      "Magician (Kenji)",
+      "Chariot (Kazushi)"
+    ],
+    "8/7": [
+      "Fortune (Keisuke)",
+      "Temperance (Bebe)"
+    ],
+    "8/9": [
+      "Justice (Chihiro)"
+    ],
+    "8/26": [
+      "Magician (Kenji)",
+      "Strength (Yuko)"
+    ],
+    "8/27": [
+      "Justice (Chihiro)",
+      "Temperance (Bebe)"
+    ],
+    "9/13": [
+      "Priestess (Fụuka)",
+      "Lovers (Yukari)"
+    ],
+    "9/22": [
+      "Magician (Kenji)",
+      "Strength (Yuko)"
+    ],
+    "9/23": [
+      "Lovers (Yukari)",
+      "Fortune (Keisuke)"
+    ],
+    "9/27": [
+      "Chariot (Kazushi)",
+      "Justice (Chihiro)",
+      "Temperance (Bebe)"
+    ],
+    "10/18": [
+      "Magician (Kenji)",
+      "Chariot (Kazushi)",
+      "Fortune (Keisuke)"
+    ],
+    "10/25": [
+      "Lovers (Yukari)",
+      "Justice (Chihiro)",
+      "Strength (Yuko)"
+    ],
+    "11/8": [
+      "Magician (Kenji)",
+      "Chariot (Kazushi)",
+      "Temperance (Bebe)"
+    ],
+    "11/15": [
+      "Priestess (Fụuka)",
+      "Lovers (Yukari)",
+      "Strength (Yuko)"
+    ],
+    "11/29": [
+      "Justice (Chihiro)",
+      "Temperance (Bebe)"
+    ],
+    "1/4": [
+      "Empress (Mitsuru)",
+      "Magician (Kenji)",
+      "Fortune (Keisuke)"
+    ],
+    "1/5": [
+      "Priestess (Fụuka)",
+      "Temperance (Bebe)"
+    ],
+    "1/6": [
+      "Chariot (Kazushi)",
+      "Justice (Chihiro)",
+      "Strength (Yuko)"
+    ],
+    "1/7": [
+      "Empress (Mitsuru)",
+      "Lovers (Yukari)"
+    ],
+    "1/10": [
+      "Lovers (Yukari)",
+      "Chariot (Kazushi)",
+      "Fortune (Keisuke)"
+    ],
+    "1/11": [
+      "Magician (Kenji)",
+      "Justice (Chihiro)",
+      "Fortune (Keisuke)"
+    ],
+    "1/17": [
+      "Priestess (Fụuka)",
+      "Lovers (Yukari)",
+      "Strength (Yuko)"
+    ],
+    "1/24": [
+      "Priestess (Fụuka)",
+      "Mitsuru (Empress)",
+      "Lovers (Yukari)"
+    ]
+  },
+  "EXTRA: Film Festival Invitations": {
+    "8/17": {
+      "Character": "Magician (Kenji)",
+      "Requirements": "-",
+      "Rewards": "Courage +4, S. Link Points +10"
+    },
+    "8/18": {
+      "Character": "Temperance (Bebe)",
+      "Requirements": "Rank 2 ~ 9",
+      "Rewards": "Academics +4, S. Link Points +10"
+    },
+    "8/19": {
+      "Character": "Fortune (Keisuke)",
+      "Requirements": "Rank 2 ~ 9",
+      "Rewards": "Charm +4, S. Link Points +10"
+    },
+    "8/21": {
+      "Character": "Strength (Yuko)",
+      "Requirements": "Rank 2 ~ 10",
+      "Rewards": "Courage +4, S. Link Points +10"
+    },
+    "8/22": {
+      "Character": "Chariot (Kazushi)",
+      "Requirements": "-",
+      "Rewards": "Courage +4, S. Link Points +10"
+    },
+    "8/23": {
+      "Character": "Justice (Chihiro)",
+      "Requirements": "Rank 2 ~ 10 (Not Reversed)",
+      "Rewards": "Charm +4, S. Link Points +10"
+    },
+    "8/24": {
+      "Character": "Lovers (Yukari)",
+      "Requirements": "-",
+      "Rewards": "Academics +4, S. Link Points +10"
+    },
+    "8/25": {
+      "Character": "Akihiko",
+      "Requirements": "-",
+      "Rewards": "Courage +4"
+    },
+    "8/26": {
+      "Character": "Koromaru",
+      "Requirements": "-",
+      "Rewards": "Courage +4"
+    },
+    "8/27": {
+      "Character": "Junpei*",
+      "Requirements": "-",
+      "Rewards": "Charm +4"
+    },
+    "8/28": {
+      "Character": "Aigis",
+      "Requirements": "-",
+      "Rewards": "Academics +4"
+    },
+    "8/29": {
+      "Character": "Priestess (Fụuka)*",
+      "Requirements": "-",
+      "Rewards": "Charm +4, S. Link Points +10"
+    },
+    "8/30": {
+      "Character": "Mitsuru*",
+      "Requirements": "-",
+      "Rewards": "Academics +4"
+    },
+    "8/31": {
+      "Character": "Ken",
+      "Requirements": "-",
+      "Rewards": "Courage +4"
+    },
+    "9/23": {
+      "Character": "Shinjiro",
+      "Requirements": "-",
+      "Rewards": "Courage +4"
+    }
+  },
+  "EXTRA: Koromaru Evening Walks": {
+    "8/9": "Magician (Kenji)",
+    "8/15": "Aigis",
+    "8/22": "Hierophant (Bunkichi)",
+    "8/23": "Akihiko",
+    "8/27": "Junpei*",
+    "8/29": "Fụuka*",
+    "8/30": "Mitsuru*",
+    "9/6": "Justice (Chihiro)",
+    "9/16": "Shinjiro",
+    "9/23": "Shinjiro",
+    "9/27": "Akihiko",
+    "10/5": "Aigis",
+    "10/10": "Ken",
+    "10/17": "Magician (Kenji)",
+    "10/18": "Strength (Yuko)",
+    "10/24": "Fortune (Keisuke)",
+    "10/25": "Star (Hayase)**",
+    "10/31": "Ken",
+    "11/1": "Yukari",
+    "11/7": "Star (Hayase)**",
+    "11/8": "Strength (Yuko)",
+    "11/14": "Justice (Chihiro)",
+    "11/20": "Ken",
+    "12/8": "Justice (Chihiro)",
+    "12/19": "Magician (Kenji)",
+    "12/21": "Fụuka",
+    "12/22": "Mitsuru",
+    "12/23": "Yukari",
+    "12/27": "Junpei",
+    "1/2": "Strength (Yuko)",
+    "1/7": "Aigis",
+    "1/9": "Justice (Chihiro)",
+    "1/10": "Star (Hayase)***",
+    "1/16": "Mitsuru",
+    "1/17": "Strength (Yuko)",
+    "1/23": "Justice (Chihiro)",
+    "1/24": "Magician (Kenji)",
+    "1/29": "S.E.E.S."
+  }
+}
