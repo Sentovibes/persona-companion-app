@@ -57,7 +57,7 @@ const SKILL_PATHS = {
 const REQUEST_PATHS = {
     p3fes:'./data/requests/p3fes_requests.json', p3p:'./data/requests/p3p_requests.json',
     p3r:'./data/requests/p3r_requests.json', p4:'./data/requests/p4_requests.json',
-    p4g:'./data/requests/p4g_requests.json', p5:'./data/requests/p5_requests.json',
+    p4g:'./data/requests/p4g_requests.json', p5:'./data/requests/p5r_requests.json',
     p5r:'./data/requests/p5r_requests.json'
 };
 const ELEMENTS = {
