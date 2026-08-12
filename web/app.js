@@ -115,6 +115,7 @@ const S = {
     screen:'home', series:null, game:null,
     listMode:null, // 'personas'|'enemies'|'classroom'|'items'|'skills'|'requests'
     sort:'arcana', enemyTab:'enemies', query:'',
+    enemySort:'level', enemySortDir:1, favOnly:false, hideCompletedReq:false,
     itemQuery:'', skillQuery:'', requestQuery:'',
     detail:null, favorites:new Set(), completedRequests:new Set(),
     rawData:{},
@@ -129,8 +130,95 @@ document.addEventListener('DOMContentLoaded', () => {
     S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
     const saved = localStorage.getItem('settings');
     if (saved) S.settings = {...S.settings, ...JSON.parse(saved)};
-    buildHome();
+    // Restore location: URL hash wins, then last visited, else home
+    const h = location.hash && location.hash !== '#' ? location.hash : (localStorage.getItem('last_loc') || '');
+    if (h && h.replace('#','')) applyHash(h); else buildHome();
+    window.addEventListener('hashchange', () => {
+        // Ignore echoes of our own hash writes — only react when the hash differs from current state
+        if (location.hash.replace(/^#/,'') !== currentHash()) applyHash(location.hash);
+    });
+    initKeyboardShortcuts();
+    initBackToTop();
 });
+
+/* ── Deep links (#series/game/section) ─────────────────────────────────────── */
+function currentHash() {
+    if (!S.series) return '';
+    if (S.screen === 'game' || !S.game) return S.series;
+    let part = '';
+    if (S.screen === 'list' || S.screen === 'detail') part = S.listMode;
+    else if (S.screen === 'sldetail') part = 'sociallinks';
+    else if (['items','skills','requests','fusion','sociallinks'].includes(S.screen)) part = S.screen;
+    return S.series + '/' + S.game + (part ? '/' + part : '');
+}
+
+function applyHash(h) {
+    window._applyingHash = true;
+    try {
+        const parts = (h||'').replace(/^#/,'').split('/').filter(Boolean);
+        if (!parts.length) { navigate('home'); return; }
+        const series = SERIES.find(s => s.id === parts[0]);
+        if (!series) { navigate('home'); return; }
+        S.series = series.id;
+        const game = series.games.find(g => g.id === parts[1]);
+        if (!game) { navigate('game', S.series); return; }
+        S.game = game.id;
+        const sec = parts[2];
+        if (!sec) { navigate('category'); return; }
+        if (['personas','enemies','classroom'].includes(sec)) { S.listMode = sec; navigate('list'); }
+        else if (sec === 'items')    { S.listMode = 'items';    navigate('items'); }
+        else if (sec === 'skills')   { S.listMode = 'skills';   navigate('skills'); }
+        else if (sec === 'requests') { S.listMode = 'requests'; navigate('requests'); }
+        else if (sec === 'fusion')   { openFusion(); }
+        else if (sec === 'sociallinks') { openSocialLinks(); }
+        else navigate('category');
+    } finally { window._applyingHash = false; }
+}
+
+function syncHash() {
+    const h = currentHash();
+    localStorage.setItem('last_loc', h);
+    if (window._applyingHash) return;
+    if (location.hash.replace(/^#/,'') !== h) {
+        location.hash = h;  // the hashchange listener ignores writes matching currentHash()
+    }
+}
+
+/* ── Keyboard shortcuts ────────────────────────────────────────────────────── */
+function initKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        const ae = document.activeElement;
+        const inInput = ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA');
+        if (e.key === '/' && !inInput) {
+            const input = document.querySelector('.screen.active .search-input');
+            if (input) { e.preventDefault(); input.focus(); input.select(); }
+        } else if (e.key === 'Escape' && inInput && ae.classList.contains('search-input')) {
+            ae.value = '';
+            ae.dispatchEvent(new Event('input'));
+            ae.blur();
+        }
+    });
+}
+
+/* ── Debounced search ──────────────────────────────────────────────────────── */
+let _searchTimer = null;
+function debounceSearch(fn) { clearTimeout(_searchTimer); _searchTimer = setTimeout(fn, 150); }
+
+/* ── Back to top ───────────────────────────────────────────────────────────── */
+function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+    document.addEventListener('scroll', (e) => {
+        const el = e.target;
+        if (!el || !el.classList || !(el.classList.contains('list-content') || el.classList.contains('detail-content'))) return;
+        window._scrollEl = el;
+        btn.style.display = el.scrollTop > 400 ? 'flex' : 'none';
+    }, true);
+    btn.addEventListener('click', () => {
+        if (window._scrollEl) window._scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+        btn.style.display = 'none';
+    });
+}
 
 /* ── Navigation ────────────────────────────────────────────────────────────── */
 function isTablet() { return window.innerWidth >= 840; }
@@ -152,6 +240,7 @@ function navigate(to, payload) {
     if (to==='requests')    buildRequestsScreen();
     if (to==='settings')    buildSettingsScreen();
     updateRailState(to);
+    syncHash();
 }
 
 /* ── Rail Navigation ───────────────────────────────────────────────────────── */
@@ -188,14 +277,41 @@ function updateRailState(screenName) {
 }
 
 /* ── Home ──────────────────────────────────────────────────────────────────── */
+const GAME_SHORT = { p3fes:'FES', p3p:'Portable', p3r:'Reload', p4:'Original', p4g:'Golden', p5:'Original', p5r:'Royal' };
+const SECTION_LABELS = { personas:'Personas', enemies:'Enemies', classroom:'Classroom', items:'Items', skills:'Skills', requests:'Requests', fusion:'Fusion', sociallinks:'Social Links' };
+
 function buildHome() {
+    // Continue card — jump straight back to the last visited game/section
+    let continueHtml = '';
+    const last = (localStorage.getItem('last_loc') || '').split('/').filter(Boolean);
+    if (last.length >= 2) {
+        const cs = SERIES.find(s => s.id === last[0]);
+        const cg = cs && cs.games.find(g => g.id === last[1]);
+        if (cs && cg) {
+            const secLabel = SECTION_LABELS[last[2]] || 'Overview';
+            continueHtml = `
+            <div class="continue-card" onclick="applyHash('${last.join('/')}')">
+                <div class="continue-kicker">Continue</div>
+                <div class="continue-main">${cg.title} · ${secLabel}</div>
+                <div class="series-card-arrow">›</div>
+            </div>`;
+        }
+    }
+    document.getElementById('continueSlot').innerHTML = continueHtml;
+
+    const SERIES_LOGOS = { p3:'assets/p3r_logo.png', p4:'assets/p4g_logo.png', p5:'assets/p5r_logo.png' };
     document.getElementById('seriesList').innerHTML = SERIES.map(s => `
-        <div class="series-card" style="background:linear-gradient(135deg,${s.color}dd,${s.color}88)"
+        <div class="series-card series-card--${s.id}" style="background:linear-gradient(135deg,${s.color}dd,${s.color}88)"
              onclick="navigate('game','${s.id}')">
+            ${s.id==='p5' ? '<div class="series-card-star">★</div>' : ''}
             <div class="series-card-bg-num">${s.id.replace('p','')}</div>
             <div class="series-card-text">
-                <div class="series-card-title">${s.title}</div>
+                <img class="series-card-logo" src="${SERIES_LOGOS[s.id]}" alt="${s.title}"
+                     onerror="this.outerHTML='<div class=&quot;series-card-title&quot;>${s.title}</div>'">
                 <div class="series-card-sub">${s.games.length} game${s.games.length>1?'s':''}</div>
+                <div class="series-card-games">
+                    ${s.games.map(g => `<button class="series-game-chip" onclick="event.stopPropagation(); selectGame('${s.id}','${g.id}')">${GAME_SHORT[g.id]||g.title}</button>`).join('')}
+                </div>
             </div>
             <div class="series-card-arrow">›</div>
         </div>`).join('');
@@ -218,6 +334,7 @@ function buildGameScreen(seriesId) {
 function selectGame(seriesId, gameId) {
     S.series = seriesId; S.game = gameId;
     S.query=''; S.sort='arcana'; S.enemyTab='enemies';
+    S.enemySort='level'; S.enemySortDir=1; S.favOnly=false; S.hideCompletedReq=false;
     S.fusion = { personas:null, query:'', selected:null, recipes:null }; // reset on game change
     navigate('category');
 }
@@ -290,8 +407,11 @@ function buildListScreen(mode) {
     const titles = { personas:'Personas', enemies:'Enemies', classroom:'Classroom Answers' };
     document.getElementById('listScreenTitle').textContent = titles[S.listMode]||'';
 
-    // Sort bar (personas only)
+    // Sort bar (personas and enemies)
     const sortBar = document.getElementById('sortBar');
+    const favChip = `<button class="sort-chip fav-chip ${S.favOnly?'active':''}"
+            style="flex:0 0 auto;${S.favOnly?`color:${color};background:${color}22`:''}"
+            onclick="toggleFavOnly()" title="Favorites only">&#x2665;</button>`;
     if (S.listMode==='personas') {
         sortBar.style.display='flex';
         sortBar.innerHTML = ['arcana','level','name'].map(opt=>`
@@ -299,7 +419,15 @@ function buildListScreen(mode) {
                     style="${S.sort===opt?`color:${color};background:${color}22`:''}"
                     onclick="setSort('${opt}','${color}')">
                 ${opt[0].toUpperCase()+opt.slice(1)}
-            </button>`).join('');
+            </button>`).join('') + favChip;
+    } else if (S.listMode==='enemies') {
+        sortBar.style.display='flex';
+        sortBar.innerHTML = [['level','Level'],['name','Name'],['hp','HP']].map(([opt,label])=>`
+            <button class="sort-chip ${S.enemySort===opt?'active':''}"
+                    style="${S.enemySort===opt?`color:${color};background:${color}22`:''}"
+                    onclick="setEnemySort('${opt}')">
+                ${label} ${S.enemySort===opt?(S.enemySortDir===1?'&#x25B2;':'&#x25BC;'):''}
+            </button>`).join('') + favChip;
     } else { sortBar.style.display='none'; }
 
     // Tab bar (enemies only)
@@ -366,15 +494,19 @@ function renderPersonas(data, q, color, el) {
                       'Izanagi-no-Okami','Izanagi-no-Okami Picaro'])
     };
     const gameDlc = DLC_NAMES[S.game] || new Set();
-    let items = Object.entries(data).filter(([name, p]) => {
+    const allEntries = Object.entries(data).filter(([name, p]) => {
         const isDlc = p.isDlc || gameDlc.has(name);
         if (!S.settings.showDlc && isDlc) return false;
         if (!S.settings.showEpisodeAigis && p.episodeAigis) return false;
-        return !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q);
+        return true;
     });
-    if (!items.length) { showEmpty('No personas found'); return; }
+    const total = allEntries.length;
+    let items = allEntries.filter(([name, p]) =>
+        !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q));
+    if (S.favOnly) items = items.filter(([name])=>S.favorites.has(`${S.game}_${name}`));
+    if (!items.length) { showEmpty(S.favOnly ? 'No favorites yet — open a persona and tap the heart' : 'No personas found'); return; }
 
-    let html = '';
+    let html = (q || S.favOnly) ? `<div class="result-count">${items.length} of ${total} shown</div>` : '';
     if (S.sort==='arcana') {
         const grouped = {};
         items.forEach(([name,p]) => {
@@ -401,10 +533,11 @@ function personaRow(name, p, color) {
     const arcana = p.arcana||p.race||'Unknown';
     const skills = p.skills ? Object.keys(p.skills).length : 0;
     const weakRow = renderWeaknessRow(p, S.game);
+    const isFav = S.favorites.has(`${S.game}_${name}`);
     return `<div class="row-card" onclick="openPersona('${esc(name)}')">
         <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
         <div class="row-main">
-            <div class="row-name">${name}</div>
+            <div class="row-name">${name}${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}</div>
             <div class="row-sub">${arcana}</div>
             ${weakRow}
         </div>
@@ -435,15 +568,25 @@ function renderEnemies(data, q, color, el) {
         if (btn) btn.textContent = `${t.replace('_',' ')} (${[enemies,miniBosses,mainBosses][i].length})`;
     });
     let pool = S.enemyTab==='enemies'?enemies:S.enemyTab==='mini_bosses'?miniBosses:mainBosses;
+    const total = pool.length;
     if (q) pool = pool.filter(([name,e])=>name.toLowerCase().includes(q)||(e.arcana||'').toLowerCase().includes(q)||(e.area||'').toLowerCase().includes(q));
-    if (!pool.length) { showEmpty('No enemies found'); return; }
-    el.innerHTML = pool.map(([name,e])=>{
+    if (S.favOnly) pool = pool.filter(([name])=>S.favorites.has(`${S.game}_${name}`));
+    if (!pool.length) { showEmpty(S.favOnly ? 'No favorites yet — open an enemy and tap the heart' : 'No enemies found'); return; }
+    const dir = S.enemySortDir;
+    pool = pool.slice().sort((a,b)=>{
+        if (S.enemySort==='name') return a[0].localeCompare(b[0])*dir;
+        if (S.enemySort==='hp')   return ((a[1].hp||0)-(b[1].hp||0))*dir;
+        return ((a[1].level||0)-(b[1].level||0))*dir;
+    });
+    const countLine = (q || S.favOnly) ? `<div class="result-count">${pool.length} of ${total} shown</div>` : '';
+    el.innerHTML = countLine + pool.map(([name,e])=>{
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
+        const isFav = S.favorites.has(`${S.game}_${name}`);
         return `
         <div class="row-card" onclick="openEnemy('${esc(name)}')">
             <div class="row-main">
-                <div class="row-name">${name}</div>
+                <div class="row-name">${name}${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}</div>
                 <div class="row-sub">${e.arcana||'Shadow'} · Lv. ${e.level||'?'}</div>
                 ${resists}
                 ${e.area&&e.area!=='Unknown'?`<div class="row-hint" style="font-size:.75rem;color:var(--text3);margin-top:2px">${e.area}</div>`:''}
@@ -456,17 +599,24 @@ function renderEnemies(data, q, color, el) {
 }
 
 function parseResistSummary(str, elems) {
-    const map={w:'weak',s:'resist',r:'resist',n:'null',d:'absorb'};
-    const weak = [], res = [];
+    const weak = [], res = [], nul = [], rep = [], abs = [];
     str.split('').forEach((c,i)=>{
         if(i>=elems.length) return;
-        if(c==='w') weak.push(elems[i]);
-        else if(c==='s'||c==='r') res.push(elems[i]);
+        if(c==='R'){ rep.push(elems[i]); return; }  // 'R' = Repel, 'r' = Resist
+        const lc=c.toLowerCase();
+        if(lc==='w') weak.push(elems[i]);
+        else if(lc==='s'||lc==='r') res.push(elems[i]);
+        else if(lc==='n'||c==='_') nul.push(elems[i]);
+        else if(lc==='p') rep.push(elems[i]);
+        else if(lc==='d'||lc==='a') abs.push(elems[i]);
     });
-    if(!weak.length && !res.length) return '';
+    if(!weak.length && !res.length && !nul.length && !rep.length && !abs.length) return '';
     let html = '<div class="weakness-row">';
     weak.slice(0,4).forEach(e => html += `<span class="weak-label">${e.slice(0,2)}</span>`);
     res.slice(0,2).forEach(e => html += `<span class="resist-label">${e.slice(0,2)}</span>`);
+    nul.slice(0,2).forEach(e => html += `<span class="null-label">${e.slice(0,2)}</span>`);
+    rep.slice(0,2).forEach(e => html += `<span class="repel-label">${e.slice(0,2)}</span>`);
+    abs.slice(0,2).forEach(e => html += `<span class="drain-label">${e.slice(0,2)}</span>`);
     html += '</div>';
     return html;
 }
@@ -488,7 +638,7 @@ function flattenClassroom(data) {
             
             Object.entries(section).forEach(([date, qas]) => {
                 if (Array.isArray(qas)) {
-                    qas.forEach(qa => items.push({ Date: date, ...qa }));
+                    qas.forEach(qa => items.push({ Date: date, Kind: type === '_root_' ? '' : type, ...qa }));
                 }
             });
         });
@@ -511,15 +661,36 @@ function flattenClassroom(data) {
 }
 
 function renderClassroom(data, q, el) {
-    let items = flattenClassroom(data);
+    const MONTH_NAMES = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const all = flattenClassroom(data);
+    let items = all;
     if (q) items = items.filter(qa=>(qa.Question||'').toLowerCase().includes(q)||(qa.Answer||'').toLowerCase().includes(q));
     if (!items.length) { showEmpty('No answers found'); return; }
-    el.innerHTML = items.map(qa=>`
-        <div class="qa-card">
-            ${qa.Date?`<div class="qa-date">${qa.Date}</div>`:''}
+    let html = q ? `<div class="result-count">${items.length} of ${all.length} shown</div>` : '';
+    let lastMonth = null;
+    items.forEach(qa=>{
+        const month = qa.Date ? parseInt(qa.Date.split('/')[0], 10) : null;
+        if (month && month !== lastMonth) {
+            lastMonth = month;
+            html += `<div class="arcana-header">
+                <div class="arcana-bar" style="background:${color}"></div>
+                <div class="arcana-label" style="color:${color}">${MONTH_NAMES[month]||('Month '+month)}</div>
+            </div>`;
+        }
+        const isExam = (qa.Kind||'').toLowerCase() === 'exam';
+        html += `
+        <div class="qa-card ${isExam?'qa-card--exam':''}">
+            <div style="display:flex;align-items:center;gap:8px">
+                ${qa.Date?`<div class="qa-date">${qa.Date}</div>`:''}
+                ${isExam?`<span class="exam-badge">EXAM</span>`:''}
+            </div>
             <div class="qa-question">${qa.Question||'Question not available'}</div>
             <div class="qa-answer">${qa.Answer||'—'}</div>
-        </div>`).join('');
+        </div>`;
+    });
+    el.innerHTML = html;
 }
 
 /* ── Social Links ──────────────────────────────────────────────────────────── */
@@ -703,7 +874,7 @@ function onSlSearch(val) {
     S.slQuery = val;
     document.getElementById('slSearchClear').style.display = val?'block':'none';
     const series = SERIES.find(s=>s.id===S.series);
-    renderSlList(series?.color||'#2196F3');
+    debounceSearch(()=>renderSlList(series?.color||'#2196F3'));
 }
 function clearSlSearch() { document.getElementById('slSearch').value=''; onSlSearch(''); }
 
@@ -941,16 +1112,22 @@ function parsePersonaAffinities(p, gameId) {
     else if (resistStr.length===8) elems=['Phys','Fire','Ice','Elec','Wind','Light','Dark','Almighty'];
     else elems=['Phys','Gun','Fire','Ice','Elec','Wind','Psy','Nuke','Bless','Curse'];
     const result={weak:[],resist:[],null_:[],repel:[],absorb:[]};
-    const map={w:'weak',s:'resist',n:'null_',r:'repel',d:'absorb'};
-    resistStr.split('').forEach((c,i)=>{ if(i<elems.length&&map[c]) result[map[c]].push(elems[i]); });
+    // 'R' means Repel while lowercase 'r' means Resist; other uppercase codes are case typos
+    const map={w:'weak',s:'resist',r:'resist',n:'null_','_':'null_',p:'repel',d:'absorb',a:'absorb'};
+    resistStr.split('').forEach((c,i)=>{
+        if(i>=elems.length) return;
+        const key = c==='R' ? 'repel' : map[c.toLowerCase()];
+        if(key) result[key].push(elems[i]);
+    });
     return result;
 }
 function parseResists(str, elems) {
-    const map={'-':'Normal',w:'Weak',s:'Strong',r:'Resist',n:'Null',d:'Drain'};
+    // 'R' means Repel while lowercase 'r' means Resist; other uppercase codes are case typos
+    const map={w:'Weak',s:'Strong',r:'Resist',n:'Null','_':'Null',p:'Repel',d:'Drain',a:'Drain'};
     return str.split('').map((c,i)=>{
-        const r=map[c]||'Normal';
+        const r=(c==='R'?'Repel':map[c.toLowerCase()])||'Normal';
         if(r==='Normal'||i>=elems.length) return null;
-        const colors={Weak:'#E57373',Null:'#B0BEC5',Drain:'#FFD54F',Resist:'#81C784',Strong:'#81C784'};
+        const colors={Weak:'#E57373',Null:'#B0BEC5',Drain:'#FFD54F',Repel:'#64B5F6',Resist:'#81C784',Strong:'#81C784'};
         return `<span class="chip" style="background:${colors[r]||'#555'}22;color:${colors[r]||'#aaa'}">${elems[i]}: ${r}</span>`;
     }).filter(Boolean).join(' ')||'No special resistances';
 }
@@ -1007,12 +1184,18 @@ function setP3PProtagonist(val) {
 /* ── Misc ──────────────────────────────────────────────────────────────────── */
 function setSort(opt, color) { S.sort=opt; buildListScreen(); }
 function setEnemyTab(t) { S.enemyTab=t; buildListScreen(); }
+function setEnemySort(opt) {
+    if (S.enemySort === opt) S.enemySortDir = -S.enemySortDir;
+    else { S.enemySort = opt; S.enemySortDir = 1; }
+    buildListScreen();
+}
+function toggleFavOnly() { S.favOnly = !S.favOnly; buildListScreen(); }
 
 function onSearch(val) {
     S.query=val;
     document.getElementById('searchClear').style.display=val?'block':'none';
     const series=SERIES.find(s=>s.id===S.series);
-    renderList(S.rawData[`${S.listMode}_${S.game}`]||{}, series?.color||'#2196F3');
+    debounceSearch(()=>renderList(S.rawData[`${S.listMode}_${S.game}`]||{}, series?.color||'#2196F3'));
 }
 function clearSearch() { document.getElementById('searchInput').value=''; onSearch(''); }
 
@@ -1030,6 +1213,10 @@ function toggleFavorite() {
         if (btn) { btn.innerHTML = nowFav ? heartFilled : heartEmpty; btn.style.color = nowFav ? c : ''; }
     });
     localStorage.setItem('favs', JSON.stringify([...S.favorites]));
+    // Refresh row hearts if the list is visible (tablet two-pane)
+    if (document.getElementById('screen-list')?.classList.contains('active')) {
+        renderList(S.rawData[`${S.listMode}_${S.game}`]||{}, c);
+    }
 }
 function shareDetail() {
     if (!S.detail) return;
@@ -1220,11 +1407,21 @@ function renderFusionPersonaList(color) {
         }).join('');
 }
 
+// Games with triangle (3-persona) fusion — P5 games use group fusions (specials) instead
+const TRIANGLE_GAMES = new Set(['p3fes','p3p','p3r','p4','p4g']);
+
 function selectFusionPersona(name) {
     const p = S.fusion.personaMap[name];
     if (!p) return;
     S.fusion.selected = { name, data: p };
     S.fusion.recipes  = calcFusionRecipes(name);
+    S.fusion.isTriangle = false;
+    // Personas whose arcana no chart pair can produce (top-of-arcana Fool/Tower/
+    // Aeon/Jester etc.) are reachable in-game only via triangle fusion
+    if (!S.fusion.recipes.length && TRIANGLE_GAMES.has(S.game)) {
+        S.fusion.recipes = calcTriangleRecipes(name);
+        S.fusion.isTriangle = S.fusion.recipes.length > 0;
+    }
     const series = SERIES.find(s=>s.id===S.series);
     const color = series?.color||'#2196F3';
     if (isTablet()) {
@@ -1262,7 +1459,7 @@ function showFusionDetailPane(color) {
     }
 
     if (!recipes || !recipes.length) {
-        html += `<div class="empty-state">No fusion recipes found${!S.settings.showDlc?' (DLC off)':''}</div>`;
+        html += `<div class="empty-state">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
     } else {
         if (p.unlock) {
             html += `<div class="unlock-box" style="margin:8px 0">
@@ -1270,7 +1467,7 @@ function showFusionDetailPane(color) {
                 <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
             </div>`;
         }
-        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found</div>`;
+        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
         html += recipes.map(combo => {
             if (combo.length === 2) {
                 return `<div class="fusion-recipe-card" style="margin:0 0 8px">
@@ -1414,6 +1611,75 @@ function calcFusionRecipes(targetName) {
     return recipes;
 }
 
+/* ── Triangle fusion (port of the Android FusionCalculator) ────────────────── */
+function getResultArcanaWeb(a, b) {
+    if (a === b) return a;
+    const races = S.fusion.chart.races, ia = races.indexOf(a), ib = races.indexOf(b);
+    if (ia < 0 || ib < 0) return null;
+    if (IS_TRIANGULAR[S.game]) {
+        const r = Math.max(ia, ib), c = Math.min(ia, ib);
+        return (S.fusion.chart.table[r] || [])[c] || null;
+    }
+    const r = Math.min(ia, ib), c = Math.max(ia, ib);
+    return (S.fusion.chart.table[r] || [])[c] || null;
+}
+
+function fuseTriangleWeb(a, b, c) {
+    // sort by level then name; the two lowest fuse first, the result fuses with the highest
+    const lvlOf = p => p.data.level ?? p.data.lvl ?? 0;
+    const s = [a, b, c].sort((x, y) => (lvlOf(x) - lvlOf(y)) || (x.name < y.name ? -1 : 1));
+    const arcOf = p => p.data.arcana || p.data.race;
+    const t1 = getResultArcanaWeb(arcOf(s[0]), arcOf(s[1]));
+    if (!t1 || t1 === '-') return null;
+    const fin = getResultArcanaWeb(t1, arcOf(s[2]));
+    if (!fin || fin === '-') return null;
+    const calcLvl = Math.floor((lvlOf(s[0]) + lvlOf(s[1]) + lvlOf(s[2])) / 3) + 5;
+    const specials = S.fusion.specialData;
+    const names = new Set([a.name, b.name, c.name]);
+    const list = (S.fusion.byArcana[fin] || []).filter(p =>
+        !names.has(p.name) && !specials[p.name] &&
+        !['party','accident','special'].includes(p.data.fusion));
+    const cand = list.find(p => lvlOf(p) >= calcLvl);
+    const res = cand || list[list.length - 1] || null;
+    return res ? res.name : null;
+}
+
+function calcTriangleRecipes(targetName, cap = 60) {
+    const M = S.fusion.personaMap, specials = S.fusion.specialData;
+    const target = M[targetName];
+    if (!target || specials[targetName]) return [];
+    if (['party','accident','special'].includes(target.fusion)) return [];
+    const tArc = target.arcana || target.race, tLvl = target.level ?? target.lvl ?? 0;
+    const tList = (S.fusion.byArcana[tArc] || []).filter(p => !specials[p.name]);
+    const tIdx = tList.findIndex(p => p.name === targetName);
+    if (tIdx < 0) return [];
+    const lvlOf = p => p.data.level ?? p.data.lvl ?? 0;
+    const minCalc = tIdx > 0 ? lvlOf(tList[tIdx - 1]) + 1 : 0;
+    const maxCalc = tIdx < tList.length - 1 ? tLvl : 200;
+    const minSum = 3 * (minCalc - 5), maxSum = 3 * (maxCalc - 4) - 1;
+
+    const pool = Object.entries(M)
+        .filter(([name, p]) => !['party','accident','special'].includes(p.fusion) && !specials[name])
+        .map(([name, p]) => ({ name, data: p, lvl: p.level ?? p.lvl ?? 0 }))
+        .sort((x, y) => x.lvl - y.lvl);
+
+    const out = [];
+    for (let i = 0; i < pool.length && out.length < cap; i++) {
+        for (let j = i + 1; j < pool.length && out.length < cap; j++) {
+            const base = pool[i].lvl + pool[j].lvl;
+            let k = j + 1;
+            while (k < pool.length && base + pool[k].lvl < minSum) k++;
+            for (; k < pool.length && out.length < cap; k++) {
+                if (base + pool[k].lvl > maxSum) break;
+                if (fuseTriangleWeb(pool[i], pool[j], pool[k]) === targetName) {
+                    out.push([pool[i], pool[j], pool[k]].map(p => ({ name: p.name, data: p.data })));
+                }
+            }
+        }
+    }
+    return out;
+}
+
 function renderFusionResults(color) {
     const el = document.getElementById('fusionContent');
     const { selected, recipes } = S.fusion;
@@ -1440,9 +1706,9 @@ function renderFusionResults(color) {
     }
 
     if (!recipes || !recipes.length) {
-        html += `<div class="empty-state" style="margin-top:24px">No fusion recipes found${!S.settings.showDlc?' (DLC off — some recipes hidden)':''}</div>`;
+        html += `<div class="empty-state" style="margin-top:24px">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
     } else {
-        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found</div>`;
+        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
         html += recipes.map(combo => {
             if (combo.length === 2) {
                 // Horizontal 2-persona layout
@@ -1488,7 +1754,7 @@ function onFusionSearch(val) {
     document.getElementById('fusionSearchClear').style.display = val?'block':'none';
     if (S.fusion.selected) return; // don't interfere with results view
     const series = SERIES.find(s=>s.id===S.series);
-    renderFusionPersonaList(series?.color||'#2196F3');
+    debounceSearch(()=>renderFusionPersonaList(series?.color||'#2196F3'));
 }
 function clearFusionSearch() { document.getElementById('fusionSearch').value=''; onFusionSearch(''); }
 
@@ -1516,8 +1782,11 @@ async function buildItemsScreen() {
 function renderItems(data, color) {
     const q = S.itemQuery.toLowerCase();
     const el = document.getElementById('itemContent');
-    let items = data.filter(it => it.name.toLowerCase().includes(q) || (it.category||'').toLowerCase().includes(q));
-    
+    let items = data.filter(it => it.name.toLowerCase().includes(q)
+        || (it.category||'').toLowerCase().includes(q)
+        || (it.effect||'').toLowerCase().includes(q)
+        || (it.description||'').toLowerCase().includes(q));
+
     if (!items.length) { el.innerHTML = `<div class="empty-state">No items found</div>`; return; }
 
     // Group by category
@@ -1528,10 +1797,11 @@ function renderItems(data, color) {
         grouped[cat].push(it);
     });
 
-    el.innerHTML = Object.keys(grouped).sort().map(cat => `
+    const countLine = q ? `<div class="result-count">${items.length} of ${data.length} shown</div>` : '';
+    el.innerHTML = countLine + Object.keys(grouped).sort().map(cat => `
         <div class="arcana-header">
             <div class="arcana-bar" style="background:${color}"></div>
-            <div class="arcana-label" style="color:${color}">${cat}</div>
+            <div class="arcana-label" style="color:${color}">${cat} <span class="header-count">(${grouped[cat].length})</span></div>
         </div>
         ${grouped[cat].map(it => `
             <div class="row-card" onclick="openItem('${esc(it.name)}')">
@@ -1539,9 +1809,18 @@ function renderItems(data, color) {
                     <div class="row-name">${it.name}</div>
                     <div class="row-sub">${it.effect || it.description || ''}</div>
                 </div>
+                ${priceHint(it) ? `<div class="row-right"><div class="row-hp" style="font-size:.75rem">${priceHint(it)}</div></div>` : ''}
                 <div class="row-hint" style="color:${color}">›</div>
             </div>`).join('')}
     `).join('');
+}
+
+/* Compact price hint for list rows — first segment of whatever price format the game uses */
+function priceHint(it) {
+    const p = (it.price || '').toString().trim();
+    if (!p) return '';
+    const first = p.split('|')[0].trim();
+    return first.length > 14 ? first.slice(0, 13) + '…' : first;
 }
 
 function openItem(name) {
@@ -1566,7 +1845,7 @@ function openItem(name) {
     document.getElementById('itemDetailContent').innerHTML = html;
 }
 
-function onItemSearch(val) { S.itemQuery=val; document.getElementById('itemSearchClear').style.display=val?'block':'none'; buildItemsScreen(); }
+function onItemSearch(val) { S.itemQuery=val; document.getElementById('itemSearchClear').style.display=val?'block':'none'; debounceSearch(()=>buildItemsScreen()); }
 function clearItemSearch() { document.getElementById('itemSearch').value=''; onItemSearch(''); }
 function showLoadingItem() { document.getElementById('itemContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
 function showEmptyItem(msg) { document.getElementById('itemContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
@@ -1605,10 +1884,11 @@ function renderSkills(data, color) {
         grouped[cat].push(sk);
     });
 
-    el.innerHTML = Object.keys(grouped).sort().map(cat => `
+    const countLine = q ? `<div class="result-count">${items.length} of ${data.length} shown</div>` : '';
+    el.innerHTML = countLine + Object.keys(grouped).sort().map(cat => `
         <div class="arcana-header">
             <div class="arcana-bar" style="background:${color}"></div>
-            <div class="arcana-label" style="color:${color}">${cat}</div>
+            <div class="arcana-label" style="color:${color}">${cat} <span class="header-count">(${grouped[cat].length})</span></div>
         </div>
         ${grouped[cat].map(sk => `
             <div class="row-card" onclick="openSkill('${esc(sk.name)}')">
@@ -1627,11 +1907,11 @@ function openSkill(name) {
     if (!sk) return;
     const series = SERIES.find(s=>s.id===S.series);
     const color = series?.color||'#2196F3';
-    
+
     document.getElementById('skillDetailPlaceholder').style.display = 'none';
     document.getElementById('skillDetailContentWrap').style.display = 'flex';
     document.getElementById('skillDetailTitle').textContent = sk.name;
-    
+
     let html = `
         <div class="section-card">
             <div class="section-title" style="color:${color}">${sk.element || sk.type || 'Skill'}</div>
@@ -1639,10 +1919,55 @@ function openSkill(name) {
             ${sk.cost?`<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>`:''}
         </div>
     `;
+    html += `<div class="section-card" id="skillLearnedBy"><div class="section-title">Learned by</div><div class="loading-wrap" style="padding:12px"><div class="spinner" style="width:22px;height:22px"></div></div></div>`;
     document.getElementById('skillDetailContent').innerHTML = html;
+    renderSkillLearnedBy(sk.name, color);
 }
 
-function onSkillSearch(val) { S.skillQuery=val; document.getElementById('skillSearchClear').style.display=val?'block':'none'; buildSkillsScreen(); }
+/* Cross-reference: which personas learn this skill, and at what level */
+async function renderSkillLearnedBy(skillName, color) {
+    const box = document.getElementById('skillLearnedBy');
+    if (!box) return;
+    const key = `personas_${S.game}`;
+    if (!S.rawData[key]) {
+        try {
+            const r = await fetch(PERSONA_PATHS[S.game]);
+            if (!r.ok) throw new Error(r.statusText);
+            S.rawData[key] = await r.json();
+        } catch(e) { box.style.display = 'none'; return; }
+    }
+    const data = S.rawData[key];
+    const entries = Array.isArray(data) ? data.map(p=>[p.name,p]) : Object.entries(data);
+    const learners = [];
+    entries.forEach(([pname, p]) => {
+        if (!p || !p.skills) return;
+        const lvl = p.skills[skillName];
+        if (lvl === undefined) return;
+        learners.push({ name: pname, plevel: p.level ?? p.lvl ?? 0, at: lvl });
+    });
+    if (!learners.length) { box.style.display = 'none'; return; }
+    learners.sort((a,b)=>a.plevel-b.plevel);
+    const label = l => l.at < 1 ? 'Innate' : l.at >= 100 ? 'Special' : `Lv. ${Math.floor(l.at)}`;
+    box.innerHTML = `<div class="section-title">Learned by <span class="header-count">(${learners.length})</span></div>` +
+        learners.map(l => `
+        <div class="skill-row" style="cursor:pointer" onclick="jumpToPersona('${esc(l.name)}')">
+            <div class="skill-name">${l.name} <span style="color:var(--text3);font-size:.8em">Lv. ${l.plevel}</span></div>
+            <div class="skill-level" style="color:${l.at<1?color:'var(--text2)'}">${label(l)}</div>
+        </div>`).join('');
+}
+
+function jumpToPersona(name) {
+    S.listMode = 'personas';
+    navigate('list');
+    // open once the persona data is guaranteed loaded by the list build
+    const tryOpen = (attempts) => {
+        if (S.rawData[`personas_${S.game}`]) { openPersona(name); return; }
+        if (attempts > 0) setTimeout(()=>tryOpen(attempts-1), 200);
+    };
+    tryOpen(15);
+}
+
+function onSkillSearch(val) { S.skillQuery=val; document.getElementById('skillSearchClear').style.display=val?'block':'none'; debounceSearch(()=>buildSkillsScreen()); }
 function clearSkillSearch() { document.getElementById('skillSearch').value=''; onSkillSearch(''); }
 function showLoadingSkill() { document.getElementById('skillContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
 function showEmptySkill(msg) { document.getElementById('skillContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
@@ -1670,11 +1995,23 @@ async function buildRequestsScreen() {
 function renderRequests(data, color) {
     const q = S.requestQuery.toLowerCase();
     const el = document.getElementById('requestContent');
+    const doneCount = data.filter(req => S.completedRequests.has(`${S.game}_req_${req.id || req.name}`)).length;
+    const pct = data.length ? Math.round(doneCount / data.length * 100) : 0;
+    const progressHtml = `
+        <div class="req-progress-wrap">
+            <div class="req-progress-top">
+                <span>${doneCount} / ${data.length} completed</span>
+                <button class="sort-chip ${S.hideCompletedReq?'active':''}" style="flex:0 0 auto;padding:4px 10px;font-size:.75rem;${S.hideCompletedReq?`color:${color};background:${color}22`:''}"
+                        onclick="toggleHideCompleted()">Hide done</button>
+            </div>
+            <div class="req-progress-bar"><div class="req-progress-fill" style="width:${pct}%;background:${color}"></div></div>
+        </div>`;
     let items = data.filter(req => req.name.toLowerCase().includes(q) || (req.giver||'').toLowerCase().includes(q));
-    
-    if (!items.length) { el.innerHTML = `<div class="empty-state">No requests found</div>`; return; }
+    if (S.hideCompletedReq) items = items.filter(req => !S.completedRequests.has(`${S.game}_req_${req.id || req.name}`));
 
-    el.innerHTML = items.map(req => {
+    if (!items.length) { el.innerHTML = progressHtml + `<div class="empty-state">${S.hideCompletedReq?'All matching requests are completed':'No requests found'}</div>`; return; }
+
+    el.innerHTML = progressHtml + items.map(req => {
         const id = `${S.game}_req_${req.id || req.name}`;
         const isDone = S.completedRequests.has(id);
         return `
@@ -1730,7 +2067,8 @@ function toggleRequestComplete() {
     buildRequestsScreen(); // refresh list
 }
 
-function onRequestSearch(val) { S.requestQuery=val; document.getElementById('requestSearchClear').style.display=val?'block':'none'; buildRequestsScreen(); }
+function toggleHideCompleted() { S.hideCompletedReq = !S.hideCompletedReq; buildRequestsScreen(); }
+function onRequestSearch(val) { S.requestQuery=val; document.getElementById('requestSearchClear').style.display=val?'block':'none'; debounceSearch(()=>buildRequestsScreen()); }
 function clearRequestSearch() { document.getElementById('requestSearch').value=''; onRequestSearch(''); }
 function showLoadingRequest() { document.getElementById('requestContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
 function showEmptyRequest(msg) { document.getElementById('requestContent').innerHTML=`<div class="empty-state">${msg}</div>`; }

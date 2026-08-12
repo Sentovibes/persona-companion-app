@@ -506,7 +506,7 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
             // ── RESISTANCES (Bottom-left) ────────────────────────────────
             let resistHtml = '';
             if (enemy.resists) {
-                const parsed = parseResistances(enemy.resists);
+                const parsed = parseResistances(enemy.resists, enemy.gameId);
                 if (parsed) {
                     const resistances = parsed.split(', ');
                     resistances.forEach(resist => {
@@ -606,47 +606,52 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
         }
         
         // Parse resistance string to readable format
-        function parseResistances(resists) {
+        function parseResistances(resists, gameId) {
             if (!resists || resists.length === 0) return null;
-            
+
             // P3 elements: Slash, Strike, Pierce, Fire, Ice, Elec, Wind, Light, Dark, Almighty
             const p3Elements = ['Slash', 'Strike', 'Pierce', 'Fire', 'Ice', 'Elec', 'Wind', 'Light', 'Dark', 'Almighty'];
             // P4 elements: Phys, Fire, Ice, Elec, Wind, Light, Dark, Almighty
             const p4Elements = ['Phys', 'Fire', 'Ice', 'Elec', 'Wind', 'Light', 'Dark', 'Almighty'];
             // P5 elements: Phys, Gun, Fire, Ice, Elec, Wind, Psy, Nuke, Bless, Curse
             const p5Elements = ['Phys', 'Gun', 'Fire', 'Ice', 'Elec', 'Wind', 'Psy', 'Nuke', 'Bless', 'Curse'];
-            
-            // Determine which element set to use based on length
+
+            // Pick the element set from the game id; fall back to string length
             let elements;
-            if (resists.length === 10) {
-                // Could be P3 or P5, check for common P5 patterns
-                elements = p3Elements; // Default to P3 for 10-length
+            const game = (gameId || '').toLowerCase();
+            if (game.indexOf('p5') === 0) {
+                elements = p5Elements;
+            } else if (game.indexOf('p4') === 0) {
+                elements = p4Elements;
+            } else if (game.indexOf('p3') === 0) {
+                elements = p3Elements;
             } else if (resists.length === 8) {
                 elements = p4Elements;
             } else {
-                elements = p4Elements; // Default
+                elements = p3Elements;
             }
-            
+
+            // 'R' means Repel while 'r' means Resist, so match before lowercasing
             const resistMap = {
-                '-': 'Normal',
-                '_': 'Normal',
                 'w': 'Weak',
-                's': 'Strong',
+                's': 'Resist',
                 'r': 'Resist',
                 'n': 'Null',
+                '_': 'Null',
                 'd': 'Drain',
+                'a': 'Drain',
                 'p': 'Repel'
             };
-            
+
             const parsed = [];
             for (let i = 0; i < resists.length && i < elements.length; i++) {
-                const char = resists[i].toLowerCase();
-                const resist = resistMap[char];
+                const raw = resists[i];
+                const resist = raw === 'R' ? 'Repel' : resistMap[raw.toLowerCase()];
                 if (resist) {
                     parsed.push(elements[i] + ': ' + resist);
                 }
             }
-            
+
             return parsed.length > 0 ? parsed.join(', ') : 'All Normal';
         }
         
@@ -683,12 +688,13 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
     /**
      * Broadcast data to all connected clients
      */
-    fun broadcastEnemy(enemy: Any) {
+    fun broadcastEnemy(enemy: Any, gameId: String = "") {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 // Create a simple map with only basic data
                 // Avoid complex nested objects that cause serialization issues
                 val enemyMap = mutableMapOf<String, Any?>()
+                enemyMap["gameId"] = gameId
                 
                 // Use reflection to get properties safely
                 val enemyClass = enemy.javaClass

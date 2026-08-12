@@ -86,13 +86,15 @@ object FilterUtils {
             if (elementIndex >= 0) {
                 filtered = filtered.filter { enemy ->
                     if (elementIndex < enemy.resists.length) {
-                        val resist = enemy.resists[elementIndex]
+                        // Match on the shared label so alternate codes ('s', '_', 'a', 'R'…) filter correctly
+                        val label = ResistanceUtils.getResistanceLabel(enemy.resists[elementIndex])
                         when (filters.resistanceFilter) {
                             ResistanceFilter.ALL -> true
-                            ResistanceFilter.WEAK -> resist == 'w'
-                            ResistanceFilter.RESIST -> resist == 'r'
-                            ResistanceFilter.NULL -> resist == 'n'
-                            ResistanceFilter.DRAIN -> resist == 'd'
+                            ResistanceFilter.WEAK -> label == "Weak"
+                            ResistanceFilter.RESIST -> label == "Resist"
+                            ResistanceFilter.NULL -> label == "Null"
+                            ResistanceFilter.REPEL -> label == "Repel"
+                            ResistanceFilter.DRAIN -> label == "Absorb"
                         }
                     } else false
                 }

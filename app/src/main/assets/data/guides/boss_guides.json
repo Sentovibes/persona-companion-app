@@ -1,0 +1,1057 @@
+[
+  {
+    "gameId": "p4g",
+    "bosses": [
+      {
+        "name": "Yosuke's Shadow",
+        "level": 0,
+        "location": "N/A",
+        "party": "Izanagi",
+        "weaknesses": "Elec (Weak)",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This is the first \"boss fight\" of the game. It's pretty simple. Spam\nIzanagi's zio on him, and when he guards, you guard. If he uses Power\nCharge, use zio first and take your extra turn using Guard. If your\nhealth ever gets below half, make sure to use a medicine. (You have 5. Feel\nfree to use them!)...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Chie's Shadow",
+        "level": 0,
+        "location": "Yukiko's Castle 2F",
+        "party": "Izanagi",
+        "weaknesses": "Wind (Weak)",
+        "resistances": "Phys (Resist), Light (Null), Dark (Null)",
+        "strategy": "Easy fight, just be careful. Have Yosuke cast Garu on her, and she'll\nbe knocked down. She'll put up a Green Wall soon after, so just use\nyour physical attacks. Whenever the game says that she gazes at Yosuke,\nhave him guard for that turn. If you don't, she'll use a strong attack\ncalled Bottomless Envy (or mazio. I'm not quite sure, but I do know it\nknocks him down) that leaves Dizzy, and gives her another turn. The fight\nshould be over after a little while. Use a medicine if you have to....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Avenger Knight",
+        "level": 8,
+        "location": "Yukiko's Castle 5F",
+        "party": "Izanagi, Pixie, Slime with Resist Physical",
+        "weaknesses": "None",
+        "resistances": "Phys (Resist), Light (Null), Dark (Null)",
+        "strategy": "This is actually a pretty hard fight. In fact, after those bosses before, the\nnext few bosses in the game are actually some of the hardest fights in the\ngame. I recommend using a Goho-M on the 5th floor so you're all charged up when\nyou fight him. You may even want to do a little bit of grinding before this\nfight. Now... On to the actual fight. He uses regular physical attacks as well\nas other single-target physical attacks, including poison skewer that may\ninflict poison. I wouldn't even bother...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Yukiko's Shadow",
+        "level": 14,
+        "location": "Yukiko's Castle 8th Floor",
+        "party": "If you're at a high enough level, use Jack Frost. Valkyrie if",
+        "weaknesses": "None",
+        "resistances": "Fire (Absorb), Light (Null), Dark (Null)",
+        "strategy": "she knows Mabufu. Senri when the prince goes down.\n\nThis is probably the hardest fight you've done yet. She has a stong\narea attack that takes away over half of your character's hp, and she\nalso summons a minion to aid her in battle. Have Chie cast Mabufu every\nround, and this will hit the Charming Prince's weakness as well as\ndamage the real boss. Keep pressure on the minion until he falls down,\nand then focus on Shadow Yukiko. Yukiko's Shadow will cast White Wall\non the Charming Prince, taking...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Contrarian King",
+        "level": 16,
+        "location": "Yukiko's Castle 8th Floor",
+        "party": "None",
+        "weaknesses": "None",
+        "resistances": "Fire (Absorb), Wind (Null), Light (Null), Dark (Null)",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Daring Gigas",
+        "level": 18,
+        "location": "Steamy Bathhouse 7F",
+        "party": "Anything that can resist Physical attacks.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This boss hits hard, but it's not a hard fight. He is a lot like the\navenger knight, but a bit easier. He'll waste three turns buffing up,\nand then he'll start attacking. He doesn't have any special attacks,\njust the single-hit, regular attack. It will probably take away over\nhalf of a character's hp. When he uses Power Charge, make your\ncharacters guard. Pretty much, just heal whoever gets attacked, and\nthen have everyone use their strongest attacks on him....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Shadow Kanji",
+        "level": 22,
+        "location": "Steamy Bathhouse 11F",
+        "party": "Any personas with strong attacks and area attacks. One that",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "has resist physical. A persona with Support Skills. [Preferably\nTarunda]\n\nThis is probably the hardest fight yet. Not only does he have strong\narea attacks, but he also has two minions, that are tough to take down\nthemselves. His main attack that will wipe you out is swift strike.\nIt's a physical area attack, that can hit up to three times. If it hits\nthree times, it's most likely game over for you.\n\nFirst of all, start by killing Nice Guy. If possible, use physical area\nattacks to bring him dow...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Intolerant Officer",
+        "level": 25,
+        "location": "Steamy Bathhouse 11F",
+        "party": "None",
+        "weaknesses": "Elec (Weak)",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Amorous Snake",
+        "level": 28,
+        "location": "Marukyu Striptease 7F",
+        "party": "Anything with Agilao. Hua Po is good.",
+        "weaknesses": "Fire (Weak)",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This is an easy fight. Exploit his weakness, and just keep using all\nout attacks. He uses Stagnant Air at the beginning of the battle, and\nwill then use Virus Wave sometime after. Heal the poison and keep\ngoing. He can also use Mind Slice which also causes confusion, so be\nready for that. Just make sure everyone's hp is kept above 50% and the\nbattle will soon be over.\n\nGalactic Punt works in this battle....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Rise's Shadow",
+        "level": 30,
+        "location": "Marukyu Striptease 11F",
+        "party": "Anything that can deal high damage.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This isn't the \"real\" boss of this dungeon. The battle will end once\nyou take away a little more than half of her hp, once she starts using\nSupreme Insight, just guard. Nothing you can really do, then.\n\nFor any difficulties in this fight, just make sure you keep everyone's\nhp high, and just unleash your strongest attacks on her, just so you\ndon't waste time. (Your hp & sp will be restored at the end of battle,\npreparing you for the real boss fight.)\n\nHer attack arsenal is just low-level magic sp...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Shadow Teddie",
+        "level": 31,
+        "location": "Marukyu Striptease 11F",
+        "party": "Anything that's immune to ice. Ganga and Unicorn are good;",
+        "weaknesses": "None",
+        "resistances": "Ice (Absorb), Light (Null), Dark (Null)",
+        "strategy": "Especially Ganga. If you have a high priestess social link, fuse Ganga and\nhopefully she'll level up enough to learn Mediarama.\n\nNot only is this a long fight, but it can get pretty troublesome if you\ndon't figure out his pattern. His favorite thing to do is use Mind\nCharge, and then cast Mabufula. He'll also cast Marakunda, and then use\nHeat Wave. If you try using buffs, there's a chance that he might use\nDekaja, so don't waste your time. Chances are, you'll have Yukiko in\nyour party as a heale...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Momentary Child",
+        "level": 34,
+        "location": "Marukyu Striptease 11F",
+        "party": "Ganga because of Bufula and Mediarama.",
+        "weaknesses": "Ice (Weak)",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This isn't a hard fight. He uses Herculean Strike, and it's pretty\nstrong. It will take over half of your party's hp away, so heal with\nMedia or Mediarama.\n\nAll you really have to do in this fight is cast Bufula repetitively,\nand use Mediarama when hp is low. The boss is weak to ice, so hopefully\nyou're using Teddie, or even Chie.. Either way, have the MC and Teddie (or\nChie) use ice skills\nwhile the other party members heal and use physical attacks. If your hp\nis so low that you need extra heal...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Killing Hand",
+        "level": 35,
+        "location": "Void QUest 7F",
+        "party": "Personas with Magaru/Magarula/Garula.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "Thsi is an easy fight. It can be dragged on for a long time, though.\nThe killing Hand will summon an Almighty Hand to aid it in battle. The\nalmighty hand is weak against wind, so use wind attacks. If you have\nMagarula, use that instead of Garula, sicne it deals extra damage to\nthe boss. Hit him with it two times and he'll become dizzy. Try to\nfocus your efforts on the Almighty Hand, and completely focus your\nattacks on the killing hand when he's alone. He might summon another\none before the end ...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Mitsuo's Shadow",
+        "level": 38,
+        "location": "Void Quest 10F",
+        "party": "Anything with good agility. Black Frost is also helpful for",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "dealing high damage with Agidyne. Dis is an alternatica to Black Frost.\n\nThis is an interesting, and tricky fight. It's also pretty fun if you\nknow how to handle it. I personally never had any problems with him, but he's\nthe one boss I always see people complaining about.\n\nOnce the battle starts, you'll be fighting an 8-bit \"hero\" version of\nMitsuo. This isn't the actual fight. It's an \"outer shell\" of him. It\nhas 1400 hp, and once you defeat it, you'll be fighting the real thing.\nOnce you defea...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Escapist Soldier",
+        "level": 40,
+        "location": "Void Quest 10F",
+        "party": "Anything with high attack power and Mediarama. ALso, a",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "persona that is resistant in some way to dark attacks.\n\nThis is an easy fight. He has stong attacks, but they can only target\none charcter at a time. Try to keep everyone's health at max, because\nof his strong attacks. He has the Evil Smile and Ghastly Wail combo, so\nmake sure you get rid of fear on whoever has it. It's an easy fight, if\nyou aren't winning, then just grind some more. The Gaia sword you get\nfrom defeating this battle is very useful for a long while in the game.\n\nAlso, if you have...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Dominating Machine",
+        "level": 46,
+        "location": "Secret Laboratory 6F",
+        "party": "A Null Physical persona is extremely helpful in this fight.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This boss spends his whole time using Power Charge and then Herculean\nStrike. His pattern can easily kill you if you don't heal when it's\nneeded... And even then, it's possible for him to defeat you in one\nhit. Simply make sure that you keep your health full and attack when it\nis. When his health gets to 25%, he'll stand by for three truns, then\nuse self-destruct. I suggest you try to defeat him in two rounds, and\nif you don't, then have everyone guard to take less damage from him.\n\nAnother very...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Naoto's Shadow",
+        "level": 48,
+        "location": "Secret Laboratory 9F",
+        "party": "Anything with Dekaja, or -dyne spells and high magic power.",
+        "weaknesses": "None",
+        "resistances": "Fire (Resist), Light (Null), Dark (Null)",
+        "strategy": "Ganga is a good idea for Dekaja + Mediarama, but not a must, seeing as\nskills can be passed down. Genbu, or anything with Masukukaja is\nhelpful, seeing as Shadow Naoto likes to use Ma-dyne spells.\n\nThis is a challenging fight; not hard. Shadow Naoto seems to be a boss\nthat can actually think. She is very strategic, so give her a taste of\nher own medicine.\n\nFirst things fist, be prepared with Dekaja. She uses Heat Riser quite\noften, and leaving that on would be suicide. She usually only uses it\nw...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Extreme Vessel",
+        "level": 48,
+        "location": "Secret Laboratory 9F",
+        "party": "Personas with Garula and Garudyne are nice.",
+        "weaknesses": "Wind (Weak)",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This boss is weak against wind, so just blast him with your strongest\nwind spells and use Yosuke if he's a high enough level. If he uses\nPower Charge, he will use God's Hand shortly after. It will instantly\nkill a character, so make sure to revive. When he uses Power Charge,\nswitch to a null physical persona if you have one. When he uses Mind\nCharge, guard because he will use a hard-hitting Ma-Dyne spell of some\nsort. If you don't want to guard, use Makarakarn on the MC and have\neveryone else gu...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "World Balance",
+        "level": 54,
+        "location": "Heaven 7F",
+        "party": "Personas with Makarakarn and a lot of elemental resistances.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This is a straightforward fight. He'll use Mind Charge followed up by a\nsingle-target -dyne spell. His spells usually hit for 600+ damage a\npop, so it means instant death. Luckily, they're only single target!\nTherefore, there's practically no way he can kill your party unless he\ntargets a weakness or you decide not to revive any KO'ed chracters. If\nyou have personas with Makarakarn, use Makarakarn on the MC. If you\ndon't, then go to one that can reflect attacks, and isn't weak to any.\nYou really...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Kunino-Sagiri",
+        "level": 60,
+        "location": "Heaven 10F",
+        "party": "Personas that reflect ANY element are HIGHLY recommended, and",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "make this battle much, much easier.\n\nThis is a long, interesting fight. It's made much, much easier if you\nhave a persona that can reflect an element, though. Why? Because this\nbattle has an interesting pattern. Once you take away about 25% of his\nhealth, he'll use an attack called \"Quad Converge.\" This skill makes it\nso that he is strong against all elements, but takes 3x damage from a\nsingle one. You'll know which element it is, because it's the elememt\nthat he uses on your party. Once you con...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Lost Okina",
+        "level": 60,
+        "location": "Heaven 10F",
+        "party": "None",
+        "weaknesses": "None",
+        "resistances": "Phys (Null), Ice (Absorb), Light (Null), Dark (Null)",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Chaos Fuzz",
+        "level": 65,
+        "location": "Magatsu Mandala 3F",
+        "party": "Personas with area spells AND single-target spells are nice.",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "This is an easy fight. The first one will summon another, and the\nsecond one will also do so. The key to this battle is to kill them all\nat the same time. Usually, he'll only summon three. If more than three\nare on the field, than it's just bad luck. Use area attacks throughout\nthe battle, and don't kill anyone in the process. Get everyone's hp low\n[to the point there's only a tenth of hp left] and use Ma-dyne or an\nalmighty spell.\n\nThese guys don't hit hard. There physical attacks take away abo...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Giant of Envy",
+        "level": 68,
+        "location": "Magatsu Mandala 6F",
+        "party": "Personas with strong Physical and Almighty attacks.",
+        "weaknesses": "None",
+        "resistances": "Fire (Resist), Ice (Resist), Elec (Absorb), Wind (Resist), Light (Null), Dark (Null)",
+        "strategy": "This fight isn't too hard, but he isn't exactly a pushover. He resists\nall types of attacks except for Physical and Almighty, and uses\nMegidolaon almost every turn. Not only are physical attacks the only\nelement he doesn't resist, but he also has High Counter, making your\nPhysical attacks more ineffective. Still, blast him away with your\nphysical attacks, hoping for some criticals. Megidolaon is better, disregarding\nthe fact that it\ntakes so much sp. His only other attack is Tentarafoo, and he u...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Adachi",
+        "level": 70,
+        "location": "Magatsu Town 3F",
+        "party": "Any persona that nullifies physical attacks makes this boss",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "seem like a joke. A persona with a lot of elemental resistances is also\nnice.\n\nThis fight is pretty easy. He has high defense, so it might last a\nwhile, but other than that, it's not hard at all. He'll usually cast\nVorpal Blade and -dyne and Ma-dyne spells. He occasionally uses Evil\nSmile, followed up with Gastly Wail. Because of this, make sure you're\nready with items or Amrita.\n\nJust attack his with physical attacks, and heal when your hp gets down\nabout halfway. It's as easy as that....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Amenosagiri",
+        "level": 70,
+        "location": "Magatsu Town 3F",
+        "party": "Anything is fine, really. If possible, bring along a persona",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "with Spell Master that also has -dyne spells. Make sure that you also\nhave a persona with Mediarahan if one of your party members doesn't. If\nyou have a Trumpeter with Debilitate, then by all means use him.\n\nWhew, awesome music for an awesome fight with an awesome disco ball-eye-thing!\nIf you have Yosuke in your party, have him use Masukukaja as much as\npossible, and renew it when it wears off. When it isn't worn-off, use\nBrave Blade. If you're using Chie, use Power Charge + God's Hand, pretty m...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Neo Minotaur",
+        "level": 70,
+        "location": "Yomotsu Hirasaka 3F",
+        "party": "Null Physical is a lifesaver in this battle. Bring along a",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "persona with null physical and just hit auto Battle.\n\nThis is an easy fight, depending on how you approach it. If you aren't\nimmune to physical attacks, expect him to kill you in atleast three\nturns. His rampage attack can cause some serious damage, and it's an\ninstant kill if hits three times. However, Rampage is his only attack.\nIf you have a persona with Null Physical, by all means use him. It'll\nmake you completely invulnerable. He can use regular hyscial attacks,\nbut... They're still physic...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Sleeping Table",
+        "level": 70,
+        "location": "Yomotsu Hirasaka 6F",
+        "party": "Personas that are immune to fire and light. Bring Yoshitsune",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "if you have him.\n\nNot a hard fight. The Sleeping Table usually just uses Megidolaon, and\ntakes away about half of the party's hp with each use. Other than\nMegidolaon, expect him to cast Mahamaon and use the Evil Smile + Gastly\nWail combo throughout the battle. Make sure you heal Fear if you get\nhit by it, or else it's instant game-over. Last, he uses Maragidyne. It\nwon't do much damage, just as much as Megidolaon. Still, make sure to\nkeep your party healed throughout the battle. Use Mediarahan w...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Izanami",
+        "level": 75,
+        "location": "Yomotsu Hirasaka 9F",
+        "party": "Bring along Trumpeter obecause of the Debilitate/Heat Riser",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "combo. Norn is also nice, since you don't really need Heat Riser.\n\nMore awesome music time! This fight, overall, is pretty straightforward.\nIzanami is strong, and\nwill often knock-off more than half of the whole party's hp with her\nattacks. The fight is pretty easy, despite the amount of damage she\ndeals. As long as you keep up with Mediarahan every round, you should\nbe fine. When her hp gets around half, she'll start using Mind Charge\nthen Megidolaon very often. Make sure you guard, as it can w...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Izanami-no-Okami",
+        "level": 75,
+        "location": "Yomotsu Hirasaka 9F",
+        "party": "Trumpeter for Heat Riser/Debilitate Combo. Any strong",
+        "weaknesses": "None",
+        "resistances": "Elec (Absorb), Light (Null), Dark (Null)",
+        "strategy": "personas with no weaknesses is good, as well. Yoshitsune,\nKohryu/Ishtar.\n\nThis is the real Final Boss, and she's not holding anything back. She\nhas a wide variety of new attacks, and the package even includes double\nturns. Her new moves are impressive, and this fight will be long enough\nso that you get to see all of them.\n\nFirst of all, let's review her new attacks. This isn't exactly a\nspecial attack of hers, but she will rarely use Agneyastra, and it can\nwipe out a character if it gets three h...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "The Reaper",
+        "level": 70,
+        "location": "Randomly in Treasure chests on New Game Plus",
+        "party": "Personas like Helel that block Hama and Mudo skills help",
+        "weaknesses": "None",
+        "resistances": "Light (Null), Dark (Null)",
+        "strategy": "tremendously. Oh, and Yoshitsune. Why? Cause he's awesome.\n\nThis isn't a hard fight, but it can last for quite a long time, due to\nhigh hp AND defense. The best way to get past this is to use Rakunda on\nhim and Matarukaja on your party. If you don't mind spending the time\ndoing it, I suggest cast Masukukaja as well.\n\nHe spends most of his time using all sorts of break skills and\nMahamaon/Mamudoon skills. Once he breaks everyone's resistances, he'll\nuse a lot of Ma-dyne attacks. It's pretty annoy...",
+        "buildPrep": "None"
+      }
+    ]
+  },
+  {
+    "gameId": "p3r",
+    "bosses": [
+      {
+        "name": "Priestess (Arcana Boss)",
+        "level": 10,
+        "location": "Monorail Bridge",
+        "party": "Yukari Takeba, Junpei Iori",
+        "weaknesses": "None",
+        "resistances": "Ice (Null), Fire (Resist)",
+        "strategy": "This is a time-limited fight on a runaway monorail. You have 30 minutes (plenty of time) to reach the front and defeat the boss. Priestess has no elemental weaknesses. Use Junpei's physical attacks and the protagonist's strong physical/elemental attacks. Have Yukari heal using Media. Watch out for summon mobs; defeat them quickly.",
+        "buildPrep": "Equip Slash/Strike boosting accessories or standard health boosters. Use a persona like Omoikane or Pixie for support, or Valkyrie/Apsaras for physical/magic output."
+      },
+      {
+        "name": "Empress & Emperor (Arcana Bosses)",
+        "level": 15,
+        "location": "Tartarus Block 2 (Arqa) Border",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "Empress (Physical), Emperor (Magic)",
+        "resistances": "Empress (Repel Magic), Emperor (Repel Phys)",
+        "strategy": "The bosses will swap their elemental resistances and weaknesses using Paradigm Shift. Empress is immune/repels magic but is weak to physical. Emperor is immune/repels physical but is weak to magic. Direct Junpei's physical attacks to Empress and Akihiko's electric magic/Protagonist's magic to Emperor. Keep tracking their status screen.",
+        "buildPrep": "Bring a persona that has both single-target physical (like Valkyrie or Ara Mitama) and magic skills (like Jack Frost or Lilim)."
+      },
+      {
+        "name": "Hierophant (Arcana Boss)",
+        "level": 23,
+        "location": "Shirakawa Boulevard (Love Hotel)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Electric (Null), Strike (Resist)",
+        "strategy": "Avoid bringing Yukari if possible, or keep her guarding, as the boss uses Zionga/Mazionga which hits her wind weakness. The boss also casts Prophecy of Ruin (Fear). Use Patra or Dis-Fear immediately. Focus on physical damage and fire/ice/wind magic. Akihiko can use Tarunda to decrease the boss's attack power.",
+        "buildPrep": "Fuse a persona that resists or nullifies Electricity, such as Take-Minakata or Shiisaa. Stock up on Dis-Fear items."
+      },
+      {
+        "name": "Lovers (Arcana Boss)",
+        "level": 25,
+        "location": "Club Escapade (Chamber of Secrets)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Fire/Ice/Elec/Wind (Resist)",
+        "strategy": "Lovers will cast Holy Arrow to Charm your party members. Charmed members might heal the boss or strike teammates. Keep Yukari on healing/support duty to cast Patra/Me Patra. Deal damage using physical skills like Assault Dive or Double Fangs. Keep the protagonist's HP topped off.",
+        "buildPrep": "Purchase 10+ Dis-Charm items from the pharmacy in Paulownia Mall. Use personas with Null/Resist Charm if available."
+      },
+      {
+        "name": "Chariot & Hermit (Arcana Bosses)",
+        "level": 32,
+        "location": "Tartarus (Infiltration)",
+        "party": "Yukari Takeba, Junpei Iori, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "They start fused as one entity. Once you deplete their combined HP, they split into two separate bosses (Chariot and Hermit). You must defeat both of them in the same turn; otherwise, they will execute a Fusion Raid to revive each other with half HP. Get both of their HP bars down to a slither, then use a multi-target or sequential turn to kill both.",
+        "buildPrep": "Equip personas with multi-target spells like Mabufu or Maragi, and ensure Aigis has Matarukaja to buff team attack."
+      },
+      {
+        "name": "Justice & Strength (Arcana Bosses)",
+        "level": 39,
+        "location": "Military Base (Underground)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada, Koromaru",
+        "weaknesses": "None",
+        "resistances": "Light/Dark (Block)",
+        "strategy": "Strength does massive physical damage and uses Power Charge, while Justice uses Light-based instant-death spells (Hama) and targets weaknesses. Focus on Strength first using your strongest physical skills or magic. Use Akihiko's Tarunda to lower Strength's physical damage. Keep your party's HP above 80%.",
+        "buildPrep": "Equip Homunculus items on all characters to survive Hama instant-death spells. Avoid using personas weak to Light or Dark."
+      },
+      {
+        "name": "Hanged Man (Arcana Boss)",
+        "level": 54,
+        "location": "Tartarus (Final Block Entrance)",
+        "party": "Yukari Takeba, Akihiko Sanada, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "The boss floats in the air and cannot be targeted. He summons three Maya statues. You must destroy all three statues to drag the Hanged Man down to the ground. Once he is grounded, he takes normal damage. Unload your strongest physical and elemental attacks (Brave Blade, Agidyne). Heal immediately if he uses Megidola.",
+        "buildPrep": "Bring a dedicated healer like Yukari. Fuse personas with high physical defenses like Chernobog or Thor."
+      },
+      {
+        "name": "Nyx Avatar (Final Boss)",
+        "level": 75,
+        "location": "Tartarus Top (Chamber of Star)",
+        "party": "Yukari Takeba, Mitsuru Kirijo, Akihiko Sanada, Aigis",
+        "weaknesses": "Varies by phase",
+        "resistances": "Varies by phase",
+        "strategy": "This is a massive 14-phase battle representing the Arcana (Fool to Death). Each phase changes Nyx's weaknesses, resistances, and behavior. The final phase (Death) has 6000+ HP and casts Night Queen, which deals severe Almighty damage and randomly inflicts status conditions (Charm, Rage, Fear). Use Mediarahan and Amrita Soda/Patra immediately.",
+        "buildPrep": "Level up to at least 75. Bring a dedicated healer (Yukari with Mediarahan) and a buffer/debuffer (Akihiko or Aigis). Fuse Messiah, Odin, or Helel."
+      }
+    ]
+  },
+  {
+    "gameId": "p3fes",
+    "bosses": [
+      {
+        "name": "Priestess (Arcana Boss)",
+        "level": 10,
+        "location": "Monorail Bridge",
+        "party": "Yukari Takeba, Junpei Iori",
+        "weaknesses": "None",
+        "resistances": "Ice (Null), Fire (Resist)",
+        "strategy": "This is a time-limited fight on a runaway monorail. You have 30 minutes (plenty of time) to reach the front and defeat the boss. Priestess has no elemental weaknesses. Use Junpei's physical attacks and the protagonist's strong physical/elemental attacks. Have Yukari heal using Media. Watch out for summon mobs; defeat them quickly.",
+        "buildPrep": "Equip Slash/Strike boosting accessories or standard health boosters. Use a persona like Omoikane or Pixie for support, or Valkyrie/Apsaras for physical/magic output."
+      },
+      {
+        "name": "Empress & Emperor (Arcana Bosses)",
+        "level": 15,
+        "location": "Tartarus Block 2 (Arqa) Border",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "Empress (Physical), Emperor (Magic)",
+        "resistances": "Empress (Repel Magic), Emperor (Repel Phys)",
+        "strategy": "The bosses will swap their elemental resistances and weaknesses using Paradigm Shift. Empress is immune/repels magic but is weak to physical. Emperor is immune/repels physical but is weak to magic. Direct Junpei's physical attacks to Empress and Akihiko's electric magic/Protagonist's magic to Emperor. Keep tracking their status screen.",
+        "buildPrep": "Bring a persona that has both single-target physical (like Valkyrie or Ara Mitama) and magic skills (like Jack Frost or Lilim)."
+      },
+      {
+        "name": "Hierophant (Arcana Boss)",
+        "level": 23,
+        "location": "Shirakawa Boulevard (Love Hotel)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Electric (Null), Strike (Resist)",
+        "strategy": "Avoid bringing Yukari if possible, or keep her guarding, as the boss uses Zionga/Mazionga which hits her wind weakness. The boss also casts Prophecy of Ruin (Fear). Use Patra or Dis-Fear immediately. Focus on physical damage and fire/ice/wind magic. Akihiko can use Tarunda to decrease the boss's attack power.",
+        "buildPrep": "Fuse a persona that resists or nullifies Electricity, such as Take-Minakata or Shiisaa. Stock up on Dis-Fear items."
+      },
+      {
+        "name": "Lovers (Arcana Boss)",
+        "level": 25,
+        "location": "Club Escapade (Chamber of Secrets)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Fire/Ice/Elec/Wind (Resist)",
+        "strategy": "Lovers will cast Holy Arrow to Charm your party members. Charmed members might heal the boss or strike teammates. Keep Yukari on healing/support duty to cast Patra/Me Patra. Deal damage using physical skills like Assault Dive or Double Fangs. Keep the protagonist's HP topped off.",
+        "buildPrep": "Purchase 10+ Dis-Charm items from the pharmacy in Paulownia Mall. Use personas with Null/Resist Charm if available."
+      },
+      {
+        "name": "Chariot & Hermit (Arcana Bosses)",
+        "level": 32,
+        "location": "Tartarus (Infiltration)",
+        "party": "Yukari Takeba, Junpei Iori, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "They start fused as one entity. Once you deplete their combined HP, they split into two separate bosses (Chariot and Hermit). You must defeat both of them in the same turn; otherwise, they will execute a Fusion Raid to revive each other with half HP. Get both of their HP bars down to a slither, then use a multi-target or sequential turn to kill both.",
+        "buildPrep": "Equip personas with multi-target spells like Mabufu or Maragi, and ensure Aigis has Matarukaja to buff team attack."
+      },
+      {
+        "name": "Justice & Strength (Arcana Bosses)",
+        "level": 39,
+        "location": "Military Base (Underground)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada, Koromaru",
+        "weaknesses": "None",
+        "resistances": "Light/Dark (Block)",
+        "strategy": "Strength does massive physical damage and uses Power Charge, while Justice uses Light-based instant-death spells (Hama) and targets weaknesses. Focus on Strength first using your strongest physical skills or magic. Use Akihiko's Tarunda to lower Strength's physical damage. Keep your party's HP above 80%.",
+        "buildPrep": "Equip Homunculus items on all characters to survive Hama instant-death spells. Avoid using personas weak to Light or Dark."
+      },
+      {
+        "name": "Hanged Man (Arcana Boss)",
+        "level": 54,
+        "location": "Tartarus (Final Block Entrance)",
+        "party": "Yukari Takeba, Akihiko Sanada, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "The boss floats in the air and cannot be targeted. He summons three Maya statues. You must destroy all three statues to drag the Hanged Man down to the ground. Once he is grounded, he takes normal damage. Unload your strongest physical and elemental attacks (Brave Blade, Agidyne). Heal immediately if he uses Megidola.",
+        "buildPrep": "Bring a dedicated healer like Yukari. Fuse personas with high physical defenses like Chernobog or Thor."
+      },
+      {
+        "name": "Nyx Avatar (Final Boss)",
+        "level": 75,
+        "location": "Tartarus Top (Chamber of Star)",
+        "party": "Yukari Takeba, Mitsuru Kirijo, Akihiko Sanada, Aigis",
+        "weaknesses": "Varies by phase",
+        "resistances": "Varies by phase",
+        "strategy": "This is a massive 14-phase battle representing the Arcana (Fool to Death). Each phase changes Nyx's weaknesses, resistances, and behavior. The final phase (Death) has 6000+ HP and casts Night Queen, which deals severe Almighty damage and randomly inflicts status conditions (Charm, Rage, Fear). Use Mediarahan and Amrita Soda/Patra immediately.",
+        "buildPrep": "Level up to at least 75. Bring a dedicated healer (Yukari with Mediarahan) and a buffer/debuffer (Akihiko or Aigis). Fuse Messiah, Odin, or Helel."
+      }
+    ]
+  },
+  {
+    "gameId": "p3p",
+    "bosses": [
+      {
+        "name": "Priestess (Arcana Boss)",
+        "level": 10,
+        "location": "Monorail Bridge",
+        "party": "Yukari Takeba, Junpei Iori",
+        "weaknesses": "None",
+        "resistances": "Ice (Null), Fire (Resist)",
+        "strategy": "This is a time-limited fight on a runaway monorail. You have 30 minutes (plenty of time) to reach the front and defeat the boss. Priestess has no elemental weaknesses. Use Junpei's physical attacks and the protagonist's strong physical/elemental attacks. Have Yukari heal using Media. Watch out for summon mobs; defeat them quickly.",
+        "buildPrep": "Equip Slash/Strike boosting accessories or standard health boosters. Use a persona like Omoikane or Pixie for support, or Valkyrie/Apsaras for physical/magic output."
+      },
+      {
+        "name": "Empress & Emperor (Arcana Bosses)",
+        "level": 15,
+        "location": "Tartarus Block 2 (Arqa) Border",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "Empress (Physical), Emperor (Magic)",
+        "resistances": "Empress (Repel Magic), Emperor (Repel Phys)",
+        "strategy": "The bosses will swap their elemental resistances and weaknesses using Paradigm Shift. Empress is immune/repels magic but is weak to physical. Emperor is immune/repels physical but is weak to magic. Direct Junpei's physical attacks to Empress and Akihiko's electric magic/Protagonist's magic to Emperor. Keep tracking their status screen.",
+        "buildPrep": "Bring a persona that has both single-target physical (like Valkyrie or Ara Mitama) and magic skills (like Jack Frost or Lilim)."
+      },
+      {
+        "name": "Hierophant (Arcana Boss)",
+        "level": 23,
+        "location": "Shirakawa Boulevard (Love Hotel)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Electric (Null), Strike (Resist)",
+        "strategy": "Avoid bringing Yukari if possible, or keep her guarding, as the boss uses Zionga/Mazionga which hits her wind weakness. The boss also casts Prophecy of Ruin (Fear). Use Patra or Dis-Fear immediately. Focus on physical damage and fire/ice/wind magic. Akihiko can use Tarunda to decrease the boss's attack power.",
+        "buildPrep": "Fuse a persona that resists or nullifies Electricity, such as Take-Minakata or Shiisaa. Stock up on Dis-Fear items."
+      },
+      {
+        "name": "Lovers (Arcana Boss)",
+        "level": 25,
+        "location": "Club Escapade (Chamber of Secrets)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada",
+        "weaknesses": "None",
+        "resistances": "Fire/Ice/Elec/Wind (Resist)",
+        "strategy": "Lovers will cast Holy Arrow to Charm your party members. Charmed members might heal the boss or strike teammates. Keep Yukari on healing/support duty to cast Patra/Me Patra. Deal damage using physical skills like Assault Dive or Double Fangs. Keep the protagonist's HP topped off.",
+        "buildPrep": "Purchase 10+ Dis-Charm items from the pharmacy in Paulownia Mall. Use personas with Null/Resist Charm if available."
+      },
+      {
+        "name": "Chariot & Hermit (Arcana Bosses)",
+        "level": 32,
+        "location": "Tartarus (Infiltration)",
+        "party": "Yukari Takeba, Junpei Iori, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "They start fused as one entity. Once you deplete their combined HP, they split into two separate bosses (Chariot and Hermit). You must defeat both of them in the same turn; otherwise, they will execute a Fusion Raid to revive each other with half HP. Get both of their HP bars down to a slither, then use a multi-target or sequential turn to kill both.",
+        "buildPrep": "Equip personas with multi-target spells like Mabufu or Maragi, and ensure Aigis has Matarukaja to buff team attack."
+      },
+      {
+        "name": "Justice & Strength (Arcana Bosses)",
+        "level": 39,
+        "location": "Military Base (Underground)",
+        "party": "Yukari Takeba, Junpei Iori, Akihiko Sanada, Koromaru",
+        "weaknesses": "None",
+        "resistances": "Light/Dark (Block)",
+        "strategy": "Strength does massive physical damage and uses Power Charge, while Justice uses Light-based instant-death spells (Hama) and targets weaknesses. Focus on Strength first using your strongest physical skills or magic. Use Akihiko's Tarunda to lower Strength's physical damage. Keep your party's HP above 80%.",
+        "buildPrep": "Equip Homunculus items on all characters to survive Hama instant-death spells. Avoid using personas weak to Light or Dark."
+      },
+      {
+        "name": "Hanged Man (Arcana Boss)",
+        "level": 54,
+        "location": "Tartarus (Final Block Entrance)",
+        "party": "Yukari Takeba, Akihiko Sanada, Mitsuru Kirijo, Aigis",
+        "weaknesses": "None",
+        "resistances": "Slash/Strike/Pierce (Resist)",
+        "strategy": "The boss floats in the air and cannot be targeted. He summons three Maya statues. You must destroy all three statues to drag the Hanged Man down to the ground. Once he is grounded, he takes normal damage. Unload your strongest physical and elemental attacks (Brave Blade, Agidyne). Heal immediately if he uses Megidola.",
+        "buildPrep": "Bring a dedicated healer like Yukari. Fuse personas with high physical defenses like Chernobog or Thor."
+      },
+      {
+        "name": "Nyx Avatar (Final Boss)",
+        "level": 75,
+        "location": "Tartarus Top (Chamber of Star)",
+        "party": "Yukari Takeba, Mitsuru Kirijo, Akihiko Sanada, Aigis",
+        "weaknesses": "Varies by phase",
+        "resistances": "Varies by phase",
+        "strategy": "This is a massive 14-phase battle representing the Arcana (Fool to Death). Each phase changes Nyx's weaknesses, resistances, and behavior. The final phase (Death) has 6000+ HP and casts Night Queen, which deals severe Almighty damage and randomly inflicts status conditions (Charm, Rage, Fear). Use Mediarahan and Amrita Soda/Patra immediately.",
+        "buildPrep": "Level up to at least 75. Bring a dedicated healer (Yukari with Mediarahan) and a buffer/debuffer (Akihiko or Aigis). Fuse Messiah, Odin, or Helel."
+      }
+    ]
+  },
+  {
+    "gameId": "p5r",
+    "bosses": [
+      {
+        "name": "Shadow Kamoshida (Asmodeus)",
+        "level": 11,
+        "location": "Castle Palace (Throne Room)",
+        "party": "Ryuji Sakamoto, Morgana, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "In the first phase, attack him directly. In the second phase, Kamoshida will summon cognitive assistants or target specific members. You will be prompted to send one party member on a stealth mission to steal Kamoshida's crown. While they are sneakily moving, you MUST attack Kamoshida every turn to draw his attention. Once the crown is stolen, his defense falls to zero.",
+        "buildPrep": "Purchase a few Medicines and Takemedic-Alls from Takemi's clinic in Yongen-Jaya. Equip Ryuji with physical-boosting gear."
+      },
+      {
+        "name": "Shadow Madarame (Azazel)",
+        "level": 18,
+        "location": "Museum Palace (Main Exhibit)",
+        "party": "Ryuji Sakamoto, Yusuke Kitagawa, Morgana",
+        "weaknesses": "Eyes/Nose (Magic), Mouth (Physical/Gun)",
+        "resistances": "Eyes/Nose (Absorb Phys), Mouth (Absorb Magic)",
+        "strategy": "Madarame splits into four painting parts (Left Eye, Right Eye, Nose, Mouth). The eyes and nose absorb physical attacks, but are vulnerable to magic. The mouth absorbs magic, but is vulnerable to physical. Use Ryuji and Yusuke's physical attacks on the mouth, and magic spells (Agi, Bufu, Zio) on the eyes/nose. Once the paintings are down, Madarame's true form appears. Perform baton passes to wipe him out.",
+        "buildPrep": "Fuse Shiisaa or Ame-no-Uzume. Ensure the protagonist has a variety of elemental spells (Fire, Ice, Elec, Wind)."
+      },
+      {
+        "name": "Shadow Kaneshiro (Bael)",
+        "level": 24,
+        "location": "Bank Palace (Vault Entrance)",
+        "party": "Ryuji Sakamoto, Makoto Niijima, Yusuke Kitagawa",
+        "weaknesses": "None",
+        "resistances": "Fire/Ice/Elec/Wind (Resist)",
+        "strategy": "First, fight Kaneshiro directly. He will then summon Piggytron. Piggytron has very high defense and uses rolling physical attacks. When Kaneshiro charges his 'Super VIP Form' roll, you must either guard with everyone or throw a high-value item (like a gold coin or jewelry) to distract him, canceling the attack. Once Piggytron is broken, Kaneshiro is easy to defeat.",
+        "buildPrep": "Bring Makoto for Media (AoE healing) and Rakukaja (defense buff). Make sure you have at least one high-value treasure item in inventory."
+      },
+      {
+        "name": "Shadow Wakaba (Cognitive Wakaba)",
+        "level": 34,
+        "location": "Pyramid Palace (Chamber of Sanctuary)",
+        "party": "Morgana, Yusuke Kitagawa, Makoto Niijima",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "Wakaba flies high above the arena, making her immune to physical/melee attacks. Spam magic spells (Garu, Frei, Bufu) to deal chip damage. Futaba will periodically assist and deploy a ballista. When the prompt appears, assign a party member to fire the ballista. This knocks Wakaba to the ground, where she takes double damage from physical attacks.",
+        "buildPrep": "Equip defensive gear that reduces Wind or Physical damage. Bring Wind/Physical warding items if possible."
+      },
+      {
+        "name": "Shadow Okumura (Mammon)",
+        "level": 43,
+        "location": "Space Palace (Facility Outskirts)",
+        "party": "Morgana, Haru Okumura, Makoto Niijima",
+        "weaknesses": "Varies by Robot Wave",
+        "resistances": "Varies by Robot Wave",
+        "strategy": "This is a 30-minute time limit battle. You must fight waves of corporate robots. Each wave must be defeated entirely within 2 turns; otherwise, the survivors flee and the wave resets. Wave 1 is weak to Fire/Wind. Wave 2 is weak to Ice/Psy. Wave 3 is weak to Elec/Nuke. Wave 4 is weak to Wind/Bless. Wave 5 (Tall Executive) is weak to Psy/Curse. Use single-target elemental items or spells to chain Baton Passes to Level 4 for massive damage.",
+        "buildPrep": "Craft element-damage items (Psy Magatamas, Wind Magatamas) before the palace run. Bring Haru for Psy attacks, Morgana for Wind, and Makoto for Nuke."
+      },
+      {
+        "name": "Shadow Sae (Leviathan)",
+        "level": 53,
+        "location": "Casino Palace (High Roller Arena)",
+        "party": "Makoto Niijima, Ryuji Sakamoto, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "The battle starts with a Roulette game. You must not attack Sae or use healing spells, or she will drain your HP/SP as a penalty. Place your bets as directed. Once the cheat is exposed, send a party member to disable the glass-top cheating mechanism. In the second phase, Sae transforms and uses multi-elemental attacks. Debuff her with Tarunda.",
+        "buildPrep": "Have a persona with Dekaja to remove Sae's Heat Riser. Bring characters with good magic defense."
+      },
+      {
+        "name": "Shadow Shido (Samael)",
+        "level": 63,
+        "location": "Cruiser Palace (Representative Chamber)",
+        "party": "Ryuji Sakamoto, Ann Takamaki, Makoto Niijima",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "A multi-phase fight. Phase 1 (Beast of Sacrifice) repels magic, use physical. Phase 2 (Wings of Sacrifice) repels physical, use magic. Phase 3 (Tomb of Sacrifice) uses heavy elemental spells. The final phase is Shido himself. Shido casts Megidolaon and Tyrant's Fist. Buff your party's defense with Makoto's Marakukaja and debuff Shido with Tarunda or Debilitate.",
+        "buildPrep": "Bring a persona that knows Megidolaon and Debilitate (like Trumpeter). Ensure all party members have Mediarahan or similar heals."
+      },
+      {
+        "name": "Yaldabaoth (God of Control)",
+        "level": 72,
+        "location": "Qliphoth World (Temple of Control)",
+        "party": "Ryuji Sakamoto, Makoto Niijima, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "Yaldabaoth will spawn four arms: Gun (reflects Wind/Bless), Bell (reflects Fire/Psy), Sword (reflects Phys/Slash), and Book (reflects Ice/Nuke). The arms inflict status conditions like Lust, Wrath, Gluttony, and Pride. You must defeat the arms quickly using AoE magic or strong physical skills (Hassou Tobi) before they coordinate an ultimate attack.",
+        "buildPrep": "Max out all primary weapons/armor. Bring 5+ Soma or Balm of Life items. Fuse Yoshitsune, Satanael, or Kohryu."
+      },
+      {
+        "name": "Dr. Takuto Maruki & Azathoth",
+        "level": 99,
+        "location": "Laboratory Palace (Eden)",
+        "party": "Goro Akechi, Sumire Yoshizawa, Makoto Niijima",
+        "weaknesses": "Tentacles (Varies)",
+        "resistances": "Azathoth (Nullifies elements if tentacles are active)",
+        "strategy": "You must attack and defeat the tentacles first to break Azathoth's shield. The tentacles have specific elemental weaknesses (Fire, Psy, etc.) which change. Once the tentacles are down, focus all damage on Azathoth (the main Persona). Maruki will periodically ban certain action types (e.g. healing, physical attacks, magic). Baton pass frequently to boost damage.",
+        "buildPrep": "Ensure the Faith (Sumire) and Councillor (Maruki) confidants are maxed out. Bring high-end personas like Yoshitsune, Fafnir, or Raoul."
+      }
+    ]
+  },
+  {
+    "gameId": "p5",
+    "bosses": [
+      {
+        "name": "Shadow Kamoshida (Asmodeus)",
+        "level": 11,
+        "location": "Castle Palace (Throne Room)",
+        "party": "Ryuji Sakamoto, Morgana, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "In the first phase, attack him directly. In the second phase, Kamoshida will summon cognitive assistants or target specific members. You will be prompted to send one party member on a stealth mission to steal Kamoshida's crown. While they are sneakily moving, you MUST attack Kamoshida every turn to draw his attention. Once the crown is stolen, his defense falls to zero.",
+        "buildPrep": "Purchase a few Medicines and Takemedic-Alls from Takemi's clinic in Yongen-Jaya. Equip Ryuji with physical-boosting gear."
+      },
+      {
+        "name": "Shadow Madarame (Azazel)",
+        "level": 18,
+        "location": "Museum Palace (Main Exhibit)",
+        "party": "Ryuji Sakamoto, Yusuke Kitagawa, Morgana",
+        "weaknesses": "Eyes/Nose (Magic), Mouth (Physical/Gun)",
+        "resistances": "Eyes/Nose (Absorb Phys), Mouth (Absorb Magic)",
+        "strategy": "Madarame splits into four painting parts (Left Eye, Right Eye, Nose, Mouth). The eyes and nose absorb physical attacks, but are vulnerable to magic. The mouth absorbs magic, but is vulnerable to physical. Use Ryuji and Yusuke's physical attacks on the mouth, and magic spells (Agi, Bufu, Zio) on the eyes/nose. Once the paintings are down, Madarame's true form appears. Perform baton passes to wipe him out.",
+        "buildPrep": "Fuse Shiisaa or Ame-no-Uzume. Ensure the protagonist has a variety of elemental spells (Fire, Ice, Elec, Wind)."
+      },
+      {
+        "name": "Shadow Kaneshiro (Bael)",
+        "level": 24,
+        "location": "Bank Palace (Vault Entrance)",
+        "party": "Ryuji Sakamoto, Makoto Niijima, Yusuke Kitagawa",
+        "weaknesses": "None",
+        "resistances": "Fire/Ice/Elec/Wind (Resist)",
+        "strategy": "First, fight Kaneshiro directly. He will then summon Piggytron. Piggytron has very high defense and uses rolling physical attacks. When Kaneshiro charges his 'Super VIP Form' roll, you must either guard with everyone or throw a high-value item (like a gold coin or jewelry) to distract him, canceling the attack. Once Piggytron is broken, Kaneshiro is easy to defeat.",
+        "buildPrep": "Bring Makoto for Media (AoE healing) and Rakukaja (defense buff). Make sure you have at least one high-value treasure item in inventory."
+      },
+      {
+        "name": "Shadow Wakaba (Cognitive Wakaba)",
+        "level": 34,
+        "location": "Pyramid Palace (Chamber of Sanctuary)",
+        "party": "Morgana, Yusuke Kitagawa, Makoto Niijima",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "Wakaba flies high above the arena, making her immune to physical/melee attacks. Spam magic spells (Garu, Frei, Bufu) to deal chip damage. Futaba will periodically assist and deploy a ballista. When the prompt appears, assign a party member to fire the ballista. This knocks Wakaba to the ground, where she takes double damage from physical attacks.",
+        "buildPrep": "Equip defensive gear that reduces Wind or Physical damage. Bring Wind/Physical warding items if possible."
+      },
+      {
+        "name": "Shadow Okumura (Mammon)",
+        "level": 43,
+        "location": "Space Palace (Facility Outskirts)",
+        "party": "Morgana, Haru Okumura, Makoto Niijima",
+        "weaknesses": "Varies by Robot Wave",
+        "resistances": "Varies by Robot Wave",
+        "strategy": "This is a 30-minute time limit battle. You must fight waves of corporate robots. Each wave must be defeated entirely within 2 turns; otherwise, the survivors flee and the wave resets. Wave 1 is weak to Fire/Wind. Wave 2 is weak to Ice/Psy. Wave 3 is weak to Elec/Nuke. Wave 4 is weak to Wind/Bless. Wave 5 (Tall Executive) is weak to Psy/Curse. Use single-target elemental items or spells to chain Baton Passes to Level 4 for massive damage.",
+        "buildPrep": "Craft element-damage items (Psy Magatamas, Wind Magatamas) before the palace run. Bring Haru for Psy attacks, Morgana for Wind, and Makoto for Nuke."
+      },
+      {
+        "name": "Shadow Sae (Leviathan)",
+        "level": 53,
+        "location": "Casino Palace (High Roller Arena)",
+        "party": "Makoto Niijima, Ryuji Sakamoto, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "The battle starts with a Roulette game. You must not attack Sae or use healing spells, or she will drain your HP/SP as a penalty. Place your bets as directed. Once the cheat is exposed, send a party member to disable the glass-top cheating mechanism. In the second phase, Sae transforms and uses multi-elemental attacks. Debuff her with Tarunda.",
+        "buildPrep": "Have a persona with Dekaja to remove Sae's Heat Riser. Bring characters with good magic defense."
+      },
+      {
+        "name": "Shadow Shido (Samael)",
+        "level": 63,
+        "location": "Cruiser Palace (Representative Chamber)",
+        "party": "Ryuji Sakamoto, Ann Takamaki, Makoto Niijima",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "A multi-phase fight. Phase 1 (Beast of Sacrifice) repels magic, use physical. Phase 2 (Wings of Sacrifice) repels physical, use magic. Phase 3 (Tomb of Sacrifice) uses heavy elemental spells. The final phase is Shido himself. Shido casts Megidolaon and Tyrant's Fist. Buff your party's defense with Makoto's Marakukaja and debuff Shido with Tarunda or Debilitate.",
+        "buildPrep": "Bring a persona that knows Megidolaon and Debilitate (like Trumpeter). Ensure all party members have Mediarahan or similar heals."
+      },
+      {
+        "name": "Yaldabaoth (God of Control)",
+        "level": 72,
+        "location": "Qliphoth World (Temple of Control)",
+        "party": "Ryuji Sakamoto, Makoto Niijima, Ann Takamaki",
+        "weaknesses": "None",
+        "resistances": "None",
+        "strategy": "Yaldabaoth will spawn four arms: Gun (reflects Wind/Bless), Bell (reflects Fire/Psy), Sword (reflects Phys/Slash), and Book (reflects Ice/Nuke). The arms inflict status conditions like Lust, Wrath, Gluttony, and Pride. You must defeat the arms quickly using AoE magic or strong physical skills (Hassou Tobi) before they coordinate an ultimate attack.",
+        "buildPrep": "Max out all primary weapons/armor. Bring 5+ Soma or Balm of Life items. Fuse Yoshitsune, Satanael, or Kohryu."
+      },
+      {
+        "name": "Dr. Takuto Maruki & Azathoth",
+        "level": 99,
+        "location": "Laboratory Palace (Eden)",
+        "party": "Goro Akechi, Sumire Yoshizawa, Makoto Niijima",
+        "weaknesses": "Tentacles (Varies)",
+        "resistances": "Azathoth (Nullifies elements if tentacles are active)",
+        "strategy": "You must attack and defeat the tentacles first to break Azathoth's shield. The tentacles have specific elemental weaknesses (Fire, Psy, etc.) which change. Once the tentacles are down, focus all damage on Azathoth (the main Persona). Maruki will periodically ban certain action types (e.g. healing, physical attacks, magic). Baton pass frequently to boost damage.",
+        "buildPrep": "Ensure the Faith (Sumire) and Councillor (Maruki) confidants are maxed out. Bring high-end personas like Yoshitsune, Fafnir, or Raoul."
+      }
+    ]
+  },
+  {
+    "gameId": "p4",
+    "bosses": [
+      {
+        "name": "Yosuke's Shadow",
+        "level": 0,
+        "location": "N/A",
+        "party": "Izanagi",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This is the first \"boss fight\" of the game. It's pretty simple. Spam\nIzanagi's zio on him, and when he guards, you guard. If he uses Power\nCharge, use zio first and take your extra turn using Guard. If your\nhealth ever gets below half, make sure to use a medicine. (You have 5. Feel\nfree to use them!)...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Chie's Shadow",
+        "level": 0,
+        "location": "Yukiko's Castle 2F",
+        "party": "Izanagi",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "Easy fight, just be careful. Have Yosuke cast Garu on her, and she'll\nbe knocked down. She'll put up a Green Wall soon after, so just use\nyour physical attacks. Whenever the game says that she gazes at Yosuke,\nhave him guard for that turn. If you don't, she'll use a strong attack\ncalled Bottomless Envy (or mazio. I'm not quite sure, but I do know it\nknocks him down) that leaves Dizzy, and gives her another turn. The fight\nshould be over after a little while. Use a medicine if you have to....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Avenger Knight",
+        "level": 8,
+        "location": "Yukiko's Castle 5F",
+        "party": "Izanagi, Pixie, Slime with Resist Physical",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This is actually a pretty hard fight. In fact, after those bosses before, the\nnext few bosses in the game are actually some of the hardest fights in the\ngame. I recommend using a Goho-M on the 5th floor so you're all charged up when\nyou fight him. You may even want to do a little bit of grinding before this\nfight. Now... On to the actual fight. He uses regular physical attacks as well\nas other single-target physical attacks, including poison skewer that may\ninflict poison. I wouldn't even bother...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Yukiko's Shadow",
+        "level": 14,
+        "location": "Yukiko's Castle 8th Floor",
+        "party": "If you're at a high enough level, use Jack Frost. Valkyrie if",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "she knows Mabufu. Senri when the prince goes down.\n\nThis is probably the hardest fight you've done yet. She has a stong\narea attack that takes away over half of your character's hp, and she\nalso summons a minion to aid her in battle. Have Chie cast Mabufu every\nround, and this will hit the Charming Prince's weakness as well as\ndamage the real boss. Keep pressure on the minion until he falls down,\nand then focus on Shadow Yukiko. Yukiko's Shadow will cast White Wall\non the Charming Prince, taking...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Contrarian King",
+        "level": 16,
+        "location": "Yukiko's Castle 8th Floor",
+        "party": "None",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Daring Gigas",
+        "level": 18,
+        "location": "Steamy Bathhouse 7F",
+        "party": "Anything that can resist Physical attacks.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This boss hits hard, but it's not a hard fight. He is a lot like the\navenger knight, but a bit easier. He'll waste three turns buffing up,\nand then he'll start attacking. He doesn't have any special attacks,\njust the single-hit, regular attack. It will probably take away over\nhalf of a character's hp. When he uses Power Charge, make your\ncharacters guard. Pretty much, just heal whoever gets attacked, and\nthen have everyone use their strongest attacks on him....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Shadow Kanji",
+        "level": 22,
+        "location": "Steamy Bathhouse 11F",
+        "party": "Any personas with strong attacks and area attacks. One that",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "has resist physical. A persona with Support Skills. [Preferably\nTarunda]\n\nThis is probably the hardest fight yet. Not only does he have strong\narea attacks, but he also has two minions, that are tough to take down\nthemselves. His main attack that will wipe you out is swift strike.\nIt's a physical area attack, that can hit up to three times. If it hits\nthree times, it's most likely game over for you.\n\nFirst of all, start by killing Nice Guy. If possible, use physical area\nattacks to bring him dow...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Intolerant Officer",
+        "level": 25,
+        "location": "Steamy Bathhouse 11F",
+        "party": "None",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Amorous Snake",
+        "level": 28,
+        "location": "Marukyu Striptease 7F",
+        "party": "Anything with Agilao. Hua Po is good.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This is an easy fight. Exploit his weakness, and just keep using all\nout attacks. He uses Stagnant Air at the beginning of the battle, and\nwill then use Virus Wave sometime after. Heal the poison and keep\ngoing. He can also use Mind Slice which also causes confusion, so be\nready for that. Just make sure everyone's hp is kept above 50% and the\nbattle will soon be over.\n\nGalactic Punt works in this battle....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Rise's Shadow",
+        "level": 30,
+        "location": "Marukyu Striptease 11F",
+        "party": "Anything that can deal high damage.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This isn't the \"real\" boss of this dungeon. The battle will end once\nyou take away a little more than half of her hp, once she starts using\nSupreme Insight, just guard. Nothing you can really do, then.\n\nFor any difficulties in this fight, just make sure you keep everyone's\nhp high, and just unleash your strongest attacks on her, just so you\ndon't waste time. (Your hp & sp will be restored at the end of battle,\npreparing you for the real boss fight.)\n\nHer attack arsenal is just low-level magic sp...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Shadow Teddie",
+        "level": 31,
+        "location": "Marukyu Striptease 11F",
+        "party": "Anything that's immune to ice. Ganga and Unicorn are good;",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "Especially Ganga. If you have a high priestess social link, fuse Ganga and\nhopefully she'll level up enough to learn Mediarama.\n\nNot only is this a long fight, but it can get pretty troublesome if you\ndon't figure out his pattern. His favorite thing to do is use Mind\nCharge, and then cast Mabufula. He'll also cast Marakunda, and then use\nHeat Wave. If you try using buffs, there's a chance that he might use\nDekaja, so don't waste your time. Chances are, you'll have Yukiko in\nyour party as a heale...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Momentary Child",
+        "level": 34,
+        "location": "Marukyu Striptease 11F",
+        "party": "Ganga because of Bufula and Mediarama.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This isn't a hard fight. He uses Herculean Strike, and it's pretty\nstrong. It will take over half of your party's hp away, so heal with\nMedia or Mediarama.\n\nAll you really have to do in this fight is cast Bufula repetitively,\nand use Mediarama when hp is low. The boss is weak to ice, so hopefully\nyou're using Teddie, or even Chie.. Either way, have the MC and Teddie (or\nChie) use ice skills\nwhile the other party members heal and use physical attacks. If your hp\nis so low that you need extra heal...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Killing Hand",
+        "level": 35,
+        "location": "Void QUest 7F",
+        "party": "Personas with Magaru/Magarula/Garula.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "Thsi is an easy fight. It can be dragged on for a long time, though.\nThe killing Hand will summon an Almighty Hand to aid it in battle. The\nalmighty hand is weak against wind, so use wind attacks. If you have\nMagarula, use that instead of Garula, sicne it deals extra damage to\nthe boss. Hit him with it two times and he'll become dizzy. Try to\nfocus your efforts on the Almighty Hand, and completely focus your\nattacks on the killing hand when he's alone. He might summon another\none before the end ...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Mitsuo's Shadow",
+        "level": 38,
+        "location": "Void Quest 10F",
+        "party": "Anything with good agility. Black Frost is also helpful for",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "dealing high damage with Agidyne. Dis is an alternatica to Black Frost.\n\nThis is an interesting, and tricky fight. It's also pretty fun if you\nknow how to handle it. I personally never had any problems with him, but he's\nthe one boss I always see people complaining about.\n\nOnce the battle starts, you'll be fighting an 8-bit \"hero\" version of\nMitsuo. This isn't the actual fight. It's an \"outer shell\" of him. It\nhas 1400 hp, and once you defeat it, you'll be fighting the real thing.\nOnce you defea...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Escapist Soldier",
+        "level": 40,
+        "location": "Void Quest 10F",
+        "party": "Anything with high attack power and Mediarama. ALso, a",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "persona that is resistant in some way to dark attacks.\n\nThis is an easy fight. He has stong attacks, but they can only target\none charcter at a time. Try to keep everyone's health at max, because\nof his strong attacks. He has the Evil Smile and Ghastly Wail combo, so\nmake sure you get rid of fear on whoever has it. It's an easy fight, if\nyou aren't winning, then just grind some more. The Gaia sword you get\nfrom defeating this battle is very useful for a long while in the game.\n\nAlso, if you have...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Dominating Machine",
+        "level": 46,
+        "location": "Secret Laboratory 6F",
+        "party": "A Null Physical persona is extremely helpful in this fight.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This boss spends his whole time using Power Charge and then Herculean\nStrike. His pattern can easily kill you if you don't heal when it's\nneeded... And even then, it's possible for him to defeat you in one\nhit. Simply make sure that you keep your health full and attack when it\nis. When his health gets to 25%, he'll stand by for three truns, then\nuse self-destruct. I suggest you try to defeat him in two rounds, and\nif you don't, then have everyone guard to take less damage from him.\n\nAnother very...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Naoto's Shadow",
+        "level": 48,
+        "location": "Secret Laboratory 9F",
+        "party": "Anything with Dekaja, or -dyne spells and high magic power.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "Ganga is a good idea for Dekaja + Mediarama, but not a must, seeing as\nskills can be passed down. Genbu, or anything with Masukukaja is\nhelpful, seeing as Shadow Naoto likes to use Ma-dyne spells.\n\nThis is a challenging fight; not hard. Shadow Naoto seems to be a boss\nthat can actually think. She is very strategic, so give her a taste of\nher own medicine.\n\nFirst things fist, be prepared with Dekaja. She uses Heat Riser quite\noften, and leaving that on would be suicide. She usually only uses it\nw...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Extreme Vessel",
+        "level": 48,
+        "location": "Secret Laboratory 9F",
+        "party": "Personas with Garula and Garudyne are nice.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This boss is weak against wind, so just blast him with your strongest\nwind spells and use Yosuke if he's a high enough level. If he uses\nPower Charge, he will use God's Hand shortly after. It will instantly\nkill a character, so make sure to revive. When he uses Power Charge,\nswitch to a null physical persona if you have one. When he uses Mind\nCharge, guard because he will use a hard-hitting Ma-Dyne spell of some\nsort. If you don't want to guard, use Makarakarn on the MC and have\neveryone else gu...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "World Balance",
+        "level": 54,
+        "location": "Heaven 7F",
+        "party": "Personas with Makarakarn and a lot of elemental resistances.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This is a straightforward fight. He'll use Mind Charge followed up by a\nsingle-target -dyne spell. His spells usually hit for 600+ damage a\npop, so it means instant death. Luckily, they're only single target!\nTherefore, there's practically no way he can kill your party unless he\ntargets a weakness or you decide not to revive any KO'ed chracters. If\nyou have personas with Makarakarn, use Makarakarn on the MC. If you\ndon't, then go to one that can reflect attacks, and isn't weak to any.\nYou really...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Kunino-Sagiri",
+        "level": 60,
+        "location": "Heaven 10F",
+        "party": "Personas that reflect ANY element are HIGHLY recommended, and",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "make this battle much, much easier.\n\nThis is a long, interesting fight. It's made much, much easier if you\nhave a persona that can reflect an element, though. Why? Because this\nbattle has an interesting pattern. Once you take away about 25% of his\nhealth, he'll use an attack called \"Quad Converge.\" This skill makes it\nso that he is strong against all elements, but takes 3x damage from a\nsingle one. You'll know which element it is, because it's the elememt\nthat he uses on your party. Once you con...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Lost Okina",
+        "level": 60,
+        "location": "Heaven 10F",
+        "party": "None",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "No strategy provided....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Chaos Fuzz",
+        "level": 65,
+        "location": "Magatsu Mandala 3F",
+        "party": "Personas with area spells AND single-target spells are nice.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This is an easy fight. The first one will summon another, and the\nsecond one will also do so. The key to this battle is to kill them all\nat the same time. Usually, he'll only summon three. If more than three\nare on the field, than it's just bad luck. Use area attacks throughout\nthe battle, and don't kill anyone in the process. Get everyone's hp low\n[to the point there's only a tenth of hp left] and use Ma-dyne or an\nalmighty spell.\n\nThese guys don't hit hard. There physical attacks take away abo...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Giant of Envy",
+        "level": 68,
+        "location": "Magatsu Mandala 6F",
+        "party": "Personas with strong Physical and Almighty attacks.",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "This fight isn't too hard, but he isn't exactly a pushover. He resists\nall types of attacks except for Physical and Almighty, and uses\nMegidolaon almost every turn. Not only are physical attacks the only\nelement he doesn't resist, but he also has High Counter, making your\nPhysical attacks more ineffective. Still, blast him away with your\nphysical attacks, hoping for some criticals. Megidolaon is better, disregarding\nthe fact that it\ntakes so much sp. His only other attack is Tentarafoo, and he u...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Adachi",
+        "level": 70,
+        "location": "Magatsu Town 3F",
+        "party": "Any persona that nullifies physical attacks makes this boss",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "seem like a joke. A persona with a lot of elemental resistances is also\nnice.\n\nThis fight is pretty easy. He has high defense, so it might last a\nwhile, but other than that, it's not hard at all. He'll usually cast\nVorpal Blade and -dyne and Ma-dyne spells. He occasionally uses Evil\nSmile, followed up with Gastly Wail. Because of this, make sure you're\nready with items or Amrita.\n\nJust attack his with physical attacks, and heal when your hp gets down\nabout halfway. It's as easy as that....",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Amenosagiri",
+        "level": 70,
+        "location": "Magatsu Town 3F",
+        "party": "Anything is fine, really. If possible, bring along a persona",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "with Spell Master that also has -dyne spells. Make sure that you also\nhave a persona with Mediarahan if one of your party members doesn't. If\nyou have a Trumpeter with Debilitate, then by all means use him.\n\nWhew, awesome music for an awesome fight with an awesome disco ball-eye-thing!\nIf you have Yosuke in your party, have him use Masukukaja as much as\npossible, and renew it when it wears off. When it isn't worn-off, use\nBrave Blade. If you're using Chie, use Power Charge + God's Hand, pretty m...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Neo Minotaur",
+        "level": 70,
+        "location": "Yomotsu Hirasaka 3F",
+        "party": "Null Physical is a lifesaver in this battle. Bring along a",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "persona with null physical and just hit auto Battle.\n\nThis is an easy fight, depending on how you approach it. If you aren't\nimmune to physical attacks, expect him to kill you in atleast three\nturns. His rampage attack can cause some serious damage, and it's an\ninstant kill if hits three times. However, Rampage is his only attack.\nIf you have a persona with Null Physical, by all means use him. It'll\nmake you completely invulnerable. He can use regular hyscial attacks,\nbut... They're still physic...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Sleeping Table",
+        "level": 70,
+        "location": "Yomotsu Hirasaka 6F",
+        "party": "Personas that are immune to fire and light. Bring Yoshitsune",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "if you have him.\n\nNot a hard fight. The Sleeping Table usually just uses Megidolaon, and\ntakes away about half of the party's hp with each use. Other than\nMegidolaon, expect him to cast Mahamaon and use the Evil Smile + Gastly\nWail combo throughout the battle. Make sure you heal Fear if you get\nhit by it, or else it's instant game-over. Last, he uses Maragidyne. It\nwon't do much damage, just as much as Megidolaon. Still, make sure to\nkeep your party healed throughout the battle. Use Mediarahan w...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Izanami",
+        "level": 75,
+        "location": "Yomotsu Hirasaka 9F",
+        "party": "Bring along Trumpeter obecause of the Debilitate/Heat Riser",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "combo. Norn is also nice, since you don't really need Heat Riser.\n\nMore awesome music time! This fight, overall, is pretty straightforward.\nIzanami is strong, and\nwill often knock-off more than half of the whole party's hp with her\nattacks. The fight is pretty easy, despite the amount of damage she\ndeals. As long as you keep up with Mediarahan every round, you should\nbe fine. When her hp gets around half, she'll start using Mind Charge\nthen Megidolaon very often. Make sure you guard, as it can w...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "Izanami-no-Okami",
+        "level": 75,
+        "location": "Yomotsu Hirasaka 9F",
+        "party": "Trumpeter for Heat Riser/Debilitate Combo. Any strong",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "personas with no weaknesses is good, as well. Yoshitsune,\nKohryu/Ishtar.\n\nThis is the real Final Boss, and she's not holding anything back. She\nhas a wide variety of new attacks, and the package even includes double\nturns. Her new moves are impressive, and this fight will be long enough\nso that you get to see all of them.\n\nFirst of all, let's review her new attacks. This isn't exactly a\nspecial attack of hers, but she will rarely use Agneyastra, and it can\nwipe out a character if it gets three h...",
+        "buildPrep": "None"
+      },
+      {
+        "name": "The Reaper",
+        "level": 70,
+        "location": "Randomly in Treasure chests on New Game Plus",
+        "party": "Personas like Helel that block Hama and Mudo skills help",
+        "weaknesses": "Varies",
+        "resistances": "Varies",
+        "strategy": "tremendously. Oh, and Yoshitsune. Why? Cause he's awesome.\n\nThis isn't a hard fight, but it can last for quite a long time, due to\nhigh hp AND defense. The best way to get past this is to use Rakunda on\nhim and Matarukaja on your party. If you don't mind spending the time\ndoing it, I suggest cast Masukukaja as well.\n\nHe spends most of his time using all sorts of break skills and\nMahamaon/Mamudoon skills. Once he breaks everyone's resistances, he'll\nuse a lot of Ma-dyne attacks. It's pretty annoy...",
+        "buildPrep": "None"
+      }
+    ]
+  }
+]

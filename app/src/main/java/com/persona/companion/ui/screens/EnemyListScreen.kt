@@ -284,14 +284,8 @@ fun EnemyListScreen(
 }
 
 // Helper function to get elements based on game
-private fun getElementsForGame(gameId: String): List<String> {
-    return when {
-        gameId.startsWith("p5") -> listOf("Physical", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
-        gameId.startsWith("p4") -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        gameId.startsWith("p3") -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        else -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-    }
-}
+private fun getElementsForGame(gameId: String): List<String> =
+    com.persona.companion.utils.ResistanceUtils.getElementNames(gameId)
 
 @Composable
 fun EnemyCard(
@@ -353,7 +347,7 @@ fun EnemyCard(
         
         Column(horizontalAlignment = Alignment.End) {
             Text(
-                text = "${enemy.hp} HP",
+                text = "${enemy.displayHp} HP",
                 style = MaterialTheme.typography.bodySmall,
                 color = TextSecondary
             )

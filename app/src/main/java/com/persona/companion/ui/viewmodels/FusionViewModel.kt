@@ -18,10 +18,22 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+enum class FusionType {
+    NORMAL, TRIPLE
+}
+
+enum class CalculatorMode {
+    REVERSE, FORWARD
+}
+
 data class FusionState(
     val personas: List<Persona> = emptyList(),
     val selectedPersona: Persona? = null,
+    val fusionType: FusionType? = null,
     val fusionRecipes: List<FusionRecipe> = emptyList(),
+    val calculatorMode: CalculatorMode = CalculatorMode.REVERSE,
+    val selectedIngredients: List<Persona?> = listOf(null, null, null),
+    val forwardResult: Persona? = null,
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
@@ -153,7 +165,41 @@ class FusionViewModel : ViewModel() {
         }
     }
 
+    fun isSpecialFusion(name: String): Boolean {
+        return fusionCalculator?.isSpecialFusion(name) == true
+    }
+
     fun selectPersona(persona: Persona) {
+        val calculator = fusionCalculator
+        val isSpecial = calculator?.isSpecialFusion(persona.name) == true
+
+        if (isSpecial) {
+            _state.value = _state.value.copy(
+                selectedPersona = persona,
+                fusionType = FusionType.NORMAL,
+                fusionRecipes = emptyList(),
+                isLoading = true
+            )
+            viewModelScope.launch {
+                val recipes = withContext(Dispatchers.Default) {
+                    calculator?.calculateFusionsFor(persona) ?: emptyList()
+                }
+                _state.value = _state.value.copy(
+                    fusionRecipes = recipes,
+                    isLoading = false
+                )
+            }
+        } else {
+            _state.value = _state.value.copy(
+                selectedPersona = persona,
+                fusionType = null,
+                fusionRecipes = emptyList()
+            )
+        }
+    }
+
+    fun selectFusionType(type: FusionType) {
+        val persona = _state.value.selectedPersona ?: return
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true)
 
@@ -167,21 +213,65 @@ class FusionViewModel : ViewModel() {
             }
 
             val recipes = withContext(Dispatchers.Default) {
-                calculator.calculateFusionsFor(persona)
+                if (type == FusionType.NORMAL) {
+                    calculator.calculateFusionsFor(persona)
+                } else {
+                    calculator.calculateTripleFusionsFor(persona)
+                }
             }
 
             _state.value = _state.value.copy(
-                selectedPersona = persona,
+                fusionType = type,
                 fusionRecipes = recipes,
                 isLoading = false
             )
         }
     }
 
+    fun setCalculatorMode(mode: CalculatorMode) {
+        _state.value = _state.value.copy(
+            calculatorMode = mode,
+            selectedPersona = null,
+            fusionType = null,
+            fusionRecipes = emptyList(),
+            selectedIngredients = listOf(null, null, null),
+            forwardResult = null
+        )
+    }
+
+    fun setIngredient(index: Int, persona: Persona?) {
+        val current = _state.value.selectedIngredients.toMutableList()
+        if (index in current.indices) {
+            current[index] = persona
+            _state.value = _state.value.copy(selectedIngredients = current)
+            calculateForwardResult()
+        }
+    }
+
+    private fun calculateForwardResult() {
+        val ingredients = _state.value.selectedIngredients.filterNotNull()
+        val calculator = fusionCalculator
+        if (calculator == null || ingredients.size < 2) {
+            _state.value = _state.value.copy(forwardResult = null)
+            return
+        }
+
+        val result = calculator.fuse(ingredients)
+        _state.value = _state.value.copy(forwardResult = result)
+    }
+
+    fun getRecipeCost(recipe: FusionRecipe): Int {
+        val calculator = fusionCalculator ?: return 0
+        return recipe.personas.sumOf { calculator.estimatePersonaCost(it.level ?: 0) }
+    }
+
     fun clearSelection() {
         _state.value = _state.value.copy(
             selectedPersona = null,
-            fusionRecipes = emptyList()
+            fusionType = null,
+            fusionRecipes = emptyList(),
+            selectedIngredients = listOf(null, null, null),
+            forwardResult = null
         )
     }
 

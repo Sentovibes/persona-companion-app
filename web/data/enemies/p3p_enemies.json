@@ -752,7 +752,7 @@
     "level": 14,
     "hp": 1500,
     "sp": 999,
-    "resists": "----d--nn",
+    "resists": "----d--nn-",
     "skills": [
       "Bufu",
       "Mabufu",
@@ -839,7 +839,7 @@
         "name": "Emperor",
         "hp": 800,
         "sp": 999,
-        "resists": "nnnwwwwnn",
+        "resists": "nnnwwwwnn-",
         "skills": [
           "Swift Strike",
           "Fatal End",
@@ -851,7 +851,7 @@
         "name": "Empress",
         "hp": 800,
         "sp": 999,
-        "resists": "wwwnnnnnn",
+        "resists": "wwwnnnnnn-",
         "skills": [
           "Magaru",
           "Mabufu",
@@ -1304,7 +1304,7 @@
     "level": 24,
     "hp": 2500,
     "sp": 999,
-    "resists": "-----d-nn",
+    "resists": "-----d-nn-",
     "skills": [
       "Zionga",
       "Mazio",
@@ -1323,7 +1323,7 @@
     "level": 25,
     "hp": 3000,
     "sp": 999,
-    "resists": "-------nn",
+    "resists": "-------nn-",
     "skills": [
       "Marin Karin",
       "Heartbreaker",
@@ -1764,7 +1764,7 @@
         "name": "Chariot",
         "hp": 1500,
         "sp": 999,
-        "resists": "rrr----nn",
+        "resists": "rrr----nn-",
         "skills": [
           "Kill Rush",
           "Tentarafoo",
@@ -1776,7 +1776,7 @@
         "name": "Justice",
         "hp": 1500,
         "sp": 999,
-        "resists": "---rrrrnn",
+        "resists": "---rrrrnn-",
         "skills": [
           "Twin Shot",
           "Hamaon",
@@ -2236,7 +2236,7 @@
     "level": 39,
     "hp": 4500,
     "sp": 999,
-    "resists": "-----drnn",
+    "resists": "-----drnn-",
     "skills": [
       "Giga Spark",
       "Zionga",
@@ -2617,7 +2617,7 @@
         "name": "Fortune",
         "hp": 3000,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Wheel of Fortune",
           "Garula",
@@ -2628,7 +2628,7 @@
         "name": "Strength",
         "hp": 3000,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Vajra Blast",
           "Deathbound",
@@ -3100,7 +3100,7 @@
         "name": "Hanged Man (Main Body)",
         "hp": 5500,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Akasha Arts",
           "God's Hand",
@@ -3111,7 +3111,7 @@
         "name": "Left Wing",
         "hp": 800,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Summon Devious Maya"
         ]
@@ -3120,7 +3120,7 @@
         "name": "Right Wing",
         "hp": 800,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Summon Devious Maya"
         ]
@@ -3288,7 +3288,7 @@
     "level": 56,
     "hp": 4000,
     "sp": 999,
-    "resists": "---d---nn",
+    "resists": "---d---nn-",
     "skills": [
       "Agidyne",
       "Maragidyne",
@@ -4755,7 +4755,7 @@
     "level": 73,
     "hp": 5500,
     "sp": 999,
-    "resists": "---r---nn",
+    "resists": "---r---nn-",
     "skills": [
       "Maragidyne",
       "Mudoon",
@@ -4834,7 +4834,7 @@
     "level": 74,
     "hp": 6500,
     "sp": 999,
-    "resists": "-------dd",
+    "resists": "-------dd-",
     "skills": [
       "Megidolaon",
       "Kougaon",
@@ -4989,7 +4989,7 @@
         "name": "Fool Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Almighty Attack"
         ]
@@ -4998,7 +4998,7 @@
         "name": "Magician Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "---d---nn",
+        "resists": "---d---nn-",
         "skills": [
           "Agidyne",
           "Maragidyne"
@@ -5008,7 +5008,7 @@
         "name": "Priestess Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "----d--nn",
+        "resists": "----d--nn-",
         "skills": [
           "Bufudyne",
           "Mabufudyne"
@@ -5018,7 +5018,7 @@
         "name": "Empress Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "------dnn",
+        "resists": "------dnn-",
         "skills": [
           "Garudyne",
           "Magarudyne"
@@ -5028,7 +5028,7 @@
         "name": "Emperor Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "-----d-nn",
+        "resists": "-----d-nn-",
         "skills": [
           "Ziodyne",
           "Maziodyne"
@@ -5038,7 +5038,7 @@
         "name": "Hierophant Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "-n-----nn",
+        "resists": "-n-----nn-",
         "skills": [
           "God's Hand",
           "Revolution"
@@ -5048,7 +5048,7 @@
         "name": "Lovers Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "------nnn",
+        "resists": "------nnn-",
         "skills": [
           "Marin Karin",
           "Holy Arrow"
@@ -5058,7 +5058,7 @@
         "name": "Chariot Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "nnn----nn",
+        "resists": "nnn----nn-",
         "skills": [
           "God's Hand",
           "Power Charge"
@@ -5068,7 +5068,7 @@
         "name": "Justice Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Hamaon",
           "Mahamaon"
@@ -5078,7 +5078,7 @@
         "name": "Hermit Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "-----nnnn",
+        "resists": "-----nnnn-",
         "skills": [
           "Thunder Reign",
           "Tetrakarn"
@@ -5088,7 +5088,7 @@
         "name": "Fortune Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "---nnnnnn",
+        "resists": "---nnnnnn-",
         "skills": [
           "Megidolaon"
         ]
@@ -5097,7 +5097,7 @@
         "name": "Strength Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "nnn----nn",
+        "resists": "nnn----nn-",
         "skills": [
           "Deathbound",
           "Rakunda"
@@ -5107,7 +5107,7 @@
         "name": "Hanged Man Phase",
         "hp": 1500,
         "sp": 999,
-        "resists": "rrn----nn",
+        "resists": "rrn----nn-",
         "skills": [
           "Akasha Arts",
           "Mudoon"
@@ -5117,7 +5117,7 @@
         "name": "Death Phase (True Form)",
         "hp": 6000,
         "sp": 9999,
-        "resists": "-------nn",
+        "resists": "-------nn-",
         "skills": [
           "Night Queen",
           "Almighty Attack",
@@ -5228,7 +5228,7 @@
     "level": 99,
     "hp": 20000,
     "sp": 9999,
-    "resists": "rrrrrrrnn",
+    "resists": "rrrrrrrnn-",
     "skills": [
       "Megidolaon",
       "Maragidyne",

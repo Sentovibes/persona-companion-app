@@ -22,6 +22,12 @@ import com.persona.companion.ui.screens.SocialLinkDetailScreen
 import com.persona.companion.ui.screens.SocialLinksScreen
 import com.persona.companion.ui.screens.SkillListScreen
 import com.persona.companion.ui.screens.ItemListScreen
+import com.persona.companion.ui.screens.GuidesHubScreen
+import com.persona.companion.ui.screens.QuestGuideScreen
+import com.persona.companion.ui.screens.BossGuideScreen
+import com.persona.companion.ui.screens.BossDetailScreen
+import com.persona.companion.ui.screens.DayByDayGuideScreen
+import com.persona.companion.ui.screens.NewsUpdatesScreen
 
 // ---------------------------------------------------------------------------
 // Route definitions
@@ -97,6 +103,36 @@ sealed class Screen(val route: String) {
 
     object RequestList : Screen("request_list/{seriesId}/{gameId}") {
         fun createRoute(seriesId: String, gameId: String) = "request_list/$seriesId/$gameId"
+    }
+
+    object GuidesHub : Screen("guides_hub/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "guides_hub/$seriesId/$gameId"
+    }
+
+    object QuestGuide : Screen("quest_guide/{seriesId}/{gameId}/{giver}") {
+        fun createRoute(seriesId: String, gameId: String, giver: String): String {
+            val safeGiver = java.net.URLEncoder.encode(giver, "UTF-8")
+            return "quest_guide/$seriesId/$gameId/$safeGiver"
+        }
+    }
+
+    object BossGuide : Screen("boss_guide/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "boss_guide/$seriesId/$gameId"
+    }
+
+    object BossDetail : Screen("boss_detail/{seriesId}/{gameId}/{bossName}") {
+        fun createRoute(seriesId: String, gameId: String, bossName: String): String {
+            val safeName = java.net.URLEncoder.encode(bossName, "UTF-8")
+            return "boss_detail/$seriesId/$gameId/$safeName"
+        }
+    }
+
+    object DayGuide : Screen("day_guide/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "day_guide/$seriesId/$gameId"
+    }
+
+    object NewsUpdates : Screen("news_updates/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "news_updates/$seriesId/$gameId"
     }
 }
 
@@ -196,7 +232,10 @@ fun NavGraph(navController: NavHostController) {
                 seriesId = seriesId,
                 gameId = gameId,
                 dataPath = dataPath,
-                onBack = { navController.popBackStack() }
+                onBack = { navController.popBackStack() },
+                onPersonaClick = { name ->
+                    navController.navigate(Screen.PersonaDetail.createRoute(seriesId, gameId, name))
+                }
             )
         }
         
@@ -372,6 +411,122 @@ fun NavGraph(navController: NavHostController) {
                 onEnemyClick = { enemyName ->
                     navController.navigate(Screen.EnemyDetail.createRoute(seriesId, gameId, enemyName, "Unknown"))
                 }
+            )
+        }
+
+        composable(
+            route = Screen.GuidesHub.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            GuidesHubScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                onBack = { navController.popBackStack() },
+                onNavigateToQuestGuide = { giver ->
+                    navController.navigate(Screen.QuestGuide.createRoute(seriesId, gameId, giver))
+                },
+                onNavigateToBossGuide = {
+                    navController.navigate(Screen.BossGuide.createRoute(seriesId, gameId))
+                },
+                onNavigateToDayGuide = {
+                    navController.navigate(Screen.DayGuide.createRoute(seriesId, gameId))
+                }
+            )
+        }
+
+        composable(
+            route = Screen.DayGuide.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            DayByDayGuideScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.QuestGuide.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType },
+                navArgument("giver")    { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            val giverRaw = back.arguments?.getString("giver")     ?: return@composable
+            val giver    = java.net.URLDecoder.decode(giverRaw, "UTF-8")
+            QuestGuideScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                giver = giver,
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.BossGuide.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            BossGuideScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                onBack = { navController.popBackStack() },
+                onBossClick = { bossName ->
+                    navController.navigate(Screen.BossDetail.createRoute(seriesId, gameId, bossName))
+                }
+            )
+        }
+
+        composable(
+            route = Screen.BossDetail.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType },
+                navArgument("bossName") { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            val bossNameRaw = back.arguments?.getString("bossName") ?: return@composable
+            val bossName = java.net.URLDecoder.decode(bossNameRaw, "UTF-8")
+            BossDetailScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                bossName = bossName,
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.NewsUpdates.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            NewsUpdatesScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                onBack = { navController.popBackStack() }
             )
         }
     }

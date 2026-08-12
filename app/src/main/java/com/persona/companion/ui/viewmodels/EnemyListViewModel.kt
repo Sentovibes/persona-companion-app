@@ -37,25 +37,27 @@ class EnemyListViewModel(application: Application) : AndroidViewModel(applicatio
             
             try {
                 val enemies = mutableListOf<Enemy>()
-                
+
                 // Load base enemies
                 if (enemyPath != null) {
                     enemies.addAll(JsonLoader.loadEnemies(getApplication(), enemyPath))
                 }
-                
+
                 // Load Aigis enemies if path provided and setting enabled
-                if (aigisEnemyPath != null) {
-                    val prefs = com.persona.companion.data.AppPreferences(getApplication())
-                    val settings = prefs.getSettings()
-                    if (settings.showEpisodeAigis) {
-                        try {
-                            enemies.addAll(JsonLoader.loadEnemies(getApplication(), aigisEnemyPath))
-                        } catch (e: Exception) {
-                            // Aigis enemies optional, don't fail if missing
-                        }
+                val settings = com.persona.companion.data.AppPreferences(getApplication()).getSettings()
+                if (aigisEnemyPath != null && settings.showEpisodeAigis) {
+                    try {
+                        enemies.addAll(JsonLoader.loadEnemies(getApplication(), aigisEnemyPath))
+                    } catch (e: Exception) {
+                        // Aigis enemies optional, don't fail if missing
                     }
                 }
-                
+
+                // Hide enemies flagged episodeAigis (inline in the base file, e.g. P3R) when the setting is off
+                if (!settings.showEpisodeAigis) {
+                    enemies.removeAll { it.episodeAigis == true }
+                }
+
                 _state.update { current ->
                     current.copy(
                         enemies = enemies,
@@ -102,12 +104,6 @@ class EnemyListViewModel(application: Application) : AndroidViewModel(applicatio
         return FilterUtils.filterAndSortEnemies(enemies, filters, favorites, elements, seriesId, gameId)
     }
     
-    private fun getElementsForGame(gameId: String): List<String> {
-        return when {
-            gameId.startsWith("p5") -> listOf("Physical", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
-            gameId.startsWith("p4") -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-            gameId.startsWith("p3") -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-            else -> listOf("Physical", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        }
-    }
+    private fun getElementsForGame(gameId: String): List<String> =
+        com.persona.companion.utils.ResistanceUtils.getElementNames(gameId)
 }

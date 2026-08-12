@@ -36,7 +36,6 @@ fun RequestListScreen(
     onEnemyClick: (String) -> Unit
 ) {
     val series = remember(seriesId) { SeriesData.findSeries(seriesId) }
-    val game = remember(seriesId, gameId) { SeriesData.findGame(seriesId, gameId) }
     val accentColor = series?.color ?: AccentBlue
     
     val viewModel: RequestViewModel = viewModel()
@@ -108,7 +107,7 @@ fun RequestListScreen(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    items(requests, key = { it.dbId }) { request ->
+                    items(requests, key = { "${it.id ?: ""}_${it.episodeAigis == true}_${it.name}" }) { request ->
                         RequestCard(
                             request = request,
                             accentColor = accentColor,
@@ -155,7 +154,7 @@ private fun RequestCard(
                         modifier = Modifier.padding(end = 8.dp)
                     ) {
                         Text(
-                            text = request.id!!,
+                            text = request.id,
                             style = MaterialTheme.typography.labelMedium,
                             color = accentColor,
                             fontWeight = FontWeight.Bold,
@@ -218,34 +217,34 @@ private fun RequestCard(
                 }
 
                 if (!request.location.isNullOrBlank()) {
-                    RequestInfoRow(Icons.Default.LocationOn, "LOCATION", request.location!!, accentColor)
+                    RequestInfoRow(Icons.Default.LocationOn, "LOCATION", request.location, accentColor)
                 }
 
                 if (!request.deadline.isNullOrBlank()) {
-                    RequestInfoRow(Icons.Default.Event, "DEADLINE", request.deadline!!, accentColor)
+                    RequestInfoRow(Icons.Default.Event, "DEADLINE", request.deadline, accentColor)
                 }
 
                 if (!request.category.isNullOrBlank()) {
-                    RequestInfoRow(Icons.Default.Category, "CATEGORY", request.category!!, accentColor)
+                    RequestInfoRow(Icons.Default.Category, "CATEGORY", request.category, accentColor)
                 }
 
                 if (!request.target_name.isNullOrBlank()) {
-                    RequestInfoRow(Icons.Default.AdsClick, "TARGET", request.target_name!!, accentColor)
+                    RequestInfoRow(Icons.Default.AdsClick, "TARGET", request.target_name, accentColor)
                 }
 
                 if (!request.target_enemy.isNullOrBlank()) {
                     RequestInfoRow(
                         Icons.Default.Shield, 
                         "ENEMY DATA", 
-                        request.target_enemy!!, 
+                        request.target_enemy, 
                         accentColor,
                         isClickable = true,
-                        onClick = { onEnemyClick(request.target_enemy!!) }
+                        onClick = { onEnemyClick(request.target_enemy) }
                     )
                 }
 
                 if (!request.difficulty.isNullOrBlank()) {
-                    RequestInfoRow(Icons.Default.Star, "DIFFICULTY", request.difficulty!!, accentColor)
+                    RequestInfoRow(Icons.Default.Star, "DIFFICULTY", request.difficulty, accentColor)
                 }
 
                 if (!request.remarks.isNullOrBlank()) {

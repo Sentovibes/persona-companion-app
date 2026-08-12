@@ -5161,16 +5161,6 @@
       "accuracy": null
     },
     {
-      "name": "Unused",
-      "category": "Consumable",
-      "description": "Unused",
-      "effect": "Unused",
-      "price": "",
-      "location": "",
-      "attack": null,
-      "accuracy": null
-    },
-    {
       "name": "Dressed in Ashes",
       "category": "Consumable",
       "description": "A girl facing unfortunate circumstances. Learn about leading a charmed life.",
@@ -5535,16 +5525,6 @@
       "category": "Consumable",
       "description": "Quality incense that raises Persona's Ag and Lu by 1.",
       "effect": "Quality incense that raises Persona's Ag and Lu by 1.",
-      "price": "",
-      "location": "",
-      "attack": null,
-      "accuracy": null
-    },
-    {
-      "name": "Unused",
-      "category": "Weapon",
-      "description": "Item_001",
-      "effect": "Item_001",
       "price": "",
       "location": "",
       "attack": null,

@@ -135,7 +135,7 @@ fun EnemyDetailScreen(
                 Log.d("EnemyDetailScreen", "Broadcasting enemy to cast...")
                 // Add a small delay to ensure the screen is fully composed
                 kotlinx.coroutines.delay(100)
-                CastManager.broadcastEnemy(enemy)
+                CastManager.broadcastEnemy(enemy, gameId)
                 Log.d("EnemyDetailScreen", "Broadcast call complete")
             } else {
                 Log.d("EnemyDetailScreen", "Server not running, skipping broadcast")
@@ -280,12 +280,12 @@ private fun EnemyStatsContent(
                 }
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
-                        text = "${enemy.hp} HP",
+                        text = "${enemy.displayHp} HP",
                         style = MaterialTheme.typography.bodyLarge,
                         color = TextPrimary
                     )
                     Text(
-                        text = "${enemy.sp} SP",
+                        text = "${enemy.displaySp} SP",
                         style = MaterialTheme.typography.bodyMedium,
                         color = TextSecondary
                     )
@@ -642,30 +642,7 @@ fun InfoRow(label: String, value: String, textScale: Float = 1.0f) {
     }
 }
 
-fun parseResistances(resists: String, gameId: String = ""): String {
-    // Element names by game
-    val elements = when {
-        gameId.startsWith("p5") -> listOf("Phys", "Gun", "Fire", "Ice", "Elec", "Wind", "Psy", "Nuke", "Bless", "Curse")
-        gameId.startsWith("p4") -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        gameId.startsWith("p3") -> listOf("Slash", "Strike", "Pierce", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty")
-        else -> listOf("Phys", "Fire", "Ice", "Elec", "Wind", "Light", "Dark", "Almighty") // Default to P4
-    }
-    
-    val resistMap = mapOf(
-        '-' to "Normal",
-        'w' to "Weak",
-        's' to "Strong",
-        'r' to "Resist",
-        'n' to "Null",
-        'd' to "Drain"
-    )
-    
-    return resists.mapIndexed { index, char ->
-        if (index < elements.size) {
-            val resist = resistMap[char] ?: "Normal"
-            if (resist != "Normal") {
-                "${elements[index]}: $resist"
-            } else null
-        } else null
-    }.filterNotNull().joinToString("\n").ifEmpty { "No special resistances" }
-}
+fun parseResistances(resists: String, gameId: String = ""): String =
+    com.persona.companion.utils.ResistanceUtils.formatResistances(resists, gameId)
+        .joinToString("\n")
+        .ifEmpty { "No special resistances" }

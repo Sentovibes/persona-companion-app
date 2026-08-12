@@ -152,8 +152,8 @@ class CastService : Service() {
             .build()
     }
     
-    fun broadcastEnemy(enemy: Any) {
-        castServer?.broadcastEnemy(enemy)
+    fun broadcastEnemy(enemy: Any, gameId: String = "") {
+        castServer?.broadcastEnemy(enemy, gameId)
     }
     
     fun broadcastPersona(persona: Any) {

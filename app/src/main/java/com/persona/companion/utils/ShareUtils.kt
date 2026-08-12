@@ -96,8 +96,8 @@ object ShareUtils {
             appendLine("Game: $gameName")
             appendLine("Arcana: ${enemy.arcana}")
             appendLine("Level: ${enemy.level}")
-            appendLine("HP: ${enemy.hp}")
-            appendLine("SP: ${enemy.sp}")
+            appendLine("HP: ${enemy.displayHp}")
+            appendLine("SP: ${enemy.displaySp}")
             
             if (!enemy.version.isNullOrEmpty()) {
                 appendLine("Version: ${enemy.version}")

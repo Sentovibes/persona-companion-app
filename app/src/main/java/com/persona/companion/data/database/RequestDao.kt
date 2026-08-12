@@ -9,6 +9,12 @@ interface RequestDao {
     @Query("SELECT * FROM requests WHERE gameId = :gameId ORDER BY sortOrder ASC")
     fun getRequestsForGame(gameId: String): Flow<List<RequestEntity>>
 
+    @Query("SELECT COUNT(*) FROM requests WHERE gameId = :gameId AND isCompleted = 1")
+    fun getCompletedRequestCount(gameId: String): Flow<Int>
+
+    @Query("SELECT COUNT(*) FROM requests WHERE gameId = :gameId")
+    fun getTotalRequestCount(gameId: String): Flow<Int>
+
     @Query("SELECT * FROM requests WHERE gameId = :gameId ORDER BY sortOrder ASC")
     suspend fun getRequestsForGameSync(gameId: String): List<RequestEntity>
 

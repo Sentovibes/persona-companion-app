@@ -1,0 +1,12 @@
+{
+    "name": "Persona Companion",
+    "short_name": "Persona",
+    "description": "Compendium, guides and tools for Persona 3, 4, and 5",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#0F0F0F",
+    "theme_color": "#0F0F0F",
+    "icons": [
+        { "src": "icon.webp", "sizes": "360x360", "type": "image/webp", "purpose": "any" }
+    ]
+}

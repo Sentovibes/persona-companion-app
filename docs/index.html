@@ -6,8 +6,12 @@
     <title>Persona Companion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=603">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=615">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="icon.webp">
+    <meta name="theme-color" content="#0F0F0F">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="6b5ab9f1-6ef3-4ffb-871b-ba8aa104c51a"></script>
 </head>
 <body>
@@ -64,6 +68,7 @@
                 </div>
             </div>
             <div class="home-content">
+                <div id="continueSlot"></div>
                 <div class="series-list" id="seriesList"></div>
                 <div class="home-footer">Community-driven · Open source</div>
             </div>
@@ -352,7 +357,10 @@
 
     </div><!-- /content-area -->
 </div><!-- /app-shell -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
     <!-- LIBS -->
-    <script src="app.js?v=603"></script>
+    <script src="app.js?v=616"></script>
 </body>
 </html>

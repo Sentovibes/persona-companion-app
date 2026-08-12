@@ -37,6 +37,7 @@ enum class ResistanceFilter {
     WEAK,
     RESIST,
     NULL,
+    REPEL,
     DRAIN
 }
 

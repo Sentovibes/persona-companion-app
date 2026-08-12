@@ -1,74 +1,74 @@
+/**
+ * Persona image scraper — megatenwiki.com
+ *
+ * Cloudflare blocks all plain HTTP. Strategy:
+ *   1. Open real Chrome once → CF auto-solves in ~5s → extract cf_clearance cookie
+ *   2. Close browser, use that cookie for all API + image downloads via Node https
+ *   3. Cookies cached 1hr so re-runs skip the browser step
+ */
+
+import { chromium } from 'playwright-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import https from 'https';
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 
-const OUTPUT_DIR = path.resolve('../app/src/main/assets/images/personas_shared');
-const P5R_DATA   = path.resolve('../app/src/main/assets/data/persona5/royal_personas.json');
-const FAILED_LOG = path.resolve('./failed.json');
-const DONE_LOG   = path.resolve('./done.json');
-const FANDOM_API = 'https://megamitensei.fandom.com/api.php';
-const DELAY_MS   = 800;
+chromium.use(StealthPlugin());
 
-const C = {
-  reset:'\x1b[0m', green:'\x1b[32m', red:'\x1b[31m',
-  yellow:'\x1b[33m', cyan:'\x1b[36m', gray:'\x1b[90m', bold:'\x1b[1m',
-};
+// ─── config ──────────────────────────────────────────────────────────────────
+const OUTPUT_DIR  = path.resolve('../app/src/main/assets/images/personas_shared');
+const P5R_DATA    = path.resolve('../app/src/main/assets/data/persona5/royal_personas.json');
+const DONE_LOG    = path.resolve('./done.json');
+const FAILED_LOG  = path.resolve('./failed.json');
+const COOKIE_FILE = path.resolve('./cf_cookies.json');
+const PROFILE_DIR = path.resolve('./chrome_profile');
+const CHROME_EXE  = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+const WIKI        = 'https://megatenwiki.com';
+const DELAY_MS    = 900;
 
-function tag(color, label, msg) {
-  process.stdout.write(`${color}[${label}]${C.reset} ${msg}\n`);
-}
+// ─── terminal colors ──────────────────────────────────────────────────────────
+const C = { reset:'\x1b[0m', green:'\x1b[32m', red:'\x1b[31m', yellow:'\x1b[33m', cyan:'\x1b[36m', gray:'\x1b[90m', bold:'\x1b[1m' };
+const tag = (col, lbl, msg) => process.stdout.write(`${col}[${lbl}]${C.reset} ${msg}\n`);
 
-function printHeader(total, doneCount, failCount) {
+function printHeader(total, ok, fail) {
   console.clear();
-  console.log(`${C.bold}${C.cyan}━━━ Persona Image Scraper ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}`);
+  const pct = total > 0 ? Math.round((ok / total) * 100) : 0;
+  const bar = C.green + '█'.repeat(Math.round(pct/2)) + C.gray + '░'.repeat(50 - Math.round(pct/2)) + C.reset;
+  console.log(`${C.bold}${C.cyan}━━━ megatenwiki.com Persona Scraper ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}`);
+  console.log(`  [${bar}] ${C.bold}${pct}%${C.reset}  ${C.green}${ok} ok${C.reset}  ${C.red}${fail} failed${C.reset}  of ${total}`);
   console.log(`  Images → ${C.cyan}${OUTPUT_DIR}${C.reset}`);
-  console.log(`  Done   → ${C.gray}${DONE_LOG}${C.reset}`);
-  console.log(`  Failed → ${C.gray}${FAILED_LOG}${C.reset}`);
-  console.log(`${C.gray}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}`);
-  const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
-  const filled = Math.round((pct / 100) * 50);
-  const bar = C.green + '█'.repeat(filled) + C.gray + '░'.repeat(50 - filled) + C.reset;
-  console.log(`  [${bar}] ${C.bold}${pct}%${C.reset}  ${C.green}${doneCount} ok${C.reset}  ${C.red}${failCount} failed${C.reset}  of ${total}`);
   console.log(`${C.gray}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}`);
 }
 
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 function toFilename(name) {
   return name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_\-]/g, '') + '.png';
 }
 
-function httpGet(url) {
+// ─── MediaWiki MD5 image path (fallback if imageinfo API blocked) ─────────────
+function mwImageUrl(filename) {
+  const f = filename.replace(/^File:/i, '').replace(/ /g, '_');
+  const h = crypto.createHash('md5').update(f).digest('hex');
+  return `${WIKI}/images/${h[0]}/${h.slice(0,2)}/${encodeURIComponent(f)}`;
+}
+
+// ─── HTTPS with CF cookies ────────────────────────────────────────────────────
+function httpsGet(url, cookies, redirects = 0) {
+  if (redirects > 5) return Promise.reject(new Error('too many redirects'));
   return new Promise((resolve, reject) => {
-    const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 PersonaScraper/1.0' } }, res => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return httpGet(res.headers.location).then(resolve).catch(reject);
+    const req = https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Cookie': cookies,
+        'Referer': WIKI + '/',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.9',
       }
-      if (res.statusCode !== 200) return reject(new Error(`HTTP ${res.statusCode}`));
-      const chunks = [];
-      res.on('data', c => chunks.push(c));
-      res.on('end', () => resolve(Buffer.concat(chunks)));
-    });
-    req.on('error', reject);
-    req.setTimeout(15000, () => { req.destroy(); reject(new Error('timeout')); });
-  });
-}
-
-async function apiGet(params) {
-  const url = new URL(FANDOM_API);
-  url.searchParams.set('format', 'json');
-  for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
-  const buf = await httpGet(url.toString());
-  return JSON.parse(buf.toString());
-}
-
-function scoreTitle(title) {
-  const t = title.toLowerCase();
-  let s = 0;
-  if (t.includes('portrait')) s += 100;
-  if (t.includes('model'))    s += 80;
-  if (t.includes('artwork'))  s += 60;
-  if      (t.includes('p5r') || t.includes('royal'))    s += 50;
+    }, res => {
+      if ([301,302,303,307,308].includes(res.statusCode) && res.headers.location) {
+        const next = res.headers.location.startsWith('htt += 50;
   else if (t.includes('p5s') || t.includes('strikers')) s += 45;
   else if (t.includes('p5'))                            s += 40;
   else if (t.includes('p4g') || t.includes('golden'))   s += 35;

@@ -1,0 +1,320 @@
+[
+  {
+    "giver": "Elizabeth",
+    "gameId": "p3r",
+    "quests": [
+      {
+        "id": "1",
+        "title": "Retrieve a Muscle Drink",
+        "requirement": "Muscle Drink x1",
+        "reward": "Soul Drop x3",
+        "walkthrough": "Go to Paulownia Mall, enter the pharmacy, purchase a Muscle Drink for 1,000 Yen, and deliver it to Elizabeth in the Velvet Room."
+      },
+      {
+        "id": "2",
+        "title": "Retrieve a Juzumaru",
+        "requirement": "Juzumaru x1",
+        "reward": "Cup of Knight Skill Card",
+        "walkthrough": "Explore the Arqa block of Tartarus (floors 36 to 41). You can find it inside rare/gold chests. Make sure you use a Twilight Fragment to open it."
+      },
+      {
+        "id": "3",
+        "title": "Retrieve a Wild Duck Burger",
+        "requirement": "Wild Duck Burger x1",
+        "reward": "Toy Bow x1",
+        "walkthrough": "Visit the Wild Duck Burger restaurant in the Iwatodai Strip Mall during the day or night, buy the burger, and return to Elizabeth."
+      },
+      {
+        "id": "4",
+        "title": "Retrieve a Jack Frost Doll",
+        "requirement": "Jack Frost Doll x1",
+        "reward": "Umorigi Claymore",
+        "walkthrough": "Go to the Crane Game outside Game Panic in Paulownia Mall. Play the game (active on Fridays/Saturdays) until you successfully win a Jack Frost Doll."
+      },
+      {
+        "id": "5",
+        "title": "Fuse Jack Frost with Dia",
+        "requirement": "Jack Frost that knows the skill Dia",
+        "reward": "High Cut Armor",
+        "walkthrough": "Fuse Pixie (which knows Dia) with Silky to create Jack Frost. Alternatively, use a Dia Skill Card directly on Jack Frost."
+      },
+      {
+        "id": "6",
+        "title": "Fuse Valkyrie with Tarukaja",
+        "requirement": "Valkyrie that knows the skill Tarukaja",
+        "reward": "Torn Book x1",
+        "walkthrough": "Fuse Forneus (inherits Tarukaja) with Yomotsu-Shikome. During the fusion process, select Tarukaja as an inherited skill for Valkyrie."
+      },
+      {
+        "id": "7",
+        "title": "Retrieve a Shadow Crystal",
+        "requirement": "Shadow Crystal x1",
+        "reward": "Balm of Life x1",
+        "walkthrough": "Search the Arqa block of Tartarus. Break the orange glowing debris/crystals scattered on the floors. They drop Shadow Crystals randomly."
+      },
+      {
+        "id": "8",
+        "title": "Retrieve a triangular sword",
+        "requirement": "Spatha or triangular sword x1",
+        "reward": "Spatha Sword",
+        "walkthrough": "Go to Gekkoukan High School, visit the Laboratory classroom on the 2nd floor, and search the shelves to find the triangular sword."
+      },
+      {
+        "id": "9",
+        "title": "Retrieve Pine Resin",
+        "requirement": "Pine Resin x1",
+        "reward": "Siren's Song",
+        "walkthrough": "Speak to the Archery Club member in the school gym hallway during after-school hours to receive the Pine Resin."
+      },
+      {
+        "id": "10",
+        "title": "Retrieve Handheld Game System",
+        "requirement": "Handheld Game System x1",
+        "reward": "Poison Glaive",
+        "walkthrough": "Talk to Junpei Iori in the dormitory lounge on 5/14 or later. He will give you his spare handheld game console."
+      },
+      {
+        "id": "11",
+        "title": "Fuse Oberon (Lv 17+)",
+        "requirement": "Oberon at level 17 or higher",
+        "reward": "Coin of Queen x3",
+        "walkthrough": "Fuse Jack Frost with Alp, or Nekomata with Lilim. Ensure your Emperor Social Link (Hidetoshi) is Rank 3+ so Oberon gets enough bonus EXP to level up instantly."
+      },
+      {
+        "id": "12",
+        "title": "Retrieve a Sengoku Helmet",
+        "requirement": "Sengoku Helmet x1",
+        "reward": "Bead x2",
+        "walkthrough": "Go to Gekkoukan High School, visit the Faculty Office during after-school hours, and speak to Mr. Ono to obtain the helmet."
+      },
+      {
+        "id": "13",
+        "title": "Retrieve food fit for a gourmet",
+        "requirement": "Odd Morsel x1",
+        "reward": "Odd Morsel x3",
+        "walkthrough": "Search normal chests in the first or second block of Tartarus. Odd Morsels are very common drops in standard chests."
+      },
+      {
+        "id": "14",
+        "title": "Fuse Mithras (Lv 22+)",
+        "requirement": "Mithras at level 22 or higher",
+        "reward": "Card of Swords x3",
+        "walkthrough": "Fuse Valkyrie with Archangel, or Gurr with Inugami. Level him up in Tartarus or ensure your Chariot Social Link (Kazushi) is Rank 4+ for instant level up."
+      },
+      {
+        "id": "15",
+        "title": "Fuse Orthrus with Dodge Slash",
+        "requirement": "Orthrus that knows Dodge Slash",
+        "reward": "Toy Bow x1",
+        "walkthrough": "Fuse Valkyrie (who knows Dodge Slash) with Queen Medb, or Rakshasa (who knows Dodge Slash) with Yaksini. Inherit Dodge Slash during the fusion."
+      }
+    ]
+  },
+  {
+    "giver": "Margaret",
+    "gameId": "p4g",
+    "quests": [
+      {
+        "id": "1",
+        "title": "Rank 1: Ippon-Datara with Sukukaja",
+        "requirement": "Ippon-Datara (Hermit) with Sukukaja",
+        "reward": "Empress Social Link Rank 1",
+        "walkthrough": "Fuse Sylph (Temperance) with Archangel (Justice). Sylph learns Sukukaja at level 12, so level Sylph up first, then perform the fusion."
+      },
+      {
+        "id": "2",
+        "title": "Rank 2: Matador with Mahama",
+        "requirement": "Matador (Death) with Mahama",
+        "reward": "Empress Social Link Rank 2",
+        "walkthrough": "Fuse Anzu (Hierophant) with Berith (Hanged Man). Anzu learns Mahama at level 19, so level Anzu up first, then inherit it during fusion."
+      },
+      {
+        "id": "3",
+        "title": "Rank 3: Gdon with Beast Weaver",
+        "requirement": "Gdon (Sun) with Beast Weaver",
+        "reward": "Empress Social Link Rank 3",
+        "walkthrough": "Fuse Ares (Chariot) with Shiisaa (Hierophant). Ares knows Beast Weaver from the start; simply inherit the skill during the fusion."
+      },
+      {
+        "id": "4",
+        "title": "Rank 4: Neko Shogun with Bufula",
+        "requirement": "Neko Shogun (Star) with Bufula",
+        "reward": "Empress Social Link Rank 4",
+        "walkthrough": "Special cross-fusion of Ara Mitama + Kusi Mitama + Saki Mitama + Nigi Mitama. First, fuse King Frost (has Bufula) with Hua Po to get Kusi Mitama, inheriting Bufula. Then complete the cross-fusion."
+      },
+      {
+        "id": "5",
+        "title": "Rank 5: Black Frost with Auto-Sukukaja",
+        "requirement": "Black Frost (Fool) with Auto-Sukukaja",
+        "reward": "Empress Social Link Rank 5",
+        "walkthrough": "Special pentagram fusion: Jack Frost + Pyro Jack + King Frost + Pixie + Ghoul. First, fuse High Pixie (who learns Auto-Sukukaja at level 23) with Ghoul to get Jack Frost, inheriting Auto-Sukukaja. Then perform the pentagram fusion."
+      },
+      {
+        "id": "6",
+        "title": "Rank 6: Yatagarasu with Megido",
+        "requirement": "Yatagarasu (Sun) with Megido",
+        "reward": "Empress Social Link Rank 6",
+        "walkthrough": "Fuse Taotie (who has Megido naturally) with Cu Chulainn to get Yatagarasu. Make sure to inherit Megido."
+      },
+      {
+        "id": "7",
+        "title": "Rank 7: Yatsufusa with Mediarahan",
+        "requirement": "Yatsufusa (Hanged Man) with Mediarahan",
+        "reward": "Empress Social Link Rank 7",
+        "walkthrough": "Special pentagram fusion: Thoth + Orthrus + Makami + Mot + Neko Shogun. First, fuse Alraune (who has Mediarahan naturally) with Triglav to get Mot, inheriting Mediarahan. Then complete the fusion."
+      },
+      {
+        "id": "8",
+        "title": "Rank 8: Ganesha with Tetrakarn",
+        "requirement": "Ganesha (Star) with Tetrakarn",
+        "reward": "Empress Social Link Rank 8",
+        "walkthrough": "Fuse Decarabia (who learns Tetrakarn at level 50) with Cu Chulainn to get Ganesha. Inherit Tetrakarn."
+      },
+      {
+        "id": "9",
+        "title": "Rank 9: Trumpeter with Mind Charge",
+        "requirement": "Trumpeter (Judgement) with Mind Charge",
+        "reward": "Empress Social Link Rank 9",
+        "walkthrough": "Special hexagram fusion: Taowu + White Rider + Red Rider + Black Rider + Pale Rider + Trumpeter. First, level Taowu to level 38 to learn Mind Charge, then complete the fusion, inheriting Mind Charge."
+      }
+    ]
+  },
+  {
+    "giver": "The Fox",
+    "gameId": "p4g",
+    "quests": [
+      {
+        "id": "1",
+        "title": "Quest 1: I Wish to Befriend My Classmate",
+        "requirement": "Find the girl at the school lobby who wants to talk to a classmate.",
+        "reward": "Hermit Social Link Rank 2",
+        "walkthrough": "Speak to the girl in Gekkoukan's school lobby, then talk to her classmate in the classroom, and report back."
+      },
+      {
+        "id": "2",
+        "title": "Quest 2: I Wish I Had My Snacks",
+        "requirement": "Feed a hungry child at the Shinto Shrine.",
+        "reward": "Hermit Social Link Rank 3",
+        "walkthrough": "Talk to the boy at the shrine. Buy round sweets from the shopping district and give them to him."
+      },
+      {
+        "id": "3",
+        "title": "Quest 3: I Wish I Had a Hobby",
+        "requirement": "Help the man who wants a new hobby.",
+        "reward": "Hermit Social Link Rank 4",
+        "walkthrough": "Talk to the man in Yasoinaba shopping district, buy him a model kit from the hobby shop, and help him build it."
+      },
+      {
+        "id": "4",
+        "title": "Quest 4: I Wish I Could Speak English",
+        "requirement": "Help the student who is failing English.",
+        "reward": "Hermit Social Link Rank 5",
+        "walkthrough": "Meet the student at Yasoinaba, obtain the English study book from the school library, and tutor them."
+      },
+      {
+        "id": "5",
+        "title": "Quest 5: I Wish My Dog Would Return",
+        "requirement": "Find the lost dog.",
+        "reward": "Hermit Social Link Rank 6",
+        "walkthrough": "Look for the dog near Yasoinaba flood plains. Feed it Beef Bowl or other food items daily until it trusts you and returns home."
+      },
+      {
+        "id": "6",
+        "title": "Quest 6: I Wish I Had a Boyfriend",
+        "requirement": "Help the girl find love.",
+        "reward": "Hermit Social Link Rank 7",
+        "walkthrough": "Talk to the girl at the shopping district, find a suitable match at the high school, and set them up."
+      },
+      {
+        "id": "7",
+        "title": "Quest 7: I Wish I Could Find a Real Job",
+        "requirement": "Help the unemployed man find work.",
+        "reward": "Hermit Social Link Rank 8",
+        "walkthrough": "Find job flyers in the town bulletin board, recommend a job at the daycare or pub, and check on his progress."
+      },
+      {
+        "id": "8",
+        "title": "Quest 8: I Wish for World Peace",
+        "requirement": "Help the shrine visitors find peace of mind.",
+        "reward": "Hermit Social Link Rank 9",
+        "walkthrough": "Talk to the elderly woman at the shrine, clean up the shrine grounds, and pray with her."
+      }
+    ]
+  },
+  {
+    "giver": "The Twins",
+    "gameId": "p5r",
+    "quests": [
+      {
+        "id": "1",
+        "title": "Rank 1: Jack Frost with Mabufu",
+        "requirement": "Jack Frost (Magician) with Mabufu",
+        "reward": "Strength Social Link Rank 1, Unlocks Group Guillotine",
+        "walkthrough": "Fuse Berith (Hierophant) with Silky (Priestess). Alternatively, level Jack Frost to level 12 to learn Mabufu naturally."
+      },
+      {
+        "id": "2",
+        "title": "Rank 2: Shiisaa with Frei",
+        "requirement": "Shiisaa (Chariot) with Frei",
+        "reward": "Strength Social Link Rank 2",
+        "walkthrough": "Fuse Jack-o'-Lantern (Magician) with Makami (Temperance). Makami knows Frei, inherit it."
+      },
+      {
+        "id": "3",
+        "title": "Rank 3: Matador with Magaru",
+        "requirement": "Matador (Death) with Magaru",
+        "reward": "Strength Social Link Rank 3",
+        "walkthrough": "Fuse Nekomata (Magician) with Obariyon (Fool). Nekomata knows Magaru, inherit it."
+      },
+      {
+        "id": "4",
+        "title": "Rank 4: Flauros with Tarukaja",
+        "requirement": "Flauros (Devil) with Tarukaja",
+        "reward": "Strength Social Link Rank 4",
+        "walkthrough": "Advanced Guillotine fusion: Berith + Andras + Eligor. Eligor has Tarukaja naturally, inherit it."
+      },
+      {
+        "id": "5",
+        "title": "Rank 5: Ame-no-Uzume with Dodge Psy",
+        "requirement": "Ame-no-Uzume (Lovers) with Dodge Psy",
+        "reward": "Strength Social Link Rank 5, Unlocks Guillotine Booster",
+        "walkthrough": "Fuse Kin-Ki (Chariot) with Sui-Ki (Chariot). Sui-Ki learns Dodge Psy at level 27, level him up and inherit the skill."
+      },
+      {
+        "id": "6",
+        "title": "Rank 6: Neko Shogun with Dekaja",
+        "requirement": "Neko Shogun (Star) with Dekaja",
+        "reward": "Strength Social Link Rank 6",
+        "walkthrough": "Advanced Guillotine fusion: Kodama + Sudama + Anzu. First fuse Orobas (knows Dekaja) with Kodama to get Sudama with Dekaja. Then complete the fusion."
+      },
+      {
+        "id": "7",
+        "title": "Rank 7: Lachesis with Tetraja",
+        "requirement": "Lachesis (Fortune) with Tetraja",
+        "reward": "Strength Social Link Rank 7",
+        "walkthrough": "Fuse Koppu Tengu (who knows Tetraja) with Pixie to make Clotho with Tetraja. Then fuse Clotho with Regent or Stone of Scone to get Lachesis."
+      },
+      {
+        "id": "8",
+        "title": "Rank 8: Hecatoncheires with Masukukaja",
+        "requirement": "Hecatoncheires (Hanged Man) with Masukukaja",
+        "reward": "Strength Social Link Rank 8",
+        "walkthrough": "Fuse Lilim (Devil) with Anzu (Hierophant). Lilim learns Masukukaja at level 34, level her up first and inherit it."
+      },
+      {
+        "id": "9",
+        "title": "Rank 9: Bugs with Samarearm",
+        "requirement": "Bugs (Fool) with Samarearm",
+        "reward": "Strength Social Link Rank 9",
+        "walkthrough": "Advanced Guillotine fusion: Pixie + Pisaca + Hariti. Hariti learns Samarearm at level 41. Level Hariti up first and inherit it."
+      },
+      {
+        "id": "10",
+        "title": "Rank 10: Seth with High Counter",
+        "requirement": "Seth (Tower) with High Counter",
+        "reward": "Strength Social Link Rank 10, Unlocks Special Treatment",
+        "walkthrough": "Advanced Guillotine fusion: Isis + Anubis + Thoth + Horus. You can obtain a High Counter Skill Card from request 'The Killer Who Cleans Up' on 10/14, or fuse Dakini (learns it at level 52) with Pale Rider to get Horus, inheriting High Counter."
+      }
+    ]
+  }
+]

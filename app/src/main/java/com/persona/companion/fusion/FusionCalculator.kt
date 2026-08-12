@@ -88,6 +88,10 @@ class FusionCalculator(
         return result
     }
 
+    fun isSpecialFusion(name: String): Boolean {
+        return specialFusions.containsKey(name)
+    }
+
     /** Returns all 2-persona combos that produce [target]. */
     fun calculateFusionsFor(target: Persona): List<FusionRecipe> {
         val recipes = mutableListOf<FusionRecipe>()
@@ -192,5 +196,170 @@ class FusionCalculator(
         }
 
         return recipes
+    }
+
+    fun getResultArcana(arcanaA: String, arcanaB: String): String? {
+        if (arcanaA == arcanaB) return arcanaA
+        val races = chart.races
+        val idxA = races.indexOf(arcanaA)
+        val idxB = races.indexOf(arcanaB)
+        if (idxA < 0 || idxB < 0) return null
+
+        return if (isTriangular) {
+            val r = maxOf(idxA, idxB)
+            val c = minOf(idxA, idxB)
+            chart.table.getOrNull(r)?.getOrNull(c)
+        } else {
+            val r = minOf(idxA, idxB)
+            val c = maxOf(idxA, idxB)
+            chart.table.getOrNull(r)?.getOrNull(c)
+        }
+    }
+
+    fun fuseTriangle(p1: Persona, p2: Persona, p3: Persona): Persona? {
+        if (p1.name == p2.name || p2.name == p3.name || p1.name == p3.name) return null
+
+        val sorted = listOf(p1, p2, p3).sortedWith(compareBy({ it.level ?: 0 }, { it.name }))
+        val low1 = sorted[0]
+        val low2 = sorted[1]
+        val high = sorted[2]
+
+        val arcana1 = low1.arcana ?: return null
+        val arcana2 = low2.arcana ?: return null
+        val arcana3 = high.arcana ?: return null
+
+        val tempArc = getResultArcana(arcana1, arcana2) ?: return null
+        if (tempArc.isBlank() || tempArc == "-") return null
+
+        val finalArc = getResultArcana(tempArc, arcana3) ?: return null
+        if (finalArc.isBlank() || finalArc == "-") return null
+
+        val targetList = byArcana[finalArc] ?: return null
+        val calcLvl = ((low1.level ?: 0) + (low2.level ?: 0) + (high.level ?: 0)) / 3 + 5
+
+        val specialNames = specialFusions.keys.toSet()
+        val candidates = targetList.filter {
+            it.name != low1.name && it.name != low2.name && it.name != high.name &&
+            it.name !in specialNames && it.fusion != "party" && it.fusion != "accident" && it.fusion != "special" &&
+            (it.level ?: 0) >= calcLvl
+        }
+
+        return candidates.firstOrNull() ?: targetList.filter {
+            it.name != low1.name && it.name != low2.name && it.name != high.name &&
+            it.name !in specialNames && it.fusion != "party" && it.fusion != "accident" && it.fusion != "special"
+        }.lastOrNull()
+    }
+
+    fun calculateTripleFusionsFor(target: Persona): List<FusionRecipe> {
+        val recipes = mutableListOf<FusionRecipe>()
+        val targetArcana = target.arcana ?: return recipes
+        val targetLvl = target.level ?: return recipes
+
+        val specialNames = specialFusions.keys.toSet()
+        if (target.name in specialNames || target.fusion == "party" || target.fusion == "accident" || target.fusion == "special") {
+            return recipes // Specials don't come from normal triangle fusions
+        }
+
+        val targetList = (byArcana[targetArcana] ?: emptyList())
+            .filter { it.name !in specialNames }
+            .sortedBy { it.level ?: 0 }
+        val targetIdx = targetList.indexOfFirst { it.name == target.name }
+        if (targetIdx < 0) return recipes
+
+        val minCalcLvl = if (targetIdx > 0) (targetList[targetIdx - 1].level ?: 0) + 1 else 0
+        val maxCalcLvl = if (targetIdx < targetList.size - 1) targetLvl else 200
+
+        val minSum = 3 * (minCalcLvl - 5)
+        val maxSum = 3 * (maxCalcLvl - 4) - 1
+
+        val seen = mutableSetOf<Triple<String, String, String>>()
+
+        for (i in allPersonas.indices) {
+            val p1 = allPersonas[i]
+            val lvl1 = p1.level ?: continue
+            val arc1 = p1.arcana ?: continue
+            if (p1.name in specialNames || p1.fusion == "party" || p1.fusion == "accident" || p1.fusion == "special" || p1.name in elementDemonNames) continue
+
+            for (j in i + 1 until allPersonas.size) {
+                val p2 = allPersonas[j]
+                val lvl2 = p2.level ?: continue
+                val arc2 = p2.arcana ?: continue
+                if (p2.name in specialNames || p2.fusion == "party" || p2.fusion == "accident" || p2.fusion == "special" || p2.name in elementDemonNames) continue
+
+                val tempArc = getResultArcana(arc1, arc2) ?: continue
+                if (tempArc.isBlank() || tempArc == "-") continue
+
+                for (k in j + 1 until allPersonas.size) {
+                    val p3 = allPersonas[k]
+                    val lvl3 = p3.level ?: continue
+                    val arc3 = p3.arcana ?: continue
+                    if (p3.name in specialNames || p3.fusion == "party" || p3.fusion == "accident" || p3.fusion == "special" || p3.name in elementDemonNames) continue
+
+                    val sum = lvl1 + lvl2 + lvl3
+                    if (sum < minSum || sum > maxSum) continue
+
+                    val finalArc = getResultArcana(tempArc, arc3) ?: continue
+                    if (finalArc != targetArcana) continue
+
+                    val result = fuseTriangle(p1, p2, p3)
+                    if (result?.name == target.name) {
+                        val key = Triple(p1.name, p2.name, p3.name)
+                        if (seen.add(key)) {
+                            recipes.add(FusionRecipe(listOf(p1, p2, p3)))
+                        }
+                    }
+                }
+            }
+        }
+
+        return recipes
+    }
+
+    fun estimatePersonaCost(level: Int): Int {
+        return 27 * level * level + 120 * level + 2000
+    }
+
+    fun findSpecialFusion(ingredients: List<Persona>): Persona? {
+        val names = ingredients.map { it.name }.toSet()
+        for ((resultName, recipes) in specialFusions) {
+            for (recipe in recipes) {
+                if (recipe.size == ingredients.size && recipe.toSet() == names) {
+                    return personaMap[resultName]
+                }
+            }
+        }
+        return null
+    }
+
+    fun fuse(ingredients: List<Persona>): Persona? {
+        if (ingredients.isEmpty()) return null
+
+        val special = findSpecialFusion(ingredients)
+        if (special != null) return special
+
+        if (ingredients.size == 2) {
+            val p1 = ingredients[0]
+            val p2 = ingredients[1]
+            val arcana1 = p1.arcana ?: return null
+            val arcana2 = p2.arcana ?: return null
+
+            if (arcana1 == arcana2) {
+                val list = byArcana[arcana1] ?: return null
+                val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2.0
+                val candidates = list.filter { it.name != p1.name && it.name != p2.name && (it.level ?: 0) < avgLvl }
+                return candidates.lastOrNull()
+            } else {
+                val resArcana = getResultArcana(arcana1, arcana2) ?: return null
+                if (resArcana.isBlank() || resArcana == "-") return null
+                val list = byArcana[resArcana] ?: return null
+                val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2.0 + 1.0
+                val candidates = list.filter { it.name != p1.name && it.name != p2.name && (it.level ?: 0) >= avgLvl }
+                return candidates.firstOrNull() ?: list.lastOrNull()
+            }
+        } else if (ingredients.size == 3) {
+            return fuseTriangle(ingredients[0], ingredients[1], ingredients[2])
+        }
+
+        return null
     }
 }

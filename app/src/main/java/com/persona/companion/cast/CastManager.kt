@@ -133,11 +133,11 @@ object CastManager {
     /**
      * Broadcast enemy data to all connected TVs
      */
-    fun broadcastEnemy(enemy: Any) {
+    fun broadcastEnemy(enemy: Any, gameId: String = "") {
         Log.d(TAG, "broadcastEnemy called with: ${enemy.javaClass.simpleName}")
         Log.d(TAG, "Server running: $isRunning, Server null: ${server == null}")
         Log.d(TAG, "Connected clients: ${server?.getClientCount() ?: 0}")
-        server?.broadcastEnemy(enemy)
+        server?.broadcastEnemy(enemy, gameId)
     }
     
     /**

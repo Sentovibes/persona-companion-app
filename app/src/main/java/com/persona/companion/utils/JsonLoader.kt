@@ -94,4 +94,52 @@ object JsonLoader {
             emptyList()
         }
     }
+
+    fun loadNewsUpdates(context: Context, path: String): List<com.persona.companion.models.NewsUpdate> {
+        return try {
+            Log.d(TAG, "Loading news updates from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.NewsUpdate>>() {}.type
+            gson.fromJson(json, type) ?: emptyList()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading news updates from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
+
+    fun loadQuestGuides(context: Context, path: String): List<com.persona.companion.models.QuestGuideGiver> {
+        return try {
+            Log.d(TAG, "Loading quest guides from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.QuestGuideGiver>>() {}.type
+            gson.fromJson(json, type) ?: emptyList()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading quest guides from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
+
+    fun loadBossGuides(context: Context, path: String): List<com.persona.companion.models.BossGuideGame> {
+        return try {
+            Log.d(TAG, "Loading boss guides from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.BossGuideGame>>() {}.type
+            gson.fromJson(json, type) ?: emptyList()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading boss guides from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
+
+    fun loadDayGuides(context: Context, path: String): List<com.persona.companion.models.DayGuideGame> {
+        return try {
+            Log.d(TAG, "Loading day guides from: $path")
+            val json = context.assets.open(path).bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<com.persona.companion.models.DayGuideGame>>() {}.type
+            gson.fromJson(json, type) ?: emptyList()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading day guides from '$path': ${e.message}", e)
+            emptyList()
+        }
+    }
 }

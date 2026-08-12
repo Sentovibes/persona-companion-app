@@ -11,16 +11,18 @@ val Persona5Red         = Color(0xFFCC1A1A)
 val Persona5RedDim      = Color(0xFF6B0000)
 
 // ── Dark surface palette ─────────────────────────────────────────────────────
-val Background   = Color(0xFF0F0F0F)
-val Surface      = Color(0xFF1A1A1A)
-val SurfaceCard  = Color(0xFF222222)
-val SurfaceRaised = Color(0xFF2A2A2A)
-val Divider      = Color(0xFF333333)
+// "Midnight Compendium": velvet-dark ladder with a whisper of blue-violet,
+// matching the web app's design tokens (styles.css :root).
+val Background   = Color(0xFF0D0D12)
+val Surface      = Color(0xFF14141B)
+val SurfaceCard  = Color(0xFF1B1B24)
+val SurfaceRaised = Color(0xFF23232E)
+val Divider      = Color(0xFF262632)
 
 // ── Text ─────────────────────────────────────────────────────────────────────
-val TextPrimary   = Color(0xFFEEEEEE)
-val TextSecondary = Color(0xFF9E9E9E)
-val TextDisabled  = Color(0xFF555555)
+val TextPrimary   = Color(0xFFECECF1)
+val TextSecondary = Color(0xFF9C9CAD)
+val TextDisabled  = Color(0xFF5A5A6B)
 
 // ── Semantic ─────────────────────────────────────────────────────────────────
 val TagFire      = Color(0xFFE64A19)
@@ -38,3 +40,9 @@ val TagAlmighty  = Color(0xFFFF6D00)
 val AccentBlue   = Color(0xFF2196F3)
 val AccentGreen  = Color(0xFF4CAF50)
 val AccentRed    = Color(0xFFF44336)
+val AccentBrass  = Color(0xFFC9A45C)  // Velvet Room brass — app-level chrome accent
+
+// ── Hairline borders (Midnight Compendium: findable, never shouting) ─────────
+val HairlineSoft   = Color(0x0FB4BEE6)
+val Hairline       = Color(0x1AB4BEE6)
+val HairlineStrong = Color(0x2EB4BEE6)

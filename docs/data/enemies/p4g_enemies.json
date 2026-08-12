@@ -5,7 +5,7 @@
     "level": 4,
     "hp": 300,
     "sp": 150,
-    "resists": "-r-wrnn",
+    "resists": "-r-wrnn-",
     "skills": [
       "Wind of Oblivion",
       "Power Slash",
@@ -75,7 +75,7 @@
     "level": 6,
     "hp": 1000,
     "sp": 200,
-    "resists": "r-r-wnn",
+    "resists": "r-r-wnn-",
     "skills": [
       "Mazio",
       "Green Wall",
@@ -344,7 +344,7 @@
     "level": 11,
     "hp": 800,
     "sp": 500,
-    "resists": "--w--nn",
+    "resists": "--w--nn-",
     "skills": [
       "Poison Skewer",
       "Mazio",
@@ -479,7 +479,7 @@
     "level": 15,
     "hp": 0,
     "sp": 999,
-    "resists": "-------",
+    "resists": "--------",
     "skills": [],
     "area": "Boss",
     "exp": 0,
@@ -491,7 +491,7 @@
         "name": "Shadow Yukiko",
         "hp": 1000,
         "sp": 500,
-        "resists": "-dw--nn",
+        "resists": "-dw--nn-",
         "skills": [
           "Agi",
           "Burn to Ashes",
@@ -504,7 +504,7 @@
         "name": "Prince Charming",
         "hp": 500,
         "sp": 999,
-        "resists": "--w-rnn",
+        "resists": "--w-rnn-",
         "skills": [
           "Diarama",
           "Makajam",
@@ -628,7 +628,7 @@
     "level": 17,
     "hp": 2500,
     "sp": 999,
-    "resists": "-dwnnnn",
+    "resists": "-dwnnnn-",
     "skills": [
       "Rampage",
       "Kill Rush",
@@ -756,7 +756,7 @@
     "level": 19,
     "hp": 1300,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Counterstrike",
       "Power Charge",
@@ -1147,7 +1147,7 @@
     "level": 25,
     "hp": 0,
     "sp": 999,
-    "resists": "-------",
+    "resists": "--------",
     "skills": [],
     "area": "Boss",
     "exp": 0,
@@ -1159,7 +1159,7 @@
         "name": "Shadow Kanji",
         "hp": 2000,
         "sp": 600,
-        "resists": "---d-nn",
+        "resists": "---d-nn-",
         "skills": [
           "Fanatic Arts",
           "Swift Strike",
@@ -1171,7 +1171,7 @@
         "name": "Nice Guy",
         "hp": 800,
         "sp": 999,
-        "resists": "--w--nn",
+        "resists": "--w--nn-",
         "skills": [
           "Diarama",
           "Heat Riser",
@@ -1182,7 +1182,7 @@
         "name": "Tough Guy",
         "hp": 800,
         "sp": 999,
-        "resists": "-w---nn",
+        "resists": "-w---nn-",
         "skills": [
           "Kill Rush",
           "Sonic Punch",
@@ -1306,7 +1306,7 @@
     "level": 27,
     "hp": 3000,
     "sp": 999,
-    "resists": "---w-nn",
+    "resists": "---w-nn-",
     "skills": [
       "Bufula",
       "Garula",
@@ -1811,7 +1811,7 @@
     "level": 33,
     "hp": 2500,
     "sp": 999,
-    "resists": "-w---nn",
+    "resists": "-w---nn-",
     "skills": [
       "Mind Charge",
       "Virus Wave",
@@ -1937,7 +1937,7 @@
     "level": 35,
     "hp": 5000,
     "sp": 800,
-    "resists": "--dw-nn",
+    "resists": "--dw-nn-",
     "skills": [
       "Mind Charge",
       "Mabufula",
@@ -2413,7 +2413,7 @@
     "level": 40,
     "hp": 4000,
     "sp": 999,
-    "resists": "--w--nn",
+    "resists": "--w--nn-",
     "skills": [
       "Deathbound",
       "Herculean Strike",
@@ -2487,7 +2487,7 @@
     "level": 41,
     "hp": 2800,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Fatal End",
       "Deathbound",
@@ -2918,7 +2918,7 @@
     "level": 45,
     "hp": 0,
     "sp": 999,
-    "resists": "-------",
+    "resists": "--------",
     "skills": [],
     "area": "Boss",
     "exp": 0,
@@ -2930,7 +2930,7 @@
         "name": "Mitsuo the Hero (Outer Shell)",
         "hp": 1500,
         "sp": 999,
-        "resists": "-----nn",
+        "resists": "-----nn-",
         "skills": [
           "Command",
           "Attack"
@@ -2940,7 +2940,7 @@
         "name": "Shadow Mitsuo (True Form)",
         "hp": 4000,
         "sp": 999,
-        "resists": "-----nn",
+        "resists": "-----nn-",
         "skills": [
           "Whisper",
           "Chant",
@@ -3043,7 +3043,7 @@
     "level": 46,
     "hp": 4500,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Mudoon",
       "Foul Breath",
@@ -3746,7 +3746,7 @@
     "level": 53,
     "hp": 4000,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Herculean Strike",
       "Power Charge",
@@ -3907,7 +3907,7 @@
     "level": 55,
     "hp": 6000,
     "sp": 999,
-    "resists": "r----nn",
+    "resists": "r----nn-",
     "skills": [
       "Mute Ray",
       "Galgalim Eyes",
@@ -4223,7 +4223,7 @@
     "level": 58,
     "hp": 5500,
     "sp": 999,
-    "resists": "----wnn",
+    "resists": "----wnn-",
     "skills": [
       "Mabufudyne",
       "Virus Wave",
@@ -4822,7 +4822,7 @@
     "level": 64,
     "hp": 5000,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Agidyne",
       "Bufudyne",
@@ -4929,7 +4929,7 @@
     "level": 65,
     "hp": 6500,
     "sp": 999,
-    "resists": "-rrrrnn",
+    "resists": "-rrrrnn-",
     "skills": [
       "Quad Converge",
       "Control",
@@ -5325,7 +5325,7 @@
     "level": 69,
     "hp": 6500,
     "sp": 999,
-    "resists": "n-n--nn",
+    "resists": "n-n--nn-",
     "skills": [
       "Mustard Bomb",
       "Navas Nebula",
@@ -5490,7 +5490,7 @@
     "level": 71,
     "hp": 1500,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Summon",
       "Brave Zap",
@@ -5943,7 +5943,7 @@
     "level": 73,
     "hp": 4500,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Vorpal Blade",
       "Ziodyne",
@@ -6228,7 +6228,7 @@
     "level": 74,
     "hp": 3000,
     "sp": 999,
-    "resists": "---d-nn",
+    "resists": "---d-nn-",
     "skills": [
       "Megidolaon",
       "Tentarafoo",
@@ -6609,7 +6609,7 @@
     "level": 75,
     "hp": 9000,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Agneyastra",
       "Bewildering Fog",
@@ -6628,7 +6628,7 @@
     "level": 75,
     "hp": 3000,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Hot Thunder",
       "Cold Blizzard",
@@ -6646,7 +6646,7 @@
     "level": 75,
     "hp": 8000,
     "sp": 999,
-    "resists": "-ddddnn",
+    "resists": "-ddddnn-",
     "skills": [
       "Draining Fog",
       "Riot Gun",
@@ -7089,7 +7089,7 @@
     "level": 77,
     "hp": 4000,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "Summon",
       "Blood Revenge",
@@ -7403,7 +7403,7 @@
     "level": 79,
     "hp": 5500,
     "sp": 999,
-    "resists": "-----nn",
+    "resists": "-----nn-",
     "skills": [
       "High Counter",
       "God's Hand",
@@ -7869,7 +7869,7 @@
     "level": 82,
     "hp": 5000,
     "sp": 999,
-    "resists": "r----nn",
+    "resists": "r----nn-",
     "skills": [
       "Rampage",
       "Maragidyne",
@@ -7921,7 +7921,7 @@
     "level": 84,
     "hp": 4500,
     "sp": 999,
-    "resists": "-n---nn",
+    "resists": "-n---nn-",
     "skills": [
       "Megidolaon",
       "Maragidyne",
@@ -7940,7 +7940,7 @@
     "level": 90,
     "hp": 0,
     "sp": 999,
-    "resists": "-------",
+    "resists": "--------",
     "skills": [],
     "area": "Boss",
     "exp": 0,
@@ -7952,7 +7952,7 @@
         "name": "Izanami",
         "hp": 4500,
         "sp": 999,
-        "resists": "-----nd",
+        "resists": "-----nd-",
         "skills": [
           "Megidolaon",
           "Mind Charge",
@@ -7964,7 +7964,7 @@
         "name": "Izanami-no-Okami",
         "hp": 12000,
         "sp": 999,
-        "resists": "-----nn",
+        "resists": "-----nn-",
         "skills": [
           "Thousand Curses",
           "Summons to Yomi",
@@ -7980,7 +7980,7 @@
     "level": 99,
     "hp": 15000,
     "sp": 9999,
-    "resists": "rrrrrnn",
+    "resists": "rrrrrnn-",
     "skills": [
       "Megidolaon",
       "Morning Star",

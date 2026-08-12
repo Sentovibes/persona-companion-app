@@ -69,7 +69,7 @@ object SeriesData {
                     enemyPath = "data/enemies/p4_enemies.json",
                     skillPath = "data/skills/p4_skills.json",
                     itemPath = "data/items/p4_items.json",
-                    socialLinkPath = "data/social_links/p4_social_links.json",
+                    socialLinkPath = "data/social-links/p4+p4g_social_links.json",
                     requestPath = "data/requests/p4_requests.json"
                 ),
                 Game(
@@ -79,7 +79,7 @@ object SeriesData {
                     enemyPath = "data/enemies/p4g_enemies.json",
                     skillPath = "data/skills/p4g_skills.json",
                     itemPath = "data/items/p4g_items.json",
-                    socialLinkPath = "data/social_links/p4_social_links.json",
+                    socialLinkPath = "data/social-links/p4+p4g_social_links.json",
                     requestPath = "data/requests/p4g_requests.json"
                 )
             )
@@ -97,7 +97,7 @@ object SeriesData {
                     enemyPath = "data/enemies/p5_enemies.json",
                     skillPath = "data/skills/p5_skills.json",
                     itemPath = "data/items/p5_items.json",
-                    socialLinkPath = "data/social_links/p5+p5r_social_links.json",
+                    socialLinkPath = "data/social-links/p5+p5r_social_links.json",
                     requestPath = "data/requests/p5r_requests.json"
                 ),
                 Game(
@@ -107,7 +107,7 @@ object SeriesData {
                     enemyPath = "data/enemies/p5r_enemies.json",
                     skillPath = "data/skills/p5r_skills.json",
                     itemPath = "data/items/p5r_items.json",
-                    socialLinkPath = "data/social_links/p5+p5r_social_links.json",
+                    socialLinkPath = "data/social-links/p5+p5r_social_links.json",
                     requestPath = "data/requests/p5r_requests.json"
                 )
             )
