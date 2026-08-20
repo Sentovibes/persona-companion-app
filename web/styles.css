@@ -916,3 +916,34 @@ body {
     padding: 2px 8px; border-radius: 4px; font-size: .75rem;
     font-weight: 700; background: var(--velvet-0); color: var(--text);
 }
+.selected-skills-wrap {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+}
+.skill-pill-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--raised); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-full); padding: 4px 10px 4px 12px;
+    font-size: .85rem; font-weight: 700; color: var(--text);
+}
+.skill-pill-chip-del {
+    background: none; border: none; color: var(--text3);
+    cursor: pointer; padding: 0 2px; font-size: .85rem; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+}
+.skill-pill-chip-del:hover {
+    color: #EF5350;
+}
+.route-branch-box {
+    background: var(--surface); border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-md); padding: 10px 12px; margin-bottom: 8px;
+}
+.route-branch-label {
+    font-size: .8rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: .03em; margin-bottom: 6px; display: flex;
+    align-items: center; gap: 6px;
+}
+.route-merge-box {
+    background: var(--raised); border: 1.5px solid var(--brass);
+    border-radius: var(--r-md); padding: 12px 14px;
+}
+
