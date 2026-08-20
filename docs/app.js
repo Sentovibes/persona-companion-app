@@ -2376,124 +2376,92 @@ function calcSkillInheritanceRoutes(targetName, skillName) {
     }
     sources.sort((a, b) => a.level - b.level);
 
-    // 4. 1-Step Direct Recipes
     const directRoutes = [];
-    if (specialData[targetName]) {
-        for (const recipe of specialData[targetName]) {
+    const twoStepRoutes = [];
+    const targetRecipes = calcFusionRecipes(targetName) || [];
+
+    // 4. Fast 1-Step Direct Check from target recipes
+    for (const recipe of targetRecipes) {
+        if (specialData[targetName]) {
             for (const ing of recipe) {
-                const src = sources.find(s => s.name === ing);
+                const src = sources.find(s => s.name === ing.name);
                 if (src) {
                     directRoutes.push({
                         type: 'special_direct',
                         source: src,
-                        allIngredients: recipe,
+                        allIngredients: recipe.map(r => r.name),
                         targetName
                     });
                 }
             }
-        }
-    }
-
-    for (const src of sources) {
-        if (src.name === targetName) continue;
-        for (const otherName of (S.fusion.personas || [])) {
-            if (otherName === src.name) continue;
-            const res = calcForwardFusionWeb([src.name, otherName]);
-            if (res && res.name === targetName) {
-                directRoutes.push({
-                    type: 'direct_2p',
-                    source: src,
-                    partner: { name: otherName, data: personaMap[otherName] },
-                    targetName
-                });
+        } else if (recipe.length === 2) {
+            const [pA, pB] = recipe;
+            const srcA = sources.find(s => s.name === pA.name);
+            const srcB = sources.find(s => s.name === pB.name);
+            if (srcA) {
+                directRoutes.push({ type: 'direct_2p', source: srcA, partner: pB, targetName });
+            } else if (srcB) {
+                directRoutes.push({ type: 'direct_2p', source: srcB, partner: pA, targetName });
             }
         }
+        if (directRoutes.length >= 12) break;
     }
 
-    // 5. 2-Step Fusion Chains (Source + Partner 1 -> Bridge Parent + Partner 2 -> Target)
-    const twoStepRoutes = [];
+    // 5. Fast 2-Step Pathways (Source + Partner -> Parent_A, then Parent_A + Parent_B -> Target)
+    const topSources = sources.slice(0, 10);
     const seenChains = new Set();
 
-    for (const src of sources) {
-        if (src.name === targetName) continue;
-        for (const p1 of (S.fusion.personas || [])) {
-            if (p1 === src.name) continue;
-            const bridge = calcForwardFusionWeb([src.name, p1]);
-            if (!bridge || bridge.name === targetName || bridge.name === src.name) continue;
-
-            if (specialData[targetName]) {
-                for (const recipe of specialData[targetName]) {
-                    if (recipe.includes(bridge.name)) {
-                        const key = `${src.name}=>${bridge.name}=>${targetName}`;
-                        if (!seenChains.has(key)) {
-                            seenChains.add(key);
-                            twoStepRoutes.push({
-                                type: '2step_special',
-                                source: src,
-                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
-                                step2: { specialRecipe: recipe, result: targetName }
-                            });
+    for (const recipe of targetRecipes) {
+        if (specialData[targetName]) {
+            for (const ing of recipe) {
+                for (const src of topSources) {
+                    if (src.name === ing.name) continue;
+                    for (const other of (S.fusion.personas || [])) {
+                        if (other === src.name) continue;
+                        const bridge = calcForwardFusionWeb([src.name, other]);
+                        if (bridge && bridge.name === ing.name) {
+                            const key = `${src.name}+${other}=>${ing.name}`;
+                            if (!seenChains.has(key)) {
+                                seenChains.add(key);
+                                twoStepRoutes.push({
+                                    type: '2step_special',
+                                    source: src,
+                                    step1: { p1: src.name, p2: other, result: ing.name, resultData: bridge.data },
+                                    step2: { specialRecipe: recipe.map(r => r.name), result: targetName }
+                                });
+                            }
                         }
+                        if (twoStepRoutes.length >= 10) break;
                     }
+                    if (twoStepRoutes.length >= 10) break;
                 }
-            } else {
-                for (const p2 of (S.fusion.personas || [])) {
-                    if (p2 === bridge.name) continue;
-                    const finalRes = calcForwardFusionWeb([bridge.name, p2]);
-                    if (finalRes && finalRes.name === targetName) {
-                        const key = `${src.name}+${p1}=>${bridge.name}+${p2}=>${targetName}`;
+                if (twoStepRoutes.length >= 10) break;
+            }
+        } else if (recipe.length === 2) {
+            const [pA, pB] = recipe;
+            for (const src of topSources) {
+                if (src.name === pA.name || src.name === pB.name) continue;
+                for (const other of (S.fusion.personas || [])) {
+                    if (other === src.name) continue;
+                    const bridge = calcForwardFusionWeb([src.name, other]);
+                    if (bridge && bridge.name === pA.name) {
+                        const key = `${src.name}+${other}=>${pA.name}+${pB.name}`;
                         if (!seenChains.has(key)) {
                             seenChains.add(key);
                             twoStepRoutes.push({
                                 type: '2step_2p',
                                 source: src,
-                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
-                                step2: { p1: bridge.name, p2: p2, result: targetName }
+                                step1: { p1: src.name, p2: other, result: pA.name, resultData: bridge.data },
+                                step2: { p1: pA.name, p2: pB.name, result: targetName }
                             });
                         }
                     }
-                    if (twoStepRoutes.length >= 15) break;
+                    if (twoStepRoutes.length >= 10) break;
                 }
+                if (twoStepRoutes.length >= 10) break;
             }
-            if (twoStepRoutes.length >= 15) break;
         }
-        if (twoStepRoutes.length >= 15) break;
-    }
-
-    // 6. 3-Step Fusion Chains (if no direct or 2-step routes found)
-    const threeStepRoutes = [];
-    if (directRoutes.length === 0 && twoStepRoutes.length === 0 && !isNatural) {
-        for (const src of sources) {
-            for (const p1 of (S.fusion.personas || [])) {
-                if (p1 === src.name) continue;
-                const b1 = calcForwardFusionWeb([src.name, p1]);
-                if (!b1 || b1.name === targetName) continue;
-
-                for (const p2 of (S.fusion.personas || [])) {
-                    if (p2 === b1.name) continue;
-                    const b2 = calcForwardFusionWeb([b1.name, p2]);
-                    if (!b2 || b2.name === targetName || b2.name === b1.name) continue;
-
-                    for (const p3 of (S.fusion.personas || [])) {
-                        if (p3 === b2.name) continue;
-                        const finalRes = calcForwardFusionWeb([b2.name, p3]);
-                        if (finalRes && finalRes.name === targetName) {
-                            threeStepRoutes.push({
-                                type: '3step_2p',
-                                source: src,
-                                step1: { p1: src.name, p2: p1, result: b1.name, resultData: b1.data },
-                                step2: { p1: b1.name, p2: p2, result: b2.name, resultData: b2.data },
-                                step3: { p1: b2.name, p2: p3, result: targetName }
-                            });
-                            break;
-                        }
-                    }
-                    if (threeStepRoutes.length >= 6) break;
-                }
-                if (threeStepRoutes.length >= 6) break;
-            }
-            if (threeStepRoutes.length >= 6) break;
-        }
+        if (twoStepRoutes.length >= 10) break;
     }
 
     return {
@@ -2505,7 +2473,7 @@ function calcSkillInheritanceRoutes(targetName, skillName) {
         sources,
         directRoutes,
         twoStepRoutes,
-        threeStepRoutes
+        threeStepRoutes: []
     };
 }
 
