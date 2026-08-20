@@ -947,3 +947,52 @@ body {
     border-radius: var(--r-md); padding: 12px 14px;
 }
 
+/* ── Negotiation Guide Styles ────────────────────────────────────────── */
+.nego-matrix-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+    .nego-matrix-grid { grid-template-columns: 1fr; }
+}
+.nego-card {
+    background: var(--card); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.nego-card-header {
+    display: flex; justify-content: space-between; align-items: center;
+}
+.nego-personality-title {
+    font-size: 1.05rem; font-weight: 800;
+}
+.nego-row-badge {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: .85rem; padding: 4px 8px; border-radius: 6px;
+    background: var(--raised);
+}
+.nego-badge-best {
+    background: #81C78422; color: #81C784; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: .75rem; text-transform: uppercase;
+}
+.nego-badge-ok {
+    background: #FFB74D22; color: #FFB74D; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: .75rem; text-transform: uppercase;
+}
+.nego-badge-bad {
+    background: #EF535022; color: #EF5350; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: .75rem; text-transform: uppercase;
+}
+.arcana-table-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px;
+}
+.arcana-card {
+    background: var(--card); border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-md); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px;
+}
+.arcana-card-num {
+    font-size: .75rem; font-weight: 800; color: #FFD700; text-transform: uppercase;
+}
+.arcana-card-name {
+    font-size: .95rem; font-weight: 700; color: var(--text);
+}
+.arcana-card-effect {
+    font-size: .82rem; color: var(--text2); line-height: 1.4;
+}
+
+

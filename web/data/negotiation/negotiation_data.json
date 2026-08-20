@@ -1,0 +1,1780 @@
+{
+  "personality_matrix": {
+    "Upbeat": {
+      "likes": "Funny",
+      "neutral": "Serious",
+      "hates": "Vague",
+      "color": "#FFB74D",
+      "description": "Prefers humorous, witty, or cheerful answers. Dislikes vague or indecisive replies.",
+      "best_type": "Funny / Joke",
+      "ok_type": "Serious",
+      "bad_type": "Vague / Ambiguous"
+    },
+    "Timid": {
+      "likes": "Kind",
+      "neutral": "Vague",
+      "hates": "Funny",
+      "color": "#81C784",
+      "description": "Prefers gentle, empathetic, and reassuring answers. Dislikes jokes or teasing.",
+      "best_type": "Kind / Gentle",
+      "ok_type": "Vague / Ambiguous",
+      "bad_type": "Funny / Joke"
+    },
+    "Gloomy": {
+      "likes": "Vague",
+      "neutral": "Serious",
+      "hates": "Kind",
+      "color": "#64B5F6",
+      "description": "Prefers mysterious, aloof, or ambiguous answers. Dislikes overly sweet or sympathetic replies.",
+      "best_type": "Vague / Ambiguous",
+      "ok_type": "Serious",
+      "bad_type": "Kind / Gentle"
+    },
+    "Irritable": {
+      "likes": "Serious",
+      "neutral": "Vague",
+      "hates": "Kind",
+      "color": "#E57373",
+      "description": "Prefers blunt, direct, and serious answers. Dislikes overly polite, gentle, or soft replies.",
+      "best_type": "Serious / Direct",
+      "ok_type": "Vague / Ambiguous",
+      "bad_type": "Kind / Gentle"
+    }
+  },
+  "sun_confidant_perks": [
+    {
+      "rank": 1,
+      "name": "Speechcraft",
+      "effect": "Unlocks politician speeches for Charm stat boost on Sundays."
+    },
+    {
+      "rank": 2,
+      "name": "Diplomacy",
+      "effect": "Occasionally enables demanding more money or rare items during hold-up negotiations."
+    },
+    {
+      "rank": 3,
+      "name": "Fundraising",
+      "effect": "Enables repeatedly demanding money from downed Shadows during a single negotiation."
+    },
+    {
+      "rank": 5,
+      "name": "Manipulation",
+      "effect": "Enemies will sometimes offer rare and high-value items during negotiations."
+    },
+    {
+      "rank": 8,
+      "name": "Mind Control",
+      "effect": "Allows skipping negotiation entirely and recruiting downed Shadows with a single speech prompt."
+    },
+    {
+      "rank": 10,
+      "name": "Charismatic Speech",
+      "effect": "Allows recruiting Shadows that are HIGHER level than Joker!"
+    }
+  ],
+  "p3r_shuffle_major_arcana": [
+    {
+      "num": "0",
+      "name": "0. Fool",
+      "effect": "Increases all EXP gained by +20% for the rest of Tartarus exploration."
+    },
+    {
+      "num": "I",
+      "name": "I. Magician",
+      "effect": "Levels up a random skill on your equipped Persona to its next tier."
+    },
+    {
+      "num": "II",
+      "name": "II. Priestess",
+      "effect": "Increases All-Out Attack damage dealt by all party members."
+    },
+    {
+      "num": "III",
+      "name": "III. Empress",
+      "effect": "Increases status ailment recovery and evasion rate."
+    },
+    {
+      "num": "IV",
+      "name": "IV. Emperor",
+      "effect": "Grants permanent stat increases to your equipped Persona."
+    },
+    {
+      "num": "V",
+      "name": "V. Hierophant",
+      "effect": "Guarantees extra card pick opportunities in future Shuffle Times."
+    },
+    {
+      "num": "VI",
+      "name": "VI. Lovers",
+      "effect": "Greatly increases item and treasure chest discovery rates."
+    },
+    {
+      "num": "VII",
+      "name": "VII. Chariot",
+      "effect": "Permanently increases the Protagonist's Max HP by +10."
+    },
+    {
+      "num": "VIII",
+      "name": "VIII. Justice",
+      "effect": "Enables picking 1 additional card in every Shuffle Time."
+    },
+    {
+      "num": "IX",
+      "name": "IX. Hermit",
+      "effect": "Permanently increases the Protagonist's Max SP by +5."
+    },
+    {
+      "num": "X",
+      "name": "X. Fortune",
+      "effect": "Increases Critical Hit rate for all party members."
+    },
+    {
+      "num": "XI",
+      "name": "XI. Strength",
+      "effect": "Increases Physical damage dealt by the entire party."
+    },
+    {
+      "num": "XII",
+      "name": "XII. Hanged Man",
+      "effect": "Increases defense and reduces physical damage taken."
+    },
+    {
+      "num": "XIII",
+      "name": "XIII. Death",
+      "effect": "Risk / Reward card: Increases spawn chance of rare shadows & Reaper."
+    },
+    {
+      "num": "XIV",
+      "name": "XIV. Temperance",
+      "effect": "Grants +50% EXP to benched / inactive party members."
+    },
+    {
+      "num": "XV",
+      "name": "XV. Devil",
+      "effect": "Doubles all Yen / Money dropped from battles."
+    },
+    {
+      "num": "XVI",
+      "name": "XVI. Tower",
+      "effect": "Fills the Theurgy gauge for all active party members."
+    },
+    {
+      "num": "XVII",
+      "name": "XVII. Star",
+      "effect": "Increases Magic damage dealt by the entire party."
+    },
+    {
+      "num": "XVIII",
+      "name": "XVIII. Moon",
+      "effect": "Fully restores HP and SP for all party members after battle."
+    },
+    {
+      "num": "XIX",
+      "name": "XIX. Sun",
+      "effect": "Removes the Protagonist level cap on Velvet Room fusions for today!"
+    },
+    {
+      "num": "XX",
+      "name": "XX. Judgement",
+      "effect": "Grants massive bonus EXP to the next fused Persona."
+    },
+    {
+      "num": "XXI",
+      "name": "XXI. Aeon",
+      "effect": "Triggers Arcana Burst, unlocking permanent extra picks in Shuffle Time!"
+    }
+  ],
+  "shadows": [
+    {
+      "name": "Beguiling Girl",
+      "persona_name": "Pixie",
+      "arcana": "Lovers",
+      "level": 2,
+      "hp": 174,
+      "weakness": "-waxs---sw",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Crypt-Dwelling Pyromaniac",
+      "persona_name": "Jack-o'-Lantern",
+      "arcana": "Magician",
+      "level": 2,
+      "hp": 100,
+      "weakness": "--dxaw----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Apprentice in a Jug",
+      "persona_name": "Agathion",
+      "arcana": "Chariot",
+      "level": 3,
+      "hp": 150,
+      "weakness": "-saasw----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Gallows Flower",
+      "persona_name": "Mandrake",
+      "arcana": "Death",
+      "level": 3,
+      "hp": 163,
+      "weakness": "--xas-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Dirty Two-Horned Beast",
+      "persona_name": "Bicorn",
+      "arcana": "Hermit",
+      "level": 4,
+      "hp": 132,
+      "weakness": "--aax----s",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Bedside Brute",
+      "persona_name": "Incubus",
+      "arcana": "Devil",
+      "level": 5,
+      "hp": 115,
+      "weakness": "--xas---w-",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Hunting Puss in Boots",
+      "persona_name": "Cait Sith",
+      "arcana": "Magician",
+      "level": 5,
+      "hp": 130,
+      "weakness": "--aasw----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Mad Marsh Horse",
+      "persona_name": "Kelpie",
+      "arcana": "Strength",
+      "level": 6,
+      "hp": 128,
+      "weakness": "--asx-----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Troublesome Housemaid",
+      "persona_name": "Silky",
+      "arcana": "Priestess",
+      "level": 6,
+      "hp": 142,
+      "weakness": "--xsx-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Twilight Prostitute",
+      "persona_name": "Succubus",
+      "arcana": "Moon",
+      "level": 7,
+      "hp": 148,
+      "weakness": "--saaw--xN",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Piggyback Demon",
+      "persona_name": "Obariyon",
+      "arcana": "Fool",
+      "level": 8,
+      "hp": 206,
+      "weakness": "s-aax-----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Brutal Cavalryman",
+      "persona_name": "Berith",
+      "arcana": "Hierophant",
+      "level": 9,
+      "hp": 474,
+      "weakness": "-nsxa-----",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Girl of the Hanging Tree",
+      "persona_name": "Hua Po",
+      "arcana": "Hanged",
+      "level": 9,
+      "hp": 169,
+      "weakness": "-wrxa-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Leafy Old Man",
+      "persona_name": "Koropokguru",
+      "arcana": "Hermit",
+      "level": 9,
+      "hp": 188,
+      "weakness": "--xsas----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Night-Walking Warrior",
+      "persona_name": "Mokoi",
+      "arcana": "Death",
+      "level": 9,
+      "hp": 230,
+      "weakness": "--aasw----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Zealous Messenger",
+      "persona_name": "Angel",
+      "arcana": "Justice",
+      "level": 9,
+      "hp": 152,
+      "weakness": "-waas---Nw",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Regent D",
+      "persona_name": "Regent",
+      "arcana": "Emperor",
+      "level": 10,
+      "hp": 720,
+      "weakness": "ssAAA--w--",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Viscid Rotting Meat",
+      "persona_name": "Slime",
+      "arcana": "Chariot",
+      "level": 10,
+      "hp": 121,
+      "weakness": "ssxaaw----",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Foolish Monk",
+      "persona_name": "Koppa Tengu",
+      "arcana": "Temperance",
+      "level": 11,
+      "hp": 168,
+      "weakness": "--axas--w-",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Mocking Snowman",
+      "persona_name": "Jack Frost",
+      "arcana": "Magician",
+      "level": 11,
+      "hp": 214,
+      "weakness": "--xNa-----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Waterside Nymph",
+      "persona_name": "Apsaras",
+      "arcana": "Priestess",
+      "level": 11,
+      "hp": 145,
+      "weakness": "--xsx-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Wavering Tree Spirit",
+      "persona_name": "Kodama",
+      "arcana": "Star",
+      "level": 11,
+      "hp": 194,
+      "weakness": "--xsa-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Corpse Bird",
+      "persona_name": "Onmoraki",
+      "arcana": "Moon",
+      "level": 12,
+      "hp": 206,
+      "weakness": "--sxa---wN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Captivating Dancer",
+      "persona_name": "Ame-no-Uzume",
+      "arcana": "Lovers",
+      "level": 13,
+      "hp": 238,
+      "weakness": "--daa-w---",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Embittered Blacksmith",
+      "persona_name": "Ippon-Datara",
+      "arcana": "Hermit",
+      "level": 13,
+      "hp": 365,
+      "weakness": "-ssxar--ss",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Heavenly Punisher",
+      "persona_name": "Archangel",
+      "arcana": "Justice",
+      "level": 14,
+      "hp": 190,
+      "weakness": "--aax---Nw",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Possessing Dog Ghost",
+      "persona_name": "Inugami",
+      "arcana": "Hanged",
+      "level": 14,
+      "hp": 223,
+      "weakness": "-nNaaw---N",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Hunting Wolf Spirit",
+      "persona_name": "Makami",
+      "arcana": "Temperance",
+      "level": 15,
+      "hp": 305,
+      "weakness": "-naaxs-sN-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Queen's Necklace D",
+      "persona_name": "Queen's Necklace",
+      "arcana": "Empress",
+      "level": 15,
+      "hp": 970,
+      "weakness": "ssAAA-w---",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Rooftop Lion",
+      "persona_name": "Shiisaa",
+      "arcana": "Strength",
+      "level": 15,
+      "hp": 212,
+      "weakness": "s-aaa-w-Nz",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Nakanohara",
+      "persona_name": "Shadow Nakanohara",
+      "arcana": "Fool",
+      "level": 15,
+      "hp": 650,
+      "weakness": "----w-----",
+      "area": "Qimranut 1",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Prankster Leader",
+      "persona_name": "High Pixie",
+      "arcana": "Fool",
+      "level": 16,
+      "hp": 232,
+      "weakness": "-waass-w--",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "War-Hungry Horseman",
+      "persona_name": "Eligor",
+      "arcana": "Emperor",
+      "level": 16,
+      "hp": 285,
+      "weakness": "--sax---AS",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Takanashi",
+      "persona_name": "Shadow Takanashi",
+      "arcana": "Magician",
+      "level": 16,
+      "hp": 650,
+      "weakness": "----------",
+      "area": "Aiyatsbus 2",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Ascended Feline",
+      "persona_name": "Nekomata",
+      "arcana": "Magician",
+      "level": 17,
+      "hp": 258,
+      "weakness": "--aax-s---",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Equine Sage",
+      "persona_name": "Orobas",
+      "arcana": "Hierophant",
+      "level": 17,
+      "hp": 262,
+      "weakness": "--axas---s",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Noisy Mountain Spirit",
+      "persona_name": "Sudama",
+      "arcana": "Hermit",
+      "level": 17,
+      "hp": 159,
+      "weakness": "--axar-w--",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Bringer of Misfortune",
+      "persona_name": "Shiki-Ouji",
+      "arcana": "Chariot",
+      "level": 18,
+      "hp": 617,
+      "weakness": "nnAaa--wNN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Pulsing Mud",
+      "persona_name": "Black Ooze",
+      "arcana": "Moon",
+      "level": 18,
+      "hp": 270,
+      "weakness": "ssasx-w-xN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Jealous Lover",
+      "persona_name": "Leanan Sidhe",
+      "arcana": "Lovers",
+      "level": 19,
+      "hp": 265,
+      "weakness": "--xaass---",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Chivalrous Fiend",
+      "persona_name": "Oni",
+      "arcana": "Strength",
+      "level": 20,
+      "hp": 421,
+      "weakness": "ssaaa-----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Human-Eating Lady",
+      "persona_name": "Yaksini",
+      "arcana": "Empress",
+      "level": 20,
+      "hp": 262,
+      "weakness": "-nasa--w--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Night Chimera",
+      "persona_name": "Nue",
+      "arcana": "Death",
+      "level": 20,
+      "hp": 312,
+      "weakness": "--xsa----N",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Stone of Scone D",
+      "persona_name": "Stone of Scone",
+      "arcana": "Fortune",
+      "level": 20,
+      "hp": 1250,
+      "weakness": "ssWAA-----",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Twin-Headed Guardian",
+      "persona_name": "Orthrus",
+      "arcana": "Hanged",
+      "level": 21,
+      "hp": 365,
+      "weakness": "--dxa--s--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Sakoda",
+      "persona_name": "Shadow Sakoda",
+      "arcana": "Fool",
+      "level": 21,
+      "hp": 600,
+      "weakness": "--sn----ws",
+      "area": "Aiyatsbus 5",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Makigami",
+      "persona_name": "Shadow Makigami",
+      "arcana": "Sun",
+      "level": 22,
+      "hp": 600,
+      "weakness": "---------w",
+      "area": "Aiyatsbus 6",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Shimizu",
+      "persona_name": "Shadow Shimizu",
+      "arcana": "Empress",
+      "level": 22,
+      "hp": 800,
+      "weakness": "ssw-----wn",
+      "area": "Aiyatsbus 7",
+      "personality": "Timid"
+    },
+    {
+      "name": "Envoy of Slumber",
+      "persona_name": "Sandman",
+      "arcana": "Magician",
+      "level": 23,
+      "hp": 373,
+      "weakness": "--xaxs--aa",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Tornado Devil",
+      "persona_name": "Fuu-Ki",
+      "arcana": "Star",
+      "level": 23,
+      "hp": 307,
+      "weakness": "-saaxd----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Odo",
+      "persona_name": "Shadow Odo",
+      "arcana": "Emperor",
+      "level": 23,
+      "hp": 750,
+      "weakness": "ss------ns",
+      "area": "Chemdah 1",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Oyamada",
+      "persona_name": "Shadow Oyamada",
+      "arcana": "Emperor",
+      "level": 23,
+      "hp": 800,
+      "weakness": "--sdssssnn",
+      "area": "Chemdah 2",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Battle Fiend",
+      "persona_name": "Rakshasa",
+      "arcana": "Strength",
+      "level": 24,
+      "hp": 289,
+      "weakness": "snsaaw--ws",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Cavern Snakeman",
+      "persona_name": "Naga",
+      "arcana": "Hermit",
+      "level": 24,
+      "hp": 321,
+      "weakness": "-saanw--aa",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Raging Water Demon",
+      "persona_name": "Sui-Ki",
+      "arcana": "Moon",
+      "level": 24,
+      "hp": 312,
+      "weakness": "-sads--w--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Koh-i-Noor D",
+      "persona_name": "Koh-i-Noor",
+      "arcana": "Priestess",
+      "level": 25,
+      "hp": 1530,
+      "weakness": "swAAA-----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Samurai Killer",
+      "persona_name": "Kin-Ki",
+      "arcana": "Chariot",
+      "level": 25,
+      "hp": 392,
+      "weakness": "sraaa-----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Thief of Tablets",
+      "persona_name": "Anzu",
+      "arcana": "Hierophant",
+      "level": 25,
+      "hp": 281,
+      "weakness": "-waasr-waa",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Defeated Avenger",
+      "persona_name": "Take-Minakata",
+      "arcana": "Hanged",
+      "level": 26,
+      "hp": 760,
+      "weakness": "--aar-w-As",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "She of Life and Death",
+      "persona_name": "Isis",
+      "arcana": "Priestess",
+      "level": 26,
+      "hp": 464,
+      "weakness": "--aaa-w-N-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Slithering Snakewoman",
+      "persona_name": "Lamia",
+      "arcana": "Empress",
+      "level": 26,
+      "hp": 291,
+      "weakness": "--axs--waN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Menacing Owlman",
+      "persona_name": "Andras",
+      "arcana": "Devil",
+      "level": 27,
+      "hp": 354,
+      "weakness": "--xsa-s-zN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Corpse-Eating Corpse",
+      "persona_name": "Pisaca",
+      "arcana": "Death",
+      "level": 28,
+      "hp": 315,
+      "weakness": "--xas---wN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Gathering Devil",
+      "persona_name": "Choronzon",
+      "arcana": "Magician",
+      "level": 28,
+      "hp": 240,
+      "weakness": "s-Daa---w-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Orlov D",
+      "persona_name": "Orlov",
+      "arcana": "Strength",
+      "level": 30,
+      "hp": 1650,
+      "weakness": "ssAAA----w",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Honjo",
+      "persona_name": "Shadow Honjo",
+      "arcana": "Hanged",
+      "level": 30,
+      "hp": 1400,
+      "weakness": "----dwnn-n",
+      "area": "Kaitul 9",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Takase F",
+      "persona_name": "Shadow Takase",
+      "arcana": "Empress",
+      "level": 30,
+      "hp": 600,
+      "weakness": "--w-------",
+      "area": "Chemdah 7",
+      "personality": "Timid"
+    },
+    {
+      "name": "Monk of the Valley",
+      "persona_name": "Kurama Tengu",
+      "arcana": "Hermit",
+      "level": 31,
+      "hp": 560,
+      "weakness": "--anar--ss",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Takase M",
+      "persona_name": "Shadow Takase",
+      "arcana": "Emperor",
+      "level": 31,
+      "hp": 800,
+      "weakness": "------ws--",
+      "area": "Chemdah 7",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Vicious Pentagram",
+      "persona_name": "Decarabia",
+      "arcana": "Councillor",
+      "level": 32,
+      "hp": 249,
+      "weakness": "w-raa--s-s",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Woman Who Brings Ruin",
+      "persona_name": "Lilim",
+      "arcana": "Devil",
+      "level": 32,
+      "hp": 365,
+      "weakness": "--asaw--wN",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Naguri",
+      "persona_name": "Shadow Naguri",
+      "arcana": "Chariot",
+      "level": 32,
+      "hp": 6000,
+      "weakness": "----------",
+      "area": "Kaitul 5",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Vampire Moth",
+      "persona_name": "Mothman",
+      "arcana": "Moon",
+      "level": 33,
+      "hp": 354,
+      "weakness": "-waan-s---",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Bearer of the Scales",
+      "persona_name": "Anubis",
+      "arcana": "Judgement",
+      "level": 34,
+      "hp": 1621,
+      "weakness": "-saaa-s-NN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Storm-Invoking Ptarmigan",
+      "persona_name": "Thunderbird",
+      "arcana": "Sun",
+      "level": 34,
+      "hp": 370,
+      "weakness": "--aad-w--w",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Uchimura",
+      "persona_name": "Shadow Uchimura",
+      "arcana": "Moon",
+      "level": 34,
+      "hp": 550,
+      "weakness": "ss---dw--s",
+      "area": "Chemdah 3",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Awakened God",
+      "persona_name": "Arahabaki",
+      "arcana": "Hermit",
+      "level": 35,
+      "hp": 420,
+      "weakness": "rraaa-wwss",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Emperor's Amulet D",
+      "persona_name": "Emperor's Amulet",
+      "arcana": "Hanged",
+      "level": 35,
+      "hp": 1990,
+      "weakness": "ssAAW-----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Mogami",
+      "persona_name": "Shadow Mogami",
+      "arcana": "Fool",
+      "level": 35,
+      "hp": 1300,
+      "weakness": "----------",
+      "area": "Chemdah 8",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Tsuboi",
+      "persona_name": "Shadow Tsuboi",
+      "arcana": "Death",
+      "level": 35,
+      "hp": 2000,
+      "weakness": "--w-----wr",
+      "area": "Kaitul 1",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Chanting Baboon",
+      "persona_name": "Thoth",
+      "arcana": "Emperor",
+      "level": 36,
+      "hp": 321,
+      "weakness": "--aaa-wnNs",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Wishless Star",
+      "persona_name": "Kaiwan",
+      "arcana": "Star",
+      "level": 36,
+      "hp": 380,
+      "weakness": "-naaa-nw--",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Ambassador of Filth",
+      "persona_name": "Belphegor",
+      "arcana": "Tower",
+      "level": 37,
+      "hp": 548,
+      "weakness": "--xss--saR",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Fused Ghost",
+      "persona_name": "Legion",
+      "arcana": "Fool",
+      "level": 38,
+      "hp": 367,
+      "weakness": "s-saa-s-xN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Dark Sun",
+      "persona_name": "Mithras",
+      "arcana": "Sun",
+      "level": 39,
+      "hp": 455,
+      "weakness": "ssdaa-wr--",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Expressionless Beast",
+      "persona_name": "Unicorn",
+      "arcana": "Faith",
+      "level": 39,
+      "hp": 495,
+      "weakness": "--ana-s-Nw",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Akitsu",
+      "persona_name": "Shadow Akitsu",
+      "arcana": "Hierophant",
+      "level": 39,
+      "hp": 2550,
+      "weakness": "----ws----",
+      "area": "Akzeriyyuth 3",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Kishi",
+      "persona_name": "Shadow Kishi",
+      "arcana": "Tower",
+      "level": 39,
+      "hp": 1000,
+      "weakness": "--------w-",
+      "area": "Kaitul 8",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Hope Diamond D",
+      "persona_name": "Hope Diamond",
+      "arcana": "Death",
+      "level": 40,
+      "hp": 2300,
+      "weakness": "ssAWA-----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Mountain Girl",
+      "persona_name": "Kikuri-Hime",
+      "arcana": "Priestess",
+      "level": 40,
+      "hp": 445,
+      "weakness": "--xaan--s-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Shadow Jochi",
+      "persona_name": "Shadow Jochi",
+      "arcana": "Hermit",
+      "level": 40,
+      "hp": 1800,
+      "weakness": "--s-w----n",
+      "area": "Kaitul 10",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Tsuda",
+      "persona_name": "Shadow Tsuda",
+      "arcana": "Devil",
+      "level": 40,
+      "hp": 600,
+      "weakness": "---d----sn",
+      "area": "Kaitul 4",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Divine Warrior",
+      "persona_name": "Power",
+      "arcana": "Justice",
+      "level": 41,
+      "hp": 307,
+      "weakness": "--aaas--Nw",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Cruel Leopard",
+      "persona_name": "Ose",
+      "arcana": "Fool",
+      "level": 42,
+      "hp": 393,
+      "weakness": "-ssaa---wN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Lamenting Sacrifice",
+      "persona_name": "Kushinada",
+      "arcana": "Lovers",
+      "level": 42,
+      "hp": 374,
+      "weakness": "--axa--wR-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Life-Draining Spirit",
+      "persona_name": "Kumbhanda",
+      "arcana": "Hermit",
+      "level": 42,
+      "hp": 418,
+      "weakness": "--naa-w--s",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Midnight Queen",
+      "persona_name": "Queen Mab",
+      "arcana": "Magician",
+      "level": 43,
+      "hp": 392,
+      "weakness": "--nasw----",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Rebellious Elephant",
+      "persona_name": "Girimehkala",
+      "arcana": "Moon",
+      "level": 43,
+      "hp": 1623,
+      "weakness": "rrsaa---wN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Funerary Warrior",
+      "persona_name": "Valkyrie",
+      "arcana": "Strength",
+      "level": 44,
+      "hp": 524,
+      "weakness": "-sxra---N-",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Nejima",
+      "persona_name": "Shadow Nejima",
+      "arcana": "Fool",
+      "level": 45,
+      "hp": 1800,
+      "weakness": "--w--s---s",
+      "area": "Akzeriyyuth 5",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Fukurai",
+      "persona_name": "Shadow Fukurai",
+      "arcana": "Devil",
+      "level": 47,
+      "hp": 1500,
+      "weakness": "--sw----ws",
+      "area": "Kaitul 3",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Magario F",
+      "persona_name": "Shadow Magario",
+      "arcana": "Devil",
+      "level": 47,
+      "hp": 900,
+      "weakness": "--dw-----n",
+      "area": "Adyeshach 3",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Dancing Witch",
+      "persona_name": "Rangda",
+      "arcana": "Magician",
+      "level": 48,
+      "hp": 422,
+      "weakness": "rrnax---wN",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Self-Infatuated Star",
+      "persona_name": "Narcissus",
+      "arcana": "Lovers",
+      "level": 48,
+      "hp": 465,
+      "weakness": "--xans--s-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Shadow Magario M",
+      "persona_name": "Shadow Magario",
+      "arcana": "Justice",
+      "level": 48,
+      "hp": 1100,
+      "weakness": "--w-------",
+      "area": "Adyeshach 3",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Togo",
+      "persona_name": "Shadow Togo",
+      "arcana": "Devil",
+      "level": 48,
+      "hp": 1700,
+      "weakness": "--sssssswn",
+      "area": "Akzeriyyuth 6",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Bloodthirsty Demoness",
+      "persona_name": "Dakini",
+      "arcana": "Empress",
+      "level": 50,
+      "hp": 442,
+      "weakness": "-nsaa-----",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Crystal Skull D",
+      "persona_name": "Crystal Skull",
+      "arcana": "Fool",
+      "level": 50,
+      "hp": 2450,
+      "weakness": "ssAAAw----",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Strumming Veena Player",
+      "persona_name": "Sarasvati",
+      "arcana": "Priestess",
+      "level": 50,
+      "hp": 445,
+      "weakness": "--ans--w--",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Shadow Isshiki",
+      "persona_name": "Shadow Isshiki",
+      "arcana": "Moon",
+      "level": 50,
+      "hp": 3000,
+      "weakness": "----------",
+      "area": "Adyeshach 0",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Shadow Kiritani",
+      "persona_name": "Shadow Kiritani",
+      "arcana": "Strength",
+      "level": 50,
+      "hp": 3000,
+      "weakness": "----------",
+      "area": "Akzeriyyuth 12",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Arrogant Vulture",
+      "persona_name": "Jatayu",
+      "arcana": "Hanged",
+      "level": 51,
+      "hp": 629,
+      "weakness": "--asar-ws-",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Dancing Lion",
+      "persona_name": "Barong",
+      "arcana": "Emperor",
+      "level": 52,
+      "hp": 625,
+      "weakness": "-saasw--Nw",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Final Assessor",
+      "persona_name": "Norn",
+      "arcana": "Fortune",
+      "level": 52,
+      "hp": 738,
+      "weakness": "--aard--s-",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Raging Bird God",
+      "persona_name": "Garuda",
+      "arcana": "Star",
+      "level": 52,
+      "hp": 504,
+      "weakness": "--aaas--R-",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Auspicious Pachyderm",
+      "persona_name": "Ganesha",
+      "arcana": "Sun",
+      "level": 53,
+      "hp": 836,
+      "weakness": "ssaaadw---",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Quaking Lady of Shadow",
+      "persona_name": "Skadi",
+      "arcana": "Priestess",
+      "level": 53,
+      "hp": 1290,
+      "weakness": "--ara----N",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Guard Dog of Hades",
+      "persona_name": "Cerberus",
+      "arcana": "Chariot",
+      "level": 55,
+      "hp": 736,
+      "weakness": "--dxa--s--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Destructive Beauty",
+      "persona_name": "Parvati",
+      "arcana": "Lovers",
+      "level": 56,
+      "hp": 432,
+      "weakness": "--ara-s-sw",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Scandalous Queen",
+      "persona_name": "Titania",
+      "arcana": "Empress",
+      "level": 56,
+      "hp": 740,
+      "weakness": "--aaa-wsss",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Heretic Goat",
+      "persona_name": "Baphomet",
+      "arcana": "Devil",
+      "level": 58,
+      "hp": 666,
+      "weakness": "--saa---wN",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Pagan Savior",
+      "persona_name": "Melchizedek",
+      "arcana": "Justice",
+      "level": 58,
+      "hp": 718,
+      "weakness": "--aaaws-DN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Harlot of Desire",
+      "persona_name": "Lilith",
+      "arcana": "Moon",
+      "level": 60,
+      "hp": 650,
+      "weakness": "--xra--r-N",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Orichalcum D",
+      "persona_name": "Orichalcum",
+      "arcana": "Faith",
+      "level": 60,
+      "hp": 2620,
+      "weakness": "ssAAA---w-",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Sacrificial Pyrekeeper",
+      "persona_name": "Moloch",
+      "arcana": "Hanged",
+      "level": 60,
+      "hp": 751,
+      "weakness": "--dxssd--N",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Torn King of Desire",
+      "persona_name": "Mara",
+      "arcana": "Tower",
+      "level": 60,
+      "hp": 530,
+      "weakness": "--sww-ws-s",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Shadow Wakasa",
+      "persona_name": "Shadow Wakasa",
+      "arcana": "Death",
+      "level": 60,
+      "hp": 1700,
+      "weakness": "---------d",
+      "area": "Adyeshach 13",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Monarch of Snow",
+      "persona_name": "King Frost",
+      "arcana": "Emperor",
+      "level": 61,
+      "hp": 893,
+      "weakness": "--ada---n-",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "The Black Avenger",
+      "persona_name": "Chernobog",
+      "arcana": "Death",
+      "level": 62,
+      "hp": 750,
+      "weakness": "-sxdn---wD",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Shadow Oda",
+      "persona_name": "Shadow Oda",
+      "arcana": "Empress",
+      "level": 62,
+      "hp": 3500,
+      "weakness": "--ws----ss",
+      "area": "Adyeshach 11",
+      "personality": "Timid"
+    },
+    {
+      "name": "Rhetorician of the Sea",
+      "persona_name": "Forneus",
+      "arcana": "Magician",
+      "level": 63,
+      "hp": 670,
+      "weakness": "--adx-n---",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "The Blackened Fury",
+      "persona_name": "Kali",
+      "arcana": "Empress",
+      "level": 63,
+      "hp": 1773,
+      "weakness": "-rnaa-r--s",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Drunken Serpents",
+      "persona_name": "Yamata-no-Orochi",
+      "arcana": "Judgement",
+      "level": 64,
+      "hp": 1193,
+      "weakness": "s-adas---s",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Nimble Monkey King",
+      "persona_name": "Hanuman",
+      "arcana": "Strength",
+      "level": 64,
+      "hp": 332,
+      "weakness": "-saxa-s-s-",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Thunder Emperor",
+      "persona_name": "Thor",
+      "arcana": "Chariot",
+      "level": 64,
+      "hp": 1033,
+      "weakness": "s-aan---ss",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Infuriated Wisdom King",
+      "persona_name": "Atavaka",
+      "arcana": "Faith",
+      "level": 65,
+      "hp": 760,
+      "weakness": "snraa----s",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Killer Teddy Bear",
+      "persona_name": "Bugs",
+      "arcana": "Fool",
+      "level": 65,
+      "hp": 404,
+      "weakness": "--w----w--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Unfaithful Dream-King",
+      "persona_name": "Oberon",
+      "arcana": "Emperor",
+      "level": 66,
+      "hp": 894,
+      "weakness": "--aas-nw--",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Merciless Inquisitor",
+      "persona_name": "Dominion",
+      "arcana": "Justice",
+      "level": 68,
+      "hp": 600,
+      "weakness": "--aaw--rNw",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Dream-Dwelling Skull",
+      "persona_name": "Loa",
+      "arcana": "Hermit",
+      "level": 70,
+      "hp": 404,
+      "weakness": "--san-wsw-",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Evil Synthetic Organism",
+      "persona_name": "Byakhee",
+      "arcana": "Moon",
+      "level": 70,
+      "hp": 558,
+      "weakness": "--nxan-w-N",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Hedonistic Braggart",
+      "persona_name": "Dionysus",
+      "arcana": "Councillor",
+      "level": 71,
+      "hp": 708,
+      "weakness": "--aar---nn",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Coffin-Borne God",
+      "persona_name": "Mot",
+      "arcana": "Death",
+      "level": 72,
+      "hp": 1100,
+      "weakness": "-saadw---R",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Fire Assassin",
+      "persona_name": "Throne",
+      "arcana": "Justice",
+      "level": 72,
+      "hp": 757,
+      "weakness": "--Naan-wr-",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Dancer of Death",
+      "persona_name": "Macabre",
+      "arcana": "Hanged",
+      "level": 73,
+      "hp": 593,
+      "weakness": "--aas---wN",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Throbbing King of Desire",
+      "persona_name": "Mara",
+      "arcana": "Tower",
+      "level": 73,
+      "hp": 1840,
+      "weakness": "-ndaa-r-sn",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Deformed Lion God",
+      "persona_name": "Chimera",
+      "arcana": "Strength",
+      "level": 74,
+      "hp": 727,
+      "weakness": "--dnaw---w",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Wandering Reviver",
+      "persona_name": "Nebiros",
+      "arcana": "Devil",
+      "level": 74,
+      "hp": 532,
+      "weakness": "s-aaa-n-ws",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Abyssal King of Avarice",
+      "persona_name": "Abaddon",
+      "arcana": "Judgement",
+      "level": 75,
+      "hp": 7000,
+      "weakness": "ddaaa---sD",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Spear-Wielding General",
+      "persona_name": "Cu Chulainn",
+      "arcana": "Faith",
+      "level": 76,
+      "hp": 1021,
+      "weakness": "ssaaxr--N-",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "The Shadowed One",
+      "persona_name": "Scathach",
+      "arcana": "Priestess",
+      "level": 77,
+      "hp": 1346,
+      "weakness": "--anr----n",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Decadent False God",
+      "persona_name": "Alilat",
+      "arcana": "Empress",
+      "level": 81,
+      "hp": 1700,
+      "weakness": "rrxda-n--w",
+      "area": "Unknown",
+      "personality": "Timid"
+    },
+    {
+      "name": "Missionary of Depravity",
+      "persona_name": "Belial",
+      "arcana": "Devil",
+      "level": 82,
+      "hp": 1200,
+      "weakness": "n-asa---AN",
+      "area": "Unknown",
+      "personality": "Gloomy"
+    },
+    {
+      "name": "Reviled Dictator",
+      "persona_name": "Baal",
+      "arcana": "Emperor",
+      "level": 82,
+      "hp": 1026,
+      "weakness": "s-saad--s-",
+      "area": "Unknown",
+      "personality": "Upbeat"
+    },
+    {
+      "name": "Warped Abyss",
+      "persona_name": "Hastur",
+      "arcana": "Star",
+      "level": 84,
+      "hp": 1294,
+      "weakness": "--saadn-AN",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Evil Voracious Dragon",
+      "persona_name": "Fafnir",
+      "arcana": "Hermit",
+      "level": 86,
+      "hp": 2006,
+      "weakness": "rrdas--dAA",
+      "area": "Unknown",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Shadow Asakura",
+      "persona_name": "Shadow Asakura",
+      "arcana": "Priestess",
+      "level": 99,
+      "hp": 3500,
+      "weakness": "--d----w-s",
+      "area": "Sheriruth II 14",
+      "personality": "Timid"
+    },
+    {
+      "name": "Justine & Caroline",
+      "persona_name": "Justine & Caroline",
+      "arcana": "Strength",
+      "level": 99,
+      "hp": 0,
+      "weakness": "----------",
+      "area": "Boss",
+      "personality": "Irritable"
+    },
+    {
+      "name": "Lavenza",
+      "persona_name": "Lavenza",
+      "arcana": "Strength",
+      "level": 99,
+      "hp": 10000,
+      "weakness": "--------nn",
+      "area": "Boss",
+      "personality": "Irritable"
+    }
+  ]
+}

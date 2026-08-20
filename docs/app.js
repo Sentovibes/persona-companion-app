@@ -75,7 +75,10 @@ const CAT_ICONS = {
     'Classroom Answers':`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`,
     'Items':            `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 7h-9l-3 3h-5V5h2V3c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v2h2v2zm-12-2h6V3H8v2zM3 10h18v10c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10zm2 2v6h14v-6H5z"/></svg>`,
     'Skills':           `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
-    'Requests & Quests': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5H8V7h5v2z"/></svg>`
+    'Requests & Quests': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5H8V7h5v2z"/></svg>`,
+    'Shadow Negotiation': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>`,
+    'Shuffle Time & Arcana': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v3H5zm0-4h14v3H5zm0-4h14v3H5z"/></svg>`,
+    'Shuffle Time & Negotiation': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>`
 };
 
 function normalizeListData(raw, type) {
@@ -117,6 +120,7 @@ const S = {
     sort:'arcana', enemyTab:'enemies', query:'',
     enemySort:'level', enemySortDir:1, favOnly:false, hideCompletedReq:false,
     itemQuery:'', skillQuery:'', requestQuery:'',
+    negoTab:'matrix', negoQuery:'', negoFilter:'all', negoData:null,
     detail:null, favorites:new Set(), completedRequests:new Set(),
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
@@ -244,6 +248,7 @@ function navigate(to, payload) {
     if (to==='items')       buildItemsScreen();
     if (to==='skills')      buildSkillsScreen();
     if (to==='requests')    buildRequestsScreen();
+    if (to==='negotiation') buildNegotiationScreen();
     if (to==='settings')    buildSettingsScreen();
     updateRailState(to);
     syncHash();
@@ -260,6 +265,7 @@ function railNav(section) {
     else if (section === 'items')     { S.listMode='items';     navigate('items'); }
     else if (section === 'skills')    { S.listMode='skills';    navigate('skills'); }
     else if (section === 'requests')  { S.listMode='requests';  navigate('requests'); }
+    else if (section === 'negotiation'){ openNegotiation(); }
 }
 
 function updateRailState(screenName) {
@@ -355,14 +361,16 @@ function buildCategoryScreen() {
     document.getElementById('categoryTitle').textContent = game.title;
     const color = series.color;
     const isP5 = S.series==='p5';
+    const isP3 = S.series==='p3';
     const slLabel = isP5 ? 'Confidants' : 'Social Links';
-
+    const negoLabel = isP5 ? 'Shadow Negotiation' : (isP3 ? 'Shuffle Time & Arcana' : 'Shuffle Time & Negotiation');
 
     const categories = [
         { label:'Personas',         available:true, action:()=>{ S.listMode='personas'; navigate('list'); } },
         { label:'Fusion Calculator',available:true, action:()=>openFusion() },
         { label:'Enemies',          available:true, action:()=>{ S.listMode='enemies';  navigate('list'); } },
         { label:slLabel,            available:true, action:()=>openSocialLinks() },
+        { label:negoLabel,          available:true, action:()=>openNegotiation() },
         { label:'Classroom Answers',available:true, action:()=>{ S.listMode='classroom'; navigate('list'); } },
         { label:'Items',            available:true, action:()=>{ S.listMode='items';     navigate('items'); } },
         { label:'Skills',           available:true, action:()=>{ S.listMode='skills';    navigate('skills'); } },
@@ -1049,6 +1057,36 @@ function renderEnemyDetail(name, e, color, containerId) {
                 </div>
             </div>
             ${e.image ? `<div style="margin-top:16px;text-align:center"><img src="${e.image}" style="max-width:100%;max-height:180px;border-radius:8px" onerror="this.parentElement.style.display='none'"></div>` : ''}
+        </div>`;
+    }
+
+    // Negotiation Cheat Sheet for P5/P5R
+    if (S.series === 'p5' && !isBoss) {
+        const pName = e.persona_name || name;
+        const personality = (S.negoData?.shadows?.find(s => s.name === name || s.persona_name === pName)?.personality) ||
+            (e.arcana === "Lovers" || e.arcana === "Priestess" || e.arcana === "Empress" ? "Timid" :
+            e.arcana === "Magician" || e.arcana === "Chariot" || e.arcana === "Sun" ? "Upbeat" :
+            e.arcana === "Death" || e.arcana === "Moon" || e.arcana === "Hanged Man" ? "Gloomy" : "Irritable");
+
+        const matrix = {
+            'Upbeat':    { best: 'Funny / Joke', ok: 'Serious', bad: 'Vague', color: '#FFB74D' },
+            'Timid':     { best: 'Kind / Gentle', ok: 'Vague', bad: 'Funny', color: '#81C784' },
+            'Gloomy':    { best: 'Vague / Ambiguous', ok: 'Serious', bad: 'Kind', color: '#64B5F6' },
+            'Irritable': { best: 'Serious / Direct', ok: 'Vague', bad: 'Kind', color: '#E57373' }
+        }[personality] || { best: 'Serious', ok: 'Vague', bad: 'Kind', color: '#E57373' };
+
+        html += `
+        <div class="section-card" style="border-left:4px solid ${matrix.color}">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                <div class="section-title" style="margin:0">Shadow Negotiation</div>
+                <span class="route-step-badge" style="background:${matrix.color}22;color:${matrix.color}">${personality}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+                <div class="nego-row-badge"><span>Best Response (❤️ Likes):</span><span class="nego-badge-best">${matrix.best}</span></div>
+                <div class="nego-row-badge"><span>Neutral Response (⚠️ OK):</span><span class="nego-badge-ok">${matrix.ok}</span></div>
+                <div class="nego-row-badge"><span>Worst Response (❌ Hates):</span><span class="nego-badge-bad">${matrix.bad}</span></div>
+            </div>
+            <button class="slot-action-btn" style="width:100%;margin-top:10px;font-size:.82rem" onclick="openNegotiation()">Open Negotiation Guide ›</button>
         </div>`;
     }
 
@@ -2952,6 +2990,405 @@ async function renderSkillRouteScreen(color) {
     html += `</div>`;
     el.innerHTML = html;
     el.scrollTop = 0;
+}
+
+/* ── Shadow Negotiation & Shuffle Time Guide ──────────────────────────────── */
+function openNegotiation() {
+    navigate('negotiation');
+}
+
+async function ensureNegotiationLoaded() {
+    if (!S.negoData) {
+        try {
+            const r = await fetch('./data/negotiation/negotiation_data.json');
+            if (r.ok) {
+                S.negoData = await r.json();
+            }
+        } catch(e) {
+            console.error('Failed to load negotiation data', e);
+        }
+    }
+    return S.negoData;
+}
+
+function setNegoTab(tab) {
+    S.negoTab = tab;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+
+    const tabMatrix = document.getElementById('negoTabMatrix');
+    const tabLookup = document.getElementById('negoTabLookup');
+    const tabPerks = document.getElementById('negoTabPerks');
+
+    if (tabMatrix) tabMatrix.classList.toggle('active', tab === 'matrix' || tab === 'shuffle');
+    if (tabLookup) tabLookup.classList.toggle('active', tab === 'lookup');
+    if (tabPerks) tabPerks.classList.toggle('active', tab === 'perks');
+
+    renderNegotiationContent(color);
+}
+
+function onNegoQuery(val) {
+    S.negoQuery = val;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    debounceSearch(() => renderNegotiationLookupList(color));
+}
+
+function setNegoFilter(filter) {
+    S.negoFilter = filter;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    // Update active class on sort chips
+    document.querySelectorAll('#screen-negotiation .sort-chip').forEach(btn => {
+        const isMatch = btn.textContent.trim().toLowerCase().includes(filter.toLowerCase()) ||
+            (filter === 'all' && btn.textContent.trim().includes('All'));
+        btn.classList.toggle('active', isMatch);
+        btn.style.color = isMatch ? color : '';
+        btn.style.background = isMatch ? `${color}22` : '';
+    });
+    renderNegotiationLookupList(color);
+}
+
+async function buildNegotiationScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const isP5 = S.series === 'p5';
+    const isP3 = S.series === 'p3';
+
+    await ensureNegotiationLoaded();
+
+    const titleEl = document.getElementById('negotiationScreenTitle');
+    const tabBar = document.getElementById('negotiationTabBar');
+
+    if (titleEl) {
+        titleEl.textContent = isP5 ? 'Shadow Negotiation Guide' : (isP3 ? 'Shuffle Time & Arcana Guide' : 'Negotiation & Shuffle Guide');
+    }
+
+    if (tabBar) {
+        if (isP5) {
+            tabBar.innerHTML = `
+                <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='matrix')?'active':''}" id="negoTabMatrix" onclick="setNegoTab('matrix')">Cheat Sheet</button>
+                <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" id="negoTabLookup" onclick="setNegoTab('lookup')">Shadow Lookup</button>
+                <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" id="negoTabPerks" onclick="setNegoTab('perks')">Confidant Perks</button>
+            `;
+            if (!S.negoTab || S.negoTab === 'shuffle') S.negoTab = 'matrix';
+        } else {
+            tabBar.innerHTML = `
+                <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='shuffle' || S.negoTab==='matrix')?'active':''}" id="negoTabMatrix" onclick="setNegoTab('shuffle')">Major Arcana</button>
+                <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" id="negoTabPerks" onclick="setNegoTab('perks')">Mechanics & Strategy</button>
+            `;
+            S.negoTab = S.negoTab === 'perks' ? 'perks' : 'shuffle';
+        }
+    }
+
+    renderNegotiationContent(color);
+}
+
+function renderNegotiationContent(color) {
+    const el = document.getElementById('negotiationContent');
+    if (!el) return;
+
+    if (S.negoTab === 'matrix') {
+        el.innerHTML = renderNegotiationMatrix(color);
+    } else if (S.negoTab === 'lookup') {
+        el.innerHTML = renderNegotiationLookup(color);
+        renderNegotiationLookupList(color);
+    } else if (S.negoTab === 'perks') {
+        el.innerHTML = renderNegotiationPerks(color);
+    } else if (S.negoTab === 'shuffle') {
+        el.innerHTML = renderShuffleTimeGuide(color);
+    }
+    el.scrollTop = 0;
+}
+
+function renderNegotiationMatrix(color) {
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <!-- Quick Rules Card -->
+        <div class="route-banner" style="border-color:${color}">
+            <div class="route-banner-icon" style="color:${color}">💡</div>
+            <div>
+                <div class="route-banner-title">How Shadow Negotiation Works</div>
+                <div class="route-banner-desc">
+                    Knock down all enemies with weaknesses or critical hits to trigger a <strong>Hold Up</strong>.
+                    Check the Shadow's personality in the top-left to choose responses they like.
+                    You need <strong>2 successful responses</strong> (or 1 with Sun Confidant) to recruit the Persona!
+                </div>
+            </div>
+        </div>
+
+        <!-- 2x2 Matrix of Personalities -->
+        <div class="nego-matrix-grid">
+            <!-- Upbeat -->
+            <div class="nego-card" style="border-left:4px solid #FFB74D">
+                <div class="nego-card-header">
+                    <span class="nego-personality-title" style="color:#FFB74D">Upbeat (陽気)</span>
+                    <span class="route-step-badge" style="background:#FFB74D22;color:#FFB74D">Loves Jokes</span>
+                </div>
+                <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
+                    High energy and cheerful. Loves clever, funny, and witty remarks. Dislikes indecisive or vague answers.
+                </div>
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Funny / Joke</span></div>
+                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Serious</span></div>
+                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Vague / Ambiguous</span></div>
+                </div>
+            </div>
+
+            <!-- Timid -->
+            <div class="nego-card" style="border-left:4px solid #81C784">
+                <div class="nego-card-header">
+                    <span class="nego-personality-title" style="color:#81C784">Timid (弱気)</span>
+                    <span class="route-step-badge" style="background:#81C78422;color:#81C784">Gentle / Kind</span>
+                </div>
+                <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
+                    Easily frightened and cautious. Responds best to kindness, empathy, and gentleness. Never joke or tease them.
+                </div>
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Kind / Gentle</span></div>
+                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Funny / Joke</span></div>
+                </div>
+            </div>
+
+            <!-- Gloomy -->
+            <div class="nego-card" style="border-left:4px solid #64B5F6">
+                <div class="nego-card-header">
+                    <span class="nego-personality-title" style="color:#64B5F6">Gloomy (陰気)</span>
+                    <span class="route-step-badge" style="background:#64B5F622;color:#64B5F6">Aloof / Vague</span>
+                </div>
+                <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
+                    Melancholy and cynical. Prefers mysterious, casual, or vague replies. Dislikes overly sweet sympathy.
+                </div>
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Serious</span></div>
+                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Kind / Gentle</span></div>
+                </div>
+            </div>
+
+            <!-- Irritable -->
+            <div class="nego-card" style="border-left:4px solid #E57373">
+                <div class="nego-card-header">
+                    <span class="nego-personality-title" style="color:#E57373">Irritable (短気)</span>
+                    <span class="route-step-badge" style="background:#E5737322;color:#E57373">Serious / Direct</span>
+                </div>
+                <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
+                    Aggressive and impatient. Demands direct, serious, and no-nonsense responses. Hates soft, timid excuses.
+                </div>
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Serious / Direct</span></div>
+                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Kind / Gentle</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Summary Table -->
+        <div class="section-card">
+            <div class="section-title">Quick Reference Table</div>
+            <div style="overflow-x:auto">
+                <table style="width:100%;border-collapse:collapse;font-size:.85rem;text-align:left">
+                    <thead>
+                        <tr style="border-bottom:1px solid var(--hairline-strong);color:var(--text2)">
+                            <th style="padding:8px">Personality</th>
+                            <th style="padding:8px">Best (❤️ Likes)</th>
+                            <th style="padding:8px">OK (⚠️ Neutral)</th>
+                            <th style="padding:8px">Worst (❌ Hates)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom:1px solid var(--hairline-soft)">
+                            <td style="padding:8px;font-weight:700;color:#FFB74D">Upbeat</td>
+                            <td style="padding:8px"><span class="nego-badge-best">Funny</span></td>
+                            <td style="padding:8px"><span class="nego-badge-ok">Serious</span></td>
+                            <td style="padding:8px"><span class="nego-badge-bad">Vague</span></td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--hairline-soft)">
+                            <td style="padding:8px;font-weight:700;color:#81C784">Timid</td>
+                            <td style="padding:8px"><span class="nego-badge-best">Kind</span></td>
+                            <td style="padding:8px"><span class="nego-badge-ok">Vague</span></td>
+                            <td style="padding:8px"><span class="nego-badge-bad">Funny</span></td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--hairline-soft)">
+                            <td style="padding:8px;font-weight:700;color:#64B5F6">Gloomy</td>
+                            <td style="padding:8px"><span class="nego-badge-best">Vague</span></td>
+                            <td style="padding:8px"><span class="nego-badge-ok">Serious</span></td>
+                            <td style="padding:8px"><span class="nego-badge-bad">Kind</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;font-weight:700;color:#E57373">Irritable</td>
+                            <td style="padding:8px"><span class="nego-badge-best">Serious</span></td>
+                            <td style="padding:8px"><span class="nego-badge-ok">Vague</span></td>
+                            <td style="padding:8px"><span class="nego-badge-bad">Kind</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderNegotiationLookup(color) {
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <div class="search-wrap">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+            <input id="negoSearchInput" class="search-input" type="text" placeholder="Search Shadow by name, Persona, or Arcana..." oninput="onNegoQuery(this.value)">
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${['all', 'Upbeat', 'Timid', 'Gloomy', 'Irritable'].map(p => `
+                <button class="sort-chip ${((S.negoFilter||'all')===p)?'active':''}"
+                        style="${((S.negoFilter||'all')===p)?`color:${color};background:${color}22`:''}"
+                        onclick="setNegoFilter('${p}')">
+                    ${p === 'all' ? 'All Personalities' : p}
+                </button>
+            `).join('')}
+        </div>
+
+        <div id="negoShadowList" style="display:flex;flex-direction:column;gap:8px"></div>
+    </div>`;
+}
+
+function renderNegotiationLookupList(color) {
+    const listEl = document.getElementById('negoShadowList');
+    if (!listEl) return;
+
+    const data = S.negoData?.shadows || [];
+    const q = (S.negoQuery || '').toLowerCase();
+    const filter = S.negoFilter || 'all';
+
+    let items = data;
+    if (filter !== 'all') {
+        items = items.filter(s => s.personality === filter);
+    }
+    if (q) {
+        items = items.filter(s =>
+            s.name.toLowerCase().includes(q) ||
+            s.persona_name.toLowerCase().includes(q) ||
+            s.arcana.toLowerCase().includes(q)
+        );
+    }
+
+    if (!items.length) {
+        listEl.innerHTML = `<div class="empty-state">No matching Shadows found</div>`;
+        return;
+    }
+
+    const pColorMap = {
+        'Upbeat': '#FFB74D',
+        'Timid': '#81C784',
+        'Gloomy': '#64B5F6',
+        'Irritable': '#E57373'
+    };
+
+    const bestMap = {
+        'Upbeat': 'Funny',
+        'Timid': 'Kind',
+        'Gloomy': 'Vague',
+        'Irritable': 'Serious'
+    };
+
+    listEl.innerHTML = `
+        <div style="font-size:.8rem;color:var(--text3);margin-bottom:4px">Showing ${items.length} Shadows</div>
+        ${items.map(s => {
+            const pColor = pColorMap[s.personality] || color;
+            const bestResp = bestMap[s.personality] || 'Serious';
+            return `
+            <div class="row-card" style="border-left:3px solid ${pColor}">
+                <div class="level-badge" style="background:${color}22;color:${color}">${s.level}</div>
+                <div class="row-main">
+                    <div class="row-name">${s.name} ${s.persona_name !== s.name ? `<span style="font-size:.85rem;color:var(--text3)">(${s.persona_name})</span>` : ''}</div>
+                    <div class="row-sub">${s.arcana} · ${s.area}</div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
+                    <span class="route-step-badge" style="background:${pColor}22;color:${pColor}">${s.personality}</span>
+                    <span style="font-size:.75rem;color:#81C784;font-weight:700">Best: ${bestResp}</span>
+                </div>
+            </div>`;
+        }).join('')}
+    `;
+}
+
+function renderNegotiationPerks(color) {
+    const perks = S.negoData?.sun_confidant_perks || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="route-banner" style="border-color:#FFD700">
+            <div class="route-banner-icon" style="color:#FFD700">★</div>
+            <div>
+                <div class="route-banner-title" style="color:#FFD700">Toranosuke Yoshida (Sun Confidant) Negotiation Perks</div>
+                <div class="route-banner-desc">
+                    Ranking up the Sun Confidant (The Politician at Shibuya Station Square on Sunday/Tuesday/Thursday/Saturday nights) drastically improves negotiations.
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title">Sun Confidant Negotiation Abilities</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+                ${perks.map(p => `
+                    <div class="row-card" style="border-left:3px solid #FFD700">
+                        <div class="level-badge" style="background:#FFD70022;color:#FFD700">Rank ${p.rank}</div>
+                        <div class="row-main">
+                            <div class="row-name" style="color:#FFD700">${p.name}</div>
+                            <div class="row-sub" style="color:var(--text)">${p.effect}</div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- Advanced Negotiation Mechanics -->
+        <div class="section-card">
+            <div class="section-title">Essential Negotiation Mechanics</div>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:.85rem;color:var(--text2);line-height:1.5">
+                <div>
+                    <strong style="color:var(--text)">1. Red Aura / Disaster Shadows:</strong>
+                    Disaster Shadows (glowing red aura) cannot be negotiated with during hold-ups. Defeating them causes a chain explosion that damages other enemies!
+                </div>
+                <div>
+                    <strong style="color:var(--text)">2. Chariot Rank 7 (Insta-Kill):</strong>
+                    Ryuji's Insta-Kill perk in Mementos/Palaces automatically defeats shadows 10+ levels below Joker and instantly recruits their Persona without any dialogue!
+                </div>
+                <div>
+                    <strong style="color:var(--text)">3. Already Owned Personas:</strong>
+                    If you negotiate with a Persona already in your stock, they skip conversation immediately and grant bonus EXP to that Persona.
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderShuffleTimeGuide(color) {
+    const cards = S.negoData?.p3r_shuffle_major_arcana || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="route-banner" style="border-color:${color}">
+            <div class="route-banner-icon" style="color:${color}">🃏</div>
+            <div>
+                <div class="route-banner-title">Persona 3 Reload — Shuffle Time & Arcana Burst</div>
+                <div class="route-banner-desc">
+                    Finishing battles with an All-Out Attack or Protagonist finish triggers <strong>Shuffle Time</strong>.
+                    Collecting Major Arcana cards permanently upgrades your Tartarus exploration run until you return to the entrance!
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title">Major Arcana Deck & Arcana Burst Effects</div>
+            <div class="arcana-table-grid">
+                ${cards.map(c => `
+                    <div class="arcana-card">
+                        <div class="arcana-card-num">${c.num}</div>
+                        <div class="arcana-card-name">${c.name}</div>
+                        <div class="arcana-card-effect">${c.effect}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
 }
 
 /* ── Items ─────────────────────────────────────────────────────────────────── */

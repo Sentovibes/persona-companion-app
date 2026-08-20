@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=627">
+    <link rel="stylesheet" href="styles.css?v=628">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
@@ -349,6 +349,22 @@
             <div id="slDetailContentPhone" class="detail-content"></div>
         </div>
 
+        <!-- NEGOTIATION GUIDE -->
+        <div id="screen-negotiation" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('category')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title" id="negotiationScreenTitle">Shadow Negotiation Guide</span>
+            </div>
+            <div class="fusion-tab-bar" id="negotiationTabBar">
+                <button class="fusion-tab-pill active" id="negoTabMatrix" onclick="setNegoTab('matrix')">Cheat Sheet</button>
+                <button class="fusion-tab-pill" id="negoTabLookup" onclick="setNegoTab('lookup')">Shadow Lookup</button>
+                <button class="fusion-tab-pill" id="negoTabPerks" onclick="setNegoTab('perks')">Confidant Perks</button>
+            </div>
+            <div class="detail-content" id="negotiationContent" style="padding:14px 16px"></div>
+        </div>
+
         <!-- SETTINGS -->
         <div id="screen-settings" class="screen">
             <div class="top-bar">
@@ -366,6 +382,6 @@
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
     <!-- LIBS -->
-    <script src="app.js?v=627"></script>
+    <script src="app.js?v=628"></script>
 </body>
 </html>
