@@ -124,6 +124,7 @@ const S = {
         personas:null, query:'', selected:null, recipes:null,
         mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null, null, null],
         forwardSource:null, forwardQuery:'', activePickerSlot:null,
+        skillRouteTarget:null, skillRouteSkill:null, skillsList:null,
         personaMap:{}, chart:null, byArcana:{}, specialData:{}, fissionTable:{}
     },
     settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE' }
@@ -340,7 +341,7 @@ function selectGame(seriesId, gameId) {
     S.series = seriesId; S.game = gameId;
     S.query=''; S.sort='arcana'; S.enemyTab='enemies';
     S.enemySort='level'; S.enemySortDir=1; S.favOnly=false; S.hideCompletedReq=false;
-    S.fusion = { personas:null, query:'', selected:null, recipes:null, mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null,null,null], forwardSource:null, forwardQuery:'', activePickerSlot:null }; // reset on game change
+    S.fusion = { personas:null, query:'', selected:null, recipes:null, mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null,null,null], forwardSource:null, forwardQuery:'', activePickerSlot:null, skillRouteTarget:null, skillRouteSkill:null, skillsList:null }; // reset on game change
     navigate('category');
 }
 
@@ -986,6 +987,11 @@ function renderPersonaDetail(name, p, color, containerId) {
             const lcolor = lvl<1?color:lvl>=100?'#FFD700':'var(--text2)';
             html += `<div class="skill-row"><div class="skill-name">${skill}</div><div class="skill-level" style="color:${lcolor}">${label}</div></div>`;
         });
+        html += `<div style="margin-top:10px">
+            <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload('${esc(name)}', null)">
+                Inherit a Desired Skill (Find Fusion Route) ›
+            </button>
+        </div>`;
         html += `</div>`;
     }
 
@@ -1373,7 +1379,7 @@ const NON_FUSABLE = new Set(['party','accident','special']);
     updateFusionTabUI();
     const searchWrap = document.querySelector('#screen-fusion .pane-list > .search-wrap');
     if (searchWrap) {
-        searchWrap.style.display = (S.fusion.mode === 'forward') ? 'none' : 'flex';
+        searchWrap.style.display = (S.fusion.mode === 'reverse') ? 'flex' : 'none';
     }
     const placeholder = document.getElementById('fusionDetailPlaceholder');
     const detailContent = document.getElementById('fusionDetailContent');
@@ -1382,6 +1388,10 @@ const NON_FUSABLE = new Set(['party','accident','special']);
         if (placeholder) placeholder.style.display = 'none';
         if (detailContent) detailContent.style.display = 'none';
         renderForwardFusionScreen(color);
+    } else if (S.fusion.mode === 'skillRoute') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderSkillRouteScreen(color);
     } else {
         if (S.fusion.selected) {
             if (isTablet()) {
@@ -1400,15 +1410,10 @@ const NON_FUSABLE = new Set(['party','accident','special']);
 function updateFusionTabUI() {
     const revBtn = document.getElementById('fusionTabReverse');
     const fwdBtn = document.getElementById('fusionTabForward');
-    if (revBtn && fwdBtn) {
-        if (S.fusion.mode === 'forward') {
-            fwdBtn.classList.add('active');
-            revBtn.classList.remove('active');
-        } else {
-            revBtn.classList.add('active');
-            fwdBtn.classList.remove('active');
-        }
-    }
+    const routeBtn = document.getElementById('fusionTabSkillRoute');
+    if (revBtn) revBtn.classList.toggle('active', S.fusion.mode === 'reverse');
+    if (fwdBtn) fwdBtn.classList.toggle('active', S.fusion.mode === 'forward');
+    if (routeBtn) routeBtn.classList.toggle('active', S.fusion.mode === 'skillRoute');
 }
 
 function setFusionMode(mode) {
@@ -1418,7 +1423,7 @@ function setFusionMode(mode) {
     const color = series?.color||'#2196F3';
     const searchWrap = document.querySelector('#screen-fusion .pane-list > .search-wrap');
     if (searchWrap) {
-        searchWrap.style.display = (mode === 'forward') ? 'none' : 'flex';
+        searchWrap.style.display = (mode === 'reverse') ? 'flex' : 'none';
     }
     const placeholder = document.getElementById('fusionDetailPlaceholder');
     const detailContent = document.getElementById('fusionDetailContent');
@@ -1426,6 +1431,10 @@ function setFusionMode(mode) {
         if (placeholder) placeholder.style.display = 'none';
         if (detailContent) detailContent.style.display = 'none';
         renderForwardFusionScreen(color);
+    } else if (mode === 'skillRoute') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderSkillRouteScreen(color);
     } else {
         if (S.fusion.selected) {
             if (isTablet()) {
@@ -2092,6 +2101,8 @@ function selectPersonaFromPicker(name) {
     if (S.fusion.activePickerSlot === 'source') {
         S.fusion.forwardSource = name;
         S.fusion.forwardSubTab = 'fromPersona';
+    } else if (S.fusion.activePickerSlot === 'skillRouteTarget') {
+        S.fusion.skillRouteTarget = name;
     } else {
         const slotIdx = parseInt(S.fusion.activePickerSlot, 10);
         if (!isNaN(slotIdx) && slotIdx >= 0 && slotIdx <= 2) {
@@ -2101,7 +2112,12 @@ function selectPersonaFromPicker(name) {
     }
     closePersonaPicker();
     const series = SERIES.find(s=>s.id===S.series);
-    renderForwardFusionScreen(series?.color||'#2196F3');
+    const color = series?.color||'#2196F3';
+    if (S.fusion.mode === 'skillRoute') {
+        renderSkillRouteScreen(color);
+    } else {
+        renderForwardFusionScreen(color);
+    }
 }
 
 function clearForwardSlot(slotIdx) {
@@ -2135,6 +2151,55 @@ function onForwardQuery(val) {
     const series = SERIES.find(s=>s.id===S.series);
     const color = series?.color||'#2196F3';
     debounceSearch(() => renderForwardOutputList(color));
+}
+
+function openSkillRouteTargetPicker() {
+    S.fusion.activePickerSlot = 'skillRouteTarget';
+    renderPersonaPickerModal();
+}
+
+function clearSkillRouteTarget() {
+    S.fusion.skillRouteTarget = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function openSkillRouteSkillPicker() {
+    renderSkillPickerModal();
+}
+
+function clearSkillRouteSkill() {
+    S.fusion.skillRouteSkill = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function selectSkillFromPicker(skillName) {
+    S.fusion.skillRouteSkill = skillName;
+    closeSkillPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function setSkillRoutePreload(targetName, skillName) {
+    if (targetName) S.fusion.skillRouteTarget = targetName;
+    if (skillName) S.fusion.skillRouteSkill = skillName;
+    S.fusion.mode = 'skillRoute';
+    navigate('fusion');
+}
+
+async function ensureSkillsLoaded() {
+    const key = `skills_${S.game}`;
+    if (!S.rawData[key]) {
+        try {
+            const r = await fetch(SKILL_PATHS[S.game]);
+            if (r.ok) {
+                const raw = await r.json();
+                S.rawData[key] = normalizeListData(raw, 'skills');
+            }
+        } catch(e) {}
+    }
+    return S.rawData[key] || [];
 }
 
 function renderPersonaPickerModal() {
@@ -2200,6 +2265,534 @@ function onPickerModalFilter(val) {
     const color = series?.color||'#2196F3';
     const listEl = document.getElementById('pickerModalList');
     if (listEl) listEl.innerHTML = renderPickerModalItems(val, color);
+}
+
+/* ── Skill Modal Picker ────────────────────────────────────────────────────── */
+async function renderSkillPickerModal() {
+    closeSkillPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    await ensureSkillsLoaded();
+
+    const modal = document.createElement('div');
+    modal.id = 'skillPickerModal';
+    modal.className = 'picker-modal-backdrop';
+    modal.innerHTML = `
+        <div class="picker-modal-sheet">
+            <div class="picker-modal-header">
+                <div style="font-weight:700;font-size:1.1rem;color:var(--text)">Select Desired Skill</div>
+                <button class="icon-btn" onclick="closeSkillPicker()">✕</button>
+            </div>
+            <div style="padding:10px 16px 0">
+                <div class="search-wrap">
+                    <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+                    <input id="skillPickerModalSearch" class="search-input" type="text" placeholder="Search skills by name, element, effect..." oninput="onSkillPickerModalFilter(this.value)">
+                </div>
+            </div>
+            <div id="skillPickerModalList" class="list-content" style="flex:1;overflow-y:auto;padding:8px 16px">
+                ${renderSkillPickerModalItems('', color)}
+            </div>
+        </div>
+    `;
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeSkillPicker();
+    });
+    document.body.appendChild(modal);
+    setTimeout(() => document.getElementById('skillPickerModalSearch')?.focus(), 50);
+}
+
+function closeSkillPicker() {
+    const modal = document.getElementById('skillPickerModal');
+    if (modal) modal.remove();
+}
+
+function renderSkillPickerModalItems(query, color) {
+    const q = (query || '').toLowerCase();
+    const skills = S.rawData[`skills_${S.game}`] || [];
+    const filtered = q ? skills.filter(sk =>
+        sk.name.toLowerCase().includes(q) ||
+        (sk.element||sk.type||'').toLowerCase().includes(q) ||
+        (sk.effect||'').toLowerCase().includes(q)
+    ) : skills;
+
+    if (!filtered.length) return `<div class="empty-state">No skills match search</div>`;
+
+    return filtered.map(sk => `
+        <div class="row-card" onclick="selectSkillFromPicker('${esc(sk.name)}')">
+            <div class="row-main">
+                <div class="row-name" style="font-weight:700">${sk.name}</div>
+                <div class="row-sub">${sk.effect || sk.element || ''}</div>
+            </div>
+            <div class="row-hint" style="color:#FFD700;font-size:.8rem">${sk.cost || sk.element || '+'}</div>
+        </div>
+    `).join('');
+}
+
+function onSkillPickerModalFilter(val) {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const listEl = document.getElementById('skillPickerModalList');
+    if (listEl) listEl.innerHTML = renderSkillPickerModalItems(val, color);
+}
+
+/* ── Skill Route Finder Engine & Renderer ────────────────────────────────── */
+function calcSkillInheritanceRoutes(targetName, skillName) {
+    const { personaMap, specialData } = S.fusion;
+    if (!targetName || !skillName || !personaMap[targetName]) return null;
+
+    const target = personaMap[targetName];
+
+    // 1. Natural Learning Check
+    let isNatural = false;
+    let naturalLvl = null;
+    if (target.skills && target.skills[skillName] !== undefined) {
+        isNatural = true;
+        const at = target.skills[skillName];
+        naturalLvl = at < 1 ? 'Innate' : at >= 100 ? 'Special' : `Lv. ${Math.floor(at)}`;
+    }
+
+    // 2. Velvet Room Itemization / Transmute Skill Card Check
+    const itemizers = [];
+    for (const [pname, p] of Object.entries(personaMap)) {
+        if (p.item === skillName) {
+            itemizers.push({ name: pname, data: p, isAlarm: false });
+        } else if (p.itemr === skillName) {
+            itemizers.push({ name: pname, data: p, isAlarm: true });
+        }
+    }
+
+    // 3. Find all Personas who learn skillName in this game
+    const sources = [];
+    for (const [pname, p] of Object.entries(personaMap)) {
+        if (p.skills && p.skills[skillName] !== undefined) {
+            const at = p.skills[skillName];
+            sources.push({
+                name: pname,
+                data: p,
+                atLevel: at < 1 ? 'Innate' : at >= 100 ? 'Special' : `Lv. ${Math.floor(at)}`,
+                level: p.level ?? p.lvl ?? 0
+            });
+        }
+    }
+    sources.sort((a, b) => a.level - b.level);
+
+    // 4. 1-Step Direct Recipes
+    const directRoutes = [];
+    if (specialData[targetName]) {
+        for (const recipe of specialData[targetName]) {
+            for (const ing of recipe) {
+                const src = sources.find(s => s.name === ing);
+                if (src) {
+                    directRoutes.push({
+                        type: 'special_direct',
+                        source: src,
+                        allIngredients: recipe,
+                        targetName
+                    });
+                }
+            }
+        }
+    }
+
+    for (const src of sources) {
+        if (src.name === targetName) continue;
+        for (const otherName of (S.fusion.personas || [])) {
+            if (otherName === src.name) continue;
+            const res = calcForwardFusionWeb([src.name, otherName]);
+            if (res && res.name === targetName) {
+                directRoutes.push({
+                    type: 'direct_2p',
+                    source: src,
+                    partner: { name: otherName, data: personaMap[otherName] },
+                    targetName
+                });
+            }
+        }
+    }
+
+    // 5. 2-Step Fusion Chains (Source + Partner 1 -> Bridge Parent + Partner 2 -> Target)
+    const twoStepRoutes = [];
+    const seenChains = new Set();
+
+    for (const src of sources) {
+        if (src.name === targetName) continue;
+        for (const p1 of (S.fusion.personas || [])) {
+            if (p1 === src.name) continue;
+            const bridge = calcForwardFusionWeb([src.name, p1]);
+            if (!bridge || bridge.name === targetName || bridge.name === src.name) continue;
+
+            if (specialData[targetName]) {
+                for (const recipe of specialData[targetName]) {
+                    if (recipe.includes(bridge.name)) {
+                        const key = `${src.name}=>${bridge.name}=>${targetName}`;
+                        if (!seenChains.has(key)) {
+                            seenChains.add(key);
+                            twoStepRoutes.push({
+                                type: '2step_special',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
+                                step2: { specialRecipe: recipe, result: targetName }
+                            });
+                        }
+                    }
+                }
+            } else {
+                for (const p2 of (S.fusion.personas || [])) {
+                    if (p2 === bridge.name) continue;
+                    const finalRes = calcForwardFusionWeb([bridge.name, p2]);
+                    if (finalRes && finalRes.name === targetName) {
+                        const key = `${src.name}+${p1}=>${bridge.name}+${p2}=>${targetName}`;
+                        if (!seenChains.has(key)) {
+                            seenChains.add(key);
+                            twoStepRoutes.push({
+                                type: '2step_2p',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
+                                step2: { p1: bridge.name, p2: p2, result: targetName }
+                            });
+                        }
+                    }
+                    if (twoStepRoutes.length >= 15) break;
+                }
+            }
+            if (twoStepRoutes.length >= 15) break;
+        }
+        if (twoStepRoutes.length >= 15) break;
+    }
+
+    // 6. 3-Step Fusion Chains (if no direct or 2-step routes found)
+    const threeStepRoutes = [];
+    if (directRoutes.length === 0 && twoStepRoutes.length === 0 && !isNatural) {
+        for (const src of sources) {
+            for (const p1 of (S.fusion.personas || [])) {
+                if (p1 === src.name) continue;
+                const b1 = calcForwardFusionWeb([src.name, p1]);
+                if (!b1 || b1.name === targetName) continue;
+
+                for (const p2 of (S.fusion.personas || [])) {
+                    if (p2 === b1.name) continue;
+                    const b2 = calcForwardFusionWeb([b1.name, p2]);
+                    if (!b2 || b2.name === targetName || b2.name === b1.name) continue;
+
+                    for (const p3 of (S.fusion.personas || [])) {
+                        if (p3 === b2.name) continue;
+                        const finalRes = calcForwardFusionWeb([b2.name, p3]);
+                        if (finalRes && finalRes.name === targetName) {
+                            threeStepRoutes.push({
+                                type: '3step_2p',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: b1.name, resultData: b1.data },
+                                step2: { p1: b1.name, p2: p2, result: b2.name, resultData: b2.data },
+                                step3: { p1: b2.name, p2: p3, result: targetName }
+                            });
+                            break;
+                        }
+                    }
+                    if (threeStepRoutes.length >= 6) break;
+                }
+                if (threeStepRoutes.length >= 6) break;
+            }
+            if (threeStepRoutes.length >= 6) break;
+        }
+    }
+
+    return {
+        targetName,
+        skillName,
+        isNatural,
+        naturalLvl,
+        itemizers,
+        sources,
+        directRoutes,
+        twoStepRoutes,
+        threeStepRoutes
+    };
+}
+
+async function renderSkillRouteScreen(color) {
+    const el = document.getElementById('fusionContent');
+    const { skillRouteTarget, skillRouteSkill, personaMap } = S.fusion;
+
+    const targetData = skillRouteTarget ? personaMap[skillRouteTarget] : null;
+    let skillData = null;
+    const allSkills = await ensureSkillsLoaded();
+    if (skillRouteSkill) {
+        skillData = allSkills.find(s => s.name === skillRouteSkill);
+    }
+
+    let html = `
+    <div class="skill-route-container">
+        <div class="route-selector-grid">
+            <!-- Target Persona Card -->
+            <div>
+                <div style="font-size:.75rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Target Persona</div>
+                ${targetData ? `
+                    <div class="forward-slot-card" style="border-left:4px solid ${color};margin:0">
+                        <div onclick="openSkillRouteTargetPicker()" style="flex:1;cursor:pointer">
+                            <div style="font-weight:700;font-size:1.05rem;color:var(--text)">${skillRouteTarget}</div>
+                            <div style="font-size:.82rem;color:${color}">${targetData.arcana||targetData.race||''} · Lv. ${targetData.level??targetData.lvl??'?'}</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:6px">
+                            <button class="slot-action-btn" onclick="openSkillRouteTargetPicker()">Change</button>
+                            <button class="slot-clear-btn" onclick="clearSkillRouteTarget()" title="Remove">✕</button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="forward-slot-card forward-slot-empty" onclick="openSkillRouteTargetPicker()" style="margin:0">
+                        <div style="display:flex;align-items:center;gap:10px">
+                            <div class="slot-num-badge">+</div>
+                            <div>
+                                <div style="font-weight:700;font-size:.92rem;color:${color}">+ Select Target Persona</div>
+                                <div style="font-size:.78rem;color:var(--text3)">Persona to receive the skill</div>
+                            </div>
+                        </div>
+                        <div class="slot-add-chip" style="background:${color}22;color:${color}">Select +</div>
+                    </div>
+                `}
+            </div>
+
+            <!-- Desired Skill Card -->
+            <div>
+                <div style="font-size:.75rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Desired Skill</div>
+                ${skillRouteSkill ? `
+                    <div class="forward-slot-card" style="border-left:4px solid #FFD700;margin:0">
+                        <div onclick="openSkillRouteSkillPicker()" style="flex:1;cursor:pointer">
+                            <div style="font-weight:700;font-size:1.05rem;color:var(--text)">${skillRouteSkill}</div>
+                            <div style="font-size:.82rem;color:#FFD700">${skillData ? (skillData.element || skillData.type || 'Skill') : 'Skill'}${skillData && skillData.cost ? ` · ${skillData.cost}` : ''}</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:6px">
+                            <button class="slot-action-btn" onclick="openSkillRouteSkillPicker()">Change</button>
+                            <button class="slot-clear-btn" onclick="clearSkillRouteSkill()" title="Remove">✕</button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="forward-slot-card forward-slot-empty" onclick="openSkillRouteSkillPicker()" style="margin:0">
+                        <div style="display:flex;align-items:center;gap:10px">
+                            <div class="slot-num-badge" style="color:#FFD700;border-color:#FFD700">+</div>
+                            <div>
+                                <div style="font-weight:700;font-size:.92rem;color:#FFD700">+ Select Desired Skill</div>
+                                <div style="font-size:.78rem;color:var(--text3)">Skill to pass down</div>
+                            </div>
+                        </div>
+                        <div class="slot-add-chip" style="background:#FFD70022;color:#FFD700">Select +</div>
+                    </div>
+                `}
+            </div>
+        </div>
+    `;
+
+    if (!skillRouteTarget || !skillRouteSkill) {
+        const popularSkills = ['Arms Master', 'Spell Master', 'Victory Cry', 'Debilitate', 'Megidolaon', 'Ali Dance', 'Drain Phys', 'Charge', 'Concentrate', 'Heat Riser', 'Enduring Soul', 'Insta-Heal'];
+        html += `
+        <div style="margin-top:16px">
+            <div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:8px">Popular Skills to Inherit:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+                ${popularSkills.map(skName => `
+                    <button class="slot-action-btn" style="padding:6px 12px;font-size:.82rem" onclick="selectSkillFromPicker('${esc(skName)}')">
+                        + ${skName}
+                    </button>
+                `).join('')}
+            </div>
+        </div>
+        <div class="empty-state" style="margin-top:20px;padding:24px;border:1px dashed var(--hairline-soft);border-radius:var(--r-lg)">
+            Select both a Target Persona and a Desired Skill above to see exact step-by-step fusion recipes to transfer the skill.
+        </div>`;
+    } else {
+        const routes = calcSkillInheritanceRoutes(skillRouteTarget, skillRouteSkill);
+        html += `<div style="margin-top:16px">`;
+
+        if (routes.isNatural) {
+            html += `
+            <div class="route-banner" style="border-color:#81C784;margin-bottom:12px">
+                <div class="route-banner-icon" style="color:#81C784">✓</div>
+                <div>
+                    <div class="route-banner-title" style="color:#81C784">Learned Naturally</div>
+                    <div class="route-banner-desc"><strong>${skillRouteTarget}</strong> learns <strong>${skillRouteSkill}</strong> naturally at <strong>${routes.naturalLvl}</strong>. No fusion transfer required!</div>
+                </div>
+            </div>`;
+        }
+
+        if (routes.itemizers && routes.itemizers.length > 0) {
+            html += `
+            <div class="route-banner" style="border-color:#FFD700;margin-bottom:12px">
+                <div class="route-banner-icon" style="color:#FFD700">★</div>
+                <div>
+                    <div class="route-banner-title" style="color:#FFD700">Velvet Room Itemization / Skill Card Available</div>
+                    <div class="route-banner-desc">
+                        You can itemize / transmute:
+                        ${routes.itemizers.map(it => `<strong>${it.name}</strong>${it.isAlarm ? ' (Fusion Alarm)' : ''}`).join(', ')}
+                        to obtain the <strong>${skillRouteSkill}</strong> Skill Card directly!
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        if (routes.directRoutes && routes.directRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Direct Fusion Recipes (${routes.directRoutes.length} Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+                ${routes.directRoutes.map((r, idx) => {
+                    if (r.type === 'special_direct') {
+                        return `
+                        <div class="route-card-wrap">
+                            <div class="route-header">
+                                <span class="route-step-badge" style="background:#FFD70022;color:#FFD700">Special Recipe #${idx+1}</span>
+                                <span style="font-size:.8rem;color:var(--text3)">1 Step</span>
+                            </div>
+                            <div class="route-step-card" style="border-left:3px solid ${color}">
+                                <div class="route-step-action">
+                                    1. Train ingredient <strong style="color:${color}">${r.source.name}</strong> to <strong>${r.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                                <div class="route-step-action" style="margin-top:4px">
+                                    2. Combine all ingredients: <strong>${r.allIngredients.join(' + ')}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                        </div>`;
+                    } else {
+                        return `
+                        <div class="route-card-wrap">
+                            <div class="route-header">
+                                <span class="route-step-badge" style="background:${color}22;color:${color}">Recipe #${idx+1}</span>
+                                <span style="font-size:.8rem;color:var(--text3)">Direct 1 Step</span>
+                            </div>
+                            <div class="route-step-card" style="border-left:3px solid ${color}">
+                                <div class="route-step-action">
+                                    1. Train <strong style="color:${color}">${r.source.name}</strong> to <strong>${r.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                                <div class="route-step-action" style="margin-top:4px">
+                                    2. Fuse <strong>${r.source.name}</strong> + <strong>${r.partner.name}</strong> (${r.partner.data.arcana||''} Lv.${r.partner.data.level??'?'}) = <strong style="color:${color}">${skillRouteTarget}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                        </div>`;
+                    }
+                }).join('')}
+            </div>`;
+        }
+
+        if (routes.twoStepRoutes && routes.twoStepRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Multi-Step Fusion Pathways (${routes.twoStepRoutes.length} Chains Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+                ${routes.twoStepRoutes.map((chain, idx) => `
+                    <div class="route-card-wrap">
+                        <div class="route-header">
+                            <span class="route-step-badge" style="background:${color}22;color:${color}">Pathway #${idx+1}</span>
+                            <span style="font-size:.8rem;color:var(--text3)">2 Steps</span>
+                        </div>
+                        <div class="route-steps-flow">
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 1</span>
+                                    <span class="route-step-title">Learn ${skillRouteSkill}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Train <strong style="color:${color}">${chain.source.name}</strong> (Lv. ${chain.source.level}) to <strong>${chain.source.atLevel}</strong> to learn <strong>${skillRouteSkill}</strong>.
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 2</span>
+                                    <span class="route-step-title">Bridge Fusion</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step1.p1}</strong> + <strong>${chain.step1.p2}</strong> = <strong style="color:${color}">${chain.step1.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card" style="border-color:${color}66">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:${color}22;color:${color}">Final Step</span>
+                                    <span class="route-step-title">Craft ${skillRouteTarget}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    ${chain.type === '2step_special' ? `
+                                        Combine <strong>${chain.step1.result}</strong> with remaining ingredients (${chain.step2.specialRecipe.filter(n=>n!==chain.step1.result).join(', ')}) = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                    ` : `
+                                        Fuse <strong>${chain.step2.p1}</strong> + <strong>${chain.step2.p2}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                    `}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        if (routes.threeStepRoutes && routes.threeStepRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Deep Fusion Pathways (${routes.threeStepRoutes.length} Chains Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+                ${routes.threeStepRoutes.map((chain, idx) => `
+                    <div class="route-card-wrap">
+                        <div class="route-header">
+                            <span class="route-step-badge" style="background:${color}22;color:${color}">3-Step Pathway #${idx+1}</span>
+                        </div>
+                        <div class="route-steps-flow">
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 1</span>
+                                    <span class="route-step-title">Learn ${skillRouteSkill}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Train <strong style="color:${color}">${chain.source.name}</strong> to <strong>${chain.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 2</span>
+                                    <span class="route-step-title">Bridge 1</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step1.p1}</strong> + <strong>${chain.step1.p2}</strong> = <strong style="color:${color}">${chain.step1.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 3</span>
+                                    <span class="route-step-title">Bridge 2</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step2.p1}</strong> + <strong>${chain.step2.p2}</strong> = <strong style="color:${color}">${chain.step2.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card" style="border-color:${color}66">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:${color}22;color:${color}">Final Step</span>
+                                    <span class="route-step-title">Craft ${skillRouteTarget}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step3.p1}</strong> + <strong>${chain.step3.p2}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        if (!routes.isNatural && (!routes.directRoutes || routes.directRoutes.length === 0) && (!routes.twoStepRoutes || routes.twoStepRoutes.length === 0) && (!routes.threeStepRoutes || routes.threeStepRoutes.length === 0) && (!routes.itemizers || routes.itemizers.length === 0)) {
+            html += `
+            <div class="empty-state" style="padding:24px;border:1px solid #EF535044;color:#EF5350;border-radius:var(--r-lg);font-weight:700">
+                No valid fusion pathway found to transfer ${skillRouteSkill} onto ${skillRouteTarget}. This may be a unique exclusive skill.
+            </div>`;
+        }
+
+        html += `</div>`;
+    }
+
+    html += `</div>`;
+    el.innerHTML = html;
+    el.scrollTop = 0;
 }
 
 /* ── Items ─────────────────────────────────────────────────────────────────── */
@@ -2361,6 +2954,11 @@ function openSkill(name) {
             <div class="section-title" style="color:${color}">${sk.element || sk.type || 'Skill'}</div>
             <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${sk.effect || 'No effect listed'}</div></div>
             ${sk.cost?`<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>`:''}
+            <div style="margin-top:12px">
+                <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload(null, '${esc(sk.name)}')">
+                    Transfer to Persona (Find Fusion Route) ›
+                </button>
+            </div>
         </div>
     `;
     html += `<div class="section-card" id="skillLearnedBy"><div class="section-title">Learned by</div><div class="loading-wrap" style="padding:12px"><div class="spinner" style="width:22px;height:22px"></div></div></div>`;

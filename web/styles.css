@@ -852,3 +852,67 @@ body {
     display: flex; align-items: center; justify-content: space-between;
     padding: 14px 18px; border-bottom: 1px solid var(--hairline-soft);
 }
+
+/* ── Skill Route Finder Styles ────────────────────────────────────────── */
+.skill-route-container {
+    display: flex; flex-direction: column; gap: 12px;
+}
+.route-selector-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+@media (max-width: 600px) {
+    .route-selector-grid { grid-template-columns: 1fr; }
+}
+.route-card-wrap {
+    background: var(--card); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg); padding: 14px 16px; margin-bottom: 12px;
+}
+.route-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; font-weight: 700;
+}
+.route-steps-flow {
+    display: flex; flex-direction: column; gap: 10px; position: relative;
+}
+.route-step-card {
+    background: var(--raised); border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-md); padding: 10px 14px;
+    display: flex; flex-direction: column; gap: 6px;
+}
+.route-step-header {
+    display: flex; align-items: center; gap: 8px;
+}
+.route-step-badge {
+    font-size: .75rem; font-weight: 800; padding: 2px 8px;
+    border-radius: 6px; text-transform: uppercase;
+}
+.route-step-title {
+    font-size: .9rem; font-weight: 700; color: var(--text);
+}
+.route-step-action {
+    font-size: .85rem; color: var(--text2); line-height: 1.4;
+}
+.route-step-arrow {
+    display: flex; justify-content: center; align-items: center;
+    color: var(--brass); font-size: .85rem; font-weight: 700;
+    margin: -4px 0;
+}
+.route-banner {
+    background: var(--card); border-radius: var(--r-lg);
+    border: 1.5px solid var(--brass); padding: 14px 16px;
+    display: flex; align-items: flex-start; gap: 12px;
+}
+.route-banner-icon {
+    font-size: 1.3rem; line-height: 1;
+}
+.route-banner-title {
+    font-size: .95rem; font-weight: 700; color: var(--text);
+}
+.route-banner-desc {
+    font-size: .85rem; color: var(--text2); margin-top: 2px;
+}
+.skill-chip-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 2px 8px; border-radius: 4px; font-size: .75rem;
+    font-weight: 700; background: var(--velvet-0); color: var(--text);
+}
