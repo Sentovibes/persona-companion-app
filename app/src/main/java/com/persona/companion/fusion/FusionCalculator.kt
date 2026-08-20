@@ -7,6 +7,12 @@ data class FusionRecipe(
     val personas: List<Persona>
 )
 
+data class ForwardFusionOption(
+    val otherIngredient: Persona,
+    val result: Persona,
+    val isSpecial: Boolean = false
+)
+
 /**
  * Fission-based fusion calculator matching the megaten-fusion-tool algorithm.
  *
@@ -331,27 +337,69 @@ class FusionCalculator(
         return null
     }
 
+    fun calculateForwardFusionsFrom(source: Persona): List<ForwardFusionOption> {
+        val results = mutableListOf<ForwardFusionOption>()
+        val specialNames = specialFusions.keys.toSet()
+
+        // 1. Check 2-way special fusions where source is an ingredient
+        for ((specialResultName, recipes) in specialFusions) {
+            val resultPersona = personaMap[specialResultName] ?: continue
+            for (recipe in recipes) {
+                if (recipe.contains(source.name) && recipe.size == 2) {
+                    val otherName = recipe.firstOrNull { it != source.name } ?: source.name
+                    val otherPersona = personaMap[otherName] ?: continue
+                    results.add(ForwardFusionOption(otherPersona, resultPersona, isSpecial = true))
+                }
+            }
+        }
+
+        // 2. Normal 2-way fusions
+        val fusablePersonas = allPersonas.filter {
+            it.name != source.name &&
+            it.fusion != "party" && it.fusion != "accident" && it.fusion != "special" &&
+            it.name !in elementDemonNames
+        }
+
+        val seen = mutableSetOf<String>()
+        for (other in fusablePersonas) {
+            val result = fuse(listOf(source, other)) ?: continue
+            val key = "${other.name}->${result.name}"
+            if (seen.add(key)) {
+                results.add(ForwardFusionOption(other, result, isSpecial = isSpecialFusion(result.name)))
+            }
+        }
+
+        return results.sortedWith(
+            compareBy<ForwardFusionOption> { it.result.arcana ?: "" }
+                .thenBy { it.result.level ?: 0 }
+                .thenBy { it.otherIngredient.name }
+        )
+    }
+
     fun fuse(ingredients: List<Persona>): Persona? {
         if (ingredients.isEmpty()) return null
 
         val special = findSpecialFusion(ingredients)
         if (special != null) return special
 
+        val specialNames = specialFusions.keys.toSet()
+
         if (ingredients.size == 2) {
             val p1 = ingredients[0]
             val p2 = ingredients[1]
+            if (p1.name == p2.name) return null
             val arcana1 = p1.arcana ?: return null
             val arcana2 = p2.arcana ?: return null
 
             if (arcana1 == arcana2) {
-                val list = byArcana[arcana1] ?: return null
+                val list = (byArcana[arcana1] ?: return null).filter { it.name !in specialNames }
                 val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2.0
                 val candidates = list.filter { it.name != p1.name && it.name != p2.name && (it.level ?: 0) < avgLvl }
                 return candidates.lastOrNull()
             } else {
                 val resArcana = getResultArcana(arcana1, arcana2) ?: return null
                 if (resArcana.isBlank() || resArcana == "-") return null
-                val list = byArcana[resArcana] ?: return null
+                val list = (byArcana[resArcana] ?: return null).filter { it.name !in specialNames }
                 val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2.0 + 1.0
                 val candidates = list.filter { it.name != p1.name && it.name != p2.name && (it.level ?: 0) >= avgLvl }
                 return candidates.firstOrNull() ?: list.lastOrNull()

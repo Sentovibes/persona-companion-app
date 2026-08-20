@@ -26,14 +26,23 @@ enum class CalculatorMode {
     REVERSE, FORWARD
 }
 
+enum class ForwardSubTab {
+    CALCULATOR, FROM_PERSONA
+}
+
 data class FusionState(
     val personas: List<Persona> = emptyList(),
     val selectedPersona: Persona? = null,
     val fusionType: FusionType? = null,
     val fusionRecipes: List<FusionRecipe> = emptyList(),
     val calculatorMode: CalculatorMode = CalculatorMode.REVERSE,
+    // Forward Fusion state
     val selectedIngredients: List<Persona?> = listOf(null, null, null),
     val forwardResult: Persona? = null,
+    val forwardSubTab: ForwardSubTab = ForwardSubTab.CALCULATOR,
+    val forwardSourcePersona: Persona? = null,
+    val forwardOptions: List<com.persona.companion.fusion.ForwardFusionOption> = emptyList(),
+    val forwardOptionQuery: String = "",
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
@@ -235,8 +244,15 @@ class FusionViewModel : ViewModel() {
             fusionType = null,
             fusionRecipes = emptyList(),
             selectedIngredients = listOf(null, null, null),
-            forwardResult = null
+            forwardResult = null,
+            forwardSourcePersona = null,
+            forwardOptions = emptyList(),
+            forwardOptionQuery = ""
         )
+    }
+
+    fun setForwardSubTab(tab: ForwardSubTab) {
+        _state.value = _state.value.copy(forwardSubTab = tab)
     }
 
     fun setIngredient(index: Int, persona: Persona?) {
@@ -246,6 +262,51 @@ class FusionViewModel : ViewModel() {
             _state.value = _state.value.copy(selectedIngredients = current)
             calculateForwardResult()
         }
+    }
+
+    fun clearIngredients() {
+        _state.value = _state.value.copy(
+            selectedIngredients = listOf(null, null, null),
+            forwardResult = null
+        )
+    }
+
+    fun swapIngredients() {
+        val current = _state.value.selectedIngredients
+        val swapped = listOf(current.getOrNull(1), current.getOrNull(0), current.getOrNull(2))
+        _state.value = _state.value.copy(selectedIngredients = swapped)
+        calculateForwardResult()
+    }
+
+    fun setForwardSourcePersona(persona: Persona?) {
+        if (persona == null) {
+            _state.value = _state.value.copy(
+                forwardSourcePersona = null,
+                forwardOptions = emptyList(),
+                forwardOptionQuery = ""
+            )
+            return
+        }
+
+        _state.value = _state.value.copy(
+            forwardSourcePersona = persona,
+            isLoading = true
+        )
+
+        viewModelScope.launch {
+            val calculator = fusionCalculator
+            val options = withContext(Dispatchers.Default) {
+                calculator?.calculateForwardFusionsFrom(persona) ?: emptyList()
+            }
+            _state.value = _state.value.copy(
+                forwardOptions = options,
+                isLoading = false
+            )
+        }
+    }
+
+    fun setForwardOptionQuery(query: String) {
+        _state.value = _state.value.copy(forwardOptionQuery = query)
     }
 
     private fun calculateForwardResult() {
@@ -260,6 +321,11 @@ class FusionViewModel : ViewModel() {
         _state.value = _state.value.copy(forwardResult = result)
     }
 
+    fun getPersonaCost(persona: Persona): Int {
+        val calculator = fusionCalculator ?: return 0
+        return calculator.estimatePersonaCost(persona.level ?: 0)
+    }
+
     fun getRecipeCost(recipe: FusionRecipe): Int {
         val calculator = fusionCalculator ?: return 0
         return recipe.personas.sumOf { calculator.estimatePersonaCost(it.level ?: 0) }
@@ -271,7 +337,10 @@ class FusionViewModel : ViewModel() {
             fusionType = null,
             fusionRecipes = emptyList(),
             selectedIngredients = listOf(null, null, null),
-            forwardResult = null
+            forwardResult = null,
+            forwardSourcePersona = null,
+            forwardOptions = emptyList(),
+            forwardOptionQuery = ""
         )
     }
 

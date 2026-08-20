@@ -5,6 +5,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import com.persona.companion.fusion.ForwardFusionOption
+import com.persona.companion.fusion.FusionRecipe
+import com.persona.companion.ui.viewmodels.ForwardSubTab
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
@@ -626,76 +629,356 @@ fun ElementChip(name: String, isWeak: Boolean, isResist: Boolean) {
 }
 
 @Composable
-fun SearchablePersonaDropdown(
-    label: String,
-    personas: List<com.persona.companion.models.Persona>,
-    selectedPersona: com.persona.companion.models.Persona?,
-    onPersonaSelected: (com.persona.companion.models.Persona?) -> Unit
+fun ForwardFusionView(
+    state: com.persona.companion.ui.viewmodels.FusionState,
+    viewModel: FusionViewModel,
+    onPersonaDetailClick: (String) -> Unit
 ) {
-    var searchQuery by remember(selectedPersona) { mutableStateOf(selectedPersona?.name ?: "") }
-    var isDropdownExpanded by remember { mutableStateOf(false) }
+    var activePickerSlot by remember { mutableStateOf<Int?>(null) }
+    var showSourcePicker by remember { mutableStateOf(false) }
 
-    val filtered = remember(personas, searchQuery) {
-        if (searchQuery.isBlank()) {
-            personas
-        } else {
-            personas.filter { it.name.contains(searchQuery, ignoreCase = true) }
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        // Sub-mode tabs
+        TabRow(
+            selectedTabIndex = state.forwardSubTab.ordinal,
+            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+            contentColor = MaterialTheme.colorScheme.primary,
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+        ) {
+            Tab(
+                selected = state.forwardSubTab == com.persona.companion.ui.viewmodels.ForwardSubTab.CALCULATOR,
+                onClick = { viewModel.setForwardSubTab(com.persona.companion.ui.viewmodels.ForwardSubTab.CALCULATOR) },
+                text = { Text("Fusion Chamber", fontWeight = FontWeight.SemiBold) }
+            )
+            Tab(
+                selected = state.forwardSubTab == com.persona.companion.ui.viewmodels.ForwardSubTab.FROM_PERSONA,
+                onClick = { viewModel.setForwardSubTab(com.persona.companion.ui.viewmodels.ForwardSubTab.FROM_PERSONA) },
+                text = { Text("Recipes from Persona", fontWeight = FontWeight.SemiBold) }
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        when (state.forwardSubTab) {
+            com.persona.companion.ui.viewmodels.ForwardSubTab.CALCULATOR -> {
+                ForwardCalculatorTab(
+                    state = state,
+                    viewModel = viewModel,
+                    onOpenPicker = { slotIndex -> activePickerSlot = slotIndex },
+                    onPersonaDetailClick = onPersonaDetailClick
+                )
+            }
+            com.persona.companion.ui.viewmodels.ForwardSubTab.FROM_PERSONA -> {
+                ForwardFromPersonaTab(
+                    state = state,
+                    viewModel = viewModel,
+                    onOpenPicker = { showSourcePicker = true },
+                    onPersonaDetailClick = onPersonaDetailClick
+                )
+            }
         }
     }
 
-    Column(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-        OutlinedTextField(
-            value = searchQuery,
-            onValueChange = {
-                searchQuery = it
-                isDropdownExpanded = true
-                if (it.isBlank()) {
-                    onPersonaSelected(null)
-                } else {
-                    val match = personas.find { p -> p.name.equals(it, ignoreCase = true) }
-                    if (match != null) onPersonaSelected(match)
-                }
+    // Persona picker for Chamber slots (0, 1, 2)
+    activePickerSlot?.let { slotIndex ->
+        PersonaPickerDialog(
+            title = when (slotIndex) {
+                0 -> "Select 1st Ingredient"
+                1 -> "Select 2nd Ingredient"
+                else -> "Select 3rd Ingredient"
             },
-            label = { Text(label) },
-            modifier = Modifier.fillMaxWidth(),
-            singleLine = true,
-            trailingIcon = {
-                if (selectedPersona != null || searchQuery.isNotEmpty()) {
-                    IconButton(onClick = {
-                        searchQuery = ""
-                        onPersonaSelected(null)
-                        isDropdownExpanded = false
-                    }) {
-                        Icon(Icons.Default.Close, "Clear")
+            personas = state.personas,
+            onDismiss = { activePickerSlot = null },
+            onPersonaSelected = { persona ->
+                viewModel.setIngredient(slotIndex, persona)
+                activePickerSlot = null
+            }
+        )
+    }
+
+    // Persona picker for "From Persona" tab
+    if (showSourcePicker) {
+        PersonaPickerDialog(
+            title = "Select Source Persona",
+            personas = state.personas,
+            onDismiss = { showSourcePicker = false },
+            onPersonaSelected = { persona ->
+                viewModel.setForwardSourcePersona(persona)
+                showSourcePicker = false
+            }
+        )
+    }
+}
+
+@Composable
+fun ForwardCalculatorTab(
+    state: com.persona.companion.ui.viewmodels.FusionState,
+    viewModel: FusionViewModel,
+    onOpenPicker: (Int) -> Unit,
+    onPersonaDetailClick: (String) -> Unit
+) {
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        item {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Select Ingredients:",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = TextPrimary
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(
+                        onClick = { viewModel.swapIngredients() },
+                        enabled = state.selectedIngredients[0] != null || state.selectedIngredients[1] != null
+                    ) {
+                        Text("Swap")
+                    }
+                    TextButton(
+                        onClick = { viewModel.clearIngredients() },
+                        enabled = state.selectedIngredients.any { it != null }
+                    ) {
+                        Text("Clear All")
                     }
                 }
             }
-        )
+        }
 
-        if (isDropdownExpanded && filtered.isNotEmpty() && selectedPersona?.name != searchQuery) {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(max = 200.dp)
-                    .padding(top = 4.dp),
-                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-                colors = CardDefaults.cardColors(containerColor = SurfaceCard)
-            ) {
-                LazyColumn(modifier = Modifier.fillMaxWidth()) {
-                    items(filtered) { persona ->
-                        Row(
+        // Slot 1
+        item {
+            IngredientSlotCard(
+                label = "1st Ingredient",
+                persona = state.selectedIngredients.getOrNull(0),
+                isRequired = true,
+                onSelectClick = { onOpenPicker(0) },
+                onClearClick = { viewModel.setIngredient(0, null) }
+            )
+        }
+
+        // Slot 2
+        item {
+            IngredientSlotCard(
+                label = "2nd Ingredient",
+                persona = state.selectedIngredients.getOrNull(1),
+                isRequired = true,
+                onSelectClick = { onOpenPicker(1) },
+                onClearClick = { viewModel.setIngredient(1, null) }
+            )
+        }
+
+        // Slot 3 (Optional)
+        item {
+            IngredientSlotCard(
+                label = "3rd Ingredient (Optional / Triangle)",
+                persona = state.selectedIngredients.getOrNull(2),
+                isRequired = false,
+                onSelectClick = { onOpenPicker(2) },
+                onClearClick = { viewModel.setIngredient(2, null) }
+            )
+        }
+
+        item {
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "Fusion Result",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = TextPrimary
+            )
+        }
+
+        item {
+            val activeCount = state.selectedIngredients.filterNotNull().size
+            if (activeCount < 2) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(28.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Select at least 2 ingredients to see the fused Persona",
+                            color = TextSecondary,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                }
+            } else {
+                val result = state.forwardResult
+                if (result != null) {
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onPersonaDetailClick(result.name) },
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)
+                        ),
+                        shape = RoundedCornerShape(16.dp),
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.5.dp,
+                            MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
+                        )
+                    ) {
+                        Column(modifier = Modifier.padding(18.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    if (viewModel.isSpecialFusion(result.name)) {
+                                        Surface(
+                                            color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.2f),
+                                            shape = RoundedCornerShape(4.dp),
+                                            modifier = Modifier.padding(bottom = 4.dp)
+                                        ) {
+                                            Text(
+                                                text = "★ SPECIAL FUSION",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.tertiary,
+                                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                            )
+                                        }
+                                    }
+                                    Text(
+                                        text = result.name,
+                                        style = MaterialTheme.typography.headlineSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        color = TextPrimary
+                                    )
+                                    Text(
+                                        text = "${result.arcana} • Lv. ${result.level}",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        color = MaterialTheme.colorScheme.primary,
+                                        modifier = Modifier.padding(top = 2.dp)
+                                    )
+                                }
+                                Surface(
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                    shape = RoundedCornerShape(8.dp)
+                                ) {
+                                    Text(
+                                        text = "Lv. ${result.level ?: 0}",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.primary,
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                    )
+                                }
+                            }
+
+                            // Weakness / Resistances Row
+                            Spacer(modifier = Modifier.height(12.dp))
+                            PersonaResistancesRow(persona = result)
+
+                            // Stats Preview
+                            if (result.stats != null && result.stats.size >= 5) {
+                                Spacer(modifier = Modifier.height(12.dp))
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    val statLabels = listOf("St", "Ma", "En", "Ag", "Lu")
+                                    statLabels.forEachIndexed { i, label ->
+                                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                            Text(label, style = MaterialTheme.typography.labelSmall, color = TextSecondary)
+                                            Text(
+                                                text = "${result.stats.getOrNull(i) ?: 0}",
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                fontWeight = FontWeight.Bold,
+                                                color = TextPrimary
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Estimated Summon Cost
+                            val cost = viewModel.getPersonaCost(result)
+                            Spacer(modifier = Modifier.height(12.dp))
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = "Estimated Summon Cost:",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = TextSecondary
+                                )
+                                Text(
+                                    text = "¥ " + String.format("%,d", cost),
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFFFFD700)
+                                )
+                            }
+
+                            // Unlock requirements
+                            if (!result.unlock.isNullOrBlank()) {
+                                Spacer(modifier = Modifier.height(8.dp))
+                                Surface(
+                                    color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
+                                    shape = RoundedCornerShape(6.dp),
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Text(
+                                        text = "Unlock: ${result.unlock}",
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onErrorContainer,
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                    )
+                                }
+                            }
+
+                            Spacer(modifier = Modifier.height(12.dp))
+                            Button(
+                                onClick = { onPersonaDetailClick(result.name) },
+                                modifier = Modifier.fillMaxWidth(),
+                                shape = RoundedCornerShape(8.dp)
+                            ) {
+                                Text("View Persona Details")
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Icon(Icons.Default.ChevronRight, contentDescription = null, modifier = Modifier.size(18.dp))
+                            }
+                        }
+                    }
+                } else {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                        shape = RoundedCornerShape(12.dp)
+                    ) {
+                        Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable {
-                                    searchQuery = persona.name
-                                    onPersonaSelected(persona)
-                                    isDropdownExpanded = false
-                                }
-                                .padding(12.dp),
-                            horizontalArrangement = Arrangement.SpaceBetween
+                                .padding(28.dp),
+                            contentAlignment = Alignment.Center
                         ) {
-                            Text(persona.name, fontWeight = FontWeight.Bold, color = TextPrimary)
-                            Text("${persona.arcana} • Lv. ${persona.level}", color = TextSecondary)
+                            Text(
+                                text = "Invalid Fusion Combination",
+                                color = MaterialTheme.colorScheme.error,
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Bold
+                            )
                         }
                     }
                 }
@@ -705,130 +988,452 @@ fun SearchablePersonaDropdown(
 }
 
 @Composable
-fun ForwardFusionView(
+fun ForwardFromPersonaTab(
     state: com.persona.companion.ui.viewmodels.FusionState,
     viewModel: FusionViewModel,
+    onOpenPicker: () -> Unit,
     onPersonaDetailClick: (String) -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        Text(
-            text = "Select 2 or 3 ingredients to fuse:",
-            style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(bottom = 12.dp),
-            color = TextPrimary
-        )
+    val source = state.forwardSourcePersona
+    var searchQuery by remember { mutableStateOf("") }
 
-        // Ingredient 1
-        SearchablePersonaDropdown(
-            label = "1st Ingredient",
-            personas = state.personas,
-            selectedPersona = state.selectedIngredients.getOrNull(0),
-            onPersonaSelected = { viewModel.setIngredient(0, it) }
-        )
-
-        // Ingredient 2
-        SearchablePersonaDropdown(
-            label = "2nd Ingredient",
-            personas = state.personas,
-            selectedPersona = state.selectedIngredients.getOrNull(1),
-            onPersonaSelected = { viewModel.setIngredient(1, it) }
-        )
-
-        // Ingredient 3 (Optional)
-        SearchablePersonaDropdown(
-            label = "3rd Ingredient (Optional)",
-            personas = state.personas,
-            selectedPersona = state.selectedIngredients.getOrNull(2),
-            onPersonaSelected = { viewModel.setIngredient(2, it) }
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        // Result Card
-        Text(
-            text = "Fusion Result",
-            style = MaterialTheme.typography.titleMedium,
-            color = TextPrimary,
-            modifier = Modifier.padding(bottom = 8.dp)
-        )
-
-        val activeIngredientsCount = state.selectedIngredients.filterNotNull().size
-        if (activeIngredientsCount < 2) {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(containerColor = SurfaceCard)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(32.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "Please select at least 2 ingredients",
-                        color = TextSecondary,
-                        style = MaterialTheme.typography.bodyLarge
-                    )
-                }
-            }
+    val filteredOptions = remember(state.forwardOptions, searchQuery) {
+        if (searchQuery.isBlank()) {
+            state.forwardOptions
         } else {
-            val result = state.forwardResult
-            if (result != null) {
+            state.forwardOptions.filter {
+                it.result.name.contains(searchQuery, ignoreCase = true) ||
+                it.result.arcana?.contains(searchQuery, ignoreCase = true) == true ||
+                it.otherIngredient.name.contains(searchQuery, ignoreCase = true)
+            }
+        }
+    }
+
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        item {
+            Text(
+                text = "Source Persona:",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = TextPrimary
+            )
+        }
+
+        item {
+            if (source == null) {
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable { onPersonaDetailClick(result.name) },
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
+                        .clickable { onOpenPicker() },
+                    colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                    shape = RoundedCornerShape(12.dp),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.5f))
                 ) {
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(20.dp),
+                            .padding(18.dp),
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
                             Text(
-                                text = result.name,
-                                style = MaterialTheme.typography.headlineSmall,
+                                text = "+ Select Source Persona",
+                                style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onPrimaryContainer
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
-                                text = "${result.arcana} • Lv. ${result.level}",
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f),
-                                modifier = Modifier.padding(top = 4.dp)
+                                text = "See every Persona you can fuse from your stock",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = TextSecondary
                             )
                         }
-                        Icon(
-                            imageVector = Icons.Default.ChevronRight,
-                            contentDescription = "Details",
-                            tint = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
+                        Icon(Icons.Default.Add, contentDescription = "Select", tint = MaterialTheme.colorScheme.primary)
                     }
                 }
             } else {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(containerColor = SurfaceCard)
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+                    ),
+                    shape = RoundedCornerShape(12.dp),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary)
                 ) {
-                    Box(
+                    Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(32.dp),
-                        contentAlignment = Alignment.Center
+                            .padding(16.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            text = "Invalid Fusion Combination",
-                            color = MaterialTheme.colorScheme.error,
-                            style = MaterialTheme.typography.bodyLarge,
-                            fontWeight = FontWeight.Bold
+                        Column {
+                            Text(
+                                text = source.name,
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = TextPrimary
+                            )
+                            Text(
+                                text = "${source.arcana} • Lv. ${source.level}",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            TextButton(onClick = { onOpenPicker() }) {
+                                Text("Change")
+                            }
+                            IconButton(onClick = { viewModel.setForwardSourcePersona(null) }) {
+                                Icon(Icons.Default.Close, contentDescription = "Clear", tint = TextSecondary)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (source != null) {
+            item {
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = { searchQuery = it },
+                    modifier = Modifier.fillMaxWidth(),
+                    placeholder = { Text("Filter result name, arcana, or ingredient...") },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search") },
+                    trailingIcon = {
+                        if (searchQuery.isNotEmpty()) {
+                            IconButton(onClick = { searchQuery = "" }) {
+                                Icon(Icons.Default.Close, contentDescription = "Clear")
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    shape = RoundedCornerShape(10.dp)
+                )
+            }
+
+            item {
+                Text(
+                    text = "${filteredOptions.size} Possible Fusions Found",
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
+
+            items(filteredOptions) { option ->
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onPersonaDetailClick(option.result.name) },
+                    colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(14.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(
+                                    text = "+ ${option.otherIngredient.name}",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = TextSecondary
+                                )
+                                Text(
+                                    text = " (${option.otherIngredient.arcana} Lv.${option.otherIngredient.level})",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = TextSecondary.copy(alpha = 0.7f)
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(
+                                    text = "= ${option.result.name}",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = TextPrimary
+                                )
+                                if (option.isSpecial) {
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Surface(
+                                        color = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.2f),
+                                        shape = RoundedCornerShape(4.dp)
+                                    ) {
+                                        Text(
+                                            text = "★ Special",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = MaterialTheme.colorScheme.tertiary,
+                                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                                        )
+                                    }
+                                }
+                            }
+                            Text(
+                                text = "${option.result.arcana} • Lv. ${option.result.level}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+
+                        Icon(
+                            Icons.Default.ChevronRight,
+                            contentDescription = "Details",
+                            tint = TextSecondary
                         )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun IngredientSlotCard(
+    label: String,
+    persona: com.persona.companion.models.Persona?,
+    isRequired: Boolean,
+    onSelectClick: () -> Unit,
+    onClearClick: () -> Unit
+) {
+    if (persona == null) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { onSelectClick() },
+            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+            shape = RoundedCornerShape(12.dp),
+            border = androidx.compose.foundation.BorderStroke(
+                1.dp,
+                if (isRequired) MaterialTheme.colorScheme.outline.copy(alpha = 0.4f)
+                else MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)
+            )
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column {
+                    Text(
+                        text = "+ $label",
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Text(
+                        text = if (isRequired) "Required ingredient" else "Optional for 3-way fusion",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = TextSecondary
+                    )
+                }
+                Icon(Icons.Default.Add, contentDescription = "Add", tint = MaterialTheme.colorScheme.primary)
+            }
+        }
+    } else {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
+            ),
+            shape = RoundedCornerShape(12.dp),
+            border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.5f))
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(14.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clickable { onSelectClick() }
+                ) {
+                    Text(
+                        text = persona.name,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                    Text(
+                        text = "${persona.arcana} • Lv. ${persona.level}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    TextButton(onClick = onSelectClick) {
+                        Text("Change")
+                    }
+                    IconButton(onClick = onClearClick) {
+                        Icon(Icons.Default.Close, contentDescription = "Clear", tint = TextSecondary)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun PersonaPickerDialog(
+    title: String,
+    personas: List<com.persona.companion.models.Persona>,
+    onDismiss: () -> Unit,
+    onPersonaSelected: (com.persona.companion.models.Persona) -> Unit
+) {
+    var searchQuery by remember { mutableStateOf("") }
+    var selectedArcana by remember { mutableStateOf<String?>(null) }
+
+    val allArcana = remember(personas) {
+        listOf("All") + personas.mapNotNull { it.arcana }.distinct().sorted()
+    }
+
+    val filtered = remember(personas, searchQuery, selectedArcana) {
+        personas.filter { p ->
+            val matchesQuery = searchQuery.isBlank() ||
+                    p.name.contains(searchQuery, ignoreCase = true) ||
+                    p.arcana?.contains(searchQuery, ignoreCase = true) == true
+            val matchesArcana = selectedArcana == null || selectedArcana == "All" || p.arcana == selectedArcana
+            matchesQuery && matchesArcana
+        }
+    }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight(0.85f),
+        properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false)
+    ) {
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth(0.92f)
+                .fillMaxHeight(),
+            shape = RoundedCornerShape(16.dp),
+            color = MaterialTheme.colorScheme.surface
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+            ) {
+                // Header
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                    IconButton(onClick = onDismiss) {
+                        Icon(Icons.Default.Close, contentDescription = "Close")
+                    }
+                }
+
+                // Search Bar
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = { searchQuery = it },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    placeholder = { Text("Search by name or arcana...") },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search") },
+                    trailingIcon = {
+                        if (searchQuery.isNotEmpty()) {
+                            IconButton(onClick = { searchQuery = "" }) {
+                                Icon(Icons.Default.Close, contentDescription = "Clear")
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    shape = RoundedCornerShape(10.dp)
+                )
+
+                // Arcana Filter Chips
+                androidx.compose.foundation.lazy.LazyRow(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    items(allArcana) { arcana ->
+                        val isSelected = (selectedArcana == null && arcana == "All") || selectedArcana == arcana
+                        FilterChip(
+                            selected = isSelected,
+                            onClick = { selectedArcana = if (arcana == "All") null else arcana },
+                            label = { Text(arcana, style = MaterialTheme.typography.labelSmall) }
+                        )
+                    }
+                }
+
+                // Persona List
+                LazyColumn(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    items(filtered) { persona ->
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onPersonaSelected(persona) },
+                            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(12.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column {
+                                    Text(
+                                        text = persona.name,
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = TextPrimary
+                                    )
+                                    Text(
+                                        text = "${persona.arcana}",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = TextSecondary
+                                    )
+                                }
+                                Surface(
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                    shape = RoundedCornerShape(6.dp)
+                                ) {
+                                    Text(
+                                        text = "Lv. ${persona.level ?: 0}",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.primary,
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
