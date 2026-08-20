@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=615">
+    <link rel="stylesheet" href="styles.css?v=625">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
@@ -270,6 +270,11 @@
                 </button>
                 <span class="top-bar-title">Fusion Calculator</span>
             </div>
+            <div class="fusion-tab-bar">
+                <button class="fusion-tab-pill active" id="fusionTabReverse" onclick="setFusionMode('reverse')">Reverse (Recipes)</button>
+                <button class="fusion-tab-pill" id="fusionTabForward" onclick="setFusionMode('forward')">Forward (Fuse)</button>
+                <button class="fusion-tab-pill" id="fusionTabSkillRoute" onclick="setFusionMode('skillRoute')">Skill Routes</button>
+            </div>
             <div class="two-pane-body">
                 <div class="pane-list">
                     <div class="search-wrap">
@@ -361,6 +366,6 @@
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
     <!-- LIBS -->
-    <script src="app.js?v=616"></script>
+    <script src="app.js?v=625"></script>
 </body>
 </html>

@@ -120,7 +120,13 @@ const S = {
     detail:null, favorites:new Set(), completedRequests:new Set(),
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
-    fusion:{ personas:null, query:'', selected:null, recipes:null },
+    fusion:{
+        personas:null, query:'', selected:null, recipes:null,
+        mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null, null, null],
+        forwardSource:null, forwardQuery:'', activePickerSlot:null,
+        skillRouteTarget:null, skillRouteSkill:null, skillsList:null,
+        personaMap:{}, chart:null, byArcana:{}, specialData:{}, fissionTable:{}
+    },
     settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE' }
 };
 
@@ -335,7 +341,7 @@ function selectGame(seriesId, gameId) {
     S.series = seriesId; S.game = gameId;
     S.query=''; S.sort='arcana'; S.enemyTab='enemies';
     S.enemySort='level'; S.enemySortDir=1; S.favOnly=false; S.hideCompletedReq=false;
-    S.fusion = { personas:null, query:'', selected:null, recipes:null }; // reset on game change
+    S.fusion = { personas:null, query:'', selected:null, recipes:null, mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null,null,null], forwardSource:null, forwardQuery:'', activePickerSlot:null, skillRouteTarget:null, skillRouteSkill:null, skillsList:null }; // reset on game change
     navigate('category');
 }
 
@@ -395,7 +401,6 @@ function openSocialLinks() {
 }
 
 function openFusion() {
-    S.fusion = { personas:null, query:'', selected:null, recipes:null };
     navigate('fusion');
 }
 
@@ -982,6 +987,11 @@ function renderPersonaDetail(name, p, color, containerId) {
             const lcolor = lvl<1?color:lvl>=100?'#FFD700':'var(--text2)';
             html += `<div class="skill-row"><div class="skill-name">${skill}</div><div class="skill-level" style="color:${lcolor}">${label}</div></div>`;
         });
+        html += `<div style="margin-top:10px">
+            <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload('${esc(name)}', null)">
+                Inherit a Desired Skill (Find Fusion Route) ›
+            </button>
+        </div>`;
         html += `</div>`;
     }
 
@@ -1299,11 +1309,7 @@ async function buildFusionScreen() {
                 const sRes = await fetch(SPECIAL_PATHS[S.game] + '?v=' + Date.now());
                 if (sRes.ok) specialData = await sRes.json();
             } catch(e) {}
-
-            // Pre-sort fusable personas by level per arcana for fast lookup
-            // Exclude party/accident/special fusion-only personas from ingredient pool
-            // Also exclude element demons (empty special list)
-            const NON_FUSABLE = new Set(['party','accident','special']);
+const NON_FUSABLE = new Set(['party','accident','special']);
             const elemDemonNames = new Set(
                 Object.entries(specialData)
                     .filter(([, v]) => Array.isArray(v) && v.length === 0)
@@ -1319,13 +1325,10 @@ async function buildFusionScreen() {
             });
             Object.values(byArcana).forEach(arr => arr.sort((a,b) => (a.data.level??a.data.lvl??0) - (b.data.level??b.data.lvl??0)));
 
-            // Build fission table: resultArcana -> { arcanaA -> [arcanaB, ...] }
-            // Square charts: upper triangle only; triangular charts: full table
             const fissionTable = {};
             const _races = chart.races, _table = chart.table;
             const _triangular = IS_TRIANGULAR[S.game] || false;
             if (_triangular) {
-                // Triangular: row i has i+1 columns, raceB = races[c]
                 for (let idxA = 0; idxA < _races.length; idxA++) {
                     const raceA = _races[idxA];
                     const row = _table[idxA];
@@ -1341,7 +1344,6 @@ async function buildFusionScreen() {
                     }
                 }
             } else {
-                // Square: upper triangle only
                 for (let idxA = 0; idxA < _races.length; idxA++) {
                     const raceA = _races[idxA];
                     const row = _table[idxA];
@@ -1358,29 +1360,101 @@ async function buildFusionScreen() {
                 }
             }
             S.fusion.fissionTable = fissionTable;
-
-            S.fusion.personaMap  = personaMap;
-            S.fusion.chart       = chart;
-            S.fusion.byArcana    = byArcana;
+            S.fusion.personaMap = personaMap;
+            S.fusion.chart = chart;
+            S.fusion.byArcana = byArcana;
             S.fusion.specialData = specialData;
-            S.fusion.personas    = Object.keys(personaMap).sort((a,b)=>a.localeCompare(b));
+            S.fusion.personas = Object.keys(personaMap).sort((a,b)=>a.localeCompare(b));
+            S.fusion.mode = 'reverse';
+            S.fusion.selected = null;
+            S.fusion.forwardSlots = [null, null, null];
+            S.fusion.forwardSource = null;
+            S.fusion.forwardSubTab = 'chamber';
         } catch(e) {
             el.innerHTML = `<div class="empty-state">Failed to load: ${e.message}</div>`;
             return;
         }
     }
 
-    if (S.fusion.selected) {
-        renderFusionResults(SERIES.find(s=>s.id===S.series)?.color||'#2196F3');
+    updateFusionTabUI();
+    const searchWrap = document.querySelector('#screen-fusion .pane-list > .search-wrap');
+    if (searchWrap) {
+        searchWrap.style.display = (S.fusion.mode === 'reverse') ? 'flex' : 'none';
+    }
+    const placeholder = document.getElementById('fusionDetailPlaceholder');
+    const detailContent = document.getElementById('fusionDetailContent');
+
+    if (S.fusion.mode === 'forward') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderForwardFusionScreen(color);
+    } else if (S.fusion.mode === 'skillRoute') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderSkillRouteScreen(color);
     } else {
-        renderFusionPersonaList(color);
+        if (S.fusion.selected) {
+            if (isTablet()) {
+                showFusionDetailPane(color);
+            } else {
+                renderFusionResults(color);
+            }
+        } else {
+            if (placeholder) placeholder.style.display = '';
+            if (detailContent) detailContent.style.display = 'none';
+            renderFusionPersonaList(color);
+        }
     }
 }
 
+function updateFusionTabUI() {
+    const revBtn = document.getElementById('fusionTabReverse');
+    const fwdBtn = document.getElementById('fusionTabForward');
+    const routeBtn = document.getElementById('fusionTabSkillRoute');
+    if (revBtn) revBtn.classList.toggle('active', S.fusion.mode === 'reverse');
+    if (fwdBtn) fwdBtn.classList.toggle('active', S.fusion.mode === 'forward');
+    if (routeBtn) routeBtn.classList.toggle('active', S.fusion.mode === 'skillRoute');
+}
+
+function setFusionMode(mode) {
+    S.fusion.mode = mode;
+    updateFusionTabUI();
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const searchWrap = document.querySelector('#screen-fusion .pane-list > .search-wrap');
+    if (searchWrap) {
+        searchWrap.style.display = (mode === 'reverse') ? 'flex' : 'none';
+    }
+    const placeholder = document.getElementById('fusionDetailPlaceholder');
+    const detailContent = document.getElementById('fusionDetailContent');
+    if (mode === 'forward') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderForwardFusionScreen(color);
+    } else if (mode === 'skillRoute') {
+        if (placeholder) placeholder.style.display = 'none';
+        if (detailContent) detailContent.style.display = 'none';
+        renderSkillRouteScreen(color);
+    } else {
+        if (S.fusion.selected) {
+            if (isTablet()) {
+                showFusionDetailPane(color);
+            } else {
+                renderFusionResults(color);
+            }
+        } else {
+            if (placeholder) placeholder.style.display = '';
+            if (detailContent) detailContent.style.display = 'none';
+            renderFusionPersonaList(color);
+        }
+    }
+}
+
+/* ── Reverse Fusion (How to craft target Persona) ────────────────────────── */
 function renderFusionPersonaList(color) {
     const el = document.getElementById('fusionContent');
-    const q  = S.fusion.query.toLowerCase();
-    document.getElementById('fusionSearch').value = S.fusion.query;
+    const q  = (S.fusion.query || '').toLowerCase();
+    document.getElementById('fusionSearch').value = S.fusion.query || '';
     document.getElementById('fusionSearchClear').style.display = q ? 'block' : 'none';
 
     let items = S.fusion.personas || [];
@@ -1407,7 +1481,7 @@ function renderFusionPersonaList(color) {
         }).join('');
 }
 
-// Games with triangle (3-persona) fusion — P5 games use group fusions (specials) instead
+// Games with triangle (3-persona) fusion — P3/P4 games
 const TRIANGLE_GAMES = new Set(['p3fes','p3p','p3r','p4','p4g']);
 
 function selectFusionPersona(name) {
@@ -1416,8 +1490,6 @@ function selectFusionPersona(name) {
     S.fusion.selected = { name, data: p };
     S.fusion.recipes  = calcFusionRecipes(name);
     S.fusion.isTriangle = false;
-    // Personas whose arcana no chart pair can produce (top-of-arcana Fool/Tower/
-    // Aeon/Jester etc.) are reachable in-game only via triangle fusion
     if (!S.fusion.recipes.length && TRIANGLE_GAMES.has(S.game)) {
         S.fusion.recipes = calcTriangleRecipes(name);
         S.fusion.isTriangle = S.fusion.recipes.length > 0;
@@ -1461,12 +1533,6 @@ function showFusionDetailPane(color) {
     if (!recipes || !recipes.length) {
         html += `<div class="empty-state">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
     } else {
-        if (p.unlock) {
-            html += `<div class="unlock-box" style="margin:8px 0">
-                <div class="unlock-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
-                <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
-            </div>`;
-        }
         html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
         html += recipes.map(combo => {
             if (combo.length === 2) {
@@ -1494,192 +1560,6 @@ function showFusionDetailPane(color) {
     el.scrollTop = 0;
 }
 
-function renderFusionResultsInPane(color) { showFusionDetailPane(color); } // compat alias
-function clearFusionSelectionPane() {
-    S.fusion.selected = null;
-    S.fusion.recipes  = null;
-    document.getElementById('fusionDetailPlaceholder').style.display = '';
-    document.getElementById('fusionDetailContent').style.display = 'none';
-    const series = SERIES.find(s=>s.id===S.series);
-    renderFusionPersonaList(series?.color||'#2196F3');
-}
-
-function calcFusionRecipes(targetName) {
-    const recipes = [];
-    const { personaMap, chart, byArcana, specialData, fissionTable } = S.fusion;
-    const target = personaMap[targetName];
-    if (!target) return recipes;
-
-    // Special fusions — return early
-    const special = specialData[targetName];
-    if (special && special.length) {
-        // Element demons have empty special list — skip them
-        for (const combo of special) {
-            const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
-            if (personas.length === combo.length) recipes.push(personas);
-        }
-        return recipes;
-    }
-    // Element demons (empty special list) have no recipes
-    if (special && special.length === 0) return recipes;
-
-    const targetArcana = target.arcana || target.race;
-    const targetLevel  = target.level  ?? target.lvl ?? 0;
-    if (!targetArcana || !chart) return recipes;
-
-    // resultLvls excludes special-recipe personas (mirrors getResultDemonLvls)
-    const resultLvls = (byArcana[targetArcana] || [])
-        .filter(p => !specialData[p.name])
-        .map(p => p.data.level ?? p.data.lvl ?? 0)
-        .sort((a,b) => a-b);
-    const targetLvlIndex = resultLvls.indexOf(targetLevel);
-    if (targetLvlIndex < 0) return recipes;
-
-    // ── Same-arcana (per-nonelem-fissions.ts: splitWithSameRace) ──
-    // minResultLvl = 2*(targetLvl - 1),  maxResultLvl = 2*(nextLvl - 1)
-    const sameMinLvl = 2 * (targetLevel - 1);
-    const sameMaxLvl = targetLvlIndex + 1 < resultLvls.length
-        ? 2 * (resultLvls[targetLvlIndex + 1] - 1) : 200;
-    const sameNextLvl = targetLvlIndex + 2 < resultLvls.length
-        ? 2 * (resultLvls[targetLvlIndex + 2] - 1) : 200;
-
-    // ingLvls = all arcana levels except target (mirrors getIngredientDemonLvls)
-    const ingLvls = (byArcana[targetArcana] || [])
-        .map(p => p.data.level ?? p.data.lvl ?? 0)
-        .filter(l => l !== targetLevel)
-        .sort((a,b) => a-b);
-
-    // Extra recipe: ingLvlM x ingLvl2 (per-nonelem-fissions.ts lines 22-28)
-    const ingLvlM = sameMaxLvl / 2 + 1; // maxResultLvl/2 + lvlModifier(1)
-    for (const lvl2 of ingLvls) {
-        if (ingLvlM < lvl2 && ingLvlM + lvl2 < sameNextLvl) {
-            const pM = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === ingLvlM);
-            const p2 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl2);
-            if (pM && p2) recipes.push([{name:pM.name,data:pM.data},{name:p2.name,data:p2.data}]);
-        }
-    }
-
-    // Normal same-arcana pairs
-    for (let i = 0; i < ingLvls.length; i++) {
-        const lvl1 = ingLvls[i];
-        for (let j = i + 1; j < ingLvls.length; j++) {
-            const lvl2 = ingLvls[j];
-            const sum = lvl1 + lvl2;
-            if (sum >= sameMinLvl && sum < sameMaxLvl) {
-                const p1 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl1);
-                const p2 = (byArcana[targetArcana]||[]).find(p => (p.data.level??p.data.lvl??0) === lvl2);
-                if (p1 && p2) recipes.push([{name:p1.name,data:p1.data},{name:p2.name,data:p2.data}]);
-            }
-        }
-    }
-
-    // ── Cross-arcana (smt-nonelem-fissions.ts: splitWithDiffRace) ──
-    // minResultLvl = 2*(prevTargetLvl - 0.5)  (or 0)
-    // maxResultLvl = 2*(targetLvl - 0.5)  only if next result exists, else 200
-    const prevTargetLvl = targetLvlIndex > 0 ? resultLvls[targetLvlIndex - 1] : null;
-    const nextTargetLvl = targetLvlIndex + 1 < resultLvls.length ? resultLvls[targetLvlIndex + 1] : null;
-    const crossMinLvl = prevTargetLvl != null ? 2 * prevTargetLvl - 1 : 0;
-    const crossMaxLvl = nextTargetLvl != null ? 2 * targetLevel - 1 : 200;
-
-    const fissions = (fissionTable && fissionTable[targetArcana]) || {};
-    const seen = new Set();
-
-    for (const [raceA, raceBsList] of Object.entries(fissions)) {
-        const lvlsA = (byArcana[raceA]||[]).map(p => p.data.level??p.data.lvl??0);
-        for (const lvlA of lvlsA) {
-            const minLvlB = crossMinLvl - lvlA;
-            const maxLvlB = crossMaxLvl - lvlA;
-            for (const raceB of raceBsList) {
-                if (raceA === raceB) continue; // same-arcana handled above
-                const lvlsB = (byArcana[raceB]||[]).map(p => p.data.level??p.data.lvl??0);
-                for (const lvlB of lvlsB) {
-                    if (lvlB > minLvlB && lvlB <= maxLvlB && (raceA !== raceB || lvlA < lvlB)) {
-                        const pA = (byArcana[raceA]||[]).find(p => (p.data.level??p.data.lvl??0) === lvlA);
-                        const pB = (byArcana[raceB]||[]).find(p => (p.data.level??p.data.lvl??0) === lvlB);
-                        if (!pA || !pB) continue;
-                        const key = pA.name <= pB.name ? `${pA.name}|${pB.name}` : `${pB.name}|${pA.name}`;
-                        if (!seen.has(key)) {
-                            seen.add(key);
-                            recipes.push([{name:pA.name,data:pA.data},{name:pB.name,data:pB.data}]);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    return recipes;
-}
-
-/* ── Triangle fusion (port of the Android FusionCalculator) ────────────────── */
-function getResultArcanaWeb(a, b) {
-    if (a === b) return a;
-    const races = S.fusion.chart.races, ia = races.indexOf(a), ib = races.indexOf(b);
-    if (ia < 0 || ib < 0) return null;
-    if (IS_TRIANGULAR[S.game]) {
-        const r = Math.max(ia, ib), c = Math.min(ia, ib);
-        return (S.fusion.chart.table[r] || [])[c] || null;
-    }
-    const r = Math.min(ia, ib), c = Math.max(ia, ib);
-    return (S.fusion.chart.table[r] || [])[c] || null;
-}
-
-function fuseTriangleWeb(a, b, c) {
-    // sort by level then name; the two lowest fuse first, the result fuses with the highest
-    const lvlOf = p => p.data.level ?? p.data.lvl ?? 0;
-    const s = [a, b, c].sort((x, y) => (lvlOf(x) - lvlOf(y)) || (x.name < y.name ? -1 : 1));
-    const arcOf = p => p.data.arcana || p.data.race;
-    const t1 = getResultArcanaWeb(arcOf(s[0]), arcOf(s[1]));
-    if (!t1 || t1 === '-') return null;
-    const fin = getResultArcanaWeb(t1, arcOf(s[2]));
-    if (!fin || fin === '-') return null;
-    const calcLvl = Math.floor((lvlOf(s[0]) + lvlOf(s[1]) + lvlOf(s[2])) / 3) + 5;
-    const specials = S.fusion.specialData;
-    const names = new Set([a.name, b.name, c.name]);
-    const list = (S.fusion.byArcana[fin] || []).filter(p =>
-        !names.has(p.name) && !specials[p.name] &&
-        !['party','accident','special'].includes(p.data.fusion));
-    const cand = list.find(p => lvlOf(p) >= calcLvl);
-    const res = cand || list[list.length - 1] || null;
-    return res ? res.name : null;
-}
-
-function calcTriangleRecipes(targetName, cap = 60) {
-    const M = S.fusion.personaMap, specials = S.fusion.specialData;
-    const target = M[targetName];
-    if (!target || specials[targetName]) return [];
-    if (['party','accident','special'].includes(target.fusion)) return [];
-    const tArc = target.arcana || target.race, tLvl = target.level ?? target.lvl ?? 0;
-    const tList = (S.fusion.byArcana[tArc] || []).filter(p => !specials[p.name]);
-    const tIdx = tList.findIndex(p => p.name === targetName);
-    if (tIdx < 0) return [];
-    const lvlOf = p => p.data.level ?? p.data.lvl ?? 0;
-    const minCalc = tIdx > 0 ? lvlOf(tList[tIdx - 1]) + 1 : 0;
-    const maxCalc = tIdx < tList.length - 1 ? tLvl : 200;
-    const minSum = 3 * (minCalc - 5), maxSum = 3 * (maxCalc - 4) - 1;
-
-    const pool = Object.entries(M)
-        .filter(([name, p]) => !['party','accident','special'].includes(p.fusion) && !specials[name])
-        .map(([name, p]) => ({ name, data: p, lvl: p.level ?? p.lvl ?? 0 }))
-        .sort((x, y) => x.lvl - y.lvl);
-
-    const out = [];
-    for (let i = 0; i < pool.length && out.length < cap; i++) {
-        for (let j = i + 1; j < pool.length && out.length < cap; j++) {
-            const base = pool[i].lvl + pool[j].lvl;
-            let k = j + 1;
-            while (k < pool.length && base + pool[k].lvl < minSum) k++;
-            for (; k < pool.length && out.length < cap; k++) {
-                if (base + pool[k].lvl > maxSum) break;
-                if (fuseTriangleWeb(pool[i], pool[j], pool[k]) === targetName) {
-                    out.push([pool[i], pool[j], pool[k]].map(p => ({ name: p.name, data: p.data })));
-                }
-            }
-        }
-    }
-    return out;
-}
-
 function renderFusionResults(color) {
     const el = document.getElementById('fusionContent');
     const { selected, recipes } = S.fusion;
@@ -1689,8 +1569,7 @@ function renderFusionResults(color) {
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
 
-    let html = `
-    <div class="fusion-selected-card" style="border-left:4px solid ${color}">
+    let html = `<div class="fusion-selected-card" style="border-left:4px solid ${color}">
         <div class="fusion-selected-info">
             <div class="fusion-selected-name">${selected.name}</div>
             <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
@@ -1699,8 +1578,8 @@ function renderFusionResults(color) {
     </div>`;
 
     if (p.unlock) {
-        html += `<div class="unlock-box" style="margin:8px 0">
-            <div class="unlock-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+        html += `<div class="unlock-box">
+            <div class="unlock-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
             <div><div class="unlock-label">How to Unlock</div><div class="unlock-text">${p.unlock}</div></div>
         </div>`;
     }
@@ -1711,7 +1590,6 @@ function renderFusionResults(color) {
         html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
         html += recipes.map(combo => {
             if (combo.length === 2) {
-                // Horizontal 2-persona layout
                 return `<div class="fusion-recipe-card">
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
@@ -1721,7 +1599,6 @@ function renderFusionResults(color) {
                         </div>`).join('')}
                 </div>`;
             } else {
-                // Vertical layout for 3+ personas
                 return `<div class="fusion-recipe-card fusion-recipe-card--vertical">
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
@@ -1733,7 +1610,6 @@ function renderFusionResults(color) {
             }
         }).join('');
     }
-
     el.innerHTML = html;
     el.scrollTop = 0;
 }
@@ -1745,18 +1621,1179 @@ function clearFusionSelection() {
         clearFusionSelectionPane();
     } else {
         const series = SERIES.find(s=>s.id===S.series);
-        renderFusionPersonaList(series?.color||'#2196F3');
+        if (S.fusion.mode === 'forward') {
+            renderForwardFusionScreen(series?.color||'#2196F3');
+        } else {
+            renderFusionPersonaList(series?.color||'#2196F3');
+        }
     }
+}
+
+function clearFusionSelectionPane() {
+    S.fusion.selected = null;
+    S.fusion.recipes  = null;
+    document.getElementById('fusionDetailPlaceholder').style.display = '';
+    document.getElementById('fusionDetailContent').style.display = 'none';
+    const series = SERIES.find(s=>s.id===S.series);
+    renderFusionPersonaList(series?.color||'#2196F3');
 }
 
 function onFusionSearch(val) {
     S.fusion.query = val;
     document.getElementById('fusionSearchClear').style.display = val?'block':'none';
-    if (S.fusion.selected) return; // don't interfere with results view
+    if (S.fusion.selected) return;
     const series = SERIES.find(s=>s.id===S.series);
     debounceSearch(()=>renderFusionPersonaList(series?.color||'#2196F3'));
 }
 function clearFusionSearch() { document.getElementById('fusionSearch').value=''; onFusionSearch(''); }
+
+function calcFusionRecipes(targetName) {
+    const recipes = [];
+    const { personaMap, chart, byArcana, specialData, fissionTable } = S.fusion;
+    const target = personaMap[targetName];
+    if (!target) return recipes;
+    const special = specialData[targetName];
+    if (special && special.length) {
+        for (const combo of special) {
+            const personas = combo.map(n => personaMap[n] ? {name:n, data:personaMap[n]} : null).filter(Boolean);
+            if (personas.length === combo.length) recipes.push(personas);
+        }
+        return recipes;
+    }
+    if (special && special.length === 0) return recipes;
+    const targetArcana = target.arcana || target.race;
+    const targetLevel  = target.level  ?? target.lvl ?? 0;
+    if (!targetArcana || !chart) return recipes;
+    const resultLvls = (byArcana[targetArcana] || [])
+        .filter(p => !specialData[p.name])
+        .map(p => p.data.level ?? p.data.lvl ?? 0)
+        .sort((a,b) => a-b);
+    const targetLvlIndex = resultLvls.indexOf(targetLevel);
+    if (targetLvlIndex < 0) return recipes;
+    const sameArcanaList = (byArcana[targetArcana] || []).filter(p => !specialData[p.name]);
+    for (let i = 0; i < sameArcanaList.length; i++) {
+        for (let j = i + 1; j < sameArcanaList.length; j++) {
+            const p1 = sameArcanaList[i], p2 = sameArcanaList[j];
+            const avgLvl = ((p1.data.level ?? p1.data.lvl ?? 0) + (p2.data.level ?? p2.data.lvl ?? 0)) / 2;
+            const lowerRank = sameArcanaList
+                .filter(p => (p.data.level ?? p.data.lvl ?? 0) < avgLvl && p.name !== p1.name && p.name !== p2.name)
+                .sort((a,b) => (b.data.level ?? b.data.lvl ?? 0) - (a.data.level ?? a.data.lvl ?? 0))[0];
+            if (lowerRank && lowerRank.name === targetName) {
+                recipes.push([p1, p2]);
+            }
+        }
+    }
+    const arcanaPairs = fissionTable[targetArcana] || {};
+    const minLvl = targetLvlIndex === 0 ? 0 : (resultLvls[targetLvlIndex - 1] - 1) * 2;
+    const maxLvl = (targetLevel - 1) * 2;
+    for (const [arcA, listB] of Object.entries(arcanaPairs)) {
+        const listA = (byArcana[arcA] || []).filter(p => !specialData[p.name]);
+        for (const arcB of listB) {
+            const bList = (byArcana[arcB] || []).filter(p => !specialData[p.name]);
+            for (const pA of listA) {
+                const lvlA = pA.data.level ?? pA.data.lvl ?? 0;
+                for (const pB of bList) {
+                    const lvlB = pB.data.level ?? pB.data.lvl ?? 0;
+                    const sum = lvlA + lvlB;
+                    if (sum > minLvl && sum <= maxLvl) {
+                        recipes.push([pA, pB]);
+                    }
+                }
+            }
+        }
+    }
+    return recipes.sort((a, b) => {
+        const costA = (a[0].data.level ?? a[0].data.lvl ?? 0) + (a[1].data.level ?? a[1].data.lvl ?? 0);
+        const costB = (b[0].data.level ?? b[0].data.lvl ?? 0) + (b[1].data.level ?? b[1].data.lvl ?? 0);
+        return costA - costB;
+    });
+}
+
+function calcTriangleRecipes(targetName) {
+    const recipes = [];
+    const { personaMap, byArcana, specialData } = S.fusion;
+    const target = personaMap[targetName];
+    if (!target) return recipes;
+    const allFusable = Object.values(personaMap).filter(p => !['party','accident','special'].includes(p.fusion) && !specialData[p.name]);
+    for (let i = 0; i < allFusable.length; i++) {
+        for (let j = i + 1; j < allFusable.length; j++) {
+            for (let k = j + 1; k < allFusable.length; k++) {
+                const names = [allFusable[i].name, allFusable[j].name, allFusable[k].name];
+                const res = calcForwardFusionWeb(names);
+                if (res && res.name === targetName) {
+                    recipes.push(names.map(n => ({ name: n, data: personaMap[n] })));
+                    if (recipes.length >= 60) return recipes;
+                }
+            }
+        }
+    }
+    return recipes;
+}
+
+/* ── Forward Fusion Functions (Combine Ingredients & Explore Outputs) ────── */
+function getResultArcanaWeb(arc1, arc2) {
+    const chart = S.fusion.chart;
+    if (!chart || !chart.races || !chart.table) return null;
+    const { races, table } = chart;
+    const idx1 = races.indexOf(arc1);
+    const idx2 = races.indexOf(arc2);
+    if (idx1 < 0 || idx2 < 0) return null;
+
+    if (IS_TRIANGULAR[S.game]) {
+        const r = Math.max(idx1, idx2);
+        const c = Math.min(idx1, idx2);
+        return (table[r] && table[r][c]) ? table[r][c] : null;
+    } else {
+        const r = Math.min(idx1, idx2);
+        const c = Math.max(idx1, idx2);
+        return (table[r] && table[r][c]) ? table[r][c] : null;
+    }
+}
+
+function calcForwardFusionWeb(names) {
+    const validNames = (names || []).filter(Boolean);
+    if (validNames.length < 2) return null;
+    const { personaMap, specialData } = S.fusion;
+    if (!personaMap) return null;
+
+    // 1. Check special group/special fusions first
+    const sortedInput = [...validNames].sort();
+    for (const [specialResult, recipes] of Object.entries(specialData || {})) {
+        for (const recipe of recipes) {
+            if (recipe.length === validNames.length) {
+                const sortedRecipe = [...recipe].sort();
+                if (sortedRecipe.every((n, i) => n === sortedInput[i])) {
+                    return { name: specialResult, data: personaMap[specialResult], isSpecial: true };
+                }
+            }
+        }
+    }
+
+    // 2. Triangle fusion (3 personas)
+    if (validNames.length === 3) {
+        const [p1, p2, p3] = validNames.map(n => ({ name: n, data: personaMap[n] }));
+        if (!p1.data || !p2.data || !p3.data) return null;
+
+        const sorted = [p1, p2, p3].sort((a, b) => {
+            const lvlA = a.data.level ?? a.data.lvl ?? 0;
+            const lvlB = b.data.level ?? b.data.lvl ?? 0;
+            return lvlA - lvlB;
+        });
+        const [lowest, middle, highest] = sorted;
+
+        const arcL = lowest.data.arcana || lowest.data.race;
+        const arcM = middle.data.arcana || middle.data.race;
+        const arcH = highest.data.arcana || highest.data.race;
+
+        let intermediateArc = null;
+        if (arcL === arcM) {
+            intermediateArc = arcL;
+        } else {
+            intermediateArc = getResultArcanaWeb(arcL, arcM);
+        }
+        if (!intermediateArc || intermediateArc === '-') return null;
+
+        const finalArc = getResultArcanaWeb(intermediateArc, arcH);
+        if (!finalArc || finalArc === '-') return null;
+
+        const lvlL = lowest.data.level ?? lowest.data.lvl ?? 0;
+        const lvlM = middle.data.level ?? middle.data.lvl ?? 0;
+        const lvlH = highest.data.level ?? highest.data.lvl ?? 0;
+        const targetLvl = Math.floor((lvlL + lvlM + lvlH) / 3) + 5;
+
+        const candidates = (S.fusion.byArcana[finalArc] || [])
+            .filter(p => !validNames.includes(p.name) && !specialData[p.name] && !['party','accident','special'].includes(p.data.fusion))
+            .map(p => ({ name: p.name, data: p.data, lvl: p.data.level ?? p.data.lvl ?? 0 }))
+            .sort((a, b) => a.lvl - b.lvl);
+
+        const match = candidates.find(p => p.lvl >= targetLvl);
+        if (match) return { name: match.name, data: match.data, isSpecial: false };
+        if (candidates.length) return { name: candidates[candidates.length - 1].name, data: candidates[candidates.length - 1].data, isSpecial: false };
+        return null;
+    }
+
+    // 3. Normal 2-Persona fusion
+    if (validNames.length === 2) {
+        const p1 = personaMap[validNames[0]];
+        const p2 = personaMap[validNames[1]];
+        if (!p1 || !p2) return null;
+
+        const arc1 = p1.arcana || p1.race;
+        const arc2 = p2.arcana || p2.race;
+        const lvl1 = p1.level ?? p1.lvl ?? 0;
+        const lvl2 = p2.level ?? p2.lvl ?? 0;
+
+        if (arc1 === arc2) {
+            // Same arcana -> downgrade below average
+            const avgLvl = (lvl1 + lvl2) / 2.0;
+            const candidates = (S.fusion.byArcana[arc1] || [])
+                .filter(p => !validNames.includes(p.name) && !specialData[p.name] && !['party','accident','special'].includes(p.data.fusion))
+                .map(p => ({ name: p.name, data: p.data, lvl: p.data.level ?? p.data.lvl ?? 0 }))
+                .filter(p => p.lvl < avgLvl)
+                .sort((a, b) => b.lvl - a.lvl);
+            if (candidates.length) return { name: candidates[0].name, data: candidates[0].data, isSpecial: false };
+            return null;
+        } else {
+            // Cross arcana
+            const resArc = getResultArcanaWeb(arc1, arc2);
+            if (!resArc || resArc === '-') return null;
+            const targetLvl = Math.floor((lvl1 + lvl2) / 2) + 1;
+            const candidates = (S.fusion.byArcana[resArc] || [])
+                .filter(p => !validNames.includes(p.name) && !specialData[p.name] && !['party','accident','special'].includes(p.data.fusion))
+                .map(p => ({ name: p.name, data: p.data, lvl: p.data.level ?? p.data.lvl ?? 0 }))
+                .sort((a, b) => a.lvl - b.lvl);
+            const match = candidates.find(p => p.lvl >= targetLvl);
+            if (match) return { name: match.name, data: match.data, isSpecial: false };
+            return null;
+        }
+    }
+    return null;
+}
+
+function calcForwardFusionsFromWeb(sourceName) {
+    const { personas, personaMap } = S.fusion;
+    if (!sourceName || !personaMap[sourceName]) return [];
+    const results = [];
+    const seen = new Set();
+    for (const otherName of personas) {
+        if (otherName === sourceName) continue;
+        const outcome = calcForwardFusionWeb([sourceName, otherName]);
+        if (outcome && outcome.data) {
+            const key = `${otherName}=>${outcome.name}`;
+            if (!seen.has(key)) {
+                seen.add(key);
+                results.push({ other: { name: otherName, data: personaMap[otherName] }, result: outcome, isSpecial: outcome.isSpecial });
+            }
+        }
+    }
+    return results.sort((a, b) => (a.result.data.level ?? 0) - (b.result.data.level ?? 0));
+}
+
+function setForwardSubTab(subTab) {
+    S.fusion.forwardSubTab = subTab;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderForwardFusionScreen(series?.color||'#2196F3');
+}
+
+function renderForwardFusionScreen(color) {
+    const el = document.getElementById('fusionContent');
+    const { forwardSubTab, forwardSlots, forwardSource, forwardQuery } = S.fusion;
+
+    let html = `
+    <div class="fusion-subtab-bar">
+        <button class="fusion-subtab-btn ${forwardSubTab==='chamber'?'active':''}" onclick="setForwardSubTab('chamber')">
+            <span>Combine Ingredients (2-3)</span>
+        </button>
+        <button class="fusion-subtab-btn ${forwardSubTab==='fromPersona'?'active':''}" onclick="setForwardSubTab('fromPersona')">
+            <span>Browse by Base Persona</span>
+        </button>
+    </div>`;
+
+    if (forwardSubTab === 'chamber') {
+        const slot0 = forwardSlots[0], slot1 = forwardSlots[1], slot2 = forwardSlots[2];
+        const result = calcForwardFusionWeb(forwardSlots);
+
+        html += `
+        <div class="forward-chamber-wrap">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="font-weight:700;font-size:1rem;color:var(--text)">Ingredient Slots:</div>
+                <div style="display:flex;gap:6px">
+                    <button class="slot-action-btn" onclick="swapForwardIngredients()" ${(!slot0&&!slot1)?'disabled style=\"opacity:.4;cursor:not-allowed\"':''}>Swap</button>
+                    <button class="slot-action-btn" onclick="clearForwardSlots()" ${(!slot0&&!slot1&&!slot2)?'disabled style=\"opacity:.4;cursor:not-allowed\"':''}>Clear All</button>
+                </div>
+            </div>
+
+            <!-- Slot 1 -->
+            ${renderForwardSlotCard(0, slot0, '1st Ingredient (Required)', color)}
+
+            <!-- Slot 2 -->
+            ${renderForwardSlotCard(1, slot1, '2nd Ingredient (Required)', color)}
+
+            <!-- Slot 3 -->
+            ${renderForwardSlotCard(2, slot2, '3rd Ingredient (Optional / Triangle)', color)}
+
+            <div style="font-weight:700;font-size:1rem;color:var(--text);margin-top:12px">Fused Persona Result:</div>
+            ${renderForwardResultBox(result, color)}
+        </div>`;
+    } else {
+        // From Persona sub-tab
+        const sourceData = forwardSource ? S.fusion.personaMap[forwardSource] : null;
+        html += `
+        <div class="forward-chamber-wrap">
+            <div style="font-weight:700;font-size:1rem;color:var(--text)">Base Persona to Fuse:</div>
+            ${sourceData ? `
+                <div class="forward-slot-card" style="border-left:4px solid ${color}">
+                    <div onclick="openForwardPicker('source')" style="flex:1;cursor:pointer">
+                        <div style="font-weight:700;font-size:1.05rem;color:var(--text)">${sourceData.name || forwardSource}</div>
+                        <div style="font-size:.85rem;color:${color}">${sourceData.arcana||sourceData.race||''} · Lv. ${sourceData.level??sourceData.lvl??'?'}</div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px">
+                        <button class="slot-action-btn" onclick="openForwardPicker('source')">Change</button>
+                        <button class="slot-clear-btn" onclick="clearForwardSource()" title="Remove">✕</button>
+                    </div>
+                </div>
+            ` : `
+                <div class="forward-slot-card forward-slot-empty" onclick="openForwardPicker('source')">
+                    <div style="display:flex;align-items:center;gap:10px">
+                        <div class="slot-num-badge">+</div>
+                        <div>
+                            <div style="font-weight:700;color:${color}">+ Select Base Persona</div>
+                            <div style="font-size:.8rem;color:var(--text2)">Explore all Personas you can fuse with this base</div>
+                        </div>
+                    </div>
+                    <div class="slot-add-chip" style="background:${color}22;color:${color}">Select +</div>
+                </div>
+            `}
+        `;
+
+        if (sourceData) {
+            html += `
+            <div class="search-wrap" style="margin-top:8px">
+                <input id="forwardSearchInput" class="search-input" type="text" placeholder="Filter outputs or partner persona..." value="${esc(forwardQuery||'')}" oninput="onForwardQuery(this.value)">
+            </div>
+            <div id="forwardOutputCount" class="fusion-count"></div>
+            <div id="forwardOutputList" style="display:flex;flex-direction:column;gap:8px"></div>`;
+        }
+        html += `</div>`;
+    }
+
+    el.innerHTML = html;
+    el.scrollTop = 0;
+
+    if (forwardSubTab === 'fromPersona' && forwardSource && S.fusion.personaMap[forwardSource]) {
+        renderForwardOutputList(color);
+    }
+}
+
+function renderForwardOutputList(color) {
+    const listEl = document.getElementById('forwardOutputList');
+    const countEl = document.getElementById('forwardOutputCount');
+    if (!listEl) return;
+    const allRecipes = calcForwardFusionsFromWeb(S.fusion.forwardSource);
+    const q = (S.fusion.forwardQuery || '').toLowerCase();
+    const filtered = q ? allRecipes.filter(r =>
+        r.result.name.toLowerCase().includes(q) ||
+        (r.result.data.arcana||'').toLowerCase().includes(q) ||
+        r.other.name.toLowerCase().includes(q)
+    ) : allRecipes;
+
+    if (countEl) {
+        countEl.textContent = `${filtered.length} possible fusion${filtered.length!==1?'s':''} found`;
+    }
+
+    if (!filtered.length) {
+        listEl.innerHTML = `<div class="empty-state">No fusions match filter</div>`;
+        return;
+    }
+
+    listEl.innerHTML = filtered.map(r => `
+        <div class="fusion-recipe-card" style="margin:0;cursor:pointer" onclick="selectPersona('${esc(r.result.name)}')">
+            <div style="flex:1">
+                <div style="font-size:.82rem;color:var(--text2)">+ ${r.other.name} (${r.other.data.arcana||''} Lv.${r.other.data.level??'?'})</div>
+                <div style="font-weight:700;font-size:1rem;color:var(--text);margin-top:2px">
+                    = ${r.result.name}
+                    ${r.isSpecial ? `<span class="badge" style="background:#FFD70022;color:#FFD700;font-size:.7rem;margin-left:4px">Special</span>` : ''}
+                </div>
+                <div style="font-size:.82rem;color:${color}">${r.result.data.arcana||''} · Lv. ${r.result.data.level??'?'}</div>
+            </div>
+            <div style="color:var(--text2);font-size:1.25rem">›</div>
+        </div>
+    `).join('');
+}
+
+function renderForwardSlotCard(slotIndex, personaName, label, color) {
+    const p = personaName ? S.fusion.personaMap[personaName] : null;
+    if (!p) {
+        return `
+        <div class="forward-slot-card forward-slot-empty" onclick="openForwardPicker(${slotIndex})">
+            <div style="display:flex;align-items:center;gap:10px">
+                <div class="slot-num-badge">${slotIndex + 1}</div>
+                <div>
+                    <div style="font-weight:700;font-size:.95rem;color:${color}">+ ${label}</div>
+                    <div style="font-size:.78rem;color:var(--text3)">Click here to choose a Persona</div>
+                </div>
+            </div>
+            <div class="slot-add-chip" style="background:${color}22;color:${color}">Select +</div>
+        </div>`;
+    }
+    return `
+    <div class="forward-slot-card" style="border-left:4px solid ${color}">
+        <div onclick="openForwardPicker(${slotIndex})" style="flex:1;cursor:pointer">
+            <div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;font-weight:700">Ingredient ${slotIndex + 1}</div>
+            <div style="font-weight:700;font-size:1.05rem;color:var(--text);margin-top:1px">${personaName}</div>
+            <div style="font-size:.82rem;color:${color}">${p.arcana||p.race||''} · Lv. ${p.level??p.lvl??'?'}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+            <button class="slot-action-btn" onclick="openForwardPicker(${slotIndex})">Change</button>
+            <button class="slot-clear-btn" onclick="clearForwardSlot(${slotIndex})" title="Remove">✕</button>
+        </div>
+    </div>`;
+}
+
+function renderForwardResultBox(result, color) {
+    const activeCount = S.fusion.forwardSlots.filter(Boolean).length;
+    if (activeCount === 0) {
+        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--hairline-soft);border-radius:var(--r-lg)">Select at least 2 ingredients above to fuse</div>`;
+    }
+    if (activeCount === 1) {
+        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--brass);color:var(--brass);border-radius:var(--r-lg);font-weight:600">1 ingredient selected. Click Slot 2 above to complete the fusion!</div>`;
+    }
+    if (!result || !result.data) {
+        return `<div class="empty-state" style="padding:24px;border:1px solid #ff525244;color:#ff5252;border-radius:var(--r-lg);font-weight:700">No Valid Fusion Combination for these ingredients</div>`;
+    }
+
+    const p = result.data;
+    const level = p.level ?? p.lvl ?? '?';
+    const arcana = p.arcana || p.race || 'Unknown';
+    const elems = ELEMENTS[S.series] || ELEMENTS.p5;
+    const estCost = Math.round((Number(level || 1) * Number(level || 1) * 27) + 2000);
+
+    return `
+    <div class="forward-result-container" style="border-color:${color}">
+        <div class="forward-result-header">
+            <div>
+                ${result.isSpecial ? `<div style="font-size:.7rem;font-weight:800;color:#FFD700;letter-spacing:.08em;margin-bottom:2px">SPECIAL FUSION</div>` : ''}
+                <div class="forward-result-name">${result.name}</div>
+                <div class="forward-result-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
+            </div>
+            <div class="level-badge" style="background:${color}22;color:${color};font-size:1rem;padding:6px 12px;border-radius:8px">Lv. ${level}</div>
+        </div>
+
+        ${p.stats && p.stats.length >= 5 ? `
+            <div class="forward-stats-grid">
+                <div><div class="forward-stat-label">St</div><div class="forward-stat-val">${p.stats[0]}</div></div>
+                <div><div class="forward-stat-label">Ma</div><div class="forward-stat-val">${p.stats[1]}</div></div>
+                <div><div class="forward-stat-label">En</div><div class="forward-stat-val">${p.stats[2]}</div></div>
+                <div><div class="forward-stat-label">Ag</div><div class="forward-stat-val">${p.stats[3]}</div></div>
+                <div><div class="forward-stat-label">Lu</div><div class="forward-stat-val">${p.stats[4]}</div></div>
+            </div>
+        ` : ''}
+
+        ${p.resists ? `
+            <div style="margin:10px 0">
+                <div style="font-size:.8rem;font-weight:700;color:var(--text2);margin-bottom:4px">Resistances</div>
+                <div class="resist-text">${parseResists(p.resists, elems)}</div>
+            </div>
+        ` : ''}
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 16px">
+            <span style="font-size:.85rem;color:var(--text2)">Estimated Summon Cost:</span>
+            <span class="forward-cost-tag">¥ ${estCost.toLocaleString()}</span>
+        </div>
+
+        <button class="nav-card" style="width:100%;justify-content:center;font-weight:700;background:var(--raised);padding:12px;border-radius:var(--r-md);color:${color};border:1px solid ${color}44;cursor:pointer" onclick="selectPersona('${esc(result.name)}')">
+            View Persona Compendium Entry ›
+        </button>
+    </div>`;
+}
+
+function openForwardPicker(slot) {
+    S.fusion.activePickerSlot = slot;
+    renderPersonaPickerModal();
+}
+
+function closePersonaPicker() {
+    const modal = document.getElementById('personaPickerModal');
+    if (modal) modal.remove();
+}
+
+function selectPersonaFromPicker(name) {
+    if (S.fusion.activePickerSlot === 'source') {
+        S.fusion.forwardSource = name;
+        S.fusion.forwardSubTab = 'fromPersona';
+    } else if (S.fusion.activePickerSlot === 'skillRouteTarget') {
+        S.fusion.skillRouteTarget = name;
+    } else {
+        const slotIdx = parseInt(S.fusion.activePickerSlot, 10);
+        if (!isNaN(slotIdx) && slotIdx >= 0 && slotIdx <= 2) {
+            S.fusion.forwardSlots[slotIdx] = name;
+            S.fusion.forwardSubTab = 'chamber';
+        }
+    }
+    closePersonaPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    if (S.fusion.mode === 'skillRoute') {
+        renderSkillRouteScreen(color);
+    } else {
+        renderForwardFusionScreen(color);
+    }
+}
+
+function clearForwardSlot(slotIdx) {
+    S.fusion.forwardSlots[slotIdx] = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderForwardFusionScreen(series?.color||'#2196F3');
+}
+
+function clearForwardSlots() {
+    S.fusion.forwardSlots = [null, null, null];
+    const series = SERIES.find(s=>s.id===S.series);
+    renderForwardFusionScreen(series?.color||'#2196F3');
+}
+
+function clearForwardSource() {
+    S.fusion.forwardSource = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderForwardFusionScreen(series?.color||'#2196F3');
+}
+
+function swapForwardIngredients() {
+    const temp = S.fusion.forwardSlots[0];
+    S.fusion.forwardSlots[0] = S.fusion.forwardSlots[1];
+    S.fusion.forwardSlots[1] = temp;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderForwardFusionScreen(series?.color||'#2196F3');
+}
+
+function onForwardQuery(val) {
+    S.fusion.forwardQuery = val;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    debounceSearch(() => renderForwardOutputList(color));
+}
+
+function openSkillRouteTargetPicker() {
+    S.fusion.activePickerSlot = 'skillRouteTarget';
+    renderPersonaPickerModal();
+}
+
+function clearSkillRouteTarget() {
+    S.fusion.skillRouteTarget = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function openSkillRouteSkillPicker() {
+    renderSkillPickerModal();
+}
+
+function clearSkillRouteSkill() {
+    S.fusion.skillRouteSkill = null;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function selectSkillFromPicker(skillName) {
+    S.fusion.skillRouteSkill = skillName;
+    closeSkillPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    renderSkillRouteScreen(series?.color||'#2196F3');
+}
+
+function setSkillRoutePreload(targetName, skillName) {
+    if (targetName) S.fusion.skillRouteTarget = targetName;
+    if (skillName) S.fusion.skillRouteSkill = skillName;
+    S.fusion.mode = 'skillRoute';
+    navigate('fusion');
+}
+
+async function ensureSkillsLoaded() {
+    const key = `skills_${S.game}`;
+    if (!S.rawData[key]) {
+        try {
+            const r = await fetch(SKILL_PATHS[S.game]);
+            if (r.ok) {
+                const raw = await r.json();
+                S.rawData[key] = normalizeListData(raw, 'skills');
+            }
+        } catch(e) {}
+    }
+    return S.rawData[key] || [];
+}
+
+function renderPersonaPickerModal() {
+    closePersonaPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+
+    const modal = document.createElement('div');
+    modal.id = 'personaPickerModal';
+    modal.className = 'picker-modal-backdrop';
+    modal.innerHTML = `
+        <div class="picker-modal-sheet">
+            <div class="picker-modal-header">
+                <div style="font-weight:700;font-size:1.1rem;color:var(--text)">Select Persona</div>
+                <button class="icon-btn" onclick="closePersonaPicker()">✕</button>
+            </div>
+            <div style="padding:10px 16px 0">
+                <div class="search-wrap">
+                    <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input id="pickerModalSearch" class="search-input" type="text" placeholder="Search by name or arcana..." oninput="onPickerModalFilter(this.value)">
+                </div>
+            </div>
+            <div id="pickerModalList" class="list-content" style="flex:1;overflow-y:auto;padding:8px 16px">
+                ${renderPickerModalItems('', color)}
+            </div>
+        </div>
+    `;
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closePersonaPicker();
+    });
+    document.body.appendChild(modal);
+    setTimeout(() => document.getElementById('pickerModalSearch')?.focus(), 50);
+}
+
+function renderPickerModalItems(query, color) {
+    const q = (query || '').toLowerCase();
+    const personas = S.fusion.personas || [];
+    const filtered = q ? personas.filter(name => {
+        const p = S.fusion.personaMap[name];
+        return name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q);
+    }) : personas;
+
+    if (!filtered.length) return `<div class="empty-state">No personas match search</div>`;
+
+    return filtered.map(name => {
+        const p = S.fusion.personaMap[name];
+        const level = p.level ?? p.lvl ?? '?';
+        const arcana = p.arcana || p.race || 'Unknown';
+        return `
+        <div class="row-card" onclick="selectPersonaFromPicker('${esc(name)}')">
+            <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
+            <div class="row-main">
+                <div class="row-name">${name}</div>
+                <div class="row-sub">${arcana}</div>
+            </div>
+            <div class="row-hint" style="color:${color}">+</div>
+        </div>`;
+    }).join('');
+}
+
+function onPickerModalFilter(val) {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const listEl = document.getElementById('pickerModalList');
+    if (listEl) listEl.innerHTML = renderPickerModalItems(val, color);
+}
+
+/* ── Skill Modal Picker ────────────────────────────────────────────────────── */
+async function renderSkillPickerModal() {
+    closeSkillPicker();
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    await ensureSkillsLoaded();
+
+    const modal = document.createElement('div');
+    modal.id = 'skillPickerModal';
+    modal.className = 'picker-modal-backdrop';
+    modal.innerHTML = `
+        <div class="picker-modal-sheet">
+            <div class="picker-modal-header">
+                <div style="font-weight:700;font-size:1.1rem;color:var(--text)">Select Desired Skill</div>
+                <button class="icon-btn" onclick="closeSkillPicker()">✕</button>
+            </div>
+            <div style="padding:10px 16px 0">
+                <div class="search-wrap">
+                    <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+                    <input id="skillPickerModalSearch" class="search-input" type="text" placeholder="Search skills by name, element, effect..." oninput="onSkillPickerModalFilter(this.value)">
+                </div>
+            </div>
+            <div id="skillPickerModalList" class="list-content" style="flex:1;overflow-y:auto;padding:8px 16px">
+                ${renderSkillPickerModalItems('', color)}
+            </div>
+        </div>
+    `;
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeSkillPicker();
+    });
+    document.body.appendChild(modal);
+    setTimeout(() => document.getElementById('skillPickerModalSearch')?.focus(), 50);
+}
+
+function closeSkillPicker() {
+    const modal = document.getElementById('skillPickerModal');
+    if (modal) modal.remove();
+}
+
+function renderSkillPickerModalItems(query, color) {
+    const q = (query || '').toLowerCase();
+    const skills = S.rawData[`skills_${S.game}`] || [];
+    const filtered = q ? skills.filter(sk =>
+        sk.name.toLowerCase().includes(q) ||
+        (sk.element||sk.type||'').toLowerCase().includes(q) ||
+        (sk.effect||'').toLowerCase().includes(q)
+    ) : skills;
+
+    if (!filtered.length) return `<div class="empty-state">No skills match search</div>`;
+
+    return filtered.map(sk => `
+        <div class="row-card" onclick="selectSkillFromPicker('${esc(sk.name)}')">
+            <div class="row-main">
+                <div class="row-name" style="font-weight:700">${sk.name}</div>
+                <div class="row-sub">${sk.effect || sk.element || ''}</div>
+            </div>
+            <div class="row-hint" style="color:#FFD700;font-size:.8rem">${sk.cost || sk.element || '+'}</div>
+        </div>
+    `).join('');
+}
+
+function onSkillPickerModalFilter(val) {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    const listEl = document.getElementById('skillPickerModalList');
+    if (listEl) listEl.innerHTML = renderSkillPickerModalItems(val, color);
+}
+
+/* ── Skill Route Finder Engine & Renderer ────────────────────────────────── */
+function calcSkillInheritanceRoutes(targetName, skillName) {
+    const { personaMap, specialData } = S.fusion;
+    if (!targetName || !skillName || !personaMap[targetName]) return null;
+
+    const target = personaMap[targetName];
+
+    // 1. Natural Learning Check
+    let isNatural = false;
+    let naturalLvl = null;
+    if (target.skills && target.skills[skillName] !== undefined) {
+        isNatural = true;
+        const at = target.skills[skillName];
+        naturalLvl = at < 1 ? 'Innate' : at >= 100 ? 'Special' : `Lv. ${Math.floor(at)}`;
+    }
+
+    // 2. Velvet Room Itemization / Transmute Skill Card Check
+    const itemizers = [];
+    for (const [pname, p] of Object.entries(personaMap)) {
+        if (p.item === skillName) {
+            itemizers.push({ name: pname, data: p, isAlarm: false });
+        } else if (p.itemr === skillName) {
+            itemizers.push({ name: pname, data: p, isAlarm: true });
+        }
+    }
+
+    // 3. Find all Personas who learn skillName in this game
+    const sources = [];
+    for (const [pname, p] of Object.entries(personaMap)) {
+        if (p.skills && p.skills[skillName] !== undefined) {
+            const at = p.skills[skillName];
+            sources.push({
+                name: pname,
+                data: p,
+                atLevel: at < 1 ? 'Innate' : at >= 100 ? 'Special' : `Lv. ${Math.floor(at)}`,
+                level: p.level ?? p.lvl ?? 0
+            });
+        }
+    }
+    sources.sort((a, b) => a.level - b.level);
+
+    // 4. 1-Step Direct Recipes
+    const directRoutes = [];
+    if (specialData[targetName]) {
+        for (const recipe of specialData[targetName]) {
+            for (const ing of recipe) {
+                const src = sources.find(s => s.name === ing);
+                if (src) {
+                    directRoutes.push({
+                        type: 'special_direct',
+                        source: src,
+                        allIngredients: recipe,
+                        targetName
+                    });
+                }
+            }
+        }
+    }
+
+    for (const src of sources) {
+        if (src.name === targetName) continue;
+        for (const otherName of (S.fusion.personas || [])) {
+            if (otherName === src.name) continue;
+            const res = calcForwardFusionWeb([src.name, otherName]);
+            if (res && res.name === targetName) {
+                directRoutes.push({
+                    type: 'direct_2p',
+                    source: src,
+                    partner: { name: otherName, data: personaMap[otherName] },
+                    targetName
+                });
+            }
+        }
+    }
+
+    // 5. 2-Step Fusion Chains (Source + Partner 1 -> Bridge Parent + Partner 2 -> Target)
+    const twoStepRoutes = [];
+    const seenChains = new Set();
+
+    for (const src of sources) {
+        if (src.name === targetName) continue;
+        for (const p1 of (S.fusion.personas || [])) {
+            if (p1 === src.name) continue;
+            const bridge = calcForwardFusionWeb([src.name, p1]);
+            if (!bridge || bridge.name === targetName || bridge.name === src.name) continue;
+
+            if (specialData[targetName]) {
+                for (const recipe of specialData[targetName]) {
+                    if (recipe.includes(bridge.name)) {
+                        const key = `${src.name}=>${bridge.name}=>${targetName}`;
+                        if (!seenChains.has(key)) {
+                            seenChains.add(key);
+                            twoStepRoutes.push({
+                                type: '2step_special',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
+                                step2: { specialRecipe: recipe, result: targetName }
+                            });
+                        }
+                    }
+                }
+            } else {
+                for (const p2 of (S.fusion.personas || [])) {
+                    if (p2 === bridge.name) continue;
+                    const finalRes = calcForwardFusionWeb([bridge.name, p2]);
+                    if (finalRes && finalRes.name === targetName) {
+                        const key = `${src.name}+${p1}=>${bridge.name}+${p2}=>${targetName}`;
+                        if (!seenChains.has(key)) {
+                            seenChains.add(key);
+                            twoStepRoutes.push({
+                                type: '2step_2p',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: bridge.name, resultData: bridge.data },
+                                step2: { p1: bridge.name, p2: p2, result: targetName }
+                            });
+                        }
+                    }
+                    if (twoStepRoutes.length >= 15) break;
+                }
+            }
+            if (twoStepRoutes.length >= 15) break;
+        }
+        if (twoStepRoutes.length >= 15) break;
+    }
+
+    // 6. 3-Step Fusion Chains (if no direct or 2-step routes found)
+    const threeStepRoutes = [];
+    if (directRoutes.length === 0 && twoStepRoutes.length === 0 && !isNatural) {
+        for (const src of sources) {
+            for (const p1 of (S.fusion.personas || [])) {
+                if (p1 === src.name) continue;
+                const b1 = calcForwardFusionWeb([src.name, p1]);
+                if (!b1 || b1.name === targetName) continue;
+
+                for (const p2 of (S.fusion.personas || [])) {
+                    if (p2 === b1.name) continue;
+                    const b2 = calcForwardFusionWeb([b1.name, p2]);
+                    if (!b2 || b2.name === targetName || b2.name === b1.name) continue;
+
+                    for (const p3 of (S.fusion.personas || [])) {
+                        if (p3 === b2.name) continue;
+                        const finalRes = calcForwardFusionWeb([b2.name, p3]);
+                        if (finalRes && finalRes.name === targetName) {
+                            threeStepRoutes.push({
+                                type: '3step_2p',
+                                source: src,
+                                step1: { p1: src.name, p2: p1, result: b1.name, resultData: b1.data },
+                                step2: { p1: b1.name, p2: p2, result: b2.name, resultData: b2.data },
+                                step3: { p1: b2.name, p2: p3, result: targetName }
+                            });
+                            break;
+                        }
+                    }
+                    if (threeStepRoutes.length >= 6) break;
+                }
+                if (threeStepRoutes.length >= 6) break;
+            }
+            if (threeStepRoutes.length >= 6) break;
+        }
+    }
+
+    return {
+        targetName,
+        skillName,
+        isNatural,
+        naturalLvl,
+        itemizers,
+        sources,
+        directRoutes,
+        twoStepRoutes,
+        threeStepRoutes
+    };
+}
+
+async function renderSkillRouteScreen(color) {
+    const el = document.getElementById('fusionContent');
+    const { skillRouteTarget, skillRouteSkill, personaMap } = S.fusion;
+
+    const targetData = skillRouteTarget ? personaMap[skillRouteTarget] : null;
+    let skillData = null;
+    const allSkills = await ensureSkillsLoaded();
+    if (skillRouteSkill) {
+        skillData = allSkills.find(s => s.name === skillRouteSkill);
+    }
+
+    let html = `
+    <div class="skill-route-container">
+        <div class="route-selector-grid">
+            <!-- Target Persona Card -->
+            <div>
+                <div style="font-size:.75rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Target Persona</div>
+                ${targetData ? `
+                    <div class="forward-slot-card" style="border-left:4px solid ${color};margin:0">
+                        <div onclick="openSkillRouteTargetPicker()" style="flex:1;cursor:pointer">
+                            <div style="font-weight:700;font-size:1.05rem;color:var(--text)">${skillRouteTarget}</div>
+                            <div style="font-size:.82rem;color:${color}">${targetData.arcana||targetData.race||''} · Lv. ${targetData.level??targetData.lvl??'?'}</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:6px">
+                            <button class="slot-action-btn" onclick="openSkillRouteTargetPicker()">Change</button>
+                            <button class="slot-clear-btn" onclick="clearSkillRouteTarget()" title="Remove">✕</button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="forward-slot-card forward-slot-empty" onclick="openSkillRouteTargetPicker()" style="margin:0">
+                        <div style="display:flex;align-items:center;gap:10px">
+                            <div class="slot-num-badge">+</div>
+                            <div>
+                                <div style="font-weight:700;font-size:.92rem;color:${color}">+ Select Target Persona</div>
+                                <div style="font-size:.78rem;color:var(--text3)">Persona to receive the skill</div>
+                            </div>
+                        </div>
+                        <div class="slot-add-chip" style="background:${color}22;color:${color}">Select +</div>
+                    </div>
+                `}
+            </div>
+
+            <!-- Desired Skill Card -->
+            <div>
+                <div style="font-size:.75rem;font-weight:700;color:var(--text3);text-transform:uppercase;margin-bottom:4px">Desired Skill</div>
+                ${skillRouteSkill ? `
+                    <div class="forward-slot-card" style="border-left:4px solid #FFD700;margin:0">
+                        <div onclick="openSkillRouteSkillPicker()" style="flex:1;cursor:pointer">
+                            <div style="font-weight:700;font-size:1.05rem;color:var(--text)">${skillRouteSkill}</div>
+                            <div style="font-size:.82rem;color:#FFD700">${skillData ? (skillData.element || skillData.type || 'Skill') : 'Skill'}${skillData && skillData.cost ? ` · ${skillData.cost}` : ''}</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:6px">
+                            <button class="slot-action-btn" onclick="openSkillRouteSkillPicker()">Change</button>
+                            <button class="slot-clear-btn" onclick="clearSkillRouteSkill()" title="Remove">✕</button>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="forward-slot-card forward-slot-empty" onclick="openSkillRouteSkillPicker()" style="margin:0">
+                        <div style="display:flex;align-items:center;gap:10px">
+                            <div class="slot-num-badge" style="color:#FFD700;border-color:#FFD700">+</div>
+                            <div>
+                                <div style="font-weight:700;font-size:.92rem;color:#FFD700">+ Select Desired Skill</div>
+                                <div style="font-size:.78rem;color:var(--text3)">Skill to pass down</div>
+                            </div>
+                        </div>
+                        <div class="slot-add-chip" style="background:#FFD70022;color:#FFD700">Select +</div>
+                    </div>
+                `}
+            </div>
+        </div>
+    `;
+
+    if (!skillRouteTarget || !skillRouteSkill) {
+        const popularSkills = ['Arms Master', 'Spell Master', 'Victory Cry', 'Debilitate', 'Megidolaon', 'Ali Dance', 'Drain Phys', 'Charge', 'Concentrate', 'Heat Riser', 'Enduring Soul', 'Insta-Heal'];
+        html += `
+        <div style="margin-top:16px">
+            <div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:8px">Popular Skills to Inherit:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+                ${popularSkills.map(skName => `
+                    <button class="slot-action-btn" style="padding:6px 12px;font-size:.82rem" onclick="selectSkillFromPicker('${esc(skName)}')">
+                        + ${skName}
+                    </button>
+                `).join('')}
+            </div>
+        </div>
+        <div class="empty-state" style="margin-top:20px;padding:24px;border:1px dashed var(--hairline-soft);border-radius:var(--r-lg)">
+            Select both a Target Persona and a Desired Skill above to see exact step-by-step fusion recipes to transfer the skill.
+        </div>`;
+    } else {
+        const routes = calcSkillInheritanceRoutes(skillRouteTarget, skillRouteSkill);
+        html += `<div style="margin-top:16px">`;
+
+        if (routes.isNatural) {
+            html += `
+            <div class="route-banner" style="border-color:#81C784;margin-bottom:12px">
+                <div class="route-banner-icon" style="color:#81C784">✓</div>
+                <div>
+                    <div class="route-banner-title" style="color:#81C784">Learned Naturally</div>
+                    <div class="route-banner-desc"><strong>${skillRouteTarget}</strong> learns <strong>${skillRouteSkill}</strong> naturally at <strong>${routes.naturalLvl}</strong>. No fusion transfer required!</div>
+                </div>
+            </div>`;
+        }
+
+        if (routes.itemizers && routes.itemizers.length > 0) {
+            html += `
+            <div class="route-banner" style="border-color:#FFD700;margin-bottom:12px">
+                <div class="route-banner-icon" style="color:#FFD700">★</div>
+                <div>
+                    <div class="route-banner-title" style="color:#FFD700">Velvet Room Itemization / Skill Card Available</div>
+                    <div class="route-banner-desc">
+                        You can itemize / transmute:
+                        ${routes.itemizers.map(it => `<strong>${it.name}</strong>${it.isAlarm ? ' (Fusion Alarm)' : ''}`).join(', ')}
+                        to obtain the <strong>${skillRouteSkill}</strong> Skill Card directly!
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        if (routes.directRoutes && routes.directRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Direct Fusion Recipes (${routes.directRoutes.length} Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+                ${routes.directRoutes.map((r, idx) => {
+                    if (r.type === 'special_direct') {
+                        return `
+                        <div class="route-card-wrap">
+                            <div class="route-header">
+                                <span class="route-step-badge" style="background:#FFD70022;color:#FFD700">Special Recipe #${idx+1}</span>
+                                <span style="font-size:.8rem;color:var(--text3)">1 Step</span>
+                            </div>
+                            <div class="route-step-card" style="border-left:3px solid ${color}">
+                                <div class="route-step-action">
+                                    1. Train ingredient <strong style="color:${color}">${r.source.name}</strong> to <strong>${r.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                                <div class="route-step-action" style="margin-top:4px">
+                                    2. Combine all ingredients: <strong>${r.allIngredients.join(' + ')}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                        </div>`;
+                    } else {
+                        return `
+                        <div class="route-card-wrap">
+                            <div class="route-header">
+                                <span class="route-step-badge" style="background:${color}22;color:${color}">Recipe #${idx+1}</span>
+                                <span style="font-size:.8rem;color:var(--text3)">Direct 1 Step</span>
+                            </div>
+                            <div class="route-step-card" style="border-left:3px solid ${color}">
+                                <div class="route-step-action">
+                                    1. Train <strong style="color:${color}">${r.source.name}</strong> to <strong>${r.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                                <div class="route-step-action" style="margin-top:4px">
+                                    2. Fuse <strong>${r.source.name}</strong> + <strong>${r.partner.name}</strong> (${r.partner.data.arcana||''} Lv.${r.partner.data.level??'?'}) = <strong style="color:${color}">${skillRouteTarget}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                        </div>`;
+                    }
+                }).join('')}
+            </div>`;
+        }
+
+        if (routes.twoStepRoutes && routes.twoStepRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Multi-Step Fusion Pathways (${routes.twoStepRoutes.length} Chains Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+                ${routes.twoStepRoutes.map((chain, idx) => `
+                    <div class="route-card-wrap">
+                        <div class="route-header">
+                            <span class="route-step-badge" style="background:${color}22;color:${color}">Pathway #${idx+1}</span>
+                            <span style="font-size:.8rem;color:var(--text3)">2 Steps</span>
+                        </div>
+                        <div class="route-steps-flow">
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 1</span>
+                                    <span class="route-step-title">Learn ${skillRouteSkill}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Train <strong style="color:${color}">${chain.source.name}</strong> (Lv. ${chain.source.level}) to <strong>${chain.source.atLevel}</strong> to learn <strong>${skillRouteSkill}</strong>.
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 2</span>
+                                    <span class="route-step-title">Bridge Fusion</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step1.p1}</strong> + <strong>${chain.step1.p2}</strong> = <strong style="color:${color}">${chain.step1.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card" style="border-color:${color}66">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:${color}22;color:${color}">Final Step</span>
+                                    <span class="route-step-title">Craft ${skillRouteTarget}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    ${chain.type === '2step_special' ? `
+                                        Combine <strong>${chain.step1.result}</strong> with remaining ingredients (${chain.step2.specialRecipe.filter(n=>n!==chain.step1.result).join(', ')}) = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                    ` : `
+                                        Fuse <strong>${chain.step2.p1}</strong> + <strong>${chain.step2.p2}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                    `}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        if (routes.threeStepRoutes && routes.threeStepRoutes.length > 0) {
+            html += `
+            <div class="fusion-count" style="font-size:.95rem;font-weight:700;margin:12px 0 8px;color:var(--text)">
+                Deep Fusion Pathways (${routes.threeStepRoutes.length} Chains Found)
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+                ${routes.threeStepRoutes.map((chain, idx) => `
+                    <div class="route-card-wrap">
+                        <div class="route-header">
+                            <span class="route-step-badge" style="background:${color}22;color:${color}">3-Step Pathway #${idx+1}</span>
+                        </div>
+                        <div class="route-steps-flow">
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 1</span>
+                                    <span class="route-step-title">Learn ${skillRouteSkill}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Train <strong style="color:${color}">${chain.source.name}</strong> to <strong>${chain.source.atLevel}</strong> (learns <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 2</span>
+                                    <span class="route-step-title">Bridge 1</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step1.p1}</strong> + <strong>${chain.step1.p2}</strong> = <strong style="color:${color}">${chain.step1.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:var(--card);color:${color}">Step 3</span>
+                                    <span class="route-step-title">Bridge 2</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step2.p1}</strong> + <strong>${chain.step2.p2}</strong> = <strong style="color:${color}">${chain.step2.result}</strong> (inherits <strong>${skillRouteSkill}</strong>).
+                                </div>
+                            </div>
+                            <div class="route-step-arrow">↓</div>
+                            <div class="route-step-card" style="border-color:${color}66">
+                                <div class="route-step-header">
+                                    <span class="route-step-badge" style="background:${color}22;color:${color}">Final Step</span>
+                                    <span class="route-step-title">Craft ${skillRouteTarget}</span>
+                                </div>
+                                <div class="route-step-action">
+                                    Fuse <strong>${chain.step3.p1}</strong> + <strong>${chain.step3.p2}</strong> = <strong style="color:${color}">${skillRouteTarget}</strong> with <strong>${skillRouteSkill}</strong>!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>`;
+        }
+
+        if (!routes.isNatural && (!routes.directRoutes || routes.directRoutes.length === 0) && (!routes.twoStepRoutes || routes.twoStepRoutes.length === 0) && (!routes.threeStepRoutes || routes.threeStepRoutes.length === 0) && (!routes.itemizers || routes.itemizers.length === 0)) {
+            html += `
+            <div class="empty-state" style="padding:24px;border:1px solid #EF535044;color:#EF5350;border-radius:var(--r-lg);font-weight:700">
+                No valid fusion pathway found to transfer ${skillRouteSkill} onto ${skillRouteTarget}. This may be a unique exclusive skill.
+            </div>`;
+        }
+
+        html += `</div>`;
+    }
+
+    html += `</div>`;
+    el.innerHTML = html;
+    el.scrollTop = 0;
+}
 
 /* ── Items ─────────────────────────────────────────────────────────────────── */
 async function buildItemsScreen() {
@@ -1917,6 +2954,11 @@ function openSkill(name) {
             <div class="section-title" style="color:${color}">${sk.element || sk.type || 'Skill'}</div>
             <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${sk.effect || 'No effect listed'}</div></div>
             ${sk.cost?`<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>`:''}
+            <div style="margin-top:12px">
+                <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload(null, '${esc(sk.name)}')">
+                    Transfer to Persona (Find Fusion Route) ›
+                </button>
+            </div>
         </div>
     `;
     html += `<div class="section-card" id="skillLearnedBy"><div class="section-title">Learned by</div><div class="loading-wrap" style="padding:12px"><div class="spinner" style="width:22px;height:22px"></div></div></div>`;

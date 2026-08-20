@@ -1,6 +1,20 @@
 /* ── Reset ─────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: inherit;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* ══════════════════════════════════════════════════════════════════════════════
    MIDNIGHT COMPENDIUM — design tokens
    The app is the Velvet Room's compendium: velvet-dark surfaces with a whisper
@@ -696,3 +710,209 @@ body {
     color: var(--brass); font-size: .8rem; font-weight: 600; flex-shrink: 0;
 }
 .continue-main { flex: 1; font-weight: 500; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ── Fusion Calculator UI ── */
+.fusion-tab-bar {
+    display: flex; gap: 8px; padding: 12px 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--hairline);
+    position: sticky; top: 0; z-index: 5;
+}
+.fusion-tab-pill {
+    flex: 1; text-align: center; padding: 9px 14px;
+    font-size: .88rem; font-weight: 600; border-radius: var(--r-md);
+    background: var(--velvet-0); color: var(--text2);
+    border: 1px solid var(--hairline-strong);
+    cursor: pointer; transition: all .15s ease;
+    font-family: var(--font-display); letter-spacing: .04em; text-transform: uppercase;
+}
+.fusion-tab-pill:hover {
+    background: var(--raised); color: var(--text); border-color: rgba(255,255,255,.2);
+}
+.fusion-tab-pill.active {
+    background: var(--card); color: var(--accent);
+    border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent);
+}
+
+.fusion-subtab-bar {
+    display: flex; gap: 8px; padding: 12px 16px 4px;
+}
+.fusion-subtab-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 10px 12px; border-radius: var(--r-md);
+    background: var(--card); color: var(--text2);
+    border: 1px solid var(--hairline-strong);
+    font-size: .84rem; font-weight: 600; cursor: pointer;
+    transition: all .15s ease;
+}
+.fusion-subtab-btn:hover {
+    background: var(--raised); color: var(--text); border-color: rgba(255,255,255,.2);
+}
+.fusion-subtab-btn.active {
+    background: var(--brass-dim); color: var(--brass); border-color: var(--brass);
+    box-shadow: 0 0 0 1px var(--brass);
+}
+
+.slot-num-badge {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--velvet-3); border: 1px solid var(--hairline-strong);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .8rem; font-weight: 700; color: var(--text2); flex-shrink: 0;
+}
+.slot-add-chip {
+    padding: 4px 10px; border-radius: var(--r-sm);
+    font-size: .78rem; font-weight: 700; flex-shrink: 0;
+}
+
+.slot-action-btn {
+    padding: 6px 12px; font-size: .78rem; font-weight: 600;
+    border-radius: var(--r-sm); background: var(--velvet-3); color: var(--text);
+    border: 1px solid var(--hairline-strong); cursor: pointer; transition: all .15s;
+    display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+}
+.slot-action-btn:hover {
+    background: #2E2E3E; border-color: var(--brass); color: #fff;
+}
+.slot-clear-btn {
+    width: 28px; height: 28px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: transparent; color: var(--text3); border: 1px solid transparent;
+    font-size: .85rem; cursor: pointer; transition: all .15s; flex-shrink: 0;
+}
+.slot-clear-btn:hover {
+    background: rgba(239, 83, 80, 0.15); color: #EF5350; border-color: rgba(239, 83, 80, 0.3);
+}
+
+.forward-chamber-wrap {
+    padding: 16px; display: flex; flex-direction: column; gap: 12px;
+}
+.forward-slot-card {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--card); border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-lg); padding: 12px 16px;
+    cursor: pointer; transition: all .15s;
+}
+.forward-slot-card:hover {
+    background: var(--raised); border-color: var(--hairline-strong);
+}
+.forward-slot-empty {
+    border: 1px dashed rgba(255,255,255,.2);
+    color: var(--text2);
+    background: var(--card);
+}
+.forward-slot-empty:hover {
+    border-color: var(--brass);
+    background: var(--raised);
+    transform: translateY(-1px);
+}
+
+.forward-result-container {
+    background: var(--card); border-radius: var(--r-xl);
+    border: 1.5px solid var(--hairline-strong);
+    padding: 16px; margin: 12px 0;
+}
+.forward-result-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.forward-result-name {
+    font-size: 1.45rem; font-weight: 700; color: var(--text);
+}
+.forward-result-sub {
+    font-size: .92rem; margin-top: 2px;
+}
+.forward-stats-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 8px; text-align: center; margin: 14px 0;
+    background: var(--velvet-0); padding: 10px; border-radius: var(--r-md);
+}
+.forward-stat-label { font-size: .7rem; color: var(--text3); text-transform: uppercase; font-weight: 700; }
+.forward-stat-val { font-size: 1rem; font-weight: 700; color: var(--text); }
+.forward-cost-tag {
+    font-size: .9rem; font-weight: 700; color: #FFD700;
+}
+
+.picker-modal-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,.75);
+    z-index: 1000; display: flex; align-items: flex-end; justify-content: center;
+    backdrop-filter: blur(4px);
+}
+@media (min-width: 768px) {
+    .picker-modal-backdrop { align-items: center; }
+}
+.picker-modal-sheet {
+    width: 100%; max-width: 560px; height: 80vh; max-height: 700px;
+    background: var(--card); border-radius: var(--r-xl) var(--r-xl) 0 0;
+    border: 1px solid var(--hairline-strong);
+    display: flex; flex-direction: column; overflow: hidden;
+}
+@media (min-width: 768px) {
+    .picker-modal-sheet { border-radius: var(--r-xl); }
+}
+.picker-modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px; border-bottom: 1px solid var(--hairline-soft);
+}
+
+/* ── Skill Route Finder Styles ────────────────────────────────────────── */
+.skill-route-container {
+    display: flex; flex-direction: column; gap: 12px;
+}
+.route-selector-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+@media (max-width: 600px) {
+    .route-selector-grid { grid-template-columns: 1fr; }
+}
+.route-card-wrap {
+    background: var(--card); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg); padding: 14px 16px; margin-bottom: 12px;
+}
+.route-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; font-weight: 700;
+}
+.route-steps-flow {
+    display: flex; flex-direction: column; gap: 10px; position: relative;
+}
+.route-step-card {
+    background: var(--raised); border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-md); padding: 10px 14px;
+    display: flex; flex-direction: column; gap: 6px;
+}
+.route-step-header {
+    display: flex; align-items: center; gap: 8px;
+}
+.route-step-badge {
+    font-size: .75rem; font-weight: 800; padding: 2px 8px;
+    border-radius: 6px; text-transform: uppercase;
+}
+.route-step-title {
+    font-size: .9rem; font-weight: 700; color: var(--text);
+}
+.route-step-action {
+    font-size: .85rem; color: var(--text2); line-height: 1.4;
+}
+.route-step-arrow {
+    display: flex; justify-content: center; align-items: center;
+    color: var(--brass); font-size: .85rem; font-weight: 700;
+    margin: -4px 0;
+}
+.route-banner {
+    background: var(--card); border-radius: var(--r-lg);
+    border: 1.5px solid var(--brass); padding: 14px 16px;
+    display: flex; align-items: flex-start; gap: 12px;
+}
+.route-banner-icon {
+    font-size: 1.3rem; line-height: 1;
+}
+.route-banner-title {
+    font-size: .95rem; font-weight: 700; color: var(--text);
+}
+.route-banner-desc {
+    font-size: .85rem; color: var(--text2); margin-top: 2px;
+}
+.skill-chip-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 2px 8px; border-radius: 4px; font-size: .75rem;
+    font-weight: 700; background: var(--velvet-0); color: var(--text);
+}
