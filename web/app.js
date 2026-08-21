@@ -3054,6 +3054,7 @@ async function buildNegotiationScreen() {
     const color = series?.color||'#2196F3';
     const isP5 = S.series === 'p5';
     const isP3 = S.series === 'p3';
+    const isP4 = S.series === 'p4';
 
     await ensureNegotiationLoaded();
 
@@ -3061,7 +3062,7 @@ async function buildNegotiationScreen() {
     const tabBar = document.getElementById('negotiationTabBar');
 
     if (titleEl) {
-        titleEl.textContent = isP5 ? 'Shadow Negotiation Guide' : (isP3 ? 'Shuffle Time & Arcana Guide' : 'Negotiation & Shuffle Guide');
+        titleEl.textContent = isP5 ? 'Shadow Negotiation Guide' : (isP3 ? 'Persona 3 — Shuffle Time & Major Arcana' : 'Persona 4 Golden — Shuffle Time & Sweep Guide');
     }
 
     if (tabBar) {
@@ -3071,15 +3072,46 @@ async function buildNegotiationScreen() {
                 <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" id="negoTabLookup" onclick="setNegoTab('lookup')">Shadow Lookup</button>
                 <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" id="negoTabPerks" onclick="setNegoTab('perks')">Confidant Perks</button>
             `;
-            if (!S.negoTab || S.negoTab === 'shuffle') S.negoTab = 'matrix';
+            if (!S.negoTab || S.negoTab.startsWith('p3_') || S.negoTab.startsWith('p4_')) S.negoTab = 'matrix';
+        } else if (isP3) {
+            tabBar.innerHTML = `
+                <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='p3_major')?'active':''}" id="negoTabP3Major" onclick="setNegoTab('p3_major')">Major Arcana</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p3_minor'?'active':''}" id="negoTabP3Minor" onclick="setNegoTab('p3_minor')">Minor Arcana / Suits</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p3_mech'?'active':''}" id="negoTabP3Mech" onclick="setNegoTab('p3_mech')">Mechanics & Tips</button>
+            `;
+            if (!S.negoTab || !S.negoTab.startsWith('p3_')) S.negoTab = 'p3_major';
         } else {
             tabBar.innerHTML = `
-                <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='shuffle' || S.negoTab==='matrix')?'active':''}" id="negoTabMatrix" onclick="setNegoTab('shuffle')">Major Arcana</button>
-                <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" id="negoTabPerks" onclick="setNegoTab('perks')">Mechanics & Strategy</button>
+                <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='p4_sweep')?'active':''}" id="negoTabP4Sweep" onclick="setNegoTab('p4_sweep')">Sweep Bonus Guide</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p4_arcana'?'active':''}" id="negoTabP4Arcana" onclick="setNegoTab('p4_arcana')">Arcana Cards</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p4_minor'?'active':''}" id="negoTabP4Minor" onclick="setNegoTab('p4_minor')">Minor Arcana</button>
             `;
-            S.negoTab = S.negoTab === 'perks' ? 'perks' : 'shuffle';
+            if (!S.negoTab || !S.negoTab.startsWith('p4_')) S.negoTab = 'p4_sweep';
         }
     }
+
+    renderNegotiationContent(color);
+}
+
+function setNegoTab(tab) {
+    S.negoTab = tab;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+
+    // Update active tab buttons
+    document.querySelectorAll('#negotiationTabBar .fusion-tab-pill').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    if (tab === 'matrix') document.getElementById('negoTabMatrix')?.classList.add('active');
+    else if (tab === 'lookup') document.getElementById('negoTabLookup')?.classList.add('active');
+    else if (tab === 'perks') document.getElementById('negoTabPerks')?.classList.add('active');
+    else if (tab === 'p3_major') document.getElementById('negoTabP3Major')?.classList.add('active');
+    else if (tab === 'p3_minor') document.getElementById('negoTabP3Minor')?.classList.add('active');
+    else if (tab === 'p3_mech') document.getElementById('negoTabP3Mech')?.classList.add('active');
+    else if (tab === 'p4_sweep') document.getElementById('negoTabP4Sweep')?.classList.add('active');
+    else if (tab === 'p4_arcana') document.getElementById('negoTabP4Arcana')?.classList.add('active');
+    else if (tab === 'p4_minor') document.getElementById('negoTabP4Minor')?.classList.add('active');
 
     renderNegotiationContent(color);
 }
@@ -3094,13 +3126,24 @@ function renderNegotiationContent(color) {
         el.innerHTML = renderNegotiationLookup(color);
         renderNegotiationLookupList(color);
     } else if (S.negoTab === 'perks') {
-        el.innerHTML = renderNegotiationPerks(color);
-    } else if (S.negoTab === 'shuffle') {
-        el.innerHTML = renderShuffleTimeGuide(color);
+        el.innerHTML = renderP5NegotiationPerks(color);
+    } else if (S.negoTab === 'p3_major') {
+        el.innerHTML = renderP3MajorArcanaGuide(color);
+    } else if (S.negoTab === 'p3_minor') {
+        el.innerHTML = renderP3MinorArcanaGuide(color);
+    } else if (S.negoTab === 'p3_mech') {
+        el.innerHTML = renderP3MechanicsGuide(color);
+    } else if (S.negoTab === 'p4_sweep') {
+        el.innerHTML = renderP4SweepGuide(color);
+    } else if (S.negoTab === 'p4_arcana') {
+        el.innerHTML = renderP4ArcanaGuide(color);
+    } else if (S.negoTab === 'p4_minor') {
+        el.innerHTML = renderP4MinorArcanaGuide(color);
     }
     el.scrollTop = 0;
 }
 
+/* ── P5 / P5R Negotiation Renderers ────────────────────────────────────────── */
 function renderNegotiationMatrix(color) {
     return `
     <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
@@ -3108,7 +3151,7 @@ function renderNegotiationMatrix(color) {
         <div class="route-banner" style="border-color:${color}">
             <div class="route-banner-icon" style="color:${color}">💡</div>
             <div>
-                <div class="route-banner-title">How Shadow Negotiation Works</div>
+                <div class="route-banner-title">How Shadow Negotiation Works (P5 / P5R)</div>
                 <div class="route-banner-desc">
                     Knock down all enemies with weaknesses or critical hits to trigger a <strong>Hold Up</strong>.
                     Check the Shadow's personality in the top-left to choose responses they like.
@@ -3255,7 +3298,7 @@ function renderNegotiationLookupList(color) {
     const listEl = document.getElementById('negoShadowList');
     if (!listEl) return;
 
-    const data = S.negoData?.shadows || [];
+    const data = S.negoData?.p5?.shadows || [];
     const q = (S.negoQuery || '').toLowerCase();
     const filter = S.negoFilter || 'all';
 
@@ -3311,8 +3354,9 @@ function renderNegotiationLookupList(color) {
     `;
 }
 
-function renderNegotiationPerks(color) {
-    const perks = S.negoData?.sun_confidant_perks || [];
+function renderP5NegotiationPerks(color) {
+    const perks = S.negoData?.p5?.sun_confidant_perks || [];
+    const mechanics = S.negoData?.p5?.mechanics || [];
     return `
     <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
         <div class="route-banner" style="border-color:#FFD700">
@@ -3344,46 +3388,156 @@ function renderNegotiationPerks(color) {
         <div class="section-card">
             <div class="section-title">Essential Negotiation Mechanics</div>
             <div style="display:flex;flex-direction:column;gap:10px;font-size:.85rem;color:var(--text2);line-height:1.5">
-                <div>
-                    <strong style="color:var(--text)">1. Red Aura / Disaster Shadows:</strong>
-                    Disaster Shadows (glowing red aura) cannot be negotiated with during hold-ups. Defeating them causes a chain explosion that damages other enemies!
-                </div>
-                <div>
-                    <strong style="color:var(--text)">2. Chariot Rank 7 (Insta-Kill):</strong>
-                    Ryuji's Insta-Kill perk in Mementos/Palaces automatically defeats shadows 10+ levels below Joker and instantly recruits their Persona without any dialogue!
-                </div>
-                <div>
-                    <strong style="color:var(--text)">3. Already Owned Personas:</strong>
-                    If you negotiate with a Persona already in your stock, they skip conversation immediately and grant bonus EXP to that Persona.
-                </div>
+                ${mechanics.map(m => `
+                    <div>
+                        <strong style="color:var(--text)">${m.title}:</strong>
+                        ${m.desc}
+                    </div>
+                `).join('')}
             </div>
         </div>
     </div>`;
 }
 
-function renderShuffleTimeGuide(color) {
-    const cards = S.negoData?.p3r_shuffle_major_arcana || [];
+/* ── Persona 3 / Persona 3 Reload Renderers ────────────────────────────────── */
+function renderP3MajorArcanaGuide(color) {
+    const cards = S.negoData?.p3?.major_arcana || [];
     return `
     <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
         <div class="route-banner" style="border-color:${color}">
             <div class="route-banner-icon" style="color:${color}">🃏</div>
             <div>
-                <div class="route-banner-title">Persona 3 Reload — Shuffle Time & Arcana Burst</div>
+                <div class="route-banner-title">Persona 3 — Major Arcana Deck & Arcana Burst</div>
                 <div class="route-banner-desc">
-                    Finishing battles with an All-Out Attack or Protagonist finish triggers <strong>Shuffle Time</strong>.
-                    Collecting Major Arcana cards permanently upgrades your Tartarus exploration run until you return to the entrance!
+                    Major Arcana cards are special Tarot cards drawn during Shuffle Time.
+                    Collecting Major Arcana cards permanently upgrades your entire Tartarus exploration run until you return to the entrance!
                 </div>
             </div>
         </div>
 
         <div class="section-card">
-            <div class="section-title">Major Arcana Deck & Arcana Burst Effects</div>
+            <div class="section-title">Major Arcana Deck</div>
             <div class="arcana-table-grid">
                 ${cards.map(c => `
                     <div class="arcana-card">
                         <div class="arcana-card-num">${c.num}</div>
                         <div class="arcana-card-name">${c.name}</div>
                         <div class="arcana-card-effect">${c.effect}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderP3MinorArcanaGuide(color) {
+    const suits = S.negoData?.p3?.minor_arcana || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="route-banner" style="border-color:${color}">
+            <div class="route-banner-icon" style="color:${color}">🎴</div>
+            <div>
+                <div class="route-banner-title">Minor Arcana / Suit Cards</div>
+                <div class="route-banner-desc">
+                    Each card suit in Shuffle Time represents a distinct type of instant exploration bonus.
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title">Card Suits & Rewards</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+                ${suits.map(s => `
+                    <div class="row-card" style="border-left:3px solid ${color}">
+                        <div class="row-main">
+                            <div class="row-name" style="color:${color}">${s.suit} — ${s.title}</div>
+                            <div class="row-sub" style="color:var(--text)">${s.desc}</div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderP3MechanicsGuide(color) {
+    const mechs = S.negoData?.p3?.mechanics || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="section-card">
+            <div class="section-title">Shuffle Time Exploration Strategy</div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:var(--text2);line-height:1.5">
+                ${mechs.map(m => `
+                    <div>
+                        <strong style="color:var(--text);font-size:.95rem">${m.title}</strong>
+                        <div style="margin-top:2px">${m.desc}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+}
+
+/* ── Persona 4 / Persona 4 Golden Renderers ────────────────────────────────── */
+function renderP4SweepGuide(color) {
+    const sweep = S.negoData?.p4?.sweep_guide || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="route-banner" style="border-color:#FFD700">
+            <div class="route-banner-icon" style="color:#FFD700">🏆</div>
+            <div>
+                <div class="route-banner-title" style="color:#FFD700">Persona 4 Golden — All-Clear Sweep Bonus</div>
+                <div class="route-banner-desc">
+                    Drawing all cards displayed during a Shuffle Time triggers the legendary <strong>Sweep Bonus</strong>!
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title">Sweep Bonus Rules & Rewards</div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:var(--text2);line-height:1.5">
+                ${sweep.map(s => `
+                    <div>
+                        <strong style="color:#FFD700;font-size:.95rem">${s.title}</strong>
+                        <div style="margin-top:2px;white-space:pre-line">${s.desc}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderP4ArcanaGuide(color) {
+    const cards = S.negoData?.p4?.major_arcana || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="section-card">
+            <div class="section-title">Arcana Cards & Effects (P4G)</div>
+            <div class="arcana-table-grid">
+                ${cards.map(c => `
+                    <div class="arcana-card">
+                        <div class="arcana-card-name" style="color:#FFD700">${c.name}</div>
+                        <div class="arcana-card-effect">${c.effect}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+}
+
+function renderP4MinorArcanaGuide(color) {
+    const suits = S.negoData?.p4?.minor_arcana || [];
+    return `
+    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+        <div class="section-card">
+            <div class="section-title">Minor Arcana Suits (P4G)</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+                ${suits.map(s => `
+                    <div class="row-card" style="border-left:3px solid ${color}">
+                        <div class="row-main">
+                            <div class="row-name" style="color:${color}">${s.suit} — ${s.title}</div>
+                            <div class="row-sub" style="color:var(--text)">${s.desc}</div>
+                        </div>
                     </div>
                 `).join('')}
             </div>
