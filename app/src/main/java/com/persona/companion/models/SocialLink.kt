@@ -5,6 +5,7 @@ package com.persona.companion.models
  */
 data class SocialLink(
     val arcana: String,
+    val characterName: String? = null,
     val ranks: List<SocialLinkRank>,
     val details: SocialLinkDetails? = null,
     val isP4GExclusive: Boolean = false,

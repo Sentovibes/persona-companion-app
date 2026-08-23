@@ -13,8 +13,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 17
-        versionName "6.0.0"
+        versionCode 18
+        versionName "7.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -30,9 +30,9 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('debug.keystore')
+            storeFile file('release.keystore')
             storePassword 'android'
-            keyAlias 'androiddebugkey'
+            keyAlias 'persona-companion'
             keyPassword 'android'
         }
     }
@@ -109,6 +109,9 @@ android {
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+        jniLibs {
+            keepDebugSymbols += '**/*.so'
         }
     }
 }

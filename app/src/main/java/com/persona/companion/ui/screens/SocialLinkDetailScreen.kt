@@ -59,11 +59,27 @@ fun SocialLinkDetailScreen(
         else -> TextPrimary
     }
 
+    val characterName = socialLink?.characterName ?: com.persona.companion.utils.ConfidantHelper.getCharacterName(gameId, arcana)
+
     Scaffold(
         containerColor = Background,
         topBar = {
             TopAppBar(
-                title = { Text(arcana, color = TextPrimary) },
+                title = {
+                    Column {
+                        Text(
+                            text = if (!characterName.isNullOrBlank()) "$arcana — $characterName" else arcana,
+                            color = TextPrimary,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 17.sp
+                        )
+                        Text(
+                            text = gameName,
+                            color = TextSecondary,
+                            fontSize = 12.sp
+                        )
+                    }
+                },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
@@ -88,6 +104,85 @@ fun SocialLinkDetailScreen(
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
+                // Character Header Card
+                item {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                        shape = RoundedCornerShape(12.dp),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = if (!characterName.isNullOrBlank()) characterName else arcana,
+                                    fontSize = 20.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = TextPrimary
+                                )
+
+                                Box(
+                                    modifier = Modifier
+                                        .background(primaryColor.copy(alpha = 0.18f), RoundedCornerShape(8.dp))
+                                        .padding(horizontal = 10.dp, vertical = 4.dp)
+                                ) {
+                                    Text(
+                                        text = "${socialLink.ranks.size} RANKS",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = primaryColor
+                                    )
+                                }
+                            }
+
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .background(primaryColor.copy(alpha = 0.12f), RoundedCornerShape(6.dp))
+                                        .padding(horizontal = 8.dp, vertical = 3.dp)
+                                ) {
+                                    Text(
+                                        text = arcana.uppercase(),
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = primaryColor
+                                    )
+                                }
+
+                                if (socialLink.isP5RExclusive) {
+                                    Box(
+                                        modifier = Modifier
+                                            .background(Persona5Red.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                            .padding(horizontal = 8.dp, vertical = 3.dp)
+                                    ) {
+                                        Text("P5R EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona5Red)
+                                    }
+                                } else if (socialLink.isP4GExclusive) {
+                                    Box(
+                                        modifier = Modifier
+                                            .background(Persona4Yellow.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                            .padding(horizontal = 8.dp, vertical = 3.dp)
+                                    ) {
+                                        Text("P4G EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona4Yellow)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 // Details card (schedule / location)
                 socialLink.details?.let { details ->
                     item { DetailsCard(details = details) }

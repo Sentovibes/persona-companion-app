@@ -16,9 +16,15 @@ object SocialLinkLoader {
 
     fun loadSocialLinks(context: Context, gameId: String): SocialLinksData? {
         return try {
+            val prefs = UserPreferences(context)
+            val effectiveGameId = if (gameId == "p3p") {
+                if (prefs.getP3PProtagonist() == UserPreferences.P3PProtagonist.FEMC) "p3p_femc" else "p3p_male"
+            } else {
+                gameId
+            }
             val filename = getSocialLinkFilename(context, gameId) ?: return null
             val jsonString = context.assets.open(filename).bufferedReader().use { it.readText() }
-            parseSocialLinksJson(gameId, jsonString)
+            parseSocialLinksJson(effectiveGameId, jsonString)
         } catch (e: Exception) {
             Log.e(TAG, "Error loading social links for $gameId", e)
             null
@@ -140,9 +146,12 @@ object SocialLinkLoader {
                 )
             }
 
+            val characterName = com.persona.companion.utils.ConfidantHelper.getCharacterName(gameId, arcana)
+
             socialLinks.add(
                 SocialLink(
                     arcana          = arcana,
+                    characterName   = characterName,
                     ranks           = ranks,
                     details         = details,
                     isP4GExclusive  = isP4GExclusive,

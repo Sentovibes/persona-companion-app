@@ -742,17 +742,102 @@ async function buildSocialLinksScreen() {
     renderSlList(color);
 }
 
+function getSlCharacterName(gameId, arcana) {
+    const clean = (arcana||'').trim();
+    const g = (gameId||'').toLowerCase();
+    if (g.startsWith('p5')) {
+        const map = {
+            'Fool': 'Igor', 'Magician': 'Morgana', 'Priestess': 'Makoto Niijima', 'Empress': 'Haru Okumura',
+            'Emperor': 'Yusuke Kitagawa', 'Hierophant': 'Sojiro Sakura', 'Lovers': 'Ann Takamaki',
+            'Chariot': 'Ryuji Sakamoto', 'Justice': 'Goro Akechi', 'Hermit': 'Futaba Sakura',
+            'Fortune': 'Chihaya Mifune', 'Strength': 'Caroline & Justine', 'Hanged-Man': 'Munehisa Iwai',
+            'Hanged Man': 'Munehisa Iwai', 'Death': 'Tae Takemi', 'Temperance': 'Sadayo Kawakami',
+            'Devil': 'Ichiko Ohya', 'Tower': 'Shinya Oda', 'Star': 'Hifumi Togo', 'Moon': 'Yuuki Mishima',
+            'Sun': 'Toranosuke Yoshida', 'Judgement': 'Sae Niijima', 'Faith': 'Kasumi Yoshizawa',
+            'Councillor': 'Takuto Maruki'
+        };
+        return map[clean] || null;
+    }
+    if (g.startsWith('p4')) {
+        if (clean === 'Fool') return 'Investigation Team';
+        if (clean === 'Magician') return 'Yosuke Hanamura';
+        if (clean === 'Priestess') return 'Yukiko Amagi';
+        if (clean === 'Empress') return 'Margaret';
+        if (clean === 'Emperor') return 'Kanji Tatsumi';
+        if (clean === 'Hierophant') return 'Ryotaro Dojima';
+        if (clean === 'Lovers') return 'Rise Kujikawa';
+        if (clean === 'Chariot') return 'Chie Satonaka';
+        if (clean === 'Justice') return 'Nanako Dojima';
+        if (clean === 'Hermit') return 'Fox (Tatsuhime Shrine)';
+        if (clean === 'Fortune') return 'Naoto Shirogane';
+        if (clean.startsWith('Strength (Basketball)')) return 'Kou Ichijo';
+        if (clean.startsWith('Strength (Soccer)')) return 'Daisuke Nagase';
+        if (clean.startsWith('Strength')) return 'Kou Ichijo / Daisuke Nagase';
+        if (clean.startsWith('Hanged')) return 'Naoki Konishi';
+        if (clean === 'Death') return 'Hisano Kuroda';
+        if (clean === 'Temperance') return 'Eri Minami';
+        if (clean === 'Devil') return 'Sayoko Uehara';
+        if (clean === 'Tower') return 'Shu Nakajima';
+        if (clean === 'Star') return 'Teddie';
+        if (clean === 'Moon') return 'Ai Ebihara';
+        if (clean.startsWith('Sun (Drama)')) return 'Yumi Ozawa';
+        if (clean.startsWith('Sun (Band)')) return 'Ayane Matsunaga';
+        if (clean.startsWith('Sun')) return 'Yumi Ozawa / Ayane Matsunaga';
+        if (clean === 'Judgement') return 'Seekers of Truth';
+        if (clean === 'Jester' || clean === 'Hunger') return 'Tohru Adachi';
+        if (clean === 'Aeon') return 'Marie';
+        return null;
+    }
+    if (g === 'p3p_femc' || (g === 'p3p' && S.protagonist === 'femc')) {
+        const map = {
+            'Fool': 'SEES', 'Magician': 'Junpei Iori', 'Priestess': 'Fuuka Yamagishi', 'Empress': 'Mitsuru Kirijo',
+            'Emperor': 'Hidetoshi Odagiri', 'Hierophant': 'Bunkichi & Mitsuko', 'Lovers': 'Yukari Takeba',
+            'Chariot': 'Rio Iwasaki', 'Justice': 'Ken Amada', 'Hermit': 'Saori Hasegawa',
+            'Fortune': 'Keisuke Hiraga', 'Strength': 'Koromaru', 'Hanged-Man': 'Maiko Oohashi',
+            'Hanged Man': 'Maiko Oohashi', 'Death': 'Pharos', 'Temperance': 'Bebe (Andre)',
+            'Devil': 'President Tanaka', 'Tower': 'Mutatsu (Monk)', 'Star': 'Akihiko Sanada',
+            'Moon': 'Shinjiro Aragaki', 'Sun': 'Akinari Kamiki', 'Judgement': 'Nyx Annihilation Team',
+            'Aeon': 'Aigis'
+        };
+        return map[clean] || null;
+    }
+    if (g.startsWith('p3')) {
+        const map = {
+            'Fool': 'SEES', 'Magician': 'Kenji Tomochika', 'Priestess': 'Fuuka Yamagishi', 'Empress': 'Mitsuru Kirijo',
+            'Emperor': 'Hidetoshi Odagiri', 'Hierophant': 'Bunkichi & Mitsuko', 'Lovers': 'Yukari Takeba',
+            'Chariot': 'Kazushi Miyamoto', 'Justice': 'Chihiro Fushimi', 'Hermit': '"Maya" (Isako Toriumi)',
+            'Fortune': 'Keisuke Hiraga', 'Strength': 'Yuko Nishiwaki', 'Hanged-Man': 'Maiko Oohashi',
+            'Hanged Man': 'Maiko Oohashi', 'Death': 'Pharos', 'Temperance': 'Bebe (Andre)',
+            'Devil': 'President Tanaka', 'Tower': 'Mutatsu (Monk)', 'Star': 'Mamoru Hayase',
+            'Moon': 'Nozomi Suemitsu', 'Sun': 'Akinari Kamiki', 'Judgement': 'Nyx Annihilation Team',
+            'Aeon': 'Aigis'
+        };
+        return map[clean] || null;
+    }
+    return null;
+}
+
 function renderSlList(color) {
     const q = S.slQuery.toLowerCase();
     let items = S.slData||[];
-    if (q) items = items.filter(([arcana])=>arcana.toLowerCase().includes(q));
+    if (q) {
+        items = items.filter(([arcana]) => {
+            const char = (getSlCharacterName(S.game, arcana) || '').toLowerCase();
+            return arcana.toLowerCase().includes(q) || char.includes(q);
+        });
+    }
     if (!items.length) { document.getElementById('slContent').innerHTML=`<div class="empty-state">No results</div>`; return; }
     document.getElementById('slContent').innerHTML = items.map(([arcana, data]) => {
         const rankCount = countRanks(data);
+        const charName = getSlCharacterName(S.game, arcana);
+        const loc = data.Details?.Location || '';
         return `<div class="row-card" onclick="openSlDetail('${esc(arcana)}')">
             <div class="row-main">
-                <div class="row-name">${arcana}</div>
-                <div class="row-sub">${rankCount} ranks</div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                    <div class="row-name" style="font-size:1.02rem;font-weight:700">${charName ? esc(charName) : esc(arcana)}</div>
+                    ${charName ? `<span class="skill-chip-tag" style="background:${color}22;color:${color};font-size:.75rem;padding:2px 7px;border-radius:4px;font-weight:700">${esc(arcana)}</span>` : ''}
+                </div>
+                <div class="row-sub" style="margin-top:3px">${rankCount} ranks${loc ? ` • <span style="color:var(--text3)">${esc(loc)}</span>` : ''}</div>
             </div>
             <div class="level-badge" style="background:${color}22;color:${color}">Rank ${rankCount}</div>
         </div>`;

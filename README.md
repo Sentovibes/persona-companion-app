@@ -2,10 +2,10 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v6.0.0
+# Persona Companion App v7.0.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/Version-6.0.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-7.0.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
@@ -30,12 +30,12 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## v6.0.0: The Item & Skill Synchronization Update
-This update introduces a standardized universal format for all item and skill databases, achieving parity between the Android and Web versions.
-- **5,000+ Items**: Standardized across the series with full mapping for P5R, P3R, P4G, and P3F/P.
-- **Comprehensive Skills**: Full database for all skills, elemental types, and costs.
-- **Request Trackers**: Dedicated quest and request trackers for all supported titles.
-- **Web Parity**: The web version now supports Items, Skills, and Requests with local save persistence.
+## v7.0.0: The Negotiation & Master Build Solver Update
+This landmark update transforms combat readiness, social link exploration, and fusion route planning:
+- **Shadow Negotiation & Shuffle Time Guides**: Complete personality response matrices (Upbeat, Timid, Gloomy, Irritable), Sun Confidant negotiation perks, and all 22 P3R Major/Minor Arcana card effects.
+- **Persona Skill Inheritance Route Finder**: Automated multi-branch fusion tree solver for targeting and passing down specific high-tier skills.
+- **Confidants & Social Links QoL**: Character names (Tae Takemi, Ryuji Sakamoto, Makoto Niijima, etc.) displayed prominently on cards with real-time search filtering.
+- **Day-by-Day Calendar Guides**: Full daily walkthroughs with optimal schedule prioritization and classroom answer sync.
 
 ---
 
