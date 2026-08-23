@@ -23,12 +23,37 @@ enum class FusionType {
 }
 
 enum class CalculatorMode {
-    REVERSE, FORWARD
+    REVERSE, FORWARD, SKILL_ROUTES
 }
 
 enum class ForwardSubTab {
     CALCULATOR, FROM_PERSONA
 }
+
+data class DirectLearner(
+    val personaName: String,
+    val arcana: String,
+    val level: Int,
+    val skillName: String,
+    val skillLevel: Int
+)
+
+data class ItemizerEntry(
+    val personaName: String,
+    val arcana: String,
+    val level: Int,
+    val skillName: String,
+    val itemDescription: String
+)
+
+data class MultiTreeRecipe(
+    val targetPersona: String,
+    val parentA: String,
+    val parentASkill: String,
+    val parentB: String,
+    val parentBSkill: String,
+    val description: String
+)
 
 data class FusionState(
     val personas: List<Persona> = emptyList(),
@@ -43,6 +68,13 @@ data class FusionState(
     val forwardSourcePersona: Persona? = null,
     val forwardOptions: List<com.persona.companion.fusion.ForwardFusionOption> = emptyList(),
     val forwardOptionQuery: String = "",
+    // Skill Routes state
+    val skillRouteTarget: Persona? = null,
+    val skillRouteSkills: List<String> = emptyList(),
+    val allAvailableSkills: List<String> = emptyList(),
+    val skillLearners: List<DirectLearner> = emptyList(),
+    val skillItemizers: List<ItemizerEntry> = emptyList(),
+    val skillMultiTrees: List<MultiTreeRecipe> = emptyList(),
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
@@ -104,6 +136,10 @@ class FusionViewModel : ViewModel() {
                         (settings.showEpisodeAigis || p.episodeAigis != true)
                     }
 
+                    val allSkills = personas.flatMap { p ->
+                        p.skills?.keys ?: emptySet()
+                    }.toSet().sorted()
+
                     // Resolve fusion chart path
                     val chartPath = when (gameId) {
                         "p3fes"     -> "data/fusion-charts/p3-fusion-chart.json"
@@ -117,13 +153,13 @@ class FusionViewModel : ViewModel() {
                     }
 
                     if (chartPath == null) {
-                        return@withContext Triple(personas, null as FusionChart?, emptyMap<String, List<List<String>>>())
+                        return@withContext Triple(personas, null as FusionChart?, Pair(emptyMap<String, List<List<String>>>(), allSkills))
                     }
 
                     // Load fusion chart — fall back to p3 chart if game-specific one is missing
                     val chart = loadChartOrNull(context, chartPath)
                         ?: loadChartOrNull(context, "data/fusion-charts/p3-fusion-chart.json")
-                        ?: return@withContext Triple(personas, null as FusionChart?, emptyMap<String, List<List<String>>>())
+                        ?: return@withContext Triple(personas, null as FusionChart?, Pair(emptyMap<String, List<List<String>>>(), allSkills))
 
                     // Load special fusions
                     val specialPath = when (gameId) {
@@ -138,10 +174,12 @@ class FusionViewModel : ViewModel() {
                         loadSpecialOrEmpty(context, specialPath)
                     } else emptyMap()
 
-                    Triple(personas, chart, specialFusions)
+                    Triple(personas, chart, Pair(specialFusions, allSkills))
                 }
 
-                val (personas, chart, specialFusions) = result
+                val (personas, chart, specialAndSkills) = result
+                val specialFusions = specialAndSkills.first
+                val allSkills = specialAndSkills.second
 
                 if (chart == null) {
                     _state.value = _state.value.copy(
@@ -163,6 +201,7 @@ class FusionViewModel : ViewModel() {
 
                 _state.value = _state.value.copy(
                     personas = personas.sortedBy { it.name },
+                    allAvailableSkills = allSkills,
                     isLoading = false
                 )
             } catch (e: Exception) {
@@ -319,6 +358,126 @@ class FusionViewModel : ViewModel() {
 
         val result = calculator.fuse(ingredients)
         _state.value = _state.value.copy(forwardResult = result)
+    }
+
+    // --- Skill Routes methods ---
+
+    fun setSkillRouteTarget(persona: Persona?) {
+        _state.value = _state.value.copy(skillRouteTarget = persona)
+        calculateSkillRoutes()
+    }
+
+    fun addSkillRouteSkill(skillName: String) {
+        val current = _state.value.skillRouteSkills
+        if (!current.contains(skillName)) {
+            _state.value = _state.value.copy(skillRouteSkills = current + skillName)
+            calculateSkillRoutes()
+        }
+    }
+
+    fun removeSkillRouteSkill(skillName: String) {
+        val current = _state.value.skillRouteSkills
+        _state.value = _state.value.copy(skillRouteSkills = current - skillName)
+        calculateSkillRoutes()
+    }
+
+    fun clearSkillRouteSkills() {
+        _state.value = _state.value.copy(skillRouteSkills = emptyList())
+        calculateSkillRoutes()
+    }
+
+    private fun calculateSkillRoutes() {
+        val target = _state.value.skillRouteTarget
+        val skills = _state.value.skillRouteSkills
+        val personas = _state.value.personas
+        val calculator = fusionCalculator
+
+        if (skills.isEmpty()) {
+            _state.value = _state.value.copy(
+                skillLearners = emptyList(),
+                skillItemizers = emptyList(),
+                skillMultiTrees = emptyList()
+            )
+            return
+        }
+
+        val learners = mutableListOf<DirectLearner>()
+        val itemizers = mutableListOf<ItemizerEntry>()
+
+        skills.forEach { sk ->
+            personas.forEach { p ->
+                val lvl = p.skills?.get(sk)
+                if (lvl != null) {
+                    learners.add(
+                        DirectLearner(
+                            personaName = p.name,
+                            arcana = p.arcana ?: "",
+                            level = p.level ?: 0,
+                            skillName = sk,
+                            skillLevel = lvl.toInt()
+                        )
+                    )
+                }
+                if (p.item?.contains(sk, ignoreCase = true) == true || p.itemr?.contains(sk, ignoreCase = true) == true) {
+                    itemizers.add(
+                        ItemizerEntry(
+                            personaName = p.name,
+                            arcana = p.arcana ?: "",
+                            level = p.level ?: 0,
+                            skillName = sk,
+                            itemDescription = p.item ?: p.itemr ?: ""
+                        )
+                    )
+                }
+            }
+        }
+
+        val multiTrees = mutableListOf<MultiTreeRecipe>()
+        if (target != null && calculator != null && skills.size >= 2) {
+            val recipes = calculator.calculateFusionsFor(target)
+            val s1 = skills[0]
+            val s2 = skills[1]
+            for (rec in recipes) {
+                if (rec.personas.size == 2) {
+                    val pA = rec.personas[0]
+                    val pB = rec.personas[1]
+                    val pALearnsS1 = pA.skills?.containsKey(s1) == true
+                    val pBLearnsS2 = pB.skills?.containsKey(s2) == true
+                    val pALearnsS2 = pA.skills?.containsKey(s2) == true
+                    val pBLearnsS1 = pB.skills?.containsKey(s1) == true
+
+                    if (pALearnsS1 && pBLearnsS2) {
+                        multiTrees.add(
+                            MultiTreeRecipe(
+                                targetPersona = target.name,
+                                parentA = pA.name,
+                                parentASkill = s1,
+                                parentB = pB.name,
+                                parentBSkill = s2,
+                                description = "${pA.name} [learns $s1] + ${pB.name} [learns $s2] => ${target.name}"
+                            )
+                        )
+                    } else if (pALearnsS2 && pBLearnsS1) {
+                        multiTrees.add(
+                            MultiTreeRecipe(
+                                targetPersona = target.name,
+                                parentA = pA.name,
+                                parentASkill = s2,
+                                parentB = pB.name,
+                                parentBSkill = s1,
+                                description = "${pA.name} [learns $s2] + ${pB.name} [learns $s1] => ${target.name}"
+                            )
+                        )
+                    }
+                }
+            }
+        }
+
+        _state.value = _state.value.copy(
+            skillLearners = learners.sortedWith(compareBy({ it.skillName }, { it.level })),
+            skillItemizers = itemizers,
+            skillMultiTrees = multiTrees
+        )
     }
 
     fun getPersonaCost(persona: Persona): Int {
