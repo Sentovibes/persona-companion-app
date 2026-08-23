@@ -958,8 +958,11 @@ function buildDetailScreen() {
     else renderEnemyDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
 }
 
-function renderPersonaDetail(name, p, color, containerId) {
-    const el = document.getElementById(containerId||'detailContent');
+function selectPersona(name) {
+    openPersona(name);
+}
+
+function renderPersonaDetailHtml(name, p, color) {
     const stats = p.stats||[];
     const maxStat = stats.length?Math.max(...stats,1):1;
     const statLabels = ['STR','MAG','END','AGI','LUK'];
@@ -975,12 +978,21 @@ function renderPersonaDetail(name, p, color, containerId) {
             <div class="detail-hero-name">${name}</div>
             <div class="detail-hero-arcana">${arcana} Arcana</div>
             ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
+            ${p.inherits?`<div style="font-size:.8rem;color:var(--text3);margin-top:2px">Inherits: <strong style="color:var(--text2)">${p.inherits}</strong></div>`:''}
         </div>
         ${p.image ? `<div class="detail-hero-image-wrap"><img src="${p.image}" class="detail-hero-image" alt="${name}" onerror="this.parentElement.style.display='none'"></div>` : ''}
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;
     if (p.unlock) html += `<div class="unlock-box"><div class="unlock-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div><div><div class="unlock-label">Unlock</div><div class="unlock-text">${p.unlock}</div></div></div>`;
+
+    if (p.item || p.itemr) {
+        html += `<div class="section-card" style="border-left:3px solid #FFD700">
+            <div class="section-title" style="color:#FFD700">Itemization (Electric Chair / Transmute)</div>
+            ${p.item ? `<div style="font-size:.88rem;color:var(--text);margin-bottom:4px">Item: <strong>${p.item}</strong></div>` : ''}
+            ${p.itemr ? `<div style="font-size:.85rem;color:#FFD700">Fusion Alarm Item: <strong>${p.itemr}</strong></div>` : ''}
+        </div>`;
+    }
 
     if (stats.length>=5) {
         html += `<div class="section-card"><div class="section-title">Base Stats</div>`;
@@ -996,7 +1008,7 @@ function renderPersonaDetail(name, p, color, containerId) {
     }
 
     if (p.skills&&Object.keys(p.skills).length) {
-        html += `<div class="section-card"><div class="section-title">Skills</div>`;
+        html += `<div class="section-card"><div class="section-title">Skills (${Object.keys(p.skills).length})</div>`;
         Object.entries(p.skills).forEach(([skill,lvl])=>{
             const label = lvl<1?'Innate':lvl>=100?'Special':`Lv. ${Math.floor(lvl)}`;
             const lcolor = lvl<1?color:lvl>=100?'#FFD700':'var(--text2)';
@@ -1020,7 +1032,7 @@ function renderPersonaDetail(name, p, color, containerId) {
     ].filter(a=>a.list&&a.list.length);
 
     if (affinities.length) {
-        html += `<div class="section-card"><div class="section-title">Affinities</div>`;
+        html += `<div class="section-card"><div class="section-title">Elemental Affinities</div>`;
         affinities.forEach(a=>{
             html += `<div class="affinity-group"><div class="affinity-label">${a.label}</div>
                 <div class="chips">${a.list.map(e=>`<span class="chip" style="background:${a.color}22;color:${a.color}">${e}</span>`).join('')}</div>
@@ -1028,7 +1040,13 @@ function renderPersonaDetail(name, p, color, containerId) {
         });
         html += `</div>`;
     }
-    el.innerHTML = html;
+    return html;
+}
+
+function renderPersonaDetail(name, p, color, containerId) {
+    const el = document.getElementById(containerId||'detailContent');
+    if (!el) return;
+    el.innerHTML = renderPersonaDetailHtml(name, p, color);
     el.scrollTop = 0;
 }
 
@@ -2133,10 +2151,10 @@ function renderForwardSlotCard(slotIndex, personaName, label, color) {
 function renderForwardResultBox(result, color) {
     const activeCount = S.fusion.forwardSlots.filter(Boolean).length;
     if (activeCount === 0) {
-        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--hairline-soft);border-radius:var(--r-lg)">Select at least 2 ingredients above to fuse</div>`;
+        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--hairline-soft);border-radius:var(--r-lg)">Select at least 2 ingredients on the left to fuse and view the complete compendium entry</div>`;
     }
     if (activeCount === 1) {
-        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--brass);color:var(--brass);border-radius:var(--r-lg);font-weight:600">1 ingredient selected. Click Slot 2 above to complete the fusion!</div>`;
+        return `<div class="empty-state" style="padding:24px;border:1px dashed var(--brass);color:var(--brass);border-radius:var(--r-lg);font-weight:600">1 ingredient selected. Click Slot 2 on the left to complete the fusion!</div>`;
     }
     if (!result || !result.data) {
         return `<div class="empty-state" style="padding:24px;border:1px solid #ff525244;color:#ff5252;border-radius:var(--r-lg);font-weight:700">No Valid Fusion Combination for these ingredients</div>`;
@@ -2144,47 +2162,20 @@ function renderForwardResultBox(result, color) {
 
     const p = result.data;
     const level = p.level ?? p.lvl ?? '?';
-    const arcana = p.arcana || p.race || 'Unknown';
-    const elems = ELEMENTS[S.series] || ELEMENTS.p5;
     const estCost = Math.round((Number(level || 1) * Number(level || 1) * 27) + 2000);
 
-    return `
-    <div class="forward-result-container" style="border-color:${color}">
-        <div class="forward-result-header">
-            <div>
-                ${result.isSpecial ? `<div style="font-size:.7rem;font-weight:800;color:#FFD700;letter-spacing:.08em;margin-bottom:2px">SPECIAL FUSION</div>` : ''}
-                <div class="forward-result-name">${result.name}</div>
-                <div class="forward-result-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
-            </div>
-            <div class="level-badge" style="background:${color}22;color:${color};font-size:1rem;padding:6px 12px;border-radius:8px">Lv. ${level}</div>
+    let html = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:8px 12px;background:var(--raised);border-radius:var(--r-md);border:1px solid ${color}44">
+        <div>
+            <span style="font-size:.8rem;color:var(--text2);font-weight:600">Fused Persona:</span>
+            <strong style="margin-left:6px;color:${color}">${result.name}</strong>
+            ${result.isSpecial ? `<span class="badge" style="background:#FFD70022;color:#FFD700;font-size:.7rem;margin-left:6px">Special Fusion</span>` : ''}
         </div>
-
-        ${p.stats && p.stats.length >= 5 ? `
-            <div class="forward-stats-grid">
-                <div><div class="forward-stat-label">St</div><div class="forward-stat-val">${p.stats[0]}</div></div>
-                <div><div class="forward-stat-label">Ma</div><div class="forward-stat-val">${p.stats[1]}</div></div>
-                <div><div class="forward-stat-label">En</div><div class="forward-stat-val">${p.stats[2]}</div></div>
-                <div><div class="forward-stat-label">Ag</div><div class="forward-stat-val">${p.stats[3]}</div></div>
-                <div><div class="forward-stat-label">Lu</div><div class="forward-stat-val">${p.stats[4]}</div></div>
-            </div>
-        ` : ''}
-
-        ${p.resists ? `
-            <div style="margin:10px 0">
-                <div style="font-size:.8rem;font-weight:700;color:var(--text2);margin-bottom:4px">Resistances</div>
-                <div class="resist-text">${parseResists(p.resists, elems)}</div>
-            </div>
-        ` : ''}
-
-        <div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0 16px">
-            <span style="font-size:.85rem;color:var(--text2)">Estimated Summon Cost:</span>
-            <span class="forward-cost-tag">¥ ${estCost.toLocaleString()}</span>
-        </div>
-
-        <button class="nav-card" style="width:100%;justify-content:center;font-weight:700;background:var(--raised);padding:12px;border-radius:var(--r-md);color:${color};border:1px solid ${color}44;cursor:pointer" onclick="selectPersona('${esc(result.name)}')">
-            View Persona Compendium Entry ›
-        </button>
+        <div style="font-size:.85rem;font-weight:700;color:var(--brass)">Est. Cost: ¥ ${estCost.toLocaleString()}</div>
     </div>`;
+
+    html += renderPersonaDetailHtml(result.name, p, color);
+    return html;
 }
 
 function openForwardPicker(slot) {
