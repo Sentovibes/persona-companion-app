@@ -1751,7 +1751,7 @@
       {
         "num": "XIII",
         "name": "XIII. Death",
-        "effect": "Risk / Reward card: Increases spawn chance of rare shadows & Reaper."
+        "effect": "Risk / Reward card: Increases spawn chance of rare shadows and Reaper."
       },
       {
         "num": "XIV",
@@ -1796,22 +1796,22 @@
     ],
     "minor_arcana": [
       {
-        "suit": "Swords (⚔️)",
+        "suit": "Swords",
         "title": "Skill Cards & Weapons",
-        "desc": "Grants physical/elemental/support skill cards or equipment upgrades."
+        "desc": "Grants physical, elemental, support skill cards or equipment upgrades."
       },
       {
-        "suit": "Cups (🏆)",
+        "suit": "Cups",
         "title": "Recovery & Healing",
         "desc": "Restores a percentage of HP and SP to all party members immediately."
       },
       {
-        "suit": "Coins (🪙)",
+        "suit": "Coins",
         "title": "Bonus Money / Yen",
         "desc": "Grants substantial amounts of bonus Yen scaled by dungeon floor rank."
       },
       {
-        "suit": "Wands (🪄)",
+        "suit": "Wands",
         "title": "Bonus EXP Multiplier",
         "desc": "Increases battle EXP reward by up to +100%."
       }
@@ -1930,22 +1930,22 @@
     ],
     "minor_arcana": [
       {
-        "suit": "Swords (⚔️)",
+        "suit": "Swords",
         "title": "Skill Cards",
         "desc": "Grants skill cards of rank 1 to 10."
       },
       {
-        "suit": "Cups (🏆)",
+        "suit": "Cups",
         "title": "HP & SP Recovery",
         "desc": "Restores HP and SP to the entire party."
       },
       {
-        "suit": "Coins (🪙)",
+        "suit": "Coins",
         "title": "Yen / Money",
         "desc": "Grants bonus Yen."
       },
       {
-        "suit": "Wands (🪄)",
+        "suit": "Wands",
         "title": "Bonus EXP",
         "desc": "Increases battle EXP by 20% to 100%."
       }

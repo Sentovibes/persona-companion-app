@@ -270,11 +270,17 @@ function railNav(section) {
 
 function updateRailState(screenName) {
     // Show/hide game-specific rail items
-    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests'];
+    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests','rail-negotiation'];
     gameItems.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = S.game ? 'flex' : 'none';
     });
+
+    const negoLabel = document.getElementById('rail-negotiation-label');
+    if (negoLabel) {
+        negoLabel.textContent = S.series === 'p5' ? 'Talk' : (S.series === 'p3' ? 'Shuffle' : 'Sweep');
+    }
+
     // Map screen → rail item id
     const screenToRail = {
         home: 'rail-home', game: 'rail-home',
@@ -282,6 +288,7 @@ function updateRailState(screenName) {
         items: 'rail-items', skills: 'rail-skills', requests: 'rail-requests',
         detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='items'?'rail-items':S.listMode==='skills'?'rail-skills':null,
         fusion: 'rail-fusion', sociallinks: 'rail-sl', sldetail: 'rail-sl',
+        negotiation: 'rail-negotiation'
     };
     document.querySelectorAll('.rail-item').forEach(el => el.classList.remove('active'));
     const activeId = screenToRail[screenName];
@@ -315,7 +322,7 @@ function buildHome() {
     document.getElementById('seriesList').innerHTML = SERIES.map(s => `
         <div class="series-card series-card--${s.id}" style="background:linear-gradient(135deg,${s.color}dd,${s.color}88)"
              onclick="navigate('game','${s.id}')">
-            ${s.id==='p5' ? '<div class="series-card-star">★</div>' : ''}
+            ${s.id==='p5' ? '<div class="series-card-star">5</div>' : ''}
             <div class="series-card-bg-num">${s.id.replace('p','')}</div>
             <div class="series-card-text">
                 <img class="series-card-logo" src="${SERIES_LOGOS[s.id]}" alt="${s.title}"
@@ -852,7 +859,7 @@ function buildSlDetailScreen() {
                             const ptColor = pts >= 10 ? '#4CAF50' : pts > 0 ? color : 'var(--text3)';
                             const ptLabel = pts > 0 ? `+${pts}` : pts === 0 && choice.Answer === 'Any' ? '—' : `${pts}`;
                             html += `<div class="skill-row" style="margin-bottom:6px">
-                                <div class="skill-name" style="font-size:.875rem;font-weight:400">${isPhone ? '📱 ' : ''}${choice.Answer}</div>
+                                <div class="skill-name" style="font-size:.875rem;font-weight:400">${isPhone ? '[Phone] ' : ''}${choice.Answer}</div>
                                 <div class="skill-level" style="color:${ptColor};font-weight:700;font-size:.8rem;flex-shrink:0;margin-left:8px">${ptLabel}</div>
                             </div>`;
                         });
@@ -1082,9 +1089,9 @@ function renderEnemyDetail(name, e, color, containerId) {
                 <span class="route-step-badge" style="background:${matrix.color}22;color:${matrix.color}">${personality}</span>
             </div>
             <div style="display:flex;flex-direction:column;gap:6px">
-                <div class="nego-row-badge"><span>Best Response (❤️ Likes):</span><span class="nego-badge-best">${matrix.best}</span></div>
-                <div class="nego-row-badge"><span>Neutral Response (⚠️ OK):</span><span class="nego-badge-ok">${matrix.ok}</span></div>
-                <div class="nego-row-badge"><span>Worst Response (❌ Hates):</span><span class="nego-badge-bad">${matrix.bad}</span></div>
+                <div class="nego-row-badge"><span>Best Response [Likes]:</span><span class="nego-badge-best">${matrix.best}</span></div>
+                <div class="nego-row-badge"><span>Neutral Response [OK]:</span><span class="nego-badge-ok">${matrix.ok}</span></div>
+                <div class="nego-row-badge"><span>Worst Response [Hates]:</span><span class="nego-badge-bad">${matrix.bad}</span></div>
             </div>
             <button class="slot-action-btn" style="width:100%;margin-top:10px;font-size:.82rem" onclick="openNegotiation()">Open Negotiation Guide ›</button>
         </div>`;
@@ -2744,7 +2751,7 @@ async function renderSkillRouteScreen(color) {
         <div style="display:flex;flex-wrap:wrap;gap:6px">
             ${popularSkills.map(skName => `
                 <button class="slot-action-btn" style="padding:5px 10px;font-size:.8rem;${skills.includes(skName)?'border-color:#FFD700;color:#FFD700':''}" onclick="selectSkillFromPicker('${esc(skName)}')">
-                    ${skills.includes(skName) ? '✓ ' : '+ '}${skName}
+                    ${skills.includes(skName) ? '[Selected] ' : '+ '}${skName}
                 </button>
             `).join('')}
         </div>
@@ -2763,7 +2770,7 @@ async function renderSkillRouteScreen(color) {
         if (routes.naturalSkills && routes.naturalSkills.length > 0) {
             html += `
             <div class="route-banner" style="border-color:#81C784;margin-bottom:12px">
-                <div class="route-banner-icon" style="color:#81C784">✓</div>
+                <div class="route-banner-icon" style="color:#81C784">[OK]</div>
                 <div>
                     <div class="route-banner-title" style="color:#81C784">Learned Naturally</div>
                     <div class="route-banner-desc">
@@ -2779,7 +2786,7 @@ async function renderSkillRouteScreen(color) {
         if (itemizerEntries.length > 0) {
             html += `
             <div class="route-banner" style="border-color:#FFD700;margin-bottom:12px">
-                <div class="route-banner-icon" style="color:#FFD700">★</div>
+                <div class="route-banner-icon" style="color:#FFD700">[Card]</div>
                 <div>
                     <div class="route-banner-title" style="color:#FFD700">Velvet Room Itemization Cards Available</div>
                     <div class="route-banner-desc">
@@ -3146,10 +3153,10 @@ function renderNegotiationContent(color) {
 /* ── P5 / P5R Negotiation Renderers ────────────────────────────────────────── */
 function renderNegotiationMatrix(color) {
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <!-- Quick Rules Card -->
         <div class="route-banner" style="border-color:${color}">
-            <div class="route-banner-icon" style="color:${color}">💡</div>
+            <div class="route-banner-icon" style="color:${color};font-weight:800">[Guide]</div>
             <div>
                 <div class="route-banner-title">How Shadow Negotiation Works (P5 / P5R)</div>
                 <div class="route-banner-desc">
@@ -3165,64 +3172,64 @@ function renderNegotiationMatrix(color) {
             <!-- Upbeat -->
             <div class="nego-card" style="border-left:4px solid #FFB74D">
                 <div class="nego-card-header">
-                    <span class="nego-personality-title" style="color:#FFB74D">Upbeat (陽気)</span>
+                    <span class="nego-personality-title" style="color:#FFB74D">Upbeat</span>
                     <span class="route-step-badge" style="background:#FFB74D22;color:#FFB74D">Loves Jokes</span>
                 </div>
                 <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
                     High energy and cheerful. Loves clever, funny, and witty remarks. Dislikes indecisive or vague answers.
                 </div>
                 <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
-                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Funny / Joke</span></div>
-                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Serious</span></div>
-                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>Best [Likes]:</span><span class="nego-badge-best">Funny / Joke</span></div>
+                    <div class="nego-row-badge"><span>Neutral [OK]:</span><span class="nego-badge-ok">Serious</span></div>
+                    <div class="nego-row-badge"><span>Worst [Hates]:</span><span class="nego-badge-bad">Vague / Ambiguous</span></div>
                 </div>
             </div>
 
             <!-- Timid -->
             <div class="nego-card" style="border-left:4px solid #81C784">
                 <div class="nego-card-header">
-                    <span class="nego-personality-title" style="color:#81C784">Timid (弱気)</span>
+                    <span class="nego-personality-title" style="color:#81C784">Timid</span>
                     <span class="route-step-badge" style="background:#81C78422;color:#81C784">Gentle / Kind</span>
                 </div>
                 <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
                     Easily frightened and cautious. Responds best to kindness, empathy, and gentleness. Never joke or tease them.
                 </div>
                 <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
-                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Kind / Gentle</span></div>
-                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
-                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Funny / Joke</span></div>
+                    <div class="nego-row-badge"><span>Best [Likes]:</span><span class="nego-badge-best">Kind / Gentle</span></div>
+                    <div class="nego-row-badge"><span>Neutral [OK]:</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>Worst [Hates]:</span><span class="nego-badge-bad">Funny / Joke</span></div>
                 </div>
             </div>
 
             <!-- Gloomy -->
             <div class="nego-card" style="border-left:4px solid #64B5F6">
                 <div class="nego-card-header">
-                    <span class="nego-personality-title" style="color:#64B5F6">Gloomy (陰気)</span>
+                    <span class="nego-personality-title" style="color:#64B5F6">Gloomy</span>
                     <span class="route-step-badge" style="background:#64B5F622;color:#64B5F6">Aloof / Vague</span>
                 </div>
                 <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
                     Melancholy and cynical. Prefers mysterious, casual, or vague replies. Dislikes overly sweet sympathy.
                 </div>
                 <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
-                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Vague / Ambiguous</span></div>
-                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Serious</span></div>
-                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Kind / Gentle</span></div>
+                    <div class="nego-row-badge"><span>Best [Likes]:</span><span class="nego-badge-best">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>Neutral [OK]:</span><span class="nego-badge-ok">Serious</span></div>
+                    <div class="nego-row-badge"><span>Worst [Hates]:</span><span class="nego-badge-bad">Kind / Gentle</span></div>
                 </div>
             </div>
 
             <!-- Irritable -->
             <div class="nego-card" style="border-left:4px solid #E57373">
                 <div class="nego-card-header">
-                    <span class="nego-personality-title" style="color:#E57373">Irritable (短気)</span>
+                    <span class="nego-personality-title" style="color:#E57373">Irritable</span>
                     <span class="route-step-badge" style="background:#E5737322;color:#E57373">Serious / Direct</span>
                 </div>
                 <div style="font-size:.82rem;color:var(--text2);line-height:1.4">
                     Aggressive and impatient. Demands direct, serious, and no-nonsense responses. Hates soft, timid excuses.
                 </div>
                 <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
-                    <div class="nego-row-badge"><span>❤️ Best (Likes):</span><span class="nego-badge-best">Serious / Direct</span></div>
-                    <div class="nego-row-badge"><span>⚠️ Neutral (OK):</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
-                    <div class="nego-row-badge"><span>❌ Worst (Hates):</span><span class="nego-badge-bad">Kind / Gentle</span></div>
+                    <div class="nego-row-badge"><span>Best [Likes]:</span><span class="nego-badge-best">Serious / Direct</span></div>
+                    <div class="nego-row-badge"><span>Neutral [OK]:</span><span class="nego-badge-ok">Vague / Ambiguous</span></div>
+                    <div class="nego-row-badge"><span>Worst [Hates]:</span><span class="nego-badge-bad">Kind / Gentle</span></div>
                 </div>
             </div>
         </div>
@@ -3235,9 +3242,9 @@ function renderNegotiationMatrix(color) {
                     <thead>
                         <tr style="border-bottom:1px solid var(--hairline-strong);color:var(--text2)">
                             <th style="padding:8px">Personality</th>
-                            <th style="padding:8px">Best (❤️ Likes)</th>
-                            <th style="padding:8px">OK (⚠️ Neutral)</th>
-                            <th style="padding:8px">Worst (❌ Hates)</th>
+                            <th style="padding:8px">Best [Likes]</th>
+                            <th style="padding:8px">Neutral [OK]</th>
+                            <th style="padding:8px">Worst [Hates]</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -3274,7 +3281,7 @@ function renderNegotiationMatrix(color) {
 
 function renderNegotiationLookup(color) {
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+    <div class="guide-wide-layout">
         <div class="search-wrap">
             <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
             <input id="negoSearchInput" class="search-input" type="text" placeholder="Search Shadow by name, Persona, or Arcana..." oninput="onNegoQuery(this.value)">
@@ -3290,7 +3297,7 @@ function renderNegotiationLookup(color) {
             `).join('')}
         </div>
 
-        <div id="negoShadowList" style="display:flex;flex-direction:column;gap:8px"></div>
+        <div id="negoShadowList" class="guide-two-col-grid"></div>
     </div>`;
 }
 
@@ -3315,7 +3322,7 @@ function renderNegotiationLookupList(color) {
     }
 
     if (!items.length) {
-        listEl.innerHTML = `<div class="empty-state">No matching Shadows found</div>`;
+        listEl.innerHTML = `<div class="empty-state" style="grid-column:1/-1">No matching Shadows found</div>`;
         return;
     }
 
@@ -3333,34 +3340,31 @@ function renderNegotiationLookupList(color) {
         'Irritable': 'Serious'
     };
 
-    listEl.innerHTML = `
-        <div style="font-size:.8rem;color:var(--text3);margin-bottom:4px">Showing ${items.length} Shadows</div>
-        ${items.map(s => {
-            const pColor = pColorMap[s.personality] || color;
-            const bestResp = bestMap[s.personality] || 'Serious';
-            return `
-            <div class="row-card" style="border-left:3px solid ${pColor}">
-                <div class="level-badge" style="background:${color}22;color:${color}">${s.level}</div>
-                <div class="row-main">
-                    <div class="row-name">${s.name} ${s.persona_name !== s.name ? `<span style="font-size:.85rem;color:var(--text3)">(${s.persona_name})</span>` : ''}</div>
-                    <div class="row-sub">${s.arcana} · ${s.area}</div>
-                </div>
-                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
-                    <span class="route-step-badge" style="background:${pColor}22;color:${pColor}">${s.personality}</span>
-                    <span style="font-size:.75rem;color:#81C784;font-weight:700">Best: ${bestResp}</span>
-                </div>
-            </div>`;
-        }).join('')}
-    `;
+    listEl.innerHTML = items.map(s => {
+        const pColor = pColorMap[s.personality] || color;
+        const bestResp = bestMap[s.personality] || 'Serious';
+        return `
+        <div class="row-card" style="border-left:3px solid ${pColor};margin:0">
+            <div class="level-badge" style="background:${color}22;color:${color}">${s.level}</div>
+            <div class="row-main">
+                <div class="row-name">${s.name} ${s.persona_name !== s.name ? `<span style="font-size:.85rem;color:var(--text3)">(${s.persona_name})</span>` : ''}</div>
+                <div class="row-sub">${s.arcana} · ${s.area}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
+                <span class="route-step-badge" style="background:${pColor}22;color:${pColor}">${s.personality}</span>
+                <span style="font-size:.75rem;color:#81C784;font-weight:700">Best: ${bestResp}</span>
+            </div>
+        </div>`;
+    }).join('');
 }
 
 function renderP5NegotiationPerks(color) {
     const perks = S.negoData?.p5?.sun_confidant_perks || [];
     const mechanics = S.negoData?.p5?.mechanics || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="route-banner" style="border-color:#FFD700">
-            <div class="route-banner-icon" style="color:#FFD700">★</div>
+            <div class="route-banner-icon" style="color:#FFD700;font-weight:800">[Sun]</div>
             <div>
                 <div class="route-banner-title" style="color:#FFD700">Toranosuke Yoshida (Sun Confidant) Negotiation Perks</div>
                 <div class="route-banner-desc">
@@ -3369,31 +3373,33 @@ function renderP5NegotiationPerks(color) {
             </div>
         </div>
 
-        <div class="section-card">
-            <div class="section-title">Sun Confidant Negotiation Abilities</div>
-            <div style="display:flex;flex-direction:column;gap:10px">
-                ${perks.map(p => `
-                    <div class="row-card" style="border-left:3px solid #FFD700">
-                        <div class="level-badge" style="background:#FFD70022;color:#FFD700">Rank ${p.rank}</div>
-                        <div class="row-main">
-                            <div class="row-name" style="color:#FFD700">${p.name}</div>
-                            <div class="row-sub" style="color:var(--text)">${p.effect}</div>
+        <div class="guide-two-col-grid">
+            <div class="section-card">
+                <div class="section-title">Sun Confidant Negotiation Abilities</div>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                    ${perks.map(p => `
+                        <div class="row-card" style="border-left:3px solid #FFD700;margin:0">
+                            <div class="level-badge" style="background:#FFD70022;color:#FFD700">Rank ${p.rank}</div>
+                            <div class="row-main">
+                                <div class="row-name" style="color:#FFD700">${p.name}</div>
+                                <div class="row-sub" style="color:var(--text)">${p.effect}</div>
+                            </div>
                         </div>
-                    </div>
-                `).join('')}
+                    `).join('')}
+                </div>
             </div>
-        </div>
 
-        <!-- Advanced Negotiation Mechanics -->
-        <div class="section-card">
-            <div class="section-title">Essential Negotiation Mechanics</div>
-            <div style="display:flex;flex-direction:column;gap:10px;font-size:.85rem;color:var(--text2);line-height:1.5">
-                ${mechanics.map(m => `
-                    <div>
-                        <strong style="color:var(--text)">${m.title}:</strong>
-                        ${m.desc}
-                    </div>
-                `).join('')}
+            <!-- Advanced Negotiation Mechanics -->
+            <div class="section-card">
+                <div class="section-title">Essential Negotiation Mechanics</div>
+                <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:var(--text2);line-height:1.5">
+                    ${mechanics.map(m => `
+                        <div>
+                            <strong style="color:var(--text)">${m.title}:</strong>
+                            <div style="margin-top:2px">${m.desc}</div>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
         </div>
     </div>`;
@@ -3403,9 +3409,9 @@ function renderP5NegotiationPerks(color) {
 function renderP3MajorArcanaGuide(color) {
     const cards = S.negoData?.p3?.major_arcana || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="route-banner" style="border-color:${color}">
-            <div class="route-banner-icon" style="color:${color}">🃏</div>
+            <div class="route-banner-icon" style="color:${color};font-weight:800">[Deck]</div>
             <div>
                 <div class="route-banner-title">Persona 3 — Major Arcana Deck & Arcana Burst</div>
                 <div class="route-banner-desc">
@@ -3433,9 +3439,9 @@ function renderP3MajorArcanaGuide(color) {
 function renderP3MinorArcanaGuide(color) {
     const suits = S.negoData?.p3?.minor_arcana || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="route-banner" style="border-color:${color}">
-            <div class="route-banner-icon" style="color:${color}">🎴</div>
+            <div class="route-banner-icon" style="color:${color};font-weight:800">[Suits]</div>
             <div>
                 <div class="route-banner-title">Minor Arcana / Suit Cards</div>
                 <div class="route-banner-desc">
@@ -3446,9 +3452,9 @@ function renderP3MinorArcanaGuide(color) {
 
         <div class="section-card">
             <div class="section-title">Card Suits & Rewards</div>
-            <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="guide-two-col-grid">
                 ${suits.map(s => `
-                    <div class="row-card" style="border-left:3px solid ${color}">
+                    <div class="row-card" style="border-left:3px solid ${color};margin:0">
                         <div class="row-main">
                             <div class="row-name" style="color:${color}">${s.suit} — ${s.title}</div>
                             <div class="row-sub" style="color:var(--text)">${s.desc}</div>
@@ -3463,14 +3469,14 @@ function renderP3MinorArcanaGuide(color) {
 function renderP3MechanicsGuide(color) {
     const mechs = S.negoData?.p3?.mechanics || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="section-card">
             <div class="section-title">Shuffle Time Exploration Strategy</div>
-            <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:var(--text2);line-height:1.5">
+            <div class="guide-two-col-grid" style="font-size:.85rem;color:var(--text2);line-height:1.5">
                 ${mechs.map(m => `
-                    <div>
+                    <div class="row-card" style="flex-direction:column;align-items:flex-start;gap:4px;margin:0">
                         <strong style="color:var(--text);font-size:.95rem">${m.title}</strong>
-                        <div style="margin-top:2px">${m.desc}</div>
+                        <div>${m.desc}</div>
                     </div>
                 `).join('')}
             </div>
@@ -3482,9 +3488,9 @@ function renderP3MechanicsGuide(color) {
 function renderP4SweepGuide(color) {
     const sweep = S.negoData?.p4?.sweep_guide || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="route-banner" style="border-color:#FFD700">
-            <div class="route-banner-icon" style="color:#FFD700">🏆</div>
+            <div class="route-banner-icon" style="color:#FFD700;font-weight:800">[Sweep]</div>
             <div>
                 <div class="route-banner-title" style="color:#FFD700">Persona 4 Golden — All-Clear Sweep Bonus</div>
                 <div class="route-banner-desc">
@@ -3495,11 +3501,11 @@ function renderP4SweepGuide(color) {
 
         <div class="section-card">
             <div class="section-title">Sweep Bonus Rules & Rewards</div>
-            <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:var(--text2);line-height:1.5">
+            <div class="guide-two-col-grid" style="font-size:.85rem;color:var(--text2);line-height:1.5">
                 ${sweep.map(s => `
-                    <div>
+                    <div class="row-card" style="flex-direction:column;align-items:flex-start;gap:4px;margin:0">
                         <strong style="color:#FFD700;font-size:.95rem">${s.title}</strong>
-                        <div style="margin-top:2px;white-space:pre-line">${s.desc}</div>
+                        <div style="white-space:pre-line">${s.desc}</div>
                     </div>
                 `).join('')}
             </div>
@@ -3510,7 +3516,7 @@ function renderP4SweepGuide(color) {
 function renderP4ArcanaGuide(color) {
     const cards = S.negoData?.p4?.major_arcana || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="section-card">
             <div class="section-title">Arcana Cards & Effects (P4G)</div>
             <div class="arcana-table-grid">
@@ -3528,12 +3534,12 @@ function renderP4ArcanaGuide(color) {
 function renderP4MinorArcanaGuide(color) {
     const suits = S.negoData?.p4?.minor_arcana || [];
     return `
-    <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+    <div class="guide-wide-layout">
         <div class="section-card">
             <div class="section-title">Minor Arcana Suits (P4G)</div>
-            <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="guide-two-col-grid">
                 ${suits.map(s => `
-                    <div class="row-card" style="border-left:3px solid ${color}">
+                    <div class="row-card" style="border-left:3px solid ${color};margin:0">
                         <div class="row-main">
                             <div class="row-name" style="color:${color}">${s.suit} — ${s.title}</div>
                             <div class="row-sub" style="color:var(--text)">${s.desc}</div>

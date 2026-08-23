@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=629">
+    <link rel="stylesheet" href="styles.css?v=630">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
@@ -46,6 +46,9 @@
         </button>
         <button class="rail-item" id="rail-class"    onclick="railNav('classroom')" title="Classroom" style="display:none">
             <svg class="rail-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>Class
+        </button>
+        <button class="rail-item" id="rail-negotiation" onclick="railNav('negotiation')" title="Negotiation / Shuffle" style="display:none">
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg><span id="rail-negotiation-label">Guide</span>
         </button>
         <div class="rail-spacer"></div>
         <button class="rail-item" onclick="navigate('settings')" title="Settings">
@@ -382,6 +385,6 @@
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
     <!-- LIBS -->
-    <script src="app.js?v=629"></script>
+    <script src="app.js?v=630"></script>
 </body>
 </html>

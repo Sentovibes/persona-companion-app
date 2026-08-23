@@ -144,7 +144,7 @@ const data = {
       { "num": "X", "name": "X. Fortune", "effect": "Increases Critical Hit rate for all party members." },
       { "num": "XI", "name": "XI. Strength", "effect": "Increases Physical damage dealt by the entire party." },
       { "num": "XII", "name": "XII. Hanged Man", "effect": "Increases defense and reduces physical damage taken." },
-      { "num": "XIII", "name": "XIII. Death", "effect": "Risk / Reward card: Increases spawn chance of rare shadows & Reaper." },
+      { "num": "XIII", "name": "XIII. Death", "effect": "Risk / Reward card: Increases spawn chance of rare shadows and Reaper." },
       { "num": "XIV", "name": "XIV. Temperance", "effect": "Grants +50% EXP to benched / inactive party members." },
       { "num": "XV", "name": "XV. Devil", "effect": "Doubles all Yen / Money dropped from battles." },
       { "num": "XVI", "name": "XVI. Tower", "effect": "Fills the Theurgy gauge for all active party members." },
@@ -155,10 +155,10 @@ const data = {
       { "num": "XXI", "name": "XXI. Aeon", "effect": "Triggers Arcana Burst, unlocking permanent extra picks in Shuffle Time!" }
     ],
     minor_arcana: [
-      { "suit": "Swords (⚔️)", "title": "Skill Cards & Weapons", "desc": "Grants physical/elemental/support skill cards or equipment upgrades." },
-      { "suit": "Cups (🏆)", "title": "Recovery & Healing", "desc": "Restores a percentage of HP and SP to all party members immediately." },
-      { "suit": "Coins (🪙)", "title": "Bonus Money / Yen", "desc": "Grants substantial amounts of bonus Yen scaled by dungeon floor rank." },
-      { "suit": "Wands (🪄)", "title": "Bonus EXP Multiplier", "desc": "Increases battle EXP reward by up to +100%." }
+      { "suit": "Swords", "title": "Skill Cards & Weapons", "desc": "Grants physical, elemental, support skill cards or equipment upgrades." },
+      { "suit": "Cups", "title": "Recovery & Healing", "desc": "Restores a percentage of HP and SP to all party members immediately." },
+      { "suit": "Coins", "title": "Bonus Money / Yen", "desc": "Grants substantial amounts of bonus Yen scaled by dungeon floor rank." },
+      { "suit": "Wands", "title": "Bonus EXP Multiplier", "desc": "Increases battle EXP reward by up to +100%." }
     ],
     mechanics: [
       { "title": "How to Trigger Shuffle Time", "desc": "Shuffle Time is guaranteed when you finish a battle with an All-Out Attack, or when defeating the final enemy using the Protagonist's attack." },
@@ -195,13 +195,13 @@ const data = {
       { "name": "Fool", "effect": "Changes all remaining cards into 1 single powerful card." }
     ],
     minor_arcana: [
-      { "suit": "Swords (⚔️)", "title": "Skill Cards", "desc": "Grants skill cards of rank 1 to 10." },
-      { "suit": "Cups (🏆)", "title": "HP & SP Recovery", "desc": "Restores HP and SP to the entire party." },
-      { "suit": "Coins (🪙)", "title": "Yen / Money", "desc": "Grants bonus Yen." },
-      { "suit": "Wands (🪄)", "title": "Bonus EXP", "desc": "Increases battle EXP by 20% to 100%." }
+      { "suit": "Swords", "title": "Skill Cards", "desc": "Grants skill cards of rank 1 to 10." },
+      { "suit": "Cups", "title": "HP & SP Recovery", "desc": "Restores HP and SP to the entire party." },
+      { "suit": "Coins", "title": "Yen / Money", "desc": "Grants bonus Yen." },
+      { "suit": "Wands", "title": "Bonus EXP", "desc": "Increases battle EXP by 20% to 100%." }
     ]
   }
 };
 
 fs.writeFileSync("./web/data/negotiation/negotiation_data.json", JSON.stringify(data, null, 2));
-console.log("Saved game-separated negotiation_data.json successfully!");
+console.log("Cleaned negotiation_data.json generated without emojis!");
