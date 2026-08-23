@@ -114,6 +114,16 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
             icon      = Icons.AutoMirrored.Filled.MenuBook,
             available = true,
             route     = Screen.GuidesHub.createRoute(seriesId, gameId)
+        ),
+        CategoryItem(
+            label     = when (seriesId) {
+                "p5" -> "Shadow Negotiation Guide"
+                "p3" -> "Shuffle Time & Arcana"
+                else -> "Shuffle Time & Sweep"
+            },
+            icon      = Icons.Default.AutoAwesome,
+            available = true,
+            route     = Screen.NegotiationGuide.createRoute(seriesId, gameId)
         )
     ))
 

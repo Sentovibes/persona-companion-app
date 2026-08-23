@@ -28,6 +28,7 @@ import com.persona.companion.ui.screens.BossGuideScreen
 import com.persona.companion.ui.screens.BossDetailScreen
 import com.persona.companion.ui.screens.DayByDayGuideScreen
 import com.persona.companion.ui.screens.NewsUpdatesScreen
+import com.persona.companion.ui.screens.NegotiationGuideScreen
 
 // ---------------------------------------------------------------------------
 // Route definitions
@@ -133,6 +134,10 @@ sealed class Screen(val route: String) {
 
     object NewsUpdates : Screen("news_updates/{seriesId}/{gameId}") {
         fun createRoute(seriesId: String, gameId: String) = "news_updates/$seriesId/$gameId"
+    }
+
+    object NegotiationGuide : Screen("negotiation_guide/{seriesId}/{gameId}") {
+        fun createRoute(seriesId: String, gameId: String) = "negotiation_guide/$seriesId/$gameId"
     }
 }
 
@@ -435,6 +440,9 @@ fun NavGraph(navController: NavHostController) {
                 },
                 onNavigateToDayGuide = {
                     navController.navigate(Screen.DayGuide.createRoute(seriesId, gameId))
+                },
+                onNavigateToNegotiationGuide = {
+                    navController.navigate(Screen.NegotiationGuide.createRoute(seriesId, gameId))
                 }
             )
         }
@@ -524,6 +532,22 @@ fun NavGraph(navController: NavHostController) {
             val seriesId = back.arguments?.getString("seriesId") ?: return@composable
             val gameId   = back.arguments?.getString("gameId")    ?: return@composable
             NewsUpdatesScreen(
+                seriesId = seriesId,
+                gameId = gameId,
+                onBack = { navController.popBackStack() }
+            )
+        }
+
+        composable(
+            route = Screen.NegotiationGuide.route,
+            arguments = listOf(
+                navArgument("seriesId") { type = NavType.StringType },
+                navArgument("gameId")   { type = NavType.StringType }
+            )
+        ) { back ->
+            val seriesId = back.arguments?.getString("seriesId") ?: return@composable
+            val gameId   = back.arguments?.getString("gameId")    ?: return@composable
+            NegotiationGuideScreen(
                 seriesId = seriesId,
                 gameId = gameId,
                 onBack = { navController.popBackStack() }

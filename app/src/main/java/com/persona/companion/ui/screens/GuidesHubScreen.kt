@@ -29,7 +29,8 @@ fun GuidesHubScreen(
     onBack: () -> Unit,
     onNavigateToQuestGuide: (giver: String) -> Unit,
     onNavigateToBossGuide: () -> Unit,
-    onNavigateToDayGuide: () -> Unit
+    onNavigateToDayGuide: () -> Unit,
+    onNavigateToNegotiationGuide: () -> Unit = {}
 ) {
     val series = remember(seriesId) { SeriesData.findSeries(seriesId) }
     val game = remember(gameId) { SeriesData.findGame(seriesId, gameId) }
@@ -135,6 +136,27 @@ fun GuidesHubScreen(
                     icon = Icons.Default.EmojiEvents,
                     accentColor = TagAlmighty,
                     onClick = onNavigateToBossGuide
+                )
+            }
+
+            // Shadow Negotiation / Shuffle Time Guide
+            item {
+                val negoTitle = when (seriesId) {
+                    "p5" -> "Shadow Negotiation Guide"
+                    "p3" -> "Shuffle Time & Major Arcana"
+                    else -> "Shuffle Time & Sweep Bonus"
+                }
+                val negoDesc = when (seriesId) {
+                    "p5" -> "Upbeat/Timid/Gloomy/Irritable cheat sheet, Sun Confidant perks, and Shadow database."
+                    "p3" -> "Major Arcana Tarot effects, Arcana Burst mechanics, and Minor Arcana cards."
+                    else -> "Sweep Bonus rules & rewards, Major Arcana tarot, and draw tactics."
+                }
+                GuideHubCard(
+                    title = negoTitle,
+                    subtitle = negoDesc,
+                    icon = Icons.Default.AutoAwesome,
+                    accentColor = accentColor,
+                    onClick = onNavigateToNegotiationGuide
                 )
             }
         }
