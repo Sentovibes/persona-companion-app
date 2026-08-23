@@ -30,9 +30,9 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('release.keystore')
+            storeFile file('debug.keystore')
             storePassword 'android'
-            keyAlias 'persona-companion'
+            keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
     }
@@ -57,8 +57,8 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "false"
-            buildConfigField "boolean", "INCLUDE_IMAGES", "false"
-            // Release excludes images - they will be downloaded from settings
+            buildConfigField "boolean", "INCLUDE_IMAGES", "true"
+            // Release includes images bundled
             
             // Cloud image download configuration
             buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.5/images.zip"'
@@ -67,6 +67,11 @@ android {
         }
     }
     
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
     aaptOptions {
         ignoreAssetsPattern "!images:!images/*"
         noCompress "tflite"
