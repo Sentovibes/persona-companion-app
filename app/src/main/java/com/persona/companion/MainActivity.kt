@@ -23,12 +23,16 @@ import com.persona.companion.debug.DebugLogger
 import com.persona.companion.debug.DebugOverlay
 import com.persona.companion.navigation.NavGraph
 import com.persona.companion.ui.theme.PersonaCompanionTheme
+import com.persona.companion.utils.AppAnalytics
 import com.persona.companion.utils.UpdateChecker
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Track app launch telemetry
+        AppAnalytics.trackAppOpen()
         
         // Initialize debug error handler
         if (BuildConfig.ENABLE_DEBUG_FEATURES) {
