@@ -33,7 +33,8 @@ object UpdateChecker {
             val response = connection.getInputStream().bufferedReader().use { it.readText() }
             val json = JSONObject(response)
             
-            val latestVersion = json.getString("tag_name").removePrefix("v")
+            val rawTag = json.getString("tag_name")
+            val latestVersion = rawTag.trim().replace(Regex("^[^0-9]+"), "")
             val releaseNotes = json.optString("body", "No release notes available")
             val assets = json.getJSONArray("assets")
             
@@ -62,9 +63,14 @@ object UpdateChecker {
         }
     }
     
+    private fun sanitizeVersion(version: String): List<Int> {
+        val clean = version.trim().substringBefore("-").replace(Regex("^[^0-9]+"), "")
+        return clean.split(".").mapNotNull { it.toIntOrNull() }
+    }
+
     private fun compareVersions(v1: String, v2: String): Int {
-        val parts1 = v1.split(".").map { it.toIntOrNull() ?: 0 }
-        val parts2 = v2.split(".").map { it.toIntOrNull() ?: 0 }
+        val parts1 = sanitizeVersion(v1)
+        val parts2 = sanitizeVersion(v2)
         
         for (i in 0 until maxOf(parts1.size, parts2.size)) {
             val p1 = parts1.getOrNull(i) ?: 0
