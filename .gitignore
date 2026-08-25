@@ -60,6 +60,9 @@ Thumbs.db
 
 # Large files
 images.zip
+*.zip
+app/src/main/assets/images/
+.interface-design/
 *.apk
 import_logs.txt
 image_load_logs.txt

@@ -41,10 +41,24 @@ fun QuestGuideScreen(
     val accentColor = series?.color ?: Persona3Blue
 
     val questData = remember(gameId, giver) {
-        JsonLoader.loadQuestGuides(context, "data/guides/quest_guides.json")
-            .find { it.giver.equals(giver, ignoreCase = true) }
+        val guides = JsonLoader.loadQuestGuides(context, "data/guides/quest_guides.json")
+        guides.find { it.gameId.equals(gameId, ignoreCase = true) && it.giver.equals(giver, ignoreCase = true) }
+            ?: guides.find { it.giver.equals(giver, ignoreCase = true) }
     }
     val quests = questData?.quests ?: emptyList()
+
+    val headerTitle = remember(giver) {
+        when (giver) {
+            "Theodore" -> "Theodore's Requests"
+            "Elizabeth" -> "Elizabeth's Requests"
+            "Margaret" -> "Margaret's Fusion Guide"
+            "The Fox" -> "The Fox's Requests"
+            "The Twins" -> "The Twins' Fusion Training"
+            "Inaba Residents" -> "Inaba Side-Quests"
+            "Mementos Targets" -> "Mementos Target Requests"
+            else -> "$giver's Guide"
+        }
+    }
 
     var searchQuery by remember { mutableStateOf("") }
     val filteredQuests = remember(searchQuery, quests) {
@@ -61,7 +75,7 @@ fun QuestGuideScreen(
             TopAppBar(
                 title = {
                     Column {
-                        Text("$giver's Guide", color = TextPrimary, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                        Text(headerTitle, color = TextPrimary, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                         Text(SeriesData.findGame(seriesId, gameId)?.title ?: "", color = TextSecondary, fontSize = 12.sp)
                     }
                 },

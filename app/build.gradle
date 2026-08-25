@@ -13,8 +13,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 34
-        versionCode 18
-        versionName "7.0.0"
+        versionCode 19
+        versionName "7.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -55,6 +55,7 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
+            crunchPngs false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "false"
             buildConfigField "boolean", "INCLUDE_IMAGES", "true"
@@ -73,6 +74,7 @@ android {
     }
 
     aaptOptions {
+        cruncherEnabled = false
         ignoreAssetsPattern "!images:!images/*"
         noCompress "tflite"
     }

@@ -1,18 +1,27 @@
 package com.persona.companion.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.MilitaryTech
+import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -47,6 +56,28 @@ data class ArcanaCard(
     val burst: String? = null
 )
 
+data class MinorRankDetail(
+    val rank: Int,
+    val levelLabel: String,
+    val expBonus: String,
+    val moneyBonus: String,
+    val cupRecovery: String,
+    val swordSkills: List<String>
+)
+
+data class FloorPersona(
+    val name: String,
+    val arcana: String,
+    val level: Int,
+    val floor: String
+)
+
+data class DungeonGroup(
+    val dungeon: String,
+    val recommendedLevel: String,
+    val personas: List<FloorPersona>
+)
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NegotiationGuideScreen(
@@ -60,10 +91,15 @@ fun NegotiationGuideScreen(
     val accentColor = series?.color ?: Persona5Red
 
     var searchQuery by remember { mutableStateOf("") }
+    var selectedTab by remember { mutableStateOf(0) } // 0: Skills & EXP by Rank, 1: Personas by Floor, 2: Major Arcana
+    var selectedRank by remember { mutableStateOf(1) }
+    var selectedDungeonIndex by remember { mutableStateOf(0) }
+
     var shadows by remember { mutableStateOf<List<ShadowEntry>>(emptyList()) }
     var sunPerks by remember { mutableStateOf<List<SunPerk>>(emptyList()) }
     var majorCards by remember { mutableStateOf<List<ArcanaCard>>(emptyList()) }
-    var sweepRules by remember { mutableStateOf<List<String>>(emptyList()) }
+    var minorRanks by remember { mutableStateOf<List<MinorRankDetail>>(emptyList()) }
+    var dungeonGroups by remember { mutableStateOf<List<DungeonGroup>>(emptyList()) }
 
     LaunchedEffect(Unit) {
         AppAnalytics.trackScreen("negotiation_guide_$seriesId")
@@ -120,48 +156,91 @@ fun NegotiationGuideScreen(
                     }
                     sunPerks = perksList
                 }
-            } else if (seriesId == "p3" && root.has("p3")) {
-                val p3 = root.getJSONObject("p3")
-                if (p3.has("major_arcana")) {
-                    val mArr = p3.getJSONArray("major_arcana")
-                    val mList = mutableListOf<ArcanaCard>()
-                    for (i in 0 until mArr.length()) {
-                        val mObj = mArr.getJSONObject(i)
-                        mList.add(
-                            ArcanaCard(
-                                num = mObj.optString("num"),
-                                name = mObj.optString("name"),
-                                effect = mObj.optString("effect"),
-                                burst = mObj.optString("burst", "")
+            } else {
+                // P3 or P4 Shuffle Time & Arcana
+                val sectionKey = if (seriesId == "p3") "p3" else "p4"
+                if (root.has(sectionKey)) {
+                    val sec = root.getJSONObject(sectionKey)
+
+                    // Major Arcana
+                    if (sec.has("major_arcana")) {
+                        val mArr = sec.getJSONArray("major_arcana")
+                        val mList = mutableListOf<ArcanaCard>()
+                        for (i in 0 until mArr.length()) {
+                            val mObj = mArr.getJSONObject(i)
+                            mList.add(
+                                ArcanaCard(
+                                    num = mObj.optString("num"),
+                                    name = mObj.optString("name"),
+                                    effect = mObj.optString("effect"),
+                                    burst = mObj.optString("burst", "")
+                                )
                             )
-                        )
+                        }
+                        majorCards = mList
                     }
-                    majorCards = mList
-                }
-            } else if (seriesId == "p4" && root.has("p4")) {
-                val p4 = root.getJSONObject("p4")
-                if (p4.has("major_arcana")) {
-                    val mArr = p4.getJSONArray("major_arcana")
-                    val mList = mutableListOf<ArcanaCard>()
-                    for (i in 0 until mArr.length()) {
-                        val mObj = mArr.getJSONObject(i)
-                        mList.add(
-                            ArcanaCard(
-                                num = mObj.optString("num"),
-                                name = mObj.optString("name"),
-                                effect = mObj.optString("effect")
+
+                    // Minor Arcana Details (Ranks 1 - 10)
+                    if (sec.has("minor_arcana_details")) {
+                        val minObj = sec.getJSONObject("minor_arcana_details")
+                        if (minObj.has("ranks")) {
+                            val rArr = minObj.getJSONArray("ranks")
+                            val rList = mutableListOf<MinorRankDetail>()
+                            for (i in 0 until rArr.length()) {
+                                val rObj = rArr.getJSONObject(i)
+                                val skillsArr = rObj.optJSONArray("sword_skills")
+                                val sList = mutableListOf<String>()
+                                if (skillsArr != null) {
+                                    for (j in 0 until skillsArr.length()) {
+                                        sList.add(skillsArr.getString(j))
+                                    }
+                                }
+                                rList.add(
+                                    MinorRankDetail(
+                                        rank = rObj.optInt("rank"),
+                                        levelLabel = rObj.optString("level_label"),
+                                        expBonus = rObj.optString("exp_bonus"),
+                                        moneyBonus = rObj.optString("money_bonus"),
+                                        cupRecovery = rObj.optString("cup_recovery"),
+                                        swordSkills = sList
+                                    )
+                                )
+                            }
+                            minorRanks = rList
+                        }
+                    }
+
+                    // Dungeon / Floor Personas
+                    if (sec.has("dungeon_personas")) {
+                        val dArr = sec.getJSONArray("dungeon_personas")
+                        val dList = mutableListOf<DungeonGroup>()
+                        for (i in 0 until dArr.length()) {
+                            val dObj = dArr.getJSONObject(i)
+                            val pArr = dObj.optJSONArray("personas")
+                            val pList = mutableListOf<FloorPersona>()
+                            if (pArr != null) {
+                                for (j in 0 until pArr.length()) {
+                                    val pObj = pArr.getJSONObject(j)
+                                    pList.add(
+                                        FloorPersona(
+                                            name = pObj.optString("name"),
+                                            arcana = pObj.optString("arcana"),
+                                            level = pObj.optInt("level"),
+                                            floor = pObj.optString("floor")
+                                        )
+                                    )
+                                }
+                            }
+                            dList.add(
+                                DungeonGroup(
+                                    dungeon = dObj.optString("dungeon"),
+                                    recommendedLevel = dObj.optString("recommended_level"),
+                                    personas = pList
+                                )
                             )
-                        )
+                        }
+                        dungeonGroups = dList
                     }
-                    majorCards = mList
-                }
-                if (p4.has("sweep_bonus_rules")) {
-                    val sArr = p4.getJSONArray("sweep_bonus_rules")
-                    val sList = mutableListOf<String>()
-                    for (i in 0 until sArr.length()) {
-                        sList.add(sArr.getString(i))
-                    }
-                    sweepRules = sList
                 }
             }
         } catch (_: Exception) {}
@@ -169,8 +248,8 @@ fun NegotiationGuideScreen(
 
     val pageTitle = when (seriesId) {
         "p5" -> "Shadow Negotiation Guide"
-        "p3" -> "Shuffle Time & Major Arcana"
-        else -> "Shuffle Time & Sweep Bonus"
+        "p3" -> "Shuffle Time & Tartarus Personas"
+        else -> "Shuffle Time, Skills & Personas"
     }
 
     val filteredShadows = remember(searchQuery, shadows) {
@@ -185,13 +264,25 @@ fun NegotiationGuideScreen(
         }
     }
 
+    val filteredMajorCards = remember(searchQuery, majorCards) {
+        if (searchQuery.isBlank()) majorCards
+        else {
+            val q = searchQuery.lowercase()
+            majorCards.filter {
+                it.name.lowercase().contains(q) ||
+                it.effect.lowercase().contains(q) ||
+                (it.burst ?: "").lowercase().contains(q)
+            }
+        }
+    }
+
     Scaffold(
         containerColor = Background,
         topBar = {
             TopAppBar(
                 title = {
                     Column {
-                        Text(pageTitle, color = TextPrimary, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                        Text(pageTitle, color = TextPrimary, fontSize = 17.sp, fontWeight = FontWeight.Bold)
                         Text(game?.title ?: "", color = TextSecondary, fontSize = 12.sp)
                     }
                 },
@@ -208,11 +299,11 @@ fun NegotiationGuideScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)
+                .padding(horizontal = 16.dp, vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             if (seriesId == "p5") {
-                // Personality Cheat Sheet
+                // P5 Negotiation Matrix & Shadows
                 item {
                     Text(
                         "Personality Response Matrix",
@@ -231,7 +322,6 @@ fun NegotiationGuideScreen(
                     }
                 }
 
-                // Sun Confidant Perks
                 if (sunPerks.isNotEmpty()) {
                     item {
                         Text(
@@ -275,7 +365,6 @@ fun NegotiationGuideScreen(
                     }
                 }
 
-                // Live Shadow Lookup
                 item {
                     Text(
                         "Shadow Personality Database",
@@ -351,61 +440,326 @@ fun NegotiationGuideScreen(
                     }
                 }
             } else {
-                // P3 or P4 Guides
-                if (sweepRules.isNotEmpty()) {
+                // P3 & P4 Shuffle Time, Arcana Ranks, Floor Personas & Skills
+                item {
+                    // Navigation Tabs (No emojis)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        FilterChip(
+                            selected = selectedTab == 0,
+                            onClick = { selectedTab = 0 },
+                            label = { Text("Skills & EXP by Rank") },
+                            leadingIcon = { Icon(Icons.Default.MilitaryTech, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = accentColor,
+                                selectedLabelColor = Color.White,
+                                containerColor = SurfaceCard,
+                                labelColor = TextSecondary
+                            )
+                        )
+                        FilterChip(
+                            selected = selectedTab == 1,
+                            onClick = { selectedTab = 1 },
+                            label = { Text("Personas by Floor") },
+                            leadingIcon = { Icon(Icons.Default.Explore, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = accentColor,
+                                selectedLabelColor = Color.White,
+                                containerColor = SurfaceCard,
+                                labelColor = TextSecondary
+                            )
+                        )
+                        FilterChip(
+                            selected = selectedTab == 2,
+                            onClick = { selectedTab = 2 },
+                            label = { Text("Major Arcana") },
+                            leadingIcon = { Icon(Icons.Default.AutoAwesome, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = accentColor,
+                                selectedLabelColor = Color.White,
+                                containerColor = SurfaceCard,
+                                labelColor = TextSecondary
+                            )
+                        )
+                    }
+                }
+
+                // Search Bar
+                item {
+                    OutlinedTextField(
+                        value = searchQuery,
+                        onValueChange = { searchQuery = it },
+                        modifier = Modifier.fillMaxWidth(),
+                        placeholder = { Text("Search skills, personas, floors, arcana...", color = TextSecondary.copy(alpha = 0.6f)) },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = TextSecondary) },
+                        trailingIcon = {
+                            if (searchQuery.isNotEmpty()) {
+                                IconButton(onClick = { searchQuery = "" }) {
+                                    Icon(Icons.Default.Close, contentDescription = "Clear", tint = TextSecondary)
+                                }
+                            }
+                        },
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedContainerColor = SurfaceCard,
+                            unfocusedContainerColor = SurfaceCard,
+                            focusedBorderColor = accentColor,
+                            unfocusedBorderColor = HairlineStrong
+                        ),
+                        shape = RoundedCornerShape(10.dp),
+                        singleLine = true
+                    )
+                }
+
+                if (selectedTab == 0) {
+                    // TAB 0: Minor Arcana Ranks (Skills, EXP Multipliers, Yen, Cups)
                     item {
                         Text(
-                            "Sweep Bonus Mechanics",
+                            "Select Arcana Rank / Level:",
                             color = TextPrimary,
-                            fontSize = 16.sp,
+                            fontSize = 14.sp,
                             fontWeight = FontWeight.Bold
                         )
                     }
+
                     item {
-                        Card(
-                            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-                            shape = RoundedCornerShape(12.dp),
-                            modifier = Modifier.border(1.dp, Color(0xFFFFD700).copy(alpha = 0.3f), RoundedCornerShape(12.dp))
+                        LazyRow(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            modifier = Modifier.fillMaxWidth()
                         ) {
-                            Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                sweepRules.forEach { rule ->
-                                    Text("• $rule", color = TextPrimary, fontSize = 13.sp)
+                            items(minorRanks) { r ->
+                                val isSelected = r.rank == selectedRank
+                                Surface(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .clickable { selectedRank = r.rank }
+                                        .border(
+                                            1.dp,
+                                            if (isSelected) accentColor else Hairline,
+                                            RoundedCornerShape(8.dp)
+                                        ),
+                                    color = if (isSelected) accentColor else SurfaceCard
+                                ) {
+                                    Text(
+                                        text = "Rank ${r.rank}",
+                                        color = if (isSelected) Color.White else TextPrimary,
+                                        fontSize = 13.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
+                                    )
                                 }
                             }
                         }
                     }
-                }
 
-                item {
-                    Text(
-                        "Major Arcana Tarot Cards",
-                        color = TextPrimary,
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
+                    val currentRankDetail = minorRanks.find { it.rank == selectedRank }
+                    if (currentRankDetail != null) {
+                        item {
+                            Card(
+                                colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                                shape = RoundedCornerShape(12.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .border(1.dp, accentColor.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                            ) {
+                                Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(
+                                            currentRankDetail.levelLabel,
+                                            color = accentColor,
+                                            fontSize = 15.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                        Surface(
+                                            color = accentColor.copy(alpha = 0.15f),
+                                            shape = RoundedCornerShape(6.dp)
+                                        ) {
+                                            Text(
+                                                "Rank ${currentRankDetail.rank}",
+                                                color = accentColor,
+                                                fontSize = 12.sp,
+                                                fontWeight = FontWeight.Bold,
+                                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                                            )
+                                        }
+                                    }
 
-                items(majorCards) { card ->
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-                        shape = RoundedCornerShape(10.dp),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .border(1.dp, Hairline, RoundedCornerShape(10.dp))
-                    ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
+                                    HorizontalDivider(color = Hairline)
+
+                                    // Wands (EXP)
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text("Wands (EXP): ", color = Color(0xFF64B5F6), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                        Text(currentRankDetail.expBonus, color = TextPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+
+                                    // Coins (Money)
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text("Coins (Money): ", color = Color(0xFFFFD700), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                        Text(currentRankDetail.moneyBonus, color = TextPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+
+                                    // Cups (HP/SP Recovery)
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text("Cups (Recovery): ", color = Color(0xFF81C784), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                        Text(currentRankDetail.cupRecovery, color = TextPrimary, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+
+                                    HorizontalDivider(color = Hairline)
+
+                                    // Swords (Skill Cards)
+                                    Text("Swords (Skill Cards & Skills Obtainable):", color = Color(0xFFE57373), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                    
+                                    val filteredSkills = if (searchQuery.isBlank()) currentRankDetail.swordSkills
+                                    else currentRankDetail.swordSkills.filter { it.lowercase().contains(searchQuery.lowercase()) }
+
+                                    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                                        filteredSkills.forEach { skill ->
+                                            Surface(
+                                                color = Surface,
+                                                shape = RoundedCornerShape(6.dp),
+                                                modifier = Modifier.fillMaxWidth()
+                                            ) {
+                                                Text(
+                                                    "• $skill",
+                                                    color = TextPrimary,
+                                                    fontSize = 12.sp,
+                                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                                )
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else if (selectedTab == 1) {
+                    // TAB 1: Personas by Floor / Dungeon
+                    item {
+                        Text(
+                            "Select Dungeon / Tartarus Block:",
+                            color = TextPrimary,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    item {
+                        LazyRow(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            items(dungeonGroups.indices.toList()) { idx ->
+                                val dg = dungeonGroups[idx]
+                                val isSelected = idx == selectedDungeonIndex
+                                Surface(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .clickable { selectedDungeonIndex = idx }
+                                        .border(
+                                            1.dp,
+                                            if (isSelected) accentColor else Hairline,
+                                            RoundedCornerShape(8.dp)
+                                        ),
+                                    color = if (isSelected) accentColor else SurfaceCard
+                                ) {
+                                    Text(
+                                        text = dg.dungeon.substringBefore("(").trim(),
+                                        color = if (isSelected) Color.White else TextPrimary,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    val currentDungeon = dungeonGroups.getOrNull(selectedDungeonIndex)
+                    if (currentDungeon != null) {
+                        item {
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text("${card.num}. ${card.name}", color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                                Text(currentDungeon.dungeon, color = accentColor, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                                Text("Rec. ${currentDungeon.recommendedLevel}", color = TextSecondary, fontSize = 12.sp)
                             }
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(card.effect, color = TextSecondary, fontSize = 12.sp)
-                            if (!card.burst.isNullOrBlank()) {
+                        }
+
+                        val filteredPersonas = if (searchQuery.isBlank()) currentDungeon.personas
+                        else currentDungeon.personas.filter {
+                            it.name.lowercase().contains(searchQuery.lowercase()) ||
+                            it.arcana.lowercase().contains(searchQuery.lowercase()) ||
+                            it.floor.lowercase().contains(searchQuery.lowercase())
+                        }
+
+                        items(filteredPersonas) { p ->
+                            Card(
+                                colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                                shape = RoundedCornerShape(8.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .border(1.dp, Hairline, RoundedCornerShape(8.dp))
+                            ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(12.dp),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Column {
+                                        Text(p.name, color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                                        Text("${p.arcana} Arcana  •  Floors: ${p.floor}", color = TextSecondary, fontSize = 12.sp)
+                                    }
+                                    Surface(
+                                        color = accentColor.copy(alpha = 0.15f),
+                                        shape = RoundedCornerShape(4.dp)
+                                    ) {
+                                        Text(
+                                            "Lv ${p.level}",
+                                            color = accentColor,
+                                            fontSize = 12.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // TAB 2: Major Arcana Cards
+                    items(filteredMajorCards) { card ->
+                        Card(
+                            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                            shape = RoundedCornerShape(10.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .border(1.dp, Hairline, RoundedCornerShape(10.dp))
+                        ) {
+                            Column(modifier = Modifier.padding(12.dp)) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text("${card.num}. ${card.name}", color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                                }
                                 Spacer(modifier = Modifier.height(4.dp))
-                                Text("Arcana Burst: ${card.burst}", color = Color(0xFFFFD700), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                Text(card.effect, color = TextSecondary, fontSize = 12.sp)
+                                if (!card.burst.isNullOrBlank()) {
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text("Arcana Burst: ${card.burst}", color = Color(0xFFFFD700), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                }
                             }
                         }
                     }
@@ -445,9 +799,9 @@ private fun PersonalityCard(
                 }
             }
             Spacer(modifier = Modifier.height(6.dp))
-            Text("• Best Response [Likes]: $best", color = Color(0xFF81C784), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
-            Text("• Neutral [OK]: $ok", color = Color(0xFFFFB74D), fontSize = 12.sp)
-            Text("• Worst [Hates]: $bad", color = Color(0xFFE57373), fontSize = 12.sp)
+            Text("Best Response [Likes]: $best", color = Color(0xFF81C784), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+            Text("Neutral [OK]: $ok", color = Color(0xFFFFB74D), fontSize = 12.sp)
+            Text("Worst [Hates]: $bad", color = Color(0xFFE57373), fontSize = 12.sp)
         }
     }
 }

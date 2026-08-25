@@ -1,3 +1,46 @@
+# Release Notes - v7.1.0
+
+## Major Content & Combat Mastery Release
+
+### Comprehensive Boss Prep Guides (All 7 Games)
+- Complete, Game8/TheGamer human-grade strategies for all story bosses, dungeon bosses, palace rulers, Tartarus floor guardians, full moon operations, optional bosses, and superbosses:
+  - **Persona 4 Golden & P4**: The Reaper (21-chest rattle spawn trick, Makarakarn trigger prevention, Debilitate + Hassou Tobi setup), Margaret (50-turn enrage limit, 8-element cycle, banned Omnipotent Orb rule), Marie / Kusumi-no-Okami (Hollow Forest SP drain and Breaker item mechanics), Ameno-sagiri, Adachi, Contrarian King, and all dungeon guardians.
+  - **Persona 5 Royal & P5**: Lavenza (4 strict phase checks: Elemental, Technical, Critical, and DPS race), Okumura (5-wave simultaneous kill & Baton Pass tactics), Caroline & Justine, Jose, Yaldabaoth, Maruki / Azathoth / Adam Kadmon, and all Palace Rulers.
+  - **Persona 3 Reload, P3FES & P3P**: Nyx Avatar (14 phase shifts), Elizabeth & Theodore (8-turn element rotations, 9999 Megidolaon trigger avoidance, Enduring Soul survival), Vision Quest Margaret, and all Tartarus Block guardians.
+
+### Velvet Room Requests & Side-Quests
+- Added all 101 Elizabeth Requests for **Persona 3 Reload** (from #1 to #101 with complete requirements, item locations, and Omnipotent Orb rewards).
+- Added all 99 Requests for **Persona 3 FES**.
+- Added all 80 Requests for **Persona 3 Portable** with full dynamic protagonist switching:
+  - Toggling **FeMC Mode** in Settings seamlessly switches the guide to **Theodore's Requests** with customized dates, dialogue, and Monad 10F Theodore fight requirements.
+- Full side-quest databases for P4G (88 quests), P4 (69 quests), P5R (43 quests), and P5 (36 quests).
+
+### Shuffle Time, Arcana Ranks & Floor Personas
+- **Minor Arcana by Rank (Ranks 1 to 10)**:
+  - Interactive selector displaying exact bonus EXP multipliers (+20% up to +400% Quadruple EXP at Rank 10/King).
+  - Exact Money / Yen earnings and HP/SP recovery percentages.
+  - Full skill card catalog per card rank (from early tier elements like Agi/Bufu up to endgame skills like Victory Cry, Severe 4th-tier Dynes, and Morning Star).
+- **Personas by Floor / Tartarus Block**:
+  - Filterable directory showing all obtainable Personas, Arcana types, levels, and floor appearances across all Tartarus blocks and TV World dungeons.
+- **Major Arcana & Burst**:
+  - All 22 Major Arcana tarot cards with effect breakdowns and Arcana Burst perks.
+- Clean typography and professional styling with emojis removed across all guides.
+
+### Emulator & Tooling Improvements
+- Added one-click desktop VM launcher (`run_vm.bat`) with Direct3D11 ANGLE rendering (`-gpu angle_indirect`) and clean snapshot handling (`-no-snapshot-load`) for RTX 50-series GPUs.
+
+---
+
+# Release Notes - v7.0.0
+
+## The Negotiation & Master Build Solver Update
+- Shadow Negotiation Guide with 4 personality types (Upbeat, Timid, Gloomy, Irritable), Sun Confidant perks, and live database lookup.
+- Persona Skill Inheritance Route Finder with automated fusion tree solver.
+- Character names prominently displayed on Social Link cards.
+- Day-by-Day Calendar walkthroughs.
+
+---
+
 # Release Notes - v5.1.0
 
 ## Bug Fix Release

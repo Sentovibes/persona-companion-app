@@ -2,10 +2,10 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v7.0.0
+# Persona Companion App v7.1.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/Version-7.0.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-7.1.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
@@ -19,10 +19,10 @@ The Persona Companion App is a high-performance, native Android application buil
 
 | Game | Features | Theme |
 | :--- | :--- | :--- |
-| Persona 3 Reload | Full Compendium, Episode Aigis | Indigo Blue |
-| Persona 5 Royal | Confidants, Itemization, DLC | Rebellion Red |
-| Persona 4 Golden | Quests, Social Links, Fusion | Investigation Yellow |
-| Persona 3 FES/P | Both MC Routes, Requests | Sea Blue |
+| Persona 3 Reload | Full Compendium, Episode Aigis, 101 Elizabeth Requests | Indigo Blue |
+| Persona 5 Royal | Confidants, Itemization, DLC, 43 Quests | Rebellion Red |
+| Persona 4 Golden | Quests, Social Links, Fusion, Shuffle Time | Investigation Yellow |
+| Persona 3 FES/P | Both MC Routes (Elizabeth & Theodore), 80/99 Requests | Sea Blue |
 
 ---
 
@@ -30,12 +30,12 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## v7.0.0: The Negotiation & Master Build Solver Update
-This landmark update transforms combat readiness, social link exploration, and fusion route planning:
-- **Shadow Negotiation & Shuffle Time Guides**: Complete personality response matrices (Upbeat, Timid, Gloomy, Irritable), Sun Confidant negotiation perks, and all 22 P3R Major/Minor Arcana card effects.
-- **Persona Skill Inheritance Route Finder**: Automated multi-branch fusion tree solver for targeting and passing down specific high-tier skills.
-- **Confidants & Social Links QoL**: Character names (Tae Takemi, Ryuji Sakamoto, Makoto Niijima, etc.) displayed prominently on cards with real-time search filtering.
-- **Day-by-Day Calendar Guides**: Full daily walkthroughs with optimal schedule prioritization and classroom answer sync.
+## v7.1.0: Complete Guides, All Bosses & Arcana Rank Mastery Update
+This landmark update expands combat, quest, and dungeon exploration across the franchise:
+- **Comprehensive Boss Prep Guides (All 7 Games)**: Expert human-grade strategies from Game8 & TheGamer covering every story boss, dungeon boss, optional boss, palace ruler, Tartarus floor guardian, and superboss (The Reaper, Margaret, Lavenza, Okumura, Nyx Avatar, Elizabeth & Theodore).
+- **All Side-Quests & Velvet Room Requests**: 101 Requests in P3R, 99 in P3FES, 80 in P3P (with dynamic Theodore / Elizabeth switching when FeMC mode is active), 88 in P4G, 69 in P4, 43 in P5R, and 36 in P5.
+- **Shuffle Time, Arcana Ranks & Floor Personas**: Minor Arcana breakdown by Rank (1 to 10) with exact EXP multipliers (+20% to +400%), Money bonuses, HP/SP recovery, and full skill card drop tables. Filterable directory of all Personas obtainable by floor and Tartarus block.
+- **Clean Typography & Performance**: Clean professional layout with emoji-free formatting, optimized data loaders, and direct desktop Android VM launcher support.
 
 ---
 

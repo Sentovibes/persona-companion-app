@@ -118,8 +118,7 @@ fun CategoryScreen(navController: NavController, seriesId: String, gameId: Strin
         CategoryItem(
             label     = when (seriesId) {
                 "p5" -> "Shadow Negotiation Guide"
-                "p3" -> "Shuffle Time & Arcana"
-                else -> "Shuffle Time & Sweep"
+                else -> "Shuffle Time & Arcana"
             },
             icon      = Icons.Default.AutoAwesome,
             available = true,

@@ -1829,6 +1829,574 @@
         "title": "Monad Doors & Passages",
         "desc": "Defeating Monad Shadows guarantees rare Major Arcana cards with potent exploration perks."
       }
+    ],
+    "minor_arcana_details": {
+      "description": "Minor Arcana cards appear during Shuffle Time with ranks from 1 to 10 (or King). Higher rank cards appear in deeper dungeon floors and grant significantly better rewards, rare skill cards, and massive EXP multipliers.",
+      "ranks": [
+        {
+          "rank": 1,
+          "level_label": "Rank 1 (Early Floors / Levels 1-10)",
+          "exp_bonus": "+20% EXP",
+          "money_bonus": "+20% Yen (~¥1,500)",
+          "cup_recovery": "10% HP / SP restored",
+          "sword_skills": [
+            "Agi (Light Fire)",
+            "Bufu (Light Ice)",
+            "Zio (Light Elec)",
+            "Garu (Light Wind)",
+            "Cleave (Light Slash)",
+            "Bash (Light Strike)",
+            "Dia (Light Heal)",
+            "Patra (Cure Dizzy/Panic)"
+          ]
+        },
+        {
+          "rank": 2,
+          "level_label": "Rank 2 (Levels 11-20)",
+          "exp_bonus": "+40% EXP",
+          "money_bonus": "+40% Yen (~¥3,500)",
+          "cup_recovery": "20% HP / SP restored",
+          "sword_skills": [
+            "Maragi (Light Area Fire)",
+            "Mabufu (Light Area Ice)",
+            "Mazio (Light Area Elec)",
+            "Magaru (Light Area Wind)",
+            "Twin Slash (Light Slash 2x)",
+            "Sonic Punch (Light Strike)",
+            "Tarukaja (Buff Atk)",
+            "Rakukaja (Buff Def)",
+            "Sukukaja (Buff Agi)",
+            "Tarunda (Lower Atk)",
+            "Rakunda (Lower Def)",
+            "Sukunda (Lower Agi)"
+          ]
+        },
+        {
+          "rank": 3,
+          "level_label": "Rank 3 (Levels 21-30)",
+          "exp_bonus": "+60% EXP",
+          "money_bonus": "+60% Yen (~¥7,000)",
+          "cup_recovery": "30% HP / SP restored",
+          "sword_skills": [
+            "Agilao (Medium Fire)",
+            "Bufula (Medium Ice)",
+            "Zionga (Medium Elec)",
+            "Garula (Medium Wind)",
+            "Power Slash (Medium Slash)",
+            "Double Fangs (Medium Strike 2x)",
+            "Media (Party Light Heal)",
+            "Poison Mist (Inflict Poison)",
+            "Dekaja (Strip Buffs)",
+            "Dekunda (Strip Debuffs)"
+          ]
+        },
+        {
+          "rank": 4,
+          "level_label": "Rank 4 (Levels 31-40)",
+          "exp_bonus": "+80% EXP",
+          "money_bonus": "+80% Yen (~¥12,000)",
+          "cup_recovery": "40% HP / SP restored",
+          "sword_skills": [
+            "Maragion (Medium Area Fire)",
+            "Mabufula (Medium Area Ice)",
+            "Mazionga (Medium Area Elec)",
+            "Magarula (Medium Area Wind)",
+            "Fatal End (Heavy Slash)",
+            "Mighty Swing (Heavy Strike)",
+            "Diarama (Medium Heal)",
+            "Recarm (Revive 50% HP)",
+            "Invigorate 1 (3 SP/Turn)",
+            "Regenerate 1 (2% HP/Turn)",
+            "Counter (10% Reflect)"
+          ]
+        },
+        {
+          "rank": 5,
+          "level_label": "Rank 5 (Levels 41-50)",
+          "exp_bonus": "+100% EXP (Double EXP!)",
+          "money_bonus": "+100% Yen (Double Money!)",
+          "cup_recovery": "50% HP / SP restored",
+          "sword_skills": [
+            "Agidyne (Heavy Fire)",
+            "Bufudyne (Heavy Ice)",
+            "Ziodyne (Heavy Elec)",
+            "Garudyne (Heavy Wind)",
+            "Heat Wave (Heavy Area Strike)",
+            "Black Spot (Heavy Slash + High Crit)",
+            "Blade Fury (2-4x Slash)",
+            "Mediarama (Party Medium Heal)",
+            "Amrita Drop (Cure All Status)",
+            "Growth 2 (50% Sub EXP)",
+            "Auto-Tarukaja (Start Battle Atk Up)"
+          ]
+        },
+        {
+          "rank": 6,
+          "level_label": "Rank 6 (Levels 51-60)",
+          "exp_bonus": "+120% EXP",
+          "money_bonus": "+120% Yen (~¥25,000)",
+          "cup_recovery": "60% HP / SP restored",
+          "sword_skills": [
+            "Maragidyne (Heavy Area Fire)",
+            "Mabufudyne (Heavy Area Ice)",
+            "Maziodyne (Heavy Area Elec)",
+            "Magarudyne (Heavy Area Wind)",
+            "Deathbound (Heavy Area Slash)",
+            "Tempest Slash (1-2x Heavy Slash)",
+            "Mind Charge (2.5x Next Magic)",
+            "Power Charge (2.5x Next Phys)",
+            "Megido (Medium Almighty)",
+            "Invigorate 2 (5 SP/Turn)",
+            "Counterstrike (15% Reflect)",
+            "Auto-Rakukaja (Start Battle Def Up)"
+          ]
+        },
+        {
+          "rank": 7,
+          "level_label": "Rank 7 (Levels 61-70)",
+          "exp_bonus": "+150% EXP (1.5x Boost)",
+          "money_bonus": "+150% Yen (~¥40,000)",
+          "cup_recovery": "75% HP / SP restored",
+          "sword_skills": [
+            "Brave Blade (Severe Slash)",
+            "God's Hand (Severe Strike)",
+            "Megidola (Heavy Almighty)",
+            "Diarahan (Full HP Heal)",
+            "Samarecarm (Full HP Revive)",
+            "Amrita Shower (Party Cure Status)",
+            "High Counter (20% Reflect)",
+            "Growth 3 (100% Sub EXP)",
+            "Evade Fire/Ice/Elec/Wind (3x Evasion)"
+          ]
+        },
+        {
+          "rank": 8,
+          "level_label": "Rank 8 (Levels 71-80)",
+          "exp_bonus": "+200% EXP (Triple EXP!)",
+          "money_bonus": "+200% Yen (Triple Money!)",
+          "cup_recovery": "85% HP / SP restored",
+          "sword_skills": [
+            "Primal Force (Colossal Slash)",
+            "Agneyastra (1-3x Severe Area Strike)",
+            "Megidolaon (Severe Almighty)",
+            "Mediarahan (Party Full HP Heal)",
+            "Spell Master (Halve SP Costs)",
+            "Arms Master (Halve HP Costs)",
+            "Enduring Soul (Survive Fatal Hit 100% HP)",
+            "Repel Physical (Reflect All Phys)",
+            "Absorb Fire/Ice/Elec/Wind"
+          ]
+        },
+        {
+          "rank": 9,
+          "level_label": "Rank 9 (Levels 81-90)",
+          "exp_bonus": "+250% EXP",
+          "money_bonus": "+250% Yen (~¥80,000)",
+          "cup_recovery": "95% HP / SP restored",
+          "sword_skills": [
+            "Salvation (Full Party Heal + Cure Status)",
+            "Debilitate (Lower Enemy Atk/Def/Agi)",
+            "Heat Riser (Buff User Atk/Def/Agi)",
+            "Angelic Grace (Double Evasion vs Magic)",
+            "Ali Dance (Halve Enemy Hit Rate)",
+            "Firm Stance (Halve Damage, Cannot Evade)"
+          ]
+        },
+        {
+          "rank": 10,
+          "level_label": "Rank 10 / King (Endgame Levels 90-99)",
+          "exp_bonus": "+300% to +400% EXP (Quadruple EXP!)",
+          "money_bonus": "+300% to +400% Yen (Massive Fortune)",
+          "cup_recovery": "100% Full HP & SP Restoration!",
+          "sword_skills": [
+            "Victory Cry (Fully Restore HP & SP After Every Battle!)",
+            "Severe 4th-Tier Dynes (Ragnarok, Niflheim, Thunder Reign, Panta Rhei)",
+            "Morning Star (Ultimate Almighty)",
+            "Unshaken Will (Immune to Mental Ailments)",
+            "Insta-Heal (Recover from Status in 1 Turn)"
+          ]
+        }
+      ]
+    },
+    "dungeon_personas": [
+      {
+        "dungeon": "Block 1: Thebel (1F - 16F)",
+        "recommended_level": "Lv 1 - 10",
+        "personas": [
+          {
+            "name": "Orpheus",
+            "arcana": "Fool",
+            "level": 1,
+            "floor": "1F - 5F"
+          },
+          {
+            "name": "Pixie",
+            "arcana": "Lovers",
+            "level": 2,
+            "floor": "1F - 6F"
+          },
+          {
+            "name": "Apsaras",
+            "arcana": "Priestess",
+            "level": 3,
+            "floor": "2F - 8F"
+          },
+          {
+            "name": "Silky",
+            "arcana": "Lovers",
+            "level": 4,
+            "floor": "3F - 10F"
+          },
+          {
+            "name": "Angel",
+            "arcana": "Justice",
+            "level": 4,
+            "floor": "4F - 12F"
+          },
+          {
+            "name": "Ara Mitama",
+            "arcana": "Chariot",
+            "level": 6,
+            "floor": "5F - 14F"
+          },
+          {
+            "name": "Omoikane",
+            "arcana": "Hierophant",
+            "level": 7,
+            "floor": "7F - 15F"
+          },
+          {
+            "name": "Chimera",
+            "arcana": "Chariot",
+            "level": 9,
+            "floor": "9F - 16F"
+          },
+          {
+            "name": "Forneus",
+            "arcana": "Hierophant",
+            "level": 7,
+            "floor": "8F - 16F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 2: Arqa (17F - 64F)",
+        "recommended_level": "Lv 11 - 25",
+        "personas": [
+          {
+            "name": "Jack Frost",
+            "arcana": "Magician",
+            "level": 16,
+            "floor": "17F - 30F"
+          },
+          {
+            "name": "Archangel",
+            "arcana": "Justice",
+            "level": 19,
+            "floor": "20F - 35F"
+          },
+          {
+            "name": "Valkyrie",
+            "arcana": "Strength",
+            "level": 11,
+            "floor": "18F - 28F"
+          },
+          {
+            "name": "Oberon",
+            "arcana": "Emperor",
+            "level": 15,
+            "floor": "22F - 40F"
+          },
+          {
+            "name": "Berith",
+            "arcana": "Hierophant",
+            "level": 15,
+            "floor": "24F - 42F"
+          },
+          {
+            "name": "Gurr",
+            "arcana": "Moon",
+            "level": 15,
+            "floor": "25F - 45F"
+          },
+          {
+            "name": "Take-Mikazuchi",
+            "arcana": "Emperor",
+            "level": 24,
+            "floor": "35F - 55F"
+          },
+          {
+            "name": "Orthrus",
+            "arcana": "Hanged",
+            "level": 28,
+            "floor": "45F - 64F"
+          },
+          {
+            "name": "Principality",
+            "arcana": "Justice",
+            "level": 19,
+            "floor": "30F - 50F"
+          },
+          {
+            "name": "Fortuna",
+            "arcana": "Fortune",
+            "level": 17,
+            "floor": "28F - 48F"
+          },
+          {
+            "name": "Mithra",
+            "arcana": "Temperance",
+            "level": 22,
+            "floor": "40F - 64F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 3: Yabbashah (65F - 114F)",
+        "recommended_level": "Lv 26 - 40",
+        "personas": [
+          {
+            "name": "High Pixie",
+            "arcana": "Lovers",
+            "level": 22,
+            "floor": "65F - 80F"
+          },
+          {
+            "name": "Shiisaa",
+            "arcana": "Hierophant",
+            "level": 26,
+            "floor": "68F - 85F"
+          },
+          {
+            "name": "Sati",
+            "arcana": "Magician",
+            "level": 28,
+            "floor": "72F - 92F"
+          },
+          {
+            "name": "Ganga",
+            "arcana": "Priestess",
+            "level": 29,
+            "floor": "75F - 95F"
+          },
+          {
+            "name": "Lamia",
+            "arcana": "Empress",
+            "level": 25,
+            "floor": "70F - 90F"
+          },
+          {
+            "name": "Taraka",
+            "arcana": "Hermit",
+            "level": 38,
+            "floor": "85F - 110F"
+          },
+          {
+            "name": "King Frost",
+            "arcana": "Emperor",
+            "level": 30,
+            "floor": "80F - 105F"
+          },
+          {
+            "name": "Power",
+            "arcana": "Justice",
+            "level": 25,
+            "floor": "75F - 100F"
+          },
+          {
+            "name": "Dis",
+            "arcana": "Magician",
+            "level": 39,
+            "floor": "90F - 114F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 4: Tziah (115F - 164F)",
+        "recommended_level": "Lv 41 - 55",
+        "personas": [
+          {
+            "name": "Hanuman",
+            "arcana": "Strength",
+            "level": 37,
+            "floor": "115F - 130F"
+          },
+          {
+            "name": "Flauros",
+            "arcana": "Hierophant",
+            "level": 33,
+            "floor": "118F - 135F"
+          },
+          {
+            "name": "Dominion",
+            "arcana": "Justice",
+            "level": 42,
+            "floor": "122F - 145F"
+          },
+          {
+            "name": "Thoth",
+            "arcana": "Hierophant",
+            "level": 41,
+            "floor": "125F - 150F"
+          },
+          {
+            "name": "Kurama Tengu",
+            "arcana": "Hermit",
+            "level": 44,
+            "floor": "130F - 155F"
+          },
+          {
+            "name": "Girimehkala",
+            "arcana": "Moon",
+            "level": 42,
+            "floor": "132F - 158F"
+          },
+          {
+            "name": "Parvati",
+            "arcana": "Priestess",
+            "level": 47,
+            "floor": "140F - 164F"
+          },
+          {
+            "name": "Cu Chulainn",
+            "arcana": "Tower",
+            "level": 40,
+            "floor": "135F - 160F"
+          },
+          {
+            "name": "Cherub",
+            "arcana": "Justice",
+            "level": 59,
+            "floor": "150F - 164F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 5: Harabah (165F - 214F)",
+        "recommended_level": "Lv 56 - 70",
+        "personas": [
+          {
+            "name": "Thor",
+            "arcana": "Chariot",
+            "level": 53,
+            "floor": "165F - 185F"
+          },
+          {
+            "name": "Decarabia",
+            "arcana": "Fool",
+            "level": 50,
+            "floor": "168F - 190F"
+          },
+          {
+            "name": "Loki",
+            "arcana": "Fool",
+            "level": 55,
+            "floor": "175F - 198F"
+          },
+          {
+            "name": "Barong",
+            "arcana": "Emperor",
+            "level": 52,
+            "floor": "172F - 195F"
+          },
+          {
+            "name": "Ganesha",
+            "arcana": "Star",
+            "level": 58,
+            "floor": "180F - 205F"
+          },
+          {
+            "name": "Jatayu",
+            "arcana": "Sun",
+            "level": 55,
+            "floor": "182F - 208F"
+          },
+          {
+            "name": "Throne",
+            "arcana": "Justice",
+            "level": 51,
+            "floor": "178F - 202F"
+          },
+          {
+            "name": "Rangda",
+            "arcana": "Magician",
+            "level": 54,
+            "floor": "185F - 210F"
+          },
+          {
+            "name": "Gabriel",
+            "arcana": "Empress",
+            "level": 69,
+            "floor": "195F - 214F"
+          },
+          {
+            "name": "Raphael",
+            "arcana": "Lovers",
+            "level": 61,
+            "floor": "190F - 214F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 6: Adamah (215F - 264F)",
+        "recommended_level": "Lv 71 - 99",
+        "personas": [
+          {
+            "name": "Uriel",
+            "arcana": "Aeon",
+            "level": 63,
+            "floor": "215F - 235F"
+          },
+          {
+            "name": "Melchizedek",
+            "arcana": "Justice",
+            "level": 59,
+            "floor": "218F - 240F"
+          },
+          {
+            "name": "Seth",
+            "arcana": "Moon",
+            "level": 66,
+            "floor": "222F - 248F"
+          },
+          {
+            "name": "Atropos",
+            "arcana": "Fortune",
+            "level": 65,
+            "floor": "225F - 250F"
+          },
+          {
+            "name": "Michael",
+            "arcana": "Judgement",
+            "level": 70,
+            "floor": "230F - 258F"
+          },
+          {
+            "name": "Skadi",
+            "arcana": "Empress",
+            "level": 75,
+            "floor": "235F - 262F"
+          },
+          {
+            "name": "Satan",
+            "arcana": "Judgement",
+            "level": 82,
+            "floor": "245F - 264F"
+          },
+          {
+            "name": "Helel",
+            "arcana": "Star",
+            "level": 88,
+            "floor": "250F - 264F"
+          },
+          {
+            "name": "Lucifer",
+            "arcana": "Judgement",
+            "level": 89,
+            "floor": "255F - 264F"
+          }
+        ]
+      }
     ]
   },
   "p4": {
@@ -1948,6 +2516,628 @@
         "suit": "Wands",
         "title": "Bonus EXP",
         "desc": "Increases battle EXP by 20% to 100%."
+      }
+    ],
+    "minor_arcana_details": {
+      "description": "Minor Arcana cards appear during Shuffle Time with ranks from 1 to 10 (or King). Higher rank cards appear in deeper dungeon floors and grant significantly better rewards, rare skill cards, and massive EXP multipliers.",
+      "ranks": [
+        {
+          "rank": 1,
+          "level_label": "Rank 1 (Early Floors / Levels 1-10)",
+          "exp_bonus": "+20% EXP",
+          "money_bonus": "+20% Yen (~¥1,500)",
+          "cup_recovery": "10% HP / SP restored",
+          "sword_skills": [
+            "Agi (Light Fire)",
+            "Bufu (Light Ice)",
+            "Zio (Light Elec)",
+            "Garu (Light Wind)",
+            "Cleave (Light Slash)",
+            "Bash (Light Strike)",
+            "Dia (Light Heal)",
+            "Patra (Cure Dizzy/Panic)"
+          ]
+        },
+        {
+          "rank": 2,
+          "level_label": "Rank 2 (Levels 11-20)",
+          "exp_bonus": "+40% EXP",
+          "money_bonus": "+40% Yen (~¥3,500)",
+          "cup_recovery": "20% HP / SP restored",
+          "sword_skills": [
+            "Maragi (Light Area Fire)",
+            "Mabufu (Light Area Ice)",
+            "Mazio (Light Area Elec)",
+            "Magaru (Light Area Wind)",
+            "Twin Slash (Light Slash 2x)",
+            "Sonic Punch (Light Strike)",
+            "Tarukaja (Buff Atk)",
+            "Rakukaja (Buff Def)",
+            "Sukukaja (Buff Agi)",
+            "Tarunda (Lower Atk)",
+            "Rakunda (Lower Def)",
+            "Sukunda (Lower Agi)"
+          ]
+        },
+        {
+          "rank": 3,
+          "level_label": "Rank 3 (Levels 21-30)",
+          "exp_bonus": "+60% EXP",
+          "money_bonus": "+60% Yen (~¥7,000)",
+          "cup_recovery": "30% HP / SP restored",
+          "sword_skills": [
+            "Agilao (Medium Fire)",
+            "Bufula (Medium Ice)",
+            "Zionga (Medium Elec)",
+            "Garula (Medium Wind)",
+            "Power Slash (Medium Slash)",
+            "Double Fangs (Medium Strike 2x)",
+            "Media (Party Light Heal)",
+            "Poison Mist (Inflict Poison)",
+            "Dekaja (Strip Buffs)",
+            "Dekunda (Strip Debuffs)"
+          ]
+        },
+        {
+          "rank": 4,
+          "level_label": "Rank 4 (Levels 31-40)",
+          "exp_bonus": "+80% EXP",
+          "money_bonus": "+80% Yen (~¥12,000)",
+          "cup_recovery": "40% HP / SP restored",
+          "sword_skills": [
+            "Maragion (Medium Area Fire)",
+            "Mabufula (Medium Area Ice)",
+            "Mazionga (Medium Area Elec)",
+            "Magarula (Medium Area Wind)",
+            "Fatal End (Heavy Slash)",
+            "Mighty Swing (Heavy Strike)",
+            "Diarama (Medium Heal)",
+            "Recarm (Revive 50% HP)",
+            "Invigorate 1 (3 SP/Turn)",
+            "Regenerate 1 (2% HP/Turn)",
+            "Counter (10% Reflect)"
+          ]
+        },
+        {
+          "rank": 5,
+          "level_label": "Rank 5 (Levels 41-50)",
+          "exp_bonus": "+100% EXP (Double EXP!)",
+          "money_bonus": "+100% Yen (Double Money!)",
+          "cup_recovery": "50% HP / SP restored",
+          "sword_skills": [
+            "Agidyne (Heavy Fire)",
+            "Bufudyne (Heavy Ice)",
+            "Ziodyne (Heavy Elec)",
+            "Garudyne (Heavy Wind)",
+            "Heat Wave (Heavy Area Strike)",
+            "Black Spot (Heavy Slash + High Crit)",
+            "Blade Fury (2-4x Slash)",
+            "Mediarama (Party Medium Heal)",
+            "Amrita Drop (Cure All Status)",
+            "Growth 2 (50% Sub EXP)",
+            "Auto-Tarukaja (Start Battle Atk Up)"
+          ]
+        },
+        {
+          "rank": 6,
+          "level_label": "Rank 6 (Levels 51-60)",
+          "exp_bonus": "+120% EXP",
+          "money_bonus": "+120% Yen (~¥25,000)",
+          "cup_recovery": "60% HP / SP restored",
+          "sword_skills": [
+            "Maragidyne (Heavy Area Fire)",
+            "Mabufudyne (Heavy Area Ice)",
+            "Maziodyne (Heavy Area Elec)",
+            "Magarudyne (Heavy Area Wind)",
+            "Deathbound (Heavy Area Slash)",
+            "Tempest Slash (1-2x Heavy Slash)",
+            "Mind Charge (2.5x Next Magic)",
+            "Power Charge (2.5x Next Phys)",
+            "Megido (Medium Almighty)",
+            "Invigorate 2 (5 SP/Turn)",
+            "Counterstrike (15% Reflect)",
+            "Auto-Rakukaja (Start Battle Def Up)"
+          ]
+        },
+        {
+          "rank": 7,
+          "level_label": "Rank 7 (Levels 61-70)",
+          "exp_bonus": "+150% EXP (1.5x Boost)",
+          "money_bonus": "+150% Yen (~¥40,000)",
+          "cup_recovery": "75% HP / SP restored",
+          "sword_skills": [
+            "Brave Blade (Severe Slash)",
+            "God's Hand (Severe Strike)",
+            "Megidola (Heavy Almighty)",
+            "Diarahan (Full HP Heal)",
+            "Samarecarm (Full HP Revive)",
+            "Amrita Shower (Party Cure Status)",
+            "High Counter (20% Reflect)",
+            "Growth 3 (100% Sub EXP)",
+            "Evade Fire/Ice/Elec/Wind (3x Evasion)"
+          ]
+        },
+        {
+          "rank": 8,
+          "level_label": "Rank 8 (Levels 71-80)",
+          "exp_bonus": "+200% EXP (Triple EXP!)",
+          "money_bonus": "+200% Yen (Triple Money!)",
+          "cup_recovery": "85% HP / SP restored",
+          "sword_skills": [
+            "Primal Force (Colossal Slash)",
+            "Agneyastra (1-3x Severe Area Strike)",
+            "Megidolaon (Severe Almighty)",
+            "Mediarahan (Party Full HP Heal)",
+            "Spell Master (Halve SP Costs)",
+            "Arms Master (Halve HP Costs)",
+            "Enduring Soul (Survive Fatal Hit 100% HP)",
+            "Repel Physical (Reflect All Phys)",
+            "Absorb Fire/Ice/Elec/Wind"
+          ]
+        },
+        {
+          "rank": 9,
+          "level_label": "Rank 9 (Levels 81-90)",
+          "exp_bonus": "+250% EXP",
+          "money_bonus": "+250% Yen (~¥80,000)",
+          "cup_recovery": "95% HP / SP restored",
+          "sword_skills": [
+            "Salvation (Full Party Heal + Cure Status)",
+            "Debilitate (Lower Enemy Atk/Def/Agi)",
+            "Heat Riser (Buff User Atk/Def/Agi)",
+            "Angelic Grace (Double Evasion vs Magic)",
+            "Ali Dance (Halve Enemy Hit Rate)",
+            "Firm Stance (Halve Damage, Cannot Evade)"
+          ]
+        },
+        {
+          "rank": 10,
+          "level_label": "Rank 10 / King (Endgame Levels 90-99)",
+          "exp_bonus": "+300% to +400% EXP (Quadruple EXP!)",
+          "money_bonus": "+300% to +400% Yen (Massive Fortune)",
+          "cup_recovery": "100% Full HP & SP Restoration!",
+          "sword_skills": [
+            "Victory Cry (Fully Restore HP & SP After Every Battle!)",
+            "Severe 4th-Tier Dynes (Ragnarok, Niflheim, Thunder Reign, Panta Rhei)",
+            "Morning Star (Ultimate Almighty)",
+            "Unshaken Will (Immune to Mental Ailments)",
+            "Insta-Heal (Recover from Status in 1 Turn)"
+          ]
+        }
+      ]
+    },
+    "dungeon_personas": [
+      {
+        "dungeon": "Yukiko's Castle (1F - 8F)",
+        "recommended_level": "Lv 2 - 15",
+        "personas": [
+          {
+            "name": "Slime",
+            "arcana": "Fool",
+            "level": 2,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Pixie",
+            "arcana": "Lovers",
+            "level": 2,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Ukobach",
+            "arcana": "Devil",
+            "level": 3,
+            "floor": "2F - 5F"
+          },
+          {
+            "name": "Angel",
+            "arcana": "Justice",
+            "level": 4,
+            "floor": "2F - 5F"
+          },
+          {
+            "name": "Forneus",
+            "arcana": "Hierophant",
+            "level": 7,
+            "floor": "4F - 7F"
+          },
+          {
+            "name": "Yomotsu-Shikome",
+            "arcana": "Fool",
+            "level": 7,
+            "floor": "4F - 8F"
+          },
+          {
+            "name": "Valkyrie",
+            "arcana": "Strength",
+            "level": 8,
+            "floor": "5F - 8F"
+          },
+          {
+            "name": "Senri",
+            "arcana": "Empress",
+            "level": 9,
+            "floor": "6F - 8F"
+          },
+          {
+            "name": "Ghoul",
+            "arcana": "Death",
+            "level": 9,
+            "floor": "6F - 8F"
+          },
+          {
+            "name": "Saki Mitama",
+            "arcana": "Priestess",
+            "level": 11,
+            "floor": "7F - 8F"
+          },
+          {
+            "name": "Eligor",
+            "arcana": "Chariot",
+            "level": 12,
+            "floor": "7F - 8F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Steamy Bathhouse (1F - 11F)",
+        "recommended_level": "Lv 15 - 25",
+        "personas": [
+          {
+            "name": "Mokoi",
+            "arcana": "Death",
+            "level": 14,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Berith",
+            "arcana": "Hanged",
+            "level": 15,
+            "floor": "1F - 5F"
+          },
+          {
+            "name": "Jack Frost",
+            "arcana": "Magician",
+            "level": 16,
+            "floor": "2F - 6F"
+          },
+          {
+            "name": "Ippon-Datara",
+            "arcana": "Hermit",
+            "level": 17,
+            "floor": "3F - 7F"
+          },
+          {
+            "name": "Sarasvati",
+            "arcana": "Priestess",
+            "level": 17,
+            "floor": "4F - 8F"
+          },
+          {
+            "name": "Archangel",
+            "arcana": "Justice",
+            "level": 19,
+            "floor": "5F - 9F"
+          },
+          {
+            "name": "Principality",
+            "arcana": "Justice",
+            "level": 19,
+            "floor": "6F - 10F"
+          },
+          {
+            "name": "Shiisaa",
+            "arcana": "Hierophant",
+            "level": 21,
+            "floor": "7F - 11F"
+          },
+          {
+            "name": "King Frost",
+            "arcana": "Emperor",
+            "level": 22,
+            "floor": "8F - 11F"
+          },
+          {
+            "name": "Hua Po",
+            "arcana": "Magician",
+            "level": 25,
+            "floor": "9F - 11F"
+          },
+          {
+            "name": "Makami",
+            "arcana": "Hanged",
+            "level": 27,
+            "floor": "10F - 11F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Marukyu Striptease (1F - 11F)",
+        "recommended_level": "Lv 25 - 35",
+        "personas": [
+          {
+            "name": "High Pixie",
+            "arcana": "Lovers",
+            "level": 22,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Rakshasa",
+            "arcana": "Strength",
+            "level": 23,
+            "floor": "1F - 5F"
+          },
+          {
+            "name": "Ganga",
+            "arcana": "Priestess",
+            "level": 29,
+            "floor": "3F - 7F"
+          },
+          {
+            "name": "Lamia",
+            "arcana": "Empress",
+            "level": 34,
+            "floor": "5F - 9F"
+          },
+          {
+            "name": "Dis",
+            "arcana": "Magician",
+            "level": 39,
+            "floor": "7F - 11F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Void Quest (1F - 10F)",
+        "recommended_level": "Lv 35 - 45",
+        "personas": [
+          {
+            "name": "Power",
+            "arcana": "Justice",
+            "level": 27,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Mithra",
+            "arcana": "Temperance",
+            "level": 31,
+            "floor": "2F - 5F"
+          },
+          {
+            "name": "Flauros",
+            "arcana": "Devil",
+            "level": 36,
+            "floor": "3F - 7F"
+          },
+          {
+            "name": "Parvati",
+            "arcana": "Priestess",
+            "level": 37,
+            "floor": "4F - 8F"
+          },
+          {
+            "name": "Black Frost",
+            "arcana": "Fool",
+            "level": 38,
+            "floor": "5F - 9F"
+          },
+          {
+            "name": "Kurama Tengu",
+            "arcana": "Hermit",
+            "level": 38,
+            "floor": "6F - 10F"
+          },
+          {
+            "name": "Orthrus",
+            "arcana": "Hanged",
+            "level": 39,
+            "floor": "7F - 10F"
+          },
+          {
+            "name": "Cu Chulainn",
+            "arcana": "Tower",
+            "level": 46,
+            "floor": "8F - 10F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Secret Laboratory (B1 - B9)",
+        "recommended_level": "Lv 45 - 55",
+        "personas": [
+          {
+            "name": "Dominion",
+            "arcana": "Justice",
+            "level": 38,
+            "floor": "B1 - B4"
+          },
+          {
+            "name": "Hanuman",
+            "arcana": "Strength",
+            "level": 42,
+            "floor": "B2 - B5"
+          },
+          {
+            "name": "Kikuri-Hime",
+            "arcana": "Priestess",
+            "level": 48,
+            "floor": "B4 - B7"
+          },
+          {
+            "name": "Yatsufusa",
+            "arcana": "Hanged",
+            "level": 49,
+            "floor": "B5 - B8"
+          },
+          {
+            "name": "Ganesha",
+            "arcana": "Star",
+            "level": 50,
+            "floor": "B6 - B9"
+          },
+          {
+            "name": "Throne",
+            "arcana": "Justice",
+            "level": 64,
+            "floor": "B7 - B9"
+          },
+          {
+            "name": "Gabriel",
+            "arcana": "Empress",
+            "level": 72,
+            "floor": "B8 - B9"
+          }
+        ]
+      },
+      {
+        "dungeon": "Heaven (1F - 10F)",
+        "recommended_level": "Lv 55 - 65",
+        "personas": [
+          {
+            "name": "Garuda",
+            "arcana": "Star",
+            "level": 53,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Cherub",
+            "arcana": "Justice",
+            "level": 60,
+            "floor": "2F - 6F"
+          },
+          {
+            "name": "Jatayu",
+            "arcana": "Tower",
+            "level": 61,
+            "floor": "4F - 7F"
+          },
+          {
+            "name": "Cybele",
+            "arcana": "Lovers",
+            "level": 64,
+            "floor": "5F - 8F"
+          },
+          {
+            "name": "Thor",
+            "arcana": "Chariot",
+            "level": 65,
+            "floor": "6F - 9F"
+          },
+          {
+            "name": "Barong",
+            "arcana": "Emperor",
+            "level": 65,
+            "floor": "7F - 10F"
+          },
+          {
+            "name": "Melchizedek",
+            "arcana": "Justice",
+            "level": 66,
+            "floor": "8F - 10F"
+          },
+          {
+            "name": "Horus",
+            "arcana": "Sun",
+            "level": 68,
+            "floor": "9F - 10F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Magatsu Inaba & Mandala (1F - 6F)",
+        "recommended_level": "Lv 65 - 75",
+        "personas": [
+          {
+            "name": "Uriel",
+            "arcana": "Justice",
+            "level": 58,
+            "floor": "1F - 3F"
+          },
+          {
+            "name": "Trumpeter",
+            "arcana": "Judgement",
+            "level": 67,
+            "floor": "2F - 5F"
+          },
+          {
+            "name": "Belial",
+            "arcana": "Devil",
+            "level": 68,
+            "floor": "3F - 6F"
+          },
+          {
+            "name": "Surt",
+            "arcana": "Magician",
+            "level": 69,
+            "floor": "4F - 6F"
+          },
+          {
+            "name": "Raphael",
+            "arcana": "Lovers",
+            "level": 72,
+            "floor": "4F - 6F"
+          },
+          {
+            "name": "Michael",
+            "arcana": "Judgement",
+            "level": 72,
+            "floor": "5F - 6F"
+          },
+          {
+            "name": "Baal Zebul",
+            "arcana": "Moon",
+            "level": 77,
+            "floor": "5F - 6F"
+          },
+          {
+            "name": "Beelzebub",
+            "arcana": "Devil",
+            "level": 77,
+            "floor": "6F"
+          }
+        ]
+      },
+      {
+        "dungeon": "Yomotsu Hirasaka (1F - 9F)",
+        "recommended_level": "Lv 75 - 90+",
+        "personas": [
+          {
+            "name": "Alice",
+            "arcana": "Death",
+            "level": 72,
+            "floor": "1F - 4F"
+          },
+          {
+            "name": "Satan",
+            "arcana": "Judgement",
+            "level": 76,
+            "floor": "3F - 7F"
+          },
+          {
+            "name": "Shiva",
+            "arcana": "Tower",
+            "level": 80,
+            "floor": "4F - 8F"
+          },
+          {
+            "name": "Ardha",
+            "arcana": "Temperance",
+            "level": 84,
+            "floor": "5F - 9F"
+          },
+          {
+            "name": "Helel",
+            "arcana": "Star",
+            "level": 87,
+            "floor": "6F - 9F"
+          },
+          {
+            "name": "Lucifer",
+            "arcana": "Judgement",
+            "level": 93,
+            "floor": "7F - 9F"
+          }
+        ]
       }
     ]
   }

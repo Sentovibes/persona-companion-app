@@ -36,6 +36,10 @@ fun GuidesHubScreen(
     val game = remember(gameId) { SeriesData.findGame(seriesId, gameId) }
     val accentColor = series?.color ?: Persona3Blue
 
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val isFeMC = remember { userPrefs.getP3PProtagonist() == com.persona.companion.data.UserPreferences.P3PProtagonist.FEMC }
+
     Scaffold(
         containerColor = Background,
         topBar = {
@@ -84,10 +88,24 @@ fun GuidesHubScreen(
 
             // Game-Specific Quest Guides
             when (gameId) {
-                "p3fes", "p3p", "p3r" -> {
+                "p3p" -> {
                     item {
                         GuideHubCard(
-                            title = if (gameId == "p3p") "Elizabeth & Theodore's Requests" else "Elizabeth's Requests",
+                            title = if (isFeMC) "Theodore's Requests" else "Elizabeth's Requests",
+                            subtitle = if (isFeMC)
+                                "Fusion walkthroughs, date events, item hunt locations, and combat challenges for Theodore."
+                            else
+                                "Fusion walkthroughs, date events, item hunt locations, and combat challenges for Elizabeth.",
+                            icon = Icons.Default.MenuBook,
+                            accentColor = accentColor,
+                            onClick = { onNavigateToQuestGuide(if (isFeMC) "Theodore" else "Elizabeth") }
+                        )
+                    }
+                }
+                "p3fes", "p3r" -> {
+                    item {
+                        GuideHubCard(
+                            title = "Elizabeth's Requests",
                             subtitle = "Fusion walkthroughs, item hunt locations, and combat challenges.",
                             icon = Icons.Default.MenuBook,
                             accentColor = accentColor,
@@ -114,6 +132,15 @@ fun GuidesHubScreen(
                             onClick = { onNavigateToQuestGuide("The Fox") }
                         )
                     }
+                    item {
+                        GuideHubCard(
+                            title = "Inaba Side-Quests Guide",
+                            subtitle = "Comprehensive walkthroughs and answers for all Inaba town resident requests.",
+                            icon = Icons.Default.Assignment,
+                            accentColor = TagIce,
+                            onClick = { onNavigateToQuestGuide("Inaba Residents") }
+                        )
+                    }
                 }
                 "p5", "p5r" -> {
                     item {
@@ -123,6 +150,15 @@ fun GuidesHubScreen(
                             icon = Icons.Default.MenuBook,
                             accentColor = accentColor,
                             onClick = { onNavigateToQuestGuide("The Twins") }
+                        )
+                    }
+                    item {
+                        GuideHubCard(
+                            title = "Mementos Target Requests",
+                            subtitle = "Step-by-step solutions, target locations, intel triggers, and boss strategies.",
+                            icon = Icons.Default.Assignment,
+                            accentColor = TagFire,
+                            onClick = { onNavigateToQuestGuide("Mementos Targets") }
                         )
                     }
                 }

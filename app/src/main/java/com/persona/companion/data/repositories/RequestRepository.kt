@@ -50,6 +50,15 @@ class RequestRepository(
 
                     fun toEntity(req: com.persona.companion.models.Request, sortOrder: Int, aigis: Boolean): RequestEntity {
                         val name = req.name ?: "Unknown Request"
+                        val remarksText = when {
+                            !req.remarks.isNullOrBlank() -> req.remarks
+                            !req.details.isNullOrBlank() && !req.notes.isNullOrBlank() && req.notes != "-" -> "${req.details}\n\nTip: ${req.notes}"
+                            !req.details.isNullOrBlank() -> req.details
+                            !req.notes.isNullOrBlank() && req.notes != "-" -> req.notes
+                            else -> null
+                        }
+                        val targetEnemyName = req.target_enemy ?: req.demon_form
+                        val targetPerson = req.target_name ?: req.target
                         return RequestEntity(
                             id = req.id,
                             name = name,
@@ -61,9 +70,9 @@ class RequestRepository(
                             category = req.category,
                             available = req.available ?: "-",
                             intel_required = req.intel_required,
-                            target_name = req.target_name,
-                            target_enemy = req.target_enemy,
-                            remarks = req.remarks,
+                            target_name = targetPerson,
+                            target_enemy = targetEnemyName,
+                            remarks = remarksText,
                             difficulty = req.difficulty,
                             gameId = gameId,
                             sortOrder = sortOrder,
