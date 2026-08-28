@@ -76,6 +76,7 @@ const CAT_ICONS = {
     'Items':            `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 7h-9l-3 3h-5V5h2V3c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v2h2v2zm-12-2h6V3H8v2zM3 10h18v10c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10zm2 2v6h14v-6H5z"/></svg>`,
     'Skills':           `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
     'Requests & Quests': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5H8V7h5v2z"/></svg>`,
+    'Guides & Walkthroughs': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>`,
     'Shadow Negotiation': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>`,
     'Shuffle Time & Arcana': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v3H5zm0-4h14v3H5zm0-4h14v3H5z"/></svg>`,
     'Shuffle Time & Negotiation': `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>`
@@ -120,7 +121,10 @@ const S = {
     sort:'arcana', enemyTab:'enemies', query:'',
     enemySort:'level', enemySortDir:1, favOnly:false, hideCompletedReq:false,
     itemQuery:'', skillQuery:'', requestQuery:'',
+    guideTab:'boss', guideQuery:'', guideBossFilter:'all', guideGiverFilter:'all', guideMonthFilter:'all',
+    guidesData:{ boss:null, quest:null, day:null },
     negoTab:'matrix', negoQuery:'', negoFilter:'all', negoData:null,
+    negoRank: 1, negoFloorBlock: '',
     detail:null, favorites:new Set(), completedRequests:new Set(),
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
@@ -158,7 +162,7 @@ function currentHash() {
     let part = '';
     if (S.screen === 'list' || S.screen === 'detail') part = S.listMode;
     else if (S.screen === 'sldetail') part = 'sociallinks';
-    else if (['items','skills','requests','fusion','sociallinks'].includes(S.screen)) part = S.screen;
+    else if (['items','skills','requests','fusion','sociallinks','negotiation','guides'].includes(S.screen)) part = S.screen;
     return S.series + '/' + S.game + (part ? '/' + part : '');
 }
 
@@ -176,11 +180,13 @@ function applyHash(h) {
         const sec = parts[2];
         if (!sec) { navigate('category'); return; }
         if (['personas','enemies','classroom'].includes(sec)) { S.listMode = sec; navigate('list'); }
-        else if (sec === 'items')    { S.listMode = 'items';    navigate('items'); }
-        else if (sec === 'skills')   { S.listMode = 'skills';   navigate('skills'); }
-        else if (sec === 'requests') { S.listMode = 'requests'; navigate('requests'); }
-        else if (sec === 'fusion')   { openFusion(); }
+        else if (sec === 'items')       { S.listMode = 'items';    navigate('items'); }
+        else if (sec === 'skills')      { S.listMode = 'skills';   navigate('skills'); }
+        else if (sec === 'requests')    { S.listMode = 'requests'; navigate('requests'); }
+        else if (sec === 'fusion')      { openFusion(); }
         else if (sec === 'sociallinks') { openSocialLinks(); }
+        else if (sec === 'guides')      { openGuides(); }
+        else if (sec === 'negotiation') { openNegotiation(); }
         else navigate('category');
     } finally { window._applyingHash = false; }
 }
@@ -248,6 +254,7 @@ function navigate(to, payload) {
     if (to==='items')       buildItemsScreen();
     if (to==='skills')      buildSkillsScreen();
     if (to==='requests')    buildRequestsScreen();
+    if (to==='guides')      buildGuidesScreen();
     if (to==='negotiation') buildNegotiationScreen();
     if (to==='settings')    buildSettingsScreen();
     updateRailState(to);
@@ -257,20 +264,21 @@ function navigate(to, payload) {
 /* ── Rail Navigation ───────────────────────────────────────────────────────── */
 function railNav(section) {
     if (!S.game) return;
-    if (section === 'personas')       { S.listMode='personas';  navigate('list'); }
-    else if (section === 'fusion')    { openFusion(); }
-    else if (section === 'enemies')   { S.listMode='enemies';   navigate('list'); }
-    else if (section === 'sl')        { openSocialLinks(); }
-    else if (section === 'classroom') { S.listMode='classroom'; navigate('list'); }
-    else if (section === 'items')     { S.listMode='items';     navigate('items'); }
-    else if (section === 'skills')    { S.listMode='skills';    navigate('skills'); }
-    else if (section === 'requests')  { S.listMode='requests';  navigate('requests'); }
-    else if (section === 'negotiation'){ openNegotiation(); }
+    if (section === 'personas')        { S.listMode='personas';  navigate('list'); }
+    else if (section === 'fusion')     { openFusion(); }
+    else if (section === 'enemies')    { S.listMode='enemies';   navigate('list'); }
+    else if (section === 'sl')         { openSocialLinks(); }
+    else if (section === 'classroom')  { S.listMode='classroom'; navigate('list'); }
+    else if (section === 'items')      { S.listMode='items';     navigate('items'); }
+    else if (section === 'skills')     { S.listMode='skills';    navigate('skills'); }
+    else if (section === 'requests')   { S.listMode='requests';  navigate('requests'); }
+    else if (section === 'guides')     { openGuides(); }
+    else if (section === 'negotiation') { openNegotiation(); }
 }
 
 function updateRailState(screenName) {
     // Show/hide game-specific rail items
-    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests','rail-negotiation'];
+    const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests','rail-guides','rail-negotiation'];
     gameItems.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = S.game ? 'flex' : 'none';
@@ -288,6 +296,7 @@ function updateRailState(screenName) {
         items: 'rail-items', skills: 'rail-skills', requests: 'rail-requests',
         detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='items'?'rail-items':S.listMode==='skills'?'rail-skills':null,
         fusion: 'rail-fusion', sociallinks: 'rail-sl', sldetail: 'rail-sl',
+        guides: 'rail-guides',
         negotiation: 'rail-negotiation'
     };
     document.querySelectorAll('.rail-item').forEach(el => el.classList.remove('active'));
@@ -373,15 +382,16 @@ function buildCategoryScreen() {
     const negoLabel = isP5 ? 'Shadow Negotiation' : (isP3 ? 'Shuffle Time & Arcana' : 'Shuffle Time & Negotiation');
 
     const categories = [
-        { label:'Personas',         available:true, action:()=>{ S.listMode='personas'; navigate('list'); } },
-        { label:'Fusion Calculator',available:true, action:()=>openFusion() },
-        { label:'Enemies',          available:true, action:()=>{ S.listMode='enemies';  navigate('list'); } },
-        { label:slLabel,            available:true, action:()=>openSocialLinks() },
-        { label:negoLabel,          available:true, action:()=>openNegotiation() },
-        { label:'Classroom Answers',available:true, action:()=>{ S.listMode='classroom'; navigate('list'); } },
-        { label:'Items',            available:true, action:()=>{ S.listMode='items';     navigate('items'); } },
-        { label:'Skills',           available:true, action:()=>{ S.listMode='skills';    navigate('skills'); } },
-        { label:'Requests & Quests',available:true, action:()=>{ S.listMode='requests';  navigate('requests'); } },
+        { label:'Personas',              available:true, action:()=>{ S.listMode='personas'; navigate('list'); } },
+        { label:'Fusion Calculator',     available:true, action:()=>openFusion() },
+        { label:'Guides & Walkthroughs', available:true, action:()=>openGuides() },
+        { label:negoLabel,               available:true, action:()=>openNegotiation() },
+        { label:'Enemies',               available:true, action:()=>{ S.listMode='enemies';  navigate('list'); } },
+        { label:slLabel,                 available:true, action:()=>openSocialLinks() },
+        { label:'Classroom Answers',     available:true, action:()=>{ S.listMode='classroom'; navigate('list'); } },
+        { label:'Items',                 available:true, action:()=>{ S.listMode='items';     navigate('items'); } },
+        { label:'Skills',                available:true, action:()=>{ S.listMode='skills';    navigate('skills'); } },
+        { label:'Requests & Quests',     available:true, action:()=>{ S.listMode='requests';  navigate('requests'); } },
     ];
 
     document.getElementById('categoryList').innerHTML = categories.map(c => `
@@ -401,6 +411,14 @@ function buildCategoryScreen() {
 
 function categoryAction(label) {
     if (window._catActions && window._catActions[label]) window._catActions[label]();
+}
+
+function openGuides() {
+    navigate('guides');
+}
+
+function openNegotiation() {
+    navigate('negotiation');
 }
 
 function openSocialLinks() {
@@ -4033,3 +4051,657 @@ function onRequestSearch(val) { S.requestQuery=val; document.getElementById('req
 function clearRequestSearch() { document.getElementById('requestSearch').value=''; onRequestSearch(''); }
 function showLoadingRequest() { document.getElementById('requestContent').innerHTML=`<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`; }
 function showEmptyRequest(msg) { document.getElementById('requestContent').innerHTML=`<div class="empty-state">${msg}</div>`; }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   GUIDES & WALKTHROUGHS
+   ══════════════════════════════════════════════════════════════════════════════ */
+async function buildGuidesScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const game = series?.games.find(g=>g.id===S.game);
+    const color = series?.color || '#2196F3';
+    
+    document.getElementById('guidesScreenTitle').textContent = `${game?.title || 'Game'} Guides`;
+    
+    // Update subtab pills
+    ['boss','quest','day'].forEach(tab => {
+        const btn = document.getElementById('guideTab' + tab.charAt(0).toUpperCase() + tab.slice(1));
+        if (btn) btn.classList.toggle('active', S.guideTab === tab);
+    });
+
+    const container = document.getElementById('guidesContent');
+    container.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading guides…</div></div>`;
+
+    if (S.guideTab === 'boss') {
+        await renderBossGuides(container, color);
+    } else if (S.guideTab === 'quest') {
+        await renderQuestGuides(container, color);
+    } else if (S.guideTab === 'day') {
+        await renderDayGuides(container, color);
+    }
+}
+
+function setGuideTab(tab) {
+    S.guideTab = tab;
+    buildGuidesScreen();
+}
+
+/* ── Boss Prep Guides ──────────────────────────────────────────────────────── */
+async function renderBossGuides(container, color) {
+    if (!S.guidesData.boss) {
+        try {
+            const r = await fetch('./data/guides/boss_guides.json');
+            if (!r.ok) throw new Error(r.statusText);
+            S.guidesData.boss = await r.json();
+        } catch (e) {
+            container.innerHTML = `<div class="empty-state">Failed to load boss guides: ${e.message}</div>`;
+            return;
+        }
+    }
+
+    const gameEntry = S.guidesData.boss.find(g => g.gameId === S.game);
+    const bosses = gameEntry?.bosses || [];
+
+    if (!bosses.length) {
+        container.innerHTML = `<div class="empty-state">No boss preparation guides available for ${S.game}.</div>`;
+        return;
+    }
+
+    const q = (S.guideQuery || '').toLowerCase();
+    const filtered = bosses.filter(b => {
+        const matchesQ = !q || b.name.toLowerCase().includes(q) || (b.location || '').toLowerCase().includes(q) || (b.strategy || '').toLowerCase().includes(q);
+        const matchesFilter = S.guideBossFilter === 'all' || (b.type || '').toLowerCase() === S.guideBossFilter.toLowerCase();
+        return matchesQ && matchesFilter;
+    });
+
+    const types = ['all', ...new Set(bosses.map(b => b.type || 'Story').filter(Boolean))];
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="search-wrap" style="margin-bottom:8px">
+                <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input class="search-input" type="text" placeholder="Search boss name, tactics, location..." value="${esc(S.guideQuery || '')}" oninput="onGuideSearch(this.value)">
+                ${S.guideQuery ? `<button class="search-clear" onclick="clearGuideSearch()" style="display:block">&#x2715;</button>` : ''}
+            </div>
+
+            <div class="sort-bar" style="margin-bottom:12px">
+                ${types.map(t => `
+                    <button class="sort-chip ${S.guideBossFilter === t ? 'active' : ''}"
+                            style="${S.guideBossFilter === t ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setGuideBossFilter('${esc(t)}')">
+                        ${t.charAt(0).toUpperCase() + t.slice(1)}
+                    </button>
+                `).join('')}
+            </div>
+
+            <div class="boss-list-wrap">
+                ${filtered.length ? filtered.map(b => {
+                    const weaknesses = b.weaknesses || [];
+                    const resists = b.resists || [];
+                    const repels = b.repels || [];
+                    const absorbs = b.absorbs || b.drains || [];
+                    const phases = b.phases || [];
+                    
+                    return `
+                        <div class="boss-card">
+                            <div class="boss-header">
+                                <div class="boss-title-wrap">
+                                    <div class="boss-name">${b.name}</div>
+                                    <div class="boss-location">${b.location || b.dungeon || 'Story Encounter'}</div>
+                                </div>
+                                ${b.level ? `<div class="boss-lvl-badge" style="color:${color}">Lv. ${b.level}</div>` : ''}
+                            </div>
+
+                            ${(weaknesses.length || resists.length || repels.length || absorbs.length) ? `
+                                <div class="boss-affinity-grid">
+                                    ${weaknesses.map(w => `<span class="affinity-tag weak">Weak: ${w}</span>`).join('')}
+                                    ${resists.map(r => `<span class="affinity-tag null">Resist: ${r}</span>`).join('')}
+                                    ${repels.map(rp => `<span class="affinity-tag rep">Repel: ${rp}</span>`).join('')}
+                                    ${absorbs.map(ab => `<span class="affinity-tag drn">Drain: ${ab}</span>`).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${phases.length ? `
+                                <div class="boss-phase-list">
+                                    ${phases.map((ph, idx) => `
+                                        <div class="boss-phase-item">
+                                            <div class="boss-phase-name" style="color:${color}">${ph.phase_name || `Phase ${idx+1}`}</div>
+                                            <div>${ph.strategy || ph.description || ''}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            <div class="boss-strategy-box">
+                                <div class="boss-strategy-title">Expert Strategy & Preparation</div>
+                                <div class="boss-strategy-text">${b.strategy || b.tactics || 'Buff party defense and exploit elemental weaknesses.'}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('') : `<div class="empty-state">No matching bosses found</div>`}
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function onGuideSearch(val) {
+    S.guideQuery = val;
+    debounceSearch(() => buildGuidesScreen());
+}
+
+function clearGuideSearch() {
+    S.guideQuery = '';
+    buildGuidesScreen();
+}
+
+function setGuideBossFilter(filter) {
+    S.guideBossFilter = filter;
+    buildGuidesScreen();
+}
+
+/* ── Side-Quests & Velvet Requests ────────────────────────────────────────── */
+async function renderQuestGuides(container, color) {
+    if (!S.guidesData.quest) {
+        try {
+            const r = await fetch('./data/guides/quest_guides.json');
+            if (!r.ok) throw new Error(r.statusText);
+            S.guidesData.quest = await r.json();
+        } catch (e) {
+            container.innerHTML = `<div class="empty-state">Failed to load quest guides: ${e.message}</div>`;
+            return;
+        }
+    }
+
+    // Filter relevant game entries
+    let gameQuests = S.guidesData.quest.filter(g => g.gameId === S.game);
+    
+    // For P3P: handle Theodore vs Elizabeth toggle
+    let isP3P = S.game === 'p3p';
+    let p3pGiver = S.settings.p3pProtagonist === 'FEMC' ? 'Theodore' : 'Elizabeth';
+
+    if (isP3P) {
+        gameQuests = gameQuests.filter(g => g.giver.toLowerCase().includes(p3pGiver.toLowerCase()));
+    }
+
+    const allQuests = [];
+    gameQuests.forEach(g => {
+        (g.quests || []).forEach(q => {
+            allQuests.push({ ...q, giverName: g.giver });
+        });
+    });
+
+    if (!allQuests.length) {
+        container.innerHTML = `<div class="empty-state">No side-quest guides available for ${S.game}.</div>`;
+        return;
+    }
+
+    const doneCount = allQuests.filter(q => S.completedRequests.has(`${S.game}_quest_${q.id || q.number || q.name}`)).length;
+    const pct = Math.round((doneCount / allQuests.length) * 100);
+
+    const query = (S.guideQuery || '').toLowerCase();
+    let filtered = allQuests.filter(q => {
+        const name = (q.name || q.title || '').toLowerCase();
+        const req = (q.requirement || q.target || q.description || '').toLowerCase();
+        const reward = (q.reward || '').toLowerCase();
+        return !query || name.includes(query) || req.includes(query) || reward.includes(query);
+    });
+
+    let html = `
+        <div class="guide-wide-layout">
+            ${isP3P ? `
+                <div class="sort-bar" style="margin-bottom:8px">
+                    <button class="sort-chip ${S.settings.p3pProtagonist !== 'FEMC' ? 'active' : ''}"
+                            style="${S.settings.p3pProtagonist !== 'FEMC' ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setP3PProtagonist('MALE')">
+                        Male MC (Elizabeth)
+                    </button>
+                    <button class="sort-chip ${S.settings.p3pProtagonist === 'FEMC' ? 'active' : ''}"
+                            style="${S.settings.p3pProtagonist === 'FEMC' ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setP3PProtagonist('FEMC')">
+                        Female MC (Theodore)
+                    </button>
+                </div>
+            ` : ''}
+
+            <div class="req-progress-wrap" style="margin-bottom:10px">
+                <div class="req-progress-top">
+                    <span>${doneCount} / ${allQuests.length} completed (${pct}%)</span>
+                </div>
+                <div class="req-progress-bar"><div class="req-progress-fill" style="width:${pct}%;background:${color}"></div></div>
+            </div>
+
+            <div class="search-wrap" style="margin-bottom:12px">
+                <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input class="search-input" type="text" placeholder="Search quest, reward, target..." value="${esc(S.guideQuery || '')}" oninput="onGuideSearch(this.value)">
+                ${S.guideQuery ? `<button class="search-clear" onclick="clearGuideSearch()" style="display:block">&#x2715;</button>` : ''}
+            </div>
+
+            <div class="quest-list-wrap">
+                ${filtered.length ? filtered.map(q => {
+                    const questKey = `${S.game}_quest_${q.id || q.number || q.name}`;
+                    const isDone = S.completedRequests.has(questKey);
+                    return `
+                        <div class="quest-card ${isDone ? 'completed' : ''}">
+                            <div class="quest-card-header">
+                                <div class="quest-title-wrap">
+                                    <input type="checkbox" class="quest-chk" ${isDone ? 'checked' : ''} onchange="toggleQuestDone('${esc(questKey)}')">
+                                    <div>
+                                        <div class="quest-name" style="${isDone ? 'text-decoration:line-through;color:var(--text3)' : ''}">
+                                            ${q.number ? `#${q.number}: ` : ''}${q.name || q.title}
+                                        </div>
+                                        <div style="font-size:.78rem;color:var(--text2)">${q.giverName || q.giver || 'Velvet Room'} ${q.deadline ? `• Deadline: ${q.deadline}` : ''}</div>
+                                    </div>
+                                </div>
+                                ${q.available ? `<div class="boss-lvl-badge">${q.available}</div>` : ''}
+                            </div>
+
+                            ${q.reward ? `
+                                <div class="quest-reward-box">
+                                    <span style="font-weight:700;color:${color}">Reward</span>
+                                    <span>${q.reward}</span>
+                                </div>
+                            ` : ''}
+
+                            <div class="quest-guide-text">
+                                ${q.guide || q.walkthrough || q.requirement || q.description || 'Follow standard request requirements.'}
+                            </div>
+                        </div>
+                    `;
+                }).join('') : `<div class="empty-state">No matching quests found</div>`}
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function toggleQuestDone(questKey) {
+    if (S.completedRequests.has(questKey)) {
+        S.completedRequests.delete(questKey);
+    } else {
+        S.completedRequests.add(questKey);
+    }
+    localStorage.setItem('completed_requests', JSON.stringify([...S.completedRequests]));
+    buildGuidesScreen();
+}
+
+function setP3PProtagonist(mc) {
+    S.settings.p3pProtagonist = mc;
+    localStorage.setItem('settings', JSON.stringify(S.settings));
+    buildGuidesScreen();
+}
+
+/* ── Day-by-Day Calendar ──────────────────────────────────────────────────── */
+async function renderDayGuides(container, color) {
+    if (!S.guidesData.day) {
+        try {
+            const r = await fetch('./data/guides/day_guides.json');
+            if (!r.ok) throw new Error(r.statusText);
+            S.guidesData.day = await r.json();
+        } catch (e) {
+            container.innerHTML = `<div class="empty-state">Failed to load day-by-day guides: ${e.message}</div>`;
+            return;
+        }
+    }
+
+    const gameEntry = S.guidesData.day.find(g => g.gameId === S.game);
+    const months = gameEntry?.months || [];
+
+    if (!months.length) {
+        container.innerHTML = `<div class="empty-state">No calendar walkthroughs available for ${S.game}.</div>`;
+        return;
+    }
+
+    const monthNames = months.map(m => m.month || 'Month');
+    if (!S.guideMonthFilter || !monthNames.includes(S.guideMonthFilter)) {
+        S.guideMonthFilter = monthNames[0];
+    }
+
+    const activeMonth = months.find(m => m.month === S.guideMonthFilter) || months[0];
+    const days = activeMonth?.days || [];
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="sort-bar" style="margin-bottom:12px;overflow-x:auto">
+                ${monthNames.map(m => `
+                    <button class="sort-chip ${S.guideMonthFilter === m ? 'active' : ''}"
+                            style="${S.guideMonthFilter === m ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setGuideMonthFilter('${esc(m)}')">
+                        ${m}
+                    </button>
+                `).join('')}
+            </div>
+
+            <div class="calendar-days-wrap">
+                ${days.map(d => `
+                    <div class="cal-day-card">
+                        <div class="cal-day-header">
+                            <div class="cal-date-badge">${d.date || 'Day'} ${d.dayOfWeek ? `(${d.dayOfWeek})` : ''}</div>
+                            ${d.weather ? `<span style="font-size:.82rem;color:var(--text2)">${d.weather}</span>` : ''}
+                        </div>
+
+                        ${d.daytime || d.afternoon ? `
+                            <div class="cal-event-block">
+                                <div class="cal-event-time">Daytime / Afternoon</div>
+                                <div class="cal-event-desc">${d.daytime || d.afternoon}</div>
+                            </div>
+                        ` : ''}
+
+                        ${d.evening || d.night ? `
+                            <div class="cal-event-block">
+                                <div class="cal-event-time">Evening / Night</div>
+                                <div class="cal-event-desc">${d.evening || d.night}</div>
+                            </div>
+                        ` : ''}
+
+                        ${d.classroom ? `
+                            <div class="cal-event-block" style="border-left:2px solid ${color}">
+                                <div class="cal-event-time" style="color:${color}">Classroom Question</div>
+                                <div class="cal-event-desc">${d.classroom}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function setGuideMonthFilter(month) {
+    S.guideMonthFilter = month;
+    buildGuidesScreen();
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   SHADOW NEGOTIATION & SHUFFLE TIME
+   ══════════════════════════════════════════════════════════════════════════════ */
+async function buildNegotiationScreen() {
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    const isP5   = S.series === 'p5';
+
+    const titleEl = document.getElementById('negotiationScreenTitle');
+    titleEl.textContent = isP5 ? 'Shadow Negotiation Guide' : 'Shuffle Time & Arcana';
+
+    const tabBar = document.getElementById('negotiationTabBar');
+    if (isP5) {
+        tabBar.innerHTML = `
+            <button class="fusion-tab-pill ${S.negoTab==='matrix'?'active':''}" onclick="setNegoTab('matrix')">Cheat Sheet</button>
+            <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" onclick="setNegoTab('lookup')">Shadow Lookup</button>
+            <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" onclick="setNegoTab('perks')">Confidant Perks</button>
+        `;
+    } else {
+        tabBar.innerHTML = `
+            <button class="fusion-tab-pill ${S.negoTab==='matrix'?'active':''}" onclick="setNegoTab('matrix')">Skills & EXP by Rank</button>
+            <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" onclick="setNegoTab('lookup')">Personas by Floor</button>
+            <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" onclick="setNegoTab('perks')">Major Arcana</button>
+        `;
+    }
+
+    const container = document.getElementById('negotiationContent');
+    container.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading data…</div></div>`;
+
+    if (!S.negoData) {
+        try {
+            const r = await fetch('./data/negotiation/negotiation_data.json');
+            if (!r.ok) throw new Error(r.statusText);
+            S.negoData = await r.json();
+        } catch (e) {
+            container.innerHTML = `<div class="empty-state">Failed to load negotiation data: ${e.message}</div>`;
+            return;
+        }
+    }
+
+    if (isP5) {
+        if (S.negoTab === 'matrix') renderNegoCheatSheet(container, color);
+        else if (S.negoTab === 'lookup') renderNegoLookup(container, color);
+        else renderNegoPerks(container, color);
+    } else {
+        const gameData = S.series === 'p3' ? S.negoData.p3 : S.negoData.p4;
+        if (S.negoTab === 'matrix') renderMinorArcanaRanks(container, gameData, color);
+        else if (S.negoTab === 'lookup') renderFloorPersonas(container, gameData, color);
+        else renderMajorArcana(container, gameData, color);
+    }
+}
+
+function setNegoTab(tab) {
+    S.negoTab = tab;
+    buildNegotiationScreen();
+}
+
+/* ── P5 Negotiation Handlers ───────────────────────────────────────────────── */
+function renderNegoCheatSheet(container, color) {
+    const data = S.negoData?.p5?.personality_matrix || [];
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="section-title" style="color:${color};margin-bottom:8px">Shadow Personality Matrix</div>
+            <div class="nego-matrix-grid">
+                ${data.map(p => `
+                    <div class="nego-card">
+                        <div class="nego-card-header">
+                            <div class="nego-personality-title" style="color:${color}">${p.personality}</div>
+                        </div>
+                        <div style="font-size:.85rem;color:var(--text2);margin-bottom:4px">${p.personality_summary || ''}</div>
+                        <div class="nego-row-badge">
+                            <span>Upbeat Response:</span>
+                            <span class="${p.upbeat_ans==='Likes'||p.upbeat_ans==='Best'?'nego-badge-best':p.upbeat_ans==='Dislikes'?'nego-badge-bad':'nego-badge-ok'}">${p.upbeat_ans}</span>
+                        </div>
+                        <div class="nego-row-badge">
+                            <span>Timid Response:</span>
+                            <span class="${p.timid_ans==='Likes'||p.timid_ans==='Best'?'nego-badge-best':p.timid_ans==='Dislikes'?'nego-badge-bad':'nego-badge-ok'}">${p.timid_ans}</span>
+                        </div>
+                        <div class="nego-row-badge">
+                            <span>Gloomy Response:</span>
+                            <span class="${p.gloomy_ans==='Likes'||p.gloomy_ans==='Best'?'nego-badge-best':p.gloomy_ans==='Dislikes'?'nego-badge-bad':'nego-badge-ok'}">${p.gloomy_ans}</span>
+                        </div>
+                        <div class="nego-row-badge">
+                            <span>Irritable Response:</span>
+                            <span class="${p.irritable_ans==='Likes'||p.irritable_ans==='Best'?'nego-badge-best':p.irritable_ans==='Dislikes'?'nego-badge-bad':'nego-badge-ok'}">${p.irritable_ans}</span>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    container.innerHTML = html;
+}
+
+function renderNegoLookup(container, color) {
+    const shadows = S.negoData?.p5?.shadows || [];
+    const q = (S.negoQuery || '').toLowerCase();
+    const filtered = shadows.filter(s => !q || s.name.toLowerCase().includes(q) || (s.personality || '').toLowerCase().includes(q));
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="search-wrap" style="margin-bottom:12px">
+                <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input class="search-input" type="text" placeholder="Search shadow by name or personality..." value="${esc(S.negoQuery || '')}" oninput="onNegoSearch(this.value)">
+                ${S.negoQuery ? `<button class="search-clear" onclick="clearNegoSearch()" style="display:block">&#x2715;</button>` : ''}
+            </div>
+
+            <div class="floor-personas-grid">
+                ${filtered.length ? filtered.map(s => `
+                    <div class="floor-persona-card" onclick="jumpToPersona('${esc(s.name)}')">
+                        <div class="floor-persona-main">
+                            <div class="floor-persona-name">${s.name}</div>
+                            <div class="floor-persona-arcana">${s.personality} Personality</div>
+                        </div>
+                        ${s.level ? `<div class="floor-persona-badge" style="color:${color}">Lv. ${s.level}</div>` : ''}
+                    </div>
+                `).join('') : `<div class="empty-state">No matching shadows found</div>`}
+            </div>
+        </div>
+    `;
+    container.innerHTML = html;
+}
+
+function onNegoSearch(val) {
+    S.negoQuery = val;
+    debounceSearch(() => buildNegotiationScreen());
+}
+
+function clearNegoSearch() {
+    S.negoQuery = '';
+    buildNegotiationScreen();
+}
+
+function renderNegoPerks(container, color) {
+    const perks = S.negoData?.p5?.sun_confidant_perks || [];
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="section-title" style="color:${color};margin-bottom:8px">Sun Confidant (Toranosuke Yoshida) Negotiation Perks</div>
+            <div class="route-steps-flow">
+                ${perks.map(p => `
+                    <div class="route-step-card">
+                        <div class="route-step-header">
+                            <span class="route-step-badge" style="background:${color}22;color:${color}">Rank ${p.rank}</span>
+                            <span class="route-step-title">${p.ability_name}</span>
+                        </div>
+                        <div class="route-step-action">${p.description}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    container.innerHTML = html;
+}
+
+/* ── P3 & P4 Shuffle Time / Arcana Handlers ─────────────────────────────────── */
+function renderMinorArcanaRanks(container, gameData, color) {
+    const ranks = gameData?.minor_arcana_details || [];
+    if (!ranks.length) {
+        container.innerHTML = `<div class="empty-state">No rank details available.</div>`;
+        return;
+    }
+
+    const currentRankNum = S.negoRank || 1;
+    const currentDetail = ranks.find(r => r.rank === currentRankNum) || ranks[0];
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="section-title" style="color:${color};margin-bottom:4px">Select Card Rank (Ranks 1 to 10)</div>
+            <div class="rank-selector-bar">
+                ${ranks.map(r => `
+                    <button class="rank-pill-btn ${r.rank === currentRankNum ? 'active' : ''}"
+                            style="${r.rank === currentRankNum ? `border-color:${color};color:${color}` : ''}"
+                            onclick="setNegoRank(${r.rank})">
+                        Rank ${r.rank}
+                    </button>
+                `).join('')}
+            </div>
+
+            <div class="bonus-stat-grid">
+                <div class="bonus-stat-card">
+                    <div class="bonus-stat-label">Wands (EXP Bonus)</div>
+                    <div class="bonus-stat-val" style="color:#81C784">${currentDetail.exp_bonus || '+20% EXP'}</div>
+                </div>
+                <div class="bonus-stat-card">
+                    <div class="bonus-stat-label">Coins (Money Bonus)</div>
+                    <div class="bonus-stat-val" style="color:#FFB74D">${currentDetail.money_bonus || '+20% Yen'}</div>
+                </div>
+                <div class="bonus-stat-card">
+                    <div class="bonus-stat-label">Cups (Recovery)</div>
+                    <div class="bonus-stat-val" style="color:#4FC3F7">${currentDetail.recovery || '10% HP/SP'}</div>
+                </div>
+            </div>
+
+            <div class="section-card" style="margin-top:8px">
+                <div class="section-title" style="color:${color}">Swords (Skill Cards & Skills at Rank ${currentDetail.rank})</div>
+                <div class="sword-skills-grid" style="margin-top:10px">
+                    ${(currentDetail.skills || []).map(sk => `
+                        <div class="sword-skill-card" onclick="setSkillRoutePreload(null, '${esc(sk)}')">
+                            <span class="sword-skill-name">${sk}</span>
+                            <span style="font-size:.75rem;color:${color}">Fuse Route ›</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function setNegoRank(rank) {
+    S.negoRank = rank;
+    buildNegotiationScreen();
+}
+
+function renderFloorPersonas(container, gameData, color) {
+    const blocks = gameData?.dungeon_personas || [];
+    if (!blocks.length) {
+        container.innerHTML = `<div class="empty-state">No floor persona directory available.</div>`;
+        return;
+    }
+
+    const blockNames = blocks.map(b => b.block || b.dungeon || 'Block');
+    if (!S.negoFloorBlock || !blockNames.includes(S.negoFloorBlock)) {
+        S.negoFloorBlock = blockNames[0];
+    }
+
+    const currentBlock = blocks.find(b => (b.block || b.dungeon) === S.negoFloorBlock) || blocks[0];
+    const personas = currentBlock?.personas || [];
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="sort-bar" style="margin-bottom:12px;overflow-x:auto">
+                ${blockNames.map(b => `
+                    <button class="sort-chip ${S.negoFloorBlock === b ? 'active' : ''}"
+                            style="${S.negoFloorBlock === b ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setNegoFloorBlock('${esc(b)}')">
+                        ${b}
+                    </button>
+                `).join('')}
+            </div>
+
+            <div class="floor-personas-grid">
+                ${personas.map(p => `
+                    <div class="floor-persona-card" onclick="jumpToPersona('${esc(p.name)}')">
+                        <div class="floor-persona-main">
+                            <div class="floor-persona-name">${p.name}</div>
+                            <div class="floor-persona-arcana">${p.arcana || 'Persona'} ${p.floor ? `• ${p.floor}` : ''}</div>
+                        </div>
+                        <div class="floor-persona-badge" style="color:${color}">Lv. ${p.level}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+function setNegoFloorBlock(block) {
+    S.negoFloorBlock = block;
+    buildNegotiationScreen();
+}
+
+function renderMajorArcana(container, gameData, color) {
+    const cards = gameData?.major_arcana || [];
+    if (!cards.length) {
+        container.innerHTML = `<div class="empty-state">No Major Arcana data available.</div>`;
+        return;
+    }
+
+    let html = `
+        <div class="guide-wide-layout">
+            <div class="section-title" style="color:${color};margin-bottom:8px">Major Arcana Tarot & Arcana Burst Effects</div>
+            <div class="arcana-table-grid">
+                ${cards.map(c => `
+                    <div class="arcana-card">
+                        <div class="arcana-card-num" style="color:${color}">${c.card_number || ''}</div>
+                        <div class="arcana-card-name">${c.name}</div>
+                        <div class="arcana-card-effect">${c.effect || ''}</div>
+                        ${c.arcana_burst ? `<div style="font-size:.78rem;font-weight:700;color:${color};margin-top:4px">Arcana Burst: ${c.arcana_burst}</div>` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+

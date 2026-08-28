@@ -1005,5 +1005,328 @@ body {
     gap: 16px;
 }
 
+/* ── Boss Guide Styles ────────────────────────────────────────── */
+.boss-card {
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.boss-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+.boss-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.boss-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text);
+}
+.boss-location {
+    font-size: .82rem;
+    color: var(--text2);
+}
+.boss-lvl-badge {
+    font-size: .78rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--raised);
+    color: var(--text);
+    border: 1px solid var(--hairline-soft);
+    white-space: nowrap;
+}
+.boss-affinity-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0;
+}
+.affinity-tag {
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--surface);
+    border: 1px solid var(--hairline-soft);
+}
+.affinity-tag.weak { color: #81C784; border-color: #81C78444; background: #81C78411; }
+.affinity-tag.null { color: #9C9CAD; border-color: #9C9CAD44; }
+.affinity-tag.rep { color: #FFB74D; border-color: #FFB74D44; background: #FFB74D11; }
+.affinity-tag.drn { color: #4FC3F7; border-color: #4FC3F744; background: #4FC3F711; }
 
+.boss-strategy-box {
+    background: var(--surface);
+    border-radius: var(--r-md);
+    padding: 12px 14px;
+    border-left: 3px solid var(--brass);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.boss-strategy-title {
+    font-size: .85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--brass);
+}
+.boss-strategy-text {
+    font-size: .85rem;
+    color: var(--text);
+    line-height: 1.5;
+    white-space: pre-line;
+}
+.boss-phase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+.boss-phase-item {
+    background: var(--raised);
+    border-radius: var(--r-sm);
+    padding: 8px 12px;
+    font-size: .82rem;
+    border: 1px solid var(--hairline-soft);
+}
+.boss-phase-name {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
 
+/* ── Minor Arcana Rank Styles ────────────────────────────────── */
+.rank-selector-bar {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 2px 10px 2px;
+    margin-bottom: 12px;
+}
+.rank-pill-btn {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    border-radius: var(--r-md);
+    font-weight: 800;
+    font-size: .85rem;
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    color: var(--text2);
+    cursor: pointer;
+    transition: all .15s ease;
+}
+.rank-pill-btn.active {
+    background: var(--raised);
+    color: var(--text);
+    border-color: var(--brass);
+    box-shadow: 0 0 0 1px var(--brass);
+}
+.bonus-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.bonus-stat-card {
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-md);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.bonus-stat-label {
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+}
+.bonus-stat-val {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--text);
+}
+.sword-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+}
+.sword-skill-card {
+    background: var(--raised);
+    border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-sm);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.sword-skill-card:hover {
+    border-color: var(--brass);
+}
+.sword-skill-name {
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--text);
+}
+
+/* ── Floor Personas Styles ───────────────────────────────────── */
+.floor-select-wrap {
+    margin-bottom: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.floor-personas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+}
+.floor-persona-card {
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-md);
+    padding: 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform .1s ease, border-color .1s ease;
+}
+.floor-persona-card:hover {
+    border-color: var(--brass);
+    transform: translateY(-1px);
+}
+.floor-persona-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.floor-persona-name {
+    font-weight: 800;
+    font-size: .95rem;
+    color: var(--text);
+}
+.floor-persona-arcana {
+    font-size: .8rem;
+    color: var(--text2);
+}
+.floor-persona-badge {
+    background: var(--raised);
+    border: 1px solid var(--hairline-soft);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+/* ── Quest Guide Styles ───────────────────────────────────────── */
+.quest-card {
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+    transition: opacity .2s ease;
+}
+.quest-card.completed {
+    opacity: 0.6;
+    background: var(--surface);
+}
+.quest-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+.quest-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.quest-chk {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--brass);
+}
+.quest-name {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--text);
+}
+.quest-reward-box {
+    background: var(--surface);
+    border-radius: var(--r-sm);
+    padding: 6px 10px;
+    font-size: .82rem;
+    color: var(--text2);
+    display: flex;
+    justify-content: space-between;
+}
+.quest-guide-text {
+    font-size: .85rem;
+    color: var(--text);
+    line-height: 1.45;
+    background: var(--raised);
+    border-radius: var(--r-md);
+    padding: 10px 12px;
+    border: 1px solid var(--hairline-soft);
+}
+
+/* ── Calendar Guide Styles ────────────────────────────────────── */
+.cal-day-card {
+    background: var(--card);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-lg);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.cal-day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cal-date-badge {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--text);
+}
+.cal-event-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--surface);
+    border-radius: var(--r-sm);
+    padding: 8px 12px;
+}
+.cal-event-time {
+    font-size: .75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--brass);
+}
+.cal-event-desc {
+    font-size: .85rem;
+    color: var(--text);
+    line-height: 1.4;
+}
