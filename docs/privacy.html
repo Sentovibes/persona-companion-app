@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Persona Companion</title>
+    <link rel="icon" href="icon.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --velvet-0: #0D0D12;
+            --velvet-1: #14141B;
+            --velvet-2: #1B1B24;
+            --velvet-3: #23232E;
+            --brass: #C9A45C;
+            --brass-dim: rgba(201, 164, 92, 0.16);
+            --text: #ECECF1;
+            --text2: #9C9CAD;
+            --text3: #5A5A6B;
+            --border: rgba(180, 190, 230, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--velvet-0);
+            color: var(--text);
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--velvet-1);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .badge {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: var(--brass-dim);
+            color: var(--brass);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        .updated {
+            color: var(--text3);
+            font-size: 0.9rem;
+        }
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--brass);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+        p {
+            color: var(--text2);
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--text2);
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: var(--text);
+        }
+        .card {
+            background-color: var(--velvet-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .card h3 {
+            color: var(--text);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            margin-bottom: 0;
+            font-size: 0.92rem;
+        }
+        a {
+            color: var(--brass);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text3);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Legal & Transparency</span>
+            <h1>Privacy Policy for Persona Companion</h1>
+            <p class="updated">Effective Date: September 1, 2026</p>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                <strong>Persona Companion</strong> ("we", "our", or "the app") is designed as an offline reference and utility guide for fans of the Persona video game series. We respect your privacy and are committed to protecting it.
+            </p>
+            <p>
+                <strong>We do not collect, sell, or transmit any personal identifiable information (PII).</strong> The app operates primarily offline on your device.
+            </p>
+        </section>
+
+        <section>
+            <h2>Information We Do NOT Collect</h2>
+            <ul>
+                <li>We do not collect names, emails, phone numbers, or physical addresses.</li>
+                <li>We do not collect financial, payment, or banking information.</li>
+                <li>We do not track precise or approximate GPS location.</li>
+                <li>We do not create user profiles or track your identity across apps or websites.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Permissions & On-Device Features</h2>
+            <p>The app requests the following Android permissions strictly for local app functionality:</p>
+            
+            <div class="card">
+                <h3>📷 Camera Permission (Optional / AI Scanner)</h3>
+                <p>Used exclusively for the on-device AI Screen Scanner & OCR feature to recognize in-game text and enemies. All optical character recognition (OCR) and machine learning processing occurs 100% locally on your device via Google ML Kit / TensorFlow Lite. No images, video frames, or scanner data are ever uploaded or transmitted over the internet.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Internet Access</h3>
+                <p>Used solely to download optional high-definition image asset packs from GitHub Releases / CDN and to power the optional local Wi-Fi casting feature (displaying guides on your local TV or secondary screen via local HTTP/WebSocket server). We do not send your data to external analytics servers.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔔 Notifications & Foreground Service</h3>
+                <p>Used strictly to keep the local display cast server or active asset download service running smoothly when placed in the background.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Storage & Local Preferences</h2>
+            <p>
+                All user data — including saved favorites, tracked fusion checklists, social link notes, and app preferences — is stored strictly locally on your device using Android Room Database and SharedPreferences. You can clear this data at any time through your device's Application Settings ("Clear Data" / "Clear Cache") or by uninstalling the application.
+            </p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services & Advertising</h2>
+            <p>
+                Persona Companion <strong>does not contain advertising</strong> (no AdMob or third-party ad networks) and contains no third-party tracking or behavioral analytics SDKs.
+            </p>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>
+                Persona Companion does not knowingly collect or solicit any personal information from children under the age of 13. Because our application does not collect any personal data whatsoever, it is fully compliant with COPPA and Google Play Family Policy requirements.
+            </p>
+        </section>
+
+        <section>
+            <h2>Disclaimer</h2>
+            <p>
+                Persona Companion is a fan-made reference tool and is not affiliated with, endorsed, sponsored, or specifically approved by ATLUS or SEGA. Persona, Persona 3, Persona 4, and Persona 5 are trademarks and/or registered trademarks of ATLUS Co., Ltd. and SEGA Corporation.
+            </p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>
+                We may update our Privacy Policy periodically to reflect app updates or regulatory compliance. Any changes will be posted to this page with an updated effective date.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>
+                If you have questions or suggestions regarding this Privacy Policy, please contact us or open an issue on our official repository:
+            </p>
+            <p>
+                GitHub: <a href="https://github.com/Sentovibes/persona-companion-app" target="_blank" rel="noopener">github.com/Sentovibes/persona-companion-app</a>
+            </p>
+        </section>
+
+        <footer>
+            <span>Persona Companion © 2026 Sentovibes</span>
+            <a href="https://sentovibes.github.io/persona-companion-app/">Back to Web App</a>
+        </footer>
+    </div>
+</body>
+</html>
