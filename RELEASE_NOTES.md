@@ -1,6 +1,6 @@
-# Release Notes - v7.1.2
+# Release Notes - v7.1.3
 
-## 16 KB Alignment, Fusion Calculator Upgrades & Quest Accuracy
+## Bug Fix Release - 16 KB Alignment & Fusion Upgrades
 
 ### 16 KB Page-Size Memory Alignment & Android 15 Compatibility
 - **Eliminated 16 KB Device Crash Warning**: Completely resolved Google Play Console warning regarding `libtensorflowlite_jni.so` and `libimage_processing_util_jni.so`.
@@ -20,7 +20,7 @@
 
 ---
 
-**Full Changelog**: https://github.com/Sentovibes/persona-companion-app/compare/v7.1.1...v7.1.2
+**Full Changelog**: https://github.com/Sentovibes/persona-companion-app/compare/v7.1.1...v7.1.3
 
 ---
 
