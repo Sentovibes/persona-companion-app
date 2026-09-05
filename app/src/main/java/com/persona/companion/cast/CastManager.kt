@@ -45,45 +45,60 @@ object CastManager {
         // Start on IO thread to avoid blocking UI
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                Log.d(TAG, "Creating CastServer instance...")
-                val newServer = CastServer(context, 8080)
-                
-                Log.d(TAG, "Setting up callbacks...")
-                newServer.onClientConnected = this@CastManager.onClientConnected
-                newServer.onClientDisconnected = this@CastManager.onClientDisconnected
-                
-                Log.d(TAG, "Starting server...")
-                newServer.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false)
-                
-                server = newServer
+                // Stop any previous server instance if hanging
+                try {
+                    server?.stop()
+                } catch (_: Exception) {}
+
+                val candidatePorts = listOf(8080, 8081, 8082, 8888, 8088, 9090)
+                var activeServer: CastServer? = null
+                var lastBindException: Exception? = null
+
+                for (p in candidatePorts) {
+                    try {
+                        Log.d(TAG, "Attempting to start CastServer on port $p...")
+                        val candidateServer = CastServer(context, p)
+                        candidateServer.onClientConnected = this@CastManager.onClientConnected
+                        candidateServer.onClientDisconnected = this@CastManager.onClientDisconnected
+                        candidateServer.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false)
+                        activeServer = candidateServer
+                        Log.i(TAG, "CastServer successfully bound to port $p")
+                        break
+                    } catch (e: java.net.BindException) {
+                        Log.w(TAG, "Port $p is in use, trying next candidate port...", e)
+                        lastBindException = e
+                    } catch (e: java.io.IOException) {
+                        if (e.message?.contains("Address already in use", ignoreCase = true) == true) {
+                            Log.w(TAG, "Port $p is in use (Address already in use), trying next...", e)
+                            lastBindException = e
+                        } else {
+                            throw e
+                        }
+                    }
+                }
+
+                if (activeServer == null) {
+                    throw (lastBindException ?: Exception("All candidate ports are in use"))
+                }
+
+                server = activeServer
                 isRunning = true
                 
-                val url = newServer.getConnectionUrl()
+                val url = activeServer.getConnectionUrl()
                 Log.i(TAG, "Cast server started successfully at: $url")
                 
                 // Notify on main thread
                 CoroutineScope(Dispatchers.Main).launch {
                     onServerStarted?.invoke(url)
                 }
-            } catch (e: java.net.BindException) {
-                Log.e(TAG, "Port 8080 already in use", e)
-                isRunning = false
-                releaseWifiLock()
-                CoroutineScope(Dispatchers.Main).launch {
-                    onServerStarted?.invoke("Error: Port 8080 is already in use")
-                }
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to start server", e)
-                Log.e(TAG, "Exception type: ${e.javaClass.name}")
-                Log.e(TAG, "Exception message: ${e.message}")
-                Log.e(TAG, "Stack trace:")
-                e.printStackTrace()
                 isRunning = false
                 releaseWifiLock()
                 
                 // Notify on main thread that server failed
                 CoroutineScope(Dispatchers.Main).launch {
-                    onServerStarted?.invoke("Error: ${e.message ?: "Unknown error"}")
+                    onServerStarted?.invoke("Error: ${e.message ?: "Failed to bind cast port"}")
                 }
             }
         }

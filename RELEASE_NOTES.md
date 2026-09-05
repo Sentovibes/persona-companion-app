@@ -1,3 +1,25 @@
+# Release Notes - v7.1.3
+
+## 16 KB Alignment, Fusion Calculator Upgrades & Quest Accuracy
+
+### 16 KB Page-Size Memory Alignment & Android 15 Compatibility
+- **Eliminated 16 KB Device Crash Warning**: Completely resolved Google Play Console warning regarding `libtensorflowlite_jni.so` and `libimage_processing_util_jni.so`.
+- **DEX-Only Pure Architecture**: Removed unused legacy TFLite and CameraX dependencies, stripping all unaligned `.so` native libraries. The app bundle is now 100% architecture-independent and fully certified for Android 15 devices with 16 KB memory page sizes.
+- **Smaller Footprint**: Significantly reduced the final APK/AAB bundle size.
+
+### Fusion Calculator: Cost Sorting, Ingredient Filter & Izanagi Saturation Fix
+- **Cheapest Option by Default**: Fusion recipes (both standard 2-way and 3-way triangle fusions) are now sorted by **Total Summoning Cost (Cheapest First)** by default, matching aqiu384 and compendium mechanics.
+- **Cheapest Option Badge**: The most economical recipe is prominently highlighted with a distinct `★ CHEAPEST OPTION` badge and clear Yen (`¥`) cost summary.
+- **Interactive Sort Options**: Added real-time sort chips: *Cheapest First*, *Highest Cost*, *Lowest Level*, and *Highest Level*.
+- **Live Ingredient Search & Filtering**: Added an ingredient filter search bar to quickly find recipes containing specific Personas in inventory or filter out unwanted ingredients.
+- **Izanagi Saturation Resolved**: Fixed the triangle fusion recipe generation where Izanagi (Level 1) previously saturated the first dozens of recipes due to raw array iteration order. Both Android and Web/PWA now use pruned, cost-sorted evaluation to display diverse, cost-effective recipe options.
+
+### Margaret Fusion Guide Correction (P4 & P4G)
+- **Rank 3 Request Correction**: Corrected Margaret's Empress Rank 3 requirement from the erroneous *Gdon with Beast Weaver* to the canonical *Gdon with Rampage*.
+- **Fusion Walkthrough Verified**: Updated walkthrough instructions to fuse Ares (Chariot) with Shiisaa (Hierophant), inheriting Rampage.
+
+---
+
 # Release Notes - v7.1.0
 
 ## Major Content & Combat Mastery Release

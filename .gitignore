@@ -37,6 +37,8 @@ local.properties
 # Keystore files (except debug keystore)
 *.jks
 release.keystore
+adi-registration.properties
+app/src/main/assets/adi-registration.properties
 
 # Logs
 *.log

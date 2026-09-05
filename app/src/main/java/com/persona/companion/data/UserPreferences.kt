@@ -69,7 +69,7 @@ class UserPreferences(context: Context) {
         val item = RecentItem(seriesId, gameId, personaName, System.currentTimeMillis())
         recents.removeAll { it.name == personaName && it.gameId == gameId }
         recents.add(0, item)
-        if (recents.size > 50) recents.removeLast()
+        if (recents.size > 50) recents.removeAt(recents.lastIndex)
         prefs.edit().putString("recent_personas", gson.toJson(recents)).apply()
     }
     
@@ -84,7 +84,7 @@ class UserPreferences(context: Context) {
         val item = RecentItem(seriesId, gameId, enemyName, System.currentTimeMillis())
         recents.removeAll { it.name == enemyName && it.gameId == gameId }
         recents.add(0, item)
-        if (recents.size > 50) recents.removeLast()
+        if (recents.size > 50) recents.removeAt(recents.lastIndex)
         prefs.edit().putString("recent_enemies", gson.toJson(recents)).apply()
     }
     

@@ -55,11 +55,44 @@ data class MultiTreeRecipe(
     val description: String
 )
 
+data class SingleDirectRoute(
+    val type: String, // "special_direct", "direct_2p"
+    val sourcePersona: String,
+    val partner: String?, // For direct_2p
+    val allIngredients: List<String>?, // For special_direct
+    val skill: String,
+    val targetName: String
+)
+
+data class SingleTwoStepRoute(
+    val type: String, // "2step_special", "2step_2p"
+    val sourcePersona: String,
+    val skill: String,
+    // Step 1:
+    val step1P1: String, // source
+    val step1P2: String, // other
+    val step1Result: String,
+    // Step 2:
+    val step2P1: String?, // pA
+    val step2P2: String?, // pB
+    val step2SpecialRecipe: List<String>?,
+    val step2Result: String // target
+)
+
+enum class RecipeSortOrder(val label: String) {
+    CHEAPEST("Cheapest First"),
+    MOST_EXPENSIVE("Highest Cost"),
+    LOWEST_LEVEL("Lowest Level"),
+    HIGHEST_LEVEL("Highest Level")
+}
+
 data class FusionState(
     val personas: List<Persona> = emptyList(),
     val selectedPersona: Persona? = null,
     val fusionType: FusionType? = null,
     val fusionRecipes: List<FusionRecipe> = emptyList(),
+    val recipeSortOrder: RecipeSortOrder = RecipeSortOrder.CHEAPEST,
+    val recipeSearchQuery: String = "",
     val calculatorMode: CalculatorMode = CalculatorMode.REVERSE,
     // Forward Fusion state
     val selectedIngredients: List<Persona?> = listOf(null, null, null),
@@ -75,6 +108,8 @@ data class FusionState(
     val skillLearners: List<DirectLearner> = emptyList(),
     val skillItemizers: List<ItemizerEntry> = emptyList(),
     val skillMultiTrees: List<MultiTreeRecipe> = emptyList(),
+    val singleDirectRoutes: List<SingleDirectRoute> = emptyList(),
+    val singleTwoStepRoutes: List<SingleTwoStepRoute> = emptyList(),
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
@@ -473,10 +508,122 @@ class FusionViewModel : ViewModel() {
             }
         }
 
+        val singleDirectRoutes = mutableListOf<SingleDirectRoute>()
+        val singleTwoStepRoutes = mutableListOf<SingleTwoStepRoute>()
+
+        if (target != null && calculator != null && skills.size == 1) {
+            val sk = skills[0]
+            val sources = learners.map { it.personaName }
+
+            val targetRecipes = calculator.calculateFusionsFor(target)
+
+            for (rec in targetRecipes) {
+                if (rec.personas.size > 2) {
+                    val ings = rec.personas.map { it.name }
+                    for (ing in ings) {
+                        if (sources.contains(ing)) {
+                            singleDirectRoutes.add(
+                                SingleDirectRoute("special_direct", ing, null, ings, sk, target.name)
+                            )
+                        }
+                    }
+                } else if (rec.personas.size == 2) {
+                    val pA = rec.personas[0].name
+                    val pB = rec.personas[1].name
+                    if (sources.contains(pA)) {
+                        singleDirectRoutes.add(SingleDirectRoute("direct_2p", pA, pB, null, sk, target.name))
+                    } else if (sources.contains(pB)) {
+                        singleDirectRoutes.add(SingleDirectRoute("direct_2p", pB, pA, null, sk, target.name))
+                    }
+                }
+                if (singleDirectRoutes.size >= 10) break
+            }
+
+            val topSources = sources.take(10)
+            val seenChains = mutableSetOf<String>()
+
+            for (rec in targetRecipes) {
+                if (rec.personas.size > 2) {
+                    val ings = rec.personas.map { it.name }
+                    for (ing in ings) {
+                        for (src in topSources) {
+                            if (src == ing) continue
+                            for (other in personas) {
+                                if (other.name == src) continue
+                                val srcPersona = personas.find { it.name == src }
+                                if (srcPersona != null) {
+                                    val bridge = calculator.fuse(listOf(srcPersona, other))
+                                    if (bridge?.name == ing) {
+                                        val key = "$src+${other.name}=>$ing"
+                                        if (!seenChains.contains(key)) {
+                                            seenChains.add(key)
+                                            singleTwoStepRoutes.add(
+                                                SingleTwoStepRoute(
+                                                    "2step_special", src, sk,
+                                                    src, other.name, ing,
+                                                    null, null, ings, target.name
+                                                )
+                                            )
+                                        }
+                                    }
+                                }
+                                if (singleTwoStepRoutes.size >= 8) break
+                            }
+                            if (singleTwoStepRoutes.size >= 8) break
+                        }
+                        if (singleTwoStepRoutes.size >= 8) break
+                    }
+                } else if (rec.personas.size == 2) {
+                    val pA = rec.personas[0].name
+                    val pB = rec.personas[1].name
+                    for (src in topSources) {
+                        if (src == pA || src == pB) continue
+                        for (other in personas) {
+                            if (other.name == src) continue
+                            val srcPersona = personas.find { it.name == src }
+                            if (srcPersona != null) {
+                                val bridge = calculator.fuse(listOf(srcPersona, other))
+                                if (bridge?.name == pA) {
+                                    val key = "$src+${other.name}=>$pA+$pB"
+                                    if (!seenChains.contains(key)) {
+                                        seenChains.add(key)
+                                        singleTwoStepRoutes.add(
+                                            SingleTwoStepRoute(
+                                                "2step_2p", src, sk,
+                                                src, other.name, pA,
+                                                pA, pB, null, target.name
+                                            )
+                                        )
+                                    }
+                                } else if (bridge?.name == pB) {
+                                    val key = "$src+${other.name}=>$pB+$pA"
+                                    if (!seenChains.contains(key)) {
+                                        seenChains.add(key)
+                                        singleTwoStepRoutes.add(
+                                            SingleTwoStepRoute(
+                                                "2step_2p", src, sk,
+                                                src, other.name, pB,
+                                                pB, pA, null, target.name
+                                            )
+                                        )
+                                    }
+                                }
+                            }
+                            if (singleTwoStepRoutes.size >= 8) break
+                        }
+                        if (singleTwoStepRoutes.size >= 8) break
+                    }
+                }
+                if (singleTwoStepRoutes.size >= 8) break
+            }
+        }
+
         _state.value = _state.value.copy(
             skillLearners = learners.sortedWith(compareBy({ it.skillName }, { it.level })),
             skillItemizers = itemizers,
-            skillMultiTrees = multiTrees
+            skillMultiTrees = multiTrees,
+            singleDirectRoutes = singleDirectRoutes,
+            singleTwoStepRoutes = singleTwoStepRoutes
         )
     }
 
@@ -490,11 +637,42 @@ class FusionViewModel : ViewModel() {
         return recipe.personas.sumOf { calculator.estimatePersonaCost(it.level ?: 0) }
     }
 
+    fun setRecipeSortOrder(order: RecipeSortOrder) {
+        _state.value = _state.value.copy(recipeSortOrder = order)
+    }
+
+    fun setRecipeSearchQuery(query: String) {
+        _state.value = _state.value.copy(recipeSearchQuery = query)
+    }
+
+    fun getFilteredAndSortedRecipes(): List<FusionRecipe> {
+        val raw = _state.value.fusionRecipes
+        val query = _state.value.recipeSearchQuery.trim()
+        val filtered = if (query.isBlank()) {
+            raw
+        } else {
+            raw.filter { recipe ->
+                recipe.personas.any { p ->
+                    p.name.contains(query, ignoreCase = true) ||
+                    (p.arcana?.contains(query, ignoreCase = true) == true)
+                }
+            }
+        }
+        return when (_state.value.recipeSortOrder) {
+            RecipeSortOrder.CHEAPEST -> filtered.sortedBy { getRecipeCost(it) }
+            RecipeSortOrder.MOST_EXPENSIVE -> filtered.sortedByDescending { getRecipeCost(it) }
+            RecipeSortOrder.LOWEST_LEVEL -> filtered.sortedBy { it.personas.sumOf { p -> p.level ?: 0 } }
+            RecipeSortOrder.HIGHEST_LEVEL -> filtered.sortedByDescending { it.personas.sumOf { p -> p.level ?: 0 } }
+        }
+    }
+
     fun clearSelection() {
         _state.value = _state.value.copy(
             selectedPersona = null,
             fusionType = null,
             fusionRecipes = emptyList(),
+            recipeSortOrder = RecipeSortOrder.CHEAPEST,
+            recipeSearchQuery = "",
             selectedIngredients = listOf(null, null, null),
             forwardResult = null,
             forwardSourcePersona = null,

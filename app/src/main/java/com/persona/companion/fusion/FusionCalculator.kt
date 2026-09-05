@@ -201,6 +201,10 @@ class FusionCalculator(
             }
         }
 
+        // Sort recipes by total cost ascending (cheapest first)
+        recipes.sortBy { recipe ->
+            recipe.personas.sumOf { estimatePersonaCost(it.level ?: 0) }
+        }
         return recipes
     }
 
@@ -280,26 +284,28 @@ class FusionCalculator(
 
         val seen = mutableSetOf<Triple<String, String, String>>()
 
-        for (i in allPersonas.indices) {
-            val p1 = allPersonas[i]
+        // Filter and sort ingredients strictly by level, then name
+        val fusablePersonas = allPersonas
+            .filter { it.name !in specialNames && it.fusion != "party" && it.fusion != "accident" && it.fusion != "special" && it.name !in elementDemonNames }
+            .sortedWith(compareBy({ it.level ?: 0 }, { it.name }))
+
+        for (i in fusablePersonas.indices) {
+            val p1 = fusablePersonas[i]
             val lvl1 = p1.level ?: continue
             val arc1 = p1.arcana ?: continue
-            if (p1.name in specialNames || p1.fusion == "party" || p1.fusion == "accident" || p1.fusion == "special" || p1.name in elementDemonNames) continue
 
-            for (j in i + 1 until allPersonas.size) {
-                val p2 = allPersonas[j]
+            for (j in i + 1 until fusablePersonas.size) {
+                val p2 = fusablePersonas[j]
                 val lvl2 = p2.level ?: continue
                 val arc2 = p2.arcana ?: continue
-                if (p2.name in specialNames || p2.fusion == "party" || p2.fusion == "accident" || p2.fusion == "special" || p2.name in elementDemonNames) continue
 
                 val tempArc = getResultArcana(arc1, arc2) ?: continue
                 if (tempArc.isBlank() || tempArc == "-") continue
 
-                for (k in j + 1 until allPersonas.size) {
-                    val p3 = allPersonas[k]
+                for (k in j + 1 until fusablePersonas.size) {
+                    val p3 = fusablePersonas[k]
                     val lvl3 = p3.level ?: continue
                     val arc3 = p3.arcana ?: continue
-                    if (p3.name in specialNames || p3.fusion == "party" || p3.fusion == "accident" || p3.fusion == "special" || p3.name in elementDemonNames) continue
 
                     val sum = lvl1 + lvl2 + lvl3
                     if (sum < minSum || sum > maxSum) continue
@@ -316,6 +322,11 @@ class FusionCalculator(
                     }
                 }
             }
+        }
+
+        // Sort by total cost ascending so the cheapest recipes are first!
+        recipes.sortBy { recipe ->
+            recipe.personas.sumOf { estimatePersonaCost(it.level ?: 0) }
         }
 
         return recipes

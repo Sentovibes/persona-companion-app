@@ -7,9 +7,11 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
@@ -28,10 +30,12 @@ import com.persona.companion.fusion.ForwardFusionOption
 import com.persona.companion.fusion.FusionRecipe
 import com.persona.companion.models.Persona
 import com.persona.companion.ui.theme.*
+import androidx.compose.foundation.lazy.LazyRow
 import com.persona.companion.ui.viewmodels.CalculatorMode
 import com.persona.companion.ui.viewmodels.ForwardSubTab
 import com.persona.companion.ui.viewmodels.FusionType
 import com.persona.companion.ui.viewmodels.FusionViewModel
+import com.persona.companion.ui.viewmodels.RecipeSortOrder
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -524,6 +528,117 @@ fun SkillRoutesView(
                                 fontWeight = FontWeight.ExtraBold,
                                 fontSize = 14.sp
                             )
+                        }
+                    }
+                }
+            }
+
+            // Section D: Single Direct Routes
+            if (state.singleDirectRoutes.isNotEmpty()) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Direct Inheritance Recipes (${state.singleDirectRoutes.size})",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                }
+                items(state.singleDirectRoutes) { route ->
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onPersonaDetailClick(route.targetName) },
+                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                        shape = RoundedCornerShape(10.dp),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp)) {
+                            Surface(
+                                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                shape = RoundedCornerShape(4.dp)
+                            ) {
+                                Text(
+                                    text = if (route.type == "special_direct") "Special Recipe" else "2-Persona Recipe",
+                                    color = MaterialTheme.colorScheme.primary,
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(6.dp))
+                            if (route.type == "special_direct") {
+                                Text("Ingredient: ${route.sourcePersona} [learns ${route.skill}]", color = Color(0xFF81C784), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                Text("With: ${route.allIngredients?.filter { it != route.sourcePersona }?.joinToString(", ")}", color = TextSecondary, fontSize = 12.sp)
+                            } else {
+                                Text("Ingredient: ${route.sourcePersona} [learns ${route.skill}]", color = Color(0xFF81C784), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                Text("+ Partner: ${route.partner}", color = Color(0xFF64B5F6), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            }
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text("=> Result: ${route.targetName} (Inherits skill!)", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+                        }
+                    }
+                }
+            }
+
+            // Section E: Single Two-Step Routes
+            if (state.singleTwoStepRoutes.isNotEmpty()) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Multi-Step Fusion Pathways (${state.singleTwoStepRoutes.size})",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                }
+                itemsIndexed(state.singleTwoStepRoutes) { index, route ->
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onPersonaDetailClick(route.step2Result) },
+                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                        shape = RoundedCornerShape(10.dp),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp)) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Surface(
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                                    shape = RoundedCornerShape(4.dp)
+                                ) {
+                                    Text("Pathway #${index + 1}", color = MaterialTheme.colorScheme.primary, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
+                                }
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("2 Steps", color = TextSecondary, fontSize = 12.sp)
+                            }
+                            Spacer(modifier = Modifier.height(8.dp))
+                            
+                            // Step 1
+                            Surface(color = Background, shape = RoundedCornerShape(6.dp)) {
+                                Column(modifier = Modifier.padding(8.dp).fillMaxWidth()) {
+                                    Text("Step 1: Learn ${route.skill}", color = TextSecondary, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text("${route.step1P1} [learns] + ${route.step1P2}", color = Color(0xFF81C784), fontSize = 12.sp)
+                                    Text("=> Result: ${route.step1Result}", color = TextPrimary, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                }
+                            }
+                            
+                            Icon(imageVector = Icons.Default.ArrowDownward, contentDescription = "Next Step", tint = TextSecondary, modifier = Modifier.align(Alignment.CenterHorizontally).padding(vertical = 4.dp).size(16.dp))
+                            
+                            // Step 2
+                            Surface(color = Background, shape = RoundedCornerShape(6.dp)) {
+                                Column(modifier = Modifier.padding(8.dp).fillMaxWidth()) {
+                                    Text("Step 2: Final Fusion", color = TextSecondary, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    if (route.type == "2step_special") {
+                                        Text("Special Recipe: ${route.step2SpecialRecipe?.joinToString(", ")}", color = Color(0xFF64B5F6), fontSize = 12.sp)
+                                    } else {
+                                        Text("${route.step2P1} [from Step 1] + ${route.step2P2}", color = Color(0xFF64B5F6), fontSize = 12.sp)
+                                    }
+                                    Text("=> Target: ${route.step2Result} (Inherits!)", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                }
+                            }
                         }
                     }
                 }
@@ -1466,7 +1581,8 @@ fun FusionResultsView(
     state: com.persona.companion.ui.viewmodels.FusionState
 ) {
     val target = state.selectedPersona ?: return
-    val recipes = state.fusionRecipes
+    val totalCount = state.fusionRecipes.size
+    val displayedRecipes = viewModel.getFilteredAndSortedRecipes()
 
     LazyColumn(
         modifier = Modifier
@@ -1488,7 +1604,11 @@ fun FusionResultsView(
                         color = TextPrimary
                     )
                     Text(
-                        text = "${recipes.size} combinations found",
+                        text = if (displayedRecipes.size == totalCount) {
+                            "$totalCount combinations found"
+                        } else {
+                            "Showing ${displayedRecipes.size} of $totalCount combinations"
+                        },
                         style = MaterialTheme.typography.bodySmall,
                         color = TextSecondary
                     )
@@ -1499,7 +1619,60 @@ fun FusionResultsView(
             }
         }
 
-        if (recipes.isEmpty()) {
+        if (totalCount > 0) {
+            item {
+                OutlinedTextField(
+                    value = state.recipeSearchQuery,
+                    onValueChange = { viewModel.setRecipeSearchQuery(it) },
+                    placeholder = { Text("Filter by ingredient...", color = TextSecondary) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search", tint = TextSecondary) },
+                    trailingIcon = {
+                        if (state.recipeSearchQuery.isNotEmpty()) {
+                            IconButton(onClick = { viewModel.setRecipeSearchQuery("") }) {
+                                Icon(Icons.Default.Close, contentDescription = "Clear", tint = TextSecondary)
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    shape = RoundedCornerShape(10.dp),
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = MaterialTheme.colorScheme.primary,
+                        unfocusedBorderColor = Hairline,
+                        focusedTextColor = TextPrimary,
+                        unfocusedTextColor = TextPrimary
+                    )
+                )
+            }
+
+            item {
+                LazyRow(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    items(RecipeSortOrder.values()) { order ->
+                        val selected = state.recipeSortOrder == order
+                        FilterChip(
+                            selected = selected,
+                            onClick = { viewModel.setRecipeSortOrder(order) },
+                            label = {
+                                Text(
+                                    order.label,
+                                    fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                                    fontSize = 12.sp
+                                )
+                            },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f),
+                                selectedLabelColor = MaterialTheme.colorScheme.primary
+                            )
+                        )
+                    }
+                }
+            }
+        }
+
+        if (displayedRecipes.isEmpty()) {
             item {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
@@ -1508,7 +1681,7 @@ fun FusionResultsView(
                 ) {
                     Box(modifier = Modifier.padding(28.dp), contentAlignment = Alignment.Center) {
                         Text(
-                            text = "No fusion combinations available.",
+                            text = if (totalCount == 0) "No fusion combinations available." else "No recipes match \"${state.recipeSearchQuery}\".",
                             color = TextSecondary,
                             style = MaterialTheme.typography.bodyMedium
                         )
@@ -1516,23 +1689,46 @@ fun FusionResultsView(
                 }
             }
         } else {
-            items(recipes) { recipe ->
-                FusionRecipeCard(recipe = recipe, viewModel = viewModel)
+            itemsIndexed(displayedRecipes) { index, recipe ->
+                val isCheapest = (index == 0 && state.recipeSortOrder == RecipeSortOrder.CHEAPEST)
+                FusionRecipeCard(recipe = recipe, viewModel = viewModel, isCheapest = isCheapest)
             }
         }
     }
 }
 
 @Composable
-fun FusionRecipeCard(recipe: FusionRecipe, viewModel: FusionViewModel) {
+fun FusionRecipeCard(
+    recipe: FusionRecipe,
+    viewModel: FusionViewModel,
+    isCheapest: Boolean = false
+) {
     val cost = viewModel.getRecipeCost(recipe)
     Card(
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         shape = RoundedCornerShape(10.dp),
-        border = androidx.compose.foundation.BorderStroke(1.dp, Hairline),
+        border = androidx.compose.foundation.BorderStroke(
+            1.dp,
+            if (isCheapest) Color(0xFF4CAF50).copy(alpha = 0.7f) else Hairline
+        ),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(14.dp)) {
+            if (isCheapest) {
+                Surface(
+                    color = Color(0xFF4CAF50).copy(alpha = 0.15f),
+                    shape = RoundedCornerShape(4.dp),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                ) {
+                    Text(
+                        text = "★ CHEAPEST OPTION",
+                        color = Color(0xFF4CAF50),
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                    )
+                }
+            }
             recipe.personas.forEachIndexed { i, p ->
                 if (i > 0) {
                     Text("+", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold, modifier = Modifier.padding(vertical = 2.dp))
@@ -1553,7 +1749,7 @@ fun FusionRecipeCard(recipe: FusionRecipe, viewModel: FusionViewModel) {
             ) {
                 Text(
                     text = "Total Cost: ¥ " + String.format("%,d", cost),
-                    color = Color(0xFFFFD700),
+                    color = if (isCheapest) Color(0xFF4CAF50) else Color(0xFFFFD700),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold
                 )

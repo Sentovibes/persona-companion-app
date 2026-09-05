@@ -2563,10 +2563,10 @@
       },
       {
         "id": "3",
-        "title": "Rank 3: Gdon with Beast Weaver",
-        "requirement": "Gdon (Sun) with Beast Weaver",
+        "title": "Rank 3: Gdon with Rampage",
+        "requirement": "Gdon (Sun) with Rampage",
         "reward": "Empress Social Link Rank 3",
-        "walkthrough": "Fuse Ares (Chariot) with Shiisaa (Hierophant). Ares knows Beast Weaver from the start; simply inherit the skill during the fusion."
+        "walkthrough": "Fuse Ares (Chariot) with Shiisaa (Hierophant). Ares knows Rampage from the start; simply inherit the skill during the fusion."
       },
       {
         "id": "4",
@@ -3197,10 +3197,10 @@
       },
       {
         "id": "3",
-        "title": "Rank 3: Gdon with Beast Weaver",
-        "requirement": "Gdon (Sun) with Beast Weaver",
+        "title": "Rank 3: Gdon with Rampage",
+        "requirement": "Gdon (Sun) with Rampage",
         "reward": "Empress Social Link Rank 3",
-        "walkthrough": "Fuse Ares (Chariot) with Shiisaa (Hierophant). Ares knows Beast Weaver from the start; simply inherit the skill during the fusion."
+        "walkthrough": "Fuse Ares (Chariot) with Shiisaa (Hierophant). Ares knows Rampage from the start; simply inherit the skill during the fusion."
       },
       {
         "id": "4",
@@ -3687,70 +3687,70 @@
         "title": "Rank 1: Jack Frost with Mabufu",
         "requirement": "Jack Frost (Magician) with Mabufu",
         "reward": "Strength Social Link Rank 1, Unlocks Group Guillotine",
-        "walkthrough": "Fuse Berith (Hierophant) with Silky (Priestess). Alternatively, level Jack Frost to level 12 to learn Mabufu naturally."
+        "walkthrough": "Fuse Berith (Hierophant) with Apsaras (Priestess) OR Mokoi (Death) with Apsaras (Priestess) OR Silky (Priestess) with Berith. Alternatively, level Jack Frost to level 12 to learn Mabufu naturally."
       },
       {
         "id": "2",
-        "title": "Rank 2: Shiisaa with Frei",
-        "requirement": "Shiisaa (Chariot) with Frei",
+        "title": "Rank 2: Ame no Uzume with Frei",
+        "requirement": "Ame-no-Uzume (Lovers) with Frei",
         "reward": "Strength Social Link Rank 2",
-        "walkthrough": "Fuse Jack-o'-Lantern (Magician) with Makami (Temperance). Makami knows Frei, inherit it during fusion."
+        "walkthrough": "Fuse Suzaku (Sun) with Berith (Hierophant) OR Cait Sith (Magician) with Succubus (Moon) and use a Frei Skill Card."
       },
       {
         "id": "3",
-        "title": "Rank 3: Matador with Magaru",
-        "requirement": "Matador (Death) with Magaru",
+        "title": "Rank 3: Flauros with Tarukaja",
+        "requirement": "Flauros (Devil) with Tarukaja",
         "reward": "Strength Social Link Rank 3, Unlocks Lockdown",
-        "walkthrough": "Fuse Nekomata (Magician) with Obariyon (Fool). Nekomata knows Magaru, inherit it."
+        "walkthrough": "Advanced Guillotine fusion: Berith (Hierophant) + Orobas (Hierophant) + Eligor (Emperor). Eligor needs to be level 16 to learn Tarukaja, inherit it during fusion."
       },
       {
         "id": "4",
-        "title": "Rank 4: Flauros with Tarukaja",
-        "requirement": "Flauros (Devil) with Tarukaja",
+        "title": "Rank 4: Phoenix with Counter",
+        "requirement": "Phoenix (Hierophant) with Counter",
         "reward": "Strength Social Link Rank 4",
-        "walkthrough": "Advanced Guillotine fusion: Berith + Andras + Eligor. Eligor has Tarukaja naturally, inherit it."
+        "walkthrough": "Fuse Jack-o'-Lantern (Magician) with Hua Po (Hanged Man) to create Yaksini. Then fuse Yaksini (Empress) with Kelpie (Strength), inheriting Counter from Yaksini."
       },
       {
         "id": "5",
-        "title": "Rank 5: Ame-no-Uzume with Dodge Psy",
-        "requirement": "Ame-no-Uzume (Lovers) with Dodge Psy",
-        "reward": "Strength Social Link Rank 5, Unlocks Guillotine Booster",
-        "walkthrough": "Fuse Kin-Ki (Chariot) with Sui-Ki (Chariot). Sui-Ki learns Dodge Psy at level 27, level him up and inherit the skill."
+        "title": "Rank 5: Setanta with Rakukaja",
+        "requirement": "Setanta (Emperor) with Rakukaja",
+        "reward": "Strength Social Link Rank 5, Unlocks Special Treatment",
+        "walkthrough": "Fuse Silky (Priestess) with Lamia (Empress). Inherit Rakukaja."
       },
       {
         "id": "6",
         "title": "Rank 6: Neko Shogun with Dekaja",
         "requirement": "Neko Shogun (Star) with Dekaja",
         "reward": "Strength Social Link Rank 6",
-        "walkthrough": "Advanced Guillotine fusion: Kodama + Sudama + Anzu. First fuse Orobas (knows Dekaja) with Kodama to get Sudama with Dekaja. Then complete the fusion."
+        "walkthrough": "Advanced Guillotine fusion: Kodama + Sudama + Anzu. Anzu learns Dekaja at level 28, boost it there and inherit the skill."
       },
       {
         "id": "7",
         "title": "Rank 7: Lachesis with Tetraja",
         "requirement": "Lachesis (Fortune) with Tetraja",
         "reward": "Strength Social Link Rank 7",
-        "walkthrough": "Fuse Koppu Tengu (who knows Tetraja) with Pixie to make Clotho with Tetraja. Then fuse Clotho with Regent or Stone of Scone to get Lachesis."
+        "walkthrough": "Fuse Clotho (Fortune) at level 28 (learns Tetraja) with Regent (Emperor) OR Clotho with Stone of Scone OR fuse Principality with Succubus to get Lilim, then Lilim with Take-Minataka."
       },
       {
         "id": "8",
-        "title": "Rank 8: Hecatoncheires with Masukukaja",
-        "requirement": "Hecatoncheires (Hanged Man) with Masukukaja",
-        "reward": "Strength Social Link Rank 8, Unlocks Isolation",
-        "walkthrough": "Fuse Lilim (Devil) with Anzu (Hierophant). Lilim learns Masukukaja at level 34, level her up first and inherit it."
+        "title": "Rank 8: Hecatoncheires with Masukunda",
+        "requirement": "Hecatoncheires (Hanged Man) with Masukunda",
+        "reward": "Strength Social Link Rank 8, Unlocks Guillotine Booster",
+        "walkthrough": "Get a Lilim (Devil) to level 34 to learn Masukunda. Fuse Lilim with Anzu (Hierophant) OR Lilim with Daisoujou OR Clotho with Red Rider OR Clotho with Belphegor. You can also use a Masukunda Skill Card."
       },
       {
         "id": "9",
-        "title": "Rank 9: Bugs with Samarearm",
-        "requirement": "Bugs (Fool) with Samarearm",
+        "title": "Rank 9: Bugs with Samarecarm",
+        "requirement": "Bugs (Fool) with Samarecarm",
         "reward": "Strength Social Link Rank 9",
-        "walkthrough": "Advanced Guillotine fusion: Pixie + Pisaca + Hariti. Hariti learns Samarearm at level 41. Level Hariti up first and inherit it."
+        "walkthrough": "Complete 'The Lovesick Cyberstalking Girl' request. Advanced Guillotine fusion: Pixie + Pisaca + Hariti. Hariti learns Samarecarm at level 41. Level Hariti up and inherit it."
       },
       {
         "id": "10",
         "title": "Rank 10: Seth with High Counter",
         "requirement": "Seth (Tower) with High Counter",
-        "reward": "Strength Social Link Rank 10, Unlocks Special Treatment & Zaou-Gongen",
-        "walkthrough": "Advanced Guillotine fusion: Isis + Anubis + Thoth + Horus. You can obtain a High Counter Skill Card from request 'The Killer Who Cleans Up' on 10/14, or fuse Dakini (learns it at level 52) with Pale Rider to get Horus, inheriting High Counter."
+        "reward": "Strength Social Link Rank 10, Unlocks VIP Treatment & Zaou-Gongen",
+        "walkthrough": "Advanced Guillotine fusion: Isis + Thoth + Anubis + Horus. Use a High Counter Skill Card from 'The Killer Who Cleans Up Trash' request OR fuse Pazuzu and Dakini (with High Counter) to make Horus, and inherit High Counter."
       }
     ]
   },
@@ -4000,70 +4000,70 @@
         "title": "Rank 1: Jack Frost with Mabufu",
         "requirement": "Jack Frost (Magician) with Mabufu",
         "reward": "Strength Social Link Rank 1, Unlocks Group Guillotine",
-        "walkthrough": "Fuse Berith (Hierophant) with Silky (Priestess). Alternatively, level Jack Frost to level 12 to learn Mabufu naturally."
+        "walkthrough": "Fuse Berith (Hierophant) with Apsaras (Priestess) OR Mokoi (Death) with Apsaras (Priestess). Alternatively, level Jack Frost to level 12 to learn Mabufu naturally."
       },
       {
         "id": "2",
         "title": "Rank 2: Shiisaa with Frei",
         "requirement": "Shiisaa (Chariot) with Frei",
         "reward": "Strength Social Link Rank 2",
-        "walkthrough": "Fuse Jack-o'-Lantern (Magician) with Makami (Temperance). Makami knows Frei, inherit it during fusion."
+        "walkthrough": "Fuse Jack Frost (Magician) with Makami (Temperance). Makami has Frei, inherit it."
       },
       {
         "id": "3",
         "title": "Rank 3: Matador with Magaru",
         "requirement": "Matador (Death) with Magaru",
         "reward": "Strength Social Link Rank 3, Unlocks Lockdown",
-        "walkthrough": "Fuse Nekomata (Magician) with Obariyon (Fool). Nekomata knows Magaru, inherit it."
+        "walkthrough": "Fuse Mokoi (Death) with Regent OR Nekomata (Magician) with Obariyon (Fool). Inherit Magaru."
       },
       {
         "id": "4",
         "title": "Rank 4: Flauros with Tarukaja",
         "requirement": "Flauros (Devil) with Tarukaja",
         "reward": "Strength Social Link Rank 4",
-        "walkthrough": "Advanced Guillotine fusion: Berith + Andras + Eligor. Eligor has Tarukaja naturally, inherit it."
+        "walkthrough": "Advanced Guillotine fusion: Berith + Andras + Eligor. Inherit Tarukaja from Eligor."
       },
       {
         "id": "5",
         "title": "Rank 5: Ame-no-Uzume with Dodge Psy",
         "requirement": "Ame-no-Uzume (Lovers) with Dodge Psy",
         "reward": "Strength Social Link Rank 5, Unlocks Guillotine Booster",
-        "walkthrough": "Fuse Kin-Ki (Chariot) with Sui-Ki (Chariot). Sui-Ki learns Dodge Psy at level 27, level him up and inherit the skill."
+        "walkthrough": "Fuse Kin-Ki (Chariot) with Sui-Ki (Moon) OR Okuninushi with Sadama OR Arsene with Norn. Kin-Ki learns Dodge Psy at level 27."
       },
       {
         "id": "6",
         "title": "Rank 6: Neko Shogun with Dekaja",
         "requirement": "Neko Shogun (Star) with Dekaja",
         "reward": "Strength Social Link Rank 6",
-        "walkthrough": "Advanced Guillotine fusion: Kodama + Sudama + Anzu. First fuse Orobas (knows Dekaja) with Kodama to get Sudama with Dekaja. Then complete the fusion."
+        "walkthrough": "Advanced Guillotine fusion: Kodama + Sudama + Anzu. Anzu learns Dekaja at level 28, boost it there and inherit the skill."
       },
       {
         "id": "7",
         "title": "Rank 7: Lachesis with Tetraja",
         "requirement": "Lachesis (Fortune) with Tetraja",
         "reward": "Strength Social Link Rank 7",
-        "walkthrough": "Fuse Koppu Tengu (who knows Tetraja) with Pixie to make Clotho with Tetraja. Then fuse Clotho with Regent or Stone of Scone to get Lachesis."
+        "walkthrough": "Fuse Clotho (Fortune) at level 28 (learns Tetraja) with Regent OR Clotho with Stone of Scone OR fuse Principality with Succubus to get Lilim, then Lilim with Take-Minataka."
       },
       {
         "id": "8",
-        "title": "Rank 8: Hecatoncheires with Masukukaja",
-        "requirement": "Hecatoncheires (Hanged Man) with Masukukaja",
+        "title": "Rank 8: Hecatoncheires with Masukunda",
+        "requirement": "Hecatoncheires (Hanged Man) with Masukunda",
         "reward": "Strength Social Link Rank 8, Unlocks Isolation",
-        "walkthrough": "Fuse Lilim (Devil) with Anzu (Hierophant). Lilim learns Masukukaja at level 34, level her up first and inherit it."
+        "walkthrough": "Fuse Unicorn (Hierophant) with Lilim (Devil). Inherit Masukunda."
       },
       {
         "id": "9",
-        "title": "Rank 9: Bugs with Samarearm",
-        "requirement": "Bugs (Fool) with Samarearm",
+        "title": "Rank 9: Bugs with Samarecarm",
+        "requirement": "Bugs (Fool) with Samarecarm",
         "reward": "Strength Social Link Rank 9",
-        "walkthrough": "Advanced Guillotine fusion: Pixie + Pisaca + Hariti. Hariti learns Samarearm at level 41. Level Hariti up first and inherit it."
+        "walkthrough": "Complete 'The Lovesick Cyberstalking Girl' request. Advanced Guillotine fusion: Pixie + Pisaca + Hariti. Hariti learns Samarecarm at level 41. Level Hariti up and inherit it."
       },
       {
         "id": "10",
         "title": "Rank 10: Seth with High Counter",
         "requirement": "Seth (Tower) with High Counter",
-        "reward": "Strength Social Link Rank 10, Unlocks Special Treatment & Zaou-Gongen",
-        "walkthrough": "Advanced Guillotine fusion: Isis + Anubis + Thoth + Horus. You can obtain a High Counter Skill Card from request 'The Killer Who Cleans Up' on 10/14, or fuse Dakini (learns it at level 52) with Pale Rider to get Horus, inheriting High Counter."
+        "reward": "Strength Social Link Rank 10, Unlocks Zaou-Gongen",
+        "walkthrough": "Advanced Guillotine fusion: Isis + Thoth + Anubis + Horus. Use a High Counter Skill Card from 'The Killer Who Cleans Up Trash' request OR fuse Pazuzu and Dakini (with High Counter) to make Horus, and inherit High Counter."
       }
     ]
   },

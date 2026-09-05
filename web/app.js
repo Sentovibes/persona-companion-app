@@ -1695,25 +1695,35 @@ function showFusionDetailPane(color) {
     if (!recipes || !recipes.length) {
         html += `<div class="empty-state">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
     } else {
-        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
-        html += recipes.map(combo => {
+        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''} · cheapest first</div>`;
+        html += recipes.map((combo, idx) => {
+            const cost = getRecipeTotalCost(combo);
+            const isCheapest = idx === 0;
+            const cheapestBadge = isCheapest ? `<div style="font-size:10px;font-weight:bold;color:#4CAF50;margin-bottom:4px;width:100%">★ CHEAPEST OPTION</div>` : '';
+            const costHtml = `<div class="fusion-cost" style="display:flex;justify-content:flex-end;width:100%;margin-top:6px;font-size:11px;font-weight:bold;color:${isCheapest?'#4CAF50':'#FFD700'}">Total Cost: ¥ ${cost.toLocaleString()}</div>`;
             if (combo.length === 2) {
-                return `<div class="fusion-recipe-card" style="margin:0 0 8px">
-                    ${combo.map((ing, i) => `
-                        ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
-                        <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                        </div>`).join('')}
+                return `<div class="fusion-recipe-card" style="margin:0 0 8px;flex-direction:column;align-items:stretch;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                    ${cheapestBadge}
+                    <div style="display:flex;align-items:center;width:100%">
+                        ${combo.map((ing, i) => `
+                            ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
+                            <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
+                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            </div>`).join('')}
+                    </div>
+                    ${costHtml}
                 </div>`;
             } else {
-                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="margin:0 0 8px">
+                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="margin:0 0 8px;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                    ${cheapestBadge}
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
                         <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
                             <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
                             <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
                         </div>`).join('')}
+                    ${costHtml}
                 </div>`;
             }
         }).join('');
@@ -1749,25 +1759,35 @@ function renderFusionResults(color) {
     if (!recipes || !recipes.length) {
         html += `<div class="empty-state" style="margin-top:24px">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
     } else {
-        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''}${recipes.length===60&&S.fusion.isTriangle?' · first 60 shown':''}</div>`;
-        html += recipes.map(combo => {
+        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''} · cheapest first</div>`;
+        html += recipes.map((combo, idx) => {
+            const cost = getRecipeTotalCost(combo);
+            const isCheapest = idx === 0;
+            const cheapestBadge = isCheapest ? `<div style="font-size:10px;font-weight:bold;color:#4CAF50;margin-bottom:4px;width:100%">★ CHEAPEST OPTION</div>` : '';
+            const costHtml = `<div class="fusion-cost" style="display:flex;justify-content:flex-end;width:100%;margin-top:6px;font-size:11px;font-weight:bold;color:${isCheapest?'#4CAF50':'#FFD700'}">Total Cost: ¥ ${cost.toLocaleString()}</div>`;
             if (combo.length === 2) {
-                return `<div class="fusion-recipe-card">
-                    ${combo.map((ing, i) => `
-                        ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
-                        <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                        </div>`).join('')}
+                return `<div class="fusion-recipe-card" style="flex-direction:column;align-items:stretch;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                    ${cheapestBadge}
+                    <div style="display:flex;align-items:center;width:100%">
+                        ${combo.map((ing, i) => `
+                            ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
+                            <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
+                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            </div>`).join('')}
+                    </div>
+                    ${costHtml}
                 </div>`;
             } else {
-                return `<div class="fusion-recipe-card fusion-recipe-card--vertical">
+                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                    ${cheapestBadge}
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
                         <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
                             <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
                             <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
                         </div>`).join('')}
+                    ${costHtml}
                 </div>`;
             }
         }).join('');
@@ -1870,11 +1890,21 @@ function calcFusionRecipes(targetName) {
             }
         }
     }
-    return recipes.sort((a, b) => {
-        const costA = (a[0].data.level ?? a[0].data.lvl ?? 0) + (a[1].data.level ?? a[1].data.lvl ?? 0);
-        const costB = (b[0].data.level ?? b[0].data.lvl ?? 0) + (b[1].data.level ?? b[1].data.lvl ?? 0);
-        return costA - costB;
-    });
+    return recipes.sort((a, b) => getRecipeTotalCost(a) - getRecipeTotalCost(b));
+}
+
+function estimatePersonaCost(lvl) {
+    const l = Number(lvl) || 1;
+    return 27 * l * l + 120 * l + 2000;
+}
+
+function getRecipeTotalCost(combo) {
+    if (combo && combo.totalCost) return combo.totalCost;
+    if (!Array.isArray(combo)) return 0;
+    return combo.reduce((sum, ing) => {
+        const lvl = ing.data?.level ?? ing.data?.lvl ?? 1;
+        return sum + estimatePersonaCost(lvl);
+    }, 0);
 }
 
 function calcTriangleRecipes(targetName) {
@@ -1882,20 +1912,81 @@ function calcTriangleRecipes(targetName) {
     const { personaMap, byArcana, specialData } = S.fusion;
     const target = personaMap[targetName];
     if (!target) return recipes;
-    const allFusable = Object.values(personaMap).filter(p => !['party','accident','special'].includes(p.fusion) && !specialData[p.name]);
-    for (let i = 0; i < allFusable.length; i++) {
-        for (let j = i + 1; j < allFusable.length; j++) {
-            for (let k = j + 1; k < allFusable.length; k++) {
-                const names = [allFusable[i].name, allFusable[j].name, allFusable[k].name];
-                const res = calcForwardFusionWeb(names);
-                if (res && res.name === targetName) {
-                    recipes.push(names.map(n => ({ name: n, data: personaMap[n] })));
-                    if (recipes.length >= 60) return recipes;
+    const targetArcana = target.arcana || target.race;
+    const targetLvl = target.level ?? target.lvl ?? 0;
+    if (!targetArcana) return recipes;
+
+    const fusable = Object.values(personaMap)
+        .filter(p => !['party','accident','special'].includes(p.fusion) && !specialData[p.name])
+        .sort((a, b) => {
+            const lvlA = a.level ?? a.lvl ?? 0;
+            const lvlB = b.level ?? b.lvl ?? 0;
+            return (lvlA - lvlB) || a.name.localeCompare(b.name);
+        });
+
+    const targetList = (byArcana[targetArcana] || [])
+        .filter(p => !specialData[p.name] && !['party','accident','special'].includes(p.data?.fusion || p.fusion))
+        .map(p => ({ name: p.name, data: p.data || p, lvl: (p.data?.level ?? p.data?.lvl ?? p.level ?? p.lvl ?? 0) }))
+        .sort((a, b) => a.lvl - b.lvl);
+
+    const targetIdx = targetList.findIndex(p => p.name === targetName);
+    const minCalcLvl = targetIdx > 0 ? targetList[targetIdx - 1].lvl + 1 : 0;
+    const maxCalcLvl = (targetIdx >= 0 && targetIdx < targetList.length - 1) ? targetLvl : 200;
+    const minSum = 3 * (minCalcLvl - 5);
+    const maxSum = 3 * (maxCalcLvl - 4) - 1;
+
+    for (let i = 0; i < fusable.length; i++) {
+        const p1 = fusable[i];
+        const lvl1 = p1.level ?? p1.lvl ?? 0;
+        const arc1 = p1.arcana || p1.race;
+        if (!arc1) continue;
+
+        for (let j = i + 1; j < fusable.length; j++) {
+            const p2 = fusable[j];
+            const lvl2 = p2.level ?? p2.lvl ?? 0;
+            const arc2 = p2.arcana || p2.race;
+            if (!arc2) continue;
+
+            const tempArc = arc1 === arc2 ? arc1 : getResultArcanaWeb(arc1, arc2);
+            if (!tempArc || tempArc === '-') continue;
+
+            for (let k = j + 1; k < fusable.length; k++) {
+                const p3 = fusable[k];
+                const lvl3 = p3.level ?? p3.lvl ?? 0;
+                const arc3 = p3.arcana || p3.race;
+                if (!arc3) continue;
+
+                const sum = lvl1 + lvl2 + lvl3;
+                if (sum < minSum || sum > maxSum) continue;
+
+                const finalArc = getResultArcanaWeb(tempArc, arc3);
+                if (finalArc !== targetArcana) continue;
+
+                const calcLvl = Math.floor(sum / 3) + 5;
+                const cand = targetList.find(p => p.name !== p1.name && p.name !== p2.name && p.name !== p3.name && p.lvl >= calcLvl);
+                const match = cand || targetList.filter(p => p.name !== p1.name && p.name !== p2.name && p.name !== p3.name).slice(-1)[0];
+                if (match && match.name === targetName) {
+                    const cost = estimatePersonaCost(lvl1) + estimatePersonaCost(lvl2) + estimatePersonaCost(lvl3);
+                    recipes.push({
+                        ingredients: [
+                            { name: p1.name, data: p1 },
+                            { name: p2.name, data: p2 },
+                            { name: p3.name, data: p3 }
+                        ],
+                        cost
+                    });
                 }
             }
         }
     }
-    return recipes;
+
+    recipes.sort((a, b) => a.cost - b.cost);
+
+    return recipes.slice(0, 100).map(r => {
+        const combo = r.ingredients;
+        combo.totalCost = r.cost;
+        return combo;
+    });
 }
 
 /* ── Forward Fusion Functions (Combine Ingredients & Explore Outputs) ────── */
