@@ -1,4 +1,4 @@
-# Release Notes - v7.1.3
+# Release Notes - v7.1.2
 
 ## 16 KB Alignment, Fusion Calculator Upgrades & Quest Accuracy
 
@@ -17,6 +17,10 @@
 ### Margaret Fusion Guide Correction (P4 & P4G)
 - **Rank 3 Request Correction**: Corrected Margaret's Empress Rank 3 requirement from the erroneous *Gdon with Beast Weaver* to the canonical *Gdon with Rampage*.
 - **Fusion Walkthrough Verified**: Updated walkthrough instructions to fuse Ares (Chariot) with Shiisaa (Hierophant), inheriting Rampage.
+
+---
+
+**Full Changelog**: https://github.com/Sentovibes/persona-companion-app/compare/v7.1.1...v7.1.2
 
 ---
 
