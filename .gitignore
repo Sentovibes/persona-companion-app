@@ -19,6 +19,7 @@ release/
 # Gradle files
 .gradle/
 build/
+wear/src/main/assets/
 gradle-app.setting
 !gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.jar
