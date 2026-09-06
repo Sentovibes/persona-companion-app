@@ -1,3 +1,12 @@
+# Release Notes - v7.1.5
+
+## Standalone Wear OS Companion App Release
+- **Dedicated Wear OS Module**: Launched standalone companion module (`:wear`) for Wear OS 4 & 5 devices (Samsung Galaxy Watch, Google Pixel Watch, and other Wear OS smartwatches).
+- **Controller-Friendly Gaming Cheat-Sheet**: Instant wrist access to Classroom & Exam answers, Enemy weakness calculator with category filtering (Normal, Mini-Boss, Boss), and Social Link / Confidant best dialogue answers.
+- **Hardware & Bezel Optimization**: Native rotary touch bezel and crown scrolling support with pure OLED battery optimization.
+
+---
+
 # Release Notes - v7.1.4
 
 ## Fusion Calculator Precision Fix (Android & Web)
