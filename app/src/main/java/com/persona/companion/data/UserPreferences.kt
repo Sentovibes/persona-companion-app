@@ -61,8 +61,8 @@ class UserPreferences(context: Context) {
     // Recently viewed - Personas
     fun getRecentPersonas(): List<RecentItem> {
         val json = prefs.getString("recent_personas", "[]") ?: "[]"
-        val type = object : TypeToken<List<RecentItem>>() {}.type
-        return gson.fromJson(json, type)
+        val type = TypeToken.getParameterized(List::class.java, RecentItem::class.java).type
+        return gson.fromJson(json, type) ?: emptyList()
     }
     fun addRecentPersona(seriesId: String, gameId: String, personaName: String) {
         val recents = getRecentPersonas().toMutableList()
@@ -76,8 +76,8 @@ class UserPreferences(context: Context) {
     // Recently viewed - Enemies
     fun getRecentEnemies(): List<RecentItem> {
         val json = prefs.getString("recent_enemies", "[]") ?: "[]"
-        val type = object : TypeToken<List<RecentItem>>() {}.type
-        return gson.fromJson(json, type)
+        val type = TypeToken.getParameterized(List::class.java, RecentItem::class.java).type
+        return gson.fromJson(json, type) ?: emptyList()
     }
     fun addRecentEnemy(seriesId: String, gameId: String, enemyName: String) {
         val recents = getRecentEnemies().toMutableList()

@@ -22,7 +22,10 @@ object SpecialFusionLoader {
         
         return try {
             val json = context.assets.open(specialPath).bufferedReader().use { it.readText() }
-            Gson().fromJson(json, object : TypeToken<Map<String, List<List<String>>>>() {}.type)
+            val innerList = TypeToken.getParameterized(List::class.java, String::class.java).type
+            val outerList = TypeToken.getParameterized(List::class.java, innerList).type
+            val mapType = TypeToken.getParameterized(Map::class.java, String::class.java, outerList).type
+            Gson().fromJson(json, mapType) ?: emptyMap()
         } catch (e: Exception) {
             emptyMap()
         }

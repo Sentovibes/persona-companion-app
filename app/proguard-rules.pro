@@ -6,6 +6,12 @@
 -keep class com.persona.companion.data.imagedownload.** { *; }
 -keep class com.persona.companion.data.database.** { *; }
 -keep class com.persona.companion.fusion.** { *; }
+-keep class com.persona.companion.data.repositories.** { *; }
+
+# Keep serialized fields
+-keepclassmembers,allowobfuscation class * {
+    @com.google.gson.annotations.SerializedName <fields>;
+}
 
 # Gson uses reflection on TypeToken
 -keepattributes Signature
@@ -14,6 +20,8 @@
 -keepattributes SourceFile,LineNumberTable
 -renamesourcefileattribute SourceFile
 -dontwarn sun.misc.**
+-keep class com.google.gson.reflect.TypeToken { *; }
+-keep class * extends com.google.gson.reflect.TypeToken { *; }
 -keep class com.google.gson.** { *; }
 -keep class * extends com.google.gson.TypeAdapter
 -keep class * implements com.google.gson.TypeAdapterFactory
