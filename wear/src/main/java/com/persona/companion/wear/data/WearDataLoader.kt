@@ -120,6 +120,9 @@ object WearDataLoader {
                 val resists = obj.optString("resists", "")
                 val area = obj.optString("area", "")
 
+                val isBoss = obj.optBoolean("isBoss", false) || area.equals("Boss", ignoreCase = true)
+                val isMiniBoss = obj.optBoolean("isMiniBoss", false) || area.contains("Mini-Boss", ignoreCase = true)
+
                 val weaknesses = mutableListOf<String>()
                 val resistances = mutableListOf<Pair<String, String>>()
 
@@ -151,7 +154,9 @@ object WearDataLoader {
                             level = level,
                             weaknesses = weaknesses,
                             resistances = resistances,
-                            area = area
+                            area = area,
+                            isBoss = isBoss,
+                            isMiniBoss = isMiniBoss
                         )
                     )
                 }

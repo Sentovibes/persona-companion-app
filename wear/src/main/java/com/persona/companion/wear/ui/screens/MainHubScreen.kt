@@ -22,6 +22,7 @@ import androidx.wear.compose.material.TimeText
 import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.models.WearGame
+import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.WearDarkGray
 import com.persona.companion.wear.ui.theme.WearLightGray
 import com.persona.companion.wear.ui.theme.getGameAccentColor
@@ -43,7 +44,9 @@ fun MainHubScreen(
         positionIndicator = { PositionIndicator(scalingLazyListState = listState) }
     ) {
         ScalingLazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .rotaryScroll(listState),
             state = listState
         ) {
             item {
@@ -72,14 +75,14 @@ fun MainHubScreen(
                     ),
                     label = {
                         Text(
-                            text = selectedGame.shortTitle,
+                            text = selectedGame.title,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp
+                            fontSize = 13.sp
                         )
                     },
                     secondaryLabel = {
                         Text(
-                            text = "Tap to switch game",
+                            text = "Switch Series / Game",
                             fontSize = 10.sp,
                             color = WearLightGray
                         )
@@ -100,14 +103,14 @@ fun MainHubScreen(
                     ),
                     label = {
                         Text(
-                            text = "📝 Classroom & Exams",
+                            text = "Classroom & Exams",
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp
                         )
                     },
                     secondaryLabel = {
                         Text(
-                            text = "Answers cheat-sheet",
+                            text = "Questions & Answers",
                             fontSize = 10.sp,
                             color = WearLightGray
                         )
@@ -128,14 +131,14 @@ fun MainHubScreen(
                     ),
                     label = {
                         Text(
-                            text = "⚔️ Enemy Weaknesses",
+                            text = "Enemy Calculator",
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp
                         )
                     },
                     secondaryLabel = {
                         Text(
-                            text = "Elemental affinities",
+                            text = "Weaknesses & Resistances",
                             fontSize = 10.sp,
                             color = WearLightGray
                         )
@@ -156,14 +159,14 @@ fun MainHubScreen(
                     ),
                     label = {
                         Text(
-                            text = "🤝 Social Links",
+                            text = "Social Links",
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp
                         )
                     },
                     secondaryLabel = {
                         Text(
-                            text = "Best dialogue answers",
+                            text = "Best Dialogue Choices",
                             fontSize = 10.sp,
                             color = WearLightGray
                         )

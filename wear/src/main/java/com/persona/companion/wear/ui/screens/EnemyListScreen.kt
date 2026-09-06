@@ -1,5 +1,10 @@
 package com.persona.companion.wear.ui.screens
 
+import android.app.Activity
+import android.content.Intent
+import android.speech.RecognizerIntent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -33,6 +38,9 @@ import androidx.compose.ui.unit.sp
 import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
+import androidx.wear.compose.material.Chip
+import androidx.wear.compose.material.ChipDefaults
+import androidx.wear.compose.material.CompactChip
 import androidx.wear.compose.material.ListHeader
 import androidx.wear.compose.material.PositionIndicator
 import androidx.wear.compose.material.Scaffold
@@ -42,6 +50,7 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.data.WearDataLoader
 import com.persona.companion.wear.models.WearEnemyItem
+import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.DrainColor
 import com.persona.companion.wear.ui.theme.NullColor
 import com.persona.companion.wear.ui.theme.P4Gold
@@ -51,6 +60,13 @@ import com.persona.companion.wear.ui.theme.WeakColor
 import com.persona.companion.wear.ui.theme.WearDarkGray
 import com.persona.companion.wear.ui.theme.WearLightGray
 import com.persona.companion.wear.ui.theme.WearMediumGray
+import com.persona.companion.wear.ui.theme.getGameAccentColor
+
+enum class EnemyCategory {
+    ENEMIES,
+    MINI_BOSSES,
+    MAIN_BOSSES
+}
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -59,12 +75,25 @@ fun EnemyListScreen(
 ) {
     val context = LocalContext.current
     val listState = rememberScalingLazyListState()
+    val accent = getGameAccentColor(gameId)
 
-    val enemies by produceState<List<WearEnemyItem>>(initialValue = emptyList(), key1 = gameId) {
+    val allEnemies by produceState<List<WearEnemyItem>>(initialValue = emptyList(), key1 = gameId) {
         value = WearDataLoader.loadEnemies(context, gameId)
     }
 
+    var selectedCategory by remember { mutableStateOf(EnemyCategory.ENEMIES) }
+    var searchQuery by remember { mutableStateOf("") }
     var selectedEnemy by remember { mutableStateOf<WearEnemyItem?>(null) }
+
+    val voiceSearchLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val results = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+            val spokenText = results?.firstOrNull() ?: ""
+            searchQuery = spokenText.trim()
+        }
+    }
 
     Scaffold(
         timeText = { TimeText() },
@@ -78,6 +107,7 @@ fun EnemyListScreen(
             ScalingLazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
+                    .rotaryScroll(detailListState)
                     .clickable { selectedEnemy = null },
                 state = detailListState
             ) {
@@ -106,7 +136,7 @@ fun EnemyListScreen(
                 if (enemy.area.isNotEmpty()) {
                     item {
                         Text(
-                            text = "📍 ${enemy.area}",
+                            text = "Location: ${enemy.area}",
                             color = WearLightGray,
                             fontSize = 10.sp,
                             textAlign = TextAlign.Center,
@@ -224,7 +254,7 @@ fun EnemyListScreen(
 
                 item {
                     Text(
-                        text = "Tap anywhere to go back",
+                        text = "Tap anywhere to return",
                         color = WearLightGray,
                         fontSize = 10.sp,
                         textAlign = TextAlign.Center,
@@ -235,14 +265,38 @@ fun EnemyListScreen(
                 }
             }
         } else {
+            // Category counts
+            val regularEnemies = allEnemies.filter { !it.isBoss && !it.isMiniBoss }
+            val miniBosses = allEnemies.filter { it.isMiniBoss }
+            val mainBosses = allEnemies.filter { it.isBoss }
+
+            val currentCategoryList = when (selectedCategory) {
+                EnemyCategory.ENEMIES -> regularEnemies
+                EnemyCategory.MINI_BOSSES -> miniBosses
+                EnemyCategory.MAIN_BOSSES -> mainBosses
+            }
+
+            val displayList = if (searchQuery.isBlank()) {
+                currentCategoryList
+            } else {
+                currentCategoryList.filter {
+                    it.name.contains(searchQuery, ignoreCase = true) ||
+                            it.arcana.contains(searchQuery, ignoreCase = true) ||
+                            it.area.contains(searchQuery, ignoreCase = true)
+                }
+            }
+
             ScalingLazyColumn(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .rotaryScroll(listState),
                 state = listState
             ) {
+                // Header
                 item {
                     ListHeader {
                         Text(
-                            text = "Enemies (${enemies.size})",
+                            text = "Enemy Calculator",
                             color = WearLightGray,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
@@ -252,19 +306,138 @@ fun EnemyListScreen(
                     }
                 }
 
-                if (enemies.isEmpty()) {
-                    item {
-                        Text(
-                            text = "Loading enemies...",
-                            color = WearLightGray,
-                            fontSize = 12.sp,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.fillMaxWidth()
+                // Search Bar Chip
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 4.dp, vertical = 2.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Chip(
+                            modifier = Modifier.weight(1f),
+                            onClick = {
+                                try {
+                                    val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                                        putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                                        putExtra(RecognizerIntent.EXTRA_PROMPT, "Search Enemy Name")
+                                    }
+                                    voiceSearchLauncher.launch(intent)
+                                } catch (e: Exception) {
+                                    // Fallback if voice search not supported
+                                }
+                            },
+                            colors = ChipDefaults.chipColors(
+                                backgroundColor = if (searchQuery.isNotEmpty()) accent.copy(alpha = 0.2f) else WearDarkGray,
+                                contentColor = if (searchQuery.isNotEmpty()) accent else Color.White
+                            ),
+                            label = {
+                                Text(
+                                    text = if (searchQuery.isEmpty()) "Search..." else "Search: $searchQuery",
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                        )
+                        if (searchQuery.isNotEmpty()) {
+                            CompactChip(
+                                modifier = Modifier.padding(start = 4.dp),
+                                onClick = { searchQuery = "" },
+                                colors = ChipDefaults.chipColors(
+                                    backgroundColor = WearDarkGray,
+                                    contentColor = Color.White
+                                ),
+                                label = { Text("X", fontSize = 10.sp, fontWeight = FontWeight.Bold) }
+                            )
+                        }
+                    }
+                }
+
+                // 3 Category Tabs: Enemies | Mini-Bosses | Bosses
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 2.dp, vertical = 3.dp),
+                        horizontalArrangement = Arrangement.spacedBy(3.dp)
+                    ) {
+                        val tabEnemies = selectedCategory == EnemyCategory.ENEMIES
+                        val tabMini = selectedCategory == EnemyCategory.MINI_BOSSES
+                        val tabBoss = selectedCategory == EnemyCategory.MAIN_BOSSES
+
+                        CompactChip(
+                            modifier = Modifier.weight(1f),
+                            onClick = { selectedCategory = EnemyCategory.ENEMIES },
+                            colors = ChipDefaults.chipColors(
+                                backgroundColor = if (tabEnemies) accent else WearDarkGray,
+                                contentColor = if (tabEnemies) Color.Black else Color.White
+                            ),
+                            label = {
+                                Text(
+                                    text = "Normal (${regularEnemies.size})",
+                                    fontSize = 8.sp,
+                                    fontWeight = if (tabEnemies) FontWeight.Bold else FontWeight.Normal,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1
+                                )
+                            }
+                        )
+
+                        CompactChip(
+                            modifier = Modifier.weight(1f),
+                            onClick = { selectedCategory = EnemyCategory.MINI_BOSSES },
+                            colors = ChipDefaults.chipColors(
+                                backgroundColor = if (tabMini) accent else WearDarkGray,
+                                contentColor = if (tabMini) Color.Black else Color.White
+                            ),
+                            label = {
+                                Text(
+                                    text = "Mini (${miniBosses.size})",
+                                    fontSize = 8.sp,
+                                    fontWeight = if (tabMini) FontWeight.Bold else FontWeight.Normal,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1
+                                )
+                            }
+                        )
+
+                        CompactChip(
+                            modifier = Modifier.weight(1f),
+                            onClick = { selectedCategory = EnemyCategory.MAIN_BOSSES },
+                            colors = ChipDefaults.chipColors(
+                                backgroundColor = if (tabBoss) accent else WearDarkGray,
+                                contentColor = if (tabBoss) Color.Black else Color.White
+                            ),
+                            label = {
+                                Text(
+                                    text = "Boss (${mainBosses.size})",
+                                    fontSize = 8.sp,
+                                    fontWeight = if (tabBoss) FontWeight.Bold else FontWeight.Normal,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1
+                                )
+                            }
                         )
                     }
                 }
 
-                items(enemies) { enemy ->
+                if (displayList.isEmpty()) {
+                    item {
+                        Text(
+                            text = if (searchQuery.isNotEmpty()) "No matches for \"$searchQuery\"" else "No enemies in this category",
+                            color = WearLightGray,
+                            fontSize = 11.sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 12.dp)
+                        )
+                    }
+                }
+
+                items(displayList) { enemy ->
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()

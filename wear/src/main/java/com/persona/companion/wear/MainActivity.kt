@@ -11,7 +11,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
-import com.persona.companion.wear.models.WEAR_GAMES
+import com.persona.companion.wear.models.ALL_WEAR_GAMES
 import com.persona.companion.wear.models.WearGame
 import com.persona.companion.wear.ui.screens.ClassroomScreen
 import com.persona.companion.wear.ui.screens.EnemyListScreen
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PersonaWearTheme {
                 val navController = rememberSwipeDismissableNavController()
-                var selectedGame by remember { mutableStateOf<WearGame>(WEAR_GAMES.first()) }
+                var selectedGame by remember { mutableStateOf<WearGame>(ALL_WEAR_GAMES.first()) }
 
                 SwipeDismissableNavHost(
                     navController = navController,

@@ -5,18 +5,48 @@ data class WearGame(
     val title: String,
     val shortTitle: String,
     val colorHex: Long,
-    val series: String
+    val seriesId: String
 )
 
-val WEAR_GAMES = listOf(
-    WearGame("p4g", "Persona 4 Golden", "P4G", 0xFFFFC107, "p4"),
-    WearGame("p5r", "Persona 5 Royal", "P5R", 0xFFFF1744, "p5"),
-    WearGame("p3r", "Persona 3 Reload", "P3R", 0xFF2979FF, "p3"),
-    WearGame("p4", "Persona 4", "P4", 0xFFFFB300, "p4"),
-    WearGame("p5", "Persona 5", "P5", 0xFFD50000, "p5"),
-    WearGame("p3p", "Persona 3 Portable", "P3P", 0xFF00B0FF, "p3"),
-    WearGame("p3fes", "Persona 3 FES", "P3FES", 0xFF0091EA, "p3")
+data class WearSeries(
+    val id: String,
+    val title: String,
+    val colorHex: Long,
+    val games: List<WearGame>
 )
+
+val WEAR_SERIES = listOf(
+    WearSeries(
+        id = "p5",
+        title = "Persona 5",
+        colorHex = 0xFFFF1744,
+        games = listOf(
+            WearGame("p5r", "Persona 5 Royal", "P5R", 0xFFFF1744, "p5"),
+            WearGame("p5", "Persona 5", "P5", 0xFFD50000, "p5")
+        )
+    ),
+    WearSeries(
+        id = "p4",
+        title = "Persona 4",
+        colorHex = 0xFFFFC107,
+        games = listOf(
+            WearGame("p4g", "Persona 4 Golden", "P4G", 0xFFFFC107, "p4"),
+            WearGame("p4", "Persona 4", "P4", 0xFFFFB300, "p4")
+        )
+    ),
+    WearSeries(
+        id = "p3",
+        title = "Persona 3",
+        colorHex = 0xFF2979FF,
+        games = listOf(
+            WearGame("p3r", "Persona 3 Reload", "P3R", 0xFF2979FF, "p3"),
+            WearGame("p3p", "Persona 3 Portable", "P3P", 0xFF00B0FF, "p3"),
+            WearGame("p3fes", "Persona 3 FES", "P3FES", 0xFF0091EA, "p3")
+        )
+    )
+)
+
+val ALL_WEAR_GAMES: List<WearGame> = WEAR_SERIES.flatMap { it.games }
 
 data class WearClassroomItem(
     val date: String,
@@ -30,8 +60,10 @@ data class WearEnemyItem(
     val arcana: String,
     val level: Int,
     val weaknesses: List<String>,
-    val resistances: List<Pair<String, String>>, // Element to Type (e.g. Fire to Weak)
-    val area: String = ""
+    val resistances: List<Pair<String, String>>,
+    val area: String = "",
+    val isBoss: Boolean = false,
+    val isMiniBoss: Boolean = false
 )
 
 data class WearSocialLink(

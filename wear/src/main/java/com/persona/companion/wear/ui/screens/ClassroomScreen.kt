@@ -39,6 +39,7 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.data.WearDataLoader
 import com.persona.companion.wear.models.WearClassroomItem
+import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.P4Gold
 import com.persona.companion.wear.ui.theme.P5Red
 import com.persona.companion.wear.ui.theme.WearDarkGray
@@ -64,13 +65,15 @@ fun ClassroomScreen(
         positionIndicator = { PositionIndicator(scalingLazyListState = listState) }
     ) {
         if (selectedItem != null) {
-            // Full Question & Answer Detail View
             val item = selectedItem!!
+            val detailState = rememberScalingLazyListState()
+
             ScalingLazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
+                    .rotaryScroll(detailState)
                     .clickable { selectedItem = null },
-                state = rememberScalingLazyListState()
+                state = detailState
             ) {
                 item {
                     ListHeader {
@@ -127,7 +130,7 @@ fun ClassroomScreen(
 
                 item {
                     Text(
-                        text = "Tap anywhere to go back",
+                        text = "Tap anywhere to return",
                         color = WearLightGray,
                         fontSize = 10.sp,
                         textAlign = TextAlign.Center,
@@ -139,7 +142,9 @@ fun ClassroomScreen(
             }
         } else {
             ScalingLazyColumn(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .rotaryScroll(listState),
                 state = listState
             ) {
                 item {
