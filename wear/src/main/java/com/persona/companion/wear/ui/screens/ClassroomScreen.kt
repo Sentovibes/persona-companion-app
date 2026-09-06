@@ -39,7 +39,6 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.data.WearDataLoader
 import com.persona.companion.wear.models.WearClassroomItem
-import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.P4Gold
 import com.persona.companion.wear.ui.theme.P5Red
 import com.persona.companion.wear.ui.theme.WearDarkGray
@@ -71,7 +70,6 @@ fun ClassroomScreen(
             ScalingLazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .rotaryScroll(detailState)
                     .clickable { selectedItem = null },
                 state = detailState
             ) {
@@ -142,9 +140,7 @@ fun ClassroomScreen(
             }
         } else {
             ScalingLazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .rotaryScroll(listState),
+                modifier = Modifier.fillMaxSize(),
                 state = listState
             ) {
                 item {

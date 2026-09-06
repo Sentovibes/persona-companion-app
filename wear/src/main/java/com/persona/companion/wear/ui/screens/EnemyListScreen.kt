@@ -50,7 +50,6 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.data.WearDataLoader
 import com.persona.companion.wear.models.WearEnemyItem
-import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.DrainColor
 import com.persona.companion.wear.ui.theme.NullColor
 import com.persona.companion.wear.ui.theme.P4Gold
@@ -107,7 +106,6 @@ fun EnemyListScreen(
             ScalingLazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .rotaryScroll(detailListState)
                     .clickable { selectedEnemy = null },
                 state = detailListState
             ) {
@@ -287,9 +285,7 @@ fun EnemyListScreen(
             }
 
             ScalingLazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .rotaryScroll(listState),
+                modifier = Modifier.fillMaxSize(),
                 state = listState
             ) {
                 // Header

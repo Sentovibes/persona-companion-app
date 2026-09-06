@@ -30,7 +30,6 @@ import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.models.WEAR_SERIES
 import com.persona.companion.wear.models.WearGame
 import com.persona.companion.wear.models.WearSeries
-import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.WearDarkGray
 import com.persona.companion.wear.ui.theme.WearLightGray
 import com.persona.companion.wear.ui.theme.getGameAccentColor
@@ -49,9 +48,7 @@ fun GameSelectScreen(
         positionIndicator = { PositionIndicator(scalingLazyListState = listState) }
     ) {
         ScalingLazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .rotaryScroll(listState),
+            modifier = Modifier.fillMaxSize(),
             state = listState
         ) {
             if (selectedSeries == null) {

@@ -39,7 +39,6 @@ import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.data.WearDataLoader
 import com.persona.companion.wear.models.WearSocialLink
-import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.WearDarkGray
 import com.persona.companion.wear.ui.theme.WearLightGray
 import com.persona.companion.wear.ui.theme.WearMediumGray
@@ -71,7 +70,6 @@ fun SocialLinkListScreen(
             ScalingLazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .rotaryScroll(detailState)
                     .clickable { selectedLink = null },
                 state = detailState
             ) {
@@ -207,9 +205,7 @@ fun SocialLinkListScreen(
             }
         } else {
             ScalingLazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .rotaryScroll(listState),
+                modifier = Modifier.fillMaxSize(),
                 state = listState
             ) {
                 item {

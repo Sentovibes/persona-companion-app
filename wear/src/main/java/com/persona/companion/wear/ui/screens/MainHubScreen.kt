@@ -22,7 +22,6 @@ import androidx.wear.compose.material.TimeText
 import androidx.wear.compose.material.Vignette
 import androidx.wear.compose.material.VignettePosition
 import com.persona.companion.wear.models.WearGame
-import com.persona.companion.wear.ui.rotaryScroll
 import com.persona.companion.wear.ui.theme.WearDarkGray
 import com.persona.companion.wear.ui.theme.WearLightGray
 import com.persona.companion.wear.ui.theme.getGameAccentColor
@@ -44,9 +43,7 @@ fun MainHubScreen(
         positionIndicator = { PositionIndicator(scalingLazyListState = listState) }
     ) {
         ScalingLazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .rotaryScroll(listState),
+            modifier = Modifier.fillMaxSize(),
             state = listState
         ) {
             item {

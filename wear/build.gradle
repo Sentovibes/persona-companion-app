@@ -12,7 +12,7 @@ android {
         applicationId "com.persona.companion"
         minSdk 30
         targetSdk 36
-        versionCode 30
+        versionCode 31
         versionName "7.1.4"
 
         vectorDrawables {
@@ -81,10 +81,10 @@ tasks.register('syncDataAssets', Copy) {
 preBuild.dependsOn syncDataAssets
 
 dependencies {
-    // Wear OS Compose
-    implementation 'androidx.wear.compose:compose-material:1.3.0'
-    implementation 'androidx.wear.compose:compose-foundation:1.3.0'
-    implementation 'androidx.wear.compose:compose-navigation:1.3.0'
+    // Wear OS Compose 1.4.0 (with native rotary bezel/crown support by default)
+    implementation 'androidx.wear.compose:compose-material:1.4.0'
+    implementation 'androidx.wear.compose:compose-foundation:1.4.0'
+    implementation 'androidx.wear.compose:compose-navigation:1.4.0'
 
     // Core Compose
     implementation platform('androidx.compose:compose-bom:2024.02.00')
