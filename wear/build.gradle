@@ -12,7 +12,7 @@ android {
         applicationId "com.persona.companion"
         minSdk 30
         targetSdk 36
-        versionCode 36
+        versionCode 38
         versionName "7.1.5"
 
         vectorDrawables {
