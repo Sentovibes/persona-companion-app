@@ -1,9 +1,16 @@
 # Release Notes - v7.1.5
 
-## Standalone Wear OS Companion App Release
-- **Dedicated Wear OS Module**: Launched standalone companion module (`:wear`) for Wear OS 4 & 5 devices (Samsung Galaxy Watch, Google Pixel Watch, and other Wear OS smartwatches).
-- **Controller-Friendly Gaming Cheat-Sheet**: Instant wrist access to Classroom & Exam answers, Enemy weakness calculator with category filtering (Normal, Mini-Boss, Boss), and Social Link / Confidant best dialogue answers.
-- **Hardware & Bezel Optimization**: Native rotary touch bezel and crown scrolling support with pure OLED battery optimization.
+## Wear OS Companion Release (Watch Only)
+Initial standalone Wear OS companion release for Wear OS 4 and 5 smartwatches:
+- Instant wrist lookup for Persona 3, Persona 4, and Persona 5 series games.
+- Classroom & Exam cheat sheet with quick date navigation.
+- Enemy weakness calculator with Normal, Mini-Boss, and Boss category tabs.
+- Social Link and Confidant optimal dialogue choices.
+- Hardware-optimized rotary touch bezel and digital crown scrolling support.
+- Pure black high-contrast OLED theme for minimal battery consumption.
+
+## Android Phone Release
+- Synchronized version bump to v7.1.5 (versionCode 37) with native crash debug symbols.
 
 ---
 
