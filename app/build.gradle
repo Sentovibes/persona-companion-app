@@ -13,7 +13,7 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 36
-        versionCode 32
+        versionCode 37
         versionName "7.1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -57,6 +57,9 @@ android {
             minifyEnabled true
             crunchPngs false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk {
+                debugSymbolLevel 'FULL'
+            }
             buildConfigField "boolean", "ENABLE_DEBUG_FEATURES", "false"
             buildConfigField "boolean", "INCLUDE_IMAGES", "true"
             // Release includes images bundled
