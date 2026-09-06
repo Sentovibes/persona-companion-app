@@ -261,9 +261,49 @@ function navigate(to, payload) {
     syncHash();
 }
 
-/* ── Rail Navigation ───────────────────────────────────────────────────────── */
+/* ── Image Helpers ───────────────────────────────────────────────────────── */
+function getPersonaImageFilename(name) {
+    if (!name) return '';
+    const safe = name.toLowerCase()
+        .replace(/[èé]/g, 'e')
+        .replace(/[ā]/g, 'a')
+        .replace(/[ō]/g, 'o')
+        .replace(/[ū]/g, 'u')
+        .replace(/[î]/g, 'i')
+        .replace(/\s+/g, '_')
+        .replace(/\//g, '_')
+        .replace(/[:?'’&]/g, '');
+    return `assets/images/personas/${safe}.webp`;
+}
+
+function getEnemyImageFilename(name, gameId) {
+    if (!name) return '';
+    let clean = name;
+    if (clean.match(/\s[A-Z]$/)) clean = clean.substring(0, clean.length - 2).trim();
+    if (clean.includes(' & ')) clean = clean.split(' & ')[0];
+    if (gameId === 'p3r') {
+        const bossMap = { 'chidori yoshino':'chidori', 'jin shirato':'jin', 'takaya sakaki':'takaya' };
+        const lc = clean.toLowerCase();
+        if (bossMap[lc]) clean = bossMap[lc];
+    }
+    const safe = clean.toLowerCase()
+        .replace(/[èé]/g, 'e')
+        .replace(/[ā]/g, 'a')
+        .replace(/[ō]/g, 'o')
+        .replace(/[ū]/g, 'u')
+        .replace(/[î]/g, 'i')
+        .replace(/\s+/g, '_')
+        .replace(/\//g, '_')
+        .replace(/[:?'’&]/g, '');
+    return `assets/images/enemies/${safe}.webp`;
+}
+
+/* ── Rail / Bottom Navigation ────────────────────────────────────────────── */
 function railNav(section) {
-    if (!S.game) return;
+    if (!S.game) {
+        S.series = 'p5';
+        S.game = 'p5r';
+    }
     if (section === 'personas')        { S.listMode='personas';  navigate('list'); }
     else if (section === 'fusion')     { openFusion(); }
     else if (section === 'enemies')    { S.listMode='enemies';   navigate('list'); }
@@ -274,6 +314,14 @@ function railNav(section) {
     else if (section === 'requests')   { S.listMode='requests';  navigate('requests'); }
     else if (section === 'guides')     { openGuides(); }
     else if (section === 'negotiation') { openNegotiation(); }
+}
+
+function bottomNavMore() {
+    if (S.game) {
+        navigate('category');
+    } else {
+        navigate('settings');
+    }
 }
 
 function updateRailState(screenName) {
@@ -302,13 +350,51 @@ function updateRailState(screenName) {
     document.querySelectorAll('.rail-item').forEach(el => el.classList.remove('active'));
     const activeId = screenToRail[screenName];
     if (activeId) document.getElementById(activeId)?.classList.add('active');
+
+    // Bottom bar active synchronization (Mobile phone experience)
+    const screenToBottom = {
+        home: 'bottom-home', game: 'bottom-home',
+        list: S.listMode==='personas'?'bottom-personas':S.listMode==='enemies'?'bottom-enemies':null,
+        detail: S.listMode==='personas'?'bottom-personas':S.listMode==='enemies'?'bottom-enemies':null,
+        fusion: 'bottom-fusion',
+        category: 'bottom-more',
+        settings: 'bottom-more',
+        items: 'bottom-more', skills: 'bottom-more', requests: 'bottom-more',
+        sociallinks: 'bottom-more', guides: 'bottom-more', negotiation: 'bottom-more'
+    };
+    document.querySelectorAll('.bottom-bar-item').forEach(el => el.classList.remove('active'));
+    const bId = screenToBottom[screenName];
+    if (bId) document.getElementById(bId)?.classList.add('active');
 }
 
 /* ── Home ──────────────────────────────────────────────────────────────────── */
 const GAME_SHORT = { p3fes:'FES', p3p:'Portable', p3r:'Reload', p4:'Original', p4g:'Golden', p5:'Original', p5r:'Royal' };
 const SECTION_LABELS = { personas:'Personas', enemies:'Enemies', classroom:'Classroom', items:'Items', skills:'Skills', requests:'Requests', fusion:'Fusion', sociallinks:'Social Links' };
 
+function openFavoritesFromHome() {
+    if (!S.game) {
+        S.series = 'p5';
+        S.game = 'p5r';
+    }
+    S.listMode = 'personas';
+    S.favOnly = true;
+    navigate('list');
+}
+
+function openRecentFromHome() {
+    const last = (localStorage.getItem('last_loc') || '').split('/').filter(Boolean);
+    if (last.length >= 2) {
+        applyHash(last.join('/'));
+    } else {
+        selectGame('p5', 'p5r');
+    }
+}
+
 function buildHome() {
+    // Update favorites badge count
+    const favCount = document.getElementById('homeFavCount');
+    if (favCount) favCount.textContent = S.favorites.size;
+
     // Continue card — jump straight back to the last visited game/section
     let continueHtml = '';
     const last = (localStorage.getItem('last_loc') || '').split('/').filter(Boolean);
@@ -328,15 +414,21 @@ function buildHome() {
     document.getElementById('continueSlot').innerHTML = continueHtml;
 
     const SERIES_LOGOS = { p3:'assets/p3r_logo.png', p4:'assets/p4g_logo.png', p5:'assets/p5r_logo.png' };
+    const HERO_IMAGES = { p3:'assets/images/heroes/p3_hero.webp', p4:'assets/images/heroes/p4_hero.webp', p5:'assets/images/heroes/p5_hero.webp' };
+
     document.getElementById('seriesList').innerHTML = SERIES.map(s => `
-        <div class="series-card series-card--${s.id}" style="background:linear-gradient(135deg,${s.color}dd,${s.color}88)"
-             onclick="navigate('game','${s.id}')">
-            ${s.id==='p5' ? '<div class="series-card-star">5</div>' : ''}
+        <div class="series-card series-card--${s.id}" onclick="navigate('game','${s.id}')">
+            ${s.id==='p5' ? `<div class="series-card-city-bg" style="background-image:url('assets/images/heroes/p5_city_bg.webp')"></div>` : ''}
+            <div class="series-card-gradient"></div>
+            ${s.id==='p5' ? '<div class="series-card-star-badge">★</div>' : ''}
             <div class="series-card-bg-num">${s.id.replace('p','')}</div>
-            <div class="series-card-text">
+            <div class="series-card-hero-wrap">
+                <img src="${HERO_IMAGES[s.id]}" class="series-card-hero-img" alt="" loading="lazy">
+            </div>
+            <div class="series-card-content">
                 <img class="series-card-logo" src="${SERIES_LOGOS[s.id]}" alt="${s.title}"
                      onerror="this.outerHTML='<div class=&quot;series-card-title&quot;>${s.title}</div>'">
-                <div class="series-card-sub">${s.games.length} game${s.games.length>1?'s':''}</div>
+                <div class="series-card-sub">${s.games.length} games available</div>
                 <div class="series-card-games">
                     ${s.games.map(g => `<button class="series-game-chip" onclick="event.stopPropagation(); selectGame('${s.id}','${g.id}')">${GAME_SHORT[g.id]||g.title}</button>`).join('')}
                 </div>
@@ -572,14 +664,29 @@ function personaRow(name, p, color) {
     const skills = p.skills ? Object.keys(p.skills).length : 0;
     const weakRow = renderWeaknessRow(p, S.game);
     const isFav = S.favorites.has(`${S.game}_${name}`);
-    return `<div class="row-card" onclick="openPersona('${esc(name)}')">
-        <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
+    const imgUrl = getPersonaImageFilename(name);
+    return `<div class="row-card persona-row-card" onclick="openPersona('${esc(name)}')">
+        <div class="persona-avatar-box">
+            <img src="${imgUrl}" class="persona-avatar-img" alt="${esc(name)}" loading="lazy"
+                 onload="this.classList.add('loaded')"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="persona-avatar-fallback" style="display:none;background:${color}22;color:${color}">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            </div>
+            <div class="level-badge-pill" style="background:${color};color:#000">${level}</div>
+        </div>
         <div class="row-main">
-            <div class="row-name">${name}${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}</div>
-            <div class="row-sub">${arcana}</div>
+            <div class="row-name-line">
+                <span class="row-name">${name}</span>
+                ${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}
+                <span class="arcana-tag" style="border-color:${color}44;color:${color};background:${color}15">${arcana}</span>
+            </div>
             ${weakRow}
         </div>
-        ${skills?`<div class="row-hint">${skills} skills</div>`:''}
+        <div class="row-meta">
+            ${skills?`<div class="row-hint">${skills} skills</div>`:''}
+            <div class="row-chevron" style="color:${color}">›</div>
+        </div>
     </div>`;
 }
 
@@ -621,10 +728,23 @@ function renderEnemies(data, q, color, el) {
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
         const isFav = S.favorites.has(`${S.game}_${name}`);
+        const imgUrl = getEnemyImageFilename(name, S.game);
         return `
-        <div class="row-card" onclick="openEnemy('${esc(name)}')">
+        <div class="row-card enemy-row-card" onclick="openEnemy('${esc(name)}')">
+            <div class="enemy-avatar-box">
+                <img src="${imgUrl}" class="enemy-avatar-img" alt="${esc(name)}" loading="lazy"
+                     onload="this.classList.add('loaded')"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="enemy-avatar-fallback" style="display:none;background:${color}22;color:${color}">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                </div>
+                <div class="level-badge-pill" style="background:${color};color:#000">${e.level||'?'}</div>
+            </div>
             <div class="row-main">
-                <div class="row-name">${name}${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}</div>
+                <div class="row-name-line">
+                    <span class="row-name">${name}</span>
+                    ${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}
+                </div>
                 <div class="row-sub">${e.arcana||'Shadow'} · Lv. ${e.level||'?'}</div>
                 ${resists}
                 ${e.area&&e.area!=='Unknown'?`<div class="row-hint" style="font-size:.75rem;color:var(--text3);margin-top:2px">${e.area}</div>`:''}
@@ -1065,25 +1185,45 @@ function selectPersona(name) {
     openPersona(name);
 }
 
+function openFusionForPersona(name) {
+    openFusion();
+    selectFusionPersona(name);
+}
+
 function renderPersonaDetailHtml(name, p, color) {
     const stats = p.stats||[];
     const maxStat = stats.length?Math.max(...stats,1):1;
     const statLabels = ['STR','MAG','END','AGI','LUK'];
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
+    const imgUrl = getPersonaImageFilename(name);
 
-    let html = `<div class="detail-hero">
-        <div class="detail-level-box" style="background:${color}22">
-            <div class="detail-level-label" style="color:${color}">Lv.</div>
-            <div class="detail-level-num" style="color:${color}">${level}</div>
+    let html = `
+    <div class="detail-hero detail-hero--enhanced" style="--hero-color:${color}">
+        <div class="detail-hero-backdrop" style="background:radial-gradient(circle at 80% 40%, ${color}40 0%, transparent 70%)"></div>
+        <div class="detail-hero-layout">
+            <div class="detail-hero-left">
+                <div class="detail-level-box" style="background:${color}22;border-left:3px solid ${color}">
+                    <div class="detail-level-label" style="color:${color}">Lv.</div>
+                    <div class="detail-level-num" style="color:${color}">${level}</div>
+                </div>
+                <div class="detail-hero-info">
+                    <div class="detail-hero-name">${name}</div>
+                    <div class="detail-hero-arcana">${arcana} Arcana</div>
+                    ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
+                    ${p.inherits?`<div style="font-size:.8rem;color:var(--text3);margin-top:2px">Inherits: <strong style="color:var(--text2)">${p.inherits}</strong></div>`:''}
+                </div>
+            </div>
+            <div class="detail-hero-art-container">
+                <img src="${imgUrl}" class="detail-hero-photo" alt="${name}" onerror="this.parentElement.style.display='none'">
+            </div>
         </div>
-        <div class="detail-hero-info">
-            <div class="detail-hero-name">${name}</div>
-            <div class="detail-hero-arcana">${arcana} Arcana</div>
-            ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
-            ${p.inherits?`<div style="font-size:.8rem;color:var(--text3);margin-top:2px">Inherits: <strong style="color:var(--text2)">${p.inherits}</strong></div>`:''}
+        <div class="detail-hero-actions">
+            <button class="hero-action-btn" onclick="openFusionForPersona('${esc(name)}')">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                Fusion Recipes
+            </button>
         </div>
-        ${p.image ? `<div class="detail-hero-image-wrap"><img src="${p.image}" class="detail-hero-image" alt="${name}" onerror="this.parentElement.style.display='none'"></div>` : ''}
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;
@@ -1159,12 +1299,13 @@ function renderEnemyDetail(name, e, color, containerId) {
     if (!el) return;
     const isBoss = e.isBoss || e.isMiniBoss;
     const elems = ELEMENTS[S.series]||ELEMENTS.p5;
+    const imgUrl = e.image || getEnemyImageFilename(name, S.game);
 
     let html = '';
     // Hero Section
     if (isBoss) {
         html += `<div class="boss-hero" style="background:${color}11">
-            ${e.image ? `<img src="${e.image}" class="boss-image" alt="${name}" onerror="this.style.display='none'">` : ''}
+            <img src="${imgUrl}" class="boss-image" alt="${name}" onerror="this.style.display='none'">
             <div class="boss-name" style="color:${color}">${name}</div>
             <div style="font-size:1rem;color:var(--text2);margin-top:4px">${e.arcana||'Shadow'} · Level ${e.level||'?'}</div>
             <div class="boss-stats-grid">
@@ -1184,7 +1325,9 @@ function renderEnemyDetail(name, e, color, containerId) {
                     <div style="font-size:.875rem;color:var(--text2)">${e.sp||0} SP</div>
                 </div>
             </div>
-            ${e.image ? `<div style="margin-top:16px;text-align:center"><img src="${e.image}" style="max-width:100%;max-height:180px;border-radius:8px" onerror="this.parentElement.style.display='none'"></div>` : ''}
+            <div style="margin-top:16px;text-align:center">
+                <img src="${imgUrl}" style="max-width:100%;max-height:200px;border-radius:8px;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6))" onerror="this.parentElement.style.display='none'">
+            </div>
         </div>`;
     }
 
@@ -1632,7 +1775,16 @@ function renderFusionPersonaList(color) {
             const p = S.fusion.personaMap[name];
             const level = p.level??p.lvl??'?';
             const arcana = p.arcana||p.race||'Unknown';
-            return `<div class="row-card" onclick="selectFusionPersona('${esc(name)}')">
+            const imgUrl = getPersonaImageFilename(name);
+            return `<div class="row-card fusion-picker-card" onclick="selectFusionPersona('${esc(name)}')">
+                <div class="persona-avatar-box" style="width:40px;height:40px">
+                    <img src="${imgUrl}" class="persona-avatar-img" alt="${esc(name)}" loading="lazy"
+                         onload="this.classList.add('loaded')"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="persona-avatar-fallback" style="display:none;background:${color}22;color:${color}">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                    </div>
+                </div>
                 <div class="level-badge" style="background:${color}22;color:${color}">${level}</div>
                 <div class="row-main">
                     <div class="row-name">${name}</div>
@@ -1677,8 +1829,12 @@ function showFusionDetailPane(color) {
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
     const el = document.getElementById('fusionRecipeContent');
+    const selectedImg = getPersonaImageFilename(selected.name);
 
     let html = `<div class="fusion-selected-card" style="border-left:4px solid ${color};margin:0">
+        <div class="fusion-ing-avatar-box">
+            <img src="${selectedImg}" class="fusion-ing-avatar-img" alt="${esc(selected.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+        </div>
         <div class="fusion-selected-info">
             <div class="fusion-selected-name">${selected.name}</div>
             <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
@@ -1708,8 +1864,13 @@ function showFusionDetailPane(color) {
                         ${combo.map((ing, i) => `
                             ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
                             <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                                <div class="fusion-ing-avatar-box">
+                                    <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                                </div>
+                                <div>
+                                    <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                    <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                                </div>
                             </div>`).join('')}
                     </div>
                     ${costHtml}
@@ -1720,8 +1881,13 @@ function showFusionDetailPane(color) {
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
                         <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            <div class="fusion-ing-avatar-box" style="display:inline-flex;vertical-align:middle;margin-right:6px">
+                                <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div style="display:inline-block;vertical-align:middle">
+                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            </div>
                         </div>`).join('')}
                     ${costHtml}
                 </div>`;
@@ -1740,8 +1906,12 @@ function renderFusionResults(color) {
     const p = selected.data;
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
+    const selectedImg = getPersonaImageFilename(selected.name);
 
     let html = `<div class="fusion-selected-card" style="border-left:4px solid ${color}">
+        <div class="fusion-ing-avatar-box">
+            <img src="${selectedImg}" class="fusion-ing-avatar-img" alt="${esc(selected.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+        </div>
         <div class="fusion-selected-info">
             <div class="fusion-selected-name">${selected.name}</div>
             <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
@@ -1772,8 +1942,13 @@ function renderFusionResults(color) {
                         ${combo.map((ing, i) => `
                             ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
                             <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                                <div class="fusion-ing-avatar-box">
+                                    <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                                </div>
+                                <div>
+                                    <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                    <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                                </div>
                             </div>`).join('')}
                     </div>
                     ${costHtml}
@@ -1784,8 +1959,13 @@ function renderFusionResults(color) {
                     ${combo.map((ing, i) => `
                         ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
                         <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            <div class="fusion-ing-avatar-box" style="display:inline-flex;vertical-align:middle;margin-right:6px">
+                                <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div style="display:inline-block;vertical-align:middle">
+                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
+                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            </div>
                         </div>`).join('')}
                     ${costHtml}
                 </div>`;

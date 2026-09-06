@@ -1330,3 +1330,491 @@ body {
     color: var(--text);
     line-height: 1.4;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PHONE APP UI ENHANCEMENTS & AUTHENTIC PERSONA AESTHETIC
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Bottom Navigation Bar (Phone App Experience) ────────────────────────── */
+#bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(20, 20, 27, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--hairline);
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 4px;
+}
+
+@media (min-width: 840px) {
+    #bottom-bar {
+        display: none !important;
+    }
+}
+
+@media (max-width: 839px) {
+    #content-area {
+        padding-bottom: 60px;
+    }
+    #backToTop {
+        bottom: 72px;
+    }
+}
+
+.bottom-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    color: var(--text2);
+    font-size: 0.68rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    gap: 3px;
+    transition: color 0.15s;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.bottom-bar-item:hover {
+    color: var(--text);
+}
+
+.bottom-bar-item.active {
+    color: var(--brass);
+    font-weight: 700;
+}
+
+.bottom-bar-item.active .bottom-bar-icon {
+    transform: scale(1.1);
+}
+
+.bottom-bar-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transition: transform 0.15s ease;
+}
+
+/* ── Home Quick Access Action Row ────────────────────────────────────────── */
+.home-quick-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.quick-action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--r-md);
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.quick-action-btn:hover {
+    background: var(--raised);
+    border-color: var(--hairline-strong);
+    color: #fff;
+}
+
+.quick-action-count {
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--velvet-3);
+    color: var(--brass);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ── Series Cards with Hero Photos ───────────────────────────────────────── */
+.series-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: var(--r-xl);
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1;
+    min-height: 120px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s cubic-bezier(0.2,0,0,1), border-color 0.2s, box-shadow 0.2s;
+}
+
+.series-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.28);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+}
+
+.series-card--p3 {
+    background: linear-gradient(135deg, #1A6FCC 0%, #0D3E73 100%) !important;
+}
+
+.series-card--p4 {
+    background: linear-gradient(135deg, #F5A800 0%, #7A5400 100%) !important;
+}
+
+.series-card--p5 {
+    background: linear-gradient(135deg, #CC1A1A 0%, #6B0000 100%) !important;
+}
+
+.series-card-city-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.series-card-hero-wrap {
+    position: absolute;
+    right: 14px;
+    bottom: -10px;
+    top: 0;
+    width: 160px;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.85;
+}
+
+.series-card-hero-img {
+    height: 110%;
+    max-width: none;
+    object-fit: contain;
+    object-position: bottom right;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease;
+}
+
+.series-card:hover .series-card-hero-img {
+    transform: scale(1.05) translateY(-2px);
+}
+
+.series-card-star-badge {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.9);
+    transform: rotate(-14deg);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.series-card-bg-num {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: var(--font-display);
+    color: rgba(255,255,255,0.08);
+    pointer-events: none;
+    line-height: 1;
+    z-index: 0;
+}
+
+.series-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 68%;
+}
+
+.series-card-logo {
+    height: 42px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+}
+
+.series-card-sub {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.series-card-games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.series-game-chip {
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.32);
+    border: 1px solid rgba(255,255,255,0.32);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.series-game-chip:hover {
+    background: rgba(0,0,0,0.6);
+    border-color: #fff;
+}
+
+/* ── Persona & Enemy Avatars & List Styling ──────────────────────────────── */
+.persona-avatar-box,
+.enemy-avatar-box {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1.5px solid var(--hairline);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.persona-avatar-img,
+.enemy-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.persona-avatar-img.loaded,
+.enemy-avatar-img.loaded {
+    opacity: 1;
+}
+
+.persona-avatar-fallback,
+.enemy-avatar-fallback {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.level-badge-pill {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.row-name-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.arcana-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.row-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.row-chevron {
+    font-size: 1.25rem;
+    opacity: 0.6;
+}
+
+/* ── Enhanced Persona Detail Hero Banner ─────────────────────────────────── */
+.detail-hero--enhanced {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background: var(--card);
+    border: 1px solid var(--hairline-soft);
+    border-radius: var(--r-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.detail-hero-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.detail-hero-layout {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.detail-hero-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-hero-art-container {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .detail-hero-art-container {
+        width: 100px;
+        height: 100px;
+    }
+    .detail-hero-name {
+        font-size: 1.35rem;
+    }
+    .detail-level-box {
+        width: 54px;
+        height: 54px;
+    }
+    .detail-level-num {
+        font-size: 1.45rem;
+    }
+}
+
+.detail-hero-photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.7));
+    transition: transform 0.3s ease;
+}
+
+.detail-hero-photo:hover {
+    transform: scale(1.08);
+}
+
+.detail-hero-actions {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--hairline-soft);
+    display: flex;
+    gap: 10px;
+}
+
+.hero-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--raised);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-md);
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.hero-action-btn:hover {
+    background: var(--velvet-3);
+    border-color: var(--brass);
+    color: var(--brass);
+}
+
+/* ── Fusion Ingredient Photos ────────────────────────────────────────────── */
+.fusion-ing-avatar-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.fusion-ing-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fusion-ingredient {
+    display: flex;
+    align-items: center;
+}

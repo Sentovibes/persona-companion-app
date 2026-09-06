@@ -75,6 +75,17 @@
             </div>
             <div class="home-content">
                 <div id="continueSlot"></div>
+                <div class="home-quick-actions" id="homeQuickActions">
+                    <button class="quick-action-btn" onclick="openFavoritesFromHome()">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        <span>Favorites</span>
+                        <span class="quick-action-count" id="homeFavCount">0</span>
+                    </button>
+                    <button class="quick-action-btn" onclick="openRecentFromHome()">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                        <span>Recent</span>
+                    </button>
+                </div>
                 <div class="series-list" id="seriesList"></div>
                 <div class="home-footer">Community-driven · Open source</div>
             </div>
@@ -399,6 +410,30 @@
         </div>
 
     </div><!-- /content-area -->
+
+    <!-- BOTTOM NAVIGATION BAR (Mobile / Phone App experience) -->
+    <nav id="bottom-bar">
+        <button class="bottom-bar-item active" id="bottom-home" onclick="navigate('home')">
+            <svg class="bottom-bar-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+        </button>
+        <button class="bottom-bar-item" id="bottom-personas" onclick="railNav('personas')">
+            <svg class="bottom-bar-icon" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>
+            <span>Personas</span>
+        </button>
+        <button class="bottom-bar-item" id="bottom-fusion" onclick="railNav('fusion')">
+            <svg class="bottom-bar-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+            <span>Fusion</span>
+        </button>
+        <button class="bottom-bar-item" id="bottom-enemies" onclick="railNav('enemies')">
+            <svg class="bottom-bar-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span>Enemies</span>
+        </button>
+        <button class="bottom-bar-item" id="bottom-more" onclick="bottomNavMore()">
+            <svg class="bottom-bar-icon" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            <span>Sections</span>
+        </button>
+    </nav>
 </div><!-- /app-shell -->
     <button id="backToTop" title="Back to top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
