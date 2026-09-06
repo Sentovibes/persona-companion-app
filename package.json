@@ -1,0 +1,25 @@
+{
+  "name": "persona-companion-app",
+  "version": "1.0.0",
+  "description": "A comprehensive companion and reference app for the mainline Persona series. Version 5.0 marks the final major feature release, providing complete databases for personas, enemies, social links, confidants, and classroom answers.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node tests/integration_test.mjs",
+    "test:integration": "node tests/integration_test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sentovibes/persona-companion-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sentovibes/persona-companion-app/issues"
+  },
+  "homepage": "https://github.com/Sentovibes/persona-companion-app#readme"
+}
