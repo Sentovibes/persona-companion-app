@@ -1858,6 +1858,7 @@ function calcFusionRecipes(targetName) {
         .sort((a,b) => a-b);
     const targetLvlIndex = resultLvls.indexOf(targetLevel);
     if (targetLvlIndex < 0) return recipes;
+    const seen = new Set();
     const sameArcanaList = (byArcana[targetArcana] || []).filter(p => !specialData[p.name]);
     for (let i = 0; i < sameArcanaList.length; i++) {
         for (let j = i + 1; j < sameArcanaList.length; j++) {
@@ -1867,13 +1868,17 @@ function calcFusionRecipes(targetName) {
                 .filter(p => (p.data.level ?? p.data.lvl ?? 0) < avgLvl && p.name !== p1.name && p.name !== p2.name)
                 .sort((a,b) => (b.data.level ?? b.data.lvl ?? 0) - (a.data.level ?? a.data.lvl ?? 0))[0];
             if (lowerRank && lowerRank.name === targetName) {
-                recipes.push([p1, p2]);
+                const key = p1.name <= p2.name ? `${p1.name}:${p2.name}` : `${p2.name}:${p1.name}`;
+                if (!seen.has(key)) {
+                    seen.add(key);
+                    recipes.push([p1, p2]);
+                }
             }
         }
     }
     const arcanaPairs = fissionTable[targetArcana] || {};
-    const minLvl = targetLvlIndex === 0 ? 0 : (resultLvls[targetLvlIndex - 1] - 1) * 2;
-    const maxLvl = (targetLevel - 1) * 2;
+    const minLvl = targetLvlIndex === 0 ? 0 : 2 * resultLvls[targetLvlIndex - 1] - 1;
+    const maxLvl = targetLvlIndex === resultLvls.length - 1 ? 200 : 2 * targetLevel - 1;
     for (const [arcA, listB] of Object.entries(arcanaPairs)) {
         const listA = (byArcana[arcA] || []).filter(p => !specialData[p.name]);
         for (const arcB of listB) {
@@ -1881,10 +1886,15 @@ function calcFusionRecipes(targetName) {
             for (const pA of listA) {
                 const lvlA = pA.data.level ?? pA.data.lvl ?? 0;
                 for (const pB of bList) {
+                    if (pA.name === targetName || pB.name === targetName) continue;
                     const lvlB = pB.data.level ?? pB.data.lvl ?? 0;
                     const sum = lvlA + lvlB;
                     if (sum > minLvl && sum <= maxLvl) {
-                        recipes.push([pA, pB]);
+                        const key = pA.name <= pB.name ? `${pA.name}:${pB.name}` : `${pB.name}:${pA.name}`;
+                        if (!seen.has(key)) {
+                            seen.add(key);
+                            recipes.push([pA, pB]);
+                        }
                     }
                 }
             }

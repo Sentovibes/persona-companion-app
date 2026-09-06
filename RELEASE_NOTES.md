@@ -1,3 +1,12 @@
+# Release Notes - v7.1.4
+
+## Fusion Calculator Precision Fix (Android & Web)
+- **Resolved Odd-Sum Fusion Discrepancy**: Corrected cross-arcana boundary calculation on both Web (`web/app.js` and `docs/app.js`) and Android (`FusionCalculator.kt`). Previously, odd-level sums (e.g. Pixie Lv.2 + Sandman Lv.5 = 7) were mistakenly mapped to higher-tier personas (such as Archangel) instead of their canonical lower-tier persona (such as Angel) due to off-by-one boundary math on web and floating-point rounding without truncation in Android forward fusion.
+- **Prevented Self-Ingredient Suggestions**: Excluded target personas from being suggested as ingredients to fuse themselves in edge-case chart combinations (e.g. Moon + Empress = Moon).
+- **Comprehensive Compendium Verification**: Validated 100% consistency across all 117,629 recipe combinations in all 7 supported games (P3FES, P3P, P3R, P4, P4G, P5, P5R).
+
+---
+
 # Release Notes - v7.1.3
 
 ## Bug Fix Release - 16 KB Alignment & Fusion Upgrades

@@ -189,6 +189,7 @@ class FusionCalculator(
                         if (lvlB > minLvlB && lvlB <= maxLvlB && (raceA != raceB || lvlA < lvlB)) {
                             val nameA = byArcana[raceA]?.firstOrNull { it.level == lvlA }?.name ?: continue
                             val nameB = byArcana[raceB]?.firstOrNull { it.level == lvlB }?.name ?: continue
+                            if (nameA == target.name || nameB == target.name) continue
                             val key = if (nameA <= nameB) Pair(nameA, nameB) else Pair(nameB, nameA)
                             if (seen.add(key)) {
                                 val p1 = personaMap[nameA] ?: continue
@@ -411,7 +412,7 @@ class FusionCalculator(
                 val resArcana = getResultArcana(arcana1, arcana2) ?: return null
                 if (resArcana.isBlank() || resArcana == "-") return null
                 val list = (byArcana[resArcana] ?: return null).filter { it.name !in specialNames }
-                val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2.0 + 1.0
+                val avgLvl = ((p1.level ?: 0) + (p2.level ?: 0)) / 2 + 1
                 val candidates = list.filter { it.name != p1.name && it.name != p2.name && (it.level ?: 0) >= avgLvl }
                 return candidates.firstOrNull() ?: list.lastOrNull()
             }
