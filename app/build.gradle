@@ -13,7 +13,7 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 36
-        versionCode 26
+        versionCode 27
         versionName "7.1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
