@@ -48,9 +48,9 @@ android {
             
             // Cloud image download configuration
             // GitHub Releases (up to 2GB) or Internet Archive (unlimited)
-            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.5/images.zip"'
-            buildConfigField "long", "IMAGES_ZIP_SIZE", "1062205358L"
-            buildConfigField "String", "IMAGES_VERSION", '"1.5"'
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v2.0/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1026494681L"
+            buildConfigField "String", "IMAGES_VERSION", '"2.0"'
         }
         release {
             signingConfig signingConfigs.release
@@ -65,9 +65,9 @@ android {
             // Release includes images bundled
             
             // Cloud image download configuration
-            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v1.5/images.zip"'
-            buildConfigField "long", "IMAGES_ZIP_SIZE", "1062205358L"
-            buildConfigField "String", "IMAGES_VERSION", '"1.5"'
+            buildConfigField "String", "IMAGES_CDN_URL", '"https://github.com/Sentovibes/persona-companion-images/releases/download/v2.0/images.zip"'
+            buildConfigField "long", "IMAGES_ZIP_SIZE", "1026494681L"
+            buildConfigField "String", "IMAGES_VERSION", '"2.0"'
         }
     }
     

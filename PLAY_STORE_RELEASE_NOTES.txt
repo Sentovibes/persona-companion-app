@@ -1,0 +1,22 @@
+================================================================================
+GOOGLE PLAY STORE RELEASE NOTES — v7.2.0
+================================================================================
+
+--- [PHONE TRACK: versionCode 41] ---
+(Length: 472 characters — Google Play limit: 500 characters)
+
+• 100% Franchise Artwork: Integrated complete high-resolution artwork for all 320 Personas and 1,503 enemies across Persona 3, 4, and 5.
+• 100% Item & Skill Descriptions: Over 8,700 items and 3,600 skills now have authentic in-game effect descriptions, accurate SP/HP costs, and element tags.
+• P5 Shadow Locations: Added authentic Palace & Mementos locations for all shadows.
+• Image Pack v2.0: Optimized image package delivery.
+• Performance improvements and bug fixes.
+
+
+--- [WEAR OS WATCH TRACK: versionCode 42] ---
+(Length: 461 characters — Google Play limit: 500 characters)
+
+• Fixed Location Display: Resolved the "Location: Unknown" issue on Wear OS. All Persona 5 and Royal shadows now show their authentic Palace and Mementos locations.
+• Improved Enemy Calculator: Cleaned up location headers and weaknesses display.
+• 100% Database Sync: Synchronized complete enemy compendium and social link dialogue databases with the mobile app.
+• Rotary touch bezel and digital crown optimizations.
+================================================================================
