@@ -21,19 +21,12 @@
 
 # Release Notes - v7.1.5
 
-## Wear OS Companion Release (Watch Only - versionCode 40)
-Initial standalone Wear OS companion release for Wear OS 4 and 5 smartwatches:
-- Instant wrist lookup for Persona 3, Persona 4, and Persona 5 series games.
-- Classroom & Exam cheat sheet with quick date navigation.
-- Enemy weakness calculator with Normal, Mini-Boss, and Boss category tabs.
-- Social Link and Confidant optimal dialogue choices.
-- Hardware-optimized rotary touch bezel and digital crown scrolling support.
-- Pure black high-contrast OLED theme for minimal battery consumption.
-
-## Android Phone Release (versionCode 39)
+## Android Release (versionCode 39)
 - Resolved data loading exception in release builds by preserving JSON type token signatures.
 - Bundled native crash debug symbols for improved crash diagnostic reporting.
-- Synchronized version release with the Wear OS companion module.
+- Synchronized version release across application modules.
+- Enhanced classroom & exam date navigation and enemy weakness lookups.
+- Optimized high-contrast OLED theme for battery consumption.
 
 ---
 

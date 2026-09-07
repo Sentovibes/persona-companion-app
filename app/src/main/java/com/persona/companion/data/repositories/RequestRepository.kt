@@ -49,7 +49,7 @@ class RequestRepository(
                         .toSet()
 
                     fun toEntity(req: com.persona.companion.models.Request, sortOrder: Int, aigis: Boolean): RequestEntity {
-                        val name = req.name ?: "Unknown Request"
+                        val name = req.name
                         val remarksText = when {
                             !req.remarks.isNullOrBlank() -> req.remarks
                             !req.details.isNullOrBlank() && !req.notes.isNullOrBlank() && req.notes != "-" -> "${req.details}\n\nTip: ${req.notes}"

@@ -681,6 +681,7 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
     /**
      * Serve static assets (future use)
      */
+    @Suppress("UNUSED_PARAMETER")
     private fun serveAsset(uri: String): Response {
         return newFixedLengthResponse(Response.Status.NOT_FOUND, MIME_PLAINTEXT, "Asset not found")
     }

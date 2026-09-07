@@ -2,27 +2,32 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v7.1.0
+# Persona Companion App v7.2.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/Version-7.1.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-7.2.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
-> The ultimate, all-in-one "Absolute Perfection" reference tool for the Persona series.
+> The ultimate, all-in-one "Absolute Perfection" reference toolkit for the Persona series.
 
-The Persona Companion App is a high-performance, native Android application built with Jetpack Compose and Material 3. It serves as a comprehensive reference toolkit for mainline Persona titles, providing detailed data on Personas, Enemies, Social Links, and Classroom solutions.
+The Persona Companion App is a high-performance native Android application and offline-ready Progressive Web App (PWA) built with Jetpack Compose, Material 3, and modern web standards. It delivers 100% database completeness, high-resolution artwork, and detailed strategic guides across 7 mainline Persona games.
 
 ---
 
 ## Supported Titles
 
-| Game | Features | Theme |
+The companion provides dedicated databases, custom themes, and complete game mechanics for all 7 supported titles:
+
+| Game | Content & Mechanics | Theme |
 | :--- | :--- | :--- |
-| Persona 3 Reload | Full Compendium, Episode Aigis, 101 Elizabeth Requests | Indigo Blue |
-| Persona 5 Royal | Confidants, Itemization, DLC, 43 Quests | Rebellion Red |
-| Persona 4 Golden | Quests, Social Links, Fusion, Shuffle Time | Investigation Yellow |
-| Persona 3 FES/P | Both MC Routes (Elizabeth & Theodore), 80/99 Requests | Sea Blue |
+| **Persona 3 FES** | The Journey & The Answer, 99 Elizabeth Requests, 170+ Weapon/Armor Stats, Authentic Item & Skill Lore | Sea Blue |
+| **Persona 3 Portable** | Dual Protagonist Routes (Male & FeMC), Theodore & Elizabeth Quests, 710 Shinshoudo Trading Items, Fusion Spells | Sea Blue / Pink |
+| **Persona 3 Reload** | Full Compendium, Episode Aigis, 101 Elizabeth Requests, Tartarus Exploration, Monad Passages | Indigo Blue |
+| **Persona 4** | Original PS2 Compendium, Investigation Team Social Links, 69 Quests, All Boss & Dungeon Guides | Investigation Yellow |
+| **Persona 4 Golden** | Expanded Compendium (Marie & Hollow Forest), 88 Quests, Shuffle Time Rank Multipliers, Bike Skills | Investigation Yellow |
+| **Persona 5** | Original Compendium, Confidants, 36 Mementos Requests, Palace Boss Prep Guides, Untouchable Shop Gear | Rebellion Red |
+| **Persona 5 Royal** | Full Compendium with Third Semester, 43 Requests, Will Seeds, Kichijoji Jazz Club, Traits & DLC Skills | Rebellion Red |
 
 ---
 
@@ -30,65 +35,86 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## v7.1.0: Complete Guides, All Bosses & Arcana Rank Mastery Update
-This landmark update expands combat, quest, and dungeon exploration across the franchise:
-- **Comprehensive Boss Prep Guides (All 7 Games)**: Expert human-grade strategies from Game8 & TheGamer covering every story boss, dungeon boss, optional boss, palace ruler, Tartarus floor guardian, and superboss (The Reaper, Margaret, Lavenza, Okumura, Nyx Avatar, Elizabeth & Theodore).
-- **All Side-Quests & Velvet Room Requests**: 101 Requests in P3R, 99 in P3FES, 80 in P3P (with dynamic Theodore / Elizabeth switching when FeMC mode is active), 88 in P4G, 69 in P4, 43 in P5R, and 36 in P5.
-- **Shuffle Time, Arcana Ranks & Floor Personas**: Minor Arcana breakdown by Rank (1 to 10) with exact EXP multipliers (+20% to +400%), Money bonuses, HP/SP recovery, and full skill card drop tables. Filterable directory of all Personas obtainable by floor and Tartarus block.
-- **Clean Typography & Performance**: Clean professional layout with emoji-free formatting, optimized data loaders, and direct desktop Android VM launcher support.
+## What's New in v7.2.0: 100% Database Completion & Image Pack v2.0
+
+This major release achieves complete database and asset coverage across the entire franchise:
+
+- **100% Persona & Enemy Artwork (930+ High-Resolution Artworks)**:
+  - **Personas (320 / 320 — 100.0%)**: Canonical illustrations for every Persona in the franchise, including Abaddon, Ananta, Anat, and Koropokkuru. Full high-resolution art in Android (`personas_shared/`) and optimized transparent WebP avatars in the Web PWA.
+  - **Enemies & Bosses (1,503 / 1,503 entries — 100.0%)**: Authentic sprites and models for all Tartarus shadows, TV world shadows, Palace rulers, and optional superbosses (Ill-fated Maya, Kunino-sagiri, Ameno-sagiri, Kusumi-no-Okami, Abyssal King of Avarice, Tank-Form Shadow, Craven Venoms, and Justine & Caroline).
+  - **Canonical Image Pack v2.0**: Official 1,026 MB distribution package containing 930 verified high-resolution illustrations ready for local installation or CDN deployment.
+- **100% Comprehensive Item & Skill Descriptions**:
+  - **Items (8,736 / 8,736 — 100.0%)**: Authentic in-game descriptions, stat bonuses, recovery amounts, unlock conditions, and drop sources for every healing item, skill card, equipment piece, and key item across P3, P4, and P5. Zero blank or missing entries.
+  - **Persona 3 FES & Portable**: Restored all 710 canonical items with Shinshoudo trading details and corrected table offsets.
+  - **Persona 5 & Royal**: Populated authentic Untouchable shop stats across all 195 equipment items and documented all 24 Will Seed locations.
+  - **Skills (3,638 / 3,638 — 100.0%)**: In-game effect text and mechanics populated across all 3,638 physical skills, magic spells, passives, and unique traits (including `Myriad Truths` and `Neo Cadenza`). Eliminated all internal memory codes and placeholder strings.
+- **Canonical Palace & Mementos Locations**:
+  - Resolved Palace and Mementos sections (*Kamoshida's Palace / Qimranut*, *Madarame's Palace / Chemdah*, *Kaneshiro's Palace / Kaitul*, *Maruki's Palace / Da'at*, etc.) for all 129 Persona 5 and 5 Royal shadows previously listed with unknown locations.
+- **Comprehensive Boss Prep & Side-Quest Guides**:
+  - Expert human-grade strategies from Game8 & TheGamer covering every story boss, Tartarus guardian, dungeon ruler, and superboss (The Reaper, Margaret, Lavenza, Okumura, Nyx Avatar, Elizabeth & Theodore).
+  - All 436 Velvet Room requests and side quests tracked across all 7 games (P3R: 101, P3FES: 99, P3P: 80 with FeMC Theodore/Elizabeth switching, P4G: 88, P4: 69, P5R: 43, P5: 36).
 
 ---
 
 ## Core Features
 
 ### Multi-Device Support
-- Phone Mode: Touch-optimized, compact layouts for mobile use.
-- Tablet Mode: Dual-pane navigation for large-screen efficiency.
-- Android TV: D-pad optimized navigation with scaled text and visuals.
-- Cast Mode: Direct data streaming to compatible TV devices via Chromecast.
+- **Phone**: Touch-optimized, fluid Material 3 layout for fast mobile reference during sessions.
+- **Tablet**: Adaptive Rail and dual-pane navigation designed for large-screen gaming setups.
+- **Android TV**: D-pad navigation with scaled typography, high-contrast indicators, and big-screen visibility.
+- **Cast Mode**: Direct companion streaming to compatible television displays via Chromecast.
+- **Web PWA Companion**: Universal access in any modern desktop or mobile browser with offline caching.
 
 ### Comprehensive Databases
-- Persona Compendium: Full stats, skillsets, and fusion recipes.
-- Enemy Bestiary: Weaknesses, resistances, and standard/rare drop data.
-- Social Link Guides: Optimized dialogue choices and rank-up requirements.
-- Classroom Answers: Solutions for all supported titles and exam dates.
+- **Persona Compendium**: Full base stats, affinity resistances, full skill trees, and fusion recipes.
+- **Enemy Bestiary**: Complete elemental weaknesses, resistances, item drops, and encounter areas.
+- **Social Link & Confidant Guides**: Optimal dialogue choices, point values, availability schedules, and rank-up conditions.
+- **Classroom Answers**: Complete solutions for all daily questions, midterms, and final exam dates.
+- **Items & Equipment Directory**: Comprehensive weapons, armor, accessories, consumables, and materials across all 7 games.
+- **Skill Directory**: Complete damage types, costs (HP/SP), hit rates, and effect descriptions.
 
 ### Quality of Life
-- Favorites and History: Save frequently used entries for instant access.
-- OLED Dark Mode: Battery-optimized true black theme for night gaming.
-- Smart Filtering: Advanced search by Arcana, Level, DLC, or Element.
-- Automatic Updates: Built-in checker to stay current with the latest data.
+- **Favorites & History**: Bookmark Personas and enemies for instantaneous recall.
+- **OLED Dark Theme**: Battery-friendly true-black palette tailored for late-night gaming.
+- **Smart Filtering**: Advanced search by Arcana, level range, DLC status, or elemental affinity.
+- **Automatic Updates**: Built-in release checker to keep game data continually synchronized.
 
-### Web Experience (NEW)
-- **Universal Access**: Run the companion on any device with a modern browser.
-- **Responsive Design**: Supports Adaptive Rail navigation (Tablet/Desktop) and Stacked screens (Phone).
-- **Quest Tracking**: Mark requests as "Completed" directly in the web UI; state is persisted via `localStorage`.
-- **Offline Ready**: Local-first data architecture for fast, reliable reference.
+### Web PWA Companion Experience
+- **Universal Browser Access**: Runs locally or online on any device with a modern browser.
+- **Responsive Adaptive Layout**: Seamless transition between Adaptive Rail (Desktop/Tablet) and Stacked views (Mobile).
+- **Interactive Quest Tracking**: Toggle request completion status directly in the interface with persistent `localStorage` saving.
+- **Offline Ready**: Full Service Worker and local-first data architecture for fast, zero-latency operation without an active network connection.
+- **Zero Configuration**: Open the live GitHub Pages deployment or run locally with a lightweight static web server.
 
 ---
 
 ## Installation
 
-### Android APK
-1. Download the latest release from the GitHub Releases tab.
-2. Install the APK on an Android device (Android 8.0+ required).
-3. Optional: Enable HD Image Support via the Settings menu.
+### Android Application
+1. Download the latest release (`persona-companion-v7.2.0.apk`) from the GitHub Releases tab.
+2. Install the APK on your Android device (Android 8.0+ required).
+3. Optional: Enable HD Image Support via the Settings menu or download Image Pack v2.0 for offline high-resolution artwork.
 
 ---
 
-## Web Version (Live site)
+## Web Companion (Live Site)
 
-The companion now features a fully-fledged web application! This is perfect for having the compendium open on a second monitor or tablet while gaming.
+The companion features an offline-capable Progressive Web App, ideal for second-monitor or tablet use while gaming.
 
-### Use Online
-If hosted on GitHub Pages, you can access the live web version immediately without downloading anything:
- **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/)**
+### Online Access
+Access the live web deployment directly via GitHub Pages:
+**[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/)**
 
-### Launching Locally
+### Running Locally
 1. Clone the repository or download the source code.
 2. Navigate to the `web/` directory.
-3. Serve the directory using a simple local server (e.g., `npx http-server` or VS Code Live Server).
-4. No heavy backend required—it's a fast, local-first Single Page Application!
+3. Start any lightweight static HTTP server:
+   ```bash
+   npx http-server web -p 8080
+   # or
+   python -m http.server 8080 --directory web
+   ```
+4. Open `http://localhost:8080` in your web browser. No complex backend or build step is required.
 
 ---
 

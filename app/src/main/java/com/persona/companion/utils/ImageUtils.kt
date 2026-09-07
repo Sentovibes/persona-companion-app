@@ -1,7 +1,5 @@
 package com.persona.companion.utils
 
-import androidx.compose.ui.unit.sp
-
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

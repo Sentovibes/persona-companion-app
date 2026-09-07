@@ -5,8 +5,6 @@ import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import com.persona.companion.data.SeriesData
 import com.persona.companion.utils.JsonLoader
@@ -32,11 +30,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.persona.companion.R
 import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
@@ -47,7 +43,6 @@ import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
 import com.persona.companion.utils.ImageUtils
-import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberShouldLoadImages
 import com.persona.companion.utils.rememberTextScaleFactor

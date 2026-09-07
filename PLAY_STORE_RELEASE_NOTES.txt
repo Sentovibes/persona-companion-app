@@ -16,15 +16,4 @@ PHONE TRACK (versionCode 41 — Android Phone / Tablet)
 • Performance improvements and bug fixes.
 </en-US>
 
-
---------------------------------------------------------------------------------
-WEAR OS WATCH TRACK (versionCode 42 — Wear OS Smartwatch)
---------------------------------------------------------------------------------
-<en-US>
-• Fixed Location Display: Resolved the "Location: Unknown" issue on Wear OS. All Persona 5 and Royal shadows now show their authentic Palace and Mementos locations.
-• Improved Enemy Calculator: Cleaned up location headers and weaknesses display.
-• 100% Database Sync: Synchronized complete enemy compendium and social link dialogue databases with the mobile app.
-• Rotary touch bezel and digital crown optimizations.
-</en-US>
-
 ================================================================================

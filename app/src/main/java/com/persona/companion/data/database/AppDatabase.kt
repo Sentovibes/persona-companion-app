@@ -5,8 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.persona.companion.models.Item
-import com.persona.companion.models.Persona
-import com.persona.companion.models.Enemy
 import com.persona.companion.models.RequestEntity
 
 @Database(entities = [Item::class, RequestEntity::class], version = 8, exportSchema = false)

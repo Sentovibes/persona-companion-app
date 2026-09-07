@@ -1,7 +1,6 @@
 package com.persona.companion.utils
 
 import android.content.Context
-import android.util.Log
 import coil.request.ImageRequest
 import com.persona.companion.BuildConfig
 import com.persona.companion.R

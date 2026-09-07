@@ -1,6 +1,7 @@
 
 # Built application files
 *.apk
+/*.apk
 *.ap_
 *.aab
 
@@ -60,6 +61,14 @@ Thumbs.db
 !app/src/main/res/**/*.webp
 !app/src/main/res/**/*.png
 !app/src/main/res/**/*.jpg
+!web/**/*.json
+!web/**/*.webp
+!web/**/*.png
+!web/**/*.jpg
+!docs/**/*.json
+!docs/**/*.webp
+!docs/**/*.png
+!docs/**/*.jpg
 
 # Large files
 images.zip
@@ -95,7 +104,8 @@ scraper/test_abaddon.jpg
 *_regular_only.json
 *_before_*.json
 store_screenshots/
-testsprite_tests/tmp/config.json
+testsprite_tests/
+scratch/
 
 # Teamwork and agent workspaces
 .agents/*
