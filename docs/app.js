@@ -4378,7 +4378,7 @@ function openRequest(name) {
             <div class="info-row"><div class="info-label">Reward</div><div class="info-val">${req.reward || '-'}</div></div>
             ${req.deadline?`<div class="info-row"><div class="info-label">Deadline</div><div class="info-val">${req.deadline}</div></div>`:''}
             ${req.giver||req.quest_giver?`<div class="info-row"><div class="info-label">Giver</div><div class="info-val">${req.giver||req.quest_giver}</div></div>`:''}
-            ${req.description?`<div class="desc-box" style="margin-top:12px">${req.description}</div>`:''}
+            ${req.description || req.details || req.remarks ? `<div class="desc-box" style="margin-top:12px">${req.description || req.details || req.remarks}</div>` : ''}
         </div>
     `;
     document.getElementById('requestDetailContent').innerHTML = html;
