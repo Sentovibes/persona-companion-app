@@ -14,6 +14,8 @@ A browser-based companion for Persona 3, 4, and 5. No install required.
 - **Fusion Calculator** — find every recipe for any persona, verified against megaten-fusion-tool data
 - **Enemies / Shadows** — stats, resistances, drops, and boss phases
 - **Social Links / Confidants** — full rank guides with dialogue choices and point values
+- **Items & Skills** — comprehensive universal database with elemental affinities and effects
+- **Quests & Requests** — complete mission trackers with localStorage persistence
 - **Classroom Answers** — every exam and quiz answer for P3, P4, and P5
 
 ## How to use
