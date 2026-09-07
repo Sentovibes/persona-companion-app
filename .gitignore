@@ -95,5 +95,8 @@ scraper/test_abaddon.jpg
 *_regular_only.json
 *_before_*.json
 store_screenshots/
-testsprite_tests/tmp/
 testsprite_tests/tmp/config.json
+
+# Teamwork and agent workspaces
+.agents/*
+!.agents/rules/

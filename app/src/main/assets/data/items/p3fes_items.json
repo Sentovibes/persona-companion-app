@@ -3,24 +3,24 @@
     {
       "name": "Medicine",
       "description": "Slightly restores an ally's HP.",
-      "price": "",
-      "sellPrice": "",
+      "price": "300 3,980",
+      "sellPrice": "75",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Medical Powder",
       "description": "Moderately restores an ally's HP.",
-      "price": "",
-      "sellPrice": "",
+      "price": "1,500 7,980",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Umugi Water",
-      "description": "Moderately restores an ally\u2019s HP.",
-      "price": "",
-      "sellPrice": "",
+      "description": "Moderately restores an ally's HP.",
+      "price": "4,980 99,800",
+      "sellPrice": "500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -35,80 +35,56 @@
     {
       "name": "Odd Morsel",
       "description": "Battle: restores ally's HP (Med). Side effect.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Rancid Gravy",
       "description": "Battle: restores ally's HP (Med). Side effect.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Bead",
       "description": "Fully restores an ally's HP.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Garnet x1",
-      "description": "1,250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Opal x1 Garnet x1",
+      "sellPrice": "1,250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Bead Chain",
       "description": "Fully restores party's HP.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Agilao Gem x2",
-      "description": "2,500",
-      "price": "",
-      "sellPrice": "",
+      "price": "Opal x2 Agilao Gem x2",
+      "sellPrice": "2,500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Snuff Soul",
       "description": "Slightly restores an ally's SP.",
-      "price": "",
-      "sellPrice": "",
+      "price": "Emerald x2 10,000",
+      "sellPrice": "500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Chewing Soul",
       "description": "Moderately restores an ally's SP.",
-      "price": "",
-      "sellPrice": "",
+      "price": "Emerald x3 20,000",
+      "sellPrice": "1,500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Precious Egg",
       "description": "Fully restores an ally's SP.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Pearl x1",
-      "description": "2,500",
-      "price": "",
-      "sellPrice": "",
+      "price": "Ruby x2 Pearl x1",
+      "sellPrice": "2,500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -123,7 +99,7 @@
     {
       "name": "Soma",
       "description": "Fully restores party's HP and SP.",
-      "price": "",
+      "price": "Rancid Gravy x5",
       "sellPrice": "1",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -171,16 +147,8 @@
     {
       "name": "Amrita Water",
       "description": "Cures all ailments for the entire party.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Sapphire x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Ruby x1 Sapphire x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -195,7 +163,7 @@
     {
       "name": "Balm of Life",
       "description": "Revives an ally, fully restoring HP.",
-      "price": "",
+      "price": "Pearl x1, Garnet x1",
       "sellPrice": "1,000",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -203,8 +171,8 @@
     {
       "name": "Medicated Patch",
       "description": "Yuko's home-made remedy.",
-      "price": "2",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "2",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -227,8 +195,8 @@
     {
       "name": "Instant Ramen",
       "description": "Expensive, but tastes just like Hagakure's.",
-      "price": "",
-      "sellPrice": "",
+      "price": "47,800 17,800",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -411,215 +379,167 @@
     {
       "name": "Pickled Turnip",
       "description": "Thinly sliced turnip that's been pickled.",
-      "price": "",
-      "sellPrice": "",
+      "price": "1,500",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Konpeito",
       "description": "Spiky candies.",
-      "price": "",
-      "sellPrice": "",
+      "price": "1,000",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Mibu Cracker",
-      "description": "Rice crackers associated with Shinsen-gumi.",
-      "price": "",
-      "sellPrice": "",
+      "description": "Rice crackers associated with .",
+      "price": "1,000",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Diet Food",
       "description": "Smells so bad, your appetite disappears.",
-      "price": "",
-      "sellPrice": "",
+      "price": "2,980 5,980 3,980",
+      "sellPrice": "125",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Super Diet Food",
       "description": "Tastes so good, you may overindulge.",
-      "price": "",
-      "sellPrice": "",
+      "price": "14,800 10,000 39,800",
+      "sellPrice": "175",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Veggie Supplement",
       "description": "100% veggies.",
-      "price": "",
-      "sellPrice": "",
+      "price": "24,800 29,800 20,000 17,800",
+      "sellPrice": "225",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Protein",
       "description": "Warning: don't consume before a competition.",
-      "price": "",
-      "sellPrice": "",
+      "price": "39,800 114,800 128,000 79,800 89,800",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Health Supplement",
       "description": "Keeps your skin young, but may cause acne.",
-      "price": "",
-      "sellPrice": "",
+      "price": "10,000 35,800",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Sappy Jelly",
       "description": "Jelly made from tree sap.",
-      "price": "",
-      "sellPrice": "",
+      "price": "2,980 24,800 8,980",
+      "sellPrice": "125",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Mind Supplement",
       "description": "Clears your mind and enhances your memory.",
-      "price": "",
-      "sellPrice": "",
+      "price": "6,980 89,800 198,000 218,000",
+      "sellPrice": "500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Fuuka's Cookie",
       "description": "Supposedly it's edible.",
-      "price": "2",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "2",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Chocolate Cake",
       "description": "Firm and moist.",
-      "price": "2",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "2",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Champagne",
       "description": "Authentic non-alcoholic champagne.",
-      "price": "2",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "2",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Fierce Sutra",
       "description": "Briefly raises entire party's strength.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Aquamarine x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Amethyst x1 Aquamarine x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Agility Sutra",
       "description": "Briefly raises entire party's speed.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Turquoise x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Aquamarine x1 Turquoise x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Protection Sutra",
       "description": "Briefly raises entire party's defense.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Amethyst x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Turquoise x1 Amethyst x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Magic Mirror",
       "description": "Barrier that reflects magic 1x (party).",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Topaz x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Sapphire x1 Topaz x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Attack Mirror",
       "description": "Barrier that reflects phys atk 1x (party).",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Opal x1",
-      "description": "250",
-      "price": "",
-      "sellPrice": "",
+      "price": "Diamond x1 Opal x1",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Dekaja Gem",
       "description": "Nullifies stat bonuses (all foes).",
-      "price": "",
-      "sellPrice": "",
+      "price": "Topaz x1 Opal x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Dekunda Gem",
       "description": "Nullifies stat penalties (party).",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Emerald x1",
-      "description": "750",
-      "price": "",
-      "sellPrice": "",
+      "price": "Topaz x1 Emerald x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Trafuri Gem",
       "description": "Guaranteed escape from most battles.",
-      "price": "",
+      "price": "Amethyst x2",
       "sellPrice": "1,000",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -627,119 +547,119 @@
     {
       "name": "Homunculus",
       "description": "Protects self from a Hama/Mudo skill.",
-      "price": "",
-      "sellPrice": "",
+      "price": "Diamond x1 Sapphire x1",
+      "sellPrice": "2,500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Handmade Keychain",
       "description": "A cute keychain that Chihiro made.",
-      "price": "500",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "500",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Agilao Gem",
       "description": "Deals medium Fire damage to 1 foe.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Flame Magatama",
       "description": "Severe Fire damage to a single enemy.",
-      "price": "375",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Maragi Gem",
       "description": "Deals light Fire damage to all foes.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Bufula Gem",
       "description": "Deals medium Ice damage/Freezes 1 foe.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Frigid Magatama",
       "description": "Severe Ice damage to a single enemy.",
-      "price": "375",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Mabufu Gem",
       "description": "Deals light Ice damage/Freezes all foes.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Zionga Gem",
       "description": "Deals medium Elec damage/Shocks 1 foe.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Shock Magatama",
       "description": "Severe Electric damage to a single enemy.",
-      "price": "375",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Mazio Gem",
       "description": "Deals light Elec dmg/Shocks all foes.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Garula Gem",
       "description": "Deals medium Wind damage to 1 foe.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Gale Magatama",
       "description": "Severe Wind damage to a single enemy.",
-      "price": "375",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "375",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Magaru Gem",
       "description": "Deals light Wind damage to all foes.",
-      "price": "250",
-      "sellPrice": "",
+      "price": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Megido Gem",
       "description": "Deals medium Almighty damage to all foes.",
-      "price": "",
+      "price": "Garnet x2",
       "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -747,7 +667,7 @@
     {
       "name": "Megidolaon Gem",
       "description": "Deals high Almighty damage to all foes.",
-      "price": "",
+      "price": "Garnet x4",
       "sellPrice": "2",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -755,7 +675,7 @@
     {
       "name": "Purifying Rice",
       "description": "Casts Hamaon on 1 enemy.",
-      "price": "",
+      "price": "Aquamarine x2",
       "sellPrice": "125",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -763,7 +683,7 @@
     {
       "name": "Curse Paper",
       "description": "Casts Mudoon on 1 enemy.",
-      "price": "",
+      "price": "Turquoise x2",
       "sellPrice": "125",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -771,39 +691,39 @@
     {
       "name": "Sword of Page",
       "description": "Persona: Luck +1, Strength +1.",
-      "price": "",
+      "price": "Onyx x1",
       "sellPrice": "750",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Sword of Knight",
       "description": "Persona: Luck +1, Strength +2.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Weapon",
+      "price": "Onyx x1 Amethyst x1",
+      "sellPrice": "750",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Sword of Queen",
       "description": "Persona: Luck +2, Strength +3.",
-      "price": "",
+      "price": "Onyx x2",
       "sellPrice": "750",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Sword of King",
       "description": "Persona: Luck +2, Strength +4.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Weapon",
+      "price": "Onyx x2 Amethyst x1",
+      "sellPrice": "750",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Cup of Page",
       "description": "Persona: Luck +1, Endurance +1",
-      "price": "",
+      "price": "Onyx x1",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -811,15 +731,15 @@
     {
       "name": "Cup of Knight",
       "description": "Persona: Luck +1, Endurance +2",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x1 Turquoise x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Cup of Queen",
       "description": "Persona: Luck +2, Endurance +3",
-      "price": "",
+      "price": "Onyx x2",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -827,15 +747,15 @@
     {
       "name": "Cup of King",
       "description": "Persona: Luck +2, Endurance +4",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x2 Turquoise x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Wand of Page",
       "description": "Persona: Luck +1, Magic +1",
-      "price": "",
+      "price": "Onyx x1",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -843,15 +763,15 @@
     {
       "name": "Wand of Knight",
       "description": "Persona: Luck +1, Magic +2",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x1 Garnet x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Wand of Queen",
       "description": "Persona: Luck +2, Magic +3",
-      "price": "",
+      "price": "Onyx x2",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -859,15 +779,15 @@
     {
       "name": "Wand of King",
       "description": "Persona: Luck +2, Magic +4",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x2 Garnet x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Coin of Page",
       "description": "Persona: Luck +1, Agility +1",
-      "price": "",
+      "price": "Onyx x1",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -875,15 +795,15 @@
     {
       "name": "Coin of Knight",
       "description": "Persona: Luck +1, Agility +2",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x1 Aquamarine x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Coin of Queen",
       "description": "Persona: Luck +2, Agility +3",
-      "price": "",
+      "price": "Onyx x2",
       "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -891,15 +811,15 @@
     {
       "name": "Coin of King",
       "description": "Persona: Luck +2, Agility +4",
-      "price": "",
-      "sellPrice": "",
+      "price": "Onyx x2 Aquamarine x1",
+      "sellPrice": "750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Traesto Gem",
       "description": "Enables escape from a dungeon.",
-      "price": "",
+      "price": "Topaz x2",
       "sellPrice": "2,000",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -915,54 +835,14 @@
     {
       "name": "Powerful Drug",
       "description": "Drink at your own risk!",
-      "price": "250",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Dropped by",
-      "description": "Chests",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Amethyst",
       "description": "A shiny, purple gemstone.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Venus Eagle",
-      "description": "Common Chest (Malebolge 4F-5F, 10F)",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Yabbashah",
-      "description": "Ardent Dancer, Creation Relic, Insidious Maya",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Tziah",
-      "description": "Growth Relic, Tranquil Idol",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Harabah",
-      "description": "Angry Table, Hell Knight",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -977,24 +857,8 @@
       "gameId": "p3fes"
     },
     {
-      "name": "Soul Dancer, Vicious Raven",
-      "description": "Common Chest (Caina 2F, 12F)",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Onyx",
       "description": "A black gemstone whose name is Greek for \"claw.\"",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Spurious Book, Wild Beast",
-      "description": "Common Chest (Malebolge 5F, 10F)",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1011,14 +875,6 @@
     {
       "name": "Emerald",
       "description": "A sparkling, green gemstone.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Adamah",
-      "description": "Death Castle, Wrathful Book",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1081,19 +937,11 @@
       "gameId": "p3fes"
     },
     {
-      "name": "Material",
-      "description": "Info",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Nihil Sword",
       "description": "Fuse with a Persona to make a usable weapon.",
       "price": "",
       "sellPrice": "",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
@@ -1109,7 +957,7 @@
       "description": "Fuse with a Persona to make a usable weapon.",
       "price": "",
       "sellPrice": "",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
@@ -1117,7 +965,7 @@
       "description": "Fuse with a Persona to make a usable weapon.",
       "price": "",
       "sellPrice": "",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
@@ -1149,7 +997,7 @@
       "description": "Fuse with a Persona to make a usable weapon.",
       "price": "",
       "sellPrice": "",
-      "category": "Weapon",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
@@ -1187,16 +1035,8 @@
     {
       "name": "Brand Purse",
       "description": "A designer wallet. May make a girl happy.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Tanaka's Amazing Commodities (7/26)",
-      "description": "(+3) Yukari, Yuko",
-      "price": "",
-      "sellPrice": "",
+      "price": "5,980 7,980",
+      "sellPrice": "3,750",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1209,49 +1049,25 @@
       "gameId": "p3fes"
     },
     {
-      "name": "Tanaka's Amazing Commodities (10/25)",
-      "description": "(+3) Yukari, Chihiro, Yuko",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Brand Bag",
       "description": "A designer handbag. May make a girl happy.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Tanaka's Amazing Commodities (12/6)",
-      "description": "(+3) Fuuka, Yukari, Chihiro, Yuko",
-      "price": "",
-      "sellPrice": "",
+      "price": "10,000 20,000",
+      "sellPrice": "5,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Perfume",
       "description": "Expensive perfume. May make a girl happy.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Tanaka's Amazing Commodities (6/14)",
-      "description": "(+3) Yukari",
-      "price": "",
-      "sellPrice": "",
+      "price": "3,980 5,980",
+      "sellPrice": "1,250",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Teddy Bear",
       "description": "Cute stuffed animal. May make a girl happy.",
-      "price": "",
+      "price": "Amethyst x2",
       "sellPrice": "1,500",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1259,7 +1075,7 @@
     {
       "name": "Japanese Doll",
       "description": "Her hair really grows! May make a girl happy.",
-      "price": "",
+      "price": "Onyx x2",
       "sellPrice": "1,250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1267,7 +1083,7 @@
     {
       "name": "Kaleidoscope",
       "description": "See a colorful world! May make a girl happy.",
-      "price": "",
+      "price": "Aquamarine x2",
       "sellPrice": "1,250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1275,7 +1091,7 @@
     {
       "name": "Goggle-eyed Idol",
       "description": "Almost looks real! May make a girl happy.",
-      "price": "",
+      "price": "Turquoise x2",
       "sellPrice": "1,250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1283,7 +1099,7 @@
     {
       "name": "Jack Frost Doll",
       "description": "Adorable character. May make a girl happy.",
-      "price": "",
+      "price": "200+",
       "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1301,13 +1117,13 @@
       "description": "Came with your good fortune. May make a girl happy.",
       "price": "",
       "sellPrice": "",
-      "category": "Accessory",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Ganesha Bank",
       "description": "Piggy bank shaped like a deity. May make a girl happy.",
-      "price": "",
+      "price": "200+",
       "sellPrice": "250",
       "category": "Consumable",
       "gameId": "p3fes"
@@ -1316,7 +1132,7 @@
       "name": "Wealth Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "3,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1324,7 +1140,7 @@
       "name": "Treasure Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "10,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1332,7 +1148,7 @@
       "name": "Supreme Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "25,200",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1340,7 +1156,7 @@
       "name": "Opulent Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "100,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1348,7 +1164,7 @@
       "name": "Luxury Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "165,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1356,7 +1172,7 @@
       "name": "Glorious Coin",
       "description": "Dusty old coin. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "580,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1364,7 +1180,7 @@
       "name": "Empress's Mask",
       "description": "Golden mask. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "2,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1372,15 +1188,15 @@
       "name": "Vibrant Cloth",
       "description": "Colorful cloth. It might be valuable.",
       "price": "",
-      "sellPrice": "",
-      "category": "Armor",
+      "sellPrice": "3,000",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Beetle Horn",
       "description": "Large insect horn. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "5,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1388,7 +1204,7 @@
       "name": "Golden Beard",
       "description": "An oddly-shaped beard. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "7,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1396,7 +1212,7 @@
       "name": "Massive Wheel",
       "description": "Big tank wheel. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "20,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1404,7 +1220,7 @@
       "name": "Dense Rock",
       "description": "Abnormally hard rock. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "38,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1412,7 +1228,7 @@
       "name": "Broken Heart",
       "description": "A cracked heart. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "80,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1420,7 +1236,7 @@
       "name": "Fine Statuette",
       "description": "A very small sculpture. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "2,000,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1428,7 +1244,7 @@
       "name": "Shadow Shard",
       "description": "Black stone fragment. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "15,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1436,7 +1252,7 @@
       "name": "Shadow Crystal",
       "description": "Shiny black crystal. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "100,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1444,13 +1260,13 @@
       "name": "Steel Right Arm",
       "description": "Mighty steel right arm. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "50,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Broken Wheel",
-      "description": "Dropped by Brilliant Cyclops (Cocytus 9F)",
+      "description": "A broken wheel from a mechanical foe. It might be valuable. Dropped by Brilliant Cyclops (Cocytus 9F).",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1458,7 +1274,7 @@
     },
     {
       "name": "Shining Beard",
-      "description": "Dropped by Death Castle (Caina 7F; x2)",
+      "description": "A luminous beard fragment. It might be valuable. Dropped by Death Castle (Caina 7F).",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1466,7 +1282,7 @@
     },
     {
       "name": "Ebon Heart",
-      "description": "Dropped by Harem Dancer (Caina 14F)",
+      "description": "A dark, pulsating shadow core. It might be valuable. Dropped by Harem Dancer (Caina 14F).",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1476,7 +1292,7 @@
       "name": "Ice Element",
       "description": "Mysterious freezing lump. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "40,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1484,7 +1300,7 @@
       "name": "Thunder Element",
       "description": "Mysterious sparking lump. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "40,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1492,7 +1308,7 @@
       "name": "Fire Element",
       "description": "Mysterious burning lump. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "40,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1500,7 +1316,7 @@
       "name": "Throne of Ruin",
       "description": "A floating throne. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "160,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1508,13 +1324,13 @@
       "name": "Burning Grail",
       "description": "Cup with eternal flame. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "200,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Scarlet Choker",
-      "description": "Dropped by Neo Minotaur (Ptolomea 17F)",
+      "description": "A blood-red ornate choker. It might be valuable. Dropped by Neo Minotaur (Ptolomea 17F).",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1522,15 +1338,15 @@
     },
     {
       "name": "Infernal Armor",
-      "description": "Dropped by Spastic Turret (Judecca 8F)",
+      "description": "Scorched demonic armor plating. It might be valuable. Dropped by Spastic Turret (Judecca 8F).",
       "price": "",
       "sellPrice": "",
-      "category": "Armor",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Bloody Horse",
-      "description": "Dropped by Jotun of Blood (Judecca 16F)",
+      "description": "An eerie equine relic stained in crimson. It might be valuable. Dropped by Jotun of Blood (Judecca 16F).",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1540,7 +1356,7 @@
       "name": "All-Seeing Eye",
       "description": "An omniscient eye. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "180,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1548,7 +1364,7 @@
       "name": "White Quillon",
       "description": "Shiny and white. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "140,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1556,7 +1372,7 @@
       "name": "Black Quillon",
       "description": "Shiny and black. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "140,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1564,7 +1380,7 @@
       "name": "Red Quillon",
       "description": "Shiny and red. It might be valuable.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "140,000",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1572,7 +1388,7 @@
       "name": "Beetle Shell",
       "description": "Hard shell obtained from a Grave Beetle.",
       "price": "",
-      "sellPrice": "1",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1580,7 +1396,7 @@
       "name": "Old Lantern",
       "description": "Lantern obtained from a Phantom Mage.",
       "price": "",
-      "sellPrice": "4",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1588,7 +1404,7 @@
       "name": "Bronze Figurine",
       "description": "Figurine dropped by the Bronze Dice.",
       "price": "",
-      "sellPrice": "9",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1596,7 +1412,7 @@
       "name": "Snake Scale",
       "description": "A Lustful Snake's black scale.",
       "price": "",
-      "sellPrice": "10",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1604,7 +1420,7 @@
       "name": "Relic Fragment",
       "description": "Fragment from a Creation Relic.",
       "price": "",
-      "sellPrice": "18",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1612,7 +1428,7 @@
       "name": "Greasy Gear",
       "description": "Gear obtained from a Wild Drive.",
       "price": "",
-      "sellPrice": "19",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1620,7 +1436,7 @@
       "name": "Tiara's Hair",
       "description": "Strand of silver hair from a Shouting Tiara.",
       "price": "",
-      "sellPrice": "24",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1628,7 +1444,7 @@
       "name": "Knight's Reins",
       "description": "A Champion Knight's black reins.",
       "price": "",
-      "sellPrice": "25",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1636,7 +1452,7 @@
       "name": "Empress's Mirror",
       "description": "Hand mirror dropped by an Elegant Mother.",
       "price": "",
-      "sellPrice": "33",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1644,7 +1460,7 @@
       "name": "Gold Handguard",
       "description": "Handguard dropped by a Hakurou Musha.",
       "price": "",
-      "sellPrice": "34",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1652,23 +1468,23 @@
       "name": "Gold Ring",
       "description": "Golden ring dropped by a Wondrous Magus.",
       "price": "",
-      "sellPrice": "39",
-      "category": "Accessory",
+      "sellPrice": "",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Red Armor Plate",
       "description": "Armor plate dropped by a Scarlet Turret.",
       "price": "",
-      "sellPrice": "40",
-      "category": "Armor",
+      "sellPrice": "",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Pink Feather",
       "description": "Pink feather of a Devoted Cupid.",
       "price": "",
-      "sellPrice": "44",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1676,7 +1492,7 @@
       "name": "Moon Tablet",
       "description": "Stone tablet dropped by a Ruinous Idol.",
       "price": "",
-      "sellPrice": "45",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1684,7 +1500,7 @@
       "name": "Sand of Time",
       "description": "Sand from inside Perpetual Sand.",
       "price": "",
-      "sellPrice": "49",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1692,7 +1508,7 @@
       "name": "Rainbow Hair",
       "description": "A Daring Gigas's multicolored hair.",
       "price": "",
-      "sellPrice": "50",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1700,7 +1516,7 @@
       "name": "Bloody Button",
       "description": "Old button obtained from The Reaper.",
       "price": "",
-      "sellPrice": "53",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1708,7 +1524,7 @@
       "name": "Lead Medal",
       "description": "Dropped by the Wealth Hand.",
       "price": "",
-      "sellPrice": "7",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1716,7 +1532,7 @@
       "name": "Steel Medal",
       "description": "Dropped by the Treasure Hand.",
       "price": "",
-      "sellPrice": "14",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1724,7 +1540,7 @@
       "name": "Bronze Medal",
       "description": "Dropped by the Supreme Hand.",
       "price": "",
-      "sellPrice": "21",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1732,7 +1548,7 @@
       "name": "Silver Medal",
       "description": "Dropped by the Opulent Hand.",
       "price": "",
-      "sellPrice": "32",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1740,7 +1556,7 @@
       "name": "Gold Medal",
       "description": "Dropped by the Luxury Hand.",
       "price": "",
-      "sellPrice": "47",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1748,7 +1564,7 @@
       "name": "Platinum Medal",
       "description": "Dropped by the Glorious Hand.",
       "price": "",
-      "sellPrice": "54",
+      "sellPrice": "",
       "category": "Consumable",
       "gameId": "p3fes"
     },
@@ -1922,15 +1738,15 @@
     },
     {
       "name": "Torn Black Cloth",
-      "description": "Enables the fusion of Pale Rider (Death).",
+      "description": "Enables the fusion of Pale Rider ().",
       "price": "",
       "sellPrice": "",
-      "category": "Armor",
+      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Sugar Key",
-      "description": "Enables the fusion of King Frost (Emperor).",
+      "description": "Enables the fusion of King Frost ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1938,7 +1754,7 @@
     },
     {
       "name": "Machine Core",
-      "description": "Enables the fusion of Nata Taishi (Chariot).",
+      "description": "Enables the fusion of Nata Taishi ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1946,7 +1762,7 @@
     },
     {
       "name": "Marionette",
-      "description": "Enables the fusion of Nebiros (Hermit).",
+      "description": "Enables the fusion of Nebiros ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1954,7 +1770,7 @@
     },
     {
       "name": "Lily Petal",
-      "description": "Enables the fusion of Lilith (Devil).",
+      "description": "Enables the fusion of Lilith ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1962,7 +1778,7 @@
     },
     {
       "name": "Masakados",
-      "description": "Enables the fusion of Masakado (Tower).",
+      "description": "Enables the fusion of Masakado ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1978,7 +1794,7 @@
     },
     {
       "name": "Old Document 02",
-      "description": "Fixed Chest (Arqa 40F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1986,7 +1802,7 @@
     },
     {
       "name": "Old Document 03",
-      "description": "Fixed Chest (Arqa 64F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -1994,7 +1810,7 @@
     },
     {
       "name": "Old Document 04",
-      "description": "Fixed Chest (Yabbashah 89F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2002,7 +1818,7 @@
     },
     {
       "name": "Old Document 05",
-      "description": "Fixed Chest (Yabbashah 114F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2010,7 +1826,7 @@
     },
     {
       "name": "Old Document 06",
-      "description": "Fixed Chest (Tziah 139F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2018,7 +1834,7 @@
     },
     {
       "name": "Old Document 07",
-      "description": "Fixed Chest (Tziah 164F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2026,7 +1842,7 @@
     },
     {
       "name": "Old Document 08",
-      "description": "Fixed Chest (Harabah 214F)",
+      "description": "A 10-year-old document found in Tartarus.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2058,7 +1874,7 @@
     },
     {
       "name": "Handheld Game",
-      "description": "The \"Odin Cube\" disc is already in the tray.",
+      "description": "The \"\" disc is already in the tray.",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2082,7 +1898,7 @@
     },
     {
       "name": "Glasses Wipe",
-      "description": "It's wiped things besides his glasses\u2026",
+      "description": "It's wiped things besides his glasses…",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2114,7 +1930,7 @@
     },
     {
       "name": "Small Cheongsam",
-      "description": "Enables the fusion of Hua Po (Magician).",
+      "description": "Enables the fusion of Hua Po ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2122,7 +1938,7 @@
     },
     {
       "name": "Blue Scale",
-      "description": "Enables the fusion of Empusa (Fortune).",
+      "description": "Enables the fusion of Empusa ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2130,7 +1946,7 @@
     },
     {
       "name": "Book of Ancients",
-      "description": "Enables the fusion of Thoth (Temperance).",
+      "description": "Enables the fusion of Thoth ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2138,7 +1954,7 @@
     },
     {
       "name": "Red Muffler",
-      "description": "Enables the fusion of Hell Biker (Hanged Man).",
+      "description": "Enables the fusion of Hell Biker ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2146,7 +1962,7 @@
     },
     {
       "name": "Rainbow Feather",
-      "description": "Enables the fusion of Kartikeya (Star).",
+      "description": "Enables the fusion of Kartikeya ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2154,7 +1970,7 @@
     },
     {
       "name": "Cipher's Mask",
-      "description": "Enables the fusion of Orpheus Telos (Fool).",
+      "description": "Enables the fusion of Orpheus Telos ().",
       "price": "",
       "sellPrice": "",
       "category": "Consumable",
@@ -2185,1464 +2001,1360 @@
       "gameId": "p3fes"
     },
     {
-      "name": "Weapon",
-      "description": "Attack",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Shortsword",
-      "description": "35",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Very easy-to-use sword.",
+      "price": "",
+      "sellPrice": "200",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Rapier",
-      "description": "37",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A thrusting practice sword.",
+      "price": "",
+      "sellPrice": "325",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gladius",
-      "description": "39",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Short sword designed for thrusting. Effect: Varies.",
+      "price": "3,400 / 2,550",
+      "sellPrice": "850",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Saber",
-      "description": "55",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Sword that's easy to wield with one hand. Effect: Varies.",
+      "price": "8,800 / 6,600",
+      "sellPrice": "2,200",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Night Falcon",
-      "description": "57",
-      "price": "93",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Rapier that's light as a feather. Effect: +Fear (med odds).",
+      "price": "",
+      "sellPrice": "2,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Elegant Fleuret",
-      "description": "85",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Sword designed for thrusting. Effect: Varies.",
+      "price": "11,900 / 8,925",
+      "sellPrice": "2,975",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Steel Pipe",
-      "description": "100",
-      "price": "99",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Old metal pipe with some rust stains.",
+      "price": "",
+      "sellPrice": "100",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Silver Saber",
-      "description": "111",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Saber crafted from silver. Effect: +3 Magic.",
+      "price": "18,000 / 13,500",
+      "sellPrice": "4,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Tizona",
-      "description": "136",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Brave champion's sword.",
-      "description": "36,100 / 27,075",
-      "price": "9,025",
-      "sellPrice": "",
+      "description": "Brave champion's sword. Effect: Varies -.",
+      "price": "36,100 / 27,075",
+      "sellPrice": "9,025",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Aroundight",
-      "description": "141",
-      "price": "93",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Sword that emits a cold light. Effect: +30 SP.",
+      "price": "",
+      "sellPrice": "11,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Skrep",
-      "description": "167",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A rust-proof sword. Effect: Varies.",
+      "price": "57,600 / 43,200 35,800",
+      "sellPrice": "14,400",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sin Blade",
-      "description": "195",
-      "price": "92",
-      "sellPrice": "",
+      "description": "Sword adorned with a moon god's symbol. Effect: Varies.",
+      "price": "111,200 / 83,400",
+      "sellPrice": "27,800",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Main Gauche",
-      "description": "235",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Varies",
-      "description": "Short sword used for defense.",
-      "price": "",
+      "description": "Short sword used for defense. Effect: +Distress (high odds) Varies.",
+      "price": "140,000 / 105,000",
       "sellPrice": "35,000",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sol Blade",
-      "description": "246",
-      "price": "93",
-      "sellPrice": "",
+      "description": "A sword with a sun etched on the hilt. Effect: +2 to all stats.",
+      "price": "",
+      "sellPrice": "40,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Ascalon",
-      "description": "271",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Famous sword that slew a dragon. Effect: +2 Magic.",
+      "price": "176,000 / 132,000",
+      "sellPrice": "44,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Damascus Rapier",
-      "description": "295",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Rapier made from Damascus steel. Effect: +Poison (med odds).",
+      "price": "228,000 / 171,000",
+      "sellPrice": "57,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gimlet",
-      "description": "335",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Sword with a very sharp tip. Effect: Varies.",
+      "price": "312,000 / 234,000",
+      "sellPrice": "78,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Excalibur",
-      "description": "400",
-      "price": "99",
+      "description": "The legendary holy sword. Effect: +3 to all stats.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Mother Rapier",
-      "description": "Varies",
+      "description": "A basic fused rapier. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Mother Saber",
-      "description": "A basic fused saber.",
+      "description": "A basic fused saber. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Mother Epee",
-      "description": "A basic fused epee.",
+      "description": "A basic fused epee. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Deus Xiphos",
-      "description": "450",
-      "price": "94",
+      "description": "Golden sword once held by the archangel Michael. Effect: +10 Magic.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Lucifer's Blade",
-      "description": "450",
-      "price": "100",
+      "description": "A sword that was created from a fallen angel's jewels. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Practice Bow",
-      "description": "36",
-      "price": "88",
-      "sellPrice": "",
+      "description": "A beginner's bow used for practice.",
+      "price": "",
+      "sellPrice": "400",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Short Bow",
-      "description": "38",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Light, easy-to-use bow. Effect: Varies.",
+      "price": "3,200 / 2,400",
+      "sellPrice": "800",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Siren's Song",
-      "description": "55",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Shigetou-yumi",
-      "description": "83",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Bow of Affection",
-      "description": "86",
-      "price": "",
-      "sellPrice": "",
+      "description": "The sound of its string bewilders enemies. Effect: +Panic (low odds).",
+      "price": "8,000 / 6,000",
+      "sellPrice": "2,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
-      "name": "+3 Magic",
-      "description": "Shoots arrows in a beautiful arc.",
-      "price": "4,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "name": "Shigetou-yumi",
+      "description": "Bow bound tightly with rattan. Effect: Varies -.",
+      "price": "13,200 / 9,900",
+      "sellPrice": "3,300",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Bow of Affection",
+      "description": "Shoots arrows in a beautiful arc. Effect: +Charm (med odds) +3 Magic.",
+      "price": "",
+      "sellPrice": "4,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Toy Bow",
-      "description": "100",
-      "price": "99",
-      "sellPrice": "",
+      "description": "Bow that shoots suction-cup arrows.",
+      "price": "",
+      "sellPrice": "100",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Uta",
-      "description": "111",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Bow with metal ornaments attached. Effect: Varies.",
+      "price": "21,000 / 15,750",
+      "sellPrice": "5,250",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Pleiades",
-      "description": "116",
-      "price": "89",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Magical bow that's light as a feather. Effect: +4 Magic.",
+      "price": "",
+      "sellPrice": "5,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Kamatha",
-      "description": "135",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Bow designed for long-distance shooting. Effect: Varies.",
+      "price": "34,400 / 25,800",
+      "sellPrice": "8,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Higo-yumi",
-      "description": "167",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Bamboo bow that's reinforced with wood. Effect: Varies.",
+      "price": "60,500 / 45,375",
+      "sellPrice": "15,125",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Composite Bow",
-      "description": "190",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Bow made from wood and leather. Effect: Varies.",
+      "price": "95,200 / 71,400",
+      "sellPrice": "23,800",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Great Bow",
-      "description": "245",
-      "price": "88",
-      "sellPrice": "",
+      "description": "A strong, oversized bow. Effect: +2 Luck.",
+      "price": "141,600 / 106,200",
+      "sellPrice": "35,400",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Hero's Bow",
-      "description": "269",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Bow made especially for a hero. Effect: Varies.",
+      "price": "160,000 / 120,000",
+      "sellPrice": "40,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Lightning Bow",
-      "description": "281",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Bow that shoots as fast as lightning. Effect: +Charm (high odds).",
+      "price": "240,000 / 180,000",
+      "sellPrice": "60,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Yoichi's Bow",
-      "description": "318",
-      "price": "88",
-      "sellPrice": "",
+      "description": "The legendary archer's bow. Effect: Varies.",
+      "price": "311,200 / 233,400",
+      "sellPrice": "77,800",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Source Bow",
-      "description": "Varies",
+      "description": "A basic fused longbow. Effect: Varies.",
+      "price": "",
+      "sellPrice": "10,000",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Source Longbow",
+      "description": "A basic fused yumi. Effect: Varies.",
+      "price": "",
+      "sellPrice": "10,000",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Mary's Resolve",
+      "description": "Its arrows pierce the darkest shadows. Effect: +50 HP.",
       "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
-      "name": "Source Longbow",
-      "description": "A basic fused yumi.",
+      "name": "Saarnga",
+      "description": "Bow crafted from sunbeams. Effect: +Wind Boost.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Mary's Resolve",
-      "description": "400",
-      "price": "99",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Saarnga",
-      "description": "400",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Quintessence Bow",
-      "description": "450",
-      "price": "100",
+      "description": "The Platonic ideal of all bows. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Imitation Katana",
-      "description": "38",
-      "price": "90",
-      "sellPrice": "",
+      "description": "It looks real, but...",
+      "price": "",
+      "sellPrice": "450",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Kishido Blade",
-      "description": "40",
-      "price": "90",
-      "sellPrice": "",
+      "description": "Long, heavy two-handed sword. Effect: +Crit rate up (low).",
+      "price": "3,000 / 2,250",
+      "sellPrice": "750",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Juzumaru",
-      "description": "42",
-      "price": "91",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Katana owned by the monk Nichiren. Effect: +20 HP.",
+      "price": "",
+      "sellPrice": "1,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Bastard Sword",
-      "description": "57",
-      "price": "90",
-      "sellPrice": "",
+      "description": "Long, thin two-handed sword. Effect: Varies.",
+      "price": "9,200 / 6,900",
+      "sellPrice": "2,300",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "All-purpose Katana",
-      "description": "58",
-      "price": "90",
-      "sellPrice": "",
+      "description": "Katana with many different uses.",
+      "price": "5,980",
+      "sellPrice": "2,500",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Raikou",
-      "description": "86",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Light, sharp katana. Effect: Varies.",
+      "price": "14,500 / 10,875",
+      "sellPrice": "3,625",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Spiked Bat",
-      "description": "100",
-      "price": "99",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Bat with nails driven into it.",
+      "price": "",
+      "sellPrice": "100",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Two-handed Sword",
-      "description": "116",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sword requiring both hands. Effect: Varies -.",
+      "price": "19,000 / 14,250",
+      "sellPrice": "4,750",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Onimaru Kunitsuna",
-      "description": "121",
+      "description": "Famous katana that purifies illness. Effect: +20 HP +3 Strength.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+3 Strength",
-      "description": "Famous katana that purifies illness.",
-      "price": "7,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "7,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Dark Slayer",
-      "description": "141",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Dull sword used for assassinations. Effect: +Rage (med odds).",
+      "price": "32,700 / 24,525",
+      "sellPrice": "8,175",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Tsubaki-maru",
-      "description": "174",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Very heavy and thick katana. Effect: Varies.",
+      "price": "54,400",
+      "sellPrice": "13,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Mikazuki Munechika",
-      "description": "182",
-      "price": "91",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Katana with crescent-shaped patterns. Effect: Varies.",
+      "price": "",
+      "sellPrice": "18,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Claymore",
-      "description": "204",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Unusually long two-handed sword. Effect: Varies.",
+      "price": "98,400 / 73,800",
+      "sellPrice": "24,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Outenta Mitsuyo",
-      "description": "213",
-      "price": "91",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Famous katana that banishes darkness. Effect: Varies.",
+      "price": "",
+      "sellPrice": "30,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Deathbringer",
-      "description": "246",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Accessory",
+      "description": "Sword with a mysterious glow. Effect: +Poison (low odds).",
+      "price": "136,000 / 102,000",
+      "sellPrice": "34,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Zweihander",
-      "description": "284",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Gigantic sword that's taller than a man. Effect: +Crit rate up (med).",
+      "price": "176,000 / 132,000",
+      "sellPrice": "44,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Apocalypse",
-      "description": "295",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Tobi-botaru",
-      "description": "309",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Balmung",
-      "description": "310",
-      "price": "93",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Laevateinn",
-      "description": "340",
-      "price": "83",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Galahad's Sword",
-      "description": "351",
-      "price": "90",
+      "description": "Sword that symbolizes turmoil. Effect: +50 SP.",
+      "price": "198,000",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
-      "name": "Myohou Muramasa",
-      "description": "400",
-      "price": "99",
+      "name": "Tobi-botaru",
+      "description": "Katana with good cutting power. Effect: Varies.",
+      "price": "244,000 / 183,000",
+      "sellPrice": "61,000",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Balmung",
+      "description": "Mystical sword of Siegfried. Effect: +100 HP.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Laevateinn",
+      "description": "Sword that will destroy the world. Effect: +Fire Boost, Fire Attack.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Galahad's Sword",
+      "description": "Sword that Galahad once used. Effect: Varies.",
+      "price": "304,000 / 228,000",
+      "sellPrice": "76,000",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Myohou Muramasa",
+      "description": "Cursed katana that slices everything.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Masakado's Katana",
-      "description": "450",
-      "price": "100",
+      "description": "Sword once used by General Masakado. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Bare Hand",
-      "description": "1",
-      "price": "1",
+      "description": "Hands without a weapon.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Brass Knuckles",
-      "description": "51",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Simple, effective knuckles. Effect: Varies.",
+      "price": "8,400 / 6,300",
+      "sellPrice": "2,100",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sonic Fist",
-      "description": "77",
-      "price": "",
-      "sellPrice": "",
+      "description": "Gloves of very light material. Effect: +Fear (med odds) -.",
+      "price": "13,900 / 10,425",
+      "sellPrice": "3,475",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Bladefist",
-      "description": "80",
+      "description": "Knuckles made from a famous sword. Effect: +3 Agility +20 HP.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+20 HP",
-      "description": "Knuckles made from a famous sword.",
-      "price": "4,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Champion Gloves",
-      "description": "85",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Replica gloves of a champion. Effect: Varies.",
+      "price": "8,980",
+      "sellPrice": "3,700",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Jack's Gloves",
-      "description": "100",
-      "price": "99",
+      "description": "The Jack Brothers' gloves.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Beast Fangs",
-      "description": "102",
-      "price": "97",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Fist spurs resembling animal fangs. Effect: Varies.",
+      "price": "18,000 / 13,500",
+      "sellPrice": "4,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Kaiser Knuckles",
-      "description": "124",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Perfectly balanced knuckles. Effect: Varies.",
+      "price": "36,000 / 27,000",
+      "sellPrice": "9,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Fists of Fury",
-      "description": "153",
-      "price": "97",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Knuckles of barely contained anger. Effect: Varies.",
+      "price": "51,900 / 38,925",
+      "sellPrice": "12,975",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Wicked Cestus",
-      "description": "178",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+Crit rate up (low)",
-      "description": "Cestus with sharp blades attached.",
-      "price": "",
+      "description": "Cestus with sharp blades attached. Effect: +Crit rate up (high) +Crit rate up (low).",
+      "price": "88,000 / 66,000",
       "sellPrice": "22,000",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Blood Baghnakh",
-      "description": "186",
-      "price": "98",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Fist spurs that have drawn much blood. Effect: +Poison (high odds).",
+      "price": "",
+      "sellPrice": "30,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Titanic Knuckles",
-      "description": "214",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Knuckles of exceptional power. Effect: +2 Luck.",
+      "price": "144,000 / 108,000",
+      "sellPrice": "36,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Pugilist's Fists",
-      "description": "224",
-      "price": "98",
+      "description": "Gloves for boxers. Effect: +3 Strength.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Crusher Fist",
-      "description": "246",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Knuckles designed to deal heavy damage. Effect: +3 Agility.",
+      "price": "192,000 / 144,000",
+      "sellPrice": "48,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Supreme Gloves",
-      "description": "268",
-      "price": "97",
-      "sellPrice": "",
+      "description": "Gloves of state-of-the-art technology. Effect: Varies.",
+      "price": "236,000 / 177,000",
+      "sellPrice": "59,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Dragon Fangs",
-      "description": "274",
-      "price": "97",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Fist spurs that resemble a dragon's fang. Effect: Varies.",
+      "price": "",
+      "sellPrice": "70,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Wings of Vanth",
-      "description": "304",
-      "price": "97",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Fist spurs that are light as air. Effect: Varies.",
+      "price": "288,000 / 216,000",
+      "sellPrice": "72,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Golden Gloves",
-      "description": "318",
-      "price": "98",
-      "sellPrice": "",
+      "description": "Legendary boxing gloves. Effect: Varies.",
+      "price": "",
+      "sellPrice": "100,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sabazios",
-      "description": "340",
-      "price": "85",
+      "description": "Gloves used in holy rituals. Effect: +Ice Boost, Ice Attack.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Double Ziggurat",
-      "description": "400",
-      "price": "99",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Delivers punches of divine punishment. Effect: Varies.",
+      "price": "",
+      "sellPrice": "120,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Root Gloves",
-      "description": "Varies",
+      "description": "Basic fused gloves. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "10,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Root Knuckles",
-      "description": "Basic fused knuckles.",
+      "description": "Basic fused knuckles. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "10,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Root Cestus",
-      "description": "Basic fused cestus.",
+      "description": "Basic fused cestus. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Evil Gloves",
-      "description": "450",
-      "price": "100",
+      "description": "Fist spurs with demonic power. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Orgilaebus",
-      "description": "85",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A gun based on the principles used in Orgia Mode. Effect: Varies.",
+      "price": "",
+      "sellPrice": "4,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Rocket Punch",
-      "description": "100",
-      "price": "99",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Rocket-propelled knuckle.",
+      "price": "",
+      "sellPrice": "100",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Albireo",
-      "description": "116",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Hand unit that fires from 3 fingers. Effect: Varies.",
+      "price": "22,000",
+      "sellPrice": "5,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Assault Rifle",
-      "description": "120",
-      "price": "90",
-      "sellPrice": "",
+      "description": "Light, low-caliber rifle. Effect: Varies.",
+      "price": "",
+      "sellPrice": "6,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Grenade Launcher",
-      "description": "141",
-      "price": "92",
-      "sellPrice": "",
+      "description": "Launcher that fires 80mm grenades. Effect: Varies.",
+      "price": "37,900 / 28,425",
+      "sellPrice": "9,475",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Six-shot",
-      "description": "147",
+      "description": "Can transform into 6 different shapes. Effect: +40 SP Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "11,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Orgone Rifle",
-      "description": "174",
-      "price": "92",
-      "sellPrice": "",
+      "description": "Rifle designed to shoot Orgone rounds. Effect: +2 Luck.",
+      "price": "64,000 / 48,000",
+      "sellPrice": "16,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Phalanx B2",
-      "description": "180",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Gun loaded with anti-Shadow systems. Effect: Varies.",
+      "price": "",
+      "sellPrice": "16,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gamma Storm",
-      "description": "200",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Rifle with enhanced piercing strength. Effect: Varies.",
+      "price": "",
+      "sellPrice": "27,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Medusa",
-      "description": "204",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Hand unit that fires from all fingers. Effect: Varies.",
+      "price": "108,000 / 81,000",
+      "sellPrice": "27,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Railgun",
-      "description": "246",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Shoots a metal slug via electromagnetism. Effect: +Poison (med odds).",
+      "price": "145,600 / 109,200",
+      "sellPrice": "36,400",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Axion IG",
-      "description": "250",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Cannon with the latest homing systems. Effect: +Crit rate up (med).",
+      "price": "",
+      "sellPrice": "37,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Missile Launcher",
-      "description": "255",
-      "price": "99",
-      "sellPrice": "",
+      "description": "Cannon with the latest homing systems. Effect: +50 SP.",
+      "price": "",
+      "sellPrice": "47,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Kiss of Athena",
-      "description": "260",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Gun as potent as a goddess's kiss. Effect: Varies.",
+      "price": "184,000 / 138,000",
+      "sellPrice": "46,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Maxima Sniper",
-      "description": "309",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "The latest model of anti-Shadow gun. Effect: Varies.",
+      "price": "256,000 / 192,000",
+      "sellPrice": "64,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Brighid's Flame",
-      "description": "315",
-      "price": "93",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Mighty flame that purifies all. Effect: Varies.",
+      "price": "",
+      "sellPrice": "70,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Fermion Cannon",
-      "description": "326",
-      "price": "95",
-      "sellPrice": "",
+      "description": "Its firing mechanism uses pions and muons. Effect: +100 HP.",
+      "price": "",
+      "sellPrice": "82,500",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Pandemonium",
-      "description": "331",
-      "price": "92",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Gun that harnesses an ancient relic's power. Effect: Varies.",
+      "price": "328,000 / 246,000",
+      "sellPrice": "82,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Antimatter Cannon",
-      "description": "400",
-      "price": "99",
+      "description": "Annihilation occurs in the target's body.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Nucleus SMG",
-      "description": "Varies",
+      "description": "A basic fused SMG. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Nucleus Rifle",
-      "description": "A basic fused rifle.",
+      "description": "A basic fused rifle. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "10,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Nucleus Cannon",
-      "description": "A basic fused cannon.",
+      "description": "A basic fused cannon. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "10,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Metatronius",
-      "description": "450",
-      "price": "94",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Bone",
-      "description": "100",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+Crit rate up (high)",
-      "description": "A bone with lots of calcium.",
-      "price": "100",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Kunai of Carnage",
-      "description": "105",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Sylph Blade",
-      "description": "129",
+      "description": "Gun named for the mouthpiece of God. Effect: +10 to all stats.",
       "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
-      "name": "+Distress (low odds)",
-      "description": "Knife as light as the wind.",
+      "name": "Bone",
+      "description": "A bone with lots of calcium. Effect: - +Crit rate up (high).",
+      "price": "",
+      "sellPrice": "100",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Kunai of Carnage",
+      "description": "An especially deadly kunai.",
+      "price": "19,000",
+      "sellPrice": "4,750",
+      "category": "Weapon",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Sylph Blade",
+      "description": "Knife as light as the wind. Effect: - +Distress (low odds).",
       "price": "31,000",
       "sellPrice": "7,750",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Blitz Kunai",
-      "description": "160",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "An ordinary kunai. Effect: Varies.",
+      "price": "60,500 / 45,375",
+      "sellPrice": "15,125",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Silver Moon",
-      "description": "186",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Dog mask with circular blade. Effect: +Poison (med odds).",
+      "price": "88,000 / 66,000",
+      "sellPrice": "22,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Karasu-maru",
-      "description": "195",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Very light kunai used for assassination. Effect: Varies.",
+      "price": "",
+      "sellPrice": "30,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sword Breaker",
-      "description": "224",
-      "price": "95",
-      "sellPrice": "",
+      "description": "Knife used to break swords. Effect: Varies.",
+      "price": "150,400 / 112,800",
+      "sellPrice": "37,600",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Raven Claw",
-      "description": "230",
-      "price": "95",
+      "description": "Kunai as black as a moonless night.",
+      "price": "114,800",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Pesh Kabz",
-      "description": "258",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Knife with a peculiar shape. Effect: +3 Agility.",
+      "price": "176,000 / 132,000",
+      "sellPrice": "44,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Shadowrend",
-      "description": "272",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Kunai wielded by a certain ninja. Effect: +4 Agility.",
+      "price": "224,000 / 168,000",
+      "sellPrice": "56,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Athame",
-      "description": "304",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Very thick, heavy knife. Effect: +Deadly vs Justice.",
+      "price": "296,000 / 222,000",
+      "sellPrice": "74,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Grand Slasher",
-      "description": "400",
-      "price": "99",
+      "description": "Its trail is bright and fast as lightning. Effect: +5 Magic.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Elementary Knife",
-      "description": "Varies",
+      "description": "A basic fused knife. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Elementary Kunai",
-      "description": "A basic fused kunai.",
+      "description": "A basic fused kunai. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Elementary Mask",
-      "description": "A basic fused mask.",
+      "description": "A basic fused mask. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Vajra",
-      "description": "450",
-      "price": "100",
+      "description": "Divine weapon made from a holy bone. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Treason Couse",
-      "description": "78",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Spear commonly used by revolutionaries.",
+      "price": "",
+      "sellPrice": "3,250",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Scrub Brush",
-      "description": "100",
-      "price": "99",
+      "description": "Brush used for cleaning.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Friuli Spear",
-      "description": "110",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Lightweight but strong spear. Effect: +Crit rate up (med).",
+      "price": "20,000",
+      "sellPrice": "5,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Cross Spear",
-      "description": "129",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Spear with cross-shaped tip. Effect: Varies.",
+      "price": "34,400 / 25,800",
+      "sellPrice": "8,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Omega Spear",
-      "description": "134",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+30 SP",
-      "description": "Spear with omega-level power.",
+      "description": "Spear with omega-level power. Effect: - +30 SP.",
       "price": "24,800",
       "sellPrice": "10,000",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Sexy Lance",
-      "description": "160",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A beautiful bee's sting charms everything. Effect: +Charm (med odds).",
+      "price": "58,800 / 44,100",
+      "sellPrice": "14,700",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Rhongowennan",
-      "description": "167",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "King Arthur's famous lance. Effect: Varies.",
+      "price": "",
+      "sellPrice": "17,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Lance of Death",
-      "description": "186",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Lance that brings a swift death. Effect: Varies.",
+      "price": "104,000 / 78,000",
+      "sellPrice": "26,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Ranseur",
-      "description": "224",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Well-made lance for piercing. Effect: +2 Agility.",
+      "price": "140,800 / 105,600",
+      "sellPrice": "35,200",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Ouka Jumonji",
-      "description": "259",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Cross spear engraved with cherry blossoms. Effect: Varies.",
+      "price": "172,000 / 129,000",
+      "sellPrice": "43,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gae Bolg",
-      "description": "260",
-      "price": "85",
+      "description": "The mystical spear held by Cu Chulainn. Effect: +Wind Boost, Wind Attack.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Ote-gine",
-      "description": "269",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Famous beautiful spear. Effect: Varies.",
+      "price": "",
+      "sellPrice": "50,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Voulge",
-      "description": "281",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Simple long halberd. Effect: +Charm (med odds).",
+      "price": "224,000 / 168,000",
+      "sellPrice": "56,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Poison Glaive",
-      "description": "285",
+      "description": "Glaive with a blade steeped in poison. Effect: +Poison (high odds) +10 to all stats.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+10 to all stats",
-      "description": "Glaive with a blade steeped in poison.",
-      "price": "70,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "70,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gungnir",
-      "description": "310",
-      "price": "97",
+      "description": "A silver lance engraved with runes. Effect: +Elec Boost.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Yanyue Dao",
-      "description": "319",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Halberd used by Guan Yu. Effect: +4 Agility.",
+      "price": "320,000 / 240,000",
+      "sellPrice": "80,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Nihon-gou",
-      "description": "330",
-      "price": "96",
+      "description": "Famous spear sung of in the \"Kuroda-Bushi.\"",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Tonbo-kiri",
-      "description": "400",
-      "price": "99",
+      "description": "Famous spear owned by Tadakatsu Honda. Effect: +3 to all stats.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Foundation Spear",
-      "description": "Varies",
+      "description": "A basic fused spear. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Foundation Pike",
-      "description": "A basic fused pike.",
+      "description": "A basic fused pike. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Foundation Glaive",
-      "description": "A basic fused glaive.",
+      "description": "A basic fused glaive. Effect: Varies.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "10,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Pinaka",
-      "description": "450",
-      "price": "100",
+      "description": "A spear of tremendous power. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Cross Rod",
-      "description": "88",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A striking weapon topped with a cross.",
+      "price": "",
+      "sellPrice": "3,375",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Bus Stop Sign",
-      "description": "100",
-      "price": "99",
+      "description": "It says, \"Gekkoukan High School\". Effect: +Distress (high odds).",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Crescent Rod",
-      "description": "120",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "An improved version of the Cross Rod. Effect: Varies.",
+      "price": "22,000",
+      "sellPrice": "5,500",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Heavy Axe",
-      "description": "147",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Axe used to destroy the opponent's armor. Effect: Varies.",
+      "price": "33,600 / 25,200",
+      "sellPrice": "8,400",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Ogre Hammer",
-      "description": "182",
-      "price": "88",
-      "sellPrice": "",
+      "description": "A gigantic hammer. Effect: Varies.",
+      "price": "52,000 / 39,000",
+      "sellPrice": "13,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Staff of Guts",
-      "description": "189",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Labeled \"Increases Your Willpower!\" Effect: +40 HP.",
+      "price": "",
+      "sellPrice": "16,400",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Night Stalker",
-      "description": "190",
+      "description": "A murderer's assault weapon. Effect: +Crit rate up (med) +40 HP.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+40 HP",
-      "description": "A murderer's assault weapon.",
-      "price": "17,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "17,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Megaton Rod",
-      "description": "213",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Rod that can smash through shields. Effect: Varies.",
+      "price": "119,100 / 89,325",
+      "sellPrice": "29,775",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Guillotine Axe",
-      "description": "257",
-      "price": "88",
-      "sellPrice": "",
+      "description": "Axe used in executions. Effect: +2 Strength.",
+      "price": "143,200 / 107,400",
+      "sellPrice": "35,800",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Executioner's Axe",
-      "description": "269",
+      "description": "Axe that ends criminals' anguish. Effect: +Fear (med odds) +5 Strength.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "40,000",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
-      "name": "+5 Strength",
-      "description": "Axe that ends criminals' anguish.",
-      "price": "40,000",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Colossus",
-      "description": "297",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Fairies are said to have made this hammer. Effect: Varies.",
+      "price": "174,400 / 130,800",
+      "sellPrice": "43,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Charun's Hammer",
-      "description": "302",
-      "price": "89",
+      "description": "Hammer of brutal power. Effect: +Crit rate up (high).",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Gaea's Grace",
-      "description": "319",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Hammer blessed by the goddess of earth. Effect: +Fear (high odds).",
+      "price": "232,000 / 174,000",
+      "sellPrice": "58,000",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Staff of Wrath",
-      "description": "335",
-      "price": "89",
+      "description": "A famous blacksmith's creation.",
+      "price": "",
       "sellPrice": "",
       "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Mjolnir",
-      "description": "340",
-      "price": "80",
+      "description": "A stone hammer with holy powers. Effect: +Elec Boost, Elec Attack.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Celtis",
-      "description": "368",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Easy-to-use yet very lethal axe. Effect: +4 Endurance.",
+      "price": "326,400 / 244,800",
+      "sellPrice": "81,600",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Golden Crusher",
-      "description": "400",
-      "price": "99",
+      "description": "Hammer used by the hero king. Effect: +50 HP.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Origin Club",
-      "description": "Varies",
+      "description": "Basic fused club. Effect: Varies.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Origin Axe",
-      "description": "Basic fused axe.",
+      "description": "Basic fused axe. Effect: Varies.",
       "price": "",
       "sellPrice": "",
       "category": "Weapon",
@@ -3650,7 +3362,7 @@
     },
     {
       "name": "Origin Hammer",
-      "description": "Basic fused hammer.",
+      "description": "Basic fused hammer. Effect: Varies.",
       "price": "",
       "sellPrice": "",
       "category": "Weapon",
@@ -3658,50 +3370,50 @@
     },
     {
       "name": "Corpse Rod",
-      "description": "450",
-      "price": "100",
+      "description": "Beelzebub's rod. Effect: +10 to all stats.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Weapon",
       "gameId": "p3fes"
     },
     {
       "name": "Turtleneck",
-      "description": "Fuuka",
-      "price": "6",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Zip Hoodie",
-      "description": "Ken",
-      "price": "24",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Knit Cardigan",
-      "description": "Yukari",
-      "price": "26",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Dress Shirt",
-      "description": "Junpei",
-      "price": "28",
+      "description": "A turtleneck sweater.",
+      "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
+      "name": "Zip Hoodie",
+      "description": "A zip-up hooded sweatshirt.",
+      "price": "",
+      "sellPrice": "600",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Knit Cardigan",
+      "description": "A cardigan made of wool.",
+      "price": "",
+      "sellPrice": "600",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Dress Shirt",
+      "description": "A formal shirt worn with a suit.",
+      "price": "",
+      "sellPrice": "600",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
       "name": "Ruffled Blouse",
-      "description": "Mitsuru",
-      "price": "28",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A frilly blouse.",
+      "price": "",
+      "sellPrice": "600",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
@@ -3714,47 +3426,47 @@
     },
     {
       "name": "Red Vest",
-      "description": "Akihiko",
-      "price": "30",
-      "sellPrice": "",
+      "description": "A buttoned sweater vest.",
+      "price": "",
+      "sellPrice": "600",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Long Pea Coat",
-      "description": "Shinjiro",
-      "price": "32",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A long, thick coat.",
+      "price": "",
+      "sellPrice": "600",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Rash Guard",
-      "description": "3,500 / 2,625",
-      "price": "",
-      "sellPrice": "",
+      "description": "A highly elastic shirt. Effect: Varies.",
+      "price": "3,500 / 2,625",
+      "sellPrice": "875",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Camo Shirt*",
-      "description": "3,700 / 2,775",
-      "price": "",
-      "sellPrice": "",
+      "description": "Great for field combat. Effect: Varies.",
+      "price": "3,700 / 2,775",
+      "sellPrice": "925",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Amenity Suit",
-      "description": "9,600 / 7,200",
-      "price": "",
-      "sellPrice": "",
+      "description": "A very comfortable suit. Effect: Varies.",
+      "price": "9,600 / 7,200",
+      "sellPrice": "2,400",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Shirt of Chivalry*",
-      "description": "A traditional Japanese shirt for men.",
+      "description": "A traditional Japanese shirt for men. Effect: Varies.",
       "price": "",
       "sellPrice": "1,000",
       "category": "Armor",
@@ -3762,399 +3474,335 @@
     },
     {
       "name": "Bulletproof Shirt",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Armor",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Firearm-resistant vest.",
-      "description": "10,000 / 7,500",
-      "price": "2,500",
-      "sellPrice": "",
+      "description": "Firearm-resistant vest. Effect: Varies -.",
+      "price": "10,000 / 7,500",
+      "sellPrice": "2,500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Metal Protector",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A set of protective pads. Effect: +4 Endurance -.",
+      "price": "14,600 / 10,950",
+      "sellPrice": "3,650",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "W.Uniform Aigis *",
-      "description": "Aigis",
-      "price": "50",
+      "description": "Winter uniform for Aigis. Effect: +30 SP.",
+      "price": "10,000",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "All-purpose Apron",
-      "description": "5,980",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Women's clothing for cooking or battle.",
+      "price": "5,980",
+      "sellPrice": "2,600",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "High-cut Armor *",
-      "description": "Females",
+      "description": "Armor that looks like a bikini. Effect: +10 HP Varies.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "2,800",
       "category": "Armor",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Varies",
-      "description": "Armor that looks like a bikini.",
-      "price": "2,800",
-      "sellPrice": "",
-      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Master's Garment",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Only masters may wear this. Effect: Varies -.",
+      "price": "15,600 / 11,700",
+      "sellPrice": "3,900",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Tigerhide Belt",
-      "description": "Men's belt made from tiger hide.",
+      "description": "Men's belt made from tiger hide. Effect: Varies.",
       "price": "",
       "sellPrice": "13,000",
-      "category": "Accessory",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "W.Outfit Main *",
-      "description": "Winter outfit for <protagonist>.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "W.Outfit Junpei *",
-      "description": "Junpei",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "S.Outfit Junpei *",
-      "description": "Junpei",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "W.Outfit Akihiko *",
-      "description": "Akihiko",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "S.Outfit Akihiko *",
-      "description": "Akihiko",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "W.Outfit Ken *",
-      "description": "Ken",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "S.Outfit Yukari *",
-      "description": "Yukari",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "W.Outfit Yukari *",
-      "description": "Yukari",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "W.Outfit Mitsuru *",
-      "description": "Mitsuru",
-      "price": "60",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "S.Outfit Mitsuru *",
-      "description": "Mitsuru",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Nacre Torso",
-      "description": "Metis",
-      "price": "61",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Amigo Poncho",
-      "description": "22,000 / 16,500",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Bulletproof Vest",
-      "description": "14,800",
+      "description": "Winter outfit for . Effect: +30 SP.",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "24,000 / 18,000",
-      "description": "6,000",
+      "name": "W.Outfit Junpei *",
+      "description": "Winter outfit for Junpei. Effect: +30 SP.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "S.Outfit Junpei *",
+      "description": "Summer outfit for Junpei. Effect: +30 HP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "W.Outfit Akihiko *",
+      "description": "Winter outfit for Akihiko. Effect: +30 SP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "S.Outfit Akihiko *",
+      "description": "Summer outfit for Akihiko. Effect: +30 HP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "W.Outfit Ken *",
+      "description": "Winter outfit for Ken. Effect: +30 SP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "S.Outfit Yukari *",
+      "description": "Summer outfit for Yukari. Effect: +30 HP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "W.Outfit Yukari *",
+      "description": "Winter outfit for Yukari. Effect: +30 SP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "W.Outfit Mitsuru *",
+      "description": "Winter outfit for Mitsuru. Effect: +30 SP.",
+      "price": "",
+      "sellPrice": "",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "S.Outfit Mitsuru *",
+      "description": "Summer outfit for Mitsuru. Effect: +30 HP.",
+      "price": "",
+      "sellPrice": "2,500",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Nacre Torso",
+      "description": "Torso for Metis made from mother-of-pearl. Effect: +Resist Ice (low).",
+      "price": "",
+      "sellPrice": "4,250",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Amigo Poncho",
+      "description": "Cape-like outfit that covers the body. Effect: Varies.",
+      "price": "22,000 / 16,500",
+      "sellPrice": "5,500",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Bulletproof Vest",
+      "description": "Firearm-resistant vest. Effect: Varies.",
+      "price": "14,800 24,000 / 18,000",
+      "sellPrice": "6,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Rock Dog Suit",
-      "description": "Koromaru",
-      "price": "66",
-      "sellPrice": "",
+      "description": "Dog suit with a punk rock design. Effect: +40 HP.",
+      "price": "10,000",
+      "sellPrice": "2,500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Bisque Torso",
-      "description": "Metis",
-      "price": "69",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made from ceramic. Effect: Varies.",
+      "price": "25,000",
+      "sellPrice": "6,250",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Aramid Semi-Shell",
-      "description": "Aigis",
+      "description": "Armor that protects Aigis' torso. Effect: - +3 Endurance.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+3 Endurance",
-      "description": "Armor that protects Aigis' torso.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,250 8,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Tetra Jammer",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+2 Endurance",
-      "description": "Armor with a talisman attached to it.",
-      "price": "",
+      "description": "Armor with a talisman attached to it. Effect: Varies +2 Endurance.",
+      "price": "37,900 / 28,425",
       "sellPrice": "9,475",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Aramid Full-Shell",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Armor that protects Aigis' entire body. Effect: +30 SP.",
+      "price": "52,000 / 39,750 25,000",
+      "sellPrice": "6,250",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Dog Suit",
-      "description": "Koromaru",
-      "price": "74",
-      "sellPrice": "",
+      "description": "Normal dog clothes.",
+      "price": "53,000",
+      "sellPrice": "13,250",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Robe of Salvation",
-      "description": "40,000 / 30,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "Robe inscribed with holy scriptures. Effect: Varies.",
+      "price": "40,000 / 30,000",
+      "sellPrice": "10,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Leather Dog Suit",
-      "description": "Koromaru",
-      "price": "76",
-      "sellPrice": "",
+      "description": "A dog suit made from leather.",
+      "price": "60,000 / 45,000",
+      "sellPrice": "15,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Emergency Vest",
-      "description": "29,800",
-      "price": "",
+      "description": "Protects from all natural disasters.",
+      "price": "29,800",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Hero's Knickers",
-      "description": "Knickers worn by manly heroes of the past.",
+      "description": "Knickers worn by manly heroes of the past. Effect: +4 Endurance.",
       "price": "",
       "sellPrice": "13,000",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Blue Shorts *",
-      "description": "300,000 / 225,000",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A bathing suit for .",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Red Shorts *",
-      "description": "Junpei",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A bathing suit for Junpei.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Blue Swimwear *",
-      "description": "Akihiko",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A bathing suit for Akihiko.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Baseball Jersey *",
-      "description": "Ken",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Summer clothes for Ken.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000 2,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Pink Bikini *",
-      "description": "Yukari",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A bathing suit for Yukari.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Elegant Bikini *",
-      "description": "Mitsuru",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A bathing suit for Mitsuru.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Sky Sundress *",
-      "description": "Aigis",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A one-piece dress for Aigis.",
+      "price": "300,000 / 225,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Bulletproof Torso",
-      "description": "Metis",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made from synthetic fibers. Effect: +Resist Strike (med).",
+      "price": "60,000",
+      "sellPrice": "15,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Mantle of Wind",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+3 Agility",
-      "description": "A mantle that's as light as the wind.",
-      "price": "",
+      "description": "A mantle that's as light as the wind. Effect: +2 Agility +3 Agility.",
+      "price": "63,400 / 47,550",
       "sellPrice": "15,850",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Metal Dog Suit",
-      "description": "Koromaru",
+      "description": "A dog suit made of metal. Effect: Varies +Resist Slash (med).",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "17,000",
       "category": "Armor",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+Resist Slash (med)",
-      "description": "A dog suit made of metal.",
-      "price": "17,000",
-      "sellPrice": "",
-      "category": "Consumable",
       "gameId": "p3fes"
     },
     {
       "name": "Robe of Warding",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "A robe that radiates an invisible shield. Effect: Varies +3 Magic.",
+      "price": "65,600 / 49,200",
+      "sellPrice": "16,400",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+3 Magic",
-      "description": "A robe that radiates an invisible shield.",
-      "price": "",
-      "sellPrice": "16,400",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Rangda Robe",
-      "description": "Women's clothes that ward off disasters.",
+      "description": "Women's clothes that ward off disasters. Effect: Varies.",
       "price": "",
       "sellPrice": "17,000",
       "category": "Armor",
@@ -4162,71 +3810,71 @@
     },
     {
       "name": "Aramid Plate",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Steel plate armor for Aigis. Effect: Varies.",
+      "price": "68,000 / 52,500 60,000",
+      "sellPrice": "17,500 15,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Chevalier Torso",
-      "description": "Metis",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made from metal plating.",
+      "price": "70,000",
+      "sellPrice": "17,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Maid Outfit (A) *",
-      "description": "Aigis",
-      "price": "90",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Maid outfit for Aigis.",
+      "price": "",
+      "sellPrice": "2,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Light Dog Suit",
-      "description": "Koromaru",
-      "price": "",
-      "sellPrice": "",
+      "description": "A very light dog suit. Effect: +3 Strength -.",
+      "price": "94,000 / 70,500",
+      "sellPrice": "23,500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Defender Cloak",
-      "description": "108,000 / 81,000",
-      "price": "",
+      "description": "A cloak that covers the entire body. Effect: Varies.",
+      "price": "108,000 / 81,000",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Titanium Dog Suit",
-      "description": "Koromaru",
-      "price": "92",
-      "sellPrice": "",
+      "description": "A dog suit made of titanium.",
+      "price": "140,000 / 105,000",
+      "sellPrice": "35,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Gigantic Armor",
-      "description": "Unisex",
+      "description": "Very heavy, but durable armor. Effect: - +3 Endurance.",
+      "price": "116,800 / 87,600",
+      "sellPrice": "29,200",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "S.Outfit Main *",
+      "description": "Summer clothes for .",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "S.Outfit Main *",
-      "description": "Summer clothes for <protagonist>.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Stealth Shirt",
-      "description": "Men's shirt that cloaks the wearer.",
+      "description": "Men's shirt that cloaks the wearer. Effect: Varies.",
       "price": "",
       "sellPrice": "62,500",
       "category": "Armor",
@@ -4234,153 +3882,145 @@
     },
     {
       "name": "Zircon Torso",
-      "description": "Metis",
-      "price": "96",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made from diamond.",
+      "price": "120,000",
+      "sellPrice": "30,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Aramid Compound",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Steel plate armor for Aigis' front and back. Effect: Varies -.",
+      "price": "120,000 / 90,000 70,000",
+      "sellPrice": "17,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Cross Dog Suit",
-      "description": "Koromaru",
-      "price": "",
-      "sellPrice": "",
+      "description": "Dog suit with a cross drawn on it. Effect: Varies -.",
+      "price": "200,000 / 150,000",
+      "sellPrice": "50,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Kukai's Vestment",
-      "description": "155,000 / 116,250",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Sid's Jacket",
-      "description": "128,000",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Battle Leotard",
-      "description": "Light battle armor for females.",
-      "price": "",
-      "sellPrice": "47,500",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Kaiser Armor",
-      "description": "169,000 / 126,750",
-      "price": "",
+      "description": "The vestment of the famous monk, Kukai. Effect: +3 Magic.",
+      "price": "155,000 / 116,250",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "Carbon Jacket",
-      "description": "229,000 / 171,750",
-      "price": "",
+      "name": "Sid's Jacket",
+      "description": "A black studded leather jacket for men.",
+      "price": "128,000",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Battle Leotard",
+      "description": "Light battle armor for females. Effect: Varies.",
+      "price": "",
+      "sellPrice": "47,500",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Kaiser Armor",
+      "description": "Armor with beautiful decorations. Effect: +3 Endurance.",
+      "price": "169,000 / 126,750",
+      "sellPrice": "42,250",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Carbon Jacket",
+      "description": "Hard leather jacket for men. Effect: +3 Agility.",
+      "price": "229,000 / 171,750",
+      "sellPrice": "57,250",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Spiked Bra",
-      "description": "Bra with spikes attached.",
+      "description": "Bra with spikes attached. Effect: +2 Strength.",
       "price": "",
       "sellPrice": "62,500",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Ergo Scale",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Scaled armor for Aigis. Effect: Varies -.",
+      "price": "190,000 / 142,500 130,000",
+      "sellPrice": "32,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Jacquedrose",
-      "description": "Metis",
-      "price": "110",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made by a skilled craftsman.",
+      "price": "170,000",
+      "sellPrice": "42,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Phantom Robe",
-      "description": "242,000 / 181,500",
-      "price": "",
+      "description": "Robe made from translucent cloth. Effect: +2 Luck.",
+      "price": "242,000 / 181,500",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Powered Dog Suit",
-      "description": "Koromaru",
-      "price": "112",
-      "sellPrice": "",
+      "description": "Mechanical body armor for dogs. Effect: Varies.",
+      "price": "304,000 / 228,000",
+      "sellPrice": "76,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Vermelies",
-      "description": "Metis",
-      "price": "114",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made by a master craftsman. Effect: +Resist Wind (med).",
+      "price": "240,000",
+      "sellPrice": "60,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Final Armor",
-      "description": "Unisex",
+      "description": "Armor made from OOPArts. Effect: +1 to all stats +5 Endurance.",
+      "price": "320,000 / 240,000",
+      "sellPrice": "80,000",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Maid Outfit (Y) *",
+      "description": "Maid outfit for Yukari. Effect: +50 SP.",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+5 Endurance",
-      "description": "Armor made from OOPArts.",
-      "price": "",
-      "sellPrice": "80,000",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Maid Outfit (Y) *",
-      "description": "Yukari",
-      "price": "118",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Maid Outfit (M) *",
-      "description": "Mitsuru",
-      "price": "118",
+      "description": "Maid outfit for Mitsuru. Effect: +50 SP.",
+      "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Demon's Mail",
-      "description": "330,000 / 247,500",
-      "price": "",
-      "sellPrice": "",
+      "description": "Armor made from demon's hide. Effect: +Resist Phys (high).",
+      "price": "330,000 / 247,500",
+      "sellPrice": "82,500",
       "category": "Armor",
       "gameId": "p3fes"
     },
@@ -4394,74 +4034,74 @@
     },
     {
       "name": "Ergo Armor",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
+      "description": "Armor made from special steel for Aigis. Effect: Varies.",
+      "price": "240,000 / 195,000 175,000",
+      "sellPrice": "65,000 43,750",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Dark Dog Suit",
-      "description": "Koromaru",
-      "price": "122",
-      "sellPrice": "",
+      "description": "A dog suit that's been dyed black. Effect: Varies.",
+      "price": "320,000 / 240,000",
+      "sellPrice": "80,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Silver Plate",
-      "description": "347,000 / 260,250",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Armor with silver decorations. Effect: +5 Endurance.",
+      "price": "347,000 / 260,250 218,000",
+      "sellPrice": "86,750",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Oceanus Scale",
-      "description": "Metis",
-      "price": "124",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Torso for Metis made from divine scales.",
+      "price": "330,000",
+      "sellPrice": "82,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Papal Robe",
-      "description": "347,000 / 270,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "A robe blessed by a Pope. Effect: +Resist Wind (high).",
+      "price": "347,000 / 270,000",
+      "sellPrice": "90,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Lunar Dog Suit",
-      "description": "Koromaru",
-      "price": "130",
+      "description": "Dog suit with a moon embroidered on it. Effect: +4 Magic.",
+      "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Fifth Number",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Flanked equipment for Aigis. Effect: +Resist Slash (med).",
+      "price": "352,000 / 262,500 260,000",
+      "sellPrice": "65,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Papillon Method",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Colorful armor for Aigis. Effect: +3 Magic Varies.",
+      "price": "400,000 / 300,000 360,000",
+      "sellPrice": "90,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Joruri Tengu",
-      "description": "Metis",
-      "price": "135",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A legendary warrior's torso for Metis. Effect: +5 Magic.",
+      "price": "350,000",
+      "sellPrice": "87,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
@@ -4469,21 +4109,21 @@
       "description": "Women's armor that lasts forever.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Soul of Athena",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Goddess' chestplate for Aigis. Effect: +5 Magic.",
+      "price": "400,000",
+      "sellPrice": "100,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Aura Dog Suit",
-      "description": "Koromaru",
-      "price": "160",
+      "description": "Dog suit that emits a mysterious light.",
+      "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
@@ -4493,39 +4133,31 @@
       "description": "Savior's armor, worn only by men.",
       "price": "",
       "sellPrice": "12,500",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Aigis Armor v.100",
-      "description": "Aigis",
-      "price": "165",
-      "sellPrice": "",
+      "description": "The ultimate prototype armor for Aigis. Effect: +5 to all stats.",
+      "price": "",
+      "sellPrice": "50,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Meseauzer",
-      "description": "Metis",
-      "price": "165",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Armor of Light",
-      "description": "Unisex",
+      "description": "A divine torso for Metis. Effect: +Resist Magic (high).",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "50,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+Resist Phys (high)",
-      "description": "Armor engraved with a pentacle symbol.",
+      "name": "Armor of Light",
+      "description": "Armor engraved with a pentacle symbol. Effect: +Resist Magic (high) or +Resist Phys (high).",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
@@ -4538,135 +4170,127 @@
     },
     {
       "name": "Brown Loafers",
-      "description": "Yukari",
-      "price": "4",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "An ordinary pair of loafers.",
+      "price": "",
+      "sellPrice": "500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Knee-high Boots",
-      "description": "Mitsuru",
-      "price": "4",
-      "sellPrice": "",
+      "description": "Long, black boots.",
+      "price": "",
+      "sellPrice": "500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Straight Tip",
-      "description": "Junpei",
-      "price": "4",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Boots with a horizontal line over the toes.",
+      "price": "",
+      "sellPrice": "500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Inverse Shoes",
-      "description": "Akihiko",
-      "price": "4",
-      "sellPrice": "",
+      "description": "Classic-model sneakers.",
+      "price": "",
+      "sellPrice": "500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Soccer Shoes",
-      "description": "Ken",
-      "price": "4",
-      "sellPrice": "",
+      "description": "Shoes for playing indoor soccer.",
+      "price": "",
+      "sellPrice": "500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Western Boots",
-      "description": "Shinjiro",
-      "price": "4",
-      "sellPrice": "",
+      "description": "Low-heeled boots.",
+      "price": "",
+      "sellPrice": "500",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Black Loafers",
-      "description": "Fuuka",
-      "price": "6",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "A pair of plain black loafers",
+      "price": "",
+      "sellPrice": "500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Rubber Sole",
-      "description": "2,400 / 1,800",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Boots with thick soles. Effect: Varies.",
+      "price": "2,400 / 1,800",
+      "sellPrice": "600",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "High-tech Sandals",
-      "description": "2,800 / 2,100",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals with many bumps. Effect: +Evade Ice (low).",
+      "price": "2,800 / 2,100",
+      "sellPrice": "700",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Rugged Geta",
-      "description": "A manly pair of geta, for men.",
+      "description": "A manly pair of geta, for men. Effect: Varies.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Leather Boots",
-      "description": "6,200 / 4,650",
-      "price": "",
-      "sellPrice": "",
+      "description": "Boots made out of leather. Effect: +Evade Pierce (low).",
+      "price": "6,200 / 4,650",
+      "sellPrice": "1,550",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Inline Skates",
-      "description": "6,400 / 4,800",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Shoes with a single row of wheels. Effect: Varies.",
+      "price": "6,400 / 4,800",
+      "sellPrice": "1,600",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Health Sandals",
-      "description": "3,980",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals that massage your pressure points.",
+      "price": "3,980",
+      "sellPrice": "1,700",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Mechanical Geta",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+Reduce Stumble (low)",
-      "description": "Geta made with the latest technology.",
-      "price": "",
+      "description": "Geta made with the latest technology. Effect: Varies +Reduce Stumble (low).",
+      "price": "9,300 / 6,975",
       "sellPrice": "2,325",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Combat Boots",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Boots from military surplus. Effect: Varies -.",
+      "price": "10,100 / 7,575",
+      "sellPrice": "2,525",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Beast Leggings",
-      "description": "Leopard-print leggings for women.",
+      "description": "Leopard-print leggings for women. Effect: Varies.",
       "price": "",
       "sellPrice": "2,700",
       "category": "Armor",
@@ -4674,191 +4298,167 @@
     },
     {
       "name": "Pearlite Legs",
-      "description": "Aigis",
-      "price": "34",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Processed iron leg parts for Aigis.",
+      "price": "",
+      "sellPrice": "3,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Solid Pied",
-      "description": "Metis",
-      "price": "34",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Resin leg parts for Metis.",
+      "price": "",
+      "sellPrice": "3,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Crimson Greaves",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "+2 Agility",
-      "description": "Greaves colored a dark red.",
-      "price": "",
+      "description": "Greaves colored a dark red. Effect: Varies +2 Agility.",
+      "price": "14,000 / 10,500",
       "sellPrice": "3,500",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Max Safety Shoes",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Strong enough to take any punishment. Effect: Varies -.",
+      "price": "10,000",
+      "sellPrice": "4,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Magic Sandals",
-      "description": "15,200 / 11,400",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals that boost the wearer's magic. Effect: +3 Magic.",
+      "price": "15,200 / 11,400",
+      "sellPrice": "3,800",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Warrior's Boots",
-      "description": "Males",
+      "description": "Men's greaves, worn by a veteran warrior. Effect: +4 Endurance +Reduce Stumble (high).",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "4,200",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+Reduce Stumble (high)",
-      "description": "Men's greaves, worn by a veteran warrior.",
-      "price": "4,200",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Fullerene Legs",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Molecularly cohesive leg parts for Aigis. Effect: Varies +2 Agility.",
+      "price": "35,000 / 26,250",
+      "sellPrice": "8,750",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Bisque Pied",
-      "description": "Metis",
-      "price": "43",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Light ceramic leg parts for Metis. Effect: +2 Agility.",
+      "price": "35,000",
+      "sellPrice": "8,750",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Cyber Shoes",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Shoes made with modern technology. Effect: +Evade Strike (low) +3 Agility.",
+      "price": "24,000 / 18,000",
+      "sellPrice": "6,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Silent Sandals",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals worn by ninjas. Effect: +2 Agility +Reduce Stumble (low).",
+      "price": "28,000 / 21,000",
+      "sellPrice": "7,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Dragon Boots",
-      "description": "20,000",
-      "price": "",
+      "description": "Men's boots embroidered with dragons. Effect: +4 Strength.",
+      "price": "20,000",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Ceramic Legs",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Ceramic leg parts for Aigis. Effect: Varies +3 Agility.",
+      "price": "40,000 / 30,000",
+      "sellPrice": "10,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Alumina Pied",
-      "description": "Metis",
-      "price": "52",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Light alloy leg parts for Metis. Effect: +3 Agility.",
+      "price": "40,000",
+      "sellPrice": "10,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Needle Shoes",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Shoes with needles on the soles. Effect: Varies +3 Magic.",
+      "price": "40,000 / 30,000",
+      "sellPrice": "10,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Jet Boots",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
+      "description": "Boots with jet engines attached. Effect: Varies +3 Agility.",
+      "price": "45,600 / 34,200",
+      "sellPrice": "11,400",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Cobalt Legs",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Cobalt leg parts for Aigis. Effect: +Evade Fire (high) +3 Agility.",
+      "price": "53,000 / 39,750",
+      "sellPrice": "13,250",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Titanium Pied",
-      "description": "Metis",
-      "price": "62",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Titanium leg parts for Metis. Effect: Varies.",
+      "price": "53,000",
+      "sellPrice": "13,250",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Greaves of Dawn",
-      "description": "Unisex",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Exceptionally durable greaves. Effect: Varies +3 Endurance.",
+      "price": "68,800 / 51,600",
+      "sellPrice": "17,200",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Assassin's Shoes",
-      "description": "Unisex",
-      "price": "",
+      "description": "Very light shoes. Effect: Varies +4 Agility.",
+      "price": "75,200 / 56,400",
+      "sellPrice": "18,800",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "R/C Geta",
+      "description": "Can supposedly be remote-controlled... Effect: +Reduce Stumble (high).",
+      "price": "47,800",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+4 Agility",
-      "description": "Very light shoes.",
-      "price": "",
-      "sellPrice": "18,800",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "R/C Geta",
-      "description": "47,800",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Vernal Sandals",
-      "description": "Sandals with a fresh scent.",
+      "description": "Sandals with a fresh scent. Effect: Varies.",
       "price": "",
       "sellPrice": "12,400",
       "category": "Armor",
@@ -4866,119 +4466,119 @@
     },
     {
       "name": "Quick Pumps",
-      "description": "Females",
+      "description": "Lightweight pumps for women. Effect: Varies +Reduce Stumble (high).",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "12,400",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Titanium Legs",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Lightweight leg parts for Aigis. Effect: Varies +3 Agility.",
+      "price": "80,000 / 60,000",
+      "sellPrice": "20,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Zircon Pied",
-      "description": "Metis",
-      "price": "70",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Zirconium leg parts for Metis. Effect: Varies.",
+      "price": "80,000",
+      "sellPrice": "20,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Killer Cleats",
-      "description": "112,000 / 84,000",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Shoes with vicious-looking spikes. Effect: Varies.",
+      "price": "112,000 / 84,000",
+      "sellPrice": "28,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Lion Sandals",
-      "description": "120,000 / 90,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals with a lion drawn on them. Effect: +Evade Elec (med).",
+      "price": "120,000 / 90,000",
+      "sellPrice": "30,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Mirage Sandals",
-      "description": "192,000 / 144,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "Sandals with dazzling silver ornaments. Effect: Varies.",
+      "price": "192,000 / 144,000",
+      "sellPrice": "48,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Cermet Legs",
-      "description": "Aigis",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Alloyed leg parts for Aigis. Effect: Varies.",
+      "price": "150,000 / 112,500",
+      "sellPrice": "37,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Baskins",
-      "description": "Metis",
-      "price": "80",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Imitation dancing shoes for Metis. Effect: +4 Agility.",
+      "price": "150,000",
+      "sellPrice": "37,500",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Shoes of Bane",
-      "description": "200,000 / 150,00",
-      "price": "",
-      "sellPrice": "",
+      "description": "Hitmen's favorite shoes. Effect: Varies.",
+      "price": "200,000 / 150,00 79,800",
+      "sellPrice": "50,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Sexy Heels",
-      "description": "Heels that make women supersexy.",
+      "description": "Heels that make women supersexy. Effect: Varies.",
       "price": "",
       "sellPrice": "54,000",
-      "category": "Consumable",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Idaten's Sandals",
-      "description": "200,000 / 150,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "Unbelievably light pair of sandals. Effect: Varies.",
+      "price": "200,000 / 150,000",
+      "sellPrice": "50,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Ergo Legs",
-      "description": "Aigis",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Consolidated leg parts for Aigis. Effect: Varies +3 Magic.",
+      "price": "240,000 / 180,000",
+      "sellPrice": "60,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Leprechaun Toe",
-      "description": "Metis",
-      "price": "88",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Magical leg parts for Metis. Effect: +3 Magic.",
+      "price": "240,000",
+      "sellPrice": "60,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "War God's Boots",
-      "description": "216,000 / 162,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "A war god's spirit dwells in these boots. Effect: Varies.",
+      "price": "216,000 / 162,000",
+      "sellPrice": "54,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Goddess Boots",
-      "description": "Women's boots that lend beauty.",
+      "description": "Women's boots that lend beauty. Effect: Varies.",
       "price": "",
       "sellPrice": "56,000",
       "category": "Armor",
@@ -4986,71 +4586,63 @@
     },
     {
       "name": "Kugelbein",
-      "description": "Aigis",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Leg parts for Aigis from the Beast God. Effect: Varies.",
+      "price": "260,000 / 195,000",
+      "sellPrice": "65,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Blood Aries",
-      "description": "Metis",
-      "price": "95",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Crimson leg parts for Metis. Effect: +5 Agility.",
+      "price": "260,000",
+      "sellPrice": "65,000",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Holy Shoes",
-      "description": "224,000 / 1680,000",
-      "price": "",
-      "sellPrice": "",
+      "description": "Boots that have been blessed. Effect: Varies.",
+      "price": "224,000 / 1680,000",
+      "sellPrice": "56,000",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Hanzo's Sandals",
-      "description": "Unisex",
+      "description": "A famous ninja's sandals. Effect: Varies +5 Agility.",
+      "price": "235,000 / 176,250",
+      "sellPrice": "58,750",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Swan Legs",
+      "description": "Angelic leg parts for Aigis. Effect: +5 Agility.",
+      "price": "300,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Ella's Slippers",
+      "description": "Mysterious glass leg parts for Metis. Effect: +5 Agility.",
+      "price": "300,000",
+      "sellPrice": "75,000",
+      "category": "Armor",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Bare Paws",
+      "description": "The paw pads are very soft to the touch.",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+5 Agility",
-      "description": "A famous ninja's sandals.",
-      "price": "",
-      "sellPrice": "58,750",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Swan Legs",
-      "description": "Aigis",
-      "price": "100",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Ella's Slippers",
-      "description": "Metis",
-      "price": "100",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Bare Paws",
-      "description": "Koromaru",
-      "price": "125",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Eternal Shoes",
-      "description": "Women's boots that last forever.",
+      "description": "Women's boots that last forever. Effect: +Evade Magic (high).",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
@@ -5058,7 +4650,7 @@
     },
     {
       "name": "Hallowed Boots",
-      "description": "Savior's boots worn only by men.",
+      "description": "Savior's boots worn only by men. Effect: +3 to all stats.",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
@@ -5066,49 +4658,41 @@
     },
     {
       "name": "Centurion",
-      "description": "Metis",
-      "price": "130",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Supreme pitch-black leg parts for Metis. Effect: +Evade Elec (high).",
+      "price": "",
+      "sellPrice": "25",
+      "category": "Armor",
       "gameId": "p3fes"
     },
     {
       "name": "Shoes of Light",
-      "description": "Unisex",
+      "description": "Shoes with pentacle symbols. Effect: +Evade Magic (high) or +Evade Phys (high).",
       "price": "",
       "sellPrice": "",
       "category": "Armor",
       "gameId": "p3fes"
     },
     {
-      "name": "+Evade Phys (high)",
-      "description": "Shoes with pentacle symbols.",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Portable Player",
       "description": "Portable music player.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Heart Choker",
       "description": "Heart-shaped choker.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Silver Necklace",
       "description": "Simple necklace.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
@@ -5116,16 +4700,16 @@
       "name": "Leather Gloves",
       "description": "Thin leather gloves.",
       "price": "",
-      "sellPrice": "",
-      "category": "Weapon",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Fancy Nails",
       "description": "Jewel-encrusted nails.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
@@ -5133,30 +4717,30 @@
       "description": "Necklace made from a string of beads.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Red Ribbon",
       "description": "Big red ribbon.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Koromaru Wings",
       "description": "Made from angel wings.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Wristband",
       "description": "Athletic wristband.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
@@ -5164,15 +4748,15 @@
       "name": "Beanie",
       "description": "Simple knit cap.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Silver Ring",
       "description": "Simply designed silver ring.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
@@ -5180,373 +4764,373 @@
       "name": "Platinum Watch",
       "description": "Made out of very expensive materials.",
       "price": "16,000",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Power Band",
-      "description": "Persona St +1",
-      "price": "",
-      "sellPrice": "",
+      "description": "Strength increases by 1. Effect: Persona St +1.",
+      "price": "1,000 / 750",
+      "sellPrice": "250",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Power Band",
-      "description": "Persona St +2",
-      "price": "",
-      "sellPrice": "3,000",
+      "description": "Strength increases by 2. Effect: Persona St +2.",
+      "price": "3,000",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Giga Power Band",
-      "description": "Persona St +3",
-      "price": "",
-      "sellPrice": "",
+      "description": "Strength increases by 3. Effect: Persona St +3.",
+      "price": "2,980 7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Guard Band",
-      "description": "Persona En +1",
-      "price": "",
-      "sellPrice": "",
-      "category": "Armor",
+      "description": "Endurance increases by 1. Effect: Persona En +1.",
+      "price": "1,000 / 750",
+      "sellPrice": "250",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Guard Band",
-      "description": "Persona En +2",
-      "price": "",
-      "sellPrice": "3,000",
-      "category": "Armor",
+      "description": "Endurance increases by 2. Effect: Persona En +2.",
+      "price": "3,000",
+      "sellPrice": "750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Giga Guard Band",
-      "description": "Persona En +3",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Armor",
+      "description": "Endurance increases by 3. Effect: Persona En +3.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Magic Band",
-      "description": "Persona Ma +1",
-      "price": "",
-      "sellPrice": "",
+      "description": "Magic increases by 1. Effect: Persona Ma +1.",
+      "price": "1,000 / 750",
+      "sellPrice": "250",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Magic Band",
-      "description": "Persona Ma +2",
-      "price": "",
-      "sellPrice": "3,000",
+      "description": "Magic increases by 2. Effect: Persona Ma +2.",
+      "price": "3,000",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Giga Magic Band",
-      "description": "Persona Ma +3",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Magic increases by 3. Effect: Persona Ma +3.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Speed Band",
-      "description": "Persona Ag +1",
-      "price": "",
-      "sellPrice": "",
+      "description": "Agility increases by 1. Effect: Persona Ag +1.",
+      "price": "1,000 / 750",
+      "sellPrice": "250",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Speed Band",
-      "description": "Persona Ag +2",
-      "price": "",
-      "sellPrice": "3,000",
+      "description": "Agility increases by 2. Effect: Persona Ag +2.",
+      "price": "3,000",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Giga Speed Band",
-      "description": "Persona Ag +3",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Agility increases by 3. Effect: Persona Ag +3.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Luck Band",
-      "description": "Persona Lu +1",
-      "price": "",
-      "sellPrice": "",
+      "description": "Luck increases by 1. Effect: Persona Lu +1.",
+      "price": "1,000 / 750",
+      "sellPrice": "250",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mega Luck Band",
-      "description": "Persona Lu +2",
-      "price": "",
-      "sellPrice": "3,000",
+      "description": "Luck increases by 2. Effect: Persona Lu +2.",
+      "price": "3,000",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Giga Luck Band",
-      "description": "Persona Lu +3",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Luck increases by 3. Effect: Persona Lu +3.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Frenzy Beads",
-      "description": "Raging Tiger",
+      "description": "Increases damage of normal attacks during Rage. Effect: Raging Tiger.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Warrior's Seal",
-      "description": "Counter",
+      "description": "Low chance to counter physical attacks. Effect: Counter.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Slash Ward",
-      "description": "Dodge Slash",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Increases dodge against Slash attacks. Effect: Dodge Slash.",
+      "price": "2,980 7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Strike Ward",
-      "description": "Dodge Strike",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases dodge against Strikes. Effect: Dodge Strike.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Pierce Ward",
-      "description": "Dodge Pierce",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases dodge against Piercing. Effect: Dodge Pierce.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Slash Repeller",
-      "description": "Evade Slash",
+      "description": "Higher chance of dodge against Slash attacks. Effect: Evade Slash.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Strike Repeller",
-      "description": "Evade Strike",
+      "description": "Higher chance of dodge against Strikes. Effect: Evade Strike.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Pierce Repeller",
-      "description": "Evade Pierce",
+      "description": "Higher chance of dodge against Piercing. Effect: Evade Pierce.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Flame Charm",
-      "description": "Dodge Fire",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Increases dodge against Fire attacks. Effect: Dodge Fire.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Ice Charm",
-      "description": "Dodge Ice",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Increases dodge against Ice attacks. Effect: Dodge Ice.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Thunder Charm",
-      "description": "Dodge Elec",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Increases dodge against Electricity. Effect: Dodge Elec.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Wind Charm",
-      "description": "Dodge Wind",
-      "price": "",
-      "sellPrice": "7,000",
+      "description": "Increases dodge against Wind attacks. Effect: Dodge Wind.",
+      "price": "7,000",
+      "sellPrice": "1,750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Eye of Flame",
-      "description": "Evade Fire",
+      "description": "Higher chance of dodge against Fire attacks. Effect: Evade Fire.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Eye of Ice",
-      "description": "Evade Ice",
+      "description": "Higher chance of dodge against Ice attacks. Effect: Evade Ice.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Eye of Thunder",
-      "description": "Evade Elec",
+      "description": "Higher chance of dodge against Electricity attacks. Effect: Evade Elec.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Eye of Wind",
-      "description": "Evade Wind",
+      "description": "Higher chance of dodge against Wind attacks. Effect: Evade Wind.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Shadow Sensor",
-      "description": "Alertness",
+      "description": "Lowers enemy's rate of surprise attack. Effect: Alertness.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Masakado's Hair",
-      "description": "Premonition",
+      "description": "Increases Evade against Physical attacks. Effect: Premonition.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Book of Enoch",
-      "description": "Angelic Grace",
+      "description": "Double dodge against all magical attacks, excluding light, darkness and almighty. Effect: Angelic Grace.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Barbaric Bracers",
-      "description": "Ali Dance",
+      "description": "Increase chance of dodging by a lot. Effect: Ali Dance.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Divine Pillar",
-      "description": "Firm Stance",
+      "description": "Lowers damage received but cannot dodge. Effect: Firm Stance.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Black God's Rock",
-      "description": "Null Slash",
+      "description": "Nullifies Slash damage. Effect: Null Slash.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Kohryuu's Scale",
-      "description": "Null Strike",
+      "description": "Nullifies Strike damage. Effect: Null Strike.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Mystic Rock",
-      "description": "Null Pierce",
+      "description": "Nullifies Pierce damage. Effect: Null Pierce.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Blazing Flame",
-      "description": "Null Fire",
+      "description": "Nullifies Fire damage. Effect: Null Fire.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Frozen Stone",
-      "description": "Null Ice",
+      "description": "Nullifies Ice damage. Effect: Null Ice.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Lightning Gloves",
-      "description": "Null Elec",
+      "description": "Nullifies Electricity damage. Effect: Null Elec.",
       "price": "",
-      "sellPrice": "",
-      "category": "Weapon",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Storm Ring",
-      "description": "Null Wind",
+      "description": "Nullifies Wind damage. Effect: Null Wind.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "20,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Radiant Halo",
-      "description": "Null Light",
+      "description": "Nullifies Light. Effect: Null Light.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Ring of Darkness",
-      "description": "Null Dark",
+      "description": "Nullifies Darkness. Effect: Null Dark.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "20,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Omnipotent Orb",
-      "description": "Null All",
+      "description": "Nullifies all kinds of attacks except Almighty. Effect: Null All.",
       "price": "",
       "sellPrice": "",
       "category": "Accessory",
@@ -5554,311 +5138,311 @@
     },
     {
       "name": "Frost Cap",
-      "description": "Null Freeze",
+      "description": "Prevents you from being Frozen. Effect: Null Freeze.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Lightning Armlet",
-      "description": "Null Shock",
+      "description": "Prevents you from being Shocked. Effect: Null Shock.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Narcissus Flower",
-      "description": "Null Charm",
+      "description": "Prevents you from becoming Charmed. Effect: Null Charm.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Staunch Anklets",
-      "description": "Null Distress",
+      "description": "Prevents you from becoming Distressed. Effect: Null Distress.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "4,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Unbreakable Cage",
-      "description": "Null Panic",
+      "description": "Prevents you from becoming Panicked. Effect: Null Panic.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Serpent's Eye",
-      "description": "Null Fear",
+      "description": "Prevents you from becoming Frightened. Effect: Null Fear.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Ring of Serenity",
-      "description": "Null Rage",
+      "description": "Prevents you from becoming Enraged. Effect: Null Rage.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "4,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Alicorn",
-      "description": "Null Poison",
+      "description": "Prevents you from being Poisoned. Effect: Null Poison.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Tome of the Void",
-      "description": "Unshaken Will",
+      "description": "Protects you from ailments. Effect: Unshaken Will.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Fire Bracers",
-      "description": "Fire Boost",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases Fire damage. Effect: Fire Boost.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Agni Bracers",
-      "description": "Fire Amp",
-      "price": "",
-      "sellPrice": "36,000",
-      "category": "Consumable",
+      "description": "Increases Fire damage by a large amount. Effect: Fire Amp.",
+      "price": "36,000",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Ice Bracers",
-      "description": "Ice Boost",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases Ice damage. Effect: Ice Boost.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Varuna Bracers",
-      "description": "Ice Amp",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Increases Ice damage by a large amount. Effect: Ice Amp.",
+      "price": "36,000 17,800",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Thunder Bracers",
-      "description": "Elec Boost",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases Electricity damage. Effect: Elec Boost.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Indra Bracers",
-      "description": "Elec Amp",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Increases Electricity dmg by a large amount. Effect: Elec Amp.",
+      "price": "36,000 17,800",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Wind Bracers",
-      "description": "Wind Boost",
-      "price": "",
-      "sellPrice": "7,000",
-      "category": "Consumable",
+      "description": "Increases Wind damage. Effect: Wind Boost.",
+      "price": "7,000",
+      "sellPrice": "1,750",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Vayu Bracers",
-      "description": "Wind Amp",
-      "price": "",
-      "sellPrice": "36,000",
-      "category": "Consumable",
+      "description": "Increases Wind damage by a large amount. Effect: Wind Amp.",
+      "price": "36,000",
+      "sellPrice": "9,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "War God's Seal",
-      "description": "Counterstrike",
+      "description": "Medium chance to counter attacks. Effect: Counterstrike.",
       "price": "",
       "sellPrice": "",
-      "category": "Consumable",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Berserker's Seal",
-      "description": "High Counter",
-      "price": "",
-      "sellPrice": "39,800",
-      "category": "Consumable",
+      "description": "High chance to counter physical attacks. Effect: High Counter.",
+      "price": "39,800",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Life Ring",
-      "description": "+10% MAX HP",
-      "price": "",
-      "sellPrice": "",
+      "description": "Increases max HP by 10%. Effect: +10% MAX HP.",
+      "price": "3,000 / 2,250",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Energy Ring",
-      "description": "+20% MAX HP",
-      "price": "",
-      "sellPrice": "10,000",
+      "description": "Increases max HP by 20%. Effect: +20% MAX HP.",
+      "price": "10,000",
+      "sellPrice": "2,500",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Vitality Ring",
-      "description": "+30% MAX HP",
-      "price": "",
-      "sellPrice": "30,000",
+      "description": "Increases max HP by 30%. Effect: +30% MAX HP.",
+      "price": "30,000",
+      "sellPrice": "7,500",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Spirit Ring",
-      "description": "+10% MAX SP",
-      "price": "",
-      "sellPrice": "",
+      "description": "Increases Max SP by 10%. Effect: +10% MAX SP.",
+      "price": "3,000 / 2,250",
+      "sellPrice": "750",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Spell Ring",
-      "description": "+20% MAX SP",
-      "price": "",
-      "sellPrice": "10,000",
+      "description": "Increases Max SP by 20%. Effect: +20% MAX SP.",
+      "price": "10,000",
+      "sellPrice": "2,500",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Magic Ring",
-      "description": "+30% MAX SP",
-      "price": "",
-      "sellPrice": "30,000",
+      "description": "Increases Max SP by 30%. Effect: +30% MAX SP.",
+      "price": "30,000",
+      "sellPrice": "7,500",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Power Enhancer",
-      "description": "Auto-Tarukaja",
-      "price": "",
-      "sellPrice": "16,000",
-      "category": "Consumable",
+      "description": "Gain Tarukaja at beginning of battle. Effect: Auto-Tarukaja.",
+      "price": "16,000",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Guard Enhancer",
-      "description": "Auto-Rakukaja",
-      "price": "",
-      "sellPrice": "16,000",
-      "category": "Armor",
+      "description": "Gain Rakukaja at beginning of battle. Effect: Auto-Rakukaja.",
+      "price": "16,000",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Speed Enhancer",
-      "description": "Auto-Sukukaja",
-      "price": "",
-      "sellPrice": "16,000",
-      "category": "Consumable",
+      "description": "Gain Sukukaja at beginning of battle. Effect: Auto-Sukukaja.",
+      "price": "16,000",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Prayer Beads",
-      "description": "Survive Dark",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "description": "Low revival chance for death from Darkness. Effect: Survive Dark.",
+      "price": "16,000 10,000",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Rosary",
-      "description": "Survive Light",
-      "price": "",
-      "sellPrice": "16,000",
-      "category": "Consumable",
+      "description": "Low revival chance for Light-induced death. Effect: Survive Light.",
+      "price": "16,000",
+      "sellPrice": "4,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Land Badge",
-      "description": "Regenerate 1",
-      "price": "",
-      "sellPrice": "24,800",
+      "description": "Restores a tiny bit of HP every turn. Effect: Regenerate 1.",
+      "price": "24,800",
+      "sellPrice": "4,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Earth Badge",
-      "description": "Regenerate 2",
+      "description": "Restores a little bit of HP every turn. Effect: Regenerate 2.",
       "price": "",
-      "sellPrice": "",
+      "sellPrice": "20,000",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Space Badge",
-      "description": "Regenerate 3",
+      "description": "Restores a bit of HP every turn. Effect: Regenerate 3.",
+      "price": "",
+      "sellPrice": "97,000",
+      "category": "Accessory",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Mage's Mark",
+      "description": "Restores a tiny bit of SP every turn. Effect: Invigorate 1.",
+      "price": "39,800",
+      "sellPrice": "",
+      "category": "Accessory",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Sorcerer's Mark",
+      "description": "Restores a little bit of SP every turn. Effect: Invigorate 2.",
+      "price": "",
+      "sellPrice": "20,000",
+      "category": "Accessory",
+      "gameId": "p3fes"
+    },
+    {
+      "name": "Wizard's Mark",
+      "description": "Restores a bit of SP every turn. Effect: Invigorate 3.",
       "price": "",
       "sellPrice": "",
       "category": "Accessory",
       "gameId": "p3fes"
     },
     {
-      "name": "Mage's Mark",
-      "description": "Invigorate 1",
-      "price": "",
-      "sellPrice": "39,800",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Sorcerer's Mark",
-      "description": "Invigorate 2",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
-      "name": "Wizard's Mark",
-      "description": "Invigorate 3",
-      "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
-      "gameId": "p3fes"
-    },
-    {
       "name": "Sigma Drive",
-      "description": "Sharp Student",
-      "price": "",
-      "sellPrice": "89,800",
-      "category": "Consumable",
+      "description": "Lowers chance of sustaining crit hit. Effect: Sharp Student.",
+      "price": "89,800",
+      "sellPrice": "44,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Omega Drive",
-      "description": "Apt Pupil",
-      "price": "",
-      "sellPrice": "89,800",
-      "category": "Consumable",
+      "description": "Increases chance of dealing critical hits. Effect: Apt Pupil.",
+      "price": "89,800",
+      "sellPrice": "44,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Rudra Ring",
-      "description": "Arms Master",
+      "description": "Halves cost of HP when using physical skills. Effect: Arms Master.",
       "price": "",
       "sellPrice": "",
       "category": "Accessory",
@@ -5866,7 +5450,7 @@
     },
     {
       "name": "Chakra Ring",
-      "description": "Spell Master",
+      "description": "Halves cost of SP when using magical skills. Effect: Spell Master.",
       "price": "",
       "sellPrice": "",
       "category": "Accessory",
@@ -5874,34 +5458,34 @@
     },
     {
       "name": "Draupnir",
-      "description": "Divine Grace",
+      "description": "Increases healing by a large amount. Effect: Divine Grace.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "44,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Spirit Bracers",
-      "description": "Endure",
+      "description": "Grants 1 HP when HP reaches 0. 1 time. Effect: Endure.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "44,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Sacrificial Idol",
-      "description": "Enduring Soul",
+      "description": "Grants full HP when HP reaches 0. 1 time. Effect: Enduring Soul.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "213,500",
+      "category": "Accessory",
       "gameId": "p3fes"
     },
     {
       "name": "Indigo Cape",
-      "description": "Fast Retreat",
+      "description": "Increases chance of escape. Effect: Fast Retreat.",
       "price": "",
-      "sellPrice": "",
-      "category": "Consumable",
+      "sellPrice": "20,000",
+      "category": "Accessory",
       "gameId": "p3fes"
     }
   ]
