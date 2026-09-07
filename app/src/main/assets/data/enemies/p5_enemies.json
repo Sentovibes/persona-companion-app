@@ -17,7 +17,7 @@
     "skills": [
       "Dia"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Qimranut",
     "exp": 4,
     "drops": {
       "gem": "-",
@@ -44,7 +44,7 @@
     "skills": [
       "Agi"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Qimranut",
     "exp": 4,
     "drops": {
       "gem": "-",
@@ -72,7 +72,7 @@
       "Zio",
       "Rakukaja"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 6,
     "drops": {
       "gem": "-",
@@ -97,7 +97,7 @@
     },
     "resists": "--xas-----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Qimranut",
     "exp": 4,
     "drops": {
       "gem": "-",
@@ -124,7 +124,7 @@
     "skills": [
       "Lunge"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 5,
     "drops": {
       "gem": "-",
@@ -152,7 +152,7 @@
       "Life Drain",
       "Dream Needle"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 6,
     "drops": {
       "gem": "-",
@@ -181,7 +181,7 @@
       "Cleave",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Qimranut",
     "exp": 6,
     "drops": {
       "gem": "-",
@@ -208,7 +208,7 @@
     "skills": [
       "Garu"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 8,
     "drops": {
       "gem": "-",
@@ -236,7 +236,7 @@
       "Dormina",
       "Bufu"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 7,
     "drops": {
       "gem": "-",
@@ -263,7 +263,7 @@
     "skills": [
       "Dormina"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 8,
     "drops": {
       "gem": "-",
@@ -291,7 +291,7 @@
       "Lucky Punch",
       "Sukunda"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Aiyatsbus",
     "exp": 9,
     "drops": {
       "gem": "-",
@@ -318,7 +318,7 @@
     "skills": [
       "Power Slash"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 60,
     "drops": {
       "gem": "-",
@@ -345,7 +345,7 @@
     "skills": [
       "Agi"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 18,
     "drops": {
       "gem": "-",
@@ -373,7 +373,7 @@
       "Bufu",
       "Sukunda"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 22,
     "drops": {
       "gem": "-",
@@ -400,7 +400,7 @@
     "skills": [
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 19,
     "drops": {
       "gem": "-",
@@ -427,7 +427,7 @@
     "skills": [
       "Makajam"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Aiyatsbus",
     "exp": 9,
     "drops": {
       "gem": "-",
@@ -452,7 +452,7 @@
     },
     "resists": "ssAAA--w--",
     "skills": [],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 300,
     "drops": {
       "gem": "-",
@@ -479,7 +479,7 @@
     "skills": [
       "Tarunda"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Aiyatsbus",
     "exp": 10,
     "drops": {
       "gem": "-",
@@ -507,7 +507,7 @@
       "Sukukaja",
       "Taunt"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 22,
     "drops": {
       "gem": "-",
@@ -535,7 +535,7 @@
       "Mabufu",
       "Freeze Boost"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 26,
     "drops": {
       "gem": "-",
@@ -567,7 +567,7 @@
       "Wind Wall",
       "Nuke Wall"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 24,
     "drops": {
       "gem": "-",
@@ -595,7 +595,7 @@
       "Rakunda",
       "Garu"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 18,
     "drops": {
       "gem": "-",
@@ -662,7 +662,7 @@
       "Eiha",
       "Evil Touch"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 22,
     "drops": {
       "gem": "-",
@@ -690,7 +690,7 @@
       "Magaru",
       "Mazio"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 63,
     "drops": {
       "gem": "-",
@@ -717,7 +717,7 @@
     "skills": [
       "Sledgehammer"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 32,
     "drops": {
       "gem": "-",
@@ -745,7 +745,7 @@
       "Cleave",
       "Vajra Blast"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Aiyatsbus",
     "exp": 21,
     "drops": {
       "gem": "-",
@@ -774,7 +774,7 @@
       "Pulinpa",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 34,
     "drops": {
       "gem": "-",
@@ -802,7 +802,7 @@
       "Double Fangs",
       "Mafrei"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 68,
     "drops": {
       "gem": "-",
@@ -827,7 +827,7 @@
     },
     "resists": "ssAAA-w---",
     "skills": [],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 500,
     "drops": {
       "gem": "-",
@@ -854,7 +854,7 @@
     "skills": [
       "Frei"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 48,
     "drops": {
       "gem": "-",
@@ -911,7 +911,7 @@
       "Pulinpa",
       "Dormina"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 19,
     "drops": {
       "gem": "-",
@@ -939,7 +939,7 @@
       "Double Fangs",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Kamoshida's Palace / Chemdah",
     "exp": 54,
     "drops": {
       "gem": "-",
@@ -997,7 +997,7 @@
       "Terror Claw",
       "Magaru"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 27,
     "drops": {
       "gem": "-",
@@ -1026,7 +1026,7 @@
       "Agi",
       "Sukukaja"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 28,
     "drops": {
       "gem": "-",
@@ -1054,7 +1054,7 @@
       "Mapsi",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 43,
     "drops": {
       "gem": "-",
@@ -1082,7 +1082,7 @@
       "Double Shot",
       "Taunt"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 220,
     "drops": {
       "gem": "-",
@@ -1110,7 +1110,7 @@
       "Sledgehammer",
       "Foul Breath"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 30,
     "drops": {
       "gem": "-",
@@ -1211,7 +1211,7 @@
       "Psio",
       "Marin Karin"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 76,
     "drops": {
       "gem": "-",
@@ -1238,7 +1238,7 @@
     "skills": [
       "Rampage"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 42,
     "drops": {
       "gem": "-",
@@ -1265,7 +1265,7 @@
     "skills": [
       "Wage War"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 77,
     "drops": {
       "gem": "-",
@@ -1293,7 +1293,7 @@
       "Maeiha",
       "Skull Cracker"
     ],
-    "area": "Unknown",
+    "area": "Madarame's Palace / Chemdah",
     "exp": 71,
     "drops": {
       "gem": "-",
@@ -1318,7 +1318,7 @@
     },
     "resists": "ssWAA-----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 1000,
     "drops": {
       "gem": "-",
@@ -1349,7 +1349,7 @@
       "Double Fangs",
       "Burn Boost"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 72,
     "drops": {
       "gem": "-",
@@ -1468,7 +1468,7 @@
     "skills": [
       "Dormina"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 72,
     "drops": {
       "gem": "-",
@@ -1497,7 +1497,7 @@
       "Garula",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 96,
     "drops": {
       "gem": "-",
@@ -1584,7 +1584,7 @@
     "skills": [
       "Giant Slice"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 112,
     "drops": {
       "gem": "-",
@@ -1615,7 +1615,7 @@
       "Counter",
       "Shock Boost"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 96,
     "drops": {
       "gem": "-",
@@ -1644,7 +1644,7 @@
       "Mabufula",
       "Sledgehammer"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 98,
     "drops": {
       "gem": "-",
@@ -1669,7 +1669,7 @@
     },
     "resists": "swAAA-----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 1500,
     "drops": {
       "gem": "-",
@@ -1698,7 +1698,7 @@
       "Vajra Blast",
       "Charge"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 102,
     "drops": {
       "gem": "-",
@@ -1727,7 +1727,7 @@
       "Masukukaja",
       "Assault Dive"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 89,
     "drops": {
       "gem": "-",
@@ -1798,7 +1798,7 @@
       "Swift Strike",
       "Assault Dive"
     ],
-    "area": "Unknown",
+    "area": "Kaneshiro's Palace / Kaitul",
     "exp": 700,
     "drops": {
       "gem": "-",
@@ -1827,7 +1827,7 @@
       "Makouga",
       "Kouga"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 141,
     "drops": {
       "gem": "-",
@@ -1858,7 +1858,7 @@
       "Life Leech",
       "Rising Slash"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 95,
     "drops": {
       "gem": "-",
@@ -1889,7 +1889,7 @@
       "Foul Breath",
       "Fear Boost"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 132,
     "drops": {
       "gem": "-",
@@ -1918,7 +1918,7 @@
       "Rampage",
       "Dream Needle"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 258,
     "drops": {
       "gem": "-",
@@ -1947,7 +1947,7 @@
       "Rampage",
       "Pulinpa"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 104,
     "drops": {
       "gem": "-",
@@ -1972,7 +1972,7 @@
     },
     "resists": "ssAAA----w",
     "skills": [],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 2000,
     "drops": {
       "gem": "-",
@@ -2060,7 +2060,7 @@
       "Double Shot",
       "Masukunda"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 523,
     "drops": {
       "gem": "-",
@@ -2119,7 +2119,7 @@
       "Megidola",
       "Agidyne"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 102,
     "drops": {
       "gem": "-",
@@ -2149,7 +2149,7 @@
       "Lullaby",
       "Fire Wall"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 138,
     "drops": {
       "gem": "-",
@@ -2208,7 +2208,7 @@
       "Mazionga",
       "Life Leech"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 120,
     "drops": {
       "gem": "-",
@@ -2238,7 +2238,7 @@
       "Makouga",
       "Maeiga"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 1200,
     "drops": {
       "gem": "-",
@@ -2267,7 +2267,7 @@
       "Ziodyne",
       "Mazionga"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 192,
     "drops": {
       "gem": "-",
@@ -2355,7 +2355,7 @@
       "Abysmal Surge",
       "Flash Bomb"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 131,
     "drops": {
       "gem": "-",
@@ -2380,7 +2380,7 @@
     },
     "resists": "ssAAW-----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 2500,
     "drops": {
       "gem": "-",
@@ -2471,7 +2471,7 @@
       "Reverse Rub",
       "Concentrate"
     ],
-    "area": "Unknown",
+    "area": "Futaba's Palace / Akzeriyyuth",
     "exp": 138,
     "drops": {
       "gem": "-",
@@ -2499,7 +2499,7 @@
       "Psiodyne",
       "Makajam"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 262,
     "drops": {
       "gem": "-",
@@ -2529,7 +2529,7 @@
       "Bufudyne",
       "Famine's Scream"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 182,
     "drops": {
       "gem": "-",
@@ -2557,7 +2557,7 @@
       "Eigaon",
       "Bloodbath"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 182,
     "drops": {
       "gem": "-",
@@ -2586,7 +2586,7 @@
       "Mafreila",
       "Heat Wave"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 282,
     "drops": {
       "gem": "-",
@@ -2614,7 +2614,7 @@
       "Assault Dive",
       "Kougaon"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 402,
     "drops": {
       "gem": "-",
@@ -2706,7 +2706,7 @@
     },
     "resists": "ssAWA-----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Depths of Mementos",
     "exp": 3000,
     "drops": {
       "gem": "-",
@@ -2735,7 +2735,7 @@
       "Energy Drop",
       "Patra"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 426,
     "drops": {
       "gem": "-",
@@ -2825,7 +2825,7 @@
       "Makouga",
       "Bless Boost"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 331,
     "drops": {
       "gem": "-",
@@ -2855,7 +2855,7 @@
       "Counterstrike",
       "Charge"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 445,
     "drops": {
       "gem": "-",
@@ -2885,7 +2885,7 @@
       "Wind Wall",
       "Psy Wall"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 441,
     "drops": {
       "gem": "-",
@@ -2914,7 +2914,7 @@
       "Bloodbath",
       "Life Leech"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 286,
     "drops": {
       "gem": "-",
@@ -2944,7 +2944,7 @@
       "Concentrate",
       "Burn Boost"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 489,
     "drops": {
       "gem": "-",
@@ -2975,7 +2975,7 @@
       "Wage War",
       "Mudoon"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 2000,
     "drops": {
       "gem": "-",
@@ -3056,7 +3056,7 @@
       "Dodge Phys",
       "Tarukaja"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 578,
     "drops": {
       "gem": "-",
@@ -3176,7 +3176,7 @@
       "Eigaon",
       "Swift Strike"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 761,
     "drops": {
       "gem": "-",
@@ -3203,7 +3203,7 @@
     "skills": [
       "Dazzler"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 315,
     "drops": {
       "gem": "-",
@@ -3304,7 +3304,7 @@
       "Charge",
       "Myriad Slashes"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 341,
     "drops": {
       "gem": "-",
@@ -3329,7 +3329,7 @@
     },
     "resists": "ssAAAw----",
     "skills": [],
-    "area": "Unknown",
+    "area": "Depths of Mementos / Da'at",
     "exp": 3500,
     "drops": {
       "gem": "-",
@@ -3359,7 +3359,7 @@
       "Ice Wall",
       "Psy Wall"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 312,
     "drops": {
       "gem": "-",
@@ -3450,7 +3450,7 @@
       "Wind Amp",
       "Dizzy Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 1422,
     "drops": {
       "gem": "-",
@@ -3481,7 +3481,7 @@
       "Wage War",
       "Maziodyne"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 388,
     "drops": {
       "gem": "-",
@@ -3510,7 +3510,7 @@
       "Ziodyne",
       "Diarama"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 821,
     "drops": {
       "gem": "-",
@@ -3540,7 +3540,7 @@
       "Sukukaja",
       "Wind Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 422,
     "drops": {
       "gem": "-",
@@ -3570,7 +3570,7 @@
       "Miracle Punch",
       "Dodge Psy"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 861,
     "drops": {
       "gem": "-",
@@ -3603,7 +3603,7 @@
       "Deadly Fury",
       "Foul Breath"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 4000,
     "drops": {
       "gem": "-",
@@ -3664,7 +3664,7 @@
       "High Counter",
       "Burn Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 362,
     "drops": {
       "gem": "-",
@@ -3695,7 +3695,7 @@
       "Nuke Break",
       "Elec Break"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 358,
     "drops": {
       "gem": "-",
@@ -3724,7 +3724,7 @@
       "Ziodyne",
       "Concentrate"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 552,
     "drops": {
       "gem": "-",
@@ -3756,7 +3756,7 @@
       "Freeze Boost",
       "Shock Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 421,
     "drops": {
       "gem": "-",
@@ -3786,7 +3786,7 @@
       "Revolution",
       "God's Hand"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace / Adyeshach",
     "exp": 918,
     "drops": {
       "gem": "-",
@@ -3817,7 +3817,7 @@
       "Spirit Drain",
       "Freeze Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 928,
     "drops": {
       "gem": "-",
@@ -3842,7 +3842,7 @@
     },
     "resists": "ssAAA---w-",
     "skills": [],
-    "area": "Unknown",
+    "area": "Qliphoth World / Da'at",
     "exp": 4000,
     "drops": {
       "gem": "-",
@@ -3872,7 +3872,7 @@
       "Fire Boost",
       "Burn Boost"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 921,
     "drops": {
       "gem": "-",
@@ -3903,7 +3903,7 @@
       "Sukukaja",
       "Rebellion"
     ],
-    "area": "Unknown",
+    "area": "Depths of Mementos & Qliphoth",
     "exp": 1621,
     "drops": {
       "gem": "-",
@@ -3966,7 +3966,7 @@
       "Ice Amp",
       "Concentrate"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 802,
     "drops": {
       "gem": "-",
@@ -3996,7 +3996,7 @@
       "Deathbound",
       "Bloodbath"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 964,
     "drops": {
       "gem": "-",
@@ -4059,7 +4059,7 @@
       "Pulinpa",
       "Stagnant Air"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 452,
     "drops": {
       "gem": "-",
@@ -4091,7 +4091,7 @@
       "Tarukaja",
       "Charge"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 4500,
     "drops": {
       "gem": "-",
@@ -4183,7 +4183,7 @@
       "Ice Boost",
       "Freeze Boost"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 1846,
     "drops": {
       "gem": "-",
@@ -4213,7 +4213,7 @@
       "Revolution",
       "Dodge Ice"
     ],
-    "area": "Unknown",
+    "area": "Shido's Palace / Sheriruth",
     "exp": 431,
     "drops": {
       "gem": "-",
@@ -4245,7 +4245,7 @@
       "Elec Amp",
       "Shock Boost"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 1842,
     "drops": {
       "gem": "-",
@@ -4277,7 +4277,7 @@
       "Rage Boost",
       "Fire Amp"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 825,
     "drops": {
       "gem": "-",
@@ -4304,7 +4304,7 @@
     "skills": [
       "Brain Shake"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 591,
     "drops": {
       "gem": "-",
@@ -4334,7 +4334,7 @@
       "Evade Nuke",
       "Myriad Slashes"
     ],
-    "area": "Unknown",
+    "area": "Sae's Palace / Sheriruth",
     "exp": 831,
     "drops": {
       "gem": "-",
@@ -4363,7 +4363,7 @@
       "Makougaon",
       "Makajamaon"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 1681,
     "drops": {
       "gem": "-",
@@ -4394,7 +4394,7 @@
       "Foul Breath",
       "Life Leech"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 861,
     "drops": {
       "gem": "-",
@@ -4425,7 +4425,7 @@
       "Diarahan",
       "Foul Breath"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 921,
     "drops": {
       "gem": "-",
@@ -4455,7 +4455,7 @@
       "Thermopylae",
       "Debilitate"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 972,
     "drops": {
       "gem": "-",
@@ -4485,7 +4485,7 @@
       "Evil Smile",
       "Concentrate"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 1921,
     "drops": {
       "gem": "-",
@@ -4515,7 +4515,7 @@
       "Fire Amp",
       "Burn Boost"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 1964,
     "drops": {
       "gem": "-",
@@ -4546,7 +4546,7 @@
       "Masukukaja",
       "Dodge Phys"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 970,
     "drops": {
       "gem": "-",
@@ -4577,7 +4577,7 @@
       "Brain Jack",
       "Psy Amp"
     ],
-    "area": "Unknown",
+    "area": "Depths of Mementos & Qliphoth",
     "exp": 2354,
     "drops": {
       "gem": "-",
@@ -4609,7 +4609,7 @@
       "Burn Boost",
       "High Counter"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 1021,
     "drops": {
       "gem": "-",
@@ -4639,7 +4639,7 @@
       "Brain Shake",
       "Brain Jack"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 968,
     "drops": {
       "gem": "-",
@@ -4673,7 +4673,7 @@
       "Freeze Boost",
       "Dizzy Boost"
     ],
-    "area": "Unknown",
+    "area": "Okumura's Palace (Boss)",
     "exp": 5500,
     "drops": {
       "gem": "-",
@@ -4781,7 +4781,7 @@
       "Apt Pupil",
       "High Counter"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 2610,
     "drops": {
       "gem": "-",
@@ -4812,7 +4812,7 @@
       "Freeze Boost",
       "High Counter"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 2620,
     "drops": {
       "gem": "-",
@@ -4843,7 +4843,7 @@
       "Freeze Boost",
       "Ice Amp"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 4080,
     "drops": {
       "gem": "-",
@@ -4875,7 +4875,7 @@
       "Evade Bless",
       "Curse Amp"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 2780,
     "drops": {
       "gem": "-",
@@ -4904,7 +4904,7 @@
       "Panta Rhei",
       "Charge"
     ],
-    "area": "Unknown",
+    "area": "Qliphoth World",
     "exp": 4190,
     "drops": {
       "gem": "-",
@@ -4937,7 +4937,7 @@
       "Wind Amp",
       "Dizzy Boost"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 4500,
     "drops": {
       "gem": "-",
@@ -4970,7 +4970,7 @@
       "Nuke Break",
       "Nuke Amp"
     ],
-    "area": "Unknown",
+    "area": "Maruki's Palace / Da'at",
     "exp": 7500,
     "drops": {
       "gem": "-",

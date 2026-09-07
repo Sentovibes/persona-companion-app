@@ -131,10 +131,19 @@ fun EnemyListScreen(
                     }
                 }
 
-                if (enemy.area.isNotEmpty()) {
+                val displayLocation = enemy.area.trim()
+                    .removePrefix("Location:")
+                    .removePrefix("Location")
+                    .trim()
+                    .trimStart(':', '-', ' ')
+
+                if (displayLocation.isNotEmpty() &&
+                    !displayLocation.equals("Unknown", ignoreCase = true) &&
+                    !displayLocation.equals("null", ignoreCase = true) &&
+                    displayLocation != "-") {
                     item {
                         Text(
-                            text = "Location: ${enemy.area}",
+                            text = "Location: $displayLocation",
                             color = WearLightGray,
                             fontSize = 10.sp,
                             textAlign = TextAlign.Center,
