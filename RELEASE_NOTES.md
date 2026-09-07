@@ -1,6 +1,6 @@
 # Release Notes - v7.2.0
 
-## Major Content & Completion Release (Android & Wear OS)
+## Major Content & Completion Release (Android & Web)
 
 ### 1. 100.0% Franchise Artwork Coverage
 - **Personas (320 / 320 — 100.0%)**: Integrated high-resolution artwork for all remaining Personas (Abaddon, Ananta, Anat, Koropokkuru) across both Android (`personas_shared/`) and Web (`docs/assets/images/personas/`).
@@ -10,14 +10,12 @@
 - **Items**: 8,736 / 8,736 items now have detailed in-game descriptions and effects across all 7 games. Cleaned corrupted P3 FES table entries and expanded P3P to 710 canonical items.
 - **Skills**: 3,638 / 3,638 skills now have authentic effect text, accurate costs, and element tags. Restored 142 missing skills and eliminated all raw hex-offset codes.
 
-### 3. Wear OS Location Fix & Palace Resolution
-- **Eliminated "Location: Unknown"**: Populated authentic Palace and Mementos locations for all 129 Persona 5 and Royal shadows.
-- **Sanitized Watch Display**: Cleaned up location row rendering in the Wear OS Enemy Calculator.
+### 3. Canonical Palace & Mementos Locations for P5 Shadows
+- **Eliminated "Location: Unknown"**: Populated authentic Palace and Mementos locations for all 129 Persona 5 and Royal shadows that previously defaulted to Unknown.
 
 ### 4. Image Pack v2.0 Release
 - Updated cloud CDN configuration to Image Pack v2.0 (`images.zip`, 1,026 MB, 930 files).
-- Phone: `versionCode 41`, `versionName "7.2.0"`.
-- Wear OS: `versionCode 42`, `versionName "7.2.0"`.
+- Android Phone: `versionCode 41`, `versionName "7.2.0"`.
 
 ---
 
