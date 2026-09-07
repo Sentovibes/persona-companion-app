@@ -95,14 +95,15 @@ function normalizeListData(raw, type) {
             const parts = item.a || [];
             const costs = item.b || [];
             const effects = item.c || [];
-            return {
-                name: parts[0] || 'Unknown',
-                element: ELEM_MAP[parts[1]] || parts[1] || 'Other',
-                target: parts[2] || '-',
-                cost: costs[7] ? (costs[1] >= 1000 ? `${costs[7]} SP` : `${costs[7]}% HP`) : (costs[2] ? `${costs[2]} HP` : ''),
-                effect: effects[0] || effects[1] || '',
-                note: effects[2] || ''
-            };
+            const name = item.name || parts[0] || 'Unknown';
+            const element = item.element || ELEM_MAP[parts[1]] || parts[1] || 'Other';
+            const target = item.target || parts[2] || '-';
+            const cost = (item.cost !== undefined && item.cost !== null && item.cost > 0)
+                ? (item.costType ? `${item.cost} ${item.costType}` : `${item.cost} SP`)
+                : (costs[7] ? (costs[1] >= 1000 ? `${costs[7]} SP` : `${costs[7]}% HP`) : (costs[2] ? `${costs[2]} HP` : ''));
+            const effect = item.effect || item.description || effects[0] || '';
+            const note = item.note || effects[2] || '';
+            return { name, element, target, cost, effect, note };
         });
     }
     if (raw.skills)   return Array.isArray(raw.skills) ? raw.skills : normalizeListData(raw.skills, 'skills');

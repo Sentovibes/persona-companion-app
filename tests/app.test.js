@@ -1,4 +1,4 @@
-﻿const test = require('node:test');
+const test = require('node:test');
 const assert = require('node:assert');
 const fs = require('node:fs');
 
@@ -11,4 +11,10 @@ test('docs web app entry files exist', () => {
 test('docs dataset integrity', () => {
     assert.ok(fs.existsSync('docs/data/persona5/royal_personas.json'), 'P5R personas exist');
     assert.ok(fs.existsSync('docs/data/skills/p5r_skills.json'), 'P5R skills exist');
+
+    const p5rSkills = JSON.parse(fs.readFileSync('docs/data/skills/p5r_skills.json', 'utf8'));
+    const skillNames = Object.values(p5rSkills).map(s => s.name);
+    assert.ok(skillNames.includes('Taunting Aura'), 'Taunting Aura is indexed');
+    assert.ok(skillNames.includes('Concealment'), 'Concealment is indexed');
+    assert.ok(skillNames.includes("Champion's Cup"), "Champion's Cup is indexed");
 });

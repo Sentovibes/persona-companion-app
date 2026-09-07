@@ -13502,5 +13502,581 @@
       "-",
       "-"
     ]
+  },
+  "1247": {
+    "name": "Taunting Aura",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
+    "target": "Self",
+    "rank": 3,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Raise chance of being targeted by foes for 3 turns.",
+    "description": "Raise chance of being targeted by foes for 3 turns.",
+    "a": [
+      "Taunting Aura",
+      "sup",
+      "Self"
+    ],
+    "b": [
+      3,
+      1004,
+      0,
+      1,
+      1,
+      100,
+      0,
+      4
+    ],
+    "c": [
+      "Raise chance of being targeted by foes for 3 turns.",
+      "-",
+      "Fusion Alarm Mutation / Alluring Belt"
+    ]
+  },
+  "1248": {
+    "name": "Concealment",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
+    "target": "Self",
+    "rank": 3,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Lower chance of being targeted by foes for 3 turns.",
+    "description": "Lower chance of being targeted by foes for 3 turns.",
+    "a": [
+      "Concealment",
+      "sup",
+      "Self"
+    ],
+    "b": [
+      3,
+      1004,
+      0,
+      1,
+      1,
+      100,
+      0,
+      4
+    ],
+    "c": [
+      "Lower chance of being targeted by foes for 3 turns.",
+      "-",
+      "Fusion Alarm Mutation / Hidden Ring"
+    ]
+  },
+  "1249": {
+    "name": "Champion's Cup",
+    "element": "Support",
+    "cost": 10,
+    "costType": "SP",
+    "target": "1 ally",
+    "rank": 4,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Restore medium HP and increase Attack power for 3 turns.",
+    "description": "Restore medium HP and increase Attack power for 3 turns.",
+    "a": [
+      "Champion's Cup",
+      "sup",
+      "1 ally"
+    ],
+    "b": [
+      4,
+      1010,
+      0,
+      1,
+      1,
+      100,
+      0,
+      10
+    ],
+    "c": [
+      "Restore medium HP and increase Attack power for 3 turns.",
+      "-",
+      "Ring of Lust accessory"
+    ]
+  },
+  "1250": {
+    "name": "Bleeding Dry Brush",
+    "element": "Support",
+    "cost": 22,
+    "costType": "SP",
+    "target": "1 ally",
+    "rank": 6,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Form a barrier that absorbs 1 non-Almighty attack.",
+    "description": "Form a barrier that absorbs 1 non-Almighty attack.",
+    "a": [
+      "Bleeding Dry Brush",
+      "sup",
+      "1 ally"
+    ],
+    "b": [
+      6,
+      1022,
+      0,
+      1,
+      1,
+      100,
+      0,
+      22
+    ],
+    "c": [
+      "Form a barrier that absorbs 1 non-Almighty attack.",
+      "-",
+      "Ring of Vanity accessory"
+    ]
+  },
+  "1251": {
+    "name": "Vault Guardian",
+    "element": "Support",
+    "cost": 24,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 6,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Increase Defense for all allies for 3 turns.",
+    "description": "Increase Defense for all allies for 3 turns.",
+    "a": [
+      "Vault Guardian",
+      "sup",
+      "All allies"
+    ],
+    "b": [
+      6,
+      1024,
+      0,
+      1,
+      1,
+      100,
+      0,
+      24
+    ],
+    "c": [
+      "Increase Defense for all allies for 3 turns.",
+      "-",
+      "Ring of Gluttony accessory"
+    ]
+  },
+  "1252": {
+    "name": "Wings of Wisdom",
+    "element": "Recovery",
+    "cost": 18,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 6,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Cure all non-special ailments for all allies.",
+    "description": "Cure all non-special ailments for all allies.",
+    "a": [
+      "Wings of Wisdom",
+      "rec",
+      "All allies"
+    ],
+    "b": [
+      6,
+      1018,
+      0,
+      1,
+      1,
+      100,
+      0,
+      18
+    ],
+    "c": [
+      "Cure all non-special ailments for all allies.",
+      "-",
+      "Ring of Wrath accessory"
+    ]
+  },
+  "1253": {
+    "name": "President's Insight",
+    "element": "Support",
+    "cost": 15,
+    "costType": "SP",
+    "target": "1 ally",
+    "rank": 7,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Next magical attack deals 2.5x damage for 1 ally.",
+    "description": "Next magical attack deals 2.5x damage for 1 ally.",
+    "a": [
+      "President's Insight",
+      "sup",
+      "1 ally"
+    ],
+    "b": [
+      7,
+      1015,
+      0,
+      1,
+      1,
+      100,
+      0,
+      15
+    ],
+    "c": [
+      "Next magical attack deals 2.5x damage for 1 ally.",
+      "-",
+      "Ring of Greed accessory"
+    ]
+  },
+  "1254": {
+    "name": "Proud Presence",
+    "element": "Support",
+    "cost": 15,
+    "costType": "SP",
+    "target": "1 ally",
+    "rank": 7,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Next physical attack deals 2.5x damage for 1 ally.",
+    "description": "Next physical attack deals 2.5x damage for 1 ally.",
+    "a": [
+      "Proud Presence",
+      "sup",
+      "1 ally"
+    ],
+    "b": [
+      7,
+      1015,
+      0,
+      1,
+      1,
+      100,
+      0,
+      15
+    ],
+    "c": [
+      "Next physical attack deals 2.5x damage for 1 ally.",
+      "-",
+      "Ring of Envy accessory"
+    ]
+  },
+  "1255": {
+    "name": "Tyrant's Will",
+    "element": "Support",
+    "cost": 20,
+    "costType": "SP",
+    "target": "1 ally",
+    "rank": 8,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Create a barrier that nullifies 1 attack or boost next magical attack.",
+    "description": "Create a barrier that nullifies 1 attack or boost next magical attack.",
+    "a": [
+      "Tyrant's Will",
+      "sup",
+      "1 ally"
+    ],
+    "b": [
+      8,
+      1020,
+      0,
+      1,
+      1,
+      100,
+      0,
+      20
+    ],
+    "c": [
+      "Create a barrier that nullifies 1 attack or boost next magical attack.",
+      "-",
+      "Ring of Pride accessory"
+    ]
+  },
+  "1256": {
+    "name": "Guiding Tendril",
+    "element": "Support",
+    "cost": 18,
+    "costType": "SP",
+    "target": "All foes",
+    "rank": 8,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "High chance to inflict Dizzy on all foes. Downs susceptible foes.",
+    "description": "High chance to inflict Dizzy on all foes. Downs susceptible foes.",
+    "a": [
+      "Guiding Tendril",
+      "sup",
+      "All foes"
+    ],
+    "b": [
+      8,
+      1018,
+      0,
+      1,
+      1,
+      100,
+      0,
+      18
+    ],
+    "c": [
+      "High chance to inflict Dizzy on all foes. Downs susceptible foes.",
+      "-",
+      "Ring of Sorrow accessory"
+    ]
+  },
+  "1257": {
+    "name": "Fighting Spirit",
+    "element": "Support",
+    "cost": 80,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 9,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Next physical attack deals 2.5x damage for all allies.",
+    "description": "Next physical attack deals 2.5x damage for all allies.",
+    "a": [
+      "Fighting Spirit",
+      "sup",
+      "All allies"
+    ],
+    "b": [
+      9,
+      1080,
+      0,
+      1,
+      1,
+      100,
+      0,
+      80
+    ],
+    "c": [
+      "Next physical attack deals 2.5x damage for all allies.",
+      "-",
+      "Ryuji 3rd Tier (William)"
+    ]
+  },
+  "1258": {
+    "name": "High Energy",
+    "element": "Support",
+    "cost": 80,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 9,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Next magical attack deals 2.5x damage for all allies.",
+    "description": "Next magical attack deals 2.5x damage for all allies.",
+    "a": [
+      "High Energy",
+      "sup",
+      "All allies"
+    ],
+    "b": [
+      9,
+      1080,
+      0,
+      1,
+      1,
+      100,
+      0,
+      80
+    ],
+    "c": [
+      "Next magical attack deals 2.5x damage for all allies.",
+      "-",
+      "Ann 3rd Tier (Celestine)"
+    ]
+  },
+  "1259": {
+    "name": "Hyakka Ryouran",
+    "element": "Support",
+    "cost": 96,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 9,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Increase Attack, Defense, and Agility for all allies for 3 turns.",
+    "description": "Increase Attack, Defense, and Agility for all allies for 3 turns.",
+    "a": [
+      "Hyakka Ryouran",
+      "sup",
+      "All allies"
+    ],
+    "b": [
+      9,
+      1096,
+      0,
+      1,
+      1,
+      100,
+      0,
+      96
+    ],
+    "c": [
+      "Increase Attack, Defense, and Agility for all allies for 3 turns.",
+      "-",
+      "Yusuke 3rd Tier (Gorokichi)"
+    ]
+  },
+  "1260": {
+    "name": "Checkmate",
+    "element": "Support",
+    "cost": 90,
+    "costType": "SP",
+    "target": "All foes",
+    "rank": 9,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Decrease Attack, Defense, and Agility for all foes for 3 turns.",
+    "description": "Decrease Attack, Defense, and Agility for all foes for 3 turns.",
+    "a": [
+      "Checkmate",
+      "sup",
+      "All foes"
+    ],
+    "b": [
+      9,
+      1090,
+      0,
+      1,
+      1,
+      100,
+      0,
+      90
+    ],
+    "c": [
+      "Decrease Attack, Defense, and Agility for all foes for 3 turns.",
+      "-",
+      "Makoto 3rd Tier (Agnes)"
+    ]
+  },
+  "1261": {
+    "name": "Life Wall",
+    "element": "Support",
+    "cost": 95,
+    "costType": "SP",
+    "target": "All allies",
+    "rank": 9,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Create shields on all allies to repel 1 Phys or Magic attack.",
+    "description": "Create shields on all allies to repel 1 Phys or Magic attack.",
+    "a": [
+      "Life Wall",
+      "sup",
+      "All allies"
+    ],
+    "b": [
+      9,
+      1095,
+      0,
+      1,
+      1,
+      100,
+      0,
+      95
+    ],
+    "c": [
+      "Create shields on all allies to repel 1 Phys or Magic attack.",
+      "-",
+      "Haru 3rd Tier (Lucy)"
+    ]
+  },
+  "1262": {
+    "name": "Rebellion Blade",
+    "element": "Almighty",
+    "cost": 99,
+    "costType": "SP",
+    "target": "1 foe",
+    "rank": 9,
+    "power": 550,
+    "accuracy": 98,
+    "effect": "Deal colossal Almighty damage to 1 foe. More damage if foe is Down.",
+    "description": "Deal colossal Almighty damage to 1 foe. More damage if foe is Down.",
+    "a": [
+      "Rebellion Blade",
+      "alm",
+      "1 foe"
+    ],
+    "b": [
+      9,
+      1099,
+      550,
+      1,
+      1,
+      98,
+      0,
+      99
+    ],
+    "c": [
+      "Deal colossal Almighty damage to 1 foe. More damage if foe is Down.",
+      "-",
+      "Akechi 3rd Tier (Hereward)"
+    ]
+  },
+  "1263": {
+    "name": "Masquerade",
+    "element": "Phys",
+    "cost": 25,
+    "costType": "HP",
+    "target": "1 foe",
+    "rank": 9,
+    "power": 300,
+    "accuracy": 95,
+    "effect": "Deal severe Physical damage to 1 foe twice.",
+    "description": "Deal severe Physical damage to 1 foe twice.",
+    "a": [
+      "Masquerade",
+      "phy",
+      "1 foe"
+    ],
+    "b": [
+      9,
+      25,
+      300,
+      2,
+      1,
+      95,
+      0,
+      25
+    ],
+    "c": [
+      "Deal severe Physical damage to 1 foe twice.",
+      "-",
+      "Sumire 3rd Tier (Ella)"
+    ]
+  },
+  "1264": {
+    "name": "Miracle Rush",
+    "element": "Phys",
+    "cost": 16,
+    "costType": "HP",
+    "target": "All foes",
+    "rank": 9,
+    "power": 150,
+    "accuracy": 90,
+    "effect": "Deal medium Physical damage to all foes 1 to 5 times. High critical rate.",
+    "description": "Deal medium Physical damage to all foes 1 to 5 times. High critical rate.",
+    "a": [
+      "Miracle Rush",
+      "phy",
+      "All foes"
+    ],
+    "b": [
+      9,
+      16,
+      150,
+      5,
+      1,
+      90,
+      0,
+      16
+    ],
+    "c": [
+      "Deal medium Physical damage to all foes 1 to 5 times. High critical rate.",
+      "-",
+      "Morgana 3rd Tier (Diego)"
+    ]
   }
 }

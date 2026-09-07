@@ -12094,5 +12094,69 @@
       "-",
       "-"
     ]
+  },
+  "1203": {
+    "name": "Taunting Aura",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
+    "target": "Self",
+    "rank": 3,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Raise chance of being targeted by foes for 3 turns.",
+    "description": "Raise chance of being targeted by foes for 3 turns.",
+    "a": [
+      "Taunting Aura",
+      "sup",
+      "Self"
+    ],
+    "b": [
+      3,
+      1004,
+      0,
+      1,
+      1,
+      100,
+      0,
+      4
+    ],
+    "c": [
+      "Raise chance of being targeted by foes for 3 turns.",
+      "-",
+      "Support Skill"
+    ]
+  },
+  "1204": {
+    "name": "Concealment",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
+    "target": "Self",
+    "rank": 3,
+    "power": 0,
+    "accuracy": 100,
+    "effect": "Lower chance of being targeted by foes for 3 turns.",
+    "description": "Lower chance of being targeted by foes for 3 turns.",
+    "a": [
+      "Concealment",
+      "sup",
+      "Self"
+    ],
+    "b": [
+      3,
+      1004,
+      0,
+      1,
+      1,
+      100,
+      0,
+      4
+    ],
+    "c": [
+      "Lower chance of being targeted by foes for 3 turns.",
+      "-",
+      "Support Skill"
+    ]
   }
 }

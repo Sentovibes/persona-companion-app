@@ -12682,64 +12682,64 @@
     },
     {
       "name": "Ring of Lust",
-      "description": "Bears the seal of a deviant. Allows user to use a unique two-in-one skill.",
-      "effect": "Bears the seal of a deviant. Allows user to use a unique two-in-one skill.",
+      "description": "Bears the seal of a deviant. Grants Champion's Cup (Med HP heal + Tarukaja to 1 ally).",
+      "effect": "Bears the seal of a deviant. Grants Champion's Cup (Med HP heal + Tarukaja to 1 ally).",
       "price": "",
       "location": "Complete Kamoshida's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Vanity",
-      "description": "Bears the seal of a narcissist. Nullifies wearer's weaknesses.",
-      "effect": "Bears the seal of a narcissist. Nullifies wearer's weaknesses.",
+      "description": "Bears the seal of an artist. Grants Bleeding Dry Brush (Absorbs 1 non-Almighty attack for 1 ally) and Brush of Vanity (Nullifies elemental weaknesses).",
+      "effect": "Bears the seal of an artist. Grants Bleeding Dry Brush (Absorbs 1 non-Almighty attack for 1 ally) and Brush of Vanity (Nullifies elemental weaknesses).",
       "price": "",
       "location": "Complete Madarame's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Gluttony",
-      "description": "Bears the seal of a hoarder. Innate barrier can deflect all attacks except Almighty.",
-      "effect": "Bears the seal of a hoarder. Innate barrier can deflect all attacks except Almighty.",
+      "description": "Bears the seal of a gourmet. Grants Vault Guardian (Marakukaja for all allies) and Auto-Tetrakarn/Makarakarn.",
+      "effect": "Bears the seal of a gourmet. Grants Vault Guardian (Marakukaja for all allies) and Auto-Tetrakarn/Makarakarn.",
       "price": "",
       "location": "Complete Kaneshiro's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Wrath",
-      "description": "Increases wearer's Agility for 3 turns at the start of battle.",
-      "effect": "Increases wearer's Agility for 3 turns at the start of battle.",
+      "description": "Bears the seal of a shut-in. Grants Wings of Wisdom (Amrita Drop for all allies) and Speed Master.",
+      "effect": "Bears the seal of a shut-in. Grants Wings of Wisdom (Amrita Drop for all allies) and Speed Master.",
       "price": "",
       "location": "Complete Futaba's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Greed",
-      "description": "Bears the seal of a miser. Increases wearer's Attack for 3 turns at the start of battle.",
-      "effect": "Bears the seal of a miser. Increases wearer's Attack for 3 turns at the start of battle.",
+      "description": "Bears the seal of a CEO. Grants President's Insight (Concentrate to 1 ally) and Attack Master.",
+      "effect": "Bears the seal of a CEO. Grants President's Insight (Concentrate to 1 ally) and Attack Master.",
       "price": "",
       "location": "Complete Okumura's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Envy",
-      "description": "Wearer's next magical attack deals over double the damage at the start of battle.",
-      "effect": "Wearer's next magical attack deals over double the damage at the start of battle.",
+      "description": "Bears the seal of an investigator. Grants Proud Presence (Charge to 1 ally) and Defense Master.",
+      "effect": "Bears the seal of an investigator. Grants Proud Presence (Charge to 1 ally) and Defense Master.",
       "price": "",
       "location": "Complete Niijima's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Pride",
-      "description": "Bears the seal of an egoist. Increases wearer's Defense for 3 turns at the start of battle.",
-      "effect": "Bears the seal of an egoist. Increases wearer's Defense for 3 turns at the start of battle.",
+      "description": "Bears the seal of a statesman. Grants Tyrant's Will (Barrier nullifying 1 attack to 1 ally).",
+      "effect": "Bears the seal of a statesman. Grants Tyrant's Will (Barrier nullifying 1 attack to 1 ally).",
       "price": "",
       "location": "Complete Shido's Palace and talk to Jose",
       "category": "Accessory"
     },
     {
       "name": "Ring of Sorrow",
-      "description": "Wearer recovers 8% HP and SP after victory.",
-      "effect": "Wearer recovers 8% HP and SP after victory.",
+      "description": "Bears the seal of a counselor. Grants Guiding Tendril (High chance Dizzy to all foes; downs susceptible foes).",
+      "effect": "Bears the seal of a counselor. Grants Guiding Tendril (High chance Dizzy to all foes; downs susceptible foes).",
       "price": "",
       "location": "Complete Maruki's Palace and talk to Jose\nNew Game+ exclusive",
       "category": "Accessory"
@@ -14983,6 +14983,14 @@
       "price": "",
       "location": "",
       "category": "Other"
+    },
+    {
+      "name": "Hidden Ring",
+      "category": "Accessory",
+      "description": "Accessory. Grants Concealment. Location: Fusion accident during itemization during fusion alarm (Persona leveled 1～35).",
+      "effect": "Accessory. Grants Concealment. Location: Fusion accident during itemization during fusion alarm (Persona leveled 1～35).",
+      "price": "",
+      "location": "Fusion accident during itemization during fusion alarm (Persona leveled 1～35)"
     }
   ]
 }
