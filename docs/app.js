@@ -169,10 +169,68 @@ function currentHash() {
 function applyHash(h) {
     window._applyingHash = true;
     try {
-        const parts = (h||'').replace(/^#/,'').split('/').filter(Boolean);
+        const clean = (h||'').replace(/^#/,'').trim();
+        if (!clean || clean === 'home' || clean === '/') { navigate('home'); return; }
+        if (clean === 'settings') { navigate('settings'); return; }
+
+        const parts = clean.split('/').filter(Boolean);
         if (!parts.length) { navigate('home'); return; }
+
+        // Direct game shortcuts (e.g. #p3r, #p4g, #p5r)
+        const GAME_MAP = {
+            p3fes:{series:'p3',game:'p3fes'}, p3p:{series:'p3',game:'p3p'}, p3r:{series:'p3',game:'p3r'},
+            p4:{series:'p4',game:'p4'}, p4g:{series:'p4',game:'p4g'},
+            p5:{series:'p5',game:'p5'}, p5r:{series:'p5',game:'p5r'}
+        };
+        if (parts.length === 1 && GAME_MAP[parts[0]]) {
+            selectGame(GAME_MAP[parts[0]].series, GAME_MAP[parts[0]].game);
+            return;
+        }
+
+        // Shorthand section routes (e.g. #compendium, #personas, #enemies, #requests, #fusion, #classroom)
+        const SECTION_MAP = {
+            compendium:'personas', personas:'personas', enemies:'enemies',
+            requests:'requests', fusion:'fusion', classroom:'classroom',
+            items:'items', skills:'skills', social:'sociallinks',
+            sociallinks:'sociallinks', guides:'guides', negotiation:'negotiation'
+        };
+        if (parts.length === 1 && SECTION_MAP[parts[0]]) {
+            if (!S.game) { S.series = 'p5'; S.game = 'p5r'; }
+            const sec = SECTION_MAP[parts[0]];
+            if (['personas','enemies','classroom'].includes(sec)) { S.listMode = sec; navigate('list'); }
+            else if (sec === 'items')       { S.listMode = 'items';    navigate('items'); }
+            else if (sec === 'skills')      { S.listMode = 'skills';   navigate('skills'); }
+            else if (sec === 'requests')    { S.listMode = 'requests'; navigate('requests'); }
+            else if (sec === 'fusion')      { openFusion(); }
+            else if (sec === 'sociallinks') { openSocialLinks(); }
+            else if (sec === 'guides')      { openGuides(); }
+            else if (sec === 'negotiation') { openNegotiation(); }
+            return;
+        }
+
         const series = SERIES.find(s => s.id === parts[0]);
-        if (!series) { navigate('home'); return; }
+        if (!series) {
+            for (const s of SERIES) {
+                const g = s.games.find(gm => gm.id === parts[0]);
+                if (g) {
+                    S.series = s.id; S.game = g.id;
+                    const sec = parts[1];
+                    if (!sec) { navigate('category'); return; }
+                    if (['personas','enemies','classroom'].includes(sec)) { S.listMode = sec; navigate('list'); }
+                    else if (sec === 'items')       { S.listMode = 'items';    navigate('items'); }
+                    else if (sec === 'skills')      { S.listMode = 'skills';   navigate('skills'); }
+                    else if (sec === 'requests')    { S.listMode = 'requests'; navigate('requests'); }
+                    else if (sec === 'fusion')      { openFusion(); }
+                    else if (sec === 'sociallinks') { openSocialLinks(); }
+                    else if (sec === 'guides')      { openGuides(); }
+                    else if (sec === 'negotiation') { openNegotiation(); }
+                    else navigate('category');
+                    return;
+                }
+            }
+            navigate('home');
+            return;
+        }
         S.series = series.id;
         const game = series.games.find(g => g.id === parts[1]);
         if (!game) { navigate('game', S.series); return; }
@@ -329,7 +387,7 @@ function updateRailState(screenName) {
     const gameItems = ['rail-personas','rail-fusion','rail-enemies','rail-sl','rail-class','rail-items','rail-skills','rail-requests','rail-guides','rail-negotiation'];
     gameItems.forEach(id => {
         const el = document.getElementById(id);
-        if (el) el.style.display = S.game ? 'flex' : 'none';
+        if (el) el.style.display = 'flex';
     });
 
     const negoLabel = document.getElementById('rail-negotiation-label');
@@ -544,12 +602,17 @@ function buildListScreen(mode) {
             onclick="toggleFavOnly()" title="Favorites only">&#x2665;</button>`;
     if (S.listMode==='personas') {
         sortBar.style.display='flex';
+        const arcanas = ['All Arcanas', 'Fool', 'Magician', 'Priestess', 'Empress', 'Emperor', 'Hierophant', 'Lovers', 'Chariot', 'Justice', 'Hermit', 'Fortune', 'Strength', 'Hanged Man', 'Death', 'Temperance', 'Devil', 'Tower', 'Star', 'Moon', 'Sun', 'Judgement', 'Faith', 'Councillor', 'World'];
+        const arcanaSelect = `
+            <select id="arcanaFilter" class="sort-chip arcana-select" aria-label="Arcana Filter" onchange="onArcanaFilter(this.value)" style="background:#1E1E1E;color:#fff;border:1px solid #333;border-radius:16px;padding:4px 10px;font-size:12px;outline:none;cursor:pointer;">
+                ${arcanas.map(a => `<option value="${a==='All Arcanas'?'':a}" ${S.arcanaFilter===(a==='All Arcanas'?'':a)?'selected':''}>${a}</option>`).join('')}
+            </select>`;
         sortBar.innerHTML = ['arcana','level','name'].map(opt=>`
             <button class="sort-chip ${S.sort===opt?'active':''}"
                     style="${S.sort===opt?`color:${color};background:${color}22`:''}"
                     onclick="setSort('${opt}','${color}')">
                 ${opt[0].toUpperCase()+opt.slice(1)}
-            </button>`).join('') + favChip;
+            </button>`).join('') + arcanaSelect + favChip;
     } else if (S.listMode==='enemies') {
         sortBar.style.display='flex';
         sortBar.innerHTML = [['level','Level'],['name','Name'],['hp','HP']].map(([opt,label])=>`
@@ -605,6 +668,13 @@ function renderList(data, color) {
     else if (S.listMode==='classroom') renderClassroom(data, q, el);
 }
 
+function onArcanaFilter(val) {
+    S.arcanaFilter = val;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color  = series?.color||'#2196F3';
+    loadAndRender(color);
+}
+
 /* ── Personas ──────────────────────────────────────────────────────────────── */
 function renderPersonas(data, q, color, el) {
     const DLC_NAMES = {
@@ -633,6 +703,7 @@ function renderPersonas(data, q, color, el) {
     const total = allEntries.length;
     let items = allEntries.filter(([name, p]) =>
         !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q));
+    if (S.arcanaFilter) items = items.filter(([name, p]) => (p.arcana||p.race||'').toLowerCase() === S.arcanaFilter.toLowerCase());
     if (S.favOnly) items = items.filter(([name])=>S.favorites.has(`${S.game}_${name}`));
     if (!items.length) { showEmpty(S.favOnly ? 'No favorites yet — open a persona and tap the heart' : 'No personas found'); return; }
 

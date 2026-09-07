@@ -114,3 +114,5 @@ scratch/
 # Incoming raw images inbox
 incoming_images/*
 !incoming_images/README.md
+testsprite_tests/tmp/
+testsprite_tests/tmp/config.json
