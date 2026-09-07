@@ -100,3 +100,7 @@ testsprite_tests/tmp/config.json
 # Teamwork and agent workspaces
 .agents/*
 !.agents/rules/
+
+# Incoming raw images inbox
+incoming_images/*
+!incoming_images/README.md
