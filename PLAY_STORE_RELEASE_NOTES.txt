@@ -6,7 +6,7 @@ Copy-paste the exact block below (including the <en-US> tags) into the
 Google Play Console "Release notes" editor for each release track.
 
 --------------------------------------------------------------------------------
-PHONE TRACK (versionCode 44: Android Phone / Tablet)
+PHONE TRACK (versionCode 45: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
 • Critical Bug Fixes: Restored complete guide functionality, navigation stability, and screen layouts across all games.
@@ -16,7 +16,7 @@ PHONE TRACK (versionCode 44: Android Phone / Tablet)
 </en-US>
 
 --------------------------------------------------------------------------------
-WEAR OS WATCH TRACK (versionCode 45: Wear OS Smartwatch)
+WEAR OS WATCH TRACK (versionCode 46: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
 • Critical Bug Fixes: Resolved database sync issues and restored smooth list scrolling.

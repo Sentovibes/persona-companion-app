@@ -1,7 +1,7 @@
 # Release Notes: v7.2.2 (Critical Bug Fixes & Stability Release)
 
 Version: **7.2.2**  
-Phone Version Code: **44**  
+Phone Version Code: **45**  
 Release Type: **Critical Bug Fixes & Stability Hotfix**  
 
 ---

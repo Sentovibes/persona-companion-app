@@ -1,6 +1,6 @@
 # Release Notes: v7.2.2 (Critical Bug Fixes & Stability Release)
 
-## Android Phone & Web Release (versionCode 44)
+## Android Phone & Web Release (versionCode 45)
 - **Guides Hub Restored**: Fully restored all 25 Jetpack Compose screen components across the Guides Hub, Day-by-Day Calendar Guide, Boss Prep Guides, and Quest Trackers.
 - **Rare Skill Compatibility**: Fixed database parsing and indexing for rare accessories and skills, including *Taunting Aura* and fusion accident exclusive equipment.
 - **Complete In-Game Descriptions**: Retained authentic in-game descriptions, SP/HP costs, hit rates, and element classifications across Persona 3, Persona 4, and Persona 5.
