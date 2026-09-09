@@ -1,32 +1,18 @@
-# Release Notes - v7.2.0
-
-## Major Content & Completion Release (Android & Web)
-
-### 1. 100.0% Franchise Artwork Coverage
-- **Personas (320 / 320 — 100.0%)**: Integrated high-resolution artwork for all remaining Personas (Abaddon, Ananta, Anat, Koropokkuru) across both Android (`personas_shared/`) and Web (`docs/assets/images/personas/`).
-- **Enemies (1,503 / 1,503 entries — 100.0%)**: Completed artwork for all shadows and bosses (Ill-fated Maya, Kunino-sagiri, Ameno-sagiri, Kusumi-no-Okami, Abyssal King of Avarice, Tank-Form Shadow, Craven Venoms, Justine & Caroline).
-
-### 2. 100.0% Item & Skill Descriptions
-- **Items**: 8,736 / 8,736 items now have detailed in-game descriptions and effects across all 7 games. Cleaned corrupted P3 FES table entries and expanded P3P to 710 canonical items.
-- **Skills**: 3,638 / 3,638 skills now have authentic effect text, accurate costs, and element tags. Restored 142 missing skills and eliminated all raw hex-offset codes.
-
-### 3. Canonical Palace & Mementos Locations for P5 Shadows
-- **Eliminated "Location: Unknown"**: Populated authentic Palace and Mementos locations for all 129 Persona 5 and Royal shadows that previously defaulted to Unknown.
-
-### 4. Image Pack v2.0 Release
-- Updated cloud CDN configuration to Image Pack v2.0 (`images.zip`, 1,026 MB, 930 files).
-- Android Phone: `versionCode 41`, `versionName "7.2.0"`.
-
----
-
 # Release Notes - v7.1.5
 
-## Android Release (versionCode 39)
+## Wear OS Companion Release (Watch Only - versionCode 40)
+Initial standalone Wear OS companion release for Wear OS 4 and 5 smartwatches:
+- Instant wrist lookup for Persona 3, Persona 4, and Persona 5 series games.
+- Classroom & Exam cheat sheet with quick date navigation.
+- Enemy weakness calculator with Normal, Mini-Boss, and Boss category tabs.
+- Social Link and Confidant optimal dialogue choices.
+- Hardware-optimized rotary touch bezel and digital crown scrolling support.
+- Pure black high-contrast OLED theme for minimal battery consumption.
+
+## Android Phone Release (versionCode 39)
 - Resolved data loading exception in release builds by preserving JSON type token signatures.
 - Bundled native crash debug symbols for improved crash diagnostic reporting.
-- Synchronized version release across application modules.
-- Enhanced classroom & exam date navigation and enemy weakness lookups.
-- Optimized high-contrast OLED theme for battery consumption.
+- Synchronized version release with the Wear OS companion module.
 
 ---
 

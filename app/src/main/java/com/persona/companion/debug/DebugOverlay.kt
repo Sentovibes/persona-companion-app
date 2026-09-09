@@ -184,7 +184,7 @@ private fun ErrorsTab(errors: List<DebugLogger.LogEntry>) {
         ) {
             items(errors) { error ->
                 LogItem(error)
-                HorizontalDivider(color = Color.Red.copy(alpha = 0.3f), modifier = Modifier.padding(vertical = 8.dp))
+                Divider(color = Color.Red.copy(alpha = 0.3f), modifier = Modifier.padding(vertical = 8.dp))
             }
         }
     }
@@ -205,7 +205,7 @@ private fun StatsTab() {
         StatItem("Build Type", if (BuildConfig.DEBUG) "Debug" else "Release")
         StatItem("Version", BuildConfig.VERSION_NAME)
         StatItem("Version Code", BuildConfig.VERSION_CODE.toString())
-        HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        Divider(modifier = Modifier.padding(vertical = 8.dp))
         StatItem("Used Memory", "$usedMemory MB")
         StatItem("Total Memory", "$totalMemory MB")
         StatItem("Max Memory", "$maxMemory MB")

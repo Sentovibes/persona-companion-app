@@ -1,5 +1,7 @@
 package com.persona.companion.utils
 
+import androidx.compose.ui.unit.sp
+
 import com.persona.companion.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
