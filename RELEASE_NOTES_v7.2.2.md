@@ -1,7 +1,7 @@
 # Release Notes: v7.2.2 (Critical Bug Fixes & Stability Release)
 
 Version: **7.2.2**  
-Phone Version Code: **45**  
+Phone Version Code: **46**  
 Release Type: **Critical Bug Fixes & Stability Hotfix**  
 
 ---
@@ -14,7 +14,7 @@ Release Type: **Critical Bug Fixes & Stability Hotfix**
 - **Eliminated Ghost Boss Simulators**: Cleaned up legacy simulator references to ensure users receive verified, authentic boss strategies and weaknesses.
 
 ### 2. Rare Skills & Item Database Hardening
-- **Rare Skill Compatibility**: Fixed database parsing and indexing for rare accessories and skills, including *Taunting Aura* and fusion accident exclusive equipment.
+- **Rare Skill & Accessory Passives**: Added *Taunting Aura*, accessory passives, and Will Seed Ring skills to Persona 5 and Royal databases, ensuring complete indexing and description coverage.
 - **Complete In-Game Descriptions**: Retained all authentic in-game descriptions, SP/HP costs, hit rates, and element classifications across Persona 3, Persona 4, and Persona 5.
 - **Defensive Error Handling**: Ensured that compendium and skill repositories fail gracefully without crashing when encountering unexpected format anomalies.
 

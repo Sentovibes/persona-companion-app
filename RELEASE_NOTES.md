@@ -1,8 +1,8 @@
 # Release Notes: v7.2.2 (Critical Bug Fixes & Stability Release)
 
-## Android Phone & Web Release (versionCode 45)
+## Android Phone & Web Release (versionCode 46)
 - **Guides Hub Restored**: Fully restored all 25 Jetpack Compose screen components across the Guides Hub, Day-by-Day Calendar Guide, Boss Prep Guides, and Quest Trackers.
-- **Rare Skill Compatibility**: Fixed database parsing and indexing for rare accessories and skills, including *Taunting Aura* and fusion accident exclusive equipment.
+- **Rare Skill & Accessory Passives**: Added *Taunting Aura*, accessory passives, and Will Seed Ring skills to Persona 5 and Royal databases, ensuring complete indexing and description coverage.
 - **Complete In-Game Descriptions**: Retained authentic in-game descriptions, SP/HP costs, hit rates, and element classifications across Persona 3, Persona 4, and Persona 5.
 - **Enemy Bestiary & Artwork**: Maintained 100% franchise artwork coverage for all 320 Personas and 1,503 enemies, alongside verified Palace and Mementos encounter locations.
 - **Defensive Error Handling**: Eliminated layout stutter and hardened compendium and skill repositories against data anomalies.
