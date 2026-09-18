@@ -1,6 +1,6 @@
 # Release Notes: v7.2.2 (Critical Bug Fixes & Stability Release)
 
-## Android Phone & Web Release (versionCode 46)
+## Android Phone & Web Release (versionCode 48)
 - **Guides Hub Restored**: Fully restored all 25 Jetpack Compose screen components across the Guides Hub, Day-by-Day Calendar Guide, Boss Prep Guides, and Quest Trackers.
 - **Rare Skill & Accessory Passives**: Added *Taunting Aura*, accessory passives, and Will Seed Ring skills to Persona 5 and Royal databases, ensuring complete indexing and description coverage.
 - **Complete In-Game Descriptions**: Retained authentic in-game descriptions, SP/HP costs, hit rates, and element classifications across Persona 3, Persona 4, and Persona 5.

@@ -104,3 +104,7 @@ testsprite_tests/
 # Incoming raw images inbox
 incoming_images/*
 !incoming_images/README.md
+
+# Certificates and scratch directories
+*.pem
+.freebuff/
