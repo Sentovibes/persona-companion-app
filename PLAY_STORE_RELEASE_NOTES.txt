@@ -9,19 +9,23 @@ Google Play Console "Release notes" editor for each release track.
 PHONE TRACK (versionCode 48: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
-• Critical Bug Fixes: Restored complete guide functionality, navigation stability, and screen layouts across all games.
-• Skill & Database Updates: Added Taunting Aura, accessory passives, and Will Seed skills with full descriptions.
-• Compendium Fixes: Ensured full display of authentic enemy and boss data for Persona 3, 4, and 5.
-• Performance & Stability: Eliminated layout stutter and improved asset loading speed.
+• Initial Public Production Release of Persona Companion.
+• Complete Compendium & Fusion Calculator: Full database for Persona 3 (FES, Portable, Reload), Persona 4 (Original, Golden), and Persona 5 (Vanilla, Royal).
+• Cost-Optimized Fusions: Accurate recipe calculator with Yen (¥) summoning costs, ingredient filtering, and triangle fusions.
+• Classroom & Exam Answers: Instant lookup for all school questions and exam dates across every title.
+• Confidant & Social Link Guides: Optimal dialogue choices, point thresholds, and gift recommendations.
+• Story Bosses & Shadow Weaknesses: Resistance tables, battle strategies, and verified Palace encounter locations.
 </en-US>
 
 --------------------------------------------------------------------------------
 WEAR OS WATCH TRACK (versionCode 49: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
-• Critical Bug Fixes: Resolved database sync issues and restored smooth list scrolling.
-• Accurate Shadow Locations: Fixed location display for Persona 5 and Royal shadows.
-• Watch UI Stability: Optimized rotary crown responsiveness and ambient display power usage.
-• Crash Prevention: Hardened data loading against missing fields.
+• Initial Public Production Release of Persona Companion for Wear OS.
+• Instant wrist lookup for Persona 3, Persona 4, and Persona 5.
+• Quick-access Classroom and Exam answers with date navigation.
+• Enemy weakness calculator with Normal, Mini-Boss, and Boss categories.
+• Confidant and Social Link optimal dialogue choice lookup.
+• Pure black high-contrast OLED interface optimized for digital crown scrolling.
 </en-US>
 ================================================================================
