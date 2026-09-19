@@ -106,10 +106,7 @@ git clone https://github.com/Sentovibes/persona-companion-app.git
 ---
 
 ## Roadmap: What's Next?
-- [ ] **Forward Fusion Calculator**: Select any two Personas to see the result.
-- [ ] **Custom Persona Build Planner**: Save your "Ultimate Builds" to your local roster.
-- [ ] **Shadow Negotiation Guide**: Upbeat? Timid? Never fail a negotiation again.
-- [ ] **Daily Schedule Helper**: Track missable events and exam dates in real-time.
+- [ ] **Custom Persona Build Planner**: Save and customize your "Ultimate Builds" to your local roster with custom skill loadouts and stat allocations.
 
 ---
 
