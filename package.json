@@ -1,14 +1,13 @@
 {
   "name": "persona-companion-app",
   "version": "1.0.0",
-  "description": "A comprehensive companion and reference app for the mainline Persona series. Version 5.0 marks the final major feature release, providing complete databases for personas, enemies, social links, confidants, and classroom answers.",
-  "main": "index.js",
+  "description": "Companion and reference toolkit for the Persona series.",
+  "main": "docs/app.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "node tests/integration_test.mjs",
-    "test:integration": "node tests/integration_test.mjs"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",

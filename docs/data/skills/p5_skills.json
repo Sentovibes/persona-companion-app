@@ -12095,484 +12095,68 @@
       "-"
     ]
   },
-  "3001": {
+  "1203": {
     "name": "Taunting Aura",
-    "element": "Passive",
-    "cost": 0,
-    "costType": "",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
     "target": "Self",
-    "rank": 1,
+    "rank": 3,
     "power": 0,
-    "accuracy": 0,
-    "effect": "Increases chance of being targeted by foes.",
-    "description": "Increases chance of being targeted by foes.",
+    "accuracy": 100,
+    "effect": "Raise chance of being targeted by foes for 3 turns.",
+    "description": "Raise chance of being targeted by foes for 3 turns.",
     "a": [
       "Taunting Aura",
-      "pas",
+      "sup",
       "Self"
     ],
     "b": [
+      3,
+      1004,
+      0,
       1,
+      1,
+      100,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      4
     ],
     "c": [
-      "Increases chance of being targeted by foes.",
+      "Raise chance of being targeted by foes for 3 turns.",
       "-",
-      "Alluring Belt"
+      "Support Skill"
     ]
   },
-  "3002": {
+  "1204": {
     "name": "Concealment",
-    "element": "Passive",
-    "cost": 0,
-    "costType": "",
+    "element": "Support",
+    "cost": 4,
+    "costType": "SP",
     "target": "Self",
-    "rank": 1,
+    "rank": 3,
     "power": 0,
-    "accuracy": 0,
-    "effect": "Decreases chance of being targeted by foes.",
-    "description": "Decreases chance of being targeted by foes.",
+    "accuracy": 100,
+    "effect": "Lower chance of being targeted by foes for 3 turns.",
+    "description": "Lower chance of being targeted by foes for 3 turns.",
     "a": [
       "Concealment",
-      "pas",
+      "sup",
       "Self"
     ],
     "b": [
+      3,
+      1004,
+      0,
       1,
+      1,
+      100,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      4
     ],
     "c": [
-      "Decreases chance of being targeted by foes.",
+      "Lower chance of being targeted by foes for 3 turns.",
       "-",
-      "Camouflage Belt"
-    ]
-  },
-  "3003": {
-    "name": "Zenith Defense",
-    "element": "Passive",
-    "cost": 0,
-    "costType": "",
-    "target": "Self",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Nullifies all non-Almighty attacks while in a pinch.",
-    "description": "Nullifies all non-Almighty attacks while in a pinch.",
-    "a": [
-      "Zenith Defense",
-      "pas",
-      "Self"
-    ],
-    "b": [
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "c": [
-      "Nullifies all non-Almighty attacks while in a pinch.",
-      "-",
-      "Zenith Defense"
-    ]
-  },
-  "3004": {
-    "name": "Rage Atk Up",
-    "element": "Passive",
-    "cost": 0,
-    "costType": "",
-    "target": "Self",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Increases attack power when afflicted with Rage.",
-    "description": "Increases attack power when afflicted with Rage.",
-    "a": [
-      "Rage Atk Up",
-      "pas",
-      "Self"
-    ],
-    "b": [
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "c": [
-      "Increases attack power when afflicted with Rage.",
-      "-",
-      "Raging Wristband"
-    ]
-  },
-  "3005": {
-    "name": "Last Stand",
-    "element": "Passive",
-    "cost": 0,
-    "costType": "",
-    "target": "Self",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Reduces enemy hit rate to 1/3 when surrounded.",
-    "description": "Reduces enemy hit rate to 1/3 when surrounded.",
-    "a": [
-      "Last Stand",
-      "pas",
-      "Self"
-    ],
-    "b": [
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "c": [
-      "Reduces enemy hit rate to 1/3 when surrounded.",
-      "-",
-      "Surrounded Evasion"
-    ]
-  },
-  "3006": {
-    "name": "Champion's Cup",
-    "element": "Support",
-    "cost": 10,
-    "costType": "SP",
-    "target": "1 ally",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Diarama and Tarukaja on 1 ally.",
-    "description": "Cast Diarama and Tarukaja on 1 ally.",
-    "a": [
-      "Champion's Cup",
-      "sup",
-      "1 ally"
-    ],
-    "b": [
-      1,
-      1010,
-      0,
-      0,
-      0,
-      0,
-      0,
-      10
-    ],
-    "c": [
-      "Cast Diarama and Tarukaja on 1 ally.",
-      "-",
-      "Ring of Lust"
-    ]
-  },
-  "3007": {
-    "name": "Tyrant's Will",
-    "element": "Support",
-    "cost": 12,
-    "costType": "SP",
-    "target": "All allies",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Nullify next affinity weakness attack for all allies.",
-    "description": "Nullify next affinity weakness attack for all allies.",
-    "a": [
-      "Tyrant's Will",
-      "sup",
-      "All allies"
-    ],
-    "b": [
-      1,
-      1012,
-      0,
-      0,
-      0,
-      0,
-      0,
-      12
-    ],
-    "c": [
-      "Nullify next affinity weakness attack for all allies.",
-      "-",
-      "Ring of Vanity"
-    ]
-  },
-  "3008": {
-    "name": "President's Path",
-    "element": "Support",
-    "cost": 18,
-    "costType": "SP",
-    "target": "All allies",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Marakukaja and auto-Tetrakarn on the user.",
-    "description": "Cast Marakukaja and auto-Tetrakarn on the user.",
-    "a": [
-      "President's Path",
-      "sup",
-      "All allies"
-    ],
-    "b": [
-      1,
-      1018,
-      0,
-      0,
-      0,
-      0,
-      0,
-      18
-    ],
-    "c": [
-      "Cast Marakukaja and auto-Tetrakarn on the user.",
-      "-",
-      "Ring of Gluttony"
-    ]
-  },
-  "3009": {
-    "name": "Gluttony's Snare",
-    "element": "Support",
-    "cost": 14,
-    "costType": "SP",
-    "target": "1 ally",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Tetrakarn and Makarakarn on 1 ally.",
-    "description": "Cast Tetrakarn and Makarakarn on 1 ally.",
-    "a": [
-      "Gluttony's Snare",
-      "sup",
-      "1 ally"
-    ],
-    "b": [
-      1,
-      1014,
-      0,
-      0,
-      0,
-      0,
-      0,
-      14
-    ],
-    "c": [
-      "Cast Tetrakarn and Makarakarn on 1 ally.",
-      "-",
-      "Ring of Gluttony"
-    ]
-  },
-  "3010": {
-    "name": "Greed's Pride",
-    "element": "Support",
-    "cost": 15,
-    "costType": "SP",
-    "target": "1 ally",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Concentrate and Sukukaja on 1 ally.",
-    "description": "Cast Concentrate and Sukukaja on 1 ally.",
-    "a": [
-      "Greed's Pride",
-      "sup",
-      "1 ally"
-    ],
-    "b": [
-      1,
-      1015,
-      0,
-      0,
-      0,
-      0,
-      0,
-      15
-    ],
-    "c": [
-      "Cast Concentrate and Sukukaja on 1 ally.",
-      "-",
-      "Ring of Greed"
-    ]
-  },
-  "3011": {
-    "name": "Envy's Flare",
-    "element": "Support",
-    "cost": 15,
-    "costType": "SP",
-    "target": "1 ally",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Charge and auto-Concentrate on 1 ally.",
-    "description": "Cast Charge and auto-Concentrate on 1 ally.",
-    "a": [
-      "Envy's Flare",
-      "sup",
-      "1 ally"
-    ],
-    "b": [
-      1,
-      1015,
-      0,
-      0,
-      0,
-      0,
-      0,
-      15
-    ],
-    "c": [
-      "Cast Charge and auto-Concentrate on 1 ally.",
-      "-",
-      "Ring of Envy"
-    ]
-  },
-  "3012": {
-    "name": "Gambler's Pride",
-    "element": "Support",
-    "cost": 15,
-    "costType": "SP",
-    "target": "1 ally",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Charge and Tarukaja on 1 ally.",
-    "description": "Cast Charge and Tarukaja on 1 ally.",
-    "a": [
-      "Gambler's Pride",
-      "sup",
-      "1 ally"
-    ],
-    "b": [
-      1,
-      1015,
-      0,
-      0,
-      0,
-      0,
-      0,
-      15
-    ],
-    "c": [
-      "Cast Charge and Tarukaja on 1 ally.",
-      "-",
-      "Ring of Pride"
-    ]
-  },
-  "3013": {
-    "name": "Proud Presence",
-    "element": "Support",
-    "cost": 16,
-    "costType": "SP",
-    "target": "All allies",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Mediarama and Masukukaja for all allies.",
-    "description": "Cast Mediarama and Masukukaja for all allies.",
-    "a": [
-      "Proud Presence",
-      "sup",
-      "All allies"
-    ],
-    "b": [
-      1,
-      1016,
-      0,
-      0,
-      0,
-      0,
-      0,
-      16
-    ],
-    "c": [
-      "Cast Mediarama and Masukukaja for all allies.",
-      "-",
-      "Ring of Sorrow"
-    ]
-  },
-  "3014": {
-    "name": "Bleeding Fury",
-    "element": "Support",
-    "cost": 20,
-    "costType": "SP",
-    "target": "All allies",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Marakukaja and Matarukaja for all allies.",
-    "description": "Cast Marakukaja and Matarukaja for all allies.",
-    "a": [
-      "Bleeding Fury",
-      "sup",
-      "All allies"
-    ],
-    "b": [
-      1,
-      1020,
-      0,
-      0,
-      0,
-      0,
-      0,
-      20
-    ],
-    "c": [
-      "Cast Marakukaja and Matarukaja for all allies.",
-      "-",
-      "Ring of Wrath"
-    ]
-  },
-  "3015": {
-    "name": "Checkmate",
-    "element": "Support",
-    "cost": 30,
-    "costType": "SP",
-    "target": "All foes",
-    "rank": 1,
-    "power": 0,
-    "accuracy": 0,
-    "effect": "Cast Debilitate on all foes.",
-    "description": "Cast Debilitate on all foes.",
-    "a": [
-      "Checkmate",
-      "sup",
-      "All foes"
-    ],
-    "b": [
-      1,
-      1030,
-      0,
-      0,
-      0,
-      0,
-      0,
-      30
-    ],
-    "c": [
-      "Cast Debilitate on all foes.",
-      "-",
-      "Ring of Jealousy"
+      "Support Skill"
     ]
   }
 }
