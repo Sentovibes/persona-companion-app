@@ -2,10 +2,10 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v7.1.0
+# Persona Companion App v7.2.2
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
-[![Version](https://img.shields.io/badge/Version-7.1.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-7.2.2-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
@@ -30,12 +30,13 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## v7.1.0: Complete Guides, All Bosses & Arcana Rank Mastery Update
-This landmark update expands combat, quest, and dungeon exploration across the franchise:
-- **Comprehensive Boss Prep Guides (All 7 Games)**: Expert human-grade strategies from Game8 & TheGamer covering every story boss, dungeon boss, optional boss, palace ruler, Tartarus floor guardian, and superboss (The Reaper, Margaret, Lavenza, Okumura, Nyx Avatar, Elizabeth & Theodore).
-- **All Side-Quests & Velvet Room Requests**: 101 Requests in P3R, 99 in P3FES, 80 in P3P (with dynamic Theodore / Elizabeth switching when FeMC mode is active), 88 in P4G, 69 in P4, 43 in P5R, and 36 in P5.
-- **Shuffle Time, Arcana Ranks & Floor Personas**: Minor Arcana breakdown by Rank (1 to 10) with exact EXP multipliers (+20% to +400%), Money bonuses, HP/SP recovery, and full skill card drop tables. Filterable directory of all Personas obtainable by floor and Tartarus block.
-- **Clean Typography & Performance**: Clean professional layout with emoji-free formatting, optimized data loaders, and direct desktop Android VM launcher support.
+## v7.2.2: Official Production Release & Comprehensive Hub
+This production release brings high-rigor data verification, complete guide hubs, and performance optimizations across the entire franchise:
+- **Comprehensive Guides Hub**: Complete Jetpack Compose guides architecture across Guides Hub, Day-by-Day Calendar, Boss Prep Guides, and Quest Trackers.
+- **Cheapest Fusion Recipes & Cost Sorting**: Accurate fusion recipe calculator sorted by lowest Yen (¥) summoning costs, ingredient filtering, and full triangle fusion support.
+- **Expanded Rare Skills & Passives**: Complete database indexing and descriptions for rare skills, accessory passives, and Will Seed Ring abilities in Persona 5 and Royal.
+- **Authentic Bestiary & 100% Artwork**: Canonical encounter locations, resistances, and artwork across all 320 Personas and 1,503 shadows.
+- **Android 15 Certified**: Fully compliant with 16 KB native memory page sizes and zero runtime reflection overhead.
 
 ---
 
