@@ -68,6 +68,10 @@
                 <img src="icon.webp" class="app-logo" alt="logo">
                 <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
                 <div class="top-bar-actions">
+                    <button class="velvethex-status-badge disconnected" id="topVhBadge" onclick="openVhModal()" title="VelvetHex Live PC Sync">
+                        <span class="velvethex-dot"></span>
+                        <span id="topVhLabel">PC Sync</span>
+                    </button>
                     <button class="icon-btn" onclick="navigate('settings')" title="Settings">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
                     </button>
@@ -438,7 +442,39 @@
     <button id="backToTop" title="Back to top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
+    <!-- VELVETHEX LIVE PC SYNC MODAL -->
+    <div id="vhModal" class="vh-modal-overlay" style="display:none" onclick="if(event.target===this)closeVhModal()">
+        <div class="vh-modal-box">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+                <div style="font-size:1.05rem;font-weight:700;display:flex;align-items:center;gap:8px">
+                    <span>⚡ VelvetHex Live PC Sync</span>
+                </div>
+                <button class="icon-btn" onclick="closeVhModal()" style="font-size:1.1rem;color:var(--text2)">✕</button>
+            </div>
+            <p style="font-size:0.84rem;color:var(--text2);margin-bottom:14px;line-height:1.4">
+                Connect directly to your local VelvetHex save inspector running on PC to stream active save date, party stats, and unlock real-time 7-day classroom answer alerts.
+            </p>
+            <div style="margin-bottom:12px">
+                <label style="font-size:0.75rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px">
+                    VelvetHex Server URL / IP
+                </label>
+                <input id="vhServerUrl" type="text" class="search-input" style="width:100%;box-sizing:border-box" placeholder="http://192.168.1.9:7770 or http://localhost:7770" value="">
+            </div>
+            <div id="vhModalStatus" style="font-size:0.8rem;margin-bottom:14px;color:var(--text3)">
+                Status: Not connected
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end">
+                <button class="slot-action-btn" id="vhToggleBtn" onclick="toggleVhSync()" style="padding:8px 16px;font-weight:700">
+                    Connect
+                </button>
+                <button class="sort-chip" onclick="closeVhModal()" style="padding:8px 16px">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- LIBS -->
-    <script src="app.js?v=632"></script>
+    <script src="app.js?v=633"></script>
 </body>
 </html>

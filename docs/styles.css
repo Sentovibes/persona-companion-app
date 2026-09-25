@@ -1818,3 +1818,142 @@ body {
     display: flex;
     align-items: center;
 }
+
+/* ── VelvetHex Live Sync & Weekly Outlook Styles ────────────────────────────── */
+.velvethex-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    color: var(--text2);
+    cursor: pointer;
+    transition: all .15s ease;
+}
+.velvethex-status-badge.connected {
+    border-color: #22c55e55;
+    background: #22c55e15;
+    color: #4ade80;
+}
+.velvethex-status-badge.disconnected {
+    border-color: var(--hairline);
+    color: var(--text3);
+}
+.velvethex-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text3);
+}
+.velvethex-status-badge.connected .velvethex-dot {
+    background: #22c55e;
+    box-shadow: 0 0 6px #22c55e;
+}
+
+.weekly-outlook-box {
+    margin: 12px 16px;
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+}
+.weekly-outlook-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.03);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.weekly-outlook-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.weekly-outlook-meta {
+    font-size: 0.75rem;
+    color: var(--text2);
+    font-variant-numeric: tabular-nums;
+}
+.weekly-days-list {
+    display: flex;
+    flex-direction: column;
+}
+.weekly-day-row {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.weekly-day-row:last-child {
+    border-bottom: none;
+}
+.weekly-day-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.weekly-day-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--brass);
+    font-variant-numeric: tabular-nums;
+}
+.weekly-day-rel {
+    font-size: 0.68rem;
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: rgba(255,255,255,.06);
+    color: var(--text2);
+    text-transform: uppercase;
+}
+.weekly-day-q {
+    font-size: 0.84rem;
+    color: var(--text);
+    line-height: 1.35;
+}
+.weekly-day-a {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: 2px;
+}
+.weekly-day-free {
+    font-size: 0.8rem;
+    color: var(--text3);
+    font-style: italic;
+}
+
+/* Modal styles */
+.vh-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.75);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    backdrop-filter: blur(4px);
+}
+.vh-modal-box {
+    background: #0f1115;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: var(--r-lg);
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.8);
+}
+

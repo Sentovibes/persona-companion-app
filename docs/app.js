@@ -136,7 +136,12 @@ const S = {
         skillRouteTarget:null, skillRouteSkill:null, skillRouteSkills:[], skillsList:null,
         personaMap:{}, chart:null, byArcana:{}, specialData:{}, fissionTable:{}
     },
-    settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE' }
+    settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE', vhUrl:'http://localhost:7770', vhAutoSync:false },
+    velvetHex:{
+        connected: false,
+        timer: null,
+        data: null
+    }
 };
 
 /* ── Boot ──────────────────────────────────────────────────────────────────── */
@@ -145,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
     S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
     const saved = localStorage.getItem('settings');
     if (saved) S.settings = {...S.settings, ...JSON.parse(saved)};
+    if (S.settings.vhAutoSync) {
+        startVhSync();
+    }
     // Restore location: URL hash wins, then last visited, else home
     const h = location.hash && location.hash !== '#' ? location.hash : (localStorage.getItem('last_loc') || '');
     if (h && h.replace('#','')) applyHash(h); else buildHome();
@@ -898,7 +906,12 @@ function renderClassroom(data, q, el) {
     let items = all;
     if (q) items = items.filter(qa=>(qa.Question||'').toLowerCase().includes(q)||(qa.Answer||'').toLowerCase().includes(q));
     if (!items.length) { showEmpty('No answers found'); return; }
-    let html = q ? `<div class="result-count">${items.length} of ${all.length} shown</div>` : '';
+
+    let html = '';
+    if (!q) {
+        html += renderWeeklyClassroomOutlook(all, color);
+    }
+    if (q) html += `<div class="result-count">${items.length} of ${all.length} shown</div>`;
     let lastMonth = null;
     items.forEach(qa=>{
         const month = qa.Date ? parseInt(qa.Date.split('/')[0], 10) : null;
@@ -1552,6 +1565,19 @@ function buildSettingsScreen() {
                 <div class="setting-desc">Include Episode Aigis personas (P3R)</div>
             </div>
             <div class="toggle ${S.settings.showEpisodeAigis?'on':''}" id="toggle-showEpisodeAigis"></div>
+        </div>
+    </div>
+    <div class="section-card" style="margin-top:12px">
+        <div class="section-title">VelvetHex Live Save Sync (PC)</div>
+        <div class="setting-row" onclick="openVhModal()">
+            <div class="setting-info">
+                <div class="setting-label">Sync Configuration</div>
+                <div class="setting-desc" id="settingsVhDesc">${S.velvetHex.connected ? 'Connected to ' + S.settings.vhUrl : 'Disconnected. Tap to pair.'}</div>
+            </div>
+            <div class="velvethex-status-badge ${S.velvetHex.connected?'connected':'disconnected'}">
+                <span class="velvethex-dot"></span>
+                <span>${S.velvetHex.connected?'LIVE':'OFF'}</span>
+            </div>
         </div>
     </div>`;
 }
@@ -5057,4 +5083,213 @@ function renderMajorArcana(container, gameData, color) {
 
     container.innerHTML = html;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   VELVETHEX LIVE PC SYNC & 7-DAY CLASSROOM OUTLOOK
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+function openVhModal() {
+    const modal = document.getElementById('vhModal');
+    if (!modal) return;
+    const input = document.getElementById('vhServerUrl');
+    if (input) input.value = S.settings.vhUrl || 'http://localhost:7770';
+    updateVhModalUI();
+    modal.style.display = 'flex';
+}
+
+function closeVhModal() {
+    const modal = document.getElementById('vhModal');
+    if (modal) modal.style.display = 'none';
+}
+
+function updateVhModalUI() {
+    const statusEl = document.getElementById('vhModalStatus');
+    const btn = document.getElementById('vhToggleBtn');
+    const badge = document.getElementById('topVhBadge');
+    const badgeLbl = document.getElementById('topVhLabel');
+    const settingsDesc = document.getElementById('settingsVhDesc');
+
+    if (S.velvetHex.connected && S.velvetHex.data) {
+        const cal = S.velvetHex.data.calendar || {};
+        const hero = S.velvetHex.data.hero || {};
+        const infoStr = `Connected (${hero.name || 'Hero'} · ${cal.formatted || 'Active'} · ${hero.money ? '¥' + hero.money.toLocaleString() : ''})`;
+        if (statusEl) statusEl.innerHTML = `<span style="color:#4ade80">● ${infoStr}</span>`;
+        if (btn) { btn.textContent = 'Disconnect'; btn.style.color = '#ef4444'; }
+        if (badge) { badge.className = 'velvethex-status-badge connected'; }
+        if (badgeLbl) badgeLbl.textContent = cal.formatted || 'Live PC';
+        if (settingsDesc) settingsDesc.textContent = `Connected to ${S.settings.vhUrl}`;
+    } else {
+        if (statusEl) statusEl.innerHTML = `<span style="color:var(--text3)">● Disconnected</span>`;
+        if (btn) { btn.textContent = 'Connect'; btn.style.color = 'var(--text)'; }
+        if (badge) { badge.className = 'velvethex-status-badge disconnected'; }
+        if (badgeLbl) badgeLbl.textContent = 'PC Sync';
+        if (settingsDesc) settingsDesc.textContent = `Disconnected. Tap to pair.`;
+    }
+}
+
+async function toggleVhSync() {
+    if (S.velvetHex.connected) {
+        stopVhSync();
+    } else {
+        const input = document.getElementById('vhServerUrl');
+        if (input && input.value) {
+            S.settings.vhUrl = input.value.trim().replace(/\/+$/, '');
+        }
+        await startVhSync();
+    }
+    updateVhModalUI();
+}
+
+async function startVhSync() {
+    const url = S.settings.vhUrl || 'http://localhost:7770';
+    try {
+        const res = await fetch(`${url}/api/state`, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        S.velvetHex.connected = true;
+        S.velvetHex.data = data;
+        S.settings.vhAutoSync = true;
+        localStorage.setItem('settings', JSON.stringify(S.settings));
+        
+        if (!S.velvetHex.timer) {
+            S.velvetHex.timer = setInterval(pollVhState, 3000);
+        }
+        updateVhModalUI();
+        if (S.screen === 'list' && S.listMode === 'classroom') {
+            buildListScreen();
+        }
+    } catch(err) {
+        S.velvetHex.connected = false;
+        S.velvetHex.data = null;
+        updateVhModalUI();
+        const statusEl = document.getElementById('vhModalStatus');
+        if (statusEl) statusEl.innerHTML = `<span style="color:#ef4444">Connection failed: ${err.message}. Is VelvetHex running on PC?</span>`;
+    }
+}
+
+function stopVhSync() {
+    S.velvetHex.connected = false;
+    S.velvetHex.data = null;
+    S.settings.vhAutoSync = false;
+    localStorage.setItem('settings', JSON.stringify(S.settings));
+    if (S.velvetHex.timer) {
+        clearInterval(S.velvetHex.timer);
+        S.velvetHex.timer = null;
+    }
+    updateVhModalUI();
+    if (S.screen === 'list' && S.listMode === 'classroom') {
+        buildListScreen();
+    }
+}
+
+async function pollVhState() {
+    if (!S.velvetHex.connected) return;
+    try {
+        const res = await fetch(`${S.settings.vhUrl}/api/state`, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Unreachable');
+        const data = await res.json();
+        const oldDate = S.velvetHex.data?.calendar?.formatted;
+        S.velvetHex.data = data;
+        updateVhModalUI();
+        if (oldDate !== data.calendar?.formatted && S.screen === 'list' && S.listMode === 'classroom') {
+            buildListScreen();
+        }
+    } catch(e) {
+        // Soft drop on single frame error without spamming
+    }
+}
+
+/* ── 7-Day Classroom & Exam Weekly Outlook Renderer ────────────────────────── */
+function renderWeeklyClassroomOutlook(allQuestions, color) {
+    let curMonth = null;
+    let curDay = null;
+
+    if (S.velvetHex.connected && S.velvetHex.data?.calendar) {
+        curMonth = S.velvetHex.data.calendar.month;
+        curDay = S.velvetHex.data.calendar.day;
+    } else {
+        // Fallback default: early game (May 10) so user can immediately preview 7-day outlook
+        curMonth = 5;
+        curDay = 10;
+    }
+
+    if (!curMonth || !curDay) return '';
+
+    const DAYS_IN_MONTH = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const targetDates = [];
+    let cm = curMonth;
+    let cd = curDay;
+
+    for (let i = 0; i < 7; i++) {
+        targetDates.push({
+            month: cm,
+            day: cd,
+            key: `${cm}/${cd}`,
+            dayOffset: i
+        });
+        cd++;
+        if (cd > DAYS_IN_MONTH[cm]) {
+            cd = 1;
+            cm = (cm % 12) + 1;
+        }
+    }
+
+    const questionMap = {};
+    allQuestions.forEach(q => {
+        if (!q.Date) return;
+        if (!questionMap[q.Date]) questionMap[q.Date] = [];
+        questionMap[q.Date].push(q);
+    });
+
+    const isLive = S.velvetHex.connected && S.velvetHex.data?.calendar;
+    let daysHtml = '';
+    let totalQuestionsFound = 0;
+
+    targetDates.forEach(td => {
+        const qList = questionMap[td.key] || [];
+        const relLabel = td.dayOffset === 0 ? 'Today' : td.dayOffset === 1 ? 'Tomorrow' : `In ${td.dayOffset} days`;
+        
+        daysHtml += `<div class="weekly-day-row">
+            <div class="weekly-day-head">
+                <span class="weekly-day-date">${td.key}</span>
+                <span class="weekly-day-rel">${relLabel}</span>
+            </div>`;
+
+        if (qList.length > 0) {
+            totalQuestionsFound += qList.length;
+            qList.forEach(qa => {
+                const isExam = (qa.Kind || '').toLowerCase() === 'exam';
+                daysHtml += `
+                    <div style="display:flex;align-items:center;gap:6px;margin-top:2px">
+                        ${isExam ? `<span class="exam-badge">EXAM</span>` : ''}
+                        <div class="weekly-day-q">${qa.Question || 'Classroom question'}</div>
+                    </div>
+                    <div class="weekly-day-a">Answer: ${qa.Answer || '—'}</div>
+                `;
+            });
+        } else {
+            daysHtml += `<div class="weekly-day-free">No classroom question or exam on this date.</div>`;
+        }
+
+        daysHtml += `</div>`;
+    });
+
+    const startDateStr = targetDates[0].key;
+    const endDateStr = targetDates[targetDates.length - 1].key;
+
+    return `
+    <div class="weekly-outlook-box">
+        <div class="weekly-outlook-header">
+            <div class="weekly-outlook-title" style="color:${color}">
+                <span>📅 7-Day Classroom & Exam Outlook</span>
+                ${isLive ? '<span class="velvethex-status-badge connected"><span class="velvethex-dot"></span>LIVE</span>' : '<span style="font-size:0.68rem;opacity:0.6;font-weight:400;text-transform:none">(Preview Mode)</span>'}
+            </div>
+            <div class="weekly-outlook-meta">${startDateStr} – ${endDateStr} (${totalQuestionsFound} scheduled)</div>
+        </div>
+        <div class="weekly-days-list">
+            ${daysHtml}
+        </div>
+    </div>`;
+}
+
 
