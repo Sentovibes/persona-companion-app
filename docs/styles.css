@@ -1955,5 +1955,84 @@ body {
     max-width: 440px;
     padding: 20px;
     box-shadow: 0 16px 40px rgba(0,0,0,.8);
+    box-sizing: border-box;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE & FOLDABLE OPTIMIZATIONS (Honor Magic V2 / Narrow Cover & Foldable Displays)
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 500px) {
+    .top-bar {
+        padding: 0 8px;
+        gap: 4px;
+        height: 52px;
+    }
+    .top-bar-title-home {
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+    }
+    .app-logo {
+        width: 26px;
+        height: 26px;
+        margin-right: 2px;
+    }
+    .velvethex-status-badge {
+        padding: 3px 6px;
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    .weekly-outlook-box {
+        margin: 10px 10px;
+    }
+    .weekly-outlook-header {
+        padding: 8px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .weekly-day-row {
+        padding: 8px 10px;
+    }
+    .weekly-day-q, .weekly-day-a {
+        font-size: 0.8rem;
+    }
+    .home-quick-actions {
+        gap: 6px;
+    }
+    .quick-action-btn {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+        gap: 4px;
+    }
+    .series-card {
+        padding: 16px 14px;
+        min-height: 105px;
+    }
+    .series-card-hero-wrap {
+        width: 120px;
+        right: 4px;
+    }
+    .series-name {
+        font-size: 1.3rem;
+    }
+    .series-desc {
+        font-size: 0.78rem;
+    }
+}
+
+/* Magic V2 unfolded tablet aspect ratio / split-view safeguards */
+@media (min-width: 840px) and (max-width: 1100px) {
+    .pane-list {
+        width: 22rem;
+        min-width: 18rem;
+    }
+    .pane-detail .detail-content {
+        padding: 18px 22px;
+    }
+    .series-list {
+        gap: 12px;
+    }
+}
+
 
