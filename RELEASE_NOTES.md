@@ -1,6 +1,6 @@
 # Release Notes: v7.2.2 (Official Production Release)
 
-## Android Phone & Web Release (versionCode 48)
+## Android Phone & Web Release (versionCode 49)
 - **Initial Public Production Release**: Official production launch for Google Play Store.
 - **Complete Compendium & Fusion Calculator**: Authentic fusion formulas and compendiums for Persona 3 (FES, Portable, Reload), Persona 4 (Original, Golden), and Persona 5 (Vanilla, Royal).
 - **Cheapest Fusion Recipes**: Cost-optimized recipes sorted by Yen (¥) summoning costs with ingredient filtering and triangle fusions.
