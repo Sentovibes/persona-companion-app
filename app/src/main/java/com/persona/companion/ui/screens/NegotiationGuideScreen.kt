@@ -115,6 +115,7 @@ fun NegotiationGuideScreen(
                 // Shadows
                 if (p5.has("shadows")) {
                     val sArray = p5.getJSONArray("shadows")
+                    val matrixObj = if (p5.has("personality_matrix")) p5.getJSONObject("personality_matrix") else null
                     val sList = mutableListOf<ShadowEntry>()
                     for (i in 0 until sArray.length()) {
                         val sObj = sArray.getJSONObject(i)
@@ -126,15 +127,55 @@ fun NegotiationGuideScreen(
                             "Irritable" -> Color(0xFFE57373)
                             else -> accentColor
                         }
+
+                        val pMatrixEntry = matrixObj?.optJSONObject(pType)
+                        val defaultBest = when (pType) {
+                            "Upbeat" -> "Funny / Joke"
+                            "Timid" -> "Kind / Gentle"
+                            "Gloomy" -> "Vague / Ambiguous"
+                            "Irritable" -> "Serious / Direct"
+                            else -> "Serious"
+                        }
+                        val defaultOk = when (pType) {
+                            "Upbeat" -> "Serious"
+                            "Timid" -> "Vague / Ambiguous"
+                            "Gloomy" -> "Serious"
+                            "Irritable" -> "Vague / Ambiguous"
+                            else -> "Vague"
+                        }
+                        val defaultBad = when (pType) {
+                            "Upbeat" -> "Vague / Ambiguous"
+                            "Timid" -> "Funny / Joke"
+                            "Gloomy" -> "Kind / Gentle"
+                            "Irritable" -> "Kind / Gentle"
+                            else -> "Kind"
+                        }
+
+                        val best = sObj.optString("best").ifBlank {
+                            pMatrixEntry?.optString("best_type")?.ifBlank { null }
+                                ?: pMatrixEntry?.optString("likes")?.ifBlank { null }
+                                ?: defaultBest
+                        }
+                        val ok = sObj.optString("ok").ifBlank {
+                            pMatrixEntry?.optString("ok_type")?.ifBlank { null }
+                                ?: pMatrixEntry?.optString("neutral")?.ifBlank { null }
+                                ?: defaultOk
+                        }
+                        val bad = sObj.optString("bad").ifBlank {
+                            pMatrixEntry?.optString("bad_type")?.ifBlank { null }
+                                ?: pMatrixEntry?.optString("hates")?.ifBlank { null }
+                                ?: defaultBad
+                        }
+
                         sList.add(
                             ShadowEntry(
                                 name = sObj.optString("name"),
                                 personaName = sObj.optString("persona_name"),
                                 arcana = sObj.optString("arcana"),
                                 personality = pType,
-                                best = sObj.optString("best"),
-                                ok = sObj.optString("ok"),
-                                bad = sObj.optString("bad"),
+                                best = best,
+                                ok = ok,
+                                bad = bad,
                                 color = pColor
                             )
                         )
@@ -440,6 +481,8 @@ fun NegotiationGuideScreen(
                                 Text("Best [Likes]: ${shadow.best}", color = Color(0xFF81C784), fontSize = 11.sp, fontWeight = FontWeight.SemiBold)
                                 Text("Neutral [OK]: ${shadow.ok}", color = Color(0xFFFFB74D), fontSize = 11.sp)
                             }
+                            Spacer(modifier = Modifier.height(3.dp))
+                            Text("Worst [Hates]: ${shadow.bad}", color = Color(0xFFE57373), fontSize = 11.sp)
                         }
                     }
                 }

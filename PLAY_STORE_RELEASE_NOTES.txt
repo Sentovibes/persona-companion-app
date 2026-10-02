@@ -6,7 +6,7 @@ Copy-paste the exact block below (including the <en-US> tags) into the
 Google Play Console "Release notes" editor for each release track.
 
 --------------------------------------------------------------------------------
-PHONE TRACK (versionCode 51: Android Phone / Tablet)
+PHONE TRACK (versionCode 53: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
 • Persona 3 Reload Tartarus update: revised Sword skill cards across all ranks (1-10, J, Q, K) with verified drop rates, types, and stats.
@@ -16,7 +16,7 @@ PHONE TRACK (versionCode 51: Android Phone / Tablet)
 </en-US>
 
 --------------------------------------------------------------------------------
-WEAR OS WATCH TRACK (versionCode 52: Wear OS Smartwatch)
+WEAR OS WATCH TRACK (versionCode 54: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
 • Persona 3 Reload database sync and speed optimizations.

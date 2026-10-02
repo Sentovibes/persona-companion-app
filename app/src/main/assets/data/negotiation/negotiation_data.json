@@ -97,7 +97,10 @@
         "hp": 174,
         "weakness": "-waxs---sw",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Crypt-Dwelling Pyromaniac",
@@ -107,7 +110,10 @@
         "hp": 100,
         "weakness": "--dxaw----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Apprentice in a Jug",
@@ -117,7 +123,10 @@
         "hp": 150,
         "weakness": "-saasw----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Gallows Flower",
@@ -127,7 +136,10 @@
         "hp": 163,
         "weakness": "--xas-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Dirty Two-Horned Beast",
@@ -137,7 +149,10 @@
         "hp": 132,
         "weakness": "--aax----s",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Bedside Brute",
@@ -147,7 +162,10 @@
         "hp": 115,
         "weakness": "--xas---w-",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Hunting Puss in Boots",
@@ -157,7 +175,10 @@
         "hp": 130,
         "weakness": "--aasw----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Mad Marsh Horse",
@@ -167,7 +188,10 @@
         "hp": 128,
         "weakness": "--asx-----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Troublesome Housemaid",
@@ -177,7 +201,10 @@
         "hp": 142,
         "weakness": "--xsx-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Twilight Prostitute",
@@ -187,7 +214,10 @@
         "hp": 148,
         "weakness": "--saaw--xN",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Piggyback Demon",
@@ -197,7 +227,10 @@
         "hp": 206,
         "weakness": "s-aax-----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Brutal Cavalryman",
@@ -207,7 +240,10 @@
         "hp": 474,
         "weakness": "-nsxa-----",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Girl of the Hanging Tree",
@@ -217,7 +253,10 @@
         "hp": 169,
         "weakness": "-wrxa-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Leafy Old Man",
@@ -227,7 +266,10 @@
         "hp": 188,
         "weakness": "--xsas----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Night-Walking Warrior",
@@ -237,7 +279,10 @@
         "hp": 230,
         "weakness": "--aasw----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Zealous Messenger",
@@ -247,7 +292,10 @@
         "hp": 152,
         "weakness": "-waas---Nw",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Regent D",
@@ -257,7 +305,10 @@
         "hp": 720,
         "weakness": "ssAAA--w--",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Viscid Rotting Meat",
@@ -267,7 +318,10 @@
         "hp": 121,
         "weakness": "ssxaaw----",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Foolish Monk",
@@ -277,7 +331,10 @@
         "hp": 168,
         "weakness": "--axas--w-",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Mocking Snowman",
@@ -287,7 +344,10 @@
         "hp": 214,
         "weakness": "--xNa-----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Waterside Nymph",
@@ -297,7 +357,10 @@
         "hp": 145,
         "weakness": "--xsx-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Wavering Tree Spirit",
@@ -307,7 +370,10 @@
         "hp": 194,
         "weakness": "--xsa-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Corpse Bird",
@@ -317,7 +383,10 @@
         "hp": 206,
         "weakness": "--sxa---wN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Captivating Dancer",
@@ -327,7 +396,10 @@
         "hp": 238,
         "weakness": "--daa-w---",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Embittered Blacksmith",
@@ -337,7 +409,10 @@
         "hp": 365,
         "weakness": "-ssxar--ss",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Heavenly Punisher",
@@ -347,7 +422,10 @@
         "hp": 190,
         "weakness": "--aax---Nw",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Possessing Dog Ghost",
@@ -357,7 +435,10 @@
         "hp": 223,
         "weakness": "-nNaaw---N",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Hunting Wolf Spirit",
@@ -367,7 +448,10 @@
         "hp": 305,
         "weakness": "-naaxs-sN-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Queen's Necklace D",
@@ -377,7 +461,10 @@
         "hp": 970,
         "weakness": "ssAAA-w---",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Rooftop Lion",
@@ -387,7 +474,10 @@
         "hp": 212,
         "weakness": "s-aaa-w-Nz",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Nakanohara",
@@ -397,7 +487,10 @@
         "hp": 650,
         "weakness": "----w-----",
         "area": "Qimranut 1",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Prankster Leader",
@@ -407,7 +500,10 @@
         "hp": 232,
         "weakness": "-waass-w--",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "War-Hungry Horseman",
@@ -417,7 +513,10 @@
         "hp": 285,
         "weakness": "--sax---AS",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Takanashi",
@@ -427,7 +526,10 @@
         "hp": 650,
         "weakness": "----------",
         "area": "Aiyatsbus 2",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Ascended Feline",
@@ -437,7 +539,10 @@
         "hp": 258,
         "weakness": "--aax-s---",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Equine Sage",
@@ -447,7 +552,10 @@
         "hp": 262,
         "weakness": "--axas---s",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Noisy Mountain Spirit",
@@ -457,7 +565,10 @@
         "hp": 159,
         "weakness": "--axar-w--",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Bringer of Misfortune",
@@ -467,7 +578,10 @@
         "hp": 617,
         "weakness": "nnAaa--wNN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Pulsing Mud",
@@ -477,7 +591,10 @@
         "hp": 270,
         "weakness": "ssasx-w-xN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Jealous Lover",
@@ -487,7 +604,10 @@
         "hp": 265,
         "weakness": "--xaass---",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Chivalrous Fiend",
@@ -497,7 +617,10 @@
         "hp": 421,
         "weakness": "ssaaa-----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Human-Eating Lady",
@@ -507,7 +630,10 @@
         "hp": 262,
         "weakness": "-nasa--w--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Night Chimera",
@@ -517,7 +643,10 @@
         "hp": 312,
         "weakness": "--xsa----N",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Stone of Scone D",
@@ -527,7 +656,10 @@
         "hp": 1250,
         "weakness": "ssWAA-----",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Twin-Headed Guardian",
@@ -537,7 +669,10 @@
         "hp": 365,
         "weakness": "--dxa--s--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Sakoda",
@@ -547,7 +682,10 @@
         "hp": 600,
         "weakness": "--sn----ws",
         "area": "Aiyatsbus 5",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Makigami",
@@ -557,7 +695,10 @@
         "hp": 600,
         "weakness": "---------w",
         "area": "Aiyatsbus 6",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Shimizu",
@@ -567,7 +708,10 @@
         "hp": 800,
         "weakness": "ssw-----wn",
         "area": "Aiyatsbus 7",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Envoy of Slumber",
@@ -577,7 +721,10 @@
         "hp": 373,
         "weakness": "--xaxs--aa",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Tornado Devil",
@@ -587,7 +734,10 @@
         "hp": 307,
         "weakness": "-saaxd----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Odo",
@@ -597,7 +747,10 @@
         "hp": 750,
         "weakness": "ss------ns",
         "area": "Chemdah 1",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Oyamada",
@@ -607,7 +760,10 @@
         "hp": 800,
         "weakness": "--sdssssnn",
         "area": "Chemdah 2",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Battle Fiend",
@@ -617,7 +773,10 @@
         "hp": 289,
         "weakness": "snsaaw--ws",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Cavern Snakeman",
@@ -627,7 +786,10 @@
         "hp": 321,
         "weakness": "-saanw--aa",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Raging Water Demon",
@@ -637,7 +799,10 @@
         "hp": 312,
         "weakness": "-sads--w--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Koh-i-Noor D",
@@ -647,7 +812,10 @@
         "hp": 1530,
         "weakness": "swAAA-----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Samurai Killer",
@@ -657,7 +825,10 @@
         "hp": 392,
         "weakness": "sraaa-----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Thief of Tablets",
@@ -667,7 +838,10 @@
         "hp": 281,
         "weakness": "-waasr-waa",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Defeated Avenger",
@@ -677,7 +851,10 @@
         "hp": 760,
         "weakness": "--aar-w-As",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "She of Life and Death",
@@ -687,7 +864,10 @@
         "hp": 464,
         "weakness": "--aaa-w-N-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Slithering Snakewoman",
@@ -697,7 +877,10 @@
         "hp": 291,
         "weakness": "--axs--waN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Menacing Owlman",
@@ -707,7 +890,10 @@
         "hp": 354,
         "weakness": "--xsa-s-zN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Corpse-Eating Corpse",
@@ -717,7 +903,10 @@
         "hp": 315,
         "weakness": "--xas---wN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Gathering Devil",
@@ -727,7 +916,10 @@
         "hp": 240,
         "weakness": "s-Daa---w-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Orlov D",
@@ -737,7 +929,10 @@
         "hp": 1650,
         "weakness": "ssAAA----w",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Honjo",
@@ -747,7 +942,10 @@
         "hp": 1400,
         "weakness": "----dwnn-n",
         "area": "Kaitul 9",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Takase F",
@@ -757,7 +955,10 @@
         "hp": 600,
         "weakness": "--w-------",
         "area": "Chemdah 7",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Monk of the Valley",
@@ -767,7 +968,10 @@
         "hp": 560,
         "weakness": "--anar--ss",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Takase M",
@@ -777,7 +981,10 @@
         "hp": 800,
         "weakness": "------ws--",
         "area": "Chemdah 7",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Vicious Pentagram",
@@ -787,7 +994,10 @@
         "hp": 249,
         "weakness": "w-raa--s-s",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Woman Who Brings Ruin",
@@ -797,7 +1007,10 @@
         "hp": 365,
         "weakness": "--asaw--wN",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Naguri",
@@ -807,7 +1020,10 @@
         "hp": 6000,
         "weakness": "----------",
         "area": "Kaitul 5",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Vampire Moth",
@@ -817,7 +1033,10 @@
         "hp": 354,
         "weakness": "-waan-s---",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Bearer of the Scales",
@@ -827,7 +1046,10 @@
         "hp": 1621,
         "weakness": "-saaa-s-NN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Storm-Invoking Ptarmigan",
@@ -837,7 +1059,10 @@
         "hp": 370,
         "weakness": "--aad-w--w",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Uchimura",
@@ -847,7 +1072,10 @@
         "hp": 550,
         "weakness": "ss---dw--s",
         "area": "Chemdah 3",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Awakened God",
@@ -857,7 +1085,10 @@
         "hp": 420,
         "weakness": "rraaa-wwss",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Emperor's Amulet D",
@@ -867,7 +1098,10 @@
         "hp": 1990,
         "weakness": "ssAAW-----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Mogami",
@@ -877,7 +1111,10 @@
         "hp": 1300,
         "weakness": "----------",
         "area": "Chemdah 8",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Tsuboi",
@@ -887,7 +1124,10 @@
         "hp": 2000,
         "weakness": "--w-----wr",
         "area": "Kaitul 1",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Chanting Baboon",
@@ -897,7 +1137,10 @@
         "hp": 321,
         "weakness": "--aaa-wnNs",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Wishless Star",
@@ -907,7 +1150,10 @@
         "hp": 380,
         "weakness": "-naaa-nw--",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Ambassador of Filth",
@@ -917,7 +1163,10 @@
         "hp": 548,
         "weakness": "--xss--saR",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Fused Ghost",
@@ -927,7 +1176,10 @@
         "hp": 367,
         "weakness": "s-saa-s-xN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Dark Sun",
@@ -937,7 +1189,10 @@
         "hp": 455,
         "weakness": "ssdaa-wr--",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Expressionless Beast",
@@ -947,7 +1202,10 @@
         "hp": 495,
         "weakness": "--ana-s-Nw",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Akitsu",
@@ -957,7 +1215,10 @@
         "hp": 2550,
         "weakness": "----ws----",
         "area": "Akzeriyyuth 3",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Kishi",
@@ -967,7 +1228,10 @@
         "hp": 1000,
         "weakness": "--------w-",
         "area": "Kaitul 8",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Hope Diamond D",
@@ -977,7 +1241,10 @@
         "hp": 2300,
         "weakness": "ssAWA-----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Mountain Girl",
@@ -987,7 +1254,10 @@
         "hp": 445,
         "weakness": "--xaan--s-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Shadow Jochi",
@@ -997,7 +1267,10 @@
         "hp": 1800,
         "weakness": "--s-w----n",
         "area": "Kaitul 10",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Tsuda",
@@ -1007,7 +1280,10 @@
         "hp": 600,
         "weakness": "---d----sn",
         "area": "Kaitul 4",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Divine Warrior",
@@ -1017,7 +1293,10 @@
         "hp": 307,
         "weakness": "--aaas--Nw",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Cruel Leopard",
@@ -1027,7 +1306,10 @@
         "hp": 393,
         "weakness": "-ssaa---wN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Lamenting Sacrifice",
@@ -1037,7 +1319,10 @@
         "hp": 374,
         "weakness": "--axa--wR-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Life-Draining Spirit",
@@ -1047,7 +1332,10 @@
         "hp": 418,
         "weakness": "--naa-w--s",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Midnight Queen",
@@ -1057,7 +1345,10 @@
         "hp": 392,
         "weakness": "--nasw----",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Rebellious Elephant",
@@ -1067,7 +1358,10 @@
         "hp": 1623,
         "weakness": "rrsaa---wN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Funerary Warrior",
@@ -1077,7 +1371,10 @@
         "hp": 524,
         "weakness": "-sxra---N-",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Nejima",
@@ -1087,7 +1384,10 @@
         "hp": 1800,
         "weakness": "--w--s---s",
         "area": "Akzeriyyuth 5",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Fukurai",
@@ -1097,7 +1397,10 @@
         "hp": 1500,
         "weakness": "--sw----ws",
         "area": "Kaitul 3",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Magario F",
@@ -1107,7 +1410,10 @@
         "hp": 900,
         "weakness": "--dw-----n",
         "area": "Adyeshach 3",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Dancing Witch",
@@ -1117,7 +1423,10 @@
         "hp": 422,
         "weakness": "rrnax---wN",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Self-Infatuated Star",
@@ -1127,7 +1436,10 @@
         "hp": 465,
         "weakness": "--xans--s-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Shadow Magario M",
@@ -1137,7 +1449,10 @@
         "hp": 1100,
         "weakness": "--w-------",
         "area": "Adyeshach 3",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Togo",
@@ -1147,7 +1462,10 @@
         "hp": 1700,
         "weakness": "--sssssswn",
         "area": "Akzeriyyuth 6",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Bloodthirsty Demoness",
@@ -1157,7 +1475,10 @@
         "hp": 442,
         "weakness": "-nsaa-----",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Crystal Skull D",
@@ -1167,7 +1488,10 @@
         "hp": 2450,
         "weakness": "ssAAAw----",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Strumming Veena Player",
@@ -1177,7 +1501,10 @@
         "hp": 445,
         "weakness": "--ans--w--",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Shadow Isshiki",
@@ -1187,7 +1514,10 @@
         "hp": 3000,
         "weakness": "----------",
         "area": "Adyeshach 0",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Kiritani",
@@ -1197,7 +1527,10 @@
         "hp": 3000,
         "weakness": "----------",
         "area": "Akzeriyyuth 12",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Arrogant Vulture",
@@ -1207,7 +1540,10 @@
         "hp": 629,
         "weakness": "--asar-ws-",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Dancing Lion",
@@ -1217,7 +1553,10 @@
         "hp": 625,
         "weakness": "-saasw--Nw",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Final Assessor",
@@ -1227,7 +1566,10 @@
         "hp": 738,
         "weakness": "--aard--s-",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Raging Bird God",
@@ -1237,7 +1579,10 @@
         "hp": 504,
         "weakness": "--aaas--R-",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Auspicious Pachyderm",
@@ -1247,7 +1592,10 @@
         "hp": 836,
         "weakness": "ssaaadw---",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Quaking Lady of Shadow",
@@ -1257,7 +1605,10 @@
         "hp": 1290,
         "weakness": "--ara----N",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Guard Dog of Hades",
@@ -1267,7 +1618,10 @@
         "hp": 736,
         "weakness": "--dxa--s--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Destructive Beauty",
@@ -1277,7 +1631,10 @@
         "hp": 432,
         "weakness": "--ara-s-sw",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Scandalous Queen",
@@ -1287,7 +1644,10 @@
         "hp": 740,
         "weakness": "--aaa-wsss",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Heretic Goat",
@@ -1297,7 +1657,10 @@
         "hp": 666,
         "weakness": "--saa---wN",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Pagan Savior",
@@ -1307,7 +1670,10 @@
         "hp": 718,
         "weakness": "--aaaws-DN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Harlot of Desire",
@@ -1317,7 +1683,10 @@
         "hp": 650,
         "weakness": "--xra--r-N",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Orichalcum D",
@@ -1327,7 +1696,10 @@
         "hp": 2620,
         "weakness": "ssAAA---w-",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Sacrificial Pyrekeeper",
@@ -1337,7 +1709,10 @@
         "hp": 751,
         "weakness": "--dxssd--N",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Torn King of Desire",
@@ -1347,7 +1722,10 @@
         "hp": 530,
         "weakness": "--sww-ws-s",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Shadow Wakasa",
@@ -1357,7 +1735,10 @@
         "hp": 1700,
         "weakness": "---------d",
         "area": "Adyeshach 13",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Monarch of Snow",
@@ -1367,7 +1748,10 @@
         "hp": 893,
         "weakness": "--ada---n-",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "The Black Avenger",
@@ -1377,7 +1761,10 @@
         "hp": 750,
         "weakness": "-sxdn---wD",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Oda",
@@ -1387,7 +1774,10 @@
         "hp": 3500,
         "weakness": "--ws----ss",
         "area": "Adyeshach 11",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Rhetorician of the Sea",
@@ -1397,7 +1787,10 @@
         "hp": 670,
         "weakness": "--adx-n---",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "The Blackened Fury",
@@ -1407,7 +1800,10 @@
         "hp": 1773,
         "weakness": "-rnaa-r--s",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Drunken Serpents",
@@ -1417,7 +1813,10 @@
         "hp": 1193,
         "weakness": "s-adas---s",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Nimble Monkey King",
@@ -1427,7 +1826,10 @@
         "hp": 332,
         "weakness": "-saxa-s-s-",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Thunder Emperor",
@@ -1437,7 +1839,10 @@
         "hp": 1033,
         "weakness": "s-aan---ss",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Infuriated Wisdom King",
@@ -1447,7 +1852,10 @@
         "hp": 760,
         "weakness": "snraa----s",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Killer Teddy Bear",
@@ -1457,7 +1865,10 @@
         "hp": 404,
         "weakness": "--w----w--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Unfaithful Dream-King",
@@ -1467,7 +1878,10 @@
         "hp": 894,
         "weakness": "--aas-nw--",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Merciless Inquisitor",
@@ -1477,7 +1891,10 @@
         "hp": 600,
         "weakness": "--aaw--rNw",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Dream-Dwelling Skull",
@@ -1487,7 +1904,10 @@
         "hp": 404,
         "weakness": "--san-wsw-",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Evil Synthetic Organism",
@@ -1497,7 +1917,10 @@
         "hp": 558,
         "weakness": "--nxan-w-N",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Hedonistic Braggart",
@@ -1507,7 +1930,10 @@
         "hp": 708,
         "weakness": "--aar---nn",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Coffin-Borne God",
@@ -1517,7 +1943,10 @@
         "hp": 1100,
         "weakness": "-saadw---R",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Fire Assassin",
@@ -1527,7 +1956,10 @@
         "hp": 757,
         "weakness": "--Naan-wr-",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Dancer of Death",
@@ -1537,7 +1969,10 @@
         "hp": 593,
         "weakness": "--aas---wN",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Throbbing King of Desire",
@@ -1547,7 +1982,10 @@
         "hp": 1840,
         "weakness": "-ndaa-r-sn",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Deformed Lion God",
@@ -1557,7 +1995,10 @@
         "hp": 727,
         "weakness": "--dnaw---w",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Wandering Reviver",
@@ -1567,7 +2008,10 @@
         "hp": 532,
         "weakness": "s-aaa-n-ws",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Abyssal King of Avarice",
@@ -1577,7 +2021,10 @@
         "hp": 7000,
         "weakness": "ddaaa---sD",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Spear-Wielding General",
@@ -1587,7 +2034,10 @@
         "hp": 1021,
         "weakness": "ssaaxr--N-",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "The Shadowed One",
@@ -1597,7 +2047,10 @@
         "hp": 1346,
         "weakness": "--anr----n",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Decadent False God",
@@ -1607,7 +2060,10 @@
         "hp": 1700,
         "weakness": "rrxda-n--w",
         "area": "Unknown",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Missionary of Depravity",
@@ -1617,7 +2073,10 @@
         "hp": 1200,
         "weakness": "n-asa---AN",
         "area": "Unknown",
-        "personality": "Gloomy"
+        "personality": "Gloomy",
+        "best": "Vague / Ambiguous",
+        "ok": "Serious",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Reviled Dictator",
@@ -1627,7 +2086,10 @@
         "hp": 1026,
         "weakness": "s-saad--s-",
         "area": "Unknown",
-        "personality": "Upbeat"
+        "personality": "Upbeat",
+        "best": "Funny / Joke",
+        "ok": "Serious",
+        "bad": "Vague / Ambiguous"
       },
       {
         "name": "Warped Abyss",
@@ -1637,7 +2099,10 @@
         "hp": 1294,
         "weakness": "--saadn-AN",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Evil Voracious Dragon",
@@ -1647,7 +2112,10 @@
         "hp": 2006,
         "weakness": "rrdas--dAA",
         "area": "Unknown",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Shadow Asakura",
@@ -1657,7 +2125,10 @@
         "hp": 3500,
         "weakness": "--d----w-s",
         "area": "Sheriruth II 14",
-        "personality": "Timid"
+        "personality": "Timid",
+        "best": "Kind / Gentle",
+        "ok": "Vague / Ambiguous",
+        "bad": "Funny / Joke"
       },
       {
         "name": "Justine & Caroline",
@@ -1667,7 +2138,10 @@
         "hp": 0,
         "weakness": "----------",
         "area": "Boss",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       },
       {
         "name": "Lavenza",
@@ -1677,7 +2151,10 @@
         "hp": 10000,
         "weakness": "--------nn",
         "area": "Boss",
-        "personality": "Irritable"
+        "personality": "Irritable",
+        "best": "Serious / Direct",
+        "ok": "Vague / Ambiguous",
+        "bad": "Kind / Gentle"
       }
     ]
   },
