@@ -5,6 +5,7 @@
 # Persona Companion App v7.2.2
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
+[![Google Play](https://img.shields.io/badge/Google_Play-Persona_Companion-green?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.persona.companion)
 [![Version](https://img.shields.io/badge/Version-7.2.2-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
@@ -70,7 +71,14 @@ This production release brings high-rigor data verification, complete guide hubs
 
 ## Installation
 
-### Android APK
+### Google Play Store (Official)
+The app is now officially available on the Google Play Store:
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.persona.companion)
+
+Or open the store page directly: **[Persona Companion on Google Play](https://play.google.com/store/apps/details?id=com.persona.companion)**
+
+### Android APK (Direct Download)
 1. Download the latest release from the GitHub Releases tab.
 2. Install the APK on an Android device (Android 8.0+ required).
 3. Optional: Enable HD Image Support via the Settings menu.
@@ -89,7 +97,7 @@ If hosted on GitHub Pages, you can access the live web version immediately witho
 1. Clone the repository or download the source code.
 2. Navigate to the `web/` directory.
 3. Serve the directory using a simple local server (e.g., `npx http-server` or VS Code Live Server).
-4. No heavy backend required—it's a fast, local-first Single Page Application!
+4. No heavy backend required: it is a fast, local-first Single Page Application!
 
 ---
 
