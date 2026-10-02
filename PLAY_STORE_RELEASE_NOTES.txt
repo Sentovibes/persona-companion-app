@@ -9,21 +9,21 @@ Google Play Console "Release notes" editor for each release track.
 PHONE TRACK (versionCode 51: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
-• Persona 3 Reload Tartarus Database Update: Completely revised Minor Arcana Sword card skill drops across all ranks (1 to 10, J, Q, K) with verified elemental types, power descriptions, and drop percentages.
-• Tartarus Shuffle Time Persona Catalog: Fully aligned Persona cards with authentic Tartarus Block drops and event encounters, adding exact floor ranges and Theurgy unlocking requirements.
-• Enhanced Search & Navigation: Quickly filter Shuffle Time cards by skill element, drop rate, and tactical boss prerequisites.
-• General stability and performance improvements.
+• Persona 3 Reload Tartarus update: revised Sword skill cards across all ranks (1-10, J, Q, K) with verified drop rates, types, and stats.
+• Aligned Shuffle Time Persona drops with authentic Tartarus Block floor ranges and Theurgy prerequisites.
+• Quick filter for cards by element, drop chance, and skill effect.
+• Performance and stability improvements.
 </en-US>
 
 --------------------------------------------------------------------------------
 WEAR OS WATCH TRACK (versionCode 52: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
-• Persona 3 Reload database synchronization and performance optimizations.
+• Persona 3 Reload database sync and speed optimizations.
 • Instant wrist lookup for Persona 3, Persona 4, and Persona 5.
-• Quick-access Classroom and Exam answers with date navigation.
-• Enemy weakness calculator with Normal, Mini-Boss, and Boss categories.
-• Confidant and Social Link optimal dialogue choice lookup.
-• Pure black high-contrast OLED interface optimized for digital crown scrolling.
+• Classroom and exam answer calendar.
+• Enemy weakness calculator across all difficulty tiers.
+• Confidant and Social Link optimal dialogue choices.
+• High-contrast OLED interface.
 </en-US>
 ================================================================================
