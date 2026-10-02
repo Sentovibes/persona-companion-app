@@ -1,27 +1,25 @@
 ================================================================================
-GOOGLE PLAY STORE RELEASE NOTES: v7.2.2 (<en-US>)
+GOOGLE PLAY STORE RELEASE NOTES: v7.2.3 (<en-US>)
 ================================================================================
 
 Copy-paste the exact block below (including the <en-US> tags) into the
 Google Play Console "Release notes" editor for each release track.
 
 --------------------------------------------------------------------------------
-PHONE TRACK (versionCode 49: Android Phone / Tablet)
+PHONE TRACK (versionCode 51: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
-• Initial Public Production Release of Persona Companion.
-• Complete Compendium & Fusion Calculator: Full database for Persona 3 (FES, Portable, Reload), Persona 4 (Original, Golden), and Persona 5 (Vanilla, Royal).
-• Cost-Optimized Fusions: Accurate recipe calculator with Yen (¥) summoning costs, ingredient filtering, and triangle fusions.
-• Classroom & Exam Answers: Instant lookup for all school questions and exam dates across every title.
-• Confidant & Social Link Guides: Optimal dialogue choices, point thresholds, and gift recommendations.
-• Story Bosses & Shadow Weaknesses: Resistance tables, battle strategies, and verified Palace encounter locations.
+• Persona 3 Reload Tartarus Database Update: Completely revised Minor Arcana Sword card skill drops across all ranks (1 to 10, J, Q, K) with verified elemental types, power descriptions, and drop percentages.
+• Tartarus Shuffle Time Persona Catalog: Fully aligned Persona cards with authentic Tartarus Block drops and event encounters, adding exact floor ranges and Theurgy unlocking requirements.
+• Enhanced Search & Navigation: Quickly filter Shuffle Time cards by skill element, drop rate, and tactical boss prerequisites.
+• General stability and performance improvements.
 </en-US>
 
 --------------------------------------------------------------------------------
-WEAR OS WATCH TRACK (versionCode 50: Wear OS Smartwatch)
+WEAR OS WATCH TRACK (versionCode 52: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
-• Initial Public Production Release of Persona Companion for Wear OS.
+• Persona 3 Reload database synchronization and performance optimizations.
 • Instant wrist lookup for Persona 3, Persona 4, and Persona 5.
 • Quick-access Classroom and Exam answers with date navigation.
 • Enemy weakness calculator with Normal, Mini-Boss, and Boss categories.
