@@ -108,3 +108,4 @@ incoming_images/*
 # Certificates and scratch directories
 *.pem
 .freebuff/
+scratch/

@@ -69,7 +69,9 @@ data class FloorPersona(
     val name: String,
     val arcana: String,
     val level: Int,
-    val floor: String
+    val floor: String,
+    val chance: String = "",
+    val note: String = ""
 )
 
 data class DungeonGroup(
@@ -226,7 +228,9 @@ fun NegotiationGuideScreen(
                                             name = pObj.optString("name"),
                                             arcana = pObj.optString("arcana"),
                                             level = pObj.optInt("level"),
-                                            floor = pObj.optString("floor")
+                                            floor = pObj.optString("floor"),
+                                            chance = pObj.optString("chance", ""),
+                                            note = pObj.optString("note", "")
                                         )
                                     )
                                 }
@@ -543,8 +547,14 @@ fun NegotiationGuideScreen(
                                         ),
                                     color = if (isSelected) accentColor else SurfaceCard
                                 ) {
+                                    val rankText = when (r.rank) {
+                                        11 -> "Rank J"
+                                        12 -> "Rank Q"
+                                        13 -> "Rank K"
+                                        else -> "Rank ${r.rank}"
+                                    }
                                     Text(
-                                        text = "Rank ${r.rank}",
+                                        text = rankText,
                                         color = if (isSelected) Color.White else TextPrimary,
                                         fontSize = 13.sp,
                                         fontWeight = FontWeight.Bold,
@@ -575,14 +585,21 @@ fun NegotiationGuideScreen(
                                             currentRankDetail.levelLabel,
                                             color = accentColor,
                                             fontSize = 15.sp,
-                                            fontWeight = FontWeight.Bold
+                                            fontWeight = FontWeight.Bold,
+                                            modifier = Modifier.weight(1f).padding(end = 8.dp)
                                         )
+                                        val rankBadge = when (currentRankDetail.rank) {
+                                            11 -> "Rank J"
+                                            12 -> "Rank Q"
+                                            13 -> "Rank K"
+                                            else -> "Rank ${currentRankDetail.rank}"
+                                        }
                                         Surface(
                                             color = accentColor.copy(alpha = 0.15f),
                                             shape = RoundedCornerShape(6.dp)
                                         ) {
                                             Text(
-                                                "Rank ${currentRankDetail.rank}",
+                                                rankBadge,
                                                 color = accentColor,
                                                 fontSize = 12.sp,
                                                 fontWeight = FontWeight.Bold,
@@ -698,7 +715,8 @@ fun NegotiationGuideScreen(
                         else currentDungeon.personas.filter {
                             it.name.lowercase().contains(searchQuery.lowercase()) ||
                             it.arcana.lowercase().contains(searchQuery.lowercase()) ||
-                            it.floor.lowercase().contains(searchQuery.lowercase())
+                            it.floor.lowercase().contains(searchQuery.lowercase()) ||
+                            it.note.lowercase().contains(searchQuery.lowercase())
                         }
 
                         items(filteredPersonas) { p ->
@@ -709,28 +727,58 @@ fun NegotiationGuideScreen(
                                     .fillMaxWidth()
                                     .border(1.dp, Hairline, RoundedCornerShape(8.dp))
                             ) {
-                                Row(
+                                Column(
                                     modifier = Modifier
                                         .fillMaxWidth()
-                                        .padding(12.dp),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
+                                        .padding(12.dp)
                                 ) {
-                                    Column {
-                                        Text(p.name, color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.Bold)
-                                        Text("${p.arcana} Arcana  •  Floors: ${p.floor}", color = TextSecondary, fontSize = 12.sp)
-                                    }
-                                    Surface(
-                                        color = accentColor.copy(alpha = 0.15f),
-                                        shape = RoundedCornerShape(4.dp)
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
                                     ) {
-                                        Text(
-                                            "Lv ${p.level}",
-                                            color = accentColor,
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                        )
+                                        Text(p.name, color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                                        Surface(
+                                            color = accentColor.copy(alpha = 0.15f),
+                                            shape = RoundedCornerShape(4.dp)
+                                        ) {
+                                            Text(
+                                                "Lv ${p.level}",
+                                                color = accentColor,
+                                                fontSize = 12.sp,
+                                                fontWeight = FontWeight.Bold,
+                                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                            )
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text("${p.arcana} Arcana", color = TextSecondary, fontSize = 12.sp)
+                                        if (p.chance.isNotBlank()) {
+                                            Text("Drop: ${p.chance}", color = Color(0xFF81C784), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                        }
+                                    }
+                                    if (p.floor.isNotBlank()) {
+                                        Spacer(modifier = Modifier.height(3.dp))
+                                        Text("Floors / Conditions: ${p.floor}", color = TextSecondary.copy(alpha = 0.85f), fontSize = 11.sp)
+                                    }
+                                    if (p.note.isNotBlank()) {
+                                        Spacer(modifier = Modifier.height(6.dp))
+                                        Surface(
+                                            color = Color(0xFFFFD700).copy(alpha = 0.12f),
+                                            shape = RoundedCornerShape(4.dp)
+                                        ) {
+                                            Text(
+                                                p.note,
+                                                color = Color(0xFFFFD700),
+                                                fontSize = 11.sp,
+                                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 3.dp)
+                                            )
+                                        }
                                     }
                                 }
                             }

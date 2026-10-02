@@ -1831,569 +1831,1516 @@
       }
     ],
     "minor_arcana_details": {
-      "description": "Minor Arcana cards appear during Shuffle Time with ranks from 1 to 10 (or King). Higher rank cards appear in deeper dungeon floors and grant significantly better rewards, rare skill cards, and massive EXP multipliers.",
+      "description": "Minor Arcana cards appear during Shuffle Time with ranks from 1 to 10, J, Q, and K. Higher rank cards appear in deeper dungeon floors and grant significantly better rewards, rare skill cards, and massive EXP multipliers.",
       "ranks": [
         {
           "rank": 1,
-          "level_label": "Rank 1 (Early Floors / Levels 1-10)",
+          "level_label": "Rank 1 (Thebel Early / Lv 1-10)",
           "exp_bonus": "+20% EXP",
           "money_bonus": "+20% Yen (~¥1,500)",
           "cup_recovery": "10% HP / SP restored",
           "sword_skills": [
-            "Agi (Light Fire)",
-            "Bufu (Light Ice)",
-            "Zio (Light Elec)",
-            "Garu (Light Wind)",
-            "Cleave (Light Slash)",
-            "Bash (Light Strike)",
-            "Dia (Light Heal)",
-            "Patra (Cure Dizzy/Panic)"
+            "Power Slash [Slash | 20%] - 50 pwr for 1 foe, 5% crit",
+            "Bash [Strike | 20%] - 50 pwr for 1 foe, 8% crit",
+            "Single Shot [Pierce | 20%] - 45 pwr for 1 foe, 3% crit",
+            "Holy Arrow [Pierce | 20%] - 65 pwr for 1 foe, 5% crit, 35% Charm",
+            "Dia [Recovery | 10%] - 50 pwr, HP restore for 1 ally",
+            "Baisudi [Recovery | 10%] - Removes Freeze, Shock, Poison, Down, Dizzy for 1 ally"
           ]
         },
         {
           "rank": 2,
-          "level_label": "Rank 2 (Levels 11-20)",
+          "level_label": "Rank 2 (Thebel Mid & Arqa Entrance / Lv 11-20)",
           "exp_bonus": "+40% EXP",
           "money_bonus": "+40% Yen (~¥3,500)",
           "cup_recovery": "20% HP / SP restored",
           "sword_skills": [
-            "Maragi (Light Area Fire)",
-            "Mabufu (Light Area Ice)",
-            "Mazio (Light Area Elec)",
-            "Magaru (Light Area Wind)",
-            "Twin Slash (Light Slash 2x)",
-            "Sonic Punch (Light Strike)",
-            "Tarukaja (Buff Atk)",
-            "Rakukaja (Buff Def)",
-            "Sukukaja (Buff Agi)",
-            "Tarunda (Lower Atk)",
-            "Rakunda (Lower Def)",
-            "Sukunda (Lower Agi)"
+            "Dia [Recovery | 20%] - 50 pwr, HP restore for 1 ally",
+            "Agi [Fire | 16%] - 40 pwr for 1 foe",
+            "Bufu [Ice | 16%] - 40 pwr for 1 foe, 15% Freeze",
+            "Zio [Elec | 16%] - 40 pwr for 1 foe, 15% Shock",
+            "Garu [Wind | 16%] - 40 pwr for 1 foe",
+            "Kouha [Light | 8%] - 60 pwr for 1 foe",
+            "Eiha [Dark | 8%] - 60 pwr for 1 foe"
           ]
         },
         {
           "rank": 3,
-          "level_label": "Rank 3 (Levels 21-30)",
+          "level_label": "Rank 3 (Arqa Mid Floors / Lv 21-30)",
           "exp_bonus": "+60% EXP",
           "money_bonus": "+60% Yen (~¥7,000)",
           "cup_recovery": "30% HP / SP restored",
           "sword_skills": [
-            "Agilao (Medium Fire)",
-            "Bufula (Medium Ice)",
-            "Zionga (Medium Elec)",
-            "Garula (Medium Wind)",
-            "Power Slash (Medium Slash)",
-            "Double Fangs (Medium Strike 2x)",
-            "Media (Party Light Heal)",
-            "Poison Mist (Inflict Poison)",
-            "Dekaja (Strip Buffs)",
-            "Dekunda (Strip Debuffs)"
+            "Hama [Light | 3%] - 30% Instakill for 1 foe",
+            "Mudo [Dark | 3%] - 30% Instakill for 1 foe",
+            "Life Drain [Almighty | 5%] - 35 dmg (HP) dealt for 1 foe, HP restore",
+            "Spirit Drain [Almighty | 3%] - 20 dmg (SP) dealt for 1 foe, SP restore",
+            "Foul Breath [Almighty | 3%] - Raises ailment susceptibility for 3 turns for 1 foe",
+            "Stagnant Air [Almighty | 3%] - Raises ailment susceptibility for 3 turns for everyone",
+            "Poisma [Ailment | 6%] - 70% Poison for 1 foe",
+            "Marin Karin [Ailment | 6%] - 60% Charm for 1 foe",
+            "Bewilder [Ailment | 6%] - 70% Distress for 1 foe",
+            "Pulinpa [Ailment | 6%] - 60% Confuse for 1 foe",
+            "Evil Touch [Ailment | 6%] - 60% Fear for 1 foe",
+            "Provoke [Ailment | 6%] - 70% Rage for 1 foe",
+            "Rebellion [Support | 5%] - Crit rate +7% for 3 turns for 1 ally",
+            "Tarukaja [Support | 5%] - Attack x1.4 for 3 turns for 1 ally",
+            "Rakukaja [Support | 5%] - Defense x1.4 for 3 turns for 1 ally",
+            "Sukukaja [Support | 5%] - Hit and evasion x1.3 for 3 turns for 1 ally",
+            "Tarunda [Support | 5%] - Attack x0.6 for 3 turns for 1 foe",
+            "Rakunda [Support | 5%] - Defense x0.6 for 3 turns for 1 foe",
+            "Sukunda [Support | 5%] - Hit and evasion x0.7 for 3 turns for 1 foe",
+            "Drain Ability [Passive | 3%] - Life Drain + Spirit Drain dmg dealt x2",
+            "Counter [Passive | 3%] - 10% chance to repel phys dmg taken for self",
+            "Growth 1 [Passive | 3%] - 25% exp gained by Persona when not active"
           ]
         },
         {
           "rank": 4,
-          "level_label": "Rank 4 (Levels 31-40)",
+          "level_label": "Rank 4 (Arqa Upper Floors / Lv 31-40)",
           "exp_bonus": "+80% EXP",
           "money_bonus": "+80% Yen (~¥12,000)",
           "cup_recovery": "40% HP / SP restored",
           "sword_skills": [
-            "Maragion (Medium Area Fire)",
-            "Mabufula (Medium Area Ice)",
-            "Mazionga (Medium Area Elec)",
-            "Magarula (Medium Area Wind)",
-            "Fatal End (Heavy Slash)",
-            "Mighty Swing (Heavy Strike)",
-            "Diarama (Medium Heal)",
-            "Recarm (Revive 50% HP)",
-            "Invigorate 1 (3 SP/Turn)",
-            "Regenerate 1 (2% HP/Turn)",
-            "Counter (10% Reflect)"
+            "Baisudi [Recovery | 4%] - Removes Freeze, Shock, Poison, Down, Dizzy for 1 ally",
+            "Vacuum Slash [Slash | 5%] - 85 pwr for all foes, 5% crit",
+            "Swift Strike [Strike | 5%] - 60 pwr for all foes, 1-2 hits, 80% acc, 5% crit",
+            "Arrow Rain [Pierce | 5%] - 27 pwr for all foes, 1-4 hits, 85% acc, 5% crit",
+            "Media [Recovery | 8%] - 50 pwr, HP restore for all allies",
+            "Patra [Recovery | 7%] - Removes Distress, Confuse, Charm, Rage, Fear for 1 ally",
+            "Fire Break [Support | 8%] - Neutral Fire affinity for 3 turns for all foes",
+            "Ice Break [Support | 8%] - Neutral Ice affinity for 3 turns for all foes",
+            "Wind Break [Support | 8%] - Neutral Wind affinity for 3 turns for all foes",
+            "Elec Break [Support | 8%] - Neutral Elec affinity for 3 turns for all foes",
+            "Hama Boost [Passive | 3%] - Light instakill affliction rate x1.5",
+            "Mudo Boost [Passive | 3%] - Dark instakill affliction rate x1.5",
+            "Regenerate 1 [Passive | 4%] - 2% HP restore each turn for self",
+            "Invigorate 1 [Passive | 4%] - 3 SP restore each turn for self",
+            "Dodge Slash [Passive | 2%] - Slash evasion x1.15 for self",
+            "Dodge Strike [Passive | 2%] - Strike evasion x1.15 for self",
+            "Dodge Pierce [Passive | 2%] - Pierce evasion x1.15 for self",
+            "Dodge Fire [Passive | 2%] - Fire evasion x1.15 for self",
+            "Dodge Ice [Passive | 2%] - Ice evasion x1.15 for self",
+            "Dodge Wind [Passive | 2%] - Wind evasion x1.15 for self",
+            "Dodge Elec [Passive | 2%] - Elec evasion x1.15 for self",
+            "Dodge Light [Passive | 3%] - Light evasion x1.15 for self",
+            "Dodge Dark [Passive | 3%] - Dark evasion x1.15 for self"
           ]
         },
         {
           "rank": 5,
-          "level_label": "Rank 5 (Levels 41-50)",
-          "exp_bonus": "+100% EXP (Double EXP!)",
-          "money_bonus": "+100% Yen (Double Money!)",
+          "level_label": "Rank 5 (Yabbashah Lower / Lv 41-50)",
+          "exp_bonus": "+100% EXP (Double EXP)",
+          "money_bonus": "+100% Yen (Double Money)",
           "cup_recovery": "50% HP / SP restored",
           "sword_skills": [
-            "Agidyne (Heavy Fire)",
-            "Bufudyne (Heavy Ice)",
-            "Ziodyne (Heavy Elec)",
-            "Garudyne (Heavy Wind)",
-            "Heat Wave (Heavy Area Strike)",
-            "Black Spot (Heavy Slash + High Crit)",
-            "Blade Fury (2-4x Slash)",
-            "Mediarama (Party Medium Heal)",
-            "Amrita Drop (Cure All Status)",
-            "Growth 2 (50% Sub EXP)",
-            "Auto-Tarukaja (Start Battle Atk Up)"
+            "Maragi [Fire | 6%] - 40 pwr for all foes",
+            "Mabufu [Ice | 6%] - 40 pwr for all foes, 10% Freeze",
+            "Mazio [Elec | 6%] - 40 pwr for all foes, 10% Shock",
+            "Magaru [Wind | 6%] - 40 pwr for all foes",
+            "Makouha [Light | 6%] - 60 pwr for all foes",
+            "Mahama [Light | 5%] - 30% Instakill for all foes",
+            "Maeiha [Dark | 6%] - 60 pwr for all foes",
+            "Mamudo [Dark | 5%] - 30% Instakill for all foes",
+            "Megido [Almighty | 2%] - 170 pwr for all foes",
+            "Slash Boost [Passive | 6%] - Slash dmg dealt x1.25",
+            "Strike Boost [Passive | 6%] - Strike dmg dealt x1.25",
+            "Pierce Boost [Passive | 6%] - Pierce dmg dealt x1.25",
+            "Fire Boost [Passive | 5%] - Fire dmg dealt x1.25",
+            "Ice Boost [Passive | 5%] - Ice dmg dealt x1.25",
+            "Wind Boost [Passive | 5%] - Wind dmg dealt x1.25",
+            "Elec Boost [Passive | 5%] - Elec dmg dealt x1.25",
+            "Light Boost [Passive | 5%] - Light dmg dealt x1.25",
+            "Dark Boost [Passive | 5%] - Dark dmg dealt x1.25",
+            "Ailment Boost [Passive | 4%] - Ailments affliction rate x1.25"
           ]
         },
         {
           "rank": 6,
-          "level_label": "Rank 6 (Levels 51-60)",
+          "level_label": "Rank 6 (Yabbashah Upper / Lv 51-60)",
           "exp_bonus": "+120% EXP",
           "money_bonus": "+120% Yen (~¥25,000)",
           "cup_recovery": "60% HP / SP restored",
           "sword_skills": [
-            "Maragidyne (Heavy Area Fire)",
-            "Mabufudyne (Heavy Area Ice)",
-            "Maziodyne (Heavy Area Elec)",
-            "Magarudyne (Heavy Area Wind)",
-            "Deathbound (Heavy Area Slash)",
-            "Tempest Slash (1-2x Heavy Slash)",
-            "Mind Charge (2.5x Next Magic)",
-            "Power Charge (2.5x Next Phys)",
-            "Megido (Medium Almighty)",
-            "Invigorate 2 (5 SP/Turn)",
-            "Counterstrike (15% Reflect)",
-            "Auto-Rakukaja (Start Battle Def Up)"
+            "Zan-ei [Slash | 4%] - 100 pwr for 1 foe, 88% acc, 10% crit, dmg dealt x1.75 during New Moon",
+            "Getsu-ei [Slash | 4%] - 180 pwr for 1 foe, 15% crit, dmg dealt x1.75 during Full Moon",
+            "Fatal End [Slash | 5%] - 110 pwr for 1 foe, 5% crit, 35% Fear",
+            "Assault Dive [Strike | 5%] - 120 pwr for 1 foe, 88% acc, 13% crit",
+            "Torrent Shot [Pierce | 5%] - 30 pwr for 1 foe, 2-4 hits, 85% acc, 10% crit",
+            "Agilao [Fire | 6%] - 100 pwr for 1 foe",
+            "Bufula [Ice | 6%] - 100 pwr for 1 foe, 15% Freeze",
+            "Zionga [Elec | 6%] - 100 pwr for 1 foe, 15% Shock",
+            "Garula [Wind | 6%] - 100 pwr for 1 foe",
+            "Kouga [Light | 6%] - 140 pwr for 1 foe",
+            "Hamaon [Light | 3%] - 50% Instakill for 1 foe",
+            "Eiga [Dark | 6%] - 140 pwr for 1 foe",
+            "Mudoon [Dark | 3%] - 50% Instakill for 1 foe",
+            "Diarama [Recovery | 5%] - 150 pwr, HP restore for 1 ally",
+            "Recarm [Recovery | 2%] - 50% HP restore after reviving for 1 ally",
+            "Amrita Drop [Recovery | 2%] - Removes all ailments (except Overheat) for 1 ally",
+            "Apt Pupil [Passive | 2%] - Crit rate x2 for self",
+            "Sharp Student [Passive | 2%] - Incoming crit rate x0.5 for self",
+            "Fast Heal [Passive | 2%] - Ailment recovery time x0.5 for self",
+            "Anti-Fire Master [Passive | 4%] - Begins battle with Resist Fire for 3 turns for self",
+            "Anti-Ice Master [Passive | 4%] - Begins battle with Resist Ice for 3 turns for self",
+            "Anti-Electric Master [Passive | 4%] - Begins battle with Resist Elec for 3 turns for self",
+            "Anti-Wind Master [Passive | 4%] - Begins battle with Resist Wind for 3 turns for self",
+            "Counterstrike [Passive | 2%] - 15% chance to repel phys dmg taken for self",
+            "Growth 2 [Passive | 2%] - 50% exp gained by Persona when not active"
           ]
         },
         {
           "rank": 7,
-          "level_label": "Rank 7 (Levels 61-70)",
+          "level_label": "Rank 7 (Tziah Lower / Lv 61-70)",
           "exp_bonus": "+150% EXP (1.5x Boost)",
           "money_bonus": "+150% Yen (~¥40,000)",
           "cup_recovery": "75% HP / SP restored",
           "sword_skills": [
-            "Brave Blade (Severe Slash)",
-            "God's Hand (Severe Strike)",
-            "Megidola (Heavy Almighty)",
-            "Diarahan (Full HP Heal)",
-            "Samarecarm (Full HP Revive)",
-            "Amrita Shower (Party Cure Status)",
-            "High Counter (20% Reflect)",
-            "Growth 3 (100% Sub EXP)",
-            "Evade Fire/Ice/Elec/Wind (3x Evasion)"
+            "Fire Boost [Passive | 3%] - Fire dmg dealt x1.25",
+            "Ice Boost [Passive | 3%] - Ice dmg dealt x1.25",
+            "Wind Boost [Passive | 3%] - Wind dmg dealt x1.25",
+            "Elec Boost [Passive | 3%] - Elec dmg dealt x1.25",
+            "Light Boost [Passive | 3%] - Light dmg dealt x1.25",
+            "Dark Boost [Passive | 3%] - Dark dmg dealt x1.25",
+            "Apt Pupil [Passive | 4%] - Crit rate x2 for self",
+            "Fast Heal [Passive | 2%] - Ailment recovery time x0.5 for self",
+            "Growth 2 [Passive | 4%] - 50% exp gained by Persona when not active",
+            "Single-Target Boost [Passive | 5%] - Single-target skill dmg dealt x1.15",
+            "Multi-Target Boost [Passive | 5%] - Multi-target skill dmg dealt x1.15",
+            "Auto Tarukaja [Passive | 5%] - Begins battle with Tarukaja for self",
+            "Auto Rakukaja [Passive | 5%] - Begins battle with Rakukaja for self",
+            "Auto Sukukaja [Passive | 5%] - Begins battle with Sukukaja for self",
+            "Auto Rebellion [Passive | 5%] - Begins battle with Rebellion for self",
+            "Evade Slash [Passive | 5%] - Slash evasion x1.4 for self",
+            "Evade Strike [Passive | 5%] - Strike evasion x1.4 for self",
+            "Evade Pierce [Passive | 5%] - Pierce evasion x1.4 for self",
+            "Evade Fire [Passive | 2%] - Fire evasion x1.4 for self",
+            "Evade Ice [Passive | 2%] - Ice evasion x1.4 for self",
+            "Evade Wind [Passive | 2%] - Wind evasion x1.4 for self",
+            "Evade Elec [Passive | 2%] - Elec evasion x1.4 for self",
+            "Evade Light [Passive | 2%] - Light evasion x1.4 for self",
+            "Evade Dark [Passive | 2%] - Dark evasion x1.4 for self",
+            "Regenerate 2 [Passive | 5%] - 4% HP restore each turn for self",
+            "Invigorate 2 [Passive | 5%] - 5 SP restore each turn for self",
+            "Divine Grace [Passive | 5%] - HP restore skill pwr x1.5"
           ]
         },
         {
           "rank": 8,
-          "level_label": "Rank 8 (Levels 71-80)",
-          "exp_bonus": "+200% EXP (Triple EXP!)",
-          "money_bonus": "+200% Yen (Triple Money!)",
+          "level_label": "Rank 8 (Tziah Upper & Monad / Lv 71-80)",
+          "exp_bonus": "+200% EXP (Triple EXP)",
+          "money_bonus": "+200% Yen (~¥60,000)",
           "cup_recovery": "85% HP / SP restored",
           "sword_skills": [
-            "Primal Force (Colossal Slash)",
-            "Agneyastra (1-3x Severe Area Strike)",
-            "Megidolaon (Severe Almighty)",
-            "Mediarahan (Party Full HP Heal)",
-            "Spell Master (Halve SP Costs)",
-            "Arms Master (Halve HP Costs)",
-            "Enduring Soul (Survive Fatal Hit 100% HP)",
-            "Repel Physical (Reflect All Phys)",
-            "Absorb Fire/Ice/Elec/Wind"
+            "Blade of Fury [Slash | 5%] - 42 pwr for all foes, 2-4 hits, 80% acc, 10% crit",
+            "Neuro Slash [Slash | 3%] - 180 pwr for all foes, 3% crit, 50% Confuse",
+            "Herculean Strike [Strike | 5%] - 230 pwr for all foes, 85% acc, 10% crit",
+            "Poison Arrow [Pierce | 4%] - 300 pwr for 1 foe, 5% crit, 50% Poison",
+            "Myriad Arrows [Pierce | 5%] - 40 pwr for all foes, 2-5 hits, 88% acc, 5% crit",
+            "Maragion [Fire | 7%] - 100 pwr for all foes",
+            "Mabufula [Ice | 7%] - 100 pwr for all foes, 10% Freeze",
+            "Mazionga [Elec | 7%] - 100 pwr for all foes, 10% Shock",
+            "Magarula [Wind | 7%] - 100 pwr for all foes",
+            "Makouga [Light | 6%] - 140 pwr for all foes",
+            "Maeiga [Dark | 6%] - 140 pwr for all foes",
+            "Megidola [Almighty | 1%] - 380 pwr for all foes",
+            "Virus Breath [Almighty | 2%] - 200 pwr for all foes, 40% Poison",
+            "Poison Mist [Ailment | 3%] - 50% Poison for all foes",
+            "Sexy Dance [Ailment | 3%] - 45% Charm for all foes",
+            "Eerie Sound [Ailment | 3%] - 50% Distress for all foes",
+            "Tentarafoo [Ailment | 3%] - 45% Confuse for all foes",
+            "Evil Smile [Ailment | 3%] - 45% Fear for all foes",
+            "Infuriate [Ailment | 3%] - 50% Rage for all foes",
+            "Dekaja [Support | 4%] - Removes -kaja effects for all foes",
+            "Dekunda [Support | 4%] - Removes -kunda effects for all allies",
+            "Resist Slash [Passive | 1%] - Slash dmg taken x0.5 for self, negates weakness",
+            "Resist Strike [Passive | 1%] - Strike dmg taken x0.5 for self, negates weakness",
+            "Resist Pierce [Passive | 1%] - Pierce dmg taken x0.5 for self, negates weakness",
+            "Resist Fire [Passive | 1%] - Fire dmg taken x0.5 for self, negates weakness",
+            "Resist Ice [Passive | 1%] - Ice dmg taken x0.5 for self, negates weakness",
+            "Resist Wind [Passive | 1%] - Wind dmg taken x0.5 for self, negates weakness",
+            "Resist Elec [Passive | 1%] - Elec dmg taken x0.5 for self, negates weakness",
+            "Resist Light [Passive | 1%] - Light dmg taken x0.5 for self, negates weakness",
+            "Resist Dark [Passive | 1%] - Dark dmg taken x0.5 for self, negates weakness"
           ]
         },
         {
           "rank": 9,
-          "level_label": "Rank 9 (Levels 81-90)",
+          "level_label": "Rank 9 (Harabah Lower / Lv 81-85)",
           "exp_bonus": "+250% EXP",
           "money_bonus": "+250% Yen (~¥80,000)",
           "cup_recovery": "95% HP / SP restored",
           "sword_skills": [
-            "Salvation (Full Party Heal + Cure Status)",
-            "Debilitate (Lower Enemy Atk/Def/Agi)",
-            "Heat Riser (Buff User Atk/Def/Agi)",
-            "Angelic Grace (Double Evasion vs Magic)",
-            "Ali Dance (Halve Enemy Hit Rate)",
-            "Firm Stance (Halve Damage, Cannot Evade)"
+            "Mediarama [Recovery | 6%] - 150 pwr, HP restore for all allies",
+            "Mabaisudi [Recovery | 8%] - Removes Freeze, Shock, Poison, Down, Dizzy for all allies",
+            "Me Patra [Recovery | 8%] - Removes Distress, Confuse, Charm, Rage, Fear for all allies",
+            "Revolution [Support | 6%] - Crit rate +15% for 3 turns for everyone",
+            "Matarukaja [Support | 9%] - Attack x1.4 for 3 turns for all allies",
+            "Marakukaja [Support | 9%] - Defense x1.4 for 3 turns for all allies",
+            "Masukukaja [Support | 9%] - Hit and evasion x1.3 for 3 turns for all allies",
+            "Matarunda [Support | 9%] - Attack x0.6 for 3 turns for all allies",
+            "Marakunda [Support | 9%] - Defense x0.6 for 3 turns for all allies",
+            "Masukunda [Support | 9%] - Hit and evasion x0.7 for 3 turns for all allies",
+            "Regenerate 3 [Passive | 2%] - 6% HP restore each turn for self",
+            "Invigorate 3 [Passive | 2%] - 7 SP restore each turn for self",
+            "High Counter [Passive | 5%] - 20% chance to repel phys dmg taken for self",
+            "Survival Trick [Passive | 2%] - 100% chance to endure instakill for self",
+            "Endure [Passive | 2%] - Survive with 1 HP after a mortal blow once per battle for self",
+            "Growth 3 [Passive | 5%] - 100% exp gained by Persona when not active"
           ]
         },
         {
           "rank": 10,
-          "level_label": "Rank 10 / King (Endgame Levels 90-99)",
-          "exp_bonus": "+300% to +400% EXP (Quadruple EXP!)",
-          "money_bonus": "+300% to +400% Yen (Massive Fortune)",
-          "cup_recovery": "100% Full HP & SP Restoration!",
+          "level_label": "Rank 10 (Harabah Upper & Adamah Entrance / Lv 86-90)",
+          "exp_bonus": "+300% EXP (Quadruple EXP)",
+          "money_bonus": "+300% Yen (~¥100,000)",
+          "cup_recovery": "100% Full HP & SP Restored",
           "sword_skills": [
-            "Victory Cry (Fully Restore HP & SP After Every Battle!)",
-            "Severe 4th-Tier Dynes (Ragnarok, Niflheim, Thunder Reign, Panta Rhei)",
-            "Morning Star (Ultimate Almighty)",
-            "Unshaken Will (Immune to Mental Ailments)",
-            "Insta-Heal (Recover from Status in 1 Turn)"
+            "Single-Target Boost [Passive | 5%] - Single-target skill dmg dealt x1.15",
+            "Multi-Target Boost [Passive | 5%] - Multi-target skill dmg dealt x1.15",
+            "Tempest Slash [Slash | 5%] - 50 pwr for 1 foe, 1-4 hits, 8% crit",
+            "Gigantic Fist [Strike | 5%] - 380 pwr for 1 foe, 85% acc, 15% crit",
+            "Cruel Attack [Pierce | 5%] - 200 pwr for 1 foe, 3% crit, dmg dealt x1.5 on Downed foes",
+            "Agidyne [Fire | 8%] - 220 pwr for 1 foe",
+            "Bufudyne [Ice | 8%] - 220 pwr for 1 foe, 15% Freeze",
+            "Ziodyne [Elec | 8%] - 220 pwr for 1 foe, 15% Shock",
+            "Garudyne [Wind | 8%] - 220 pwr for 1 foe",
+            "Kougaon [Light | 6%] - 350 pwr for 1 foe",
+            "Mahamaon [Light | 3%] - 50% Instakill for all foes",
+            "Eigaon [Dark | 6%] - 350 pwr for 1 foe",
+            "Mamudoon [Dark | 3%] - 50% Instakill for all foes",
+            "Ghastly Wail [Almighty | 2%] - 100% instakill, if Fear inflicted for all foes",
+            "Diarahan [Recovery | 8%] - 100% HP restore for 1 ally",
+            "Samarecarm [Recovery | 5%] - 100% HP restore after reviving for 1 ally",
+            "Tetrakarn [Support | 5%] - Repels next physical attack",
+            "Makarakarn [Support | 5%] - Repels next non-Almighty magic attack (including ailments)"
+          ]
+        },
+        {
+          "rank": 11,
+          "level_label": "Rank J (Adamah Mid, Monad Passages & Reaper / Lv 91-95)",
+          "exp_bonus": "+350% EXP",
+          "money_bonus": "+350% Yen (~¥150,000)",
+          "cup_recovery": "100% Full HP & SP + Status Clear",
+          "sword_skills": [
+            "Deathbound [Slash | 5%] - 350 pwr for all foes, 85% acc, 17% crit",
+            "Heat Wave [Strike | 5%] - 400 pwr for all foes, 10% crit",
+            "Vile Assault [Pierce | 5%] - 400 pwr for 1 foe, 3% crit, dmg dealt x1.5 on Downed foes",
+            "Maragidyne [Fire | 8%] - 220 pwr for all foes",
+            "Mabufudyne [Ice | 8%] - 220 pwr for all foes, 10% Freeze",
+            "Maziodyne [Elec | 8%] - 220 pwr for all foes, 10% Shock",
+            "Magarudyne [Wind | 8%] - 220 pwr for all foes",
+            "Makougaon [Light | 6%] - 350 pwr for all foes",
+            "Divine Judgment [Light | 5%] - Reduces current HP by 50% for 1 foe",
+            "Maeigaon [Dark | 6%] - 350 pwr for all foes",
+            "Demonic Decree [Dark | 5%] - Reduces current HP by 50% for 1 foe",
+            "Auto Mataru [Passive | 5%] - Begins battle with Tarukaja for all allies",
+            "Auto Maraku [Passive | 5%] - Begins battle with Rakukaja for all allies",
+            "Auto Masuku [Passive | 5%] - Begins battle with Sukukaja for all allies",
+            "Resist Ailments [Passive | 2%] - All ailments except Dizzy susceptibility x0.75 for self",
+            "Insta-Heal [Passive | 2%] - Ailment recovery time reduced to 1 turn for self (includes Poison)",
+            "Vidyaraja's Blessing [Passive | 4%] - Slash, Strike, Pierce evasion x1.15 for self",
+            "Angelic Grace [Passive | 4%] - Fire, Ice, Wind, Elec, Light, Dark evasion x1.15 for self",
+            "Null Light [Passive | 2%] - Nullifies Light dmg taken for self",
+            "Null Dark [Passive | 2%] - Nullifies Dark dmg taken for self"
+          ]
+        },
+        {
+          "rank": 12,
+          "level_label": "Rank Q (Adamah Top Floors 257-261 / Lv 95-99)",
+          "exp_bonus": "+400% EXP (Massive EXP)",
+          "money_bonus": "+400% Yen (~¥200,000)",
+          "cup_recovery": "100% Full HP & SP + Status Clear",
+          "sword_skills": [
+            "Brave Blade [Slash | 5%] - 650 pwr for 1 foe, 20% crit",
+            "Vorpal Blade [Slash | 4%] - 580 pwr for all foes, 13% crit",
+            "God's Hand [Strike | 5%] - 800 pwr for 1 foe, 88% acc, 13% crit",
+            "Akasha Arts [Strike | 4%] - 300 pwr for all foes, 1-2 hits, 88% acc, 12% crit",
+            "Primal Force [Pierce | 5%] - 580 pwr for 1 foe, 10% crit",
+            "Megidolaon [Almighty | 3%] - 690 pwr for all foes",
+            "Mediarahan [Recovery | 3%] - 100% HP restore for all allies",
+            "Amrita Shower [Recovery | 8%] - Removes all ailments (except Overheat) for all allies",
+            "Charge [Support | 6%] - Dmg dealt by next physical attack x2.3 for self",
+            "Concentrate [Support | 6%] - Dmg dealt by next magic attack x2.3 for self",
+            "Slash Amp [Passive | 5%] - Slash dmg dealt x1.5",
+            "Strike Amp [Passive | 5%] - Strike dmg dealt x1.5",
+            "Pierce Amp [Passive | 5%] - Pierce dmg dealt x1.5",
+            "Fire Amp [Passive | 5%] - Fire dmg dealt x1.5",
+            "Ice Amp [Passive | 5%] - Ice dmg dealt x1.5",
+            "Wind Amp [Passive | 5%] - Wind dmg dealt x1.5",
+            "Elec Amp [Passive | 5%] - Elec dmg dealt x1.5",
+            "Light Amp [Passive | 5%] - Light dmg dealt x1.5",
+            "Dark Amp [Passive | 5%] - Dark dmg dealt x1.5",
+            "Repel Slash [Passive | 2%] - Repels Slash dmg taken for self",
+            "Repel Strike [Passive | 2%] - Repels Strike dmg taken for self",
+            "Repel Pierce [Passive | 2%] - Repels Pierce dmg taken for self"
+          ]
+        },
+        {
+          "rank": 13,
+          "level_label": "Rank K (Arcana Burst Peak & Deep Monad / Lv 99)",
+          "exp_bonus": "+500% EXP (Maximum Multiplier)",
+          "money_bonus": "+500% Yen (Maximum Fortune)",
+          "cup_recovery": "100% Full Party Revive & Restoration",
+          "sword_skills": [
+            "Mediarahan [Recovery | 12%] - 100% HP restore for all allies",
+            "Charge [Support | 13%] - Dmg dealt by next physical attack x2.3 for self",
+            "Concentrate [Support | 13%] - Dmg dealt by next magic attack x2.3 for self",
+            "Arms Master [Passive | 10%] - HP consuming skills costs x0.5 for self",
+            "Spell Master [Passive | 10%] - SP consuming skills costs x0.5 for self",
+            "Enduring Soul [Passive | 10%] - Survive with 100% HP after a mortal blow once per battle for self",
+            "Drain Fire [Passive | 8%] - Drains Fire dmg taken for self",
+            "Drain Ice [Passive | 8%] - Drains Ice dmg taken for self",
+            "Drain Wind [Passive | 8%] - Drains Wind dmg taken for self",
+            "Drain Elec [Passive | 8%] - Drains Elec dmg taken for self"
           ]
         }
       ]
     },
     "dungeon_personas": [
       {
-        "dungeon": "Block 1: Thebel (1F - 16F)",
+        "dungeon": "Block 1: Thebel (2F - 22F)",
         "recommended_level": "Lv 1 - 10",
         "personas": [
           {
-            "name": "Orpheus",
-            "arcana": "Fool",
-            "level": 1,
-            "floor": "1F - 5F"
+            "name": "Apsaras",
+            "arcana": "Priestess",
+            "level": 2,
+            "floor": "2 (forced Persona);; 2 - 10; 15 & 16 (1 enemy combo);; 7 - 16;",
+            "chance": "100%/20%/25%",
+            "note": ""
           },
           {
             "name": "Pixie",
             "arcana": "Lovers",
             "level": 2,
-            "floor": "1F - 6F"
-          },
-          {
-            "name": "Apsaras",
-            "arcana": "Priestess",
-            "level": 3,
-            "floor": "2F - 8F"
-          },
-          {
-            "name": "Silky",
-            "arcana": "Lovers",
-            "level": 4,
-            "floor": "3F - 10F"
+            "floor": "2 - 10; 15 & 16 (1 enemy combo);; 7 - 16;; 12 - 20",
+            "chance": "50%/25%/15%",
+            "note": "Recommended, 'cause this is the first Elec Specialist in the game (training required, though)"
           },
           {
             "name": "Angel",
             "arcana": "Justice",
             "level": 4,
-            "floor": "4F - 12F"
+            "floor": "2 - 10; 15 & 16 (1 enemy combo);; 7 - 16;",
+            "chance": "30%/35%",
+            "note": "Recommended, 'cause this is the first Wind Specialist in the game"
+          },
+          {
+            "name": "Silky",
+            "arcana": "Lovers",
+            "level": 5,
+            "floor": "7 - 16;; 12 - 20",
+            "chance": "15%/20%",
+            "note": ""
           },
           {
             "name": "Ara Mitama",
             "arcana": "Chariot",
             "level": 6,
-            "floor": "5F - 14F"
+            "floor": "12 - 20",
+            "chance": "20%",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 2: Arqa (23F - 69F)",
+        "recommended_level": "Lv 11 - 25",
+        "personas": [
+          {
+            "name": "Apsaras",
+            "arcana": "Priestess",
+            "level": 2,
+            "floor": "23 - 24;",
+            "chance": "15%",
+            "note": ""
+          },
+          {
+            "name": "Angel",
+            "arcana": "Justice",
+            "level": 4,
+            "floor": "23 - 24;",
+            "chance": "15%",
+            "note": "Recommended, 'cause this is the first Wind Specialist in the game"
+          },
+          {
+            "name": "Forneus",
+            "arcana": "Emperor",
+            "level": 7,
+            "floor": "23 - 24;; 23 - 31 (except strong shadows);",
+            "chance": "15%",
+            "note": "Needed for Best Friends Theurgy unlocking"
           },
           {
             "name": "Omoikane",
             "arcana": "Hierophant",
             "level": 7,
-            "floor": "7F - 15F"
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
+          },
+          {
+            "name": "Jack Frost",
+            "arcana": "Magician",
+            "level": 8,
+            "floor": "23 - 31 (except strong shadows);",
+            "chance": "15%",
+            "note": "Needed for Jack Brothers Theurgy unlocking; recommended to fuse before Arqa block for boss fight;"
+          },
+          {
+            "name": "Lilim",
+            "arcana": "Devil",
+            "level": 8,
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Onmoraki",
+            "arcana": "Hermit",
+            "level": 8,
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);",
+            "chance": "10%/15%",
+            "note": "Recommended, if you don't have Dark specialist yet (for rare shadows from 2st half of Arqa)"
           },
           {
             "name": "Chimera",
             "arcana": "Chariot",
             "level": 9,
-            "floor": "9F - 16F"
-          },
-          {
-            "name": "Forneus",
-            "arcana": "Hierophant",
-            "level": 7,
-            "floor": "8F - 16F"
-          }
-        ]
-      },
-      {
-        "dungeon": "Block 2: Arqa (17F - 64F)",
-        "recommended_level": "Lv 11 - 25",
-        "personas": [
-          {
-            "name": "Jack Frost",
-            "arcana": "Magician",
-            "level": 16,
-            "floor": "17F - 30F"
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);; 37 - 41 (all shadows);",
+            "chance": "15%/10%",
+            "note": ""
           },
           {
             "name": "Archangel",
             "arcana": "Justice",
-            "level": 19,
-            "floor": "20F - 35F"
+            "level": 10,
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);; 37 - 41 (all shadows);",
+            "chance": "15%/20%",
+            "note": "Recommended, if you don't have Light specialist yet (for rare shadows from 1st half of Arqa)"
+          },
+          {
+            "name": "Inugami",
+            "arcana": "Hanged",
+            "level": 10,
+            "floor": "37 - 41 (all shadows);; 44 - 56 (except strong shadows);",
+            "chance": "15%/10%",
+            "note": ""
           },
           {
             "name": "Valkyrie",
             "arcana": "Strength",
-            "level": 11,
-            "floor": "18F - 28F"
+            "level": 10,
+            "floor": "29 - 38; 23 - 34 (strong shadows);; 37 - 41 (all shadows);",
+            "chance": "20%",
+            "note": ""
           },
           {
-            "name": "Oberon",
-            "arcana": "Emperor",
-            "level": 15,
-            "floor": "22F - 40F"
+            "name": "Unicorn",
+            "arcana": "Priestess",
+            "level": 11,
+            "floor": "23 - 31 (except strong shadows);; 29 - 38; 23 - 34 (strong shadows);; 37 - 41 (all shadows);",
+            "chance": "15%/10%",
+            "note": "Recommended, if you don't have Light specialist yet (for rare shadows from 1st half of Arqa)"
+          },
+          {
+            "name": "Nigi Mitama",
+            "arcana": "Temperance",
+            "level": 12,
+            "floor": "37 - 41 (all shadows);; 44 - 56 (except strong shadows);; 51 - 57; 44 - 54 (strong shadows);",
+            "chance": "10%/15%",
+            "note": ""
+          },
+          {
+            "name": "Slime",
+            "arcana": "Fool",
+            "level": 12,
+            "floor": "37 - 41 (all shadows);; 44 - 56 (except strong shadows);",
+            "chance": "15%/20%",
+            "note": ""
           },
           {
             "name": "Berith",
             "arcana": "Hierophant",
-            "level": 15,
-            "floor": "24F - 42F"
+            "level": 13,
+            "floor": "44 - 56 (except strong shadows);; 51 - 57; 44 - 54 (strong shadows);",
+            "chance": "15%/13%",
+            "note": ""
           },
           {
-            "name": "Gurr",
+            "name": "Tam Lin",
+            "arcana": "Lovers",
+            "level": 13,
+            "floor": "44 - 56 (except strong shadows);; 51 - 57; 44 - 54 (strong shadows);",
+            "chance": "15%/12%",
+            "note": ""
+          },
+          {
+            "name": "Gurulu",
             "arcana": "Moon",
+            "level": 14,
+            "floor": "44 - 56 (except strong shadows);; 51 - 57; 44 - 54 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "15%/13%/10%",
+            "note": "Recommended, if you don't have Dark specialist yet (for rare shadows from 2st half of Arqa)"
+          },
+          {
+            "name": "Zouchouten",
+            "arcana": "Chariot",
+            "level": 14,
+            "floor": "44 - 56 (except strong shadows);; 51 - 57; 44 - 54 (strong shadows);; 55 - 61; 55 - 67 (strong shadows);",
+            "chance": "10%/13%/12%",
+            "note": ""
+          },
+          {
+            "name": "Jack-o'-Lantern",
+            "arcana": "Magician",
             "level": 15,
-            "floor": "25F - 45F"
+            "floor": "51 - 57; 44 - 54 (strong shadows);; 55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "15%/12%",
+            "note": "Needed for Jack Brothers Theurgy unlocking"
           },
           {
-            "name": "Take-Mikazuchi",
+            "name": "Rakshasa",
+            "arcana": "Strength",
+            "level": 15,
+            "floor": "51 - 57; 44 - 54 (strong shadows);; 55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "12%/15%",
+            "note": ""
+          },
+          {
+            "name": "Oberon",
             "arcana": "Emperor",
-            "level": 24,
-            "floor": "35F - 55F"
-          },
-          {
-            "name": "Orthrus",
-            "arcana": "Hanged",
-            "level": 28,
-            "floor": "45F - 64F"
+            "level": 16,
+            "floor": "51 - 57; 44 - 54 (strong shadows);; 55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "12%/16%/13%",
+            "note": "Needed for Elizabeth's request (learns Mazio naturally)"
           },
           {
             "name": "Principality",
             "arcana": "Justice",
-            "level": 19,
-            "floor": "30F - 50F"
+            "level": 16,
+            "floor": "55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "18%/13%",
+            "note": ""
           },
           {
-            "name": "Fortuna",
-            "arcana": "Fortune",
+            "name": "Naga",
+            "arcana": "Hermit",
             "level": 17,
-            "floor": "28F - 48F"
+            "floor": "55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "12%/15%",
+            "note": ""
           },
           {
-            "name": "Mithra",
-            "arcana": "Temperance",
-            "level": 22,
-            "floor": "40F - 64F"
+            "name": "Neko Shogun",
+            "arcana": "Star",
+            "level": 17,
+            "floor": "55 - 61; 55 - 67 (strong shadows);; 59 - 68 (except strong shadows);",
+            "chance": "12%/15%",
+            "note": ""
+          },
+          {
+            "name": "Mokoi",
+            "arcana": "Devil",
+            "level": 18,
+            "floor": "59 - 68 (except strong shadows);",
+            "chance": "10%",
+            "note": ""
           }
         ]
       },
       {
-        "dungeon": "Block 3: Yabbashah (65F - 114F)",
+        "dungeon": "Block 3: Yabbashah (70F - 118F)",
         "recommended_level": "Lv 26 - 40",
         "personas": [
           {
+            "name": "Oberon",
+            "arcana": "Emperor",
+            "level": 16,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);",
+            "chance": "5%",
+            "note": "Needed for Elizabeth's request (learns Mazio naturally)"
+          },
+          {
+            "name": "Principality",
+            "arcana": "Justice",
+            "level": 16,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);",
+            "chance": "5%",
+            "note": ""
+          },
+          {
+            "name": "Naga",
+            "arcana": "Hermit",
+            "level": 17,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Neko Shogun",
+            "arcana": "Star",
+            "level": 17,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);",
+            "chance": "15%",
+            "note": ""
+          },
+          {
+            "name": "Mokoi",
+            "arcana": "Devil",
+            "level": 18,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);",
+            "chance": "20%",
+            "note": ""
+          },
+          {
             "name": "High Pixie",
-            "arcana": "Lovers",
+            "arcana": "Priestess",
+            "level": 20,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);; 78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);",
+            "chance": "15%/5%",
+            "note": ""
+          },
+          {
+            "name": "Take-Minakata",
+            "arcana": "Hanged",
+            "level": 20,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);; 78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);",
+            "chance": "20%/10%",
+            "note": ""
+          },
+          {
+            "name": "Leanan Sidhe",
+            "arcana": "Empress",
+            "level": 21,
+            "floor": "70 - 79; 70 - 89 (strong shadows, or sequence 12); 91 (Monad Passage, or sequence 12);; 78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);",
+            "chance": "10%/20%",
+            "note": ""
+          },
+          {
+            "name": "Mitra",
+            "arcana": "Temperance",
             "level": 22,
-            "floor": "65F - 80F"
+            "floor": "78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);",
+            "chance": "20%/15%",
+            "note": ""
+          },
+          {
+            "name": "Narcissus",
+            "arcana": "Lovers",
+            "level": 23,
+            "floor": "78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);; 93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);",
+            "chance": "10%/20%/8%",
+            "note": ""
           },
           {
             "name": "Shiisaa",
             "arcana": "Hierophant",
-            "level": 26,
-            "floor": "68F - 85F"
+            "level": 23,
+            "floor": "78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);",
+            "chance": "15%",
+            "note": ""
           },
           {
-            "name": "Sati",
-            "arcana": "Magician",
-            "level": 28,
-            "floor": "72F - 92F"
+            "name": "Take-Mikazuchi",
+            "arcana": "Emperor",
+            "level": 23,
+            "floor": "78 - 84; 70 - 89 (strong shadows, or sequence 11); 81 - 90 (Monads); 91 (Monad Passage, or sequence 11);; 83 - 89 (except strong shadows);; 93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);",
+            "chance": "10%/15%/8%",
+            "note": ""
           },
           {
-            "name": "Ganga",
-            "arcana": "Priestess",
-            "level": 29,
-            "floor": "75F - 95F"
+            "name": "Mithras",
+            "arcana": "Chariot",
+            "level": 24,
+            "floor": "83 - 89 (except strong shadows);; 93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);",
+            "chance": "10%/8%",
+            "note": "Needed for Elizabeth's request"
+          },
+          {
+            "name": "Yatagarasu",
+            "arcana": "Sun",
+            "level": 24,
+            "floor": "83 - 89 (except strong shadows);; 93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);",
+            "chance": "10%/15%/8%",
+            "note": ""
           },
           {
             "name": "Lamia",
-            "arcana": "Empress",
-            "level": 25,
-            "floor": "70F - 90F"
-          },
-          {
-            "name": "Taraka",
             "arcana": "Hermit",
-            "level": 38,
-            "floor": "85F - 110F"
-          },
-          {
-            "name": "King Frost",
-            "arcana": "Emperor",
-            "level": 30,
-            "floor": "80F - 105F"
+            "level": 25,
+            "floor": "93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);",
+            "chance": "12%/10%",
+            "note": ""
           },
           {
             "name": "Power",
             "arcana": "Justice",
             "level": 25,
-            "floor": "75F - 100F"
+            "floor": "93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);",
+            "chance": "15%/10%",
+            "note": ""
           },
           {
-            "name": "Dis",
+            "name": "Yamata-no-Orochi",
+            "arcana": "Moon",
+            "level": 25,
+            "floor": "93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);",
+            "chance": "12%/10%",
+            "note": ""
+          },
+          {
+            "name": "Legion",
+            "arcana": "Fool",
+            "level": 26,
+            "floor": "93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);; 106 - 116 (except strong shadows);",
+            "chance": "10%/12%/8%",
+            "note": ""
+          },
+          {
+            "name": "Orthrus",
+            "arcana": "Hanged",
+            "level": 27,
+            "floor": "100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);; 106 - 116 (except strong shadows);",
+            "chance": "10%/11%",
+            "note": ""
+          },
+          {
+            "name": "Kushi Mitama",
+            "arcana": "Fortune",
+            "level": 28,
+            "floor": "100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);; 106 - 116 (except strong shadows);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Queen Medb",
+            "arcana": "Lovers",
+            "level": 28,
+            "floor": "100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);; 106 - 116 (except strong shadows);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Jikokuten",
+            "arcana": "Strength",
+            "level": 29,
+            "floor": "93 - 103; 93 - 116 (strong shadows, or sequence 15); 117 (Monad Passage, or sequence 15);; 100 - 107; 93 - 116 (strong shadows, or sequence 14); 93 - 116 (Monads); 117 (Monad Passage, or sequence 14);; 106 - 116 (except strong shadows);",
+            "chance": "10%/12%/8%",
+            "note": ""
+          },
+          {
+            "name": "Sati",
             "arcana": "Magician",
-            "level": 39,
-            "floor": "90F - 114F"
+            "level": 29,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "13%",
+            "note": ""
+          },
+          {
+            "name": "Setanta",
+            "arcana": "Star",
+            "level": 29,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "13%",
+            "note": ""
+          },
+          {
+            "name": "Baphomet",
+            "arcana": "Devil",
+            "level": 30,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "5%",
+            "note": ""
+          },
+          {
+            "name": "Genbu",
+            "arcana": "Temperance",
+            "level": 30,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "12%",
+            "note": ""
+          },
+          {
+            "name": "Eligor",
+            "arcana": "Tower",
+            "level": 31,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "5%",
+            "note": ""
+          },
+          {
+            "name": "Oni",
+            "arcana": "Chariot",
+            "level": 31,
+            "floor": "106 - 116 (except strong shadows);",
+            "chance": "5%",
+            "note": ""
           }
         ]
       },
       {
-        "dungeon": "Block 4: Tziah (115F - 164F)",
+        "dungeon": "Block 4: Tziah (119F - 172F)",
         "recommended_level": "Lv 41 - 55",
         "personas": [
           {
+            "name": "Baphomet",
+            "arcana": "Devil",
+            "level": 30,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "13%/5%",
+            "note": ""
+          },
+          {
+            "name": "Genbu",
+            "arcana": "Temperance",
+            "level": 30,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Eligor",
+            "arcana": "Tower",
+            "level": 31,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);",
+            "chance": "13%",
+            "note": ""
+          },
+          {
+            "name": "Oni",
+            "arcana": "Chariot",
+            "level": 31,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "13%/5%",
+            "note": ""
+          },
+          {
+            "name": "Sarasvati",
+            "arcana": "Priestess",
+            "level": 32,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Virtue",
+            "arcana": "Justice",
+            "level": 32,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "13%/10%",
+            "note": ""
+          },
+          {
+            "name": "Yakshini",
+            "arcana": "Empress",
+            "level": 32,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Thunderbird",
+            "arcana": "Sun",
+            "level": 35,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "8%/10%/5%",
+            "note": ""
+          },
+          {
             "name": "Hanuman",
             "arcana": "Strength",
+            "level": 36,
+            "floor": "119 - 131; 119 - 142 (strong shadows, or sequence 18); 143 (Monad Passage, or sequence 18);; 127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Saki Mitama",
+            "arcana": "Lovers",
+            "level": 36,
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "9%/8%",
+            "note": ""
+          },
+          {
+            "name": "Clotho",
+            "arcana": "Fortune",
             "level": 37,
-            "floor": "115F - 130F"
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "8%/10%",
+            "note": ""
           },
           {
-            "name": "Flauros",
-            "arcana": "Hierophant",
-            "level": 33,
-            "floor": "118F - 135F"
+            "name": "Incubus",
+            "arcana": "Devil",
+            "level": 37,
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
           },
           {
-            "name": "Dominion",
-            "arcana": "Justice",
-            "level": 42,
-            "floor": "122F - 145F"
-          },
-          {
-            "name": "Thoth",
-            "arcana": "Hierophant",
-            "level": 41,
-            "floor": "125F - 150F"
-          },
-          {
-            "name": "Kurama Tengu",
+            "name": "Dakini",
             "arcana": "Hermit",
-            "level": 44,
-            "floor": "130F - 155F"
+            "level": 38,
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "8%/10%",
+            "note": ""
           },
           {
-            "name": "Girimehkala",
+            "name": "Seiryu",
+            "arcana": "Temperance",
+            "level": 38,
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
+          },
+          {
+            "name": "Vasuki",
+            "arcana": "Hanged",
+            "level": 38,
+            "floor": "127 - 138; 119 - 142 (strong shadows, or sequence 17); 119 - 142 (Monads); 143 (Monad Passage, or sequence 17);; 137 - 142 (except strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
+          },
+          {
+            "name": "Girimekhala",
             "arcana": "Moon",
-            "level": 42,
-            "floor": "132F - 158F"
+            "level": 39,
+            "floor": "137 - 142 (except strong shadows);; 145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);",
+            "chance": "9%/6%",
+            "note": ""
           },
           {
-            "name": "Parvati",
-            "arcana": "Priestess",
-            "level": 47,
-            "floor": "140F - 164F"
+            "name": "Orobas",
+            "arcana": "Magician",
+            "level": 39,
+            "floor": "137 - 142 (except strong shadows);; 145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);",
+            "chance": "9%/6%",
+            "note": ""
+          },
+          {
+            "name": "Anubis",
+            "arcana": "Judgement",
+            "level": 40,
+            "floor": "137 - 142 (except strong shadows);; 145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);",
+            "chance": "7%",
+            "note": ""
           },
           {
             "name": "Cu Chulainn",
             "arcana": "Tower",
             "level": 40,
-            "floor": "135F - 160F"
+            "floor": "137 - 142 (except strong shadows);; 145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);",
+            "chance": "7%",
+            "note": ""
           },
           {
-            "name": "Cherub",
+            "name": "Ganga",
+            "arcana": "Priestess",
+            "level": 41,
+            "floor": "137 - 142 (except strong shadows);; 145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);",
+            "chance": "5%/9%",
+            "note": ""
+          },
+          {
+            "name": "Ose",
+            "arcana": "Fool",
+            "level": 41,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "9%/5%",
+            "note": ""
+          },
+          {
+            "name": "Dominion",
             "arcana": "Justice",
-            "level": 59,
-            "floor": "150F - 164F"
+            "level": 42,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "10%/5%",
+            "note": ""
+          },
+          {
+            "name": "Kaiwan",
+            "arcana": "Star",
+            "level": 42,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "10%/5%",
+            "note": ""
+          },
+          {
+            "name": "Naga Raja",
+            "arcana": "Emperor",
+            "level": 43,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "10%/6%",
+            "note": ""
+          },
+          {
+            "name": "Lachesis",
+            "arcana": "Fortune",
+            "level": 44,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "8%/9%",
+            "note": ""
+          },
+          {
+            "name": "Okuninushi",
+            "arcana": "Temperance",
+            "level": 44,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);",
+            "chance": "8%/9%",
+            "note": ""
+          },
+          {
+            "name": "Quetzalcoatl",
+            "arcana": "Sun",
+            "level": 45,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
+          },
+          {
+            "name": "Shiki-Ouji",
+            "arcana": "Chariot",
+            "level": 45,
+            "floor": "145 - 157; 145 - 168 (strong shadows, or sequence 23); 171 (Monad Passage, or sequence 23);; 156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "5%/10%",
+            "note": ""
+          },
+          {
+            "name": "Kurama Tengu",
+            "arcana": "Hermit",
+            "level": 46,
+            "floor": "156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "11%/9%",
+            "note": ""
+          },
+          {
+            "name": "White Rider",
+            "arcana": "Strength",
+            "level": 46,
+            "floor": "156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "11%/9%",
+            "note": ""
+          },
+          {
+            "name": "Hecatoncheires",
+            "arcana": "Hanged",
+            "level": 47,
+            "floor": "156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "7%/12%",
+            "note": ""
+          },
+          {
+            "name": "Succubus",
+            "arcana": "Devil",
+            "level": 47,
+            "floor": "156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "7%/12%",
+            "note": ""
+          },
+          {
+            "name": "Hariti",
+            "arcana": "Empress",
+            "level": 48,
+            "floor": "156 - 163; 145 - 168 (strong shadows, or sequence 22); 145 - 168 (Monads); 171 (Monad Passage, or sequence 22);; 162 - 168 (except strong shadows);",
+            "chance": "5%/13%",
+            "note": ""
+          },
+          {
+            "name": "Mishaguji",
+            "arcana": "Hierophant",
+            "level": 48,
+            "floor": "162 - 168 (except strong shadows);",
+            "chance": "13%",
+            "note": ""
+          },
+          {
+            "name": "Dionysus",
+            "arcana": "Moon",
+            "level": 49,
+            "floor": "162 - 168 (except strong shadows);",
+            "chance": "8%",
+            "note": ""
+          },
+          {
+            "name": "Titania",
+            "arcana": "Lovers",
+            "level": 49,
+            "floor": "162 - 168 (except strong shadows);",
+            "chance": "8%",
+            "note": "Needed for Elizabeth's request"
+          },
+          {
+            "name": "Rangda",
+            "arcana": "Magician",
+            "level": 50,
+            "floor": "162 - 168 (except strong shadows);",
+            "chance": "6%",
+            "note": "Needed for Elizabeth's request"
           }
         ]
       },
       {
-        "dungeon": "Block 5: Harabah (165F - 214F)",
+        "dungeon": "Fuuka Rescue Operation (Day 6/8)",
+        "recommended_level": "Lv 15 - 20",
+        "personas": [
+          {
+            "name": "Jack Frost",
+            "arcana": "Magician",
+            "level": 8,
+            "floor": "Fuuka Rescue Operation (Day 6/8)",
+            "chance": "100%",
+            "note": "Needed for Jack Brothers Theurgy unlocking"
+          },
+          {
+            "name": "Jack-o'-Lantern",
+            "arcana": "Magician",
+            "level": 15,
+            "floor": "Fuuka Rescue Operation (Day 6/8)",
+            "chance": "100%",
+            "note": "Needed for Jack Brothers Theurgy unlocking"
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 5: Harabah (173F - 226F)",
         "recommended_level": "Lv 56 - 70",
         "personas": [
           {
-            "name": "Thor",
-            "arcana": "Chariot",
-            "level": 53,
-            "floor": "165F - 185F"
+            "name": "Succubus",
+            "arcana": "Devil",
+            "level": 47,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);",
+            "chance": "8%",
+            "note": ""
           },
           {
-            "name": "Decarabia",
-            "arcana": "Fool",
+            "name": "Hariti",
+            "arcana": "Empress",
+            "level": 48,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);",
+            "chance": "8%",
+            "note": ""
+          },
+          {
+            "name": "Mishaguji",
+            "arcana": "Hierophant",
+            "level": 48,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Dionysus",
+            "arcana": "Moon",
+            "level": 49,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);",
+            "chance": "12%",
+            "note": ""
+          },
+          {
+            "name": "Titania",
+            "arcana": "Lovers",
+            "level": 49,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);",
+            "chance": "12%/5%",
+            "note": "Needed for Elizabeth's request"
+          },
+          {
+            "name": "Rangda",
+            "arcana": "Magician",
             "level": 50,
-            "floor": "168F - 190F"
-          },
-          {
-            "name": "Loki",
-            "arcana": "Fool",
-            "level": 55,
-            "floor": "175F - 198F"
-          },
-          {
-            "name": "Barong",
-            "arcana": "Emperor",
-            "level": 52,
-            "floor": "172F - 195F"
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);",
+            "chance": "15%/8%",
+            "note": "Needed for Elizabeth's request"
           },
           {
             "name": "Ganesha",
             "arcana": "Star",
-            "level": 58,
-            "floor": "180F - 205F"
+            "level": 51,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Koumokuten",
+            "arcana": "Chariot",
+            "level": 52,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Throne",
+            "arcana": "Justice",
+            "level": 52,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);; 189 - 197 (except strong shadows);",
+            "chance": "10%/15%/11%",
+            "note": ""
+          },
+          {
+            "name": "Belphegor",
+            "arcana": "Emperor",
+            "level": 53,
+            "floor": "173 - 190; 173 - 196 (strong shadows, or sequence 26); 197 (Monad Passage, or sequence 26);; 180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);; 189 - 197 (except strong shadows);",
+            "chance": "5%/17%/13%",
+            "note": ""
+          },
+          {
+            "name": "Siegfried",
+            "arcana": "Strength",
+            "level": 54,
+            "floor": "180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);; 189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);",
+            "chance": "15%/14%/5%",
+            "note": "Needed for Scarlet Havoc Theurgy unlocking; Needed for Elizabeth's request"
           },
           {
             "name": "Jatayu",
             "arcana": "Sun",
             "level": 55,
-            "floor": "182F - 208F"
+            "floor": "180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);; 189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);",
+            "chance": "10%/14%/7%",
+            "note": ""
           },
           {
-            "name": "Throne",
-            "arcana": "Justice",
-            "level": 51,
-            "floor": "178F - 202F"
-          },
-          {
-            "name": "Rangda",
-            "arcana": "Magician",
-            "level": 54,
-            "floor": "185F - 210F"
-          },
-          {
-            "name": "Gabriel",
-            "arcana": "Empress",
-            "level": 69,
-            "floor": "195F - 214F"
-          },
-          {
-            "name": "Raphael",
-            "arcana": "Lovers",
-            "level": 61,
-            "floor": "190F - 214F"
-          }
-        ]
-      },
-      {
-        "dungeon": "Block 6: Adamah (215F - 264F)",
-        "recommended_level": "Lv 71 - 99",
-        "personas": [
-          {
-            "name": "Uriel",
-            "arcana": "Aeon",
-            "level": 63,
-            "floor": "215F - 235F"
-          },
-          {
-            "name": "Melchizedek",
-            "arcana": "Justice",
-            "level": 59,
-            "floor": "218F - 240F"
-          },
-          {
-            "name": "Seth",
-            "arcana": "Moon",
-            "level": 66,
-            "floor": "222F - 248F"
+            "name": "Suzaku",
+            "arcana": "Temperance",
+            "level": 55,
+            "floor": "180 - 190; 173 - 196 (strong shadows, or sequence 25); 173 - 196 (Monads); 197 (Monad Passage, or sequence 25);; 189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);",
+            "chance": "10%/13%/7%",
+            "note": ""
           },
           {
             "name": "Atropos",
             "arcana": "Fortune",
-            "level": 65,
-            "floor": "225F - 250F"
+            "level": 56,
+            "floor": "189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);",
+            "chance": "11%/9%",
+            "note": ""
           },
           {
-            "name": "Michael",
+            "name": "Chernobog",
+            "arcana": "Moon",
+            "level": 56,
+            "floor": "189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);",
+            "chance": "9%/7%",
+            "note": ""
+          },
+          {
+            "name": "Pazuzu",
+            "arcana": "Devil",
+            "level": 56,
+            "floor": "189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);",
+            "chance": "11%/9%/5%",
+            "note": ""
+          },
+          {
+            "name": "Daisoujou",
+            "arcana": "Hierophant",
+            "level": 59,
+            "floor": "199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "10%/9%/4%",
+            "note": "Needed for Elizabeth's request"
+          },
+          {
+            "name": "Trumpeter",
             "arcana": "Judgement",
-            "level": 70,
-            "floor": "230F - 258F"
+            "level": 59,
+            "floor": "189 - 197 (except strong shadows);; 199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "4%/10%/9%",
+            "note": ""
+          },
+          {
+            "name": "Bishamonten",
+            "arcana": "Tower",
+            "level": 60,
+            "floor": "199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "9%/11%/8%",
+            "note": ""
+          },
+          {
+            "name": "Raphael",
+            "arcana": "Lovers",
+            "level": 60,
+            "floor": "199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "9%/11%/8%",
+            "note": ""
+          },
+          {
+            "name": "Kikuri-Hime",
+            "arcana": "Priestess",
+            "level": 61,
+            "floor": "199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "8%/10%",
+            "note": ""
+          },
+          {
+            "name": "Kumbhanda",
+            "arcana": "Hermit",
+            "level": 61,
+            "floor": "199 - 214; 199 - 224 (strong shadows, or sequence 29); 225 (Monad Passage, or sequence 29);; 213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "8%/10%",
+            "note": ""
+          },
+          {
+            "name": "Gabriel",
+            "arcana": "Empress",
+            "level": 62,
+            "floor": "213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "8%/12%",
+            "note": ""
+          },
+          {
+            "name": "Seth",
+            "arcana": "Moon",
+            "level": 62,
+            "floor": "213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "8%/12%",
+            "note": ""
+          },
+          {
+            "name": "Barong",
+            "arcana": "Emperor",
+            "level": 63,
+            "floor": "213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "5%/11%",
+            "note": ""
+          },
+          {
+            "name": "Kali",
+            "arcana": "Strength",
+            "level": 63,
+            "floor": "213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "5%/11%",
+            "note": ""
+          },
+          {
+            "name": "Garuda",
+            "arcana": "Star",
+            "level": 64,
+            "floor": "213 - 220; 199 - 224 (strong shadows, or sequence 28); 199 - 224 (Monads); 225 (Monad Passage, or sequence 28);; 219 - 224 (except strong shadows);",
+            "chance": "2%/10%",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "dungeon": "Block 6: Adamah (227F - 264F)",
+        "recommended_level": "Lv 71 - 99",
+        "personas": [
+          {
+            "name": "Raphael",
+            "arcana": "Lovers",
+            "level": 60,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);",
+            "chance": "6%",
+            "note": ""
+          },
+          {
+            "name": "Kikuri-Hime",
+            "arcana": "Priestess",
+            "level": 61,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);",
+            "chance": "6%",
+            "note": ""
+          },
+          {
+            "name": "Kumbhanda",
+            "arcana": "Hermit",
+            "level": 61,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);",
+            "chance": "8%",
+            "note": ""
+          },
+          {
+            "name": "Gabriel",
+            "arcana": "Empress",
+            "level": 62,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Seth",
+            "arcana": "Moon",
+            "level": 62,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);",
+            "chance": "10%",
+            "note": ""
+          },
+          {
+            "name": "Barong",
+            "arcana": "Emperor",
+            "level": 63,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);",
+            "chance": "10%/12%",
+            "note": ""
+          },
+          {
+            "name": "Kali",
+            "arcana": "Strength",
+            "level": 63,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "12%/10%",
+            "note": ""
+          },
+          {
+            "name": "Garuda",
+            "arcana": "Star",
+            "level": 64,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "14%/15%/11%",
+            "note": ""
+          },
+          {
+            "name": "Qitian Dasheng",
+            "arcana": "Tower",
+            "level": 67,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);",
+            "chance": "10%/14%",
+            "note": ""
           },
           {
             "name": "Skadi",
             "arcana": "Empress",
-            "level": 75,
-            "floor": "235F - 262F"
+            "level": 68,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "8%/14%/16%/15%",
+            "note": ""
           },
           {
-            "name": "Satan",
-            "arcana": "Judgement",
-            "level": 82,
-            "floor": "245F - 264F"
+            "name": "Loki",
+            "arcana": "Fool",
+            "level": 69,
+            "floor": "227 - 245 227 - 261 (strong shadows, or sequence 32); 255 (Monad Passage, or sequence 32); Reaper (any Block, or sequence 32);; 237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "6%/10%/16%/20%",
+            "note": "Needed for Trickster Theurgy unlocking; Needed for Elizabeth's request"
           },
           {
-            "name": "Helel",
-            "arcana": "Star",
-            "level": 88,
-            "floor": "250F - 264F"
+            "name": "Baal Zebul",
+            "arcana": "Moon",
+            "level": 72,
+            "floor": "237 - 249; 227 - 261 (strong shadows, or sequence 31); 255 (Monad Passage, or sequence 31); Reaper (any Block, or sequence 31);; 248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "4%/13%/20%",
+            "note": ""
           },
           {
-            "name": "Lucifer",
-            "arcana": "Judgement",
-            "level": 89,
-            "floor": "255F - 264F"
+            "name": "Abaddon",
+            "arcana": "Devil",
+            "level": 76,
+            "floor": "248 - 252 (except strong shadows); 227 - 252 (Monads);; 257 - 261 (except strong shadows);",
+            "chance": "6%/18%",
+            "note": ""
+          },
+          {
+            "name": "Mother Harlot",
+            "arcana": "Empress",
+            "level": 77,
+            "floor": "257 - 261 (except strong shadows);",
+            "chance": "6%",
+            "note": "Available during Shuffle Time only at day 1/31 (fusion recommended)"
           }
         ]
       }

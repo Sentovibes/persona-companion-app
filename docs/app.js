@@ -4950,7 +4950,7 @@ function renderNegoPerks(container, color) {
 
 /* ── P3 & P4 Shuffle Time / Arcana Handlers ─────────────────────────────────── */
 function renderMinorArcanaRanks(container, gameData, color) {
-    const ranks = gameData?.minor_arcana_details || [];
+    const ranks = gameData?.minor_arcana_details?.ranks || gameData?.minor_arcana_details || [];
     if (!ranks.length) {
         container.innerHTML = `<div class="empty-state">No rank details available.</div>`;
         return;
@@ -4958,16 +4958,22 @@ function renderMinorArcanaRanks(container, gameData, color) {
 
     const currentRankNum = S.negoRank || 1;
     const currentDetail = ranks.find(r => r.rank === currentRankNum) || ranks[0];
+    const getRankLabel = (rk) => {
+        if (rk === 11) return 'Rank J';
+        if (rk === 12) return 'Rank Q';
+        if (rk === 13) return 'Rank K';
+        return `Rank ${rk}`;
+    };
 
     let html = `
         <div class="guide-wide-layout">
-            <div class="section-title" style="color:${color};margin-bottom:4px">Select Card Rank (Ranks 1 to 10)</div>
+            <div class="section-title" style="color:${color};margin-bottom:4px">Select Card Rank (Ranks 1 to 10, J, Q, K)</div>
             <div class="rank-selector-bar">
                 ${ranks.map(r => `
                     <button class="rank-pill-btn ${r.rank === currentRankNum ? 'active' : ''}"
                             style="${r.rank === currentRankNum ? `border-color:${color};color:${color}` : ''}"
                             onclick="setNegoRank(${r.rank})">
-                        Rank ${r.rank}
+                        ${getRankLabel(r.rank)}
                     </button>
                 `).join('')}
             </div>
@@ -4983,17 +4989,16 @@ function renderMinorArcanaRanks(container, gameData, color) {
                 </div>
                 <div class="bonus-stat-card">
                     <div class="bonus-stat-label">Cups (Recovery)</div>
-                    <div class="bonus-stat-val" style="color:#4FC3F7">${currentDetail.recovery || '10% HP/SP'}</div>
+                    <div class="bonus-stat-val" style="color:#4FC3F7">${currentDetail.cup_recovery || currentDetail.recovery || '10% HP/SP'}</div>
                 </div>
             </div>
 
             <div class="section-card" style="margin-top:8px">
-                <div class="section-title" style="color:${color}">Swords (Skill Cards & Skills at Rank ${currentDetail.rank})</div>
+                <div class="section-title" style="color:${color}">Swords (Skill Cards & Skills at ${getRankLabel(currentDetail.rank)})</div>
                 <div class="sword-skills-grid" style="margin-top:10px">
-                    ${(currentDetail.skills || []).map(sk => `
-                        <div class="sword-skill-card" onclick="setSkillRoutePreload(null, '${esc(sk)}')">
+                    ${(currentDetail.sword_skills || currentDetail.skills || []).map(sk => `
+                        <div class="sword-skill-card">
                             <span class="sword-skill-name">${sk}</span>
-                            <span style="font-size:.75rem;color:${color}">Fuse Route ›</span>
                         </div>
                     `).join('')}
                 </div>
@@ -5041,7 +5046,8 @@ function renderFloorPersonas(container, gameData, color) {
                     <div class="floor-persona-card" onclick="jumpToPersona('${esc(p.name)}')">
                         <div class="floor-persona-main">
                             <div class="floor-persona-name">${p.name}</div>
-                            <div class="floor-persona-arcana">${p.arcana || 'Persona'} ${p.floor ? `• ${p.floor}` : ''}</div>
+                            <div class="floor-persona-arcana">${p.arcana || 'Persona'}${p.floor ? ` • Floors: ${p.floor}` : ''}${p.chance ? ` • Drop: ${p.chance}` : ''}</div>
+                            ${p.note ? `<div style="font-size:0.75rem;color:#FFD700;margin-top:3px">${p.note}</div>` : ''}
                         </div>
                         <div class="floor-persona-badge" style="color:${color}">Lv. ${p.level}</div>
                     </div>
