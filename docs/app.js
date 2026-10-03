@@ -103,7 +103,10 @@ function normalizeListData(raw, type) {
                 : (costs[7] ? (costs[1] >= 1000 ? `${costs[7]} SP` : `${costs[7]}% HP`) : (costs[2] ? `${costs[2]} HP` : ''));
             const effect = item.effect || item.description || effects[0] || '';
             const note = item.note || effects[2] || '';
-            return { name, element, target, cost, effect, note };
+            const power = item.power ?? (costs[2] && costs[1] >= 1000 ? costs[2] : null);
+            const accuracy = item.accuracy ?? costs[5] ?? null;
+            const rank = item.rank ?? null;
+            return { name, element, target, cost, effect, note, power, accuracy, rank };
         });
     }
     if (raw.skills)   return Array.isArray(raw.skills) ? raw.skills : normalizeListData(raw.skills, 'skills');
@@ -760,6 +763,7 @@ function personaRow(name, p, color) {
                 <span class="row-name">${name}</span>
                 ${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}
                 <span class="arcana-tag" style="border-color:${color}44;color:${color};background:${color}15">${arcana}</span>
+                ${p.isDlc?`<span class="arcana-tag" style="border-color:#FFD70044;color:#FFD700;background:rgba(255,215,0,0.12);font-weight:700">DLC</span>`:''}
             </div>
             ${weakRow}
         </div>
@@ -784,7 +788,11 @@ function renderWeaknessRow(p, gameId) {
 
 /* ── Enemies ───────────────────────────────────────────────────────────────── */
 function renderEnemies(data, q, color, el) {
-    const all = Array.isArray(data) ? data.map(e=>[e.name,e]) : Object.entries(data);
+    const rawAll = Array.isArray(data) ? data.map(e=>[e.name,e]) : Object.entries(data);
+    const all = rawAll.filter(([,e]) => {
+        if (S.game === 'p3r' && !S.settings.showEpisodeAigis && e.episodeAigis) return false;
+        return true;
+    });
     const enemies    = all.filter(([,e])=>!e.isMiniBoss&&!e.isBoss);
     const miniBosses = all.filter(([,e])=>e.isMiniBoss);
     const mainBosses = all.filter(([,e])=>e.isBoss);
@@ -824,6 +832,7 @@ function renderEnemies(data, q, color, el) {
                 <div class="row-name-line">
                     <span class="row-name">${name}</span>
                     ${isFav?` <span class="fav-mark" style="color:${color}">&#x2665;</span>`:''}
+                    ${e.episodeAigis ? `<span class="arcana-tag" style="border-color:#38BDF844;color:#38BDF8;background:rgba(2,132,199,0.12);font-size:.7rem;margin-left:4px">Episode Aigis</span>` : ''}
                 </div>
                 <div class="row-sub">${e.arcana||'Shadow'} · Lv. ${e.level||'?'}</div>
                 ${resists}
@@ -943,6 +952,13 @@ async function buildSocialLinksScreen() {
     const isP5   = S.series==='p5';
     document.getElementById('slTitle').textContent = isP5 ? 'Confidants' : 'Social Links';
 
+    if (S.game === 'p3p') {
+        const isFemc = S.settings.p3pProtagonist === 'FEMC';
+        SL_PATHS['p3p'] = isFemc
+            ? './data/social-links/p3p_femc_social_links.json'
+            : './data/social-links/p3p_male_social_links.json';
+    }
+
     if (!S.slData) {
         document.getElementById('slContent').innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading…</div></div>`;
         try {
@@ -953,6 +969,7 @@ async function buildSocialLinksScreen() {
             const raw = await r.json();
             // Filter P5/P5R and P4/P4G exclusives
             S.slData = Object.entries(raw).filter(([arcana, data]) => {
+                if (arcana.startsWith('EXTRA:')) return false;
                 if (data['P5R Exclusive'] && S.game==='p5') return false;
                 if (data['P4G Exclusive'] && S.game==='p4') return false;
                 return true;
@@ -963,6 +980,13 @@ async function buildSocialLinksScreen() {
         }
     }
     renderSlList(color);
+}
+
+function setSlP3PProtagonist(mc) {
+    S.settings.p3pProtagonist = mc;
+    localStorage.setItem('settings', JSON.stringify(S.settings));
+    S.slData = null;
+    buildSocialLinksScreen();
 }
 
 function getSlCharacterName(gameId, arcana) {
@@ -1011,7 +1035,7 @@ function getSlCharacterName(gameId, arcana) {
         if (clean === 'Aeon') return 'Marie';
         return null;
     }
-    if (g === 'p3p_femc' || (g === 'p3p' && S.protagonist === 'femc')) {
+    if (g === 'p3p_femc' || (g === 'p3p' && (S.settings.p3pProtagonist === 'FEMC' || S.protagonist === 'femc'))) {
         const map = {
             'Fool': 'SEES', 'Magician': 'Junpei Iori', 'Priestess': 'Fuuka Yamagishi', 'Empress': 'Mitsuru Kirijo',
             'Emperor': 'Hidetoshi Odagiri', 'Hierophant': 'Bunkichi & Mitsuko', 'Lovers': 'Yukari Takeba',
@@ -1049,9 +1073,24 @@ function renderSlList(color) {
             return arcana.toLowerCase().includes(q) || char.includes(q);
         });
     }
-    if (!items.length) { document.getElementById('slContent').innerHTML=`<div class="empty-state">No results</div>`; return; }
-    document.getElementById('slContent').innerHTML = items.map(([arcana, data]) => {
-        const rankCount = countRanks(data);
+
+    const isP3P = S.game === 'p3p';
+    const p3pHtml = isP3P ? `
+        <div class="sort-bar" style="margin-bottom:10px">
+            <button class="sort-chip ${S.settings.p3pProtagonist !== 'FEMC' ? 'active' : ''}"
+                    style="${S.settings.p3pProtagonist !== 'FEMC' ? `color:${color};border-color:${color}` : ''}"
+                    onclick="setSlP3PProtagonist('MALE')">
+                Male Protagonist
+            </button>
+            <button class="sort-chip ${S.settings.p3pProtagonist === 'FEMC' ? 'active' : ''}"
+                    style="${S.settings.p3pProtagonist === 'FEMC' ? `color:${color};border-color:${color}` : ''}"
+                    onclick="setSlP3PProtagonist('FEMC')">
+                Female Protagonist
+            </button>
+        </div>` : '';
+
+    if (!items.length) { document.getElementById('slContent').innerHTML = p3pHtml + `<div class="empty-state">No results</div>`; return; }
+    document.getElementById('slContent').innerHTML = p3pHtml + items.map(([arcana, data]) => {
         const charName = getSlCharacterName(S.game, arcana);
         const loc = data.Details?.Location || '';
         return `<div class="row-card" onclick="openSlDetail('${esc(arcana)}')">
@@ -1111,7 +1150,8 @@ function buildSlDetailScreen() {
 
     const phoneEl = document.getElementById('slDetailContentPhone');
     const paneEl  = document.getElementById('slDetailContent');
-    if (phoneEl) document.getElementById('slDetailTitlePhone').textContent = arcana;
+    const charName = getSlCharacterName(S.game, arcana);
+    if (phoneEl) document.getElementById('slDetailTitlePhone').textContent = charName ? `${charName} (${arcana})` : arcana;
 
     let html = '';
 
@@ -1126,16 +1166,27 @@ function buildSlDetailScreen() {
 
     // ── Auto ranks at top level ─────────────────────────────────────────────
     Object.entries(data).forEach(([rankKey, rankVal]) => {
-        if (['P4G Exclusive','P5R Exclusive','P5R Reworked','Details','Rank Up Progression'].includes(rankKey)) return;
+        if (['P4G Exclusive','P5R Exclusive','P5R Reworked','Details','Rank Up Progression','Bonus Events','Summer Festival','Phone Invitations','Gifts Guide','Gift Guide','UltimatePersona','ThirdAwakening'].includes(rankKey)) return;
         if (typeof rankVal !== 'object') return;
         const isAuto = rankKey.toLowerCase().includes('auto');
         html += `<div class="section-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
                 <div class="section-title" style="color:${color};margin-bottom:0">${rankKey}</div>
-                ${isAuto ? `<span style="font-size:.7rem;font-weight:700;color:#4CAF50;background:rgba(76,175,80,.15);padding:3px 8px;border-radius:6px">AUTO</span>` : ''}
+                ${isAuto ? `<span style="font-size:.7rem;font-weight:700;color:#4CAF50;background:rgba(76,175,80,.15);padding:3px 8px;border-radius:4px">AUTO</span>` : ''}
             </div>`;
         if (rankVal.Requirements) {
             html += `<div class="info-row"><div class="info-label">Requirements</div><div class="info-val" style="text-align:right;max-width:65%">${rankVal.Requirements}</div></div>`;
+        }
+        if (rankVal.Benefit) {
+            const bName = typeof rankVal.Benefit === 'string' ? rankVal.Benefit : (rankVal.Benefit.Name || '');
+            const bDesc = typeof rankVal.Benefit === 'object' ? (rankVal.Benefit.Description || '') : '';
+            html += `<div class="benefit-card">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:${bDesc ? '4px' : '0'}">
+                    <span class="perk-badge" style="background:${color}22;color:${color}">★ PERK</span>
+                    <span style="font-weight:700;font-size:.85rem;color:var(--text)">${bName}</span>
+                </div>
+                ${bDesc ? `<div style="font-size:.8rem;color:var(--text2);line-height:1.4">${bDesc}</div>` : ''}
+            </div>`;
         }
         html += `</div>`;
     });
@@ -1152,6 +1203,30 @@ function buildSlDetailScreen() {
 
             if (rankVal.Requirements) {
                 html += `<div class="info-row" style="margin-bottom:8px"><div class="info-label">Requirements</div><div class="info-val" style="text-align:right;max-width:65%">${rankVal.Requirements}</div></div>`;
+            }
+            if (rankVal.Task) {
+                html += `<div class="info-row" style="margin-bottom:8px"><div class="info-label">Assignment</div><div class="info-val" style="text-align:right;max-width:65%;font-weight:600;color:${color}">${rankVal.Task}</div></div>`;
+            }
+            if (rankVal.Guide) {
+                html += `<div style="margin:8px 0;padding:8px 10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px">
+                    <div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;font-weight:700;margin-bottom:4px">Fusion Guide</div>
+                    <div style="font-size:.8rem;color:var(--text2);line-height:1.4">${rankVal.Guide}</div>
+                </div>`;
+            }
+            if (rankVal['Stat Bonus']) {
+                html += `<div class="info-row" style="margin-bottom:8px"><div class="info-label">Stat Bonus</div><div class="info-val" style="text-align:right;max-width:65%;color:#4CAF50;font-weight:600">${rankVal['Stat Bonus']}</div></div>`;
+            }
+
+            if (rankVal.Benefit) {
+                const bName = typeof rankVal.Benefit === 'string' ? rankVal.Benefit : (rankVal.Benefit.Name || '');
+                const bDesc = typeof rankVal.Benefit === 'object' ? (rankVal.Benefit.Description || '') : '';
+                html += `<div class="benefit-card">
+                    <div style="display:flex;align-items:center;gap:6px;margin-bottom:${bDesc ? '4px' : '0'}">
+                        <span class="perk-badge" style="background:${color}22;color:${color}">★ PERK</span>
+                        <span style="font-weight:700;font-size:.85rem;color:var(--text)">${bName}</span>
+                    </div>
+                    ${bDesc ? `<div style="font-size:.8rem;color:var(--text2);line-height:1.4">${bDesc}</div>` : ''}
+                </div>`;
             }
 
             // Dialogues
@@ -1186,6 +1261,14 @@ function buildSlDetailScreen() {
                     }
                 });
             }
+
+            if (Array.isArray(rankVal.Unlocks) && rankVal.Unlocks.length) {
+                html += `<div style="margin-top:8px;padding:8px 10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px">
+                    <div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;font-weight:700;margin-bottom:4px">Key Item Unlocks</div>
+                    <div style="font-size:.82rem;color:var(--text);font-weight:600">${rankVal.Unlocks.join(', ')}</div>
+                </div>`;
+            }
+
             html += `</div>`;
         });
     }
@@ -1203,6 +1286,104 @@ function buildSlDetailScreen() {
             <div class="awakening-name">${data.ThirdAwakening.Persona || data.ThirdAwakening}</div>
             <div class="awakening-req">${data.ThirdAwakening.Requirement || 'Third Semester Event'}</div>
         </div>`;
+    }
+
+    // ── Summer Festival ─────────────────────────────────────────────────────
+    if (Array.isArray(data['Summer Festival']) && data['Summer Festival'].length) {
+        html += `<div class="section-card">
+            <div class="section-title" style="color:${color}">Summer Festival</div>`;
+        data['Summer Festival'].forEach(ev => {
+            html += `<div style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:4px">${ev.Event || 'Festival'}</div>`;
+            if (ev.Question) html += `<div style="font-size:.8rem;color:var(--text2);margin-bottom:6px;font-style:italic">${ev.Question}</div>`;
+            if (Array.isArray(ev.Choices)) {
+                ev.Choices.forEach(c => {
+                    const pts = c.Points || 0;
+                    html += `<div class="skill-row" style="margin-bottom:4px;align-items:center">
+                        <div class="skill-name" style="font-size:.85rem">${c.Answer}</div>
+                        <div class="skill-level" style="color:#4CAF50;font-weight:700;font-size:.8rem">+${pts}</div>
+                    </div>`;
+                });
+            }
+        });
+        html += `</div>`;
+    }
+
+    // ── Special Events & Hangouts (Bonus Events) ────────────────────────────
+    if (Array.isArray(data['Bonus Events']) && data['Bonus Events'].length) {
+        html += `<div class="section-card">
+            <div class="section-title" style="color:${color}">Special Events & Hangouts</div>`;
+        data['Bonus Events'].forEach(bev => {
+            const title = bev.Event || (bev.Location ? `Outing: ${bev.Location}` : 'Special Event');
+            html += `<div style="margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)">
+                <div style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:2px">${title}</div>`;
+            if (bev['Earliest Date Available']) {
+                html += `<div style="font-size:.78rem;color:var(--text3);margin-bottom:4px">Available: ${bev['Earliest Date Available']}</div>`;
+            }
+            if (bev.Reward) {
+                html += `<div style="font-size:.8rem;color:#4CAF50;font-weight:600;margin-bottom:4px">Reward: ${bev.Reward}</div>`;
+            }
+            if (bev.Details) {
+                html += `<div style="font-size:.8rem;color:var(--text2);margin-bottom:6px">${bev.Details}</div>`;
+            }
+            if (Array.isArray(bev.Dialogues)) {
+                bev.Dialogues.forEach(d => {
+                    if (d.Question && !d.Question.startsWith('Dialogue')) {
+                        html += `<div style="font-size:.78rem;color:var(--text3);margin:4px 0 2px;font-style:italic">${d.Question}</div>`;
+                    }
+                    if (Array.isArray(d.Choices)) {
+                        d.Choices.forEach(c => {
+                            const pts = c.Points || 0;
+                            const ptColor = pts > 0 ? color : 'var(--text3)';
+                            html += `<div class="skill-row" style="margin-bottom:4px;align-items:center">
+                                <div class="skill-name" style="font-size:.85rem">${c.Answer}</div>
+                                <div class="skill-level" style="color:${ptColor};font-weight:700;font-size:.8rem">${pts > 0 ? `+${pts}` : '—'}</div>
+                            </div>`;
+                        });
+                    }
+                });
+            }
+            html += `</div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ── Phone Invitations (Sunday Hangouts) ─────────────────────────────────
+    if (Array.isArray(data['Phone Invitations']) && data['Phone Invitations'].length) {
+        html += `<div class="section-card">
+            <div class="section-title" style="color:${color}">Phone Invitations (Sunday Hangouts)</div>`;
+        data['Phone Invitations'].forEach(pi => {
+            html += `<div style="margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+                <div style="font-size:.8rem;font-weight:700;color:var(--text2);margin-bottom:2px">Rank ${pi.Rank || '—'} Call</div>
+                <div style="font-size:.82rem;color:var(--text);margin-bottom:6px;font-style:italic">"${pi.Question}"</div>`;
+            if (Array.isArray(pi.Choices)) {
+                pi.Choices.forEach(c => {
+                    const pts = c.Points || 0;
+                    html += `<div class="skill-row" style="margin-bottom:4px;align-items:center">
+                        <div class="skill-name" style="font-size:.85rem">${c.Answer}</div>
+                        <div class="skill-level" style="color:#4CAF50;font-weight:700;font-size:.8rem">+${pts}</div>
+                    </div>`;
+                });
+            }
+            html += `</div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ── Gifts Guide ─────────────────────────────────────────────────────────
+    const gifts = data['Gifts Guide'] || data['Gift Guide'];
+    if (Array.isArray(gifts) && gifts.length) {
+        html += `<div class="section-card">
+            <div class="section-title" style="color:${color}">Gift Guide</div>
+            <div style="display:grid;gap:6px">`;
+        gifts.forEach(g => {
+            const pts = g.Points || 0;
+            const ptColor = pts >= 50 ? '#4CAF50' : pts >= 30 ? color : 'var(--text2)';
+            html += `<div class="skill-row" style="align-items:center">
+                <div class="skill-name" style="font-size:.85rem;font-weight:500">${g.Item || g.Name || 'Gift'}</div>
+                <div class="skill-level" style="color:${ptColor};font-weight:700;font-size:.82rem">+${pts} pts</div>
+            </div>`;
+        });
+        html += `</div></div>`;
     }
 
     const content = html || `<div class="empty-state">No data available</div>`;
@@ -1306,7 +1487,7 @@ function renderPersonaDetailHtml(name, p, color) {
                 </div>
                 <div class="detail-hero-info">
                     <div class="detail-hero-name">${name}</div>
-                    <div class="detail-hero-arcana">${arcana} Arcana</div>
+                    <div class="detail-hero-arcana">${arcana} Arcana ${p.isDlc ? `<span class="arcana-tag" style="border-color:#FFD70044;color:#FFD700;background:rgba(255,215,0,0.12);font-weight:700;margin-left:6px">DLC</span>` : ''}</div>
                     ${p.trait?`<div class="detail-hero-trait" style="color:${color}">Trait: ${p.trait}</div>`:''}
                     ${p.inherits?`<div style="font-size:.8rem;color:var(--text3);margin-top:2px">Inherits: <strong style="color:var(--text2)">${p.inherits}</strong></div>`:''}
                 </div>
@@ -1331,6 +1512,13 @@ function renderPersonaDetailHtml(name, p, color) {
             <div class="section-title" style="color:#FFD700">Itemization (Electric Chair / Transmute)</div>
             ${p.item ? `<div style="font-size:.88rem;color:var(--text);margin-bottom:4px">Item: <strong>${p.item}</strong></div>` : ''}
             ${p.itemr ? `<div style="font-size:.85rem;color:#FFD700">Fusion Alarm Item: <strong>${p.itemr}</strong></div>` : ''}
+        </div>`;
+    }
+
+    if (p.heart) {
+        html += `<div class="section-card" style="border-left:3px solid #E91E63">
+            <div class="section-title" style="color:#E91E63">Heart Item (Level Up Reward)</div>
+            <div style="font-size:.88rem;color:var(--text)">Produces: <strong>${p.heart}</strong></div>
         </div>`;
     }
 
@@ -1404,7 +1592,7 @@ function renderEnemyDetail(name, e, color, containerId) {
         html += `<div class="boss-hero" style="background:${color}11">
             <img src="${imgUrl}" class="boss-image" alt="${name}" onerror="this.style.display='none'">
             <div class="boss-name" style="color:${color}">${name}</div>
-            <div style="font-size:1rem;color:var(--text2);margin-top:4px">${e.arcana||'Shadow'} · Level ${e.level||'?'}</div>
+            <div style="font-size:1rem;color:var(--text2);margin-top:4px">${e.arcana||'Shadow'} · Level ${e.level||'?'}${e.episodeAigis ? ' · <span style="color:#38BDF8;font-weight:700">Episode Aigis</span>' : ''}</div>
             <div class="boss-stats-grid">
                 <div class="boss-stat-box"><div class="boss-stat-val">${e.hp||'???'}</div><div class="boss-stat-label">HP</div></div>
                 <div class="boss-stat-box"><div class="boss-stat-val">${e.sp||'???'}</div><div class="boss-stat-label">SP</div></div>
@@ -1414,7 +1602,7 @@ function renderEnemyDetail(name, e, color, containerId) {
         html += `<div class="section-card">
             <div style="display:flex;justify-content:space-between;align-items:flex-start">
                 <div>
-                    <div style="font-size:1rem;color:var(--text2)">${e.arcana||'Shadow'}</div>
+                    <div style="font-size:1rem;color:var(--text2)">${e.arcana||'Shadow'}${e.episodeAigis ? ' · <span style="color:#38BDF8;font-weight:700">Episode Aigis</span>' : ''}</div>
                     <div style="font-size:1.125rem;color:var(--text);margin-top:2px">Level ${e.level||'?'}</div>
                 </div>
                 <div style="text-align:right">
@@ -1431,7 +1619,8 @@ function renderEnemyDetail(name, e, color, containerId) {
     // Negotiation Cheat Sheet for P5/P5R
     if (S.series === 'p5' && !isBoss) {
         const pName = e.persona_name || name;
-        const personality = (S.negoData?.shadows?.find(s => s.name === name || s.persona_name === pName)?.personality) ||
+        const shadowList = S.negoData?.p5?.shadows || S.negoData?.shadows || [];
+        const personality = (shadowList.find(s => s.name === name || s.persona_name === pName)?.personality) ||
             (e.arcana === "Lovers" || e.arcana === "Priestess" || e.arcana === "Empress" ? "Timid" :
             e.arcana === "Magician" || e.arcana === "Chariot" || e.arcana === "Sun" ? "Upbeat" :
             e.arcana === "Death" || e.arcana === "Moon" || e.arcana === "Hanged Man" ? "Gloomy" : "Irritable");
@@ -1498,14 +1687,16 @@ function renderEnemyDetail(name, e, color, containerId) {
         });
     }
 
-    // Drops
-    if (e.drops) {
+    // Location & Drops
+    if (e.drops || (e.area && e.area !== 'Unknown') || e.exp > 0) {
         html += `<div class="section-card"><div class="section-title">Location & Drops</div>`;
         if (e.area && e.area !== 'Unknown') html += `<div class="info-row"><div class="info-label">Area</div><div class="info-val">${e.area}</div></div>`;
         if (e.exp > 0) html += `<div class="info-row"><div class="info-label">EXP</div><div class="info-val">${e.exp}</div></div>`;
-        if (e.drops.gem && e.drops.gem !== '-') html += `<div class="info-row"><div class="info-label">Gem</div><div class="info-val">${e.drops.gem}</div></div>`;
-        if (e.drops.item && e.drops.item !== '-') html += `<div class="info-row"><div class="info-label">Item</div><div class="info-val">${e.drops.item}</div></div>`;
-        if (e.drops.rare && e.drops.rare !== '-') html += `<div class="info-row" style="color:#FFD700"><div class="info-label" style="color:#FF9800">Rare Drop</div><div class="info-val">${e.drops.rare}</div></div>`;
+        if (e.drops) {
+            if (e.drops.gem && e.drops.gem !== '-') html += `<div class="info-row"><div class="info-label">Gem</div><div class="info-val">${e.drops.gem}</div></div>`;
+            if (e.drops.item && e.drops.item !== '-') html += `<div class="info-row"><div class="info-label">Item</div><div class="info-val">${e.drops.item}</div></div>`;
+            if (e.drops.rare && e.drops.rare !== '-') html += `<div class="info-row" style="color:#FFD700"><div class="info-label" style="color:#FF9800">Rare Drop</div><div class="info-val">${e.drops.rare}</div></div>`;
+        }
         html += `</div>`;
     }
 
@@ -3590,22 +3781,6 @@ async function ensureNegotiationLoaded() {
     return S.negoData;
 }
 
-function setNegoTab(tab) {
-    S.negoTab = tab;
-    const series = SERIES.find(s=>s.id===S.series);
-    const color = series?.color||'#2196F3';
-
-    const tabMatrix = document.getElementById('negoTabMatrix');
-    const tabLookup = document.getElementById('negoTabLookup');
-    const tabPerks = document.getElementById('negoTabPerks');
-
-    if (tabMatrix) tabMatrix.classList.toggle('active', tab === 'matrix' || tab === 'shuffle');
-    if (tabLookup) tabLookup.classList.toggle('active', tab === 'lookup');
-    if (tabPerks) tabPerks.classList.toggle('active', tab === 'perks');
-
-    renderNegotiationContent(color);
-}
-
 function onNegoQuery(val) {
     S.negoQuery = val;
     const series = SERIES.find(s=>s.id===S.series);
@@ -3656,6 +3831,8 @@ async function buildNegotiationScreen() {
             tabBar.innerHTML = `
                 <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='p3_major')?'active':''}" id="negoTabP3Major" onclick="setNegoTab('p3_major')">Major Arcana</button>
                 <button class="fusion-tab-pill ${S.negoTab==='p3_minor'?'active':''}" id="negoTabP3Minor" onclick="setNegoTab('p3_minor')">Minor Arcana / Suits</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p3_ranks'?'active':''}" id="negoTabP3Ranks" onclick="setNegoTab('p3_ranks')">Card Ranks & EXP</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p3_floors'?'active':''}" id="negoTabP3Floors" onclick="setNegoTab('p3_floors')">Floor Personas</button>
                 <button class="fusion-tab-pill ${S.negoTab==='p3_mech'?'active':''}" id="negoTabP3Mech" onclick="setNegoTab('p3_mech')">Mechanics & Tips</button>
             `;
             if (!S.negoTab || !S.negoTab.startsWith('p3_')) S.negoTab = 'p3_major';
@@ -3664,6 +3841,8 @@ async function buildNegotiationScreen() {
                 <button class="fusion-tab-pill ${(!S.negoTab || S.negoTab==='p4_sweep')?'active':''}" id="negoTabP4Sweep" onclick="setNegoTab('p4_sweep')">Sweep Bonus Guide</button>
                 <button class="fusion-tab-pill ${S.negoTab==='p4_arcana'?'active':''}" id="negoTabP4Arcana" onclick="setNegoTab('p4_arcana')">Arcana Cards</button>
                 <button class="fusion-tab-pill ${S.negoTab==='p4_minor'?'active':''}" id="negoTabP4Minor" onclick="setNegoTab('p4_minor')">Minor Arcana</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p4_ranks'?'active':''}" id="negoTabP4Ranks" onclick="setNegoTab('p4_ranks')">Card Ranks & EXP</button>
+                <button class="fusion-tab-pill ${S.negoTab==='p4_floors'?'active':''}" id="negoTabP4Floors" onclick="setNegoTab('p4_floors')">Dungeon Personas</button>
             `;
             if (!S.negoTab || !S.negoTab.startsWith('p4_')) S.negoTab = 'p4_sweep';
         }
@@ -3682,15 +3861,24 @@ function setNegoTab(tab) {
         btn.classList.remove('active');
     });
 
-    if (tab === 'matrix') document.getElementById('negoTabMatrix')?.classList.add('active');
-    else if (tab === 'lookup') document.getElementById('negoTabLookup')?.classList.add('active');
-    else if (tab === 'perks') document.getElementById('negoTabPerks')?.classList.add('active');
-    else if (tab === 'p3_major') document.getElementById('negoTabP3Major')?.classList.add('active');
-    else if (tab === 'p3_minor') document.getElementById('negoTabP3Minor')?.classList.add('active');
-    else if (tab === 'p3_mech') document.getElementById('negoTabP3Mech')?.classList.add('active');
-    else if (tab === 'p4_sweep') document.getElementById('negoTabP4Sweep')?.classList.add('active');
-    else if (tab === 'p4_arcana') document.getElementById('negoTabP4Arcana')?.classList.add('active');
-    else if (tab === 'p4_minor') document.getElementById('negoTabP4Minor')?.classList.add('active');
+    const activeMap = {
+        matrix: 'negoTabMatrix',
+        lookup: 'negoTabLookup',
+        perks: 'negoTabPerks',
+        p3_major: 'negoTabP3Major',
+        p3_minor: 'negoTabP3Minor',
+        p3_ranks: 'negoTabP3Ranks',
+        p3_floors: 'negoTabP3Floors',
+        p3_mech: 'negoTabP3Mech',
+        p4_sweep: 'negoTabP4Sweep',
+        p4_arcana: 'negoTabP4Arcana',
+        p4_minor: 'negoTabP4Minor',
+        p4_ranks: 'negoTabP4Ranks',
+        p4_floors: 'negoTabP4Floors'
+    };
+    if (activeMap[tab]) {
+        document.getElementById(activeMap[tab])?.classList.add('active');
+    }
 
     renderNegotiationContent(color);
 }
@@ -3698,6 +3886,8 @@ function setNegoTab(tab) {
 function renderNegotiationContent(color) {
     const el = document.getElementById('negotiationContent');
     if (!el) return;
+
+    const gameData = S.series === 'p3' ? S.negoData?.p3 : S.negoData?.p4;
 
     if (S.negoTab === 'matrix') {
         el.innerHTML = renderNegotiationMatrix(color);
@@ -3710,6 +3900,10 @@ function renderNegotiationContent(color) {
         el.innerHTML = renderP3MajorArcanaGuide(color);
     } else if (S.negoTab === 'p3_minor') {
         el.innerHTML = renderP3MinorArcanaGuide(color);
+    } else if (S.negoTab === 'p3_ranks' || S.negoTab === 'p4_ranks') {
+        renderMinorArcanaRanks(el, gameData, color);
+    } else if (S.negoTab === 'p3_floors' || S.negoTab === 'p4_floors') {
+        renderFloorPersonas(el, gameData, color);
     } else if (S.negoTab === 'p3_mech') {
         el.innerHTML = renderP3MechanicsGuide(color);
     } else if (S.negoTab === 'p4_sweep') {
@@ -4202,9 +4396,13 @@ function openItem(name) {
     let html = `
         <div class="section-card">
             <div class="section-title" style="color:${color}">${it.category || 'Item'}</div>
-            <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${it.effect || it.description || 'No effect listed'}</div></div>
-            ${it.price?`<div class="info-row"><div class="info-label">Price</div><div class="info-val">${it.price}</div></div>`:''}
-            ${it.location?`<div class="info-row"><div class="info-label">Location</div><div class="info-val">${it.location}</div></div>`:''}
+            ${it.effect ? `<div class="info-row"><div class="info-label">Effect</div><div class="info-val">${it.effect}</div></div>` : (!it.description ? `<div class="info-row"><div class="info-label">Effect</div><div class="info-val">No effect listed</div></div>` : '')}
+            ${it.description && it.description !== it.effect ? `<div class="info-row"><div class="info-label">Description</div><div class="info-val">${it.description}</div></div>` : ''}
+            ${it.attack ? `<div class="info-row"><div class="info-label">Attack</div><div class="info-val">${it.attack}</div></div>` : ''}
+            ${it.accuracy ? `<div class="info-row"><div class="info-label">Accuracy</div><div class="info-val">${it.accuracy}%</div></div>` : ''}
+            ${it.price ? `<div class="info-row"><div class="info-label">Price</div><div class="info-val">${it.price}</div></div>` : ''}
+            ${it.sellPrice ? `<div class="info-row"><div class="info-label">Sell Price</div><div class="info-val">${it.sellPrice}</div></div>` : ''}
+            ${it.location ? `<div class="info-row"><div class="info-label">Location</div><div class="info-val">${it.location}</div></div>` : ''}
         </div>
     `;
     document.getElementById('itemDetailContent').innerHTML = html;
@@ -4280,8 +4478,14 @@ function openSkill(name) {
     let html = `
         <div class="section-card">
             <div class="section-title" style="color:${color}">${sk.element || sk.type || 'Skill'}</div>
-            <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${sk.effect || 'No effect listed'}</div></div>
-            ${sk.cost?`<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>`:''}
+            <div class="info-row"><div class="info-label">Effect</div><div class="info-val">${sk.effect || sk.description || 'No effect listed'}</div></div>
+            ${sk.description && sk.description !== sk.effect ? `<div class="info-row"><div class="info-label">Description</div><div class="info-val">${sk.description}</div></div>` : ''}
+            ${sk.target && sk.target !== '-' ? `<div class="info-row"><div class="info-label">Target</div><div class="info-val">${sk.target}</div></div>` : ''}
+            ${sk.cost ? `<div class="info-row"><div class="info-label">Cost</div><div class="info-val">${sk.cost}</div></div>` : ''}
+            ${sk.power ? `<div class="info-row"><div class="info-label">Power</div><div class="info-val">${sk.power}</div></div>` : ''}
+            ${sk.accuracy ? `<div class="info-row"><div class="info-label">Accuracy</div><div class="info-val">${sk.accuracy}%</div></div>` : ''}
+            ${sk.rank ? `<div class="info-row"><div class="info-label">Rank</div><div class="info-val">Rank ${sk.rank}</div></div>` : ''}
+            ${sk.note ? `<div class="info-row"><div class="info-label">Note</div><div class="info-val">${sk.note}</div></div>` : ''}
             <div style="margin-top:12px">
                 <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload(null, '${esc(sk.name)}')">
                     Transfer to Persona (Find Fusion Route) ›
@@ -4349,11 +4553,17 @@ async function buildRequestsScreen() {
     document.getElementById('requestSearch').value = S.requestQuery;
     document.getElementById('requestSearchClear').style.display = S.requestQuery ? 'block' : 'none';
     
-    const key = `requests_${S.game}`;
+    if (S.game === 'p3r') {
+        if (!S.p3rRequestMode) S.p3rRequestMode = 'main';
+    }
+    const reqPath = (S.game === 'p3r' && S.p3rRequestMode === 'aigis') 
+        ? './data/requests/aigis_requests.json' 
+        : REQUEST_PATHS[S.game];
+    const key = `requests_${S.game}_${S.game === 'p3r' ? S.p3rRequestMode : 'all'}`;
     if (!S.rawData[key]) {
         showLoadingRequest();
         try {
-            const r = await fetch(REQUEST_PATHS[S.game]);
+            const r = await fetch(reqPath);
             if (!r.ok) throw new Error(r.statusText);
             const raw = await r.json();
             S.rawData[key] = normalizeListData(raw, 'requests');
@@ -4362,11 +4572,25 @@ async function buildRequestsScreen() {
     renderRequests(S.rawData[key], color);
 }
 
+function setP3rRequestMode(mode) {
+    S.p3rRequestMode = mode;
+    buildRequestsScreen();
+}
+
 function renderRequests(data, color) {
     const q = S.requestQuery.toLowerCase();
     const el = document.getElementById('requestContent');
     const doneCount = data.filter(req => S.completedRequests.has(`${S.game}_req_${req.id || req.name}`)).length;
     const pct = data.length ? Math.round(doneCount / data.length * 100) : 0;
+    const toggleHtml = S.game === 'p3r' ? `
+        <div class="sort-bar" style="margin-bottom:10px">
+            <button class="sort-chip ${S.p3rRequestMode !== 'aigis' ? 'active' : ''}"
+                    style="${S.p3rRequestMode !== 'aigis' ? `color:${color};border-color:${color}` : ''}"
+                    onclick="setP3rRequestMode('main')">Elizabeth (101)</button>
+            <button class="sort-chip ${S.p3rRequestMode === 'aigis' ? 'active' : ''}"
+                    style="${S.p3rRequestMode === 'aigis' ? `color:${color};border-color:${color}` : ''}"
+                    onclick="setP3rRequestMode('aigis')">Episode Aigis (59)</button>
+        </div>` : '';
     const progressHtml = `
         <div class="req-progress-wrap">
             <div class="req-progress-top">
@@ -4379,9 +4603,9 @@ function renderRequests(data, color) {
     let items = data.filter(req => req.name.toLowerCase().includes(q) || (req.giver||'').toLowerCase().includes(q));
     if (S.hideCompletedReq) items = items.filter(req => !S.completedRequests.has(`${S.game}_req_${req.id || req.name}`));
 
-    if (!items.length) { el.innerHTML = progressHtml + `<div class="empty-state">${S.hideCompletedReq?'All matching requests are completed':'No requests found'}</div>`; return; }
+    if (!items.length) { el.innerHTML = toggleHtml + progressHtml + `<div class="empty-state">${S.hideCompletedReq?'All matching requests are completed':'No requests found'}</div>`; return; }
 
-    el.innerHTML = progressHtml + items.map(req => {
+    el.innerHTML = toggleHtml + progressHtml + items.map(req => {
         const id = `${S.game}_req_${req.id || req.name}`;
         const isDone = S.completedRequests.has(id);
         return `
@@ -4396,8 +4620,8 @@ function renderRequests(data, color) {
 }
 
 function openRequest(name) {
-    const key = `requests_${S.game}`;
-    const req = S.rawData[key].find(r => r.name === name);
+    const key = `requests_${S.game}_${S.game === 'p3r' ? (S.p3rRequestMode || 'main') : 'all'}`;
+    const req = (S.rawData[key] || S.rawData[`requests_${S.game}`] || []).find(r => r.name === name);
     if (!req) return;
     S.currentRequest = req;
     const series = SERIES.find(s=>s.id===S.series);
@@ -4411,13 +4635,22 @@ function openRequest(name) {
     const isDone = S.completedRequests.has(id);
     document.getElementById('requestCompleteBtn').style.color = isDone ? '#4CAF50' : '';
     
+    const desc = req.details || req.remarks || req.description || req.notes || '';
+    
     let html = `
         <div class="section-card">
             <div class="section-title" style="color:${color}">${req.available || 'Request'}</div>
-            <div class="info-row"><div class="info-label">Reward</div><div class="info-val">${req.reward || '-'}</div></div>
-            ${req.deadline?`<div class="info-row"><div class="info-label">Deadline</div><div class="info-val">${req.deadline}</div></div>`:''}
-            ${req.giver||req.quest_giver?`<div class="info-row"><div class="info-label">Giver</div><div class="info-val">${req.giver||req.quest_giver}</div></div>`:''}
-            ${req.description?`<div class="desc-box" style="margin-top:12px">${req.description}</div>`:''}
+            <div class="info-row"><div class="info-label">Reward</div><div class="info-val" style="font-weight:700">${req.reward || '-'}</div></div>
+            ${req.category ? `<div class="info-row"><div class="info-label">Category</div><div class="info-val">${req.category}${req.subcategory ? ` (${req.subcategory})` : ''}</div></div>` : ''}
+            ${req.deadline ? `<div class="info-row"><div class="info-label">Deadline</div><div class="info-val">${req.deadline}</div></div>` : ''}
+            ${req.giver || req.quest_giver ? `<div class="info-row"><div class="info-label">Giver</div><div class="info-val">${req.giver || req.quest_giver}</div></div>` : ''}
+            ${req.target ? `<div class="info-row"><div class="info-label">Target</div><div class="info-val">${req.target}</div></div>` : ''}
+            ${req.demon_form ? `<div class="info-row"><div class="info-label">Demon Form</div><div class="info-val">${req.demon_form}</div></div>` : ''}
+            ${req.location ? `<div class="info-row"><div class="info-label">Location</div><div class="info-val">${req.location}</div></div>` : ''}
+            ${req.difficulty ? `<div class="info-row"><div class="info-label">Difficulty</div><div class="info-val">${req.difficulty}</div></div>` : ''}
+            ${req.weakness ? `<div class="info-row"><div class="info-label">Weakness</div><div class="info-val" style="color:#81C784;font-weight:700">${req.weakness}</div></div>` : ''}
+            ${req.confusable != null ? `<div class="info-row"><div class="info-label">Confusable (Money Farm)</div><div class="info-val" style="color:#FFD700;font-weight:700">${req.confusable ? 'Yes' : 'No'}</div></div>` : ''}
+            ${desc ? `<div class="desc-box" style="margin-top:12px;white-space:pre-line">${desc}</div>` : ''}
         </div>
     `;
     document.getElementById('requestDetailContent').innerHTML = html;
@@ -4499,38 +4732,24 @@ async function renderBossGuides(container, color) {
 
     const q = (S.guideQuery || '').toLowerCase();
     const filtered = bosses.filter(b => {
-        const matchesQ = !q || b.name.toLowerCase().includes(q) || (b.location || '').toLowerCase().includes(q) || (b.strategy || '').toLowerCase().includes(q);
-        const matchesFilter = S.guideBossFilter === 'all' || (b.type || '').toLowerCase() === S.guideBossFilter.toLowerCase();
-        return matchesQ && matchesFilter;
+        return !q || b.name.toLowerCase().includes(q) || (b.location || '').toLowerCase().includes(q) || (b.strategy || '').toLowerCase().includes(q);
     });
-
-    const types = ['all', ...new Set(bosses.map(b => b.type || 'Story').filter(Boolean))];
 
     let html = `
         <div class="guide-wide-layout">
-            <div class="search-wrap" style="margin-bottom:8px">
+            <div class="search-wrap" style="margin-bottom:12px">
                 <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 <input class="search-input" type="text" placeholder="Search boss name, tactics, location..." value="${esc(S.guideQuery || '')}" oninput="onGuideSearch(this.value)">
                 ${S.guideQuery ? `<button class="search-clear" onclick="clearGuideSearch()" style="display:block">&#x2715;</button>` : ''}
             </div>
 
-            <div class="sort-bar" style="margin-bottom:12px">
-                ${types.map(t => `
-                    <button class="sort-chip ${S.guideBossFilter === t ? 'active' : ''}"
-                            style="${S.guideBossFilter === t ? `color:${color};border-color:${color}` : ''}"
-                            onclick="setGuideBossFilter('${esc(t)}')">
-                        ${t.charAt(0).toUpperCase() + t.slice(1)}
-                    </button>
-                `).join('')}
-            </div>
-
             <div class="boss-list-wrap">
                 ${filtered.length ? filtered.map(b => {
-                    const weaknesses = b.weaknesses || [];
-                    const resists = b.resists || [];
-                    const repels = b.repels || [];
-                    const absorbs = b.absorbs || b.drains || [];
+                    const weaknesses = Array.isArray(b.weaknesses) ? b.weaknesses.join(', ') : (b.weaknesses || 'None');
+                    const resistances = b.resistances || (Array.isArray(b.resists) ? b.resists.join(', ') : '') || 'None';
                     const phases = b.phases || [];
+                    const isWeakNone = weaknesses.toLowerCase().includes('none') || weaknesses === '-';
+                    const isResNone = resistances.toLowerCase().includes('none') || resistances === '-';
                     
                     return `
                         <div class="boss-card">
@@ -4542,12 +4761,21 @@ async function renderBossGuides(container, color) {
                                 ${b.level ? `<div class="boss-lvl-badge" style="color:${color}">Lv. ${b.level}</div>` : ''}
                             </div>
 
-                            ${(weaknesses.length || resists.length || repels.length || absorbs.length) ? `
-                                <div class="boss-affinity-grid">
-                                    ${weaknesses.map(w => `<span class="affinity-tag weak">Weak: ${w}</span>`).join('')}
-                                    ${resists.map(r => `<span class="affinity-tag null">Resist: ${r}</span>`).join('')}
-                                    ${repels.map(rp => `<span class="affinity-tag rep">Repel: ${rp}</span>`).join('')}
-                                    ${absorbs.map(ab => `<span class="affinity-tag drn">Drain: ${ab}</span>`).join('')}
+                            <div class="boss-affinity-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0">
+                                <div class="boss-section-block">
+                                    <div class="boss-section-label" style="color:#81C784">Weaknesses</div>
+                                    <div class="boss-section-val" style="font-weight:700;color:${isWeakNone ? 'var(--text3)' : '#81C784'}">${weaknesses}</div>
+                                </div>
+                                <div class="boss-section-block">
+                                    <div class="boss-section-label" style="color:#FFB74D">Resistances</div>
+                                    <div class="boss-section-val" style="font-weight:700;color:${isResNone ? 'var(--text3)' : '#FFB74D'}">${resistances}</div>
+                                </div>
+                            </div>
+
+                            ${b.party ? `
+                                <div class="boss-section-block">
+                                    <div class="boss-section-label" style="color:${color}">Recommended Party</div>
+                                    <div class="boss-section-val">${b.party}</div>
                                 </div>
                             ` : ''}
 
@@ -4563,9 +4791,16 @@ async function renderBossGuides(container, color) {
                             ` : ''}
 
                             <div class="boss-strategy-box">
-                                <div class="boss-strategy-title">Expert Strategy & Preparation</div>
+                                <div class="boss-strategy-title">Fight Walkthrough & Strategy</div>
                                 <div class="boss-strategy-text">${b.strategy || b.tactics || 'Buff party defense and exploit elemental weaknesses.'}</div>
                             </div>
+
+                            ${b.buildPrep ? `
+                                <div class="boss-section-block" style="border-left:3px solid ${color};margin-top:2px">
+                                    <div class="boss-section-label" style="color:${color}">Build & Equipment Prep</div>
+                                    <div class="boss-section-val">${b.buildPrep}</div>
+                                </div>
+                            ` : ''}
                         </div>
                     `;
                 }).join('') : `<div class="empty-state">No matching bosses found</div>`}
@@ -4605,18 +4840,29 @@ async function renderQuestGuides(container, color) {
     }
 
     // Filter relevant game entries
-    let gameQuests = S.guidesData.quest.filter(g => g.gameId === S.game);
+    let gameEntries = S.guidesData.quest.filter(g => g.gameId === S.game);
     
     // For P3P: handle Theodore vs Elizabeth toggle
     let isP3P = S.game === 'p3p';
     let p3pGiver = S.settings.p3pProtagonist === 'FEMC' ? 'Theodore' : 'Elizabeth';
 
     if (isP3P) {
-        gameQuests = gameQuests.filter(g => g.giver.toLowerCase().includes(p3pGiver.toLowerCase()));
+        gameEntries = gameEntries.filter(g => g.giver.toLowerCase().includes(p3pGiver.toLowerCase()));
+    }
+
+    // Unique givers for filter chips (e.g. Margaret, The Fox, Inaba Residents)
+    const availableGivers = [...new Set(gameEntries.map(g => g.giver))];
+    if (!S.guideGiverFilter || (!availableGivers.includes(S.guideGiverFilter) && S.guideGiverFilter !== 'all')) {
+        S.guideGiverFilter = 'all';
+    }
+
+    let activeEntries = gameEntries;
+    if (S.guideGiverFilter !== 'all') {
+        activeEntries = gameEntries.filter(g => g.giver === S.guideGiverFilter);
     }
 
     const allQuests = [];
-    gameQuests.forEach(g => {
+    activeEntries.forEach(g => {
         (g.quests || []).forEach(q => {
             allQuests.push({ ...q, giverName: g.giver });
         });
@@ -4627,7 +4873,7 @@ async function renderQuestGuides(container, color) {
         return;
     }
 
-    const doneCount = allQuests.filter(q => S.completedRequests.has(`${S.game}_quest_${q.id || q.number || q.name}`)).length;
+    const doneCount = allQuests.filter(q => S.completedRequests.has(`${S.game}_quest_${q.id || q.number || q.name || q.title}`)).length;
     const pct = Math.round((doneCount / allQuests.length) * 100);
 
     const query = (S.guideQuery || '').toLowerCase();
@@ -4635,7 +4881,8 @@ async function renderQuestGuides(container, color) {
         const name = (q.name || q.title || '').toLowerCase();
         const req = (q.requirement || q.target || q.description || '').toLowerCase();
         const reward = (q.reward || '').toLowerCase();
-        return !query || name.includes(query) || req.includes(query) || reward.includes(query);
+        const walk = (q.walkthrough || '').toLowerCase();
+        return !query || name.includes(query) || req.includes(query) || reward.includes(query) || walk.includes(query);
     });
 
     let html = `
@@ -4653,7 +4900,24 @@ async function renderQuestGuides(container, color) {
                         Female MC (Theodore)
                     </button>
                 </div>
-            ` : ''}
+            ` : (availableGivers.length > 1 ? `
+                <div class="sort-bar" style="margin-bottom:8px">
+                    <button class="sort-chip ${S.guideGiverFilter === 'all' ? 'active' : ''}"
+                            style="${S.guideGiverFilter === 'all' ? `color:${color};border-color:${color}` : ''}"
+                            onclick="setGuideGiverFilter('all')">
+                        All (${gameEntries.reduce((sum, g) => sum + (g.quests?.length || 0), 0)})
+                    </button>
+                    ${availableGivers.map(gv => {
+                        const count = gameEntries.find(g => g.giver === gv)?.quests?.length || 0;
+                        return `
+                        <button class="sort-chip ${S.guideGiverFilter === gv ? 'active' : ''}"
+                                style="${S.guideGiverFilter === gv ? `color:${color};border-color:${color}` : ''}"
+                                onclick="setGuideGiverFilter('${esc(gv)}')">
+                            ${gv} (${count})
+                        </button>`;
+                    }).join('')}
+                </div>
+            ` : '')}
 
             <div class="req-progress-wrap" style="margin-bottom:10px">
                 <div class="req-progress-top">
@@ -4670,8 +4934,9 @@ async function renderQuestGuides(container, color) {
 
             <div class="quest-list-wrap">
                 ${filtered.length ? filtered.map(q => {
-                    const questKey = `${S.game}_quest_${q.id || q.number || q.name}`;
+                    const questKey = `${S.game}_quest_${q.id || q.number || q.name || q.title}`;
                     const isDone = S.completedRequests.has(questKey);
+                    const qNum = q.id || q.number;
                     return `
                         <div class="quest-card ${isDone ? 'completed' : ''}">
                             <div class="quest-card-header">
@@ -4679,7 +4944,7 @@ async function renderQuestGuides(container, color) {
                                     <input type="checkbox" class="quest-chk" ${isDone ? 'checked' : ''} onchange="toggleQuestDone('${esc(questKey)}')">
                                     <div>
                                         <div class="quest-name" style="${isDone ? 'text-decoration:line-through;color:var(--text3)' : ''}">
-                                            ${q.number ? `#${q.number}: ` : ''}${q.name || q.title}
+                                            ${qNum ? `<span style="color:${color};margin-right:4px">#${qNum}</span> ` : ''}${q.title || q.name}
                                         </div>
                                         <div style="font-size:.78rem;color:var(--text2)">${q.giverName || q.giver || 'Velvet Room'} ${q.deadline ? `• Deadline: ${q.deadline}` : ''}</div>
                                     </div>
@@ -4687,16 +4952,25 @@ async function renderQuestGuides(container, color) {
                                 ${q.available ? `<div class="boss-lvl-badge">${q.available}</div>` : ''}
                             </div>
 
-                            ${q.reward ? `
-                                <div class="quest-reward-box">
-                                    <span style="font-weight:700;color:${color}">Reward</span>
-                                    <span>${q.reward}</span>
+                            ${q.requirement ? `
+                                <div class="quest-req-box">
+                                    <span style="font-size:.75rem;font-weight:700;color:var(--text2);text-transform:uppercase">Requirement</span>
+                                    <span>${q.requirement}</span>
                                 </div>
                             ` : ''}
 
-                            <div class="quest-guide-text">
-                                ${q.guide || q.walkthrough || q.requirement || q.description || 'Follow standard request requirements.'}
-                            </div>
+                            ${q.reward ? `
+                                <div class="quest-reward-box">
+                                    <span style="font-weight:700;color:${color}">Reward</span>
+                                    <span style="font-weight:700">${q.reward}</span>
+                                </div>
+                            ` : ''}
+
+                            ${(q.walkthrough || q.guide || q.description) ? `
+                                <div class="quest-guide-text">
+                                    ${q.walkthrough || q.guide || q.description}
+                                </div>
+                            ` : ''}
                         </div>
                     `;
                 }).join('') : `<div class="empty-state">No matching quests found</div>`}
@@ -4705,6 +4979,11 @@ async function renderQuestGuides(container, color) {
     `;
 
     container.innerHTML = html;
+}
+
+function setGuideGiverFilter(giver) {
+    S.guideGiverFilter = giver;
+    buildGuidesScreen();
 }
 
 function toggleQuestDone(questKey) {
@@ -4752,6 +5031,28 @@ async function renderDayGuides(container, color) {
     const activeMonth = months.find(m => m.month === S.guideMonthFilter) || months[0];
     const days = activeMonth?.days || [];
 
+    const catBadgeClass = (cat) => {
+        const c = (cat || 'story').toLowerCase();
+        if (c === 'deadline') return 'badge-deadline';
+        if (c === 'exam') return 'badge-exam';
+        if (c === 'unlock') return 'badge-unlock';
+        if (c === 'event') return 'badge-event';
+        if (c === 'tip') return 'badge-tip';
+        if (c === 'free') return 'badge-free';
+        return 'badge-story';
+    };
+
+    const catLabel = (cat) => {
+        const c = (cat || 'story').toLowerCase();
+        if (c === 'deadline') return 'Deadline';
+        if (c === 'exam') return 'Exams';
+        if (c === 'unlock') return 'Unlock';
+        if (c === 'event') return 'Event';
+        if (c === 'tip') return 'Tip';
+        if (c === 'free') return 'Free Day';
+        return 'Story';
+    };
+
     let html = `
         <div class="guide-wide-layout">
             <div class="sort-bar" style="margin-bottom:12px;overflow-x:auto">
@@ -4764,13 +5065,31 @@ async function renderDayGuides(container, color) {
                 `).join('')}
             </div>
 
+            ${activeMonth.overview ? `
+                <div class="cal-overview-card" style="border-left:3px solid ${color}">
+                    <div class="cal-overview-title" style="color:${color}">${activeMonth.month} at a Glance</div>
+                    <div class="cal-overview-text">${activeMonth.overview}</div>
+                </div>
+            ` : ''}
+
             <div class="calendar-days-wrap">
                 ${days.map(d => `
                     <div class="cal-day-card">
                         <div class="cal-day-header">
-                            <div class="cal-date-badge">${d.date || 'Day'} ${d.dayOfWeek ? `(${d.dayOfWeek})` : ''}</div>
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <div class="cal-date-badge" style="color:${color}">${d.date || 'Day'}</div>
+                                <span class="cal-category-badge ${catBadgeClass(d.category)}">${catLabel(d.category)}</span>
+                            </div>
                             ${d.weather ? `<span style="font-size:.82rem;color:var(--text2)">${d.weather}</span>` : ''}
                         </div>
+
+                        ${d.title ? `
+                            <div class="cal-day-title">${d.title}</div>
+                        ` : ''}
+
+                        ${d.description ? `
+                            <div class="cal-day-desc">${d.description}</div>
+                        ` : ''}
 
                         ${d.daytime || d.afternoon ? `
                             <div class="cal-event-block">
@@ -4805,64 +5124,6 @@ function setGuideMonthFilter(month) {
     S.guideMonthFilter = month;
     buildGuidesScreen();
 }
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SHADOW NEGOTIATION & SHUFFLE TIME
-   ══════════════════════════════════════════════════════════════════════════════ */
-async function buildNegotiationScreen() {
-    const series = SERIES.find(s=>s.id===S.series);
-    const color  = series?.color||'#2196F3';
-    const isP5   = S.series === 'p5';
-
-    const titleEl = document.getElementById('negotiationScreenTitle');
-    titleEl.textContent = isP5 ? 'Shadow Negotiation Guide' : 'Shuffle Time & Arcana';
-
-    const tabBar = document.getElementById('negotiationTabBar');
-    if (isP5) {
-        tabBar.innerHTML = `
-            <button class="fusion-tab-pill ${S.negoTab==='matrix'?'active':''}" onclick="setNegoTab('matrix')">Cheat Sheet</button>
-            <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" onclick="setNegoTab('lookup')">Shadow Lookup</button>
-            <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" onclick="setNegoTab('perks')">Confidant Perks</button>
-        `;
-    } else {
-        tabBar.innerHTML = `
-            <button class="fusion-tab-pill ${S.negoTab==='matrix'?'active':''}" onclick="setNegoTab('matrix')">Skills & EXP by Rank</button>
-            <button class="fusion-tab-pill ${S.negoTab==='lookup'?'active':''}" onclick="setNegoTab('lookup')">Personas by Floor</button>
-            <button class="fusion-tab-pill ${S.negoTab==='perks'?'active':''}" onclick="setNegoTab('perks')">Major Arcana</button>
-        `;
-    }
-
-    const container = document.getElementById('negotiationContent');
-    container.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading data…</div></div>`;
-
-    if (!S.negoData) {
-        try {
-            const r = await fetch('./data/negotiation/negotiation_data.json');
-            if (!r.ok) throw new Error(r.statusText);
-            S.negoData = await r.json();
-        } catch (e) {
-            container.innerHTML = `<div class="empty-state">Failed to load negotiation data: ${e.message}</div>`;
-            return;
-        }
-    }
-
-    if (isP5) {
-        if (S.negoTab === 'matrix') renderNegoCheatSheet(container, color);
-        else if (S.negoTab === 'lookup') renderNegoLookup(container, color);
-        else renderNegoPerks(container, color);
-    } else {
-        const gameData = S.series === 'p3' ? S.negoData.p3 : S.negoData.p4;
-        if (S.negoTab === 'matrix') renderMinorArcanaRanks(container, gameData, color);
-        else if (S.negoTab === 'lookup') renderFloorPersonas(container, gameData, color);
-        else renderMajorArcana(container, gameData, color);
-    }
-}
-
-function setNegoTab(tab) {
-    S.negoTab = tab;
-    buildNegotiationScreen();
-}
-
 /* ── P5 Negotiation Handlers ───────────────────────────────────────────────── */
 function renderNegoCheatSheet(container, color) {
     const data = S.negoData?.p5?.personality_matrix || [];
