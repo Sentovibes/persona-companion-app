@@ -279,12 +279,6 @@ fun SocialLinkListScreen(
                                     modifier = Modifier.padding(start = 6.dp)
                                 )
                             }
-                            Text(
-                                text = "${link.ranks.size} ranks",
-                                color = WearLightGray,
-                                fontSize = 10.sp,
-                                modifier = Modifier.padding(top = 2.dp)
-                            )
                         }
                     }
                 }

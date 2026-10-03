@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Search
@@ -272,30 +273,23 @@ private fun SocialLinkCard(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(4.dp))
-
-                // Subtitle Row: Ranks count and location
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(6.dp)
-                ) {
-                    Text(
-                        text = "${socialLink.ranks.size} ranks",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = TextSecondary,
-                        fontSize = 13.sp
-                    )
-
-                    socialLink.details?.location?.let { loc ->
-                        Text("•", color = TextDisabled, fontSize = 12.sp)
-                        Icon(
-                            imageVector = Icons.Default.LocationOn,
-                            contentDescription = null,
-                            tint = TextDisabled,
-                            modifier = Modifier.size(13.dp)
-                        )
+                // Subtitle Row: Location / Schedule
+                val subtitleText = socialLink.details?.location ?: socialLink.details?.schedule
+                if (!subtitleText.isNullOrBlank()) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        if (socialLink.details?.location != null) {
+                            Icon(
+                                imageVector = Icons.Default.LocationOn,
+                                contentDescription = null,
+                                tint = TextDisabled,
+                                modifier = Modifier.size(13.dp)
+                            )
+                        }
                         Text(
-                            text = loc,
+                            text = subtitleText,
                             style = MaterialTheme.typography.bodySmall,
                             color = TextSecondary,
                             fontSize = 12.sp,
@@ -307,21 +301,13 @@ private fun SocialLinkCard(
 
             Spacer(modifier = Modifier.width(10.dp))
 
-            // Rank Badge
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(themeColor.copy(alpha = 0.18f))
-                    .padding(horizontal = 10.dp, vertical = 6.dp)
-            ) {
-                Text(
-                    text = "Rank ${socialLink.ranks.size}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = themeColor,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
-                )
-            }
+            // Navigation Chevron
+            Icon(
+                imageVector = Icons.Default.ChevronRight,
+                contentDescription = "View",
+                tint = TextSecondary.copy(alpha = 0.5f),
+                modifier = Modifier.size(20.dp)
+            )
         }
     }
 }

@@ -1,29 +1,29 @@
 ================================================================================
-GOOGLE PLAY STORE RELEASE NOTES: v7.2.4 (<en-US>)
+GOOGLE PLAY STORE RELEASE NOTES: v7.2.5 (<en-US>)
 ================================================================================
 
 Copy-paste the exact block below (including the <en-US> tags) into the
 Google Play Console "Release notes" editor for each release track.
 
 --------------------------------------------------------------------------------
-PHONE TRACK (versionCode 55: Android Phone / Tablet)
+PHONE TRACK (versionCode 57: Android Phone / Tablet)
 --------------------------------------------------------------------------------
 <en-US>
-• Social Link route clarity: added Romance and Platonic route isolation filters for branching confidants.
-• Added Romance Flag heart indicator and optimal dialogue choice badges for Persona 3 Reload and beyond.
-• Updated Lovers Arcana (Yukari) dialogue tree with verified point allocations.
-• Performance and UI improvements.
+• Cleaned up Social Link navigation cards and removed misleading internal array rank counters.
+• Added Romance and Platonic route isolation filters for branching confidants.
+• Added Romance Flag heart indicators and optimal dialogue choice badges for Persona 3 Reload.
+• Performance and UI layout improvements.
 </en-US>
 
 --------------------------------------------------------------------------------
-WEAR OS WATCH TRACK (versionCode 56: Wear OS Smartwatch)
+WEAR OS WATCH TRACK (versionCode 58: Wear OS Smartwatch)
 --------------------------------------------------------------------------------
 <en-US>
+• Cleaned up Social Link list rows and removed misleading internal counter labels.
 • Added Romance Flag heart indicators for Social Link dialogue choices.
 • Persona 3 Reload Lovers Arcana dialogue updates.
 • Instant wrist lookup for Persona 3, Persona 4, and Persona 5.
 • Classroom and exam answer calendar.
-• Enemy weakness calculator across all difficulty tiers.
 • High-contrast OLED interface.
 </en-US>
 ================================================================================

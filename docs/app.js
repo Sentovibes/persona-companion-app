@@ -1060,9 +1060,9 @@ function renderSlList(color) {
                     <div class="row-name" style="font-size:1.02rem;font-weight:700">${charName ? esc(charName) : esc(arcana)}</div>
                     ${charName ? `<span class="skill-chip-tag" style="background:${color}22;color:${color};font-size:.75rem;padding:2px 7px;border-radius:4px;font-weight:700">${esc(arcana)}</span>` : ''}
                 </div>
-                <div class="row-sub" style="margin-top:3px">${rankCount} ranks${loc ? ` • <span style="color:var(--text3)">${esc(loc)}</span>` : ''}</div>
+                ${loc ? `<div class="row-sub" style="margin-top:3px"><span style="color:var(--text3)">${esc(loc)}</span></div>` : ''}
             </div>
-            <div class="level-badge" style="background:${color}22;color:${color}">Rank ${rankCount}</div>
+            <div style="color:var(--text3);font-size:1.2rem;padding-right:4px">›</div>
         </div>`;
     }).join('');
 }

@@ -148,19 +148,6 @@ fun SocialLinkDetailScreen(
                                     fontWeight = FontWeight.Bold,
                                     color = TextPrimary
                                 )
-
-                                Box(
-                                    modifier = Modifier
-                                        .background(primaryColor.copy(alpha = 0.18f), RoundedCornerShape(8.dp))
-                                        .padding(horizontal = 10.dp, vertical = 4.dp)
-                                ) {
-                                    Text(
-                                        text = "${socialLink.ranks.size} RANKS",
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = primaryColor
-                                    )
-                                }
                             }
 
                             Row(
