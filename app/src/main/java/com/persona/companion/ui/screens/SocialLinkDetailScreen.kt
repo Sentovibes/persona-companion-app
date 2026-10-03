@@ -1,6 +1,7 @@
 package com.persona.companion.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -13,6 +14,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -25,6 +27,12 @@ import com.persona.companion.models.SocialLinkRank
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.viewmodels.SocialLinkViewModel
 
+enum class SocialLinkRouteFilter(val label: String) {
+    ALL("All Ranks"),
+    ROMANCE("♥ Romance"),
+    PLATONIC("✦ Platonic")
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SocialLinkDetailScreen(
@@ -36,12 +44,23 @@ fun SocialLinkDetailScreen(
     val viewModel: SocialLinkViewModel = viewModel()
     val socialLinksData by viewModel.socialLinksData.collectAsState()
 
+    var selectedRoute by remember(arcana) { mutableStateOf(SocialLinkRouteFilter.ALL) }
+
     LaunchedEffect(gameId) {
         if (socialLinksData == null) viewModel.loadSocialLinks(gameId)
     }
 
     val socialLink = socialLinksData?.socialLinks?.find {
         it.arcana.equals(arcana, ignoreCase = true)
+    }
+
+    val filteredRanks = remember(socialLink, selectedRoute) {
+        val allRanks = socialLink?.ranks ?: emptyList()
+        when (selectedRoute) {
+            SocialLinkRouteFilter.ROMANCE -> allRanks.filter { !it.isPlatonicRoute }
+            SocialLinkRouteFilter.PLATONIC -> allRanks.filter { !it.isRomanceRoute }
+            SocialLinkRouteFilter.ALL -> allRanks
+        }
     }
 
     val gameName = when (gameId) {
@@ -195,8 +214,19 @@ fun SocialLinkDetailScreen(
                     }
                 }
 
+                // Branching route filter tabs (if applicable)
+                if (socialLink.hasRouteBranches) {
+                    item {
+                        RouteSelectorCard(
+                            selectedRoute = selectedRoute,
+                            primaryColor = primaryColor,
+                            onRouteSelected = { selectedRoute = it }
+                        )
+                    }
+                }
+
                 // Rank cards
-                items(socialLink.ranks) { rank ->
+                items(filteredRanks) { rank ->
                     RankCard(rank = rank, primaryColor = primaryColor)
                 }
 
@@ -246,23 +276,179 @@ private fun InfoRow(label: String, value: String) {
 }
 
 @Composable
-private fun RankCard(rank: SocialLinkRank, primaryColor: androidx.compose.ui.graphics.Color) {
+private fun RouteSelectorCard(
+    selectedRoute: SocialLinkRouteFilter,
+    primaryColor: Color,
+    onRouteSelected: (SocialLinkRouteFilter) -> Unit
+) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-        shape = RoundedCornerShape(12.dp)
+        shape = RoundedCornerShape(12.dp),
+        border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+    ) {
+        Column(modifier = Modifier.padding(14.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "STORY ROUTE",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = TextSecondary,
+                    fontWeight = FontWeight.Bold,
+                    letterSpacing = 0.5.sp
+                )
+                Text(
+                    text = "Tap to isolate route",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = TextSecondary.copy(alpha = 0.7f),
+                    fontSize = 11.sp
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                SocialLinkRouteFilter.values().forEach { filter ->
+                    val isSelected = selectedRoute == filter
+                    val btnBg = when {
+                        isSelected && filter == SocialLinkRouteFilter.ROMANCE -> Color(0xFFE11D48).copy(alpha = 0.22f)
+                        isSelected && filter == SocialLinkRouteFilter.PLATONIC -> Color(0xFF0284C7).copy(alpha = 0.22f)
+                        isSelected -> primaryColor.copy(alpha = 0.20f)
+                        else -> Surface.copy(alpha = 0.7f)
+                    }
+                    val btnTextColor = when {
+                        isSelected && filter == SocialLinkRouteFilter.ROMANCE -> Color(0xFFFB7185)
+                        isSelected && filter == SocialLinkRouteFilter.PLATONIC -> Color(0xFF38BDF8)
+                        isSelected -> primaryColor
+                        else -> TextSecondary
+                    }
+                    val btnBorder = if (isSelected) {
+                        when (filter) {
+                            SocialLinkRouteFilter.ROMANCE -> Color(0xFFE11D48)
+                            SocialLinkRouteFilter.PLATONIC -> Color(0xFF0284C7)
+                            else -> primaryColor
+                        }
+                    } else Hairline
+
+                    Surface(
+                        onClick = { onRouteSelected(filter) },
+                        modifier = Modifier.weight(1f),
+                        shape = RoundedCornerShape(8.dp),
+                        color = btnBg,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, btnBorder)
+                    ) {
+                        Box(
+                            modifier = Modifier.padding(vertical = 9.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = filter.label,
+                                fontSize = 12.sp,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                color = btnTextColor
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun RankCard(rank: SocialLinkRank, primaryColor: androidx.compose.ui.graphics.Color) {
+    val cardBorder = when {
+        rank.isRomanceRoute -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE11D48).copy(alpha = 0.40f))
+        rank.isPlatonicRoute -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF0284C7).copy(alpha = 0.40f))
+        else -> androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+    }
+
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+        shape = RoundedCornerShape(12.dp),
+        border = cardBorder
     ) {
         Column(Modifier.fillMaxWidth().padding(16.dp)) {
             // Header row
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically) {
-                Text(rank.rankName, style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold, color = TextPrimary, modifier = Modifier.weight(1f))
-                if (rank.isAuto) {
-                    Box(Modifier.background(AccentGreen.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
-                        .padding(horizontal = 8.dp, vertical = 4.dp)) {
-                        Text("Auto", style = MaterialTheme.typography.bodySmall,
-                            color = AccentGreen, fontWeight = FontWeight.Bold)
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = rank.cleanRankTitle,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = TextPrimary,
+                    modifier = Modifier.weight(1f, fill = false)
+                )
+
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    if (rank.isRomanceRoute) {
+                        Box(
+                            Modifier.background(Color(0xFFE11D48).copy(alpha = 0.18f), RoundedCornerShape(6.dp))
+                                .border(1.dp, Color(0xFFE11D48).copy(alpha = 0.5f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                        ) {
+                            Text(
+                                "♥ Romance Route",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Color(0xFFFB7185),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.sp
+                            )
+                        }
+                    } else if (rank.isPlatonicRoute) {
+                        Box(
+                            Modifier.background(Color(0xFF0284C7).copy(alpha = 0.18f), RoundedCornerShape(6.dp))
+                                .border(1.dp, Color(0xFF0284C7).copy(alpha = 0.5f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                        ) {
+                            Text(
+                                "✦ Platonic Route",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Color(0xFF38BDF8),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.sp
+                            )
+                        }
+                    }
+
+                    if (rank.rankName.contains("(ALT)", ignoreCase = true)) {
+                        Box(
+                            Modifier.background(Surface.copy(alpha = 0.6f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 6.dp, vertical = 3.dp)
+                        ) {
+                            Text(
+                                "Alt",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = TextSecondary,
+                                fontWeight = FontWeight.Medium,
+                                fontSize = 10.sp
+                            )
+                        }
+                    }
+
+                    if (rank.isAuto) {
+                        Box(
+                            Modifier.background(AccentGreen.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Text(
+                                "Auto",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = AccentGreen,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
             }
@@ -309,16 +495,28 @@ private fun RankCard(rank: SocialLinkRank, primaryColor: androidx.compose.ui.gra
 
 @Composable
 private fun DialogueBlock(dialogue: SocialLinkDialogue) {
-    // Only show question label if it's meaningful (not generic "Dialogue N")
-    val showLabel = !dialogue.question.matches(Regex("Dialogue \\d+"))
-    if (showLabel) {
-        Text(dialogue.question, style = MaterialTheme.typography.bodySmall,
-            color = TextSecondary, fontWeight = FontWeight.Medium,
-            modifier = Modifier.padding(bottom = 4.dp))
+    val qText = dialogue.question.trim()
+    val displayLabel = when {
+        qText.matches(Regex("(?i)Dialogue\\s*(\\d+)")) -> {
+            val num = Regex("(?i)Dialogue\\s*(\\d+)").find(qText)?.groupValues?.get(1) ?: "1"
+            "Choice $num"
+        }
+        qText.isNotBlank() -> qText
+        else -> null
+    }
+
+    if (displayLabel != null) {
+        Text(
+            text = displayLabel,
+            style = MaterialTheme.typography.labelMedium,
+            color = TextSecondary,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(bottom = 6.dp, top = 2.dp)
+        )
     }
     dialogue.choices.forEach { choice ->
         DialogueChoiceItem(choice = choice)
-        Spacer(Modifier.height(4.dp))
+        Spacer(Modifier.height(6.dp))
     }
 }
 
@@ -429,34 +627,131 @@ private fun UltimatePersonaCard(name: String, color: androidx.compose.ui.graphic
 @Composable
 private fun DialogueChoiceItem(choice: com.persona.companion.models.DialogueChoice) {
     val bgColor = when {
-        choice.points >= 10 -> AccentGreen.copy(alpha = 0.12f)
+        choice.isRomanceFlag -> Color(0xFFE11D48).copy(alpha = 0.08f)
+        choice.isPlatonicFlag -> Color(0xFF0284C7).copy(alpha = 0.08f)
+        choice.points >= 15 -> AccentGreen.copy(alpha = 0.12f)
         choice.points > 0   -> AccentBlue.copy(alpha = 0.10f)
         else                -> Surface.copy(alpha = 0.5f)
     }
     val badgeColor = when {
-        choice.points >= 10 -> AccentGreen
+        choice.points >= 15 -> AccentGreen
         choice.points > 0   -> AccentBlue
-        else                -> TextSecondary
+        else                -> TextSecondary.copy(alpha = 0.6f)
     }
+    val itemBorder = when {
+        choice.isRomanceFlag -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE11D48).copy(alpha = 0.35f))
+        choice.isPlatonicFlag -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF0284C7).copy(alpha = 0.30f))
+        choice.isOptimal -> androidx.compose.foundation.BorderStroke(1.dp, AccentGreen.copy(alpha = 0.40f))
+        else -> androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+    }
+
     Row(
-        modifier = Modifier.fillMaxWidth().background(bgColor, RoundedCornerShape(8.dp)).padding(10.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(bgColor, RoundedCornerShape(8.dp))
+            .border(itemBorder, RoundedCornerShape(8.dp))
+            .padding(10.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(Modifier.weight(1f)) {
-            if (choice.isPhoneChoice) {
-                Text("Phone", style = MaterialTheme.typography.labelSmall, color = AccentBlue)
-                Spacer(Modifier.height(2.dp))
+            val hasBadge = choice.isPhoneChoice || choice.isRomanceFlag || choice.isPlatonicFlag || choice.isOptimal || !choice.flag.isNullOrBlank()
+            if (hasBadge) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                ) {
+                    if (choice.isPhoneChoice) {
+                        Box(
+                            Modifier.background(AccentBlue.copy(alpha = 0.2f), RoundedCornerShape(4.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text("Phone", style = MaterialTheme.typography.labelSmall, color = AccentBlue, fontWeight = FontWeight.Bold, fontSize = 10.sp)
+                        }
+                    }
+
+                    if (choice.isRomanceFlag) {
+                        val flagText = choice.flag ?: "Romance Flag"
+                        Box(
+                            Modifier.background(Color(0xFFE11D48).copy(alpha = 0.20f), RoundedCornerShape(4.dp))
+                                .border(1.dp, Color(0xFFE11D48).copy(alpha = 0.5f), RoundedCornerShape(4.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = "♥ $flagText",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = Color(0xFFFB7185),
+                                fontWeight = FontWeight.ExtraBold,
+                                fontSize = 10.sp
+                            )
+                        }
+                    } else if (choice.isPlatonicFlag) {
+                        val flagText = choice.flag ?: "Platonic Route"
+                        Box(
+                            Modifier.background(Color(0xFF0284C7).copy(alpha = 0.20f), RoundedCornerShape(4.dp))
+                                .border(1.dp, Color(0xFF0284C7).copy(alpha = 0.5f), RoundedCornerShape(4.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = "✦ $flagText",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = Color(0xFF38BDF8),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 10.sp
+                            )
+                        }
+                    } else if (choice.isOptimal) {
+                        Box(
+                            Modifier.background(AccentGreen.copy(alpha = 0.20f), RoundedCornerShape(4.dp))
+                                .border(1.dp, AccentGreen.copy(alpha = 0.5f), RoundedCornerShape(4.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = "★ Optimal",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = AccentGreen,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 10.sp
+                            )
+                        }
+                    } else if (!choice.flag.isNullOrBlank()) {
+                        Box(
+                            Modifier.background(Surface.copy(alpha = 0.8f), RoundedCornerShape(4.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = choice.flag,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = TextSecondary,
+                                fontWeight = FontWeight.Medium,
+                                fontSize = 10.sp
+                            )
+                        }
+                    }
+                }
             }
-            Text(choice.text, style = MaterialTheme.typography.bodyMedium, color = TextPrimary)
-        }
-        Spacer(Modifier.width(10.dp))
-        Box(Modifier.background(badgeColor, RoundedCornerShape(6.dp)).padding(horizontal = 10.dp, vertical = 4.dp)) {
+
             Text(
-                text = if (choice.points > 0) "${choice.points}" else "—",
+                text = choice.text,
+                style = MaterialTheme.typography.bodyMedium,
+                color = TextPrimary,
+                fontWeight = if (choice.points >= 15 || choice.isRomanceFlag) FontWeight.SemiBold else FontWeight.Normal
+            )
+        }
+
+        Spacer(Modifier.width(10.dp))
+
+        Box(
+            Modifier.background(badgeColor, RoundedCornerShape(6.dp))
+                .padding(horizontal = 8.dp, vertical = 4.dp)
+        ) {
+            Text(
+                text = if (choice.points > 0) "+${choice.points} pts" else "0 pts",
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.Bold,
-                color = androidx.compose.ui.graphics.Color.White
+                color = androidx.compose.ui.graphics.Color.White,
+                fontSize = 11.sp
             )
         }
     }

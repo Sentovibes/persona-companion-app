@@ -233,9 +233,10 @@ object WearDataLoader {
                                     val c = choicesArray.optJSONObject(j) ?: continue
                                     val answer = c.optString("Answer", "")
                                     val points = c.optInt("Points", 0)
+                                    val flag = c.optString("Flag", "").takeIf { it.isNotEmpty() }
                                     val isPhone = question.contains("Phone", ignoreCase = true)
                                     if (answer.isNotEmpty()) {
-                                        choices.add(WearChoice(text = answer, points = points, isPhone = isPhone))
+                                        choices.add(WearChoice(text = answer, points = points, isPhone = isPhone, flag = flag))
                                     }
                                 }
 

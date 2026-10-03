@@ -177,8 +177,9 @@ object SocialLinkLoader {
                 val c = choicesArray.optJSONObject(j) ?: continue
                 val answer = c.optString("Answer", "")
                 val points = c.optInt("Points", 0)
+                val flag = c.optString("Flag", "").takeIf { it.isNotEmpty() }
                 val isPhone = question.contains("Phone", ignoreCase = true)
-                choices.add(DialogueChoice(text = answer, points = points, isPhoneChoice = isPhone))
+                choices.add(DialogueChoice(text = answer, points = points, isPhoneChoice = isPhone, flag = flag))
             }
             if (choices.isNotEmpty()) result.add(SocialLinkDialogue(question = question, choices = choices))
         }

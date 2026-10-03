@@ -1166,8 +1166,20 @@ function buildSlDetailScreen() {
                             const pts = choice.Points || 0;
                             const ptColor = pts >= 10 ? '#4CAF50' : pts > 0 ? color : 'var(--text3)';
                             const ptLabel = pts > 0 ? `+${pts}` : pts === 0 && choice.Answer === 'Any' ? '—' : `${pts}`;
-                            html += `<div class="skill-row" style="margin-bottom:6px">
-                                <div class="skill-name" style="font-size:.875rem;font-weight:400">${isPhone ? '[Phone] ' : ''}${choice.Answer}</div>
+                            let flagBadge = '';
+                            if (choice.Flag) {
+                                if (choice.Flag.toLowerCase().includes('romance') || choice.Flag.toLowerCase().includes('heart')) {
+                                    flagBadge = `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:rgba(225,29,72,0.18);border:1px solid rgba(225,29,72,0.45);color:#FB7185;font-size:.7rem;font-weight:700;margin-right:6px">♥ ${choice.Flag}</span>`;
+                                } else if (choice.Flag.toLowerCase().includes('platonic') || choice.Flag.toLowerCase().includes('avoided')) {
+                                    flagBadge = `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:rgba(2,132,199,0.18);border:1px solid rgba(2,132,199,0.45);color:#38BDF8;font-size:.7rem;font-weight:700;margin-right:6px">✦ ${choice.Flag}</span>`;
+                                } else if (choice.Flag.toLowerCase().includes('optimal')) {
+                                    flagBadge = `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:rgba(76,175,80,0.18);border:1px solid rgba(76,175,80,0.45);color:#4CAF50;font-size:.7rem;font-weight:700;margin-right:6px">★ Optimal</span>`;
+                                } else {
+                                    flagBadge = `<span style="display:inline-block;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,0.1);color:var(--text2);font-size:.7rem;font-weight:600;margin-right:6px">${choice.Flag}</span>`;
+                                }
+                            }
+                            html += `<div class="skill-row" style="margin-bottom:6px;align-items:center">
+                                <div class="skill-name" style="font-size:.875rem;font-weight:400">${isPhone ? '<span style="color:var(--text2);font-size:.75rem;margin-right:4px">[Phone]</span> ' : ''}${flagBadge}${choice.Answer}</div>
                                 <div class="skill-level" style="color:${ptColor};font-weight:700;font-size:.8rem;flex-shrink:0;margin-left:8px">${ptLabel}</div>
                             </div>`;
                         });

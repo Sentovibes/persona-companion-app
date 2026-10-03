@@ -168,6 +168,15 @@ fun SocialLinkListScreen(
                                                 maxLines = 2,
                                                 overflow = TextOverflow.Ellipsis
                                             )
+                                            if (choice.flag?.contains("Romance", ignoreCase = true) == true) {
+                                                Text(
+                                                    text = "♥",
+                                                    color = Color(0xFFFF5252),
+                                                    fontSize = 11.sp,
+                                                    fontWeight = FontWeight.Bold,
+                                                    modifier = Modifier.padding(end = 4.dp)
+                                                )
+                                            }
                                             if (choice.points > 0) {
                                                 Box(
                                                     modifier = Modifier

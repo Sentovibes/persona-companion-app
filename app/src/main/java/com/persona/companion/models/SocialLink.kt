@@ -12,7 +12,10 @@ data class SocialLink(
     val isP5RExclusive: Boolean = false,
     val ultimatePersona: String? = null,
     val thirdAwakening: ThirdAwakening? = null
-)
+) {
+    val hasRouteBranches: Boolean
+        get() = ranks.any { it.isRomanceRoute } || ranks.any { it.isPlatonicRoute }
+}
 
 /**
  * Schedule/location info shown at the top of a social link
@@ -36,7 +39,23 @@ data class SocialLinkRank(
     val benefit: SocialLinkBenefit? = null,
     val unlocks: List<String>? = null,
     val dialogues: List<SocialLinkDialogue> = emptyList()
-)
+) {
+    val isRomanceRoute: Boolean
+        get() = rankName.contains("Romance", ignoreCase = true) || rankName.contains("Romantic", ignoreCase = true)
+
+    val isPlatonicRoute: Boolean
+        get() = rankName.contains("Platonic", ignoreCase = true)
+
+    val cleanRankTitle: String
+        get() {
+            val cleaned = rankName
+                .replace(Regex("(?i)\\s*Romant(ic|e)\\s*"), " ")
+                .replace(Regex("(?i)\\s*Platonic\\s*"), " ")
+                .replace(Regex("\\s+"), " ")
+                .trim()
+            return cleaned.ifEmpty { rankName }
+        }
+}
 
 /**
  * Represents a specific ability or benefit unlocked at a rank
@@ -70,8 +89,23 @@ data class SocialLinkDialogue(
 data class DialogueChoice(
     val text: String,
     val points: Int,
-    val isPhoneChoice: Boolean = false
-)
+    val isPhoneChoice: Boolean = false,
+    val flag: String? = null
+) {
+    val isRomanceFlag: Boolean
+        get() = flag?.contains("Romance", ignoreCase = true) == true ||
+                text.contains("Triggers Romance", ignoreCase = true) ||
+                text.contains("Romance Flag", ignoreCase = true)
+
+    val isPlatonicFlag: Boolean
+        get() = flag?.contains("Platonic", ignoreCase = true) == true ||
+                text.contains("Locks Platonic", ignoreCase = true) ||
+                text.contains("Romance Flag A avoided", ignoreCase = true)
+
+    val isOptimal: Boolean
+        get() = flag?.contains("Optimal", ignoreCase = true) == true ||
+                text.contains("Optimal", ignoreCase = true)
+}
 
 /**
  * Container for all Social Links in a game
@@ -80,3 +114,4 @@ data class SocialLinksData(
     val gameId: String,
     val socialLinks: List<SocialLink>
 )
+

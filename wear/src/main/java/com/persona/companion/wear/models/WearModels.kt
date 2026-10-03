@@ -86,5 +86,6 @@ data class WearDialogue(
 data class WearChoice(
     val text: String,
     val points: Int,
-    val isPhone: Boolean = false
+    val isPhone: Boolean = false,
+    val flag: String? = null
 )
