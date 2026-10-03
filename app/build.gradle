@@ -13,8 +13,8 @@ android {
         applicationId "com.persona.companion"
         minSdk 26
         targetSdk 36
-        versionCode 59
-        versionName "7.2.6"
+        versionCode 61
+        versionName "7.2.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
