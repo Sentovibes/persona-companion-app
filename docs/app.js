@@ -123,7 +123,7 @@ const S = {
     screen:'home', series:null, game:null,
     listMode:null, // 'personas'|'enemies'|'classroom'|'items'|'skills'|'requests'
     sort:'arcana', enemyTab:'enemies', query:'',
-    enemySort:'level', enemySortDir:1, favOnly:false, hideCompletedReq:false,
+    enemySort:'level', enemySortDir:1, favOnly:false, aigisOnly:false, hideCompletedReq:false,
     itemQuery:'', skillQuery:'', requestQuery:'',
     guideTab:'boss', guideQuery:'', guideBossFilter:'all', guideGiverFilter:'all', guideMonthFilter:'all',
     guidesData:{ boss:null, quest:null, day:null },
@@ -627,12 +627,16 @@ function buildListScreen(mode) {
             </button>`).join('') + arcanaSelect + favChip;
     } else if (S.listMode==='enemies') {
         sortBar.style.display='flex';
+        const aigisChip = (S.game === 'p3r' && S.settings.showEpisodeAigis) ? `
+            <button class="sort-chip ${S.aigisOnly?'active':''}"
+                    style="flex:0 0 auto;${S.aigisOnly?`color:#38BDF8;background:rgba(2,132,199,0.18)`:''}"
+                    onclick="toggleAigisOnly()" title="Episode Aigis only">Aigis Only</button>` : '';
         sortBar.innerHTML = [['level','Level'],['name','Name'],['hp','HP']].map(([opt,label])=>`
             <button class="sort-chip ${S.enemySort===opt?'active':''}"
                     style="${S.enemySort===opt?`color:${color};background:${color}22`:''}"
                     onclick="setEnemySort('${opt}')">
                 ${label} ${S.enemySort===opt?(S.enemySortDir===1?'&#x25B2;':'&#x25BC;'):''}
-            </button>`).join('') + favChip;
+            </button>`).join('') + aigisChip + favChip;
     } else { sortBar.style.display='none'; }
 
     // Tab bar (enemies only)
@@ -804,21 +808,22 @@ function renderEnemies(data, q, color, el) {
     const total = pool.length;
     if (q) pool = pool.filter(([name,e])=>name.toLowerCase().includes(q)||(e.arcana||'').toLowerCase().includes(q)||(e.area||'').toLowerCase().includes(q));
     if (S.favOnly) pool = pool.filter(([name])=>S.favorites.has(`${S.game}_${name}`));
-    if (!pool.length) { showEmpty(S.favOnly ? 'No favorites yet — open an enemy and tap the heart' : 'No enemies found'); return; }
+    if (S.aigisOnly) pool = pool.filter(([,e])=>e.episodeAigis);
+    if (!pool.length) { showEmpty(S.favOnly ? 'No favorites yet — open an enemy and tap the heart' : (S.aigisOnly ? 'No Episode Aigis enemies found' : 'No enemies found')); return; }
     const dir = S.enemySortDir;
     pool = pool.slice().sort((a,b)=>{
         if (S.enemySort==='name') return a[0].localeCompare(b[0])*dir;
         if (S.enemySort==='hp')   return ((a[1].hp||0)-(b[1].hp||0))*dir;
         return ((a[1].level||0)-(b[1].level||0))*dir;
     });
-    const countLine = (q || S.favOnly) ? `<div class="result-count">${pool.length} of ${total} shown</div>` : '';
+    const countLine = (q || S.favOnly || S.aigisOnly) ? `<div class="result-count">${pool.length} of ${total} shown</div>` : '';
     el.innerHTML = countLine + pool.map(([name,e])=>{
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
         const isFav = S.favorites.has(`${S.game}_${name}`);
         const imgUrl = getEnemyImageFilename(name, S.game);
         return `
-        <div class="row-card enemy-row-card" onclick="openEnemy('${esc(name)}')">
+        <div class="row-card enemy-row-card" onclick="openEnemy('${esc(name)}', '${esc(e.area||'')}')">
             <div class="enemy-avatar-box">
                 <img src="${imgUrl}" class="enemy-avatar-img" alt="${esc(name)}" loading="lazy"
                      onload="this.classList.add('loaded')"
@@ -1411,11 +1416,13 @@ function openPersona(name) {
         navigate('detail');
     }
 }
-function openEnemy(name) {
+function openEnemy(name, area) {
     const key = `enemies_${S.game}`;
     const data = S.rawData[key];
     if (!data) return;
-    const enemy = Array.isArray(data)?data.find(e=>e.name===name):data[name];
+    const enemy = Array.isArray(data)
+        ? (area ? data.find(e => e.name === name && e.area === area) : null) || data.find(e => e.name === name)
+        : data[name];
     if (!enemy) return;
     S.detail = {type:'enemy', name, data:enemy};
     if (isTablet()) {
@@ -1764,8 +1771,8 @@ function buildSettingsScreen() {
         </div>
         <div class="setting-row" onclick="toggleSetting('showEpisodeAigis')">
             <div class="setting-info">
-                <div class="setting-label">Show Episode Aigis Personas</div>
-                <div class="setting-desc">Include Episode Aigis personas (P3R)</div>
+                <div class="setting-label">Show Episode Aigis Data</div>
+                <div class="setting-desc">Include Episode Aigis personas, enemies, and requests (P3R)</div>
             </div>
             <div class="toggle ${S.settings.showEpisodeAigis?'on':''}" id="toggle-showEpisodeAigis"></div>
         </div>
@@ -1810,6 +1817,7 @@ function setEnemySort(opt) {
     buildListScreen();
 }
 function toggleFavOnly() { S.favOnly = !S.favOnly; buildListScreen(); }
+function toggleAigisOnly() { S.aigisOnly = !S.aigisOnly; buildListScreen(); }
 
 function onSearch(val) {
     S.query=val;

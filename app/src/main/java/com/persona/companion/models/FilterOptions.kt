@@ -48,7 +48,8 @@ data class PersonaFilters(
     val maxLevel: Int = 99,
     val gameExclusive: Boolean = false,
     val dlcOnly: Boolean = false,
-    val showFavoritesOnly: Boolean = false
+    val showFavoritesOnly: Boolean = false,
+    val episodeAigisOnly: Boolean = false
 )
 
 data class EnemyFilters(
@@ -58,5 +59,6 @@ data class EnemyFilters(
     val minLevel: Int = 1,
     val maxLevel: Int = 99,
     val gameExclusive: Boolean = false,
-    val showFavoritesOnly: Boolean = false
+    val showFavoritesOnly: Boolean = false,
+    val episodeAigisOnly: Boolean = false
 )

@@ -107,8 +107,8 @@ fun SettingsScreen(
 
             item {
                 SettingToggle(
-                    title = "Show Episode Aigis Personas",
-                    description = "Include personas from Episode Aigis (P3 Reload) and The Answer (P3 FES)",
+                    title = "Show Episode Aigis Data",
+                    description = "Include personas, enemies, items, and requests from Episode Aigis (P3 Reload) and The Answer (P3 FES)",
                     checked = settings.showEpisodeAigis,
                     onCheckedChange = vm::toggleEpisodeAigis
                 )

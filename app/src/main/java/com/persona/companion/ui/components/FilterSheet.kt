@@ -144,6 +144,18 @@ fun PersonaFilterSheet(
                 )
             }
             
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text("Episode Aigis Only")
+                Spacer(modifier = Modifier.weight(1f))
+                Switch(
+                    checked = currentFilters.episodeAigisOnly,
+                    onCheckedChange = { currentFilters = currentFilters.copy(episodeAigisOnly = it) }
+                )
+            }
+            
             Spacer(modifier = Modifier.height(24.dp))
             
             // Apply button
@@ -313,6 +325,18 @@ fun EnemyFilterSheet(
                 Switch(
                     checked = currentFilters.showFavoritesOnly,
                     onCheckedChange = { currentFilters = currentFilters.copy(showFavoritesOnly = it) }
+                )
+            }
+            
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text("Episode Aigis Only")
+                Spacer(modifier = Modifier.weight(1f))
+                Switch(
+                    checked = currentFilters.episodeAigisOnly,
+                    onCheckedChange = { currentFilters = currentFilters.copy(episodeAigisOnly = it) }
                 )
             }
             

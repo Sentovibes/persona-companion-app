@@ -40,6 +40,11 @@ object FilterUtils {
             filtered = filtered.filter { favorites.contains(getPersonaId(seriesId, gameId, it)) }
         }
         
+        // Episode Aigis only
+        if (filters.episodeAigisOnly) {
+            filtered = filtered.filter { it.episodeAigis == true }
+        }
+        
         // Sort
         filtered = when (filters.sortOption) {
             PersonaSortOption.LEVEL_ASC -> filtered.sortedBy { it.level ?: 0 }
@@ -112,6 +117,11 @@ object FilterUtils {
         // Favorites only
         if (filters.showFavoritesOnly) {
             filtered = filtered.filter { favorites.contains(getEnemyId(seriesId, gameId, it)) }
+        }
+        
+        // Episode Aigis only
+        if (filters.episodeAigisOnly) {
+            filtered = filtered.filter { it.episodeAigis == true }
         }
         
         // Sort
