@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -111,6 +112,34 @@ fun SettingsScreen(
                     description = "Include personas, enemies, items, and requests from Episode Aigis (P3 Reload) and The Answer (P3 FES)",
                     checked = settings.showEpisodeAigis,
                     onCheckedChange = vm::toggleEpisodeAigis
+                )
+            }
+
+            item {
+                var noSpoilers by remember { mutableStateOf(userPrefs.isNoSpoilersMode()) }
+                SettingToggle(
+                    title = "No Spoilers Mode",
+                    description = "Conceals late-game boss identities, endgame deities, and story-twist confidants until tapped",
+                    checked = noSpoilers,
+                    onCheckedChange = {
+                        noSpoilers = it
+                        userPrefs.setNoSpoilersMode(it)
+                    }
+                )
+            }
+
+            item {
+                Text(
+                    text = "Default Games (Modern Trilogy)",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = TextPrimary,
+                    modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                )
+            }
+
+            item {
+                DefaultGameSelector(
+                    userPrefs = userPrefs
                 )
             }
 
@@ -486,4 +515,108 @@ private fun P3PProtagonistSelector(
     }
 }
 
+@Composable
+private fun DefaultGameSelector(
+    userPrefs: UserPreferences
+) {
+    var p3Default by remember { mutableStateOf(userPrefs.getDefaultGame("p3")) }
+    var p4Default by remember { mutableStateOf(userPrefs.getDefaultGame("p4")) }
+    var p5Default by remember { mutableStateOf(userPrefs.getDefaultGame("p5")) }
 
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(SurfaceCard)
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        Text(
+            text = "Preferred Game by Series",
+            style = MaterialTheme.typography.bodyLarge,
+            color = TextPrimary
+        )
+        Text(
+            text = "Tapping a series card on the Home screen will open this game directly.",
+            style = MaterialTheme.typography.bodySmall,
+            color = TextSecondary
+        )
+
+        // Persona 3 series
+        GameChoiceRow(
+            label = "Persona 3",
+            options = listOf("p3r" to "P3 Reload", "p3p" to "P3 Portable", "p3fes" to "P3 FES"),
+            selected = p3Default,
+            onSelect = {
+                p3Default = it
+                userPrefs.setDefaultGame("p3", it)
+            }
+        )
+
+        // Persona 4 series
+        GameChoiceRow(
+            label = "Persona 4",
+            options = listOf("p4g" to "P4 Golden", "p4" to "P4 Vanilla"),
+            selected = p4Default,
+            onSelect = {
+                p4Default = it
+                userPrefs.setDefaultGame("p4", it)
+            }
+        )
+
+        // Persona 5 series
+        GameChoiceRow(
+            label = "Persona 5",
+            options = listOf("p5r" to "P5 Royal", "p5" to "P5 Vanilla"),
+            selected = p5Default,
+            onSelect = {
+                p5Default = it
+                userPrefs.setDefaultGame("p5", it)
+            }
+        )
+    }
+}
+
+@Composable
+private fun GameChoiceRow(
+    label: String,
+    options: List<Pair<String, String>>,
+    selected: String,
+    onSelect: (String) -> Unit
+) {
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodySmall,
+            color = TextSecondary,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 6.dp)
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            options.forEach { (id, title) ->
+                val isSelected = selected.equals(id, ignoreCase = true)
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(
+                            if (isSelected) TextPrimary.copy(alpha = 0.2f) else Background
+                        )
+                        .clickable { onSelect(id) }
+                        .padding(vertical = 10.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.bodySmall,
+                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                        color = if (isSelected) TextPrimary else TextSecondary
+                    )
+                }
+            }
+        }
+    }
+}

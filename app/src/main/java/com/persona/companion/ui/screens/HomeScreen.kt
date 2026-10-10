@@ -12,7 +12,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -37,9 +37,15 @@ import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberTextScaleFactor
 
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.ui.platform.LocalContext
+import com.persona.companion.data.UserPreferences
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController) {
+    val context = LocalContext.current
+    val userPrefs = remember { UserPreferences(context) }
     val deviceType = rememberDeviceType()
     val contentPadding = rememberContentPadding()
     val textScale = rememberTextScaleFactor()
@@ -50,6 +56,9 @@ fun HomeScreen(navController: NavController) {
             TopAppBar(
                 title = { },
                 actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Search.route) }) {
+                        Icon(Icons.Default.Search, contentDescription = "Search", tint = TextPrimary)
+                    }
                     // Cast button (only on phone/tablet, not TV)
                     if (deviceType != DeviceType.TV) {
                         CastButton()
@@ -88,13 +97,19 @@ fun HomeScreen(navController: NavController) {
                 color = TextSecondary
             )
 
-            Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 60.dp else 40.dp))
+            Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 40.dp else 28.dp))
             
             // Quick access buttons
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
+                QuickAccessButton(
+                    icon = Icons.Default.Search,
+                    label = "Search",
+                    onClick = { navController.navigate(Screen.Search.route) },
+                    modifier = Modifier.weight(1f)
+                )
                 QuickAccessButton(
                     icon = Icons.Default.Favorite,
                     label = "Favorites",
@@ -116,14 +131,20 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 SeriesData.allSeries.forEach { series ->
+                    val defaultGameId = remember(series.id) { userPrefs.getDefaultGame(series.id) }
                     SeriesCard(
                         series = series,
                         deviceType = deviceType,
                         onSeriesClick = {
-                            navController.navigate(Screen.GameSelection.createRoute(series.id))
+                            // If default game is configured, navigate straight to its category!
+                            navController.navigate(Screen.Category.createRoute(series.id, defaultGameId))
                         },
                         onGameClick = { gameId ->
-                            navController.navigate(Screen.Category.createRoute(series.id, gameId))
+                            if (gameId == "__picker__") {
+                                navController.navigate(Screen.GameSelection.createRoute(series.id))
+                            } else {
+                                navController.navigate(Screen.Category.createRoute(series.id, gameId))
+                            }
                         },
                         modifier = when (deviceType) {
                             DeviceType.PHONE -> Modifier.fillMaxWidth()
@@ -265,6 +286,25 @@ private fun SeriesCard(
                             )
                         )
                     }
+                }
+                // 'All' button to pick other game editions
+                Surface(
+                    shape = RoundedCornerShape(999.dp),
+                    color = Color.White.copy(alpha = 0.20f),
+                    border = BorderStroke(1.dp, Color.White.copy(alpha = 0.40f)),
+                    modifier = Modifier.clickable {
+                        onGameClick("__picker__")
+                    }
+                ) {
+                    Text(
+                        text = "All...",
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                        style = MaterialTheme.typography.labelSmall.copy(
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 11.sp,
+                            color = Color.White
+                        )
+                    )
                 }
             }
         }

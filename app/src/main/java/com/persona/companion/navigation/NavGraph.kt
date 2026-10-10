@@ -29,6 +29,7 @@ import com.persona.companion.ui.screens.BossDetailScreen
 import com.persona.companion.ui.screens.DayByDayGuideScreen
 import com.persona.companion.ui.screens.NewsUpdatesScreen
 import com.persona.companion.ui.screens.NegotiationGuideScreen
+import com.persona.companion.ui.screens.GlobalSearchScreen
 
 // ---------------------------------------------------------------------------
 // Route definitions
@@ -43,6 +44,8 @@ sealed class Screen(val route: String) {
     object Favorites : Screen("favorites")
     
     object RecentlyViewed : Screen("recently_viewed")
+
+    object Search : Screen("search")
 
     object GameSelection : Screen("game_selection/{seriesId}") {
         fun createRoute(seriesId: String) = "game_selection/$seriesId"
@@ -170,6 +173,10 @@ fun NavGraph(navController: NavHostController) {
         
         composable(Screen.RecentlyViewed.route) {
             RecentlyViewedScreen(navController)
+        }
+
+        composable(Screen.Search.route) {
+            GlobalSearchScreen(navController)
         }
 
         composable(

@@ -139,7 +139,7 @@ const S = {
         skillRouteTarget:null, skillRouteSkill:null, skillRouteSkills:[], skillsList:null,
         personaMap:{}, chart:null, byArcana:{}, specialData:{}, fissionTable:{}
     },
-    settings:{ showDlc:true, showEpisodeAigis:true, p3pProtagonist:'MALE', vhUrl:'http://localhost:7770', vhAutoSync:false },
+    settings:{ showDlc:true, showEpisodeAigis:true, noSpoilersMode:false, defaultGame_p3:'p3r', defaultGame_p4:'p4g', defaultGame_p5:'p5r', p3pProtagonist:'MALE', vhUrl:'http://localhost:7770', vhAutoSync:false },
     velvetHex:{
         connected: false,
         timer: null,
@@ -486,8 +486,10 @@ function buildHome() {
     const SERIES_LOGOS = { p3:'assets/p3r_logo.png', p4:'assets/p4g_logo.png', p5:'assets/p5r_logo.png' };
     const HERO_IMAGES = { p3:'assets/images/heroes/p3_hero.webp', p4:'assets/images/heroes/p4_hero.webp', p5:'assets/images/heroes/p5_hero.webp' };
 
-    document.getElementById('seriesList').innerHTML = SERIES.map(s => `
-        <div class="series-card series-card--${s.id}" onclick="navigate('game','${s.id}')">
+    document.getElementById('seriesList').innerHTML = SERIES.map(s => {
+        const defaultGame = S.settings['defaultGame_' + s.id] || (s.id==='p3'?'p3r':s.id==='p4'?'p4g':'p5r');
+        return `
+        <div class="series-card series-card--${s.id}" onclick="selectGame('${s.id}','${defaultGame}')">
             ${s.id==='p5' ? `<div class="series-card-city-bg" style="background-image:url('assets/images/heroes/p5_city_bg.webp')"></div>` : ''}
             <div class="series-card-gradient"></div>
             ${s.id==='p5' ? '<div class="series-card-star-badge">★</div>' : ''}
@@ -504,7 +506,8 @@ function buildHome() {
                 </div>
             </div>
             <div class="series-card-arrow">›</div>
-        </div>`).join('');
+        </div>`;
+    }).join('');
 }
 
 /* ── Game Selection ────────────────────────────────────────────────────────── */
@@ -817,11 +820,33 @@ function renderEnemies(data, q, color, el) {
         return ((a[1].level||0)-(b[1].level||0))*dir;
     });
     const countLine = (q || S.favOnly || S.aigisOnly) ? `<div class="result-count">${pool.length} of ${total} shown</div>` : '';
+    const SPOILER_BOSS_REGEX = /adachi|sagiri|marie|kusumi|izanami|akechi|shido|yaldabaoth|maruki|azathoth|kadmon|lavenza|nyx|erebus|ryoji/i;
     el.innerHTML = countLine + pool.map(([name,e])=>{
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
         const isFav = S.favorites.has(`${S.game}_${name}`);
         const imgUrl = getEnemyImageFilename(name, S.game);
+        const isSpoiler = (e.isBoss || e.isMiniBoss) && SPOILER_BOSS_REGEX.test(name);
+        const isConcealed = S.settings.noSpoilersMode && isSpoiler && !window['revealed_' + name];
+
+        if (isConcealed) {
+            return `
+            <div class="row-card enemy-row-card" style="opacity:0.85" onclick="event.stopPropagation(); window['revealed_${esc(name)}']=true; renderEnemies(data,q,color,el);">
+                <div class="enemy-avatar-box">
+                    <div class="enemy-avatar-fallback" style="display:flex;background:#2a1515;color:#E57373">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                    </div>
+                </div>
+                <div class="row-main">
+                    <div class="row-name-line">
+                        <span class="row-name" style="color:#E57373">Concealed Boss (Spoiler)</span>
+                        <span class="sort-chip" style="font-size:0.65rem;padding:2px 6px;margin-left:6px;background:rgba(229,115,115,0.2);color:#E57373">Reveal</span>
+                    </div>
+                    <div class="row-sub" style="color:var(--text3)">Late-game story boss hidden · Tap to view</div>
+                </div>
+            </div>`;
+        }
+
         return `
         <div class="row-card enemy-row-card" onclick="openEnemy('${esc(name)}', '${esc(e.area||'')}')">
             <div class="enemy-avatar-box">
@@ -1776,6 +1801,42 @@ function buildSettingsScreen() {
             </div>
             <div class="toggle ${S.settings.showEpisodeAigis?'on':''}" id="toggle-showEpisodeAigis"></div>
         </div>
+        <div class="setting-row" onclick="toggleSetting('noSpoilersMode')">
+            <div class="setting-info">
+                <div class="setting-label">No Spoilers Mode</div>
+                <div class="setting-desc">Conceal late-game boss identities and story plot twists</div>
+            </div>
+            <div class="toggle ${S.settings.noSpoilersMode?'on':''}" id="toggle-noSpoilersMode"></div>
+        </div>
+    </div>
+    <div class="section-card" style="margin-top:12px">
+        <div class="section-title">Default Games (Modern Trilogy)</div>
+        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:10px">Tapping a series card on the Home screen opens this game directly.</div>
+        
+        <div style="margin-bottom:8px">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 3</div>
+            <div style="display:flex;gap:6px">
+                <button class="sort-chip ${S.settings.defaultGame_p3==='p3r'?'active':''}" onclick="setDefaultGameWeb('p3','p3r')">P3 Reload</button>
+                <button class="sort-chip ${S.settings.defaultGame_p3==='p3p'?'active':''}" onclick="setDefaultGameWeb('p3','p3p')">P3 Portable</button>
+                <button class="sort-chip ${S.settings.defaultGame_p3==='p3fes'?'active':''}" onclick="setDefaultGameWeb('p3','p3fes')">P3 FES</button>
+            </div>
+        </div>
+
+        <div style="margin-bottom:8px">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 4</div>
+            <div style="display:flex;gap:6px">
+                <button class="sort-chip ${S.settings.defaultGame_p4==='p4g'?'active':''}" onclick="setDefaultGameWeb('p4','p4g')">P4 Golden</button>
+                <button class="sort-chip ${S.settings.defaultGame_p4==='p4'?'active':''}" onclick="setDefaultGameWeb('p4','p4')">P4 Vanilla</button>
+            </div>
+        </div>
+
+        <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 5</div>
+            <div style="display:flex;gap:6px">
+                <button class="sort-chip ${S.settings.defaultGame_p5==='p5r'?'active':''}" onclick="setDefaultGameWeb('p5','p5r')">P5 Royal</button>
+                <button class="sort-chip ${S.settings.defaultGame_p5==='p5'?'active':''}" onclick="setDefaultGameWeb('p5','p5')">P5 Vanilla</button>
+            </div>
+        </div>
     </div>
     <div class="section-card" style="margin-top:12px">
         <div class="section-title">VelvetHex Live Save Sync (PC)</div>
@@ -1806,6 +1867,12 @@ function setP3PProtagonist(val) {
     document.getElementById('tog-male')?.classList.toggle('on', val==='MALE');
     document.getElementById('tog-femc')?.classList.toggle('on', val==='FEMC');
     S.slData = null; // force reload
+}
+
+function setDefaultGameWeb(seriesId, gameId) {
+    S.settings['defaultGame_' + seriesId] = gameId;
+    localStorage.setItem('settings', JSON.stringify(S.settings));
+    buildSettingsScreen();
 }
 
 /* ── Misc ──────────────────────────────────────────────────────────────────── */

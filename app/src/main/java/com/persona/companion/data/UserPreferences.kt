@@ -107,6 +107,34 @@ class UserPreferences(context: Context) {
         prefs.edit().putString("p3p_protagonist", protagonist.name).apply()
     }
     
+    // Anti-Spoiler / No Spoilers Mode
+    fun isNoSpoilersMode(): Boolean = prefs.getBoolean("no_spoilers_mode", false)
+    fun setNoSpoilersMode(enabled: Boolean) = prefs.edit().putBoolean("no_spoilers_mode", enabled).apply()
+
+    val noSpoilersModeFlow: Flow<Boolean> = callbackFlow {
+        trySend(isNoSpoilersMode())
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "no_spoilers_mode") trySend(isNoSpoilersMode())
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
+
+    // Default Game for Modern Trilogy (P3 -> p3r, P4 -> p4g, P5 -> p5r)
+    fun getDefaultGame(seriesId: String): String {
+        val fallback = when (seriesId.lowercase()) {
+            "p3" -> "p3r"
+            "p4" -> "p4g"
+            "p5" -> "p5r"
+            else -> seriesId
+        }
+        return prefs.getString("default_game_$seriesId", fallback) ?: fallback
+    }
+
+    fun setDefaultGame(seriesId: String, gameId: String) {
+        prefs.edit().putString("default_game_$seriesId", gameId).apply()
+    }
+
     data class RecentItem(
         val seriesId: String,
         val gameId: String,
@@ -114,3 +142,4 @@ class UserPreferences(context: Context) {
         val timestamp: Long
     )
 }
+

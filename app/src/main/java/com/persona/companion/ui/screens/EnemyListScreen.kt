@@ -320,44 +320,82 @@ fun EnemyCard(
             Spacer(Modifier.width(if (isCompact) 10.dp else 12.dp))
         }
         
+        val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+        val isNoSpoilers = remember { userPrefs.isNoSpoilersMode() }
+        val isSpoiler = remember(enemy.name) { com.persona.companion.utils.SpoilerUtils.isSpoilerBoss(enemy.name) }
+        var isRevealed by remember { mutableStateOf(false) }
+        val isConcealed = isNoSpoilers && isSpoiler && !isRevealed
+
         Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = enemy.name,
-                style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = TextPrimary
-            )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = "${enemy.arcana} • Lv. ${enemy.level}",
-                    style = if (isCompact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
-                    color = TextSecondary
-                )
-                if (enemy.episodeAigis == true) {
+            if (isConcealed) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.clickable { isRevealed = true }
+                ) {
+                    Text(
+                        text = "Concealed Boss (Spoiler)",
+                        style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFFE57373)
+                    )
                     Spacer(Modifier.width(6.dp))
                     Surface(
-                        color = Color(0xFF0284C7).copy(alpha = 0.2f),
+                        color = Color(0xFFE57373).copy(alpha = 0.2f),
                         shape = RoundedCornerShape(4.dp)
                     ) {
                         Text(
-                            text = "Episode Aigis",
-                            color = Color(0xFF38BDF8),
+                            text = "Reveal",
+                            color = Color(0xFFEF5350),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                            modifier = Modifier.padding(horizontal = 5.dp, vertical = 2.dp)
                         )
                     }
                 }
-                Spacer(Modifier.width(8.dp))
-                WeaknessRow(enemy.getWeaknesses(gameId))
-            }
-            if (!isCompact && enemy.area.isNotEmpty() && enemy.area != "Unknown") {
-                Spacer(Modifier.height(2.dp))
                 Text(
-                    text = enemy.area,
+                    text = "Late-game story boss hidden • Tap to view",
                     style = MaterialTheme.typography.bodySmall,
                     color = TextDisabled
                 )
+            } else {
+                Text(
+                    text = enemy.name,
+                    style = if (isCompact) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = TextPrimary
+                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = "${enemy.arcana} • Lv. ${enemy.level}",
+                        style = if (isCompact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium,
+                        color = TextSecondary
+                    )
+                    if (enemy.episodeAigis == true) {
+                        Spacer(Modifier.width(6.dp))
+                        Surface(
+                            color = Color(0xFF0284C7).copy(alpha = 0.2f),
+                            shape = RoundedCornerShape(4.dp)
+                        ) {
+                            Text(
+                                text = "Episode Aigis",
+                                color = Color(0xFF38BDF8),
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                            )
+                        }
+                    }
+                    Spacer(Modifier.width(8.dp))
+                    WeaknessRow(enemy.getWeaknesses(gameId))
+                }
+                if (!isCompact && enemy.area.isNotEmpty() && enemy.area != "Unknown") {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = enemy.area,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = TextDisabled
+                    )
+                }
             }
         }
         
