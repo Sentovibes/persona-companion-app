@@ -98,8 +98,7 @@ store_screenshots/
 testsprite_tests/
 
 # Teamwork and agent workspaces
-.agents/*
-!.agents/rules/
+.agents/
 
 # Incoming raw images inbox
 incoming_images/*
