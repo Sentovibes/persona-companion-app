@@ -1,3 +1,38 @@
+# Release Notes: v8.0 (Global Search, No Spoilers Mode & 100% Franchise Bestiary)
+
+Version: **8.0**  
+Phone Version Code: **63**  
+Release Type: **Major Feature & Content Release**  
+
+---
+
+## Highlights & New Features
+
+### 1. Unified Global Search
+- **Cross-Database Instant Search**: Search across Personas, Skills, Enemies, Bosses, Quests, Items, Social Links, and Guides from any screen with live debounced indexing.
+- **Rich Result Badges**: Visual indicators for element affinities, levels, Arcana, and category badges.
+- **Fast Navigation**: Jump directly to detailed stats, fusion recipes, or strategy breakdowns with a single tap.
+
+### 2. No Spoilers Mode & Concealed Social Links
+- **Concealed Dialogue Choices**: Social Link and Confidant response prompts now conceal optimal dialogue answers behind tap-to-reveal toggles in No Spoilers Mode.
+- **Concealed Late-Game Bosses**: Automatically obfuscates end-game bosses and major story encounters across all games until manually revealed.
+- **Configurable Default Game**: Choose your favorite game to launch directly into, or select "None" to pick freely on every session.
+
+### 3. 100% Enemy & Boss Visual Coverage (874 / 874 Enemies)
+- **Episode Aigis & P3R Bestiary**: Added complete boss encounters for Colosseo Purgatorio, Empyrean Depths, Monad Passages, and Superbosses (Metis, Shadow Protagonist, Akihiko, Ken, Junpei, Koromaru, Yukari, Mitsuru, Joker).
+- **Full Visual Asset Coverage**: 100.0% artwork coverage across all 874 enemies and 320 Personas in Persona 3 Reload, Persona 4 Golden, and Persona 5 Royal.
+- **Authentic Enemy Fallbacks**: Added verified artwork mappings for Corporobo waves, Battle Arena, Shadow Izuo, and the Holy Grail pre-transformation phase.
+
+### 4. Cloud Image Pack v3.0 Integration
+- **Updated Cloud Distribution**: Bundled support for Cloud Image Pack v3.0 (962 verified high-resolution PNG artworks).
+- **Atomic Integrity Validation**: Exact byte-level ZIP verification (`1,039,444,374 bytes`) ensures corruption-free extraction.
+
+### 5. Platform & Architecture Hardening
+- **Android 15 16 KB Page-Size Certified**: 100% compliant with Google Play 16 KB memory page-size standards.
+- **R8 / ProGuard Optimization**: Optimized shrink rules with zero runtime reflection issues.
+
+---
+
 # Release Notes: v7.2.2 (Official Production Release)
 
 ## Android Phone & Web Release (versionCode 49)
