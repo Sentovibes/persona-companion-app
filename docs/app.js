@@ -826,7 +826,7 @@ function renderEnemies(data, q, color, el) {
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
         const isFav = S.favorites.has(`${S.game}_${name}`);
-        const imgUrl = getEnemyImageFilename(name, S.game);
+        const imgUrl = getEnemyImageFilename(e.persona_name || name, S.game);
         const isSpoiler = (e.isBoss || e.isMiniBoss) && SPOILER_BOSS_REGEX.test(name);
         const isConcealed = S.settings.noSpoilersMode && isSpoiler && !window['revealed_' + name];
 
@@ -1648,7 +1648,7 @@ function renderEnemyDetail(name, e, color, containerId) {
     if (!el) return;
     const isBoss = e.isBoss || e.isMiniBoss;
     const elems = ELEMENTS[S.series]||ELEMENTS.p5;
-    const imgUrl = e.image || getEnemyImageFilename(name, S.game);
+    const imgUrl = e.image || getEnemyImageFilename(e.persona_name || name, S.game);
 
     let html = '';
     // Hero Section

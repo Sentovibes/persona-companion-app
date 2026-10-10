@@ -1701,7 +1701,6 @@
   },
   {
     "name": "Cognitive Haru's Fiance",
-    "persona_name": null,
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -1730,7 +1729,7 @@
   },
   {
     "name": "Corporobo MDL-AM and Corporobo MDL-WKR x2",
-    "persona_name": "Corporobo MDL-AM and Corporobo MDL-WKR",
+    "persona_name": "Shadow Okumura",
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -1759,7 +1758,7 @@
   },
   {
     "name": "Corporobo MDL-DM and Corporobo MDL-WKR x3",
-    "persona_name": "Corporobo MDL-DM and Corporobo MDL-WKR",
+    "persona_name": "Shadow Okumura",
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -1788,7 +1787,7 @@
   },
   {
     "name": "Corporobo MDL-GM and[Corporobo MDL-WKR x4",
-    "persona_name": "Corporobo MDL-GM and[Corporobo MDL-WKR",
+    "persona_name": "Shadow Okumura",
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -1817,7 +1816,7 @@
   },
   {
     "name": "Corporobo MDL-CH x 15",
-    "persona_name": "Corporobo MDL-CH",
+    "persona_name": "Shadow Okumura",
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -2117,7 +2116,7 @@
   },
   {
     "name": "Battle Arena ( Ganesha x2, Rangda x3, Thor x1)",
-    "persona_name": "Battle Arena",
+    "persona_name": "Ganesha",
     "arcana": "Shadow",
     "level": 25,
     "hp": 1500,
@@ -4025,7 +4024,7 @@
   },
   {
     "name": "Shadow Izuo",
-    "persona_name": "Macabre |",
+    "persona_name": "Macabre",
     "arcana": "Shadow",
     "level": 75,
     "hp": 4500,
