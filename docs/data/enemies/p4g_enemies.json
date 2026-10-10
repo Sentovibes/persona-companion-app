@@ -2,20 +2,839 @@
   {
     "name": "Shadow Yosuke",
     "arcana": "Magician",
-    "level": 4,
+    "level": 3,
     "hp": 300,
-    "sp": 150,
+    "sp": 200,
     "resists": "-r-wrnn-",
     "skills": [
       "Wind of Oblivion",
       "Power Slash",
-      "Dekaja"
+      "Dekaja",
+      "Guard"
     ],
-    "area": "Boss",
+    "area": "Twisted Shopping District (Boss)",
     "exp": 0,
     "version": "Vanilla & Golden",
     "isBoss": true,
     "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Chie",
+    "arcana": "Chariot",
+    "level": 6,
+    "hp": 1000,
+    "sp": 500,
+    "resists": "r-r-wnn-",
+    "skills": [
+      "Mazio",
+      "Bufu",
+      "Swift Strike",
+      "Bottomless Greed"
+    ],
+    "area": "Yukiko's Castle (Floor 2)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Yukiko",
+    "arcana": "Priestess",
+    "level": 15,
+    "hp": 0,
+    "sp": 999,
+    "resists": "--------",
+    "skills": [],
+    "area": "Yukiko's Castle (Floor 8)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Shadow Yukiko",
+        "hp": 1000,
+        "sp": 500,
+        "resists": "-dw--nn-",
+        "skills": [
+          "Agi",
+          "Burn to Ashes",
+          "Double Fangs",
+          "White Wall",
+          "Terror Voice"
+        ]
+      },
+      {
+        "name": "Charming Prince",
+        "hp": 850,
+        "sp": 450,
+        "resists": "--w-rnn-",
+        "skills": [
+          "Diarama",
+          "Makajam",
+          "Dekunda",
+          "Sukukaja",
+          "Prince Dance"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shadow Kanji",
+    "arcana": "Emperor",
+    "level": 25,
+    "hp": 0,
+    "sp": 999,
+    "resists": "--------",
+    "skills": [],
+    "area": "Steamy Bathhouse (Floor 11)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "parts": [
+      {
+        "name": "Shadow Kanji",
+        "hp": 2000,
+        "sp": 600,
+        "resists": "---d-nn-",
+        "skills": [
+          "Fanatic Arts",
+          "Swift Strike",
+          "Fatal End",
+          "Roar of Wrath",
+          "Guiding Tendril"
+        ]
+      },
+      {
+        "name": "Nice Guy",
+        "hp": 800,
+        "sp": 999,
+        "resists": "--w--nn-",
+        "skills": [
+          "Diarama",
+          "Heat Riser",
+          "Rebellious Song"
+        ]
+      },
+      {
+        "name": "Tough Guy",
+        "hp": 800,
+        "sp": 999,
+        "resists": "-w---nn-",
+        "skills": [
+          "Kill Rush",
+          "Sonic Punch",
+          "Tarukaja",
+          "Rampage"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shadow Rise",
+    "arcana": "Lovers",
+    "level": 35,
+    "hp": 2800,
+    "sp": 800,
+    "resists": "-----nn-",
+    "skills": [
+      "Supreme Insight",
+      "Fire Break",
+      "Agilao",
+      "Maragi",
+      "Bufu",
+      "Mabufu",
+      "Zio",
+      "Mazio",
+      "Mind Slice",
+      "Spirit Drain"
+    ],
+    "area": "Marukyu Striptease (Floor 11)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Teddie",
+    "arcana": "Star",
+    "level": 35,
+    "hp": 5000,
+    "sp": 800,
+    "resists": "--dw-nn-",
+    "skills": [
+      "Mind Charge",
+      "Mabufudyne",
+      "Foolish Whisper",
+      "Ultra Charge",
+      "Nullity Curl",
+      "Dekaja",
+      "Heat Wave"
+    ],
+    "area": "Marukyu Striptease (Floor 11)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Shadow Mitsuo",
+    "arcana": "Hermit",
+    "level": 45,
+    "hp": 0,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [],
+    "area": "Void Quest (Floor 10)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Mitsuo the Hero (Outer Shell)",
+        "hp": 1500,
+        "sp": 999,
+        "resists": "-----nn-",
+        "skills": [
+          "Command",
+          "Attack",
+          "Bomb",
+          "Spell",
+          "Gigadyne"
+        ]
+      },
+      {
+        "name": "Shadow Mitsuo (True Form)",
+        "hp": 4000,
+        "sp": 999,
+        "resists": "-----nn-",
+        "skills": [
+          "Whisper",
+          "Chant",
+          "Prayer",
+          "Megidola",
+          "Devil's Smile",
+          "Ghastly Wail",
+          "Agidyne",
+          "Bufudyne",
+          "Ziodyne",
+          "Garudyne",
+          "Dekaja"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shadow Naoto",
+    "arcana": "Fortune",
+    "level": 55,
+    "hp": 6000,
+    "sp": 999,
+    "resists": "r----nn-",
+    "skills": [
+      "Mute Ray",
+      "Element Zero",
+      "Brave Blade",
+      "Heat Riser",
+      "Galgalim Eyes",
+      "Agidyne",
+      "Bufudyne",
+      "Ziodyne",
+      "Garudyne",
+      "Dekaja"
+    ],
+    "area": "Secret Laboratory (Floor B9)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Kunino-sagiri",
+    "arcana": "Justice",
+    "level": 65,
+    "hp": 8500,
+    "sp": 2000,
+    "resists": "-rrrrnn-",
+    "skills": [
+      "Quad Converge",
+      "Control",
+      "Unnerving Justice",
+      "Agidyne",
+      "Bufudyne",
+      "Ziodyne",
+      "Garudyne",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "Fire Break",
+      "Ice Break",
+      "Elec Break",
+      "Wind Break",
+      "Dekaja",
+      "Dekunda"
+    ],
+    "area": "Heaven (Floor 10)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Tohru Adachi",
+    "arcana": "Jester",
+    "level": 73,
+    "hp": 4500,
+    "sp": 999,
+    "resists": "r----nn-",
+    "skills": [
+      "Vorpal Blade",
+      "Heat Riser",
+      "Ziodyne",
+      "Maziodyne",
+      "Mudoon",
+      "Dekaja",
+      "Evil Smile",
+      "Ghastly Wail"
+    ],
+    "area": "Magatsu Inaba (Floor 3)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Ameno-sagiri",
+    "arcana": "Jester",
+    "level": 75,
+    "hp": 9000,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Nebula Oculus",
+      "Bewildering Fog",
+      "Agneyastra",
+      "Quake",
+      "God's Judgement",
+      "Agidyne",
+      "Bufudyne",
+      "Ziodyne",
+      "Garudyne",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "Mind Charge",
+      "Tarukaja",
+      "Rakukaja",
+      "Sukukaja",
+      "Dekaja"
+    ],
+    "area": "Magatsu Inaba (Floor 3)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Marie",
+    "arcana": "Aeon",
+    "level": 75,
+    "hp": 3000,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Hot Thunder",
+      "Cold Blizzard",
+      "Megidolaon",
+      "Alienation Fog",
+      "Draining Fog"
+    ],
+    "area": "Hollow Forest (Floor 10)",
+    "exp": 0,
+    "version": "Golden Exclusive",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Kusumi-no-Okami",
+    "arcana": "Aeon",
+    "level": 75,
+    "hp": 8000,
+    "sp": 999,
+    "resists": "ppppprr-",
+    "skills": [
+      "Draining Fog",
+      "Riot Gun",
+      "Cry of Denial",
+      "Maziodyne",
+      "Mabufudyne",
+      "Maragidyne",
+      "Magarudyne",
+      "Megidolaon",
+      "Stagnant Air"
+    ],
+    "area": "Hollow Forest (Floor 10)",
+    "exp": 0,
+    "version": "Golden Exclusive",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Izanami",
+    "arcana": "World",
+    "level": 90,
+    "hp": 0,
+    "sp": 999,
+    "resists": "r----nn-",
+    "skills": [],
+    "area": "Yomotsu Hirasaka (Floor 9)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false,
+    "phases": [
+      {
+        "name": "Izanami",
+        "hp": 4500,
+        "sp": 999,
+        "resists": "r----nd-",
+        "skills": [
+          "Megidolaon",
+          "Mind Charge",
+          "Mabufudyne",
+          "Maragidyne",
+          "Maziodyne",
+          "Magarudyne",
+          "Dekaja",
+          "Fool's Whisper"
+        ]
+      },
+      {
+        "name": "Izanami-no-Okami",
+        "hp": 8000,
+        "sp": 999,
+        "resists": "---d-nn-",
+        "skills": [
+          "Thousand Curses",
+          "Summons to Yomi",
+          "Ohoikazuchi",
+          "Kuro Ikazuchi",
+          "Fury of Yasogami",
+          "End of the World",
+          "Galgalim Eyes",
+          "Megidolaon",
+          "Agneyastra",
+          "Debilitate",
+          "Mind Charge",
+          "Power Charge"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Reaper",
+    "arcana": "Death",
+    "level": 85,
+    "hp": 5000,
+    "sp": 12000,
+    "resists": "-----nn-",
+    "skills": [
+      "Megidolaon",
+      "Vorpal Blade",
+      "Myriad Arrows",
+      "Mahamaon",
+      "Mamudoon",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "Fire Break",
+      "Ice Break",
+      "Elec Break",
+      "Wind Break",
+      "Mind Charge"
+    ],
+    "area": "Dungeons (Trapped Treasure Chests)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Margaret",
+    "arcana": "Empress",
+    "level": 99,
+    "hp": 15000,
+    "sp": 9999,
+    "resists": "rrrrrnn-",
+    "skills": [
+      "Megidolaon",
+      "Morning Star",
+      "Hassou Tobi",
+      "Mind Charge",
+      "Power Charge",
+      "Maragidyne",
+      "Mabufudyne",
+      "Maziodyne",
+      "Magarudyne",
+      "Diarahan"
+    ],
+    "area": "Heaven (Floor 10 - NG+ Secret Boss)",
+    "exp": 0,
+    "version": "Secret Boss",
+    "isBoss": true,
+    "isMiniBoss": false
+  },
+  {
+    "name": "Avenger Knight",
+    "arcana": "Chariot",
+    "level": 11,
+    "hp": 800,
+    "sp": 500,
+    "resists": "--w--nn-",
+    "skills": [
+      "Power Slash",
+      "Bash",
+      "Tarukaja"
+    ],
+    "area": "Yukiko's Castle (Floor 5)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Contrarian King",
+    "arcana": "Emperor",
+    "level": 17,
+    "hp": 2500,
+    "sp": 999,
+    "resists": "-dwnnnn-",
+    "skills": [
+      "Rampage",
+      "Maragion",
+      "Red Wall",
+      "Brain Shake"
+    ],
+    "area": "Yukiko's Castle (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Daring Gigas",
+    "arcana": "Chariot",
+    "level": 19,
+    "hp": 1300,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Power Slash",
+      "Single Shot",
+      "Tarukaja",
+      "Rebellion"
+    ],
+    "area": "Steamy Bathhouse (Floor 7)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Intolerant Officer",
+    "arcana": "Hanged",
+    "level": 27,
+    "hp": 3000,
+    "sp": 999,
+    "resists": "---w-nn-",
+    "skills": [
+      "Torrent Shot",
+      "Bufula",
+      "Garula",
+      "Poison Mist"
+    ],
+    "area": "Steamy Bathhouse (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Amorous Snake",
+    "arcana": "Lovers",
+    "level": 33,
+    "hp": 2500,
+    "sp": 999,
+    "resists": "-w---nn-",
+    "skills": [
+      "Fire Break",
+      "Zionga",
+      "Virus Breath",
+      "Mind Slice"
+    ],
+    "area": "Marukyu Striptease (Floor 7)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Momentary Child",
+    "arcana": "Hermit",
+    "level": 40,
+    "hp": 4000,
+    "sp": 999,
+    "resists": "--w--nn-",
+    "skills": [
+      "Herculean Strike",
+      "Deathbound",
+      "Stagnant Air",
+      "Anger Voice"
+    ],
+    "area": "Marukyu Striptease (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Killing Hand",
+    "arcana": "Strength",
+    "level": 41,
+    "hp": 2800,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Fatal End",
+      "Deathbound",
+      "White Wall",
+      "Summon Almighty Hand"
+    ],
+    "area": "Void Quest (Floor 7)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Escapist Soldier",
+    "arcana": "Chariot",
+    "level": 46,
+    "hp": 4500,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Brave Blade",
+      "Mudoon",
+      "Vicious Strike",
+      "Evil Smile"
+    ],
+    "area": "Void Quest (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Dominating Machine",
+    "arcana": "Star",
+    "level": 53,
+    "hp": 4000,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Power Charge",
+      "Herculean Strike",
+      "God's Hand"
+    ],
+    "area": "Secret Laboratory (Floor B6)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Extreme Vessel",
+    "arcana": "Justice",
+    "level": 58,
+    "hp": 5500,
+    "sp": 999,
+    "resists": "----wnn-",
+    "skills": [
+      "Power Charge",
+      "God's Hand",
+      "Gigantic Fist",
+      "Virus Breath"
+    ],
+    "area": "Secret Laboratory (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "World Balance",
+    "arcana": "Justice",
+    "level": 64,
+    "hp": 5000,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Mind Charge",
+      "Agidyne",
+      "Bufudyne",
+      "Ziodyne",
+      "Garudyne"
+    ],
+    "area": "Heaven (Floor 7)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Lost Okina",
+    "arcana": "Magician",
+    "level": 69,
+    "hp": 6500,
+    "sp": 999,
+    "resists": "n-n--nn-",
+    "skills": [
+      "Ziodyne",
+      "Garudyne",
+      "Mabufudyne",
+      "Megidola",
+      "Brave Blade"
+    ],
+    "area": "Heaven (Optional Boss)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Chaos Fuzz",
+    "arcana": "Fool",
+    "level": 71,
+    "hp": 1500,
+    "sp": 999,
+    "resists": "-----nn-",
+    "skills": [
+      "Summon",
+      "Mudoon",
+      "Agidyne",
+      "Hamano"
+    ],
+    "area": "Magatsu Inaba (Floor 3)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Envious Giant",
+    "arcana": "Magician",
+    "level": 74,
+    "hp": 3000,
+    "sp": 999,
+    "resists": "---d-nn-",
+    "skills": [
+      "Megidolaon",
+      "High Counter",
+      "Tentarafoo"
+    ],
+    "area": "Magatsu Inaba (Floor 6)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Gorgeous King",
+    "arcana": "Emperor",
+    "level": 77,
+    "hp": 4000,
+    "sp": 999,
+    "resists": "wrrrrnn-",
+    "skills": [
+      "Summon",
+      "Mind Charge",
+      "Megidolaon",
+      "Tetrakarn",
+      "Makarakarn",
+      "Evil Smile",
+      "Foolish Whisper"
+    ],
+    "area": "Hollow Forest (Floor 4)",
+    "exp": 0,
+    "version": "Golden Exclusive",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Heaven's Giant",
+    "arcana": "Justice",
+    "level": 79,
+    "hp": 5500,
+    "sp": 999,
+    "resists": "rnnnnnn-",
+    "skills": [
+      "Stagnant Air",
+      "Mustard Bomb",
+      "Navas Nebula",
+      "Ziodyne",
+      "Agidyne",
+      "High Counter"
+    ],
+    "area": "Hollow Forest (Floor 7)",
+    "exp": 0,
+    "version": "Golden Exclusive",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Neo Minotaur",
+    "arcana": "Hanged",
+    "level": 82,
+    "hp": 5000,
+    "sp": 999,
+    "resists": "r----nn-",
+    "skills": [
+      "Brave Blade",
+      "Gigantic Fist",
+      "High Counter",
+      "Power Charge"
+    ],
+    "area": "Yomotsu Hirasaka (Floor 3)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
+  },
+  {
+    "name": "Sleeping Table",
+    "arcana": "Death",
+    "level": 84,
+    "hp": 4500,
+    "sp": 999,
+    "resists": "-n---nn-",
+    "skills": [
+      "Megidolaon",
+      "Maragidyne",
+      "Evil Smile",
+      "Ghastly Wail",
+      "Mind Charge"
+    ],
+    "area": "Yomotsu Hirasaka (Floor 6)",
+    "exp": 0,
+    "version": "Vanilla & Golden",
+    "isBoss": false,
+    "isMiniBoss": true
   },
   {
     "name": "Lying Hablerie",
@@ -30,7 +849,7 @@
       "agility": 3,
       "luck": 3
     },
-    "resists": "-sww----",
+    "resists": "-rww----",
     "skills": [
       "Dia"
     ],
@@ -70,24 +889,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Chie",
-    "arcana": "Chariot",
-    "level": 6,
-    "hp": 1000,
-    "sp": 200,
-    "resists": "r-r-wnn-",
-    "skills": [
-      "Mazio",
-      "Green Wall",
-      "Bottomless Envy"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Black Raven",
     "arcana": "Hermit",
     "level": 7,
@@ -100,7 +901,7 @@
       "agility": 5,
       "luck": 3
     },
-    "resists": "-s-ws---",
+    "resists": "-r-wr---",
     "skills": [
       "Tarukaja"
     ],
@@ -126,7 +927,7 @@
       "agility": 6,
       "luck": 7
     },
-    "resists": "-w-s----",
+    "resists": "-w-r----",
     "skills": [
       "Bufu",
       "Mabufu",
@@ -155,7 +956,7 @@
       "agility": 2,
       "luck": 7
     },
-    "resists": "s-w-s---",
+    "resists": "r-w-r---",
     "skills": [
       "Agi"
     ],
@@ -181,7 +982,7 @@
       "agility": 6,
       "luck": 7
     },
-    "resists": "s--w----",
+    "resists": "r--w----",
     "skills": [
       "Last Resort",
       "Poisma"
@@ -208,7 +1009,7 @@
       "agility": 25,
       "luck": 50
     },
-    "resists": "-ssssss-",
+    "resists": "-rrrrrr-",
     "skills": [
       "Agi",
       "Garu",
@@ -239,7 +1040,7 @@
       "agility": 7,
       "luck": 8
     },
-    "resists": "---swss-",
+    "resists": "---rwrr-",
     "skills": [
       "Zio",
       "Mazio",
@@ -322,7 +1123,7 @@
       "agility": 5,
       "luck": 8
     },
-    "resists": "-----ZZ-",
+    "resists": "--------",
     "skills": [
       "Summon",
       "Zio",
@@ -339,25 +1140,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Avenger Knight",
-    "arcana": "Strength",
-    "level": 11,
-    "hp": 800,
-    "sp": 500,
-    "resists": "--w--nn-",
-    "skills": [
-      "Poison Skewer",
-      "Mazio",
-      "Red Wall",
-      "Tarukaja"
-    ],
-    "area": "Yukiko's Castle (Floor 5)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Burning Beetle",
     "arcana": "Emperor",
     "level": 13,
@@ -370,7 +1152,7 @@
       "agility": 9,
       "luck": 12
     },
-    "resists": "s-w--ZZ-",
+    "resists": "r-w-----",
     "skills": [
       "Bash",
       "Tarukaja"
@@ -397,7 +1179,7 @@
       "agility": 8,
       "luck": 13
     },
-    "resists": "s--w-Zs-",
+    "resists": "r--w--r-",
     "skills": [
       "Garu",
       "Mudo",
@@ -426,7 +1208,7 @@
       "agility": 6,
       "luck": 9
     },
-    "resists": "-n--sZ--",
+    "resists": "-n--r---",
     "skills": [
       "Agi",
       "Maragi",
@@ -456,7 +1238,7 @@
       "agility": 15,
       "luck": 9
     },
-    "resists": "-nn--s--",
+    "resists": "-nn--r--",
     "skills": [
       "Agi",
       "Bufu",
@@ -474,47 +1256,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Yukiko",
-    "arcana": "Priestess",
-    "level": 15,
-    "hp": 0,
-    "sp": 999,
-    "resists": "--------",
-    "skills": [],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false,
-    "parts": [
-      {
-        "name": "Shadow Yukiko",
-        "hp": 1000,
-        "sp": 500,
-        "resists": "-dw--nn-",
-        "skills": [
-          "Agi",
-          "Burn to Ashes",
-          "Double Fangs",
-          "White Wall",
-          "Terror Voice"
-        ]
-      },
-      {
-        "name": "Prince Charming",
-        "hp": 500,
-        "sp": 999,
-        "resists": "--w-rnn-",
-        "skills": [
-          "Diarama",
-          "Makajam",
-          "Dekunda",
-          "Sukukaja"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Autonomic Basalt",
     "arcana": "Priestess",
     "level": 16,
@@ -527,7 +1268,7 @@
       "agility": 2,
       "luck": 4
     },
-    "resists": "s---w---",
+    "resists": "r---w---",
     "skills": [],
     "area": "Steamy Bathhouse 1-4",
     "exp": 120,
@@ -579,7 +1320,7 @@
       "agility": 8,
       "luck": 4
     },
-    "resists": "-w----Z-",
+    "resists": "-w------",
     "skills": [
       "Single Shot"
     ],
@@ -605,7 +1346,7 @@
       "agility": 18,
       "luck": 8
     },
-    "resists": "Sd--nnnS",
+    "resists": "rd--nnnr",
     "skills": [
       "Hysterical Slap",
       "Kill Rush",
@@ -621,26 +1362,6 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Contrarian King",
-    "arcana": "Emperor",
-    "level": 17,
-    "hp": 2500,
-    "sp": 999,
-    "resists": "-dwnnnn-",
-    "skills": [
-      "Rampage",
-      "Kill Rush",
-      "Red Wall",
-      "Maragion",
-      "Hysteric Slap"
-    ],
-    "area": "Yukiko's Castle (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Cloudgirl Pot",
@@ -681,7 +1402,7 @@
       "agility": 18,
       "luck": 10
     },
-    "resists": "--w-s---",
+    "resists": "--w-r---",
     "skills": [
       "Pulinpa",
       "Recarmdra",
@@ -736,7 +1457,7 @@
       "agility": 12,
       "luck": 10
     },
-    "resists": "--r--Z--",
+    "resists": "--r-----",
     "skills": [
       "Evil Touch",
       "Summon"
@@ -751,27 +1472,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Daring Gigas",
-    "arcana": "Hanged Man",
-    "level": 19,
-    "hp": 1300,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Counterstrike",
-      "Power Charge",
-      "Tarukaja",
-      "Rebellion",
-      "Cleave",
-      "Fatal End"
-    ],
-    "area": "Steamy Bathhouse (Floor 7)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Dancing Hand",
     "arcana": "Magician",
     "level": 20,
@@ -784,7 +1484,7 @@
       "agility": 17,
       "luck": 15
     },
-    "resists": "-ssss---",
+    "resists": "-rrrr---",
     "skills": [
       "Rebellion",
       "Stagnant Air",
@@ -812,7 +1512,7 @@
       "agility": 10,
       "luck": 14
     },
-    "resists": "----wZn-",
+    "resists": "----w-n-",
     "skills": [
       "Garu",
       "Magaru",
@@ -841,7 +1541,7 @@
       "agility": 18,
       "luck": 12
     },
-    "resists": "---ws---",
+    "resists": "---wr---",
     "skills": [
       "Matarukaja",
       "Marakunda",
@@ -869,7 +1569,7 @@
       "agility": 35,
       "luck": 25
     },
-    "resists": "-ssssss-",
+    "resists": "-rrrrrr-",
     "skills": [
       "Agi",
       "Garu",
@@ -955,7 +1655,7 @@
       "agility": 8,
       "luck": 12
     },
-    "resists": "-wwwwZZs",
+    "resists": "-wwww--r",
     "skills": [
       "Zionga",
       "Null Dizzy"
@@ -1038,7 +1738,7 @@
       "agility": 16,
       "luck": 12
     },
-    "resists": "sswss---",
+    "resists": "rrwrr---",
     "skills": [
       "Makajam",
       "Diarama",
@@ -1097,7 +1797,7 @@
       "agility": 17,
       "luck": 16
     },
-    "resists": "sw-r----",
+    "resists": "rw-r----",
     "skills": [
       "Red Wall",
       "Virus Wave",
@@ -1142,56 +1842,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Kanji",
-    "arcana": "Emperor",
-    "level": 25,
-    "hp": 0,
-    "sp": 999,
-    "resists": "--------",
-    "skills": [],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false,
-    "parts": [
-      {
-        "name": "Shadow Kanji",
-        "hp": 2000,
-        "sp": 600,
-        "resists": "---d-nn-",
-        "skills": [
-          "Fanatic Arts",
-          "Swift Strike",
-          "Fatal End",
-          "Roar of Wrath"
-        ]
-      },
-      {
-        "name": "Nice Guy",
-        "hp": 800,
-        "sp": 999,
-        "resists": "--w--nn-",
-        "skills": [
-          "Diarama",
-          "Heat Riser",
-          "Rebellious Song"
-        ]
-      },
-      {
-        "name": "Tough Guy",
-        "hp": 800,
-        "sp": 999,
-        "resists": "-w---nn-",
-        "skills": [
-          "Kill Rush",
-          "Sonic Punch",
-          "Tarukaja"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Grave Beetle",
     "arcana": "Emperor",
     "level": 26,
@@ -1204,7 +1854,7 @@
       "agility": 2,
       "luck": 12
     },
-    "resists": "-----Zs-",
+    "resists": "------r-",
     "skills": [
       "Mamudo"
     ],
@@ -1230,7 +1880,7 @@
       "agility": 19,
       "luck": 18
     },
-    "resists": "s--ws---",
+    "resists": "r--wr---",
     "skills": [
       "Old One",
       "Cell Breaker"
@@ -1257,7 +1907,7 @@
       "agility": 12,
       "luck": 18
     },
-    "resists": "---w-nnS",
+    "resists": "---w-nnr",
     "skills": [
       "Single Shot",
       "Poison Arrow",
@@ -1286,7 +1936,7 @@
       "agility": 22,
       "luck": 21
     },
-    "resists": "-ssw----",
+    "resists": "-rrw----",
     "skills": [
       "Matarukaja",
       "Marakukaja"
@@ -1301,25 +1951,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Intolerant Officer",
-    "arcana": "Justice",
-    "level": 27,
-    "hp": 3000,
-    "sp": 999,
-    "resists": "---w-nn-",
-    "skills": [
-      "Bufula",
-      "Garula",
-      "Poison Mist",
-      "Dodge Ice"
-    ],
-    "area": "Steamy Bathhouse (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Death Seeker",
     "arcana": "Hermit",
     "level": 28,
@@ -1332,7 +1963,7 @@
       "agility": 16,
       "luck": 18
     },
-    "resists": "-----Zn-",
+    "resists": "------n-",
     "skills": [
       "Zionga",
       "Mind Charge",
@@ -1413,7 +2044,7 @@
       "agility": 14,
       "luck": 19
     },
-    "resists": "nwsws---",
+    "resists": "nwrwr---",
     "skills": [],
     "area": "Marukyu Striptease 1-4",
     "exp": 350,
@@ -1538,7 +2169,7 @@
       "agility": 45,
       "luck": 35
     },
-    "resists": "-nnsnss-",
+    "resists": "-nnrnrr-",
     "skills": [
       "Agi",
       "Bufu",
@@ -1625,7 +2256,7 @@
       "agility": 20,
       "luck": 19
     },
-    "resists": "s-------",
+    "resists": "r-------",
     "skills": [
       "Last Resort"
     ],
@@ -1651,7 +2282,7 @@
       "agility": 19,
       "luck": 16
     },
-    "resists": "--w-s---",
+    "resists": "--w-r---",
     "skills": [
       "Hama"
     ],
@@ -1677,7 +2308,7 @@
       "agility": 19,
       "luck": 22
     },
-    "resists": "---sw---",
+    "resists": "---rw---",
     "skills": [
       "Assault Dive",
       "Swift Strike"
@@ -1790,7 +2421,7 @@
       "agility": 20,
       "luck": 20
     },
-    "resists": "s----ww-",
+    "resists": "r----ww-",
     "skills": [
       "Stagnant Air",
       "Counterstrike",
@@ -1806,26 +2437,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Amorous Snake",
-    "arcana": "Lovers",
-    "level": 33,
-    "hp": 2500,
-    "sp": 999,
-    "resists": "-w---nn-",
-    "skills": [
-      "Mind Charge",
-      "Virus Wave",
-      "Stagnant Air",
-      "Megido",
-      "Life Drain"
-    ],
-    "area": "Marukyu Striptease (Floor 7)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Champion Knight",
     "arcana": "Emperor",
     "level": 34,
@@ -1838,7 +2449,7 @@
       "agility": 25,
       "luck": 16
     },
-    "resists": "s-------",
+    "resists": "r-------",
     "skills": [
       "Power Charge"
     ],
@@ -1864,7 +2475,7 @@
       "agility": 22,
       "luck": 16
     },
-    "resists": "-ssssnn-",
+    "resists": "-rrrrnn-",
     "skills": [
       "Rebellion",
       "Gale Slash"
@@ -1932,25 +2543,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Teddie",
-    "arcana": "Star",
-    "level": 35,
-    "hp": 5000,
-    "sp": 800,
-    "resists": "--dw-nn-",
-    "skills": [
-      "Mind Charge",
-      "Mabufula",
-      "Nihil Hand",
-      "Ultra Charge"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Corrupt Tower",
     "arcana": "Hierophant",
     "level": 36,
@@ -1963,7 +2555,7 @@
       "agility": 26,
       "luck": 18
     },
-    "resists": "---sw---",
+    "resists": "---rw---",
     "skills": [
       "Balzac",
       "Diarama",
@@ -1992,7 +2584,7 @@
       "agility": 10,
       "luck": 21
     },
-    "resists": "-ssssZZ-",
+    "resists": "-rrrr---",
     "skills": [
       "Bufu",
       "Mabufu"
@@ -2019,7 +2611,7 @@
       "agility": 25,
       "luck": 24
     },
-    "resists": "--sw----",
+    "resists": "--rw----",
     "skills": [
       "Power Slash",
       "Arm Chopper"
@@ -2046,7 +2638,7 @@
       "agility": 28,
       "luck": 18
     },
-    "resists": "-sw-----",
+    "resists": "-rw-----",
     "skills": [
       "Stagnant Air",
       "Foolish Whisper",
@@ -2132,7 +2724,7 @@
       "agility": 30,
       "luck": 16
     },
-    "resists": "---sw---",
+    "resists": "---rw---",
     "skills": [
       "Diarama",
       "Poison Arrow"
@@ -2159,7 +2751,7 @@
       "agility": 36,
       "luck": 12
     },
-    "resists": "-ws-s---",
+    "resists": "-wr-r---",
     "skills": [
       "Garula",
       "Mind Slice",
@@ -2244,7 +2836,7 @@
       "agility": 32,
       "luck": 20
     },
-    "resists": "s-w-----",
+    "resists": "r-w-----",
     "skills": [
       "Diarama",
       "Rebellion",
@@ -2327,7 +2919,7 @@
       "agility": 27,
       "luck": 12
     },
-    "resists": "-rrrrrZ-",
+    "resists": "-rrrrr--",
     "skills": [
       "Mighty Swing",
       "Power Charge"
@@ -2354,7 +2946,7 @@
       "agility": 55,
       "luck": 45
     },
-    "resists": "-nsnnnn-",
+    "resists": "-nrnnnn-",
     "skills": [
       "Agi",
       "Bufu",
@@ -2387,7 +2979,7 @@
       "agility": 30,
       "luck": 24
     },
-    "resists": "--ws----",
+    "resists": "--wr----",
     "skills": [
       "Tarukaja",
       "Matarukaja",
@@ -2408,26 +3000,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Momentary Child",
-    "arcana": "Death",
-    "level": 40,
-    "hp": 4000,
-    "sp": 999,
-    "resists": "--w--nn-",
-    "skills": [
-      "Deathbound",
-      "Herculean Strike",
-      "Tarukaja",
-      "Rebellion",
-      "Rampage"
-    ],
-    "area": "Marukyu Striptease (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Anguish Basalt",
     "arcana": "Lovers",
     "level": 41,
@@ -2440,7 +3012,7 @@
       "agility": 11,
       "luck": 23
     },
-    "resists": "s-swsZZ-",
+    "resists": "r-rwr---",
     "skills": [
       "Agi",
       "Zio",
@@ -2480,25 +3052,6 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Killing Hand",
-    "arcana": "Strength",
-    "level": 41,
-    "hp": 2800,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Fatal End",
-      "Deathbound",
-      "White Wall",
-      "Summon Almighty Hand"
-    ],
-    "area": "Void Quest (Floor 7)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Avarice Bambino",
@@ -2708,7 +3261,7 @@
       "agility": 31,
       "luck": 32
     },
-    "resists": "-w--s---",
+    "resists": "-w--r---",
     "skills": [
       "Garula",
       "Atom Smasher",
@@ -2736,7 +3289,7 @@
       "agility": 26,
       "luck": 24
     },
-    "resists": "-ndws---",
+    "resists": "-ndwr---",
     "skills": [
       "Fatal End"
     ],
@@ -2843,7 +3396,7 @@
       "agility": 20,
       "luck": 20
     },
-    "resists": "-ssrw---",
+    "resists": "-rrrw---",
     "skills": [
       "Last Resort",
       "Marakukaja"
@@ -2870,7 +3423,7 @@
       "agility": 29,
       "luck": 25
     },
-    "resists": "-wrss---",
+    "resists": "-wrrr---",
     "skills": [
       "Foul Breath",
       "Bufula",
@@ -2898,7 +3451,7 @@
       "agility": 30,
       "luck": 22
     },
-    "resists": "sssss--s",
+    "resists": "rrrrr--r",
     "skills": [
       "Navas Nebula",
       "Null Dizzy"
@@ -2913,45 +3466,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Mitsuo",
-    "arcana": "Hermit",
-    "level": 45,
-    "hp": 0,
-    "sp": 999,
-    "resists": "--------",
-    "skills": [],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false,
-    "phases": [
-      {
-        "name": "Mitsuo the Hero (Outer Shell)",
-        "hp": 1500,
-        "sp": 999,
-        "resists": "-----nn-",
-        "skills": [
-          "Command",
-          "Attack"
-        ]
-      },
-      {
-        "name": "Shadow Mitsuo (True Form)",
-        "hp": 4000,
-        "sp": 999,
-        "resists": "-----nn-",
-        "skills": [
-          "Whisper",
-          "Chant",
-          "Prayer",
-          "Megidola",
-          "Dekaja"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Constancy Relic",
     "arcana": "Empress",
     "level": 46,
@@ -2964,7 +3478,7 @@
       "agility": 31,
       "luck": 30
     },
-    "resists": "s-----Z-",
+    "resists": "r-------",
     "skills": [
       "Garudyne",
       "Anima Freeze",
@@ -2992,7 +3506,7 @@
       "agility": 38,
       "luck": 32
     },
-    "resists": "-ssss---",
+    "resists": "-rrrr---",
     "skills": [
       "Tetrakarn",
       "Makarakarn",
@@ -3020,7 +3534,7 @@
       "agility": 30,
       "luck": 24
     },
-    "resists": "s-------",
+    "resists": "r-------",
     "skills": [
       "Agidyne",
       "Maragion",
@@ -3038,25 +3552,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Escapist Soldier",
-    "arcana": "Chariot",
-    "level": 46,
-    "hp": 4500,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Mudoon",
-      "Foul Breath",
-      "Mind Charge",
-      "Blight"
-    ],
-    "area": "Void Quest (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Escapist Soldier B",
     "arcana": "Justice P",
     "level": 47,
@@ -3069,7 +3564,7 @@
       "agility": 28,
       "luck": 18
     },
-    "resists": "s----nn-",
+    "resists": "r----nn-",
     "skills": [
       "Arm Chopper",
       "Mind Slice",
@@ -3184,7 +3679,7 @@
       "agility": 32,
       "luck": 29
     },
-    "resists": "-ssssZ--",
+    "resists": "-rrrr---",
     "skills": [
       "Matarukaja",
       "Gale Slash",
@@ -3240,7 +3735,7 @@
       "agility": 35,
       "luck": 30
     },
-    "resists": "s---w---",
+    "resists": "r---w---",
     "skills": [
       "Stagnant Air",
       "Ziodyne",
@@ -3383,7 +3878,7 @@
       "agility": 33,
       "luck": 26
     },
-    "resists": "--wssZr-",
+    "resists": "--wrr-r-",
     "skills": [
       "Crazy Chain",
       "Fatal End"
@@ -3410,7 +3905,7 @@
       "agility": 65,
       "luck": 55
     },
-    "resists": "-sdddnn-",
+    "resists": "-rdddnn-",
     "skills": [
       "Agilao",
       "Bufula",
@@ -3470,7 +3965,7 @@
       "agility": 37,
       "luck": 27
     },
-    "resists": "s--w-nn-",
+    "resists": "r--w-nn-",
     "skills": [
       "Matarukaja",
       "Kill Rush",
@@ -3558,7 +4053,7 @@
       "agility": 40,
       "luck": 25
     },
-    "resists": "-s-sw---",
+    "resists": "-r-rw---",
     "skills": [
       "Black Spot",
       "Herculean Strike",
@@ -3642,7 +4137,7 @@
       "agility": 40,
       "luck": 40
     },
-    "resists": "n----ZZ-",
+    "resists": "n-------",
     "skills": [
       "Last Resort",
       "Debilitate"
@@ -3669,7 +4164,7 @@
       "agility": 34,
       "luck": 27
     },
-    "resists": "sn-wnZn-",
+    "resists": "rn-wn-n-",
     "skills": [
       "Mighty Swing",
       "Blade of Fury",
@@ -3725,7 +4220,7 @@
       "agility": 35,
       "luck": 23
     },
-    "resists": "s--wnZn-",
+    "resists": "r--wn-n-",
     "skills": [
       "Mind Charge",
       "Garudyne",
@@ -3741,25 +4236,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Dominating Machine",
-    "arcana": "Justice",
-    "level": 53,
-    "hp": 4000,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Herculean Strike",
-      "Power Charge",
-      "Tarukaja",
-      "Last Resort"
-    ],
-    "area": "Secret Laboratory (Floor B6)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Elegant Mother",
     "arcana": "Empress",
     "level": 54,
@@ -3772,7 +4248,7 @@
       "agility": 36,
       "luck": 31
     },
-    "resists": "-wnssrr-",
+    "resists": "-wnrrrr-",
     "skills": [
       "Heat Riser",
       "Bufula",
@@ -3885,7 +4361,7 @@
       "agility": 38,
       "luck": 33
     },
-    "resists": "-s-w----",
+    "resists": "-r-w----",
     "skills": [
       "Enervation",
       "Cell Breaker",
@@ -3902,25 +4378,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Shadow Naoto",
-    "arcana": "Fortune",
-    "level": 55,
-    "hp": 6000,
-    "sp": 999,
-    "resists": "r----nn-",
-    "skills": [
-      "Mute Ray",
-      "Galgalim Eyes",
-      "Brave Wheel",
-      "Makarakarn"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Finicky Papillon",
     "arcana": "Lovers",
     "level": 56,
@@ -3933,7 +4390,7 @@
       "agility": 44,
       "luck": 32
     },
-    "resists": "-sw-----",
+    "resists": "-rw-----",
     "skills": [
       "Agi",
       "Garu",
@@ -3963,7 +4420,7 @@
       "agility": 40,
       "luck": 33
     },
-    "resists": "sw-s----",
+    "resists": "rw-r----",
     "skills": [
       "Tarukaja",
       "Sukukaja",
@@ -3993,7 +4450,7 @@
       "agility": 38,
       "luck": 28
     },
-    "resists": "-s-s-Z--",
+    "resists": "-r-r----",
     "skills": [
       "Agidyne",
       "Maragidyne",
@@ -4021,7 +4478,7 @@
       "agility": 40,
       "luck": 28
     },
-    "resists": "-sw-d-Z-",
+    "resists": "-rw-d---",
     "skills": [
       "Heat Wave",
       "Torrent Shot",
@@ -4049,7 +4506,7 @@
       "agility": 43,
       "luck": 36
     },
-    "resists": "-w--nZn-",
+    "resists": "-w--n-n-",
     "skills": [
       "Arm Chopper",
       "Evil Smile",
@@ -4117,7 +4574,7 @@
       "agility": 40,
       "luck": 23
     },
-    "resists": "--s-s-Z-",
+    "resists": "--r-r---",
     "skills": [
       "Gigantic Fist",
       "Deathbound",
@@ -4145,7 +4602,7 @@
       "agility": 41,
       "luck": 30
     },
-    "resists": "w--ds---",
+    "resists": "w--dr---",
     "skills": [
       "Tetrakarn",
       "Makarakarn",
@@ -4202,7 +4659,7 @@
       "agility": 28,
       "luck": 29
     },
-    "resists": "s--w----",
+    "resists": "r--w----",
     "skills": [
       "Mustard Bomb",
       "Seal Bomb",
@@ -4218,25 +4675,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Extreme Vessel",
-    "arcana": "Priestess",
-    "level": 58,
-    "hp": 5500,
-    "sp": 999,
-    "resists": "----wnn-",
-    "skills": [
-      "Mabufudyne",
-      "Virus Wave",
-      "Mind Charge",
-      "God's Hand"
-    ],
-    "area": "Secret Laboratory (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Apostate Tower",
     "arcana": "Hierophant",
     "level": 59,
@@ -4249,7 +4687,7 @@
       "agility": 42,
       "luck": 35
     },
-    "resists": "---dw-Z-",
+    "resists": "---dw---",
     "skills": [
       "Mazionga",
       "Ziodyne",
@@ -4280,7 +4718,7 @@
       "agility": 43,
       "luck": 34
     },
-    "resists": "--w-s---",
+    "resists": "--w-r---",
     "skills": [
       "Stagnant Air",
       "Crazy Chain",
@@ -4336,7 +4774,7 @@
       "agility": 25,
       "luck": 25
     },
-    "resists": "-nnnnZZ-",
+    "resists": "-nnnn---",
     "skills": [
       "Last Resort",
       "Marakukaja"
@@ -4363,7 +4801,7 @@
       "agility": 75,
       "luck": 65
     },
-    "resists": "-dddsrr-",
+    "resists": "-dddrrr-",
     "skills": [
       "Agilao",
       "Bufula",
@@ -4396,7 +4834,7 @@
       "agility": 37,
       "luck": 42
     },
-    "resists": "-d-w-Z--",
+    "resists": "-d-w----",
     "skills": [
       "Maragion",
       "Bufudyne",
@@ -4425,7 +4863,7 @@
       "agility": 45,
       "luck": 40
     },
-    "resists": "swd-----",
+    "resists": "rwd-----",
     "skills": [
       "Bufula",
       "Mabufula",
@@ -4454,7 +4892,7 @@
       "agility": 44,
       "luck": 32
     },
-    "resists": "--ss-Zn-",
+    "resists": "--rr--n-",
     "skills": [
       "Mind Charge",
       "Megido",
@@ -4482,7 +4920,7 @@
       "agility": 42,
       "luck": 34
     },
-    "resists": "s--wnnZ-",
+    "resists": "r--wnn--",
     "skills": [
       "Garudyne",
       "Magarula",
@@ -4627,7 +5065,7 @@
       "agility": 42,
       "luck": 34
     },
-    "resists": "-w---rZ-",
+    "resists": "-w---r--",
     "skills": [
       "Mind Slice",
       "Aeon Rain",
@@ -4713,7 +5151,7 @@
       "agility": 35,
       "luck": 22
     },
-    "resists": "sssnw-r-",
+    "resists": "rrrnw-r-",
     "skills": [
       "Mighty Swing",
       "Vicious Strike",
@@ -4773,7 +5211,7 @@
       "agility": 45,
       "luck": 36
     },
-    "resists": "---sw---",
+    "resists": "---rw---",
     "skills": [
       "Rainy Death",
       "Matarukaja"
@@ -4800,7 +5238,7 @@
       "agility": 45,
       "luck": 42
     },
-    "resists": "-----nZ-",
+    "resists": "-----n--",
     "skills": [
       "Cleave",
       "Atom Smasher",
@@ -4817,27 +5255,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "World Balance",
-    "arcana": "Judgment",
-    "level": 64,
-    "hp": 5000,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Agidyne",
-      "Bufudyne",
-      "Ziodyne",
-      "Garudyne",
-      "Mind Charge",
-      "Megidolaon"
-    ],
-    "area": "Heaven (Floor 7)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Intrepid Knight",
     "arcana": "Emperor",
     "level": 65,
@@ -4850,7 +5267,7 @@
       "agility": 46,
       "luck": 31
     },
-    "resists": "s--w-nns",
+    "resists": "r--w-nnr",
     "skills": [
       "Tempest Slash",
       "Blight",
@@ -4879,7 +5296,7 @@
       "agility": 44,
       "luck": 29
     },
-    "resists": "-ss-----",
+    "resists": "-rr-----",
     "skills": [
       "Agidyne",
       "Bufudyne",
@@ -4924,25 +5341,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Kunino-sagiri",
-    "arcana": "Judgment",
-    "level": 65,
-    "hp": 6500,
-    "sp": 999,
-    "resists": "-rrrrnn-",
-    "skills": [
-      "Quad Converge",
-      "Control",
-      "Unerring Justice",
-      "Mabufudyne"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Agitating Hablerie",
     "arcana": "Magician",
     "level": 66,
@@ -4982,7 +5380,7 @@
       "agility": 46,
       "luck": 26
     },
-    "resists": "--wrsnn-",
+    "resists": "--wrrnn-",
     "skills": [
       "Amrita",
       "Brave Blade",
@@ -5010,7 +5408,7 @@
       "agility": 29,
       "luck": 27
     },
-    "resists": "r-w-sZn-",
+    "resists": "r-w-r-n-",
     "skills": [
       "Mind Charge",
       "Ziodyne",
@@ -5065,7 +5463,7 @@
       "agility": 48,
       "luck": 47
     },
-    "resists": "-ssss---",
+    "resists": "-rrrr---",
     "skills": [
       "Stagnant Air",
       "Poison Skewer",
@@ -5188,7 +5586,7 @@
       "agility": 46,
       "luck": 39
     },
-    "resists": "s----Zr-",
+    "resists": "r-----r-",
     "skills": [
       "Megidola",
       "Summon"
@@ -5215,7 +5613,7 @@
       "agility": 43,
       "luck": 42
     },
-    "resists": "--r-srZ-",
+    "resists": "--r-rr--",
     "skills": [
       "Bufula",
       "Mabufula",
@@ -5244,7 +5642,7 @@
       "agility": 49,
       "luck": 41
     },
-    "resists": "s-w-nnn-",
+    "resists": "r-w-nnn-",
     "skills": [
       "Matarukaja",
       "Marakunda",
@@ -5302,7 +5700,7 @@
       "agility": 47,
       "luck": 39
     },
-    "resists": "-sdsd---",
+    "resists": "-rdrd---",
     "skills": [
       "Foolish Whisper",
       "Garudyne",
@@ -5318,27 +5716,6 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Lost Okina",
-    "arcana": "Hermit",
-    "level": 69,
-    "hp": 6500,
-    "sp": 999,
-    "resists": "n-n--nn-",
-    "skills": [
-      "Mustard Bomb",
-      "Navas Nebula",
-      "Stagnant Air",
-      "Agidyne",
-      "Ziodyne",
-      "Seal Bomb"
-    ],
-    "area": "Heaven (Optional Boss)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Chaos Fuzz B",
@@ -5379,7 +5756,7 @@
       "agility": 85,
       "luck": 75
     },
-    "resists": "-rrrrss-",
+    "resists": "-rrrrrr-",
     "skills": [
       "Agilao",
       "Bufula",
@@ -5412,7 +5789,7 @@
       "agility": 47,
       "luck": 41
     },
-    "resists": "-rr--nZ-",
+    "resists": "-rr--n--",
     "skills": [
       "Power Slash",
       "Deathbound",
@@ -5440,7 +5817,7 @@
       "agility": 43,
       "luck": 37
     },
-    "resists": "dw--nZr-",
+    "resists": "dw--n-r-",
     "skills": [
       "Evil Touch",
       "Evil Smile",
@@ -5469,7 +5846,7 @@
       "agility": 47,
       "luck": 32
     },
-    "resists": "-ssss---",
+    "resists": "-rrrr---",
     "skills": [
       "Mudoon",
       "Megido",
@@ -5485,24 +5862,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Chaos Fuzz",
-    "arcana": "Fortune",
-    "level": 71,
-    "hp": 1500,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Summon",
-      "Brave Zap",
-      "Agidyne"
-    ],
-    "area": "Magatsu Inaba (Floor 3)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Battle Wheel",
     "arcana": "Chariot",
     "level": 72,
@@ -5515,7 +5874,7 @@
       "agility": 45,
       "luck": 39
     },
-    "resists": "--ws-nZ-",
+    "resists": "--wr-n--",
     "skills": [
       "Black Spot",
       "Vorpal Blade",
@@ -5543,7 +5902,7 @@
       "agility": 47,
       "luck": 38
     },
-    "resists": "s-n-w---",
+    "resists": "r-n-w---",
     "skills": [
       "Blade of Fury",
       "Marakukaja",
@@ -5571,7 +5930,7 @@
       "agility": 50,
       "luck": 50
     },
-    "resists": "s----ZZ-",
+    "resists": "r-------",
     "skills": [
       "Makajam",
       "Foolish Whisper",
@@ -5600,7 +5959,7 @@
       "agility": 48,
       "luck": 41
     },
-    "resists": "rs-w-Z--",
+    "resists": "rr-w----",
     "skills": [
       "Hysterical Slap",
       "Valiant Dance"
@@ -5655,7 +6014,7 @@
       "agility": 44,
       "luck": 44
     },
-    "resists": "sssss---",
+    "resists": "rrrrr---",
     "skills": [
       "Megidola",
       "Mind Charge",
@@ -5741,7 +6100,7 @@
       "agility": 47,
       "luck": 33
     },
-    "resists": "s-------",
+    "resists": "r-------",
     "skills": [
       "God's Hand",
       "Herculean Strike"
@@ -5799,7 +6158,7 @@
       "agility": 42,
       "luck": 36
     },
-    "resists": "-wwwwZZ-",
+    "resists": "-wwww---",
     "skills": [
       "Agilao",
       "Bufula"
@@ -5859,7 +6218,7 @@
       "agility": 48,
       "luck": 45
     },
-    "resists": "-wss----",
+    "resists": "-wrr----",
     "skills": [
       "Vicious Strike",
       "Debilitate",
@@ -5887,7 +6246,7 @@
       "agility": 44,
       "luck": 46
     },
-    "resists": "s-------",
+    "resists": "r-------",
     "skills": [
       "Tempest Slash",
       "Black Spot",
@@ -5938,26 +6297,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Tohru Adachi",
-    "arcana": "Jester",
-    "level": 73,
-    "hp": 4500,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Vorpal Blade",
-      "Ziodyne",
-      "Maziodyne",
-      "Mudoon",
-      "Dekaja"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Change Relic",
     "arcana": "Empress",
     "level": 74,
@@ -5970,7 +6309,7 @@
       "agility": 47,
       "luck": 47
     },
-    "resists": "r--w-rZ-",
+    "resists": "r--w-r--",
     "skills": [
       "Old One",
       "Ziodyne",
@@ -5998,7 +6337,7 @@
       "agility": 52,
       "luck": 70
     },
-    "resists": "-----ZZ-",
+    "resists": "--------",
     "skills": [
       "Atom Smasher",
       "Arm Chopper",
@@ -6116,7 +6455,7 @@
       "agility": 45,
       "luck": 40
     },
-    "resists": "swwww---",
+    "resists": "rwwww---",
     "skills": [
       "Garula",
       "Zionga",
@@ -6173,7 +6512,7 @@
       "agility": 48,
       "luck": 22
     },
-    "resists": "---wwZZ-",
+    "resists": "---ww---",
     "skills": [
       "Dodge Physical",
       "Cleave",
@@ -6223,25 +6562,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Envious Giant",
-    "arcana": "Magician",
-    "level": 74,
-    "hp": 3000,
-    "sp": 999,
-    "resists": "---d-nn-",
-    "skills": [
-      "Megidolaon",
-      "Tentarafoo",
-      "High Counter",
-      "Maziodyne"
-    ],
-    "area": "Magatsu Inaba (Floor 6)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Clear Sky Musha",
     "arcana": "Strength",
     "level": 75,
@@ -6287,7 +6607,7 @@
       "agility": 49,
       "luck": 52
     },
-    "resists": "n-w-w--s",
+    "resists": "n-w-w--r",
     "skills": [
       "Seal Bomb",
       "Mustard Bomb",
@@ -6318,7 +6638,7 @@
       "agility": 50,
       "luck": 48
     },
-    "resists": "dwwwwZZ-",
+    "resists": "dwwww---",
     "skills": [
       "Mazionga",
       "Spirit Drain",
@@ -6347,7 +6667,7 @@
       "agility": 40,
       "luck": 42
     },
-    "resists": "2ssdsnn-",
+    "resists": "-rrdrnn-",
     "skills": [
       "Megidolaon",
       "Tentarafoo",
@@ -6375,7 +6695,7 @@
       "agility": 52,
       "luck": 55
     },
-    "resists": "r----Zn-",
+    "resists": "r-----n-",
     "skills": [
       "Heaven's Blade",
       "Atom Smasher",
@@ -6437,7 +6757,7 @@
       "agility": 52,
       "luck": 29
     },
-    "resists": "-wrdsn--",
+    "resists": "-wrdrn--",
     "skills": [
       "Marakunda",
       "Rampage",
@@ -6469,7 +6789,7 @@
       "agility": 48,
       "luck": 40
     },
-    "resists": "s--wsZn-",
+    "resists": "r--wr-n-",
     "skills": [
       "Stagnant Air",
       "Agidyne",
@@ -6498,7 +6818,7 @@
       "agility": 40,
       "luck": 34
     },
-    "resists": "-w--wZZ-",
+    "resists": "-w--w---",
     "skills": [
       "Hysterical Slap",
       "Atom Smasher",
@@ -6527,7 +6847,7 @@
       "agility": 60,
       "luck": 26
     },
-    "resists": "swn----s",
+    "resists": "rwn----r",
     "skills": [
       "Agi",
       "Ragnarok",
@@ -6556,7 +6876,7 @@
       "agility": 49,
       "luck": 52
     },
-    "resists": "sr--w---",
+    "resists": "rr--w---",
     "skills": [
       "Mind Charge",
       "Agidyne",
@@ -6588,7 +6908,7 @@
       "agility": 38,
       "luck": 66
     },
-    "resists": "--ww-ZZ-",
+    "resists": "--ww----",
     "skills": [
       "Bash",
       "Rampage",
@@ -6604,61 +6924,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Ameno-sagiri",
-    "arcana": "Jester",
-    "level": 75,
-    "hp": 9000,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Agneyastra",
-      "Bewildering Fog",
-      "Nebula Oculus",
-      "Quake"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Marie",
-    "arcana": "Aeon",
-    "level": 75,
-    "hp": 3000,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Hot Thunder",
-      "Cold Blizzard",
-      "Megidolaon"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Golden Exclusive",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
-    "name": "Kusumi-no-Okami",
-    "arcana": "Aeon",
-    "level": 75,
-    "hp": 8000,
-    "sp": 999,
-    "resists": "-ddddnn-",
-    "skills": [
-      "Draining Fog",
-      "Riot Gun",
-      "Cry of Denial"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Golden Exclusive",
-    "isBoss": true,
-    "isMiniBoss": false
-  },
-  {
     "name": "Calm Machine",
     "arcana": "Justice",
     "level": 76,
@@ -6671,7 +6936,7 @@
       "agility": 35,
       "luck": 45
     },
-    "resists": "swwww---",
+    "resists": "rwwww---",
     "skills": [
       "Null Dizzy",
       "Sharp Student",
@@ -6704,7 +6969,7 @@
       "agility": 52,
       "luck": 44
     },
-    "resists": "-ws-nn--",
+    "resists": "-wr-nn--",
     "skills": [
       "Dodge Fire",
       "Heat Wave",
@@ -6734,7 +6999,7 @@
       "agility": 50,
       "luck": 48
     },
-    "resists": "-s-nw-n-",
+    "resists": "-r-nw-n-",
     "skills": [
       "Agidyne",
       "Mabufudyne",
@@ -6794,7 +7059,7 @@
       "agility": 50,
       "luck": 26
     },
-    "resists": "srw-d-n-",
+    "resists": "rrw-d-n-",
     "skills": [
       "Mind Charge",
       "Agidyne",
@@ -6824,7 +7089,7 @@
       "agility": 58,
       "luck": 42
     },
-    "resists": "-nws-Z--",
+    "resists": "-nwr----",
     "skills": [
       "Matarunda",
       "Marakunda",
@@ -6885,7 +7150,7 @@
       "agility": 46,
       "luck": 40
     },
-    "resists": "s----nZ-",
+    "resists": "r----n--",
     "skills": [
       "Regenerate 3",
       "Black Spot",
@@ -6915,7 +7180,7 @@
       "agility": 55,
       "luck": 47
     },
-    "resists": "--dws-n-",
+    "resists": "--dwr-n-",
     "skills": [
       "Brain Shake",
       "Navas Nebula",
@@ -6943,7 +7208,7 @@
       "agility": 58,
       "luck": 43
     },
-    "resists": "wssss---",
+    "resists": "wrrrr---",
     "skills": [
       "Re Patra",
       "Tetrakarn",
@@ -6975,7 +7240,7 @@
       "agility": 43,
       "luck": 58
     },
-    "resists": "sssssnn-",
+    "resists": "rrrrrnn-",
     "skills": [
       "Null Dizzy",
       "Confuse Boost",
@@ -7006,7 +7271,7 @@
       "agility": 48,
       "luck": 45
     },
-    "resists": "-sdwrrr-",
+    "resists": "-rdwrrr-",
     "skills": [
       "Hamaon",
       "Mudoon",
@@ -7038,7 +7303,7 @@
       "agility": 46,
       "luck": 42
     },
-    "resists": "-sndrnZ-",
+    "resists": "-rndrn--",
     "skills": [
       "Heaven's Blade",
       "Power Charge"
@@ -7082,26 +7347,6 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Gorgeous King",
-    "arcana": "Emperor",
-    "level": 77,
-    "hp": 4000,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "Summon",
-      "Blood Revenge",
-      "Rakunda",
-      "Elec Break",
-      "Ice Break"
-    ],
-    "area": "Hollow Forest (Floor 4)",
-    "exp": 0,
-    "version": "Golden Exclusive",
-    "isBoss": false,
-    "isMiniBoss": true
   },
   {
     "name": "Grudge Tower",
@@ -7149,7 +7394,7 @@
       "agility": 44,
       "luck": 43
     },
-    "resists": "rwwwwrrs",
+    "resists": "rwwwwrrr",
     "skills": [
       "Life Drain",
       "Life Leech",
@@ -7178,7 +7423,7 @@
       "agility": 50,
       "luck": 51
     },
-    "resists": "2----nn-",
+    "resists": "-----nn-",
     "skills": [
       "Rampage"
     ],
@@ -7204,7 +7449,7 @@
       "agility": 50,
       "luck": 58
     },
-    "resists": "-wsssZn-",
+    "resists": "-wrrr-n-",
     "skills": [
       "Hamaon",
       "Mudoon",
@@ -7260,7 +7505,7 @@
       "agility": 54,
       "luck": 44
     },
-    "resists": "-wdddZ--",
+    "resists": "-wddd---",
     "skills": [
       "Galgalim Eyes",
       "Stagnant Air",
@@ -7289,7 +7534,7 @@
       "agility": 44,
       "luck": 48
     },
-    "resists": "-swr-nZ-",
+    "resists": "-rwr-n--",
     "skills": [
       "Atom Smasher",
       "Blade of Fury",
@@ -7318,7 +7563,7 @@
       "agility": 70,
       "luck": 80
     },
-    "resists": "-ssssrZ-",
+    "resists": "-rrrrr--",
     "skills": [
       "Auto-Sukukaja",
       "Evil Touch",
@@ -7379,7 +7624,7 @@
       "agility": 45,
       "luck": 55
     },
-    "resists": "-----nZ-",
+    "resists": "-----n--",
     "skills": [
       "Maragi",
       "Magaru",
@@ -7398,25 +7643,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Heaven's Giant",
-    "arcana": "Magician",
-    "level": 79,
-    "hp": 5500,
-    "sp": 999,
-    "resists": "-----nn-",
-    "skills": [
-      "High Counter",
-      "God's Hand",
-      "Stagnant Air",
-      "Enervations"
-    ],
-    "area": "Hollow Forest (Floor 7)",
-    "exp": 0,
-    "version": "Golden Exclusive",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Berserk Turret",
     "arcana": "Chariot",
     "level": 80,
@@ -7429,7 +7655,7 @@
       "agility": 57,
       "luck": 52
     },
-    "resists": "s--wd---",
+    "resists": "r--wd---",
     "skills": [
       "Agidyne",
       "Garudyne",
@@ -7460,7 +7686,7 @@
       "agility": 42,
       "luck": 99
     },
-    "resists": "sddddrr-",
+    "resists": "rddddrr-",
     "skills": [
       "Megido",
       "Megidolaon",
@@ -7489,7 +7715,7 @@
       "agility": 54,
       "luck": 52
     },
-    "resists": "-r-swZn-",
+    "resists": "-r-rw-n-",
     "skills": [
       "God's Hand",
       "Revolution",
@@ -7517,7 +7743,7 @@
       "agility": 60,
       "luck": 46
     },
-    "resists": "swrr----",
+    "resists": "rwrr----",
     "skills": [
       "Mahamaon",
       "Mamudoon",
@@ -7576,7 +7802,7 @@
       "agility": 62,
       "luck": 48
     },
-    "resists": "s--w-nn-",
+    "resists": "r--w-nn-",
     "skills": [
       "Summon",
       "Auto-Masuku",
@@ -7637,7 +7863,7 @@
       "agility": 50,
       "luck": 58
     },
-    "resists": "-sswn---",
+    "resists": "-rrwn---",
     "skills": [
       "Maragidyne",
       "Agidyne",
@@ -7668,7 +7894,7 @@
       "agility": 54,
       "luck": 39
     },
-    "resists": "nswssZn-",
+    "resists": "nrwrr-n-",
     "skills": [
       "Primal Force",
       "Cruel Attack",
@@ -7697,7 +7923,7 @@
       "agility": 56,
       "luck": 42
     },
-    "resists": "-wsdsnZ-",
+    "resists": "-wrdrn--",
     "skills": [
       "Spirit Leech",
       "Poison Arrow",
@@ -7726,7 +7952,7 @@
       "agility": 49,
       "luck": 63
     },
-    "resists": "-dw-sr--",
+    "resists": "-dw-rr--",
     "skills": [
       "Magarudyne",
       "Deathbound",
@@ -7816,7 +8042,7 @@
       "agility": 60,
       "luck": 52
     },
-    "resists": "ssdnw--s",
+    "resists": "rrdnw--r",
     "skills": [
       "Revolution",
       "Heat Riser",
@@ -7864,25 +8090,6 @@
     "isMiniBoss": false
   },
   {
-    "name": "Neo Minotaur",
-    "arcana": "Chariot",
-    "level": 82,
-    "hp": 5000,
-    "sp": 999,
-    "resists": "r----nn-",
-    "skills": [
-      "Rampage",
-      "Maragidyne",
-      "Power Charge",
-      "Deathbound"
-    ],
-    "area": "Yomotsu Hirasaka (Floor 3)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
     "name": "Heartless Machine",
     "arcana": "Justice",
     "level": 83,
@@ -7895,7 +8102,7 @@
       "agility": 54,
       "luck": 39
     },
-    "resists": "ssswsnns",
+    "resists": "rrrwrnnr",
     "skills": [
       "Agidyne",
       "Garudyne",
@@ -7914,84 +8121,5 @@
     },
     "isBoss": false,
     "isMiniBoss": false
-  },
-  {
-    "name": "Sleeping Table",
-    "arcana": "Magician",
-    "level": 84,
-    "hp": 4500,
-    "sp": 999,
-    "resists": "-n---nn-",
-    "skills": [
-      "Megidolaon",
-      "Maragidyne",
-      "Evil Smile",
-      "Ghastly Wail"
-    ],
-    "area": "Yomotsu Hirasaka (Floor 6)",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": false,
-    "isMiniBoss": true
-  },
-  {
-    "name": "Izanami",
-    "arcana": "World",
-    "level": 90,
-    "hp": 0,
-    "sp": 999,
-    "resists": "--------",
-    "skills": [],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Vanilla & Golden",
-    "isBoss": true,
-    "isMiniBoss": false,
-    "phases": [
-      {
-        "name": "Izanami",
-        "hp": 4500,
-        "sp": 999,
-        "resists": "-----nd-",
-        "skills": [
-          "Megidolaon",
-          "Mind Charge",
-          "Mabufudyne",
-          "Maragidyne"
-        ]
-      },
-      {
-        "name": "Izanami-no-Okami",
-        "hp": 12000,
-        "sp": 999,
-        "resists": "-----nn-",
-        "skills": [
-          "Thousand Curses",
-          "Summons to Yomi",
-          "Ohoikazuchi",
-          "Megidolaon"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Margaret",
-    "arcana": "Empress",
-    "level": 99,
-    "hp": 15000,
-    "sp": 9999,
-    "resists": "rrrrrnn-",
-    "skills": [
-      "Megidolaon",
-      "Morning Star",
-      "Hassou Tobi",
-      "Mind Charge",
-      "Power Charge"
-    ],
-    "area": "Boss",
-    "exp": 0,
-    "version": "Secret Boss",
-    "isBoss": false,
-    "isMiniBoss": true
   }
 ]
