@@ -54,8 +54,12 @@ fun SocialLinksScreen(
     val titlePrefix = if (isP5) "Confidants" else "Social Links"
 
     // Re-load when gameId changes OR when protagonist preference changes (for P3P)
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val noSpoilersMode by userPrefs.noSpoilersModeFlow.collectAsState(initial = userPrefs.isNoSpoilersMode())
+    val revealedSpoilers = remember { mutableStateMapOf<String, Boolean>() }
+
     val protagonist = if (gameId == "p3p") {
-        remember { com.persona.companion.data.UserPreferences(context).getP3PProtagonist().name }
+        remember { userPrefs.getP3PProtagonist().name }
     } else {
         ""
     }
@@ -185,6 +189,9 @@ fun SocialLinksScreen(
                             SocialLinksList(
                                 socialLinks = filteredLinks,
                                 themeColor = themeColor,
+                                noSpoilersMode = noSpoilersMode,
+                                revealedSpoilers = revealedSpoilers,
+                                onReveal = { arcana -> revealedSpoilers[arcana] = true },
                                 onSocialLinkClick = onSocialLinkClick
                             )
                         }
@@ -199,6 +206,9 @@ fun SocialLinksScreen(
 private fun SocialLinksList(
     socialLinks: List<SocialLink>,
     themeColor: Color,
+    noSpoilersMode: Boolean,
+    revealedSpoilers: Map<String, Boolean>,
+    onReveal: (String) -> Unit,
     onSocialLinkClick: (String) -> Unit
 ) {
     LazyColumn(
@@ -207,9 +217,18 @@ private fun SocialLinksList(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         items(socialLinks, key = { it.arcana }) { socialLink ->
+            val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(
+                socialLink.arcana,
+                socialLink.characterName
+            )
+            val isRevealed = revealedSpoilers[socialLink.arcana] == true
+            val isConcealed = noSpoilersMode && isSpoiler && !isRevealed
+
             SocialLinkCard(
                 socialLink = socialLink,
                 themeColor = themeColor,
+                isConcealed = isConcealed,
+                onReveal = { onReveal(socialLink.arcana) },
                 onClick = { onSocialLinkClick(socialLink.arcana) }
             )
         }
@@ -220,10 +239,72 @@ private fun SocialLinksList(
 private fun SocialLinkCard(
     socialLink: SocialLink,
     themeColor: Color,
+    isConcealed: Boolean = false,
+    onReveal: () -> Unit = {},
     onClick: () -> Unit
 ) {
     val charName = socialLink.characterName
     val hasCharName = !charName.isNullOrBlank()
+
+    if (isConcealed) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onReveal),
+            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+            shape = RoundedCornerShape(12.dp),
+            border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(14.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Text(
+                            text = "Concealed Confidant (Spoiler)",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFE57373),
+                            fontSize = 15.sp
+                        )
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(6.dp))
+                                .background(Color(0xFFE57373).copy(alpha = 0.15f))
+                                .border(1.dp, Color(0xFFE57373).copy(alpha = 0.35f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 7.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = "SPOILER",
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFE57373)
+                            )
+                        }
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "Plot-critical confidant hidden · Tap to reveal",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = TextDisabled,
+                        fontSize = 12.sp
+                    )
+                }
+
+                TextButton(onClick = onReveal) {
+                    Text("Reveal", color = Color(0xFFE57373), fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+        return
+    }
 
     Card(
         modifier = Modifier

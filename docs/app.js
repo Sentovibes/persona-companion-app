@@ -487,9 +487,10 @@ function buildHome() {
     const HERO_IMAGES = { p3:'assets/images/heroes/p3_hero.webp', p4:'assets/images/heroes/p4_hero.webp', p5:'assets/images/heroes/p5_hero.webp' };
 
     document.getElementById('seriesList').innerHTML = SERIES.map(s => {
-        const defaultGame = S.settings['defaultGame_' + s.id] || (s.id==='p3'?'p3r':s.id==='p4'?'p4g':'p5r');
+        const defaultGame = S.settings['defaultGame_' + s.id] || 'none';
+        const cardAction = (defaultGame && defaultGame !== 'none') ? `selectGame('${s.id}','${defaultGame}')` : `openGameScreen('${s.id}')`;
         return `
-        <div class="series-card series-card--${s.id}" onclick="selectGame('${s.id}','${defaultGame}')">
+        <div class="series-card series-card--${s.id}" onclick="${cardAction}">
             ${s.id==='p5' ? `<div class="series-card-city-bg" style="background-image:url('assets/images/heroes/p5_city_bg.webp')"></div>` : ''}
             <div class="series-card-gradient"></div>
             ${s.id==='p5' ? '<div class="series-card-star-badge">★</div>' : ''}
@@ -1119,10 +1120,28 @@ function renderSlList(color) {
             </button>
         </div>` : '';
 
+    const SPOILER_SL_REGEX = /jester|hunger|councillor|faith|judgment|judgement|akechi|maruki|adachi|kasumi|sumire|nyx|pharos|ryoji/i;
+
     if (!items.length) { document.getElementById('slContent').innerHTML = p3pHtml + `<div class="empty-state">No results</div>`; return; }
     document.getElementById('slContent').innerHTML = p3pHtml + items.map(([arcana, data]) => {
         const charName = getSlCharacterName(S.game, arcana);
         const loc = data.Details?.Location || '';
+        const isSpoiler = SPOILER_SL_REGEX.test(arcana) || (charName && SPOILER_SL_REGEX.test(charName));
+        const isConcealed = S.settings.noSpoilersMode && isSpoiler && !window['revealed_sl_' + arcana];
+
+        if (isConcealed) {
+            return `
+            <div class="row-card" style="opacity:0.85" onclick="event.stopPropagation(); window['revealed_sl_${esc(arcana)}']=true; renderSlList('${color}');">
+                <div class="row-main">
+                    <div style="display:flex;align-items:center;gap:8px">
+                        <span class="row-name" style="color:#E57373;font-size:1.02rem;font-weight:700">Concealed Confidant (Spoiler)</span>
+                        <span class="sort-chip" style="font-size:0.65rem;padding:2px 6px;background:rgba(229,115,115,0.2);color:#E57373">Reveal</span>
+                    </div>
+                    <div class="row-sub" style="margin-top:3px;color:var(--text3)">Plot-critical confidant hidden · Tap to view</div>
+                </div>
+            </div>`;
+        }
+
         return `<div class="row-card" onclick="openSlDetail('${esc(arcana)}')">
             <div class="row-main">
                 <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
@@ -1810,12 +1829,13 @@ function buildSettingsScreen() {
         </div>
     </div>
     <div class="section-card" style="margin-top:12px">
-        <div class="section-title">Default Games (Modern Trilogy)</div>
-        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:10px">Tapping a series card on the Home screen opens this game directly.</div>
+        <div class="section-title">Default Games</div>
+        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:10px">Tapping a series card on the Home screen opens this game directly. Set to None to choose game each time.</div>
         
         <div style="margin-bottom:8px">
             <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 3</div>
-            <div style="display:flex;gap:6px">
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <button class="sort-chip ${(!S.settings.defaultGame_p3||S.settings.defaultGame_p3==='none')?'active':''}" onclick="setDefaultGameWeb('p3','none')">None</button>
                 <button class="sort-chip ${S.settings.defaultGame_p3==='p3r'?'active':''}" onclick="setDefaultGameWeb('p3','p3r')">P3 Reload</button>
                 <button class="sort-chip ${S.settings.defaultGame_p3==='p3p'?'active':''}" onclick="setDefaultGameWeb('p3','p3p')">P3 Portable</button>
                 <button class="sort-chip ${S.settings.defaultGame_p3==='p3fes'?'active':''}" onclick="setDefaultGameWeb('p3','p3fes')">P3 FES</button>
@@ -1824,7 +1844,8 @@ function buildSettingsScreen() {
 
         <div style="margin-bottom:8px">
             <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 4</div>
-            <div style="display:flex;gap:6px">
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <button class="sort-chip ${(!S.settings.defaultGame_p4||S.settings.defaultGame_p4==='none')?'active':''}" onclick="setDefaultGameWeb('p4','none')">None</button>
                 <button class="sort-chip ${S.settings.defaultGame_p4==='p4g'?'active':''}" onclick="setDefaultGameWeb('p4','p4g')">P4 Golden</button>
                 <button class="sort-chip ${S.settings.defaultGame_p4==='p4'?'active':''}" onclick="setDefaultGameWeb('p4','p4')">P4 Vanilla</button>
             </div>
@@ -1832,7 +1853,8 @@ function buildSettingsScreen() {
 
         <div>
             <div style="font-size:0.75rem;font-weight:700;color:var(--text2);margin-bottom:4px">Persona 5</div>
-            <div style="display:flex;gap:6px">
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <button class="sort-chip ${(!S.settings.defaultGame_p5||S.settings.defaultGame_p5==='none')?'active':''}" onclick="setDefaultGameWeb('p5','none')">None</button>
                 <button class="sort-chip ${S.settings.defaultGame_p5==='p5r'?'active':''}" onclick="setDefaultGameWeb('p5','p5r')">P5 Royal</button>
                 <button class="sort-chip ${S.settings.defaultGame_p5==='p5'?'active':''}" onclick="setDefaultGameWeb('p5','p5')">P5 Vanilla</button>
             </div>

@@ -130,7 +130,7 @@ fun SettingsScreen(
 
             item {
                 Text(
-                    text = "Default Games (Modern Trilogy)",
+                    text = "Default Games",
                     style = MaterialTheme.typography.titleMedium,
                     color = TextPrimary,
                     modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
@@ -545,7 +545,7 @@ private fun DefaultGameSelector(
         // Persona 3 series
         GameChoiceRow(
             label = "Persona 3",
-            options = listOf("p3r" to "P3 Reload", "p3p" to "P3 Portable", "p3fes" to "P3 FES"),
+            options = listOf("none" to "None", "p3r" to "P3 Reload", "p3p" to "P3 Portable", "p3fes" to "P3 FES"),
             selected = p3Default,
             onSelect = {
                 p3Default = it
@@ -556,7 +556,7 @@ private fun DefaultGameSelector(
         // Persona 4 series
         GameChoiceRow(
             label = "Persona 4",
-            options = listOf("p4g" to "P4 Golden", "p4" to "P4 Vanilla"),
+            options = listOf("none" to "None", "p4g" to "P4 Golden", "p4" to "P4 Vanilla"),
             selected = p4Default,
             onSelect = {
                 p4Default = it
@@ -567,7 +567,7 @@ private fun DefaultGameSelector(
         // Persona 5 series
         GameChoiceRow(
             label = "Persona 5",
-            options = listOf("p5r" to "P5 Royal", "p5" to "P5 Vanilla"),
+            options = listOf("none" to "None", "p5r" to "P5 Royal", "p5" to "P5 Vanilla"),
             selected = p5Default,
             onSelect = {
                 p5Default = it

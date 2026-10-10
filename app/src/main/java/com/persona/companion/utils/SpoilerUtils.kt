@@ -29,9 +29,15 @@ object SpoilerUtils {
         "lucifer", "helel", "raoul", "hereward", "ella", "kaguya", "kaguya picaro"
     )
 
-    // Confidants / Social Links with late-game story identities
-    private val SPOILER_CONFIDANTS = setOf(
+    // Confidants / Social Links with late-game story identities or twists
+    private val SPOILER_CONFIDANT_ARCANAS = setOf(
         "jester", "hunger", "councillor", "faith", "judgment", "judgement"
+    )
+
+    private val SPOILER_CONFIDANT_CHARACTERS = setOf(
+        "akechi", "goro akechi", "maruki", "takuto maruki", "adachi", "tohru adachi",
+        "kasumi", "sumire", "kasumi yoshizawa", "sumire yoshizawa",
+        "ryoji", "ryoji mochizuki", "pharos", "nyx"
     )
 
     fun isSpoilerBoss(name: String): Boolean {
@@ -44,8 +50,14 @@ object SpoilerUtils {
         return SPOILER_PERSONA_NAMES.contains(lower)
     }
 
-    fun isSpoilerSocialLink(arcanaOrName: String): Boolean {
-        val lower = arcanaOrName.trim().lowercase()
-        return SPOILER_CONFIDANTS.any { lower.contains(it) }
+    fun isSpoilerSocialLink(arcanaOrName: String, characterName: String? = null): Boolean {
+        val arcanaLower = arcanaOrName.trim().lowercase()
+        if (SPOILER_CONFIDANT_ARCANAS.any { arcanaLower.contains(it) }) return true
+        if (SPOILER_CONFIDANT_CHARACTERS.any { arcanaLower.contains(it) }) return true
+        if (!characterName.isNullOrBlank()) {
+            val charLower = characterName.trim().lowercase()
+            if (SPOILER_CONFIDANT_CHARACTERS.any { charLower.contains(it) }) return true
+        }
+        return false
     }
 }

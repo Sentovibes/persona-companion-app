@@ -136,8 +136,12 @@ fun HomeScreen(navController: NavController) {
                         series = series,
                         deviceType = deviceType,
                         onSeriesClick = {
-                            // If default game is configured, navigate straight to its category!
-                            navController.navigate(Screen.Category.createRoute(series.id, defaultGameId))
+                            // If default game is configured, navigate straight to its category; otherwise show game picker
+                            if (defaultGameId.isNotBlank() && defaultGameId != "none") {
+                                navController.navigate(Screen.Category.createRoute(series.id, defaultGameId))
+                            } else {
+                                navController.navigate(Screen.GameSelection.createRoute(series.id))
+                            }
                         },
                         onGameClick = { gameId ->
                             if (gameId == "__picker__") {

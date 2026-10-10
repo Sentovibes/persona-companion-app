@@ -79,6 +79,11 @@ fun SocialLinkDetailScreen(
     }
 
     val characterName = socialLink?.characterName ?: com.persona.companion.utils.ConfidantHelper.getCharacterName(gameId, arcana)
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val noSpoilersMode by userPrefs.noSpoilersModeFlow.collectAsState(initial = userPrefs.isNoSpoilersMode())
+    var isManuallyRevealed by remember(arcana) { mutableStateOf(false) }
+    val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(arcana, characterName)
+    val isConcealed = noSpoilersMode && isSpoiler && !isManuallyRevealed
 
     Scaffold(
         containerColor = Background,
@@ -87,7 +92,7 @@ fun SocialLinkDetailScreen(
                 title = {
                     Column {
                         Text(
-                            text = if (!characterName.isNullOrBlank()) "$arcana — $characterName" else arcana,
+                            text = if (isConcealed) "Concealed Confidant" else if (!characterName.isNullOrBlank()) "$arcana — $characterName" else arcana,
                             color = TextPrimary,
                             fontWeight = FontWeight.Bold,
                             fontSize = 17.sp
@@ -105,7 +110,7 @@ fun SocialLinkDetailScreen(
                     }
                 },
                 actions = {
-                    if (socialLink != null) {
+                    if (socialLink != null && !isConcealed) {
                         IconButton(onClick = {
                             com.persona.companion.utils.ShareUtils.shareSocialLink(context, socialLink, gameName)
                         }) {
@@ -123,108 +128,147 @@ fun SocialLinkDetailScreen(
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                // Character Header Card
-                item {
-                    Card(
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-                        shape = RoundedCornerShape(12.dp),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                if (isConcealed) {
+                    item {
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                            shape = RoundedCornerShape(12.dp),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE57373).copy(alpha = 0.4f))
                         ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(20.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(10.dp)
                             ) {
                                 Text(
-                                    text = if (!characterName.isNullOrBlank()) characterName else arcana,
-                                    fontSize = 20.sp,
+                                    text = "⚠️ Late-Game Storyline Spoilers",
+                                    color = Color(0xFFE57373),
                                     fontWeight = FontWeight.Bold,
-                                    color = TextPrimary
+                                    fontSize = 16.sp
                                 )
+                                Text(
+                                    text = "This Confidant / Social Link contains key plot revelations and character twists for $gameName.",
+                                    color = TextSecondary,
+                                    fontSize = 13.sp,
+                                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                                )
+                                Button(
+                                    onClick = { isManuallyRevealed = true },
+                                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE57373)),
+                                    shape = RoundedCornerShape(8.dp)
+                                ) {
+                                    Text("Reveal Details", color = Color.White, fontWeight = FontWeight.Bold)
+                                }
                             }
-
-                            Row(
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                verticalAlignment = Alignment.CenterVertically
+                        }
+                    }
+                } else {
+                    // Character Header Card
+                    item {
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = SurfaceCard),
+                            shape = RoundedCornerShape(12.dp),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .background(primaryColor.copy(alpha = 0.12f), RoundedCornerShape(6.dp))
-                                        .padding(horizontal = 8.dp, vertical = 3.dp)
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
-                                        text = arcana.uppercase(),
-                                        fontSize = 11.sp,
+                                        text = if (!characterName.isNullOrBlank()) characterName else arcana,
+                                        fontSize = 20.sp,
                                         fontWeight = FontWeight.Bold,
-                                        color = primaryColor
+                                        color = TextPrimary
                                     )
                                 }
 
-                                if (socialLink.isP5RExclusive) {
+                                Row(
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
                                     Box(
                                         modifier = Modifier
-                                            .background(Persona5Red.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                            .background(primaryColor.copy(alpha = 0.12f), RoundedCornerShape(6.dp))
                                             .padding(horizontal = 8.dp, vertical = 3.dp)
                                     ) {
-                                        Text("P5R EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona5Red)
+                                        Text(
+                                            text = arcana.uppercase(),
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = primaryColor
+                                        )
                                     }
-                                } else if (socialLink.isP4GExclusive) {
-                                    Box(
-                                        modifier = Modifier
-                                            .background(Persona4Yellow.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
-                                            .padding(horizontal = 8.dp, vertical = 3.dp)
-                                    ) {
-                                        Text("P4G EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona4Yellow)
+
+                                    if (socialLink.isP5RExclusive) {
+                                        Box(
+                                            modifier = Modifier
+                                                .background(Persona5Red.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                                        ) {
+                                            Text("P5R EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona5Red)
+                                        }
+                                    } else if (socialLink.isP4GExclusive) {
+                                        Box(
+                                            modifier = Modifier
+                                                .background(Persona4Yellow.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+                                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                                        ) {
+                                            Text("P4G EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona4Yellow)
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                // Details card (schedule / location)
-                socialLink.details?.let { details ->
-                    item { DetailsCard(details = details) }
-                }
-
-                // Ultimate Persona card (if Rank 10 is reached/displayed)
-                socialLink.ultimatePersona?.let { persona ->
-                    item {
-                        UltimatePersonaCard(name = persona, color = primaryColor)
+                    // Details card (schedule / location)
+                    socialLink.details?.let { details ->
+                        item { DetailsCard(details = details) }
                     }
-                }
 
-                // Branching route filter tabs (if applicable)
-                if (socialLink.hasRouteBranches) {
-                    item {
-                        RouteSelectorCard(
-                            selectedRoute = selectedRoute,
-                            primaryColor = primaryColor,
-                            onRouteSelected = { selectedRoute = it }
-                        )
+                    // Ultimate Persona card (if Rank 10 is reached/displayed)
+                    socialLink.ultimatePersona?.let { persona ->
+                        item {
+                            UltimatePersonaCard(name = persona, color = primaryColor)
+                        }
                     }
-                }
 
-                // Rank cards
-                items(filteredRanks) { rank ->
-                    RankCard(rank = rank, primaryColor = primaryColor)
-                }
+                    // Branching route filter tabs (if applicable)
+                    if (socialLink.hasRouteBranches) {
+                        item {
+                            RouteSelectorCard(
+                                selectedRoute = selectedRoute,
+                                primaryColor = primaryColor,
+                                onRouteSelected = { selectedRoute = it }
+                            )
+                        }
+                    }
 
-                // Third Awakening card (The final evolution)
-                socialLink.thirdAwakening?.let { awakening ->
-                    item {
-                        ThirdAwakeningCard(
-                            awakening = awakening,
-                            gameId = gameId,
-                            color = primaryColor
-                        )
+                    // Rank cards
+                    items(filteredRanks) { rank ->
+                        RankCard(rank = rank, primaryColor = primaryColor)
+                    }
+
+                    // Third Awakening card (The final evolution)
+                    socialLink.thirdAwakening?.let { awakening ->
+                        item {
+                            ThirdAwakeningCard(
+                                awakening = awakening,
+                                gameId = gameId,
+                                color = primaryColor
+                            )
+                        }
                     }
                 }
             }

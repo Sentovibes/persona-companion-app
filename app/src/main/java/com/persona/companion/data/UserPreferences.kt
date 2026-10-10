@@ -120,15 +120,9 @@ class UserPreferences(context: Context) {
         awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
     }
 
-    // Default Game for Modern Trilogy (P3 -> p3r, P4 -> p4g, P5 -> p5r)
+    // Default Game for Series (P3, P4, P5 or "none" for game selection screen)
     fun getDefaultGame(seriesId: String): String {
-        val fallback = when (seriesId.lowercase()) {
-            "p3" -> "p3r"
-            "p4" -> "p4g"
-            "p5" -> "p5r"
-            else -> seriesId
-        }
-        return prefs.getString("default_game_$seriesId", fallback) ?: fallback
+        return prefs.getString("default_game_$seriesId", "none") ?: "none"
     }
 
     fun setDefaultGame(seriesId: String, gameId: String) {
