@@ -119,7 +119,7 @@ fun SettingsScreen(
                 var noSpoilers by remember { mutableStateOf(userPrefs.isNoSpoilersMode()) }
                 SettingToggle(
                     title = "No Spoilers Mode",
-                    description = "Conceals late-game boss identities, endgame deities, and story-twist confidants until tapped",
+                    description = "Conceals late-game bosses, story-twist confidants, and hides dialogue answers until tapped",
                     checked = noSpoilers,
                     onCheckedChange = {
                         noSpoilers = it

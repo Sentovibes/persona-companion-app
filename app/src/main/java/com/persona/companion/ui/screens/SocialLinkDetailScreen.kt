@@ -2,6 +2,7 @@ package com.persona.companion.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -14,6 +15,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -257,7 +259,11 @@ fun SocialLinkDetailScreen(
 
                     // Rank cards
                     items(filteredRanks) { rank ->
-                        RankCard(rank = rank, primaryColor = primaryColor)
+                        RankCard(
+                            rank = rank,
+                            primaryColor = primaryColor,
+                            noSpoilersMode = noSpoilersMode
+                        )
                     }
 
                     // Third Awakening card (The final evolution)
@@ -391,7 +397,13 @@ private fun RouteSelectorCard(
 }
 
 @Composable
-private fun RankCard(rank: SocialLinkRank, primaryColor: androidx.compose.ui.graphics.Color) {
+private fun RankCard(
+    rank: SocialLinkRank,
+    primaryColor: androidx.compose.ui.graphics.Color,
+    noSpoilersMode: Boolean = false
+) {
+    var areAnswersRevealed by remember(rank.rankName) { mutableStateOf(!noSpoilersMode) }
+
     val cardBorder = when {
         rank.isRomanceRoute -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE11D48).copy(alpha = 0.40f))
         rank.isPlatonicRoute -> androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF0284C7).copy(alpha = 0.40f))
@@ -515,9 +527,48 @@ private fun RankCard(rank: SocialLinkRank, primaryColor: androidx.compose.ui.gra
                 Spacer(Modifier.height(12.dp))
                 HorizontalDivider(color = TextSecondary.copy(alpha = 0.15f))
                 Spacer(Modifier.height(10.dp))
-                rank.dialogues.forEach { dialogue ->
-                    DialogueBlock(dialogue = dialogue)
-                    Spacer(Modifier.height(8.dp))
+
+                if (noSpoilersMode && !areAnswersRevealed) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(Surface.copy(alpha = 0.6f))
+                            .clickable { areAnswersRevealed = true }
+                            .padding(12.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column {
+                                Text(
+                                    text = "Dialogue Choices Hidden",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = TextPrimary
+                                )
+                                Text(
+                                    text = "Tap to reveal best answers & point values",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = TextSecondary,
+                                    fontSize = 11.sp
+                                )
+                            }
+                            Text(
+                                text = "Reveal",
+                                style = MaterialTheme.typography.labelMedium,
+                                color = AccentBlue,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                } else {
+                    rank.dialogues.forEach { dialogue ->
+                        DialogueBlock(dialogue = dialogue)
+                        Spacer(Modifier.height(8.dp))
+                    }
                 }
             }
         }
