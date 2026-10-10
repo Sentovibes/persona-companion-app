@@ -611,7 +611,8 @@
     },
     "version": "Royal",
     "isBoss": true,
-    "isMiniBoss": false
+    "isMiniBoss": false,
+    "persona_name": "Yaldabaoth"
   },
   {
     "name": "God of Control, Yaldabaoth",
