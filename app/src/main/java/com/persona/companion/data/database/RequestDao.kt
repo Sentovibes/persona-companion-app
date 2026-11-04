@@ -21,6 +21,9 @@ interface RequestDao {
     @Query("SELECT COUNT(*) FROM requests WHERE gameId = :gameId")
     suspend fun getRequestCount(gameId: String): Int
 
+    @Query("SELECT * FROM requests WHERE isCompleted = 1")
+    suspend fun getAllCompletedRequests(): List<RequestEntity>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(requests: List<RequestEntity>)
 

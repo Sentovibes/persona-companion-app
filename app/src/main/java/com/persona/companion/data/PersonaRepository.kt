@@ -4,22 +4,36 @@ import android.content.Context
 import android.util.Log
 import com.persona.companion.models.Persona
 import com.persona.companion.utils.JsonLoader
+import java.util.concurrent.ConcurrentHashMap
 
 private const val TAG = "PersonaRepository"
 
 class PersonaRepository(private val context: Context) {
 
-    private val cache = mutableMapOf<String, List<Persona>>()
+    companion object {
+        private val sharedCache = ConcurrentHashMap<String, List<Persona>>()
+
+        @Volatile
+        private var INSTANCE: PersonaRepository? = null
+
+        fun getInstance(context: Context): PersonaRepository {
+            return INSTANCE ?: synchronized(this) {
+                INSTANCE ?: PersonaRepository(context.applicationContext).also { INSTANCE = it }
+            }
+        }
+
+        fun clearCache() {
+            sharedCache.clear()
+        }
+    }
+
+    private val cache: ConcurrentHashMap<String, List<Persona>>
+        get() = sharedCache
 
     fun getPersonas(dataPath: String): List<Persona> {
-        Log.d(TAG, "getPersonas() called with dataPath: $dataPath")
         return cache.getOrPut(dataPath) {
-            Log.d(TAG, "Cache miss, loading from JSON")
-            val personas = JsonLoader.loadPersonas(context, dataPath)
-            Log.d(TAG, "Loaded and cached ${personas.size} personas")
-            personas
-        }.also {
-            Log.d(TAG, "Returning ${it.size} personas from cache")
+            Log.d(TAG, "Cache miss for $dataPath, loading from JSON stream")
+            JsonLoader.loadPersonas(context, dataPath)
         }
     }
 

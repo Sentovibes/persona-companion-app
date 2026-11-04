@@ -22,6 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.material.icons.filled.FileDownload
+import androidx.compose.material.icons.filled.FileUpload
+import com.persona.companion.data.backup.UserDataBackupManager
 import com.persona.companion.BuildConfig
 import com.persona.companion.ui.components.WhatsNewDialog
 import androidx.compose.material.icons.filled.NewReleases
@@ -50,6 +55,36 @@ fun SettingsScreen(
     var showUpdateDialog by remember { mutableStateOf(false) }
     var updateInfo by remember { mutableStateOf<com.persona.companion.utils.UpdateInfo?>(null) }
     var showWhatsNewDialog by remember { mutableStateOf(false) }
+
+    val exportLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.CreateDocument("application/json")
+    ) { uri ->
+        uri?.let {
+            scope.launch {
+                val result = UserDataBackupManager.exportToFile(context, it)
+                result.onSuccess { count ->
+                    android.widget.Toast.makeText(context, "Exported $count records successfully", android.widget.Toast.LENGTH_SHORT).show()
+                }.onFailure { err ->
+                    android.widget.Toast.makeText(context, "Export failed: ${err.message}", android.widget.Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
+    val importLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        uri?.let {
+            scope.launch {
+                val result = UserDataBackupManager.importFromFile(context, it)
+                result.onSuccess { count ->
+                    android.widget.Toast.makeText(context, "Restored $count records successfully", android.widget.Toast.LENGTH_SHORT).show()
+                }.onFailure { err ->
+                    android.widget.Toast.makeText(context, "Restore failed: ${err.message}", android.widget.Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
 
     Scaffold(
         containerColor = Background,
@@ -266,6 +301,33 @@ fun SettingsScreen(
                             }
                         }
                     }
+                )
+            }
+
+            item {
+                Text(
+                    text = "Backup & Data",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = TextPrimary,
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+            }
+
+            item {
+                SettingItem(
+                    icon = Icons.Default.FileUpload,
+                    title = "Export Backup to JSON",
+                    description = "Save your favorites, completed requests, and settings to a JSON file",
+                    onClick = { exportLauncher.launch("persona_companion_backup.json") }
+                )
+            }
+
+            item {
+                SettingItem(
+                    icon = Icons.Default.FileDownload,
+                    title = "Restore Backup from JSON",
+                    description = "Restore favorites and completed requests from a backup JSON",
+                    onClick = { importLauncher.launch(arrayOf("application/json", "*/*")) }
                 )
             }
 

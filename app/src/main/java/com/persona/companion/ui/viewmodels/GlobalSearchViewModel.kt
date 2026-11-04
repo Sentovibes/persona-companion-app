@@ -48,7 +48,7 @@ class GlobalSearchViewModel(application: Application) : AndroidViewModel(applica
     val state: StateFlow<GlobalSearchState> = _state.asStateFlow()
 
     // Cached index of search items per game
-    private val gameItemsCache = mutableMapOf<String, List<SearchResultItem>>()
+    private val gameItemsCache = java.util.concurrent.ConcurrentHashMap<String, List<SearchResultItem>>()
     private var isIndexing = false
     private var searchJob: Job? = null
 
@@ -62,27 +62,33 @@ class GlobalSearchViewModel(application: Application) : AndroidViewModel(applica
     fun onQueryChange(newQuery: String) {
         _state.value = _state.value.copy(query = newQuery)
         searchJob?.cancel()
-        searchJob = viewModelScope.launch {
+        searchJob = viewModelScope.launch(Dispatchers.Default) {
             delay(120) // Snappy debounce
-            performSearch()
+            executeSearch()
         }
     }
 
     fun selectCategory(category: SearchCategory?) {
         _state.value = _state.value.copy(selectedCategory = category)
-        performSearch()
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch(Dispatchers.Default) {
+            executeSearch()
+        }
     }
 
     fun selectGame(gameId: String?) {
         _state.value = _state.value.copy(selectedGameId = gameId)
-        performSearch()
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch(Dispatchers.Default) {
+            executeSearch()
+        }
     }
 
     fun toggleNoSpoilersMode() {
         val next = !_state.value.isNoSpoilersMode
         userPrefs.setNoSpoilersMode(next)
         _state.value = _state.value.copy(isNoSpoilersMode = next)
-        performSearch()
+        triggerSearch()
     }
 
     private suspend fun indexAllGames() {
@@ -243,47 +249,54 @@ class GlobalSearchViewModel(application: Application) : AndroidViewModel(applica
             }
         }
         isIndexing = false
-        performSearch()
+        triggerSearch()
     }
 
-    private fun performSearch() {
+    private fun triggerSearch() {
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch(Dispatchers.Default) {
+            executeSearch()
+        }
+    }
+
+    private suspend fun executeSearch() {
         val q = _state.value.query.trim().lowercase()
         val cat = _state.value.selectedCategory
         val targetGame = _state.value.selectedGameId
 
         if (q.isEmpty()) {
-            _state.value = _state.value.copy(results = emptyList(), isLoading = false)
+            withContext(Dispatchers.Main) {
+                _state.value = _state.value.copy(results = emptyList(), isLoading = false)
+            }
             return
         }
 
-        viewModelScope.launch(Dispatchers.Default) {
-            val candidatePool = if (targetGame != null) {
-                gameItemsCache[targetGame] ?: emptyList()
-            } else {
-                gameItemsCache.values.flatten()
-            }
+        val candidatePool = if (targetGame != null) {
+            gameItemsCache[targetGame] ?: emptyList()
+        } else {
+            gameItemsCache.values.flatten()
+        }
 
-            val filtered = candidatePool.filter { item ->
-                val matchesCategory = cat == null || item.category == cat
-                val matchesQuery = item.title.lowercase().contains(q) ||
-                        item.subtitle.lowercase().contains(q) ||
-                        (item.extraInfo?.lowercase()?.contains(q) == true)
-                matchesCategory && matchesQuery
-            }.sortedWith(
-                compareBy(
-                    // Exact prefix match first
-                    { !it.title.lowercase().startsWith(q) },
-                    // Title contains before subtitle
-                    { !it.title.lowercase().contains(q) },
-                    // Category grouping
-                    { it.category.ordinal },
-                    { it.title }
-                )
-            ).take(120) // Limit display count for fast UI rendering
+        val filtered = candidatePool.filter { item ->
+            val matchesCategory = cat == null || item.category == cat
+            val matchesQuery = item.title.lowercase().contains(q) ||
+                    item.subtitle.lowercase().contains(q) ||
+                    (item.extraInfo?.lowercase()?.contains(q) == true)
+            matchesCategory && matchesQuery
+        }.sortedWith(
+            compareBy(
+                // Exact prefix match first
+                { !it.title.lowercase().startsWith(q) },
+                // Title contains before subtitle
+                { !it.title.lowercase().contains(q) },
+                // Category grouping
+                { it.category.ordinal },
+                { it.title }
+            )
+        ).take(120) // Limit display count for fast UI rendering
 
-            withContext(Dispatchers.Main) {
-                _state.value = _state.value.copy(results = filtered, isLoading = false)
-            }
+        withContext(Dispatchers.Main) {
+            _state.value = _state.value.copy(results = filtered, isLoading = false)
         }
     }
 }

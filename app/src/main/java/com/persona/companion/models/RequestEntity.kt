@@ -2,7 +2,13 @@ package com.persona.companion.models
 
 import androidx.room.*
 
-@Entity(tableName = "requests")
+@Entity(
+    tableName = "requests",
+    indices = [
+        Index(value = ["gameId", "sortOrder"]),
+        Index(value = ["gameId", "name"])
+    ]
+)
 data class RequestEntity(
     @PrimaryKey(autoGenerate = true) val dbId: Int = 0,
     val id: String?, // The original ID from JSON (e.g. "01")

@@ -1,9 +1,16 @@
 package com.persona.companion.models
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "items")
+@Entity(
+    tableName = "items",
+    indices = [
+        Index(value = ["gameId", "name"]),
+        Index(value = ["gameId", "category"])
+    ]
+)
 data class Item(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,

@@ -230,7 +230,7 @@ fun GlobalSearchScreen(
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                     contentPadding = PaddingValues(vertical = 10.dp)
                 ) {
-                    items(state.results) { item ->
+                    items(state.results, key = { "${it.gameId}_${it.category.name}_${it.title}" }) { item ->
                         val isConcealed = state.isNoSpoilersMode && item.isSpoiler && revealedSpoilers[item.title] != true
 
                         SearchResultCard(

@@ -1,6 +1,7 @@
 package com.persona.companion.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -180,6 +181,11 @@ private fun PersonaStatsContent(persona: Persona, series: PersonaSeries, gameId:
     StatsSection(persona, series.color)
     
     Spacer(modifier = Modifier.height(16.dp))
+
+    if (!persona.inherits.isNullOrBlank()) {
+        InheritanceSection(persona.inherits)
+        Spacer(modifier = Modifier.height(16.dp))
+    }
 
     if (!persona.skills.isNullOrEmpty()) {
         SectionHeader("Skills")
@@ -426,6 +432,69 @@ private fun UnlockSection(unlock: String) {
                     style = MaterialTheme.typography.bodyMedium,
                     color = TextPrimary
                 )
+            }
+        }
+    }
+}
+
+@Composable
+private fun InheritanceSection(inheritsType: String) {
+    val type = inheritsType.trim().lowercase()
+    val restrictions = when (type) {
+        "fire" -> listOf("Cannot inherit: Ice skills")
+        "ice" -> listOf("Cannot inherit: Fire skills")
+        "elec" -> listOf("Cannot inherit: Wind skills")
+        "wind" -> listOf("Cannot inherit: Elec skills")
+        "bless", "light" -> listOf("Cannot inherit: Curse/Dark, Ailment, Physical skills")
+        "curse", "dark" -> listOf("Cannot inherit: Bless/Light, Healing/Recovery skills")
+        "phys", "physical" -> listOf("Cannot inherit: Magic attack skills")
+        "ailment" -> listOf("Cannot inherit: Bless/Light, Healing skills")
+        "recovery", "healing" -> listOf("Cannot inherit: Curse/Dark, Physical attack skills")
+        "almighty" -> listOf("Can inherit all skill affinities")
+        else -> emptyList()
+    }
+
+    SectionHeader("Skill Inheritance")
+    Spacer(modifier = Modifier.height(8.dp))
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(10.dp),
+        color = SurfaceCard,
+        border = BorderStroke(1.dp, Hairline)
+    ) {
+        Column(modifier = Modifier.padding(14.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Inheritance Affinity",
+                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
+                    color = TextPrimary
+                )
+                Surface(
+                    shape = RoundedCornerShape(4.dp),
+                    color = SurfaceRaised,
+                    border = BorderStroke(1.dp, HairlineSoft)
+                ) {
+                    Text(
+                        text = inheritsType.replaceFirstChar { it.uppercase() },
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                        color = AccentBrass,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                    )
+                }
+            }
+            if (restrictions.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                restrictions.forEach { restriction ->
+                    Text(
+                        text = restriction,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = TextSecondary
+                    )
+                }
             }
         }
     }

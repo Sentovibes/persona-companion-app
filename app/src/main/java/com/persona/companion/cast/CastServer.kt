@@ -24,7 +24,7 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
     
     private val TAG = "CastServer"
     private val gson = Gson()
-    private val connectedClients = mutableListOf<CastWebSocket>()
+    private val connectedClients = java.util.concurrent.CopyOnWriteArrayList<CastWebSocket>()
     
     var onClientConnected: (() -> Unit)? = null
     var onClientDisconnected: (() -> Unit)? = null
@@ -924,5 +924,19 @@ class CastServer(private val context: Context, port: Int = 8080) : NanoWSD(port)
         override fun onException(exception: IOException) {
             Log.e(TAG, "WebSocket exception", exception)
         }
+    }
+
+    override fun stop() {
+        try {
+            connectedClients.forEach { socket ->
+                try {
+                    socket.close(NanoWSD.WebSocketFrame.CloseCode.NormalClosure, "Cast server stopping", false)
+                } catch (_: Exception) {}
+            }
+            connectedClients.clear()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error stopping client sockets", e)
+        }
+        super.stop()
     }
 }

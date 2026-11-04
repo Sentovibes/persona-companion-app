@@ -133,7 +133,7 @@ fun PersonaListScreen(
                                     item {
                                         ArcanaHeader(arcana, series.color)
                                     }
-                                    items(personas) { persona ->
+                                    items(personas, key = { it.name }) { persona ->
                                         PersonaRow(
                                             persona     = persona,
                                             accentColor = series.color,
@@ -151,7 +151,7 @@ fun PersonaListScreen(
                             }
                             else -> {
                                 // Flat list for level/name sorting
-                                items(state.filtered) { persona ->
+                                items(state.filtered, key = { it.name }) { persona ->
                                     PersonaRow(
                                         persona     = persona,
                                         accentColor = series.color,

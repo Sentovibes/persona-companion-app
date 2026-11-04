@@ -12,6 +12,8 @@ import com.persona.companion.utils.JsonLoader
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -421,20 +423,28 @@ class FusionViewModel : ViewModel() {
         calculateSkillRoutes()
     }
 
-    private fun calculateSkillRoutes() {
-        val target = _state.value.skillRouteTarget
-        val skills = _state.value.skillRouteSkills
-        val personas = _state.value.personas
-        val calculator = fusionCalculator
+    private var skillRouteJob: Job? = null
 
-        if (skills.isEmpty()) {
-            _state.value = _state.value.copy(
-                skillLearners = emptyList(),
-                skillItemizers = emptyList(),
-                skillMultiTrees = emptyList()
-            )
-            return
-        }
+    private fun calculateSkillRoutes() {
+        skillRouteJob?.cancel()
+        skillRouteJob = viewModelScope.launch(Dispatchers.Default) {
+            val target = _state.value.skillRouteTarget
+            val skills = _state.value.skillRouteSkills
+            val personas = _state.value.personas
+            val calculator = fusionCalculator
+
+            if (skills.isEmpty()) {
+                withContext(Dispatchers.Main) {
+                    _state.value = _state.value.copy(
+                        skillLearners = emptyList(),
+                        skillItemizers = emptyList(),
+                        skillMultiTrees = emptyList(),
+                        singleDirectRoutes = emptyList(),
+                        singleTwoStepRoutes = emptyList()
+                    )
+                }
+                return@launch
+            }
 
         val learners = mutableListOf<DirectLearner>()
         val itemizers = mutableListOf<ItemizerEntry>()
@@ -618,13 +628,16 @@ class FusionViewModel : ViewModel() {
             }
         }
 
-        _state.value = _state.value.copy(
-            skillLearners = learners.sortedWith(compareBy({ it.skillName }, { it.level })),
-            skillItemizers = itemizers,
-            skillMultiTrees = multiTrees,
-            singleDirectRoutes = singleDirectRoutes,
-            singleTwoStepRoutes = singleTwoStepRoutes
-        )
+        withContext(Dispatchers.Main) {
+            _state.value = _state.value.copy(
+                skillLearners = learners.sortedWith(compareBy({ it.skillName }, { it.level })),
+                skillItemizers = itemizers,
+                skillMultiTrees = multiTrees,
+                singleDirectRoutes = singleDirectRoutes,
+                singleTwoStepRoutes = singleTwoStepRoutes
+            )
+        }
+        }
     }
 
     fun getPersonaCost(persona: Persona): Int {

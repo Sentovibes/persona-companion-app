@@ -16,6 +16,7 @@ object CastManager {
     private var server: CastServer? = null
     private var isRunning = false
     private var wifiLock: WifiManager.WifiLock? = null
+    private var appContext: Context? = null
     
     var onServerStarted: ((String) -> Unit)? = null
     var onServerStopped: (() -> Unit)? = null
@@ -34,6 +35,13 @@ object CastManager {
             return
         }
         
+        appContext = context.applicationContext
+        try {
+            CastService.startService(context.applicationContext)
+        } catch (e: Exception) {
+            Log.w(TAG, "Could not start CastService foreground service: ${e.message}")
+        }
+
         // Acquire WiFi lock to keep WiFi active
         val wifiManager = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
         @Suppress("DEPRECATION")
@@ -114,6 +122,11 @@ object CastManager {
         }
         
         try {
+            appContext?.let {
+                try {
+                    CastService.stopService(it)
+                } catch (_: Exception) {}
+            }
             server?.stop()
             server = null
             isRunning = false

@@ -53,6 +53,7 @@ fun EnemyListScreen(
     val context = LocalContext.current
     val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
     val isCompactView = remember { userPrefs.isCompactView() }
+    val isNoSpoilers = remember { userPrefs.isNoSpoilersMode() }
     val state by viewModel.state.collectAsState()
     var selectedTab by remember { mutableStateOf(EnemyTab.ENEMIES) }
     var searchQuery by remember { mutableStateOf("") }
@@ -256,12 +257,13 @@ fun EnemyListScreen(
                             contentPadding = PaddingValues(16.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            items(filteredEnemies) { enemy ->
+                            items(filteredEnemies, key = { "${it.name}_${it.area ?: ""}" }) { enemy ->
                                 EnemyCard(
                                     enemy = enemy,
                                     gameId = gameId,
                                     onClick = { onEnemyClick(enemy) },
-                                    isCompact = isCompactView
+                                    isCompact = isCompactView,
+                                    isNoSpoilers = isNoSpoilers
                                 )
                             }
                         }
@@ -293,7 +295,8 @@ fun EnemyCard(
     enemy: Enemy,
     gameId: String = "",
     onClick: () -> Unit,
-    isCompact: Boolean = false
+    isCompact: Boolean = false,
+    isNoSpoilers: Boolean = false
 ) {
     val context = LocalContext.current
     val shouldLoadImages = rememberShouldLoadImages()
@@ -320,10 +323,8 @@ fun EnemyCard(
             Spacer(Modifier.width(if (isCompact) 10.dp else 12.dp))
         }
         
-        val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
-        val isNoSpoilers = remember { userPrefs.isNoSpoilersMode() }
         val isSpoiler = remember(enemy.name) { com.persona.companion.utils.SpoilerUtils.isSpoilerBoss(enemy.name) }
-        var isRevealed by remember { mutableStateOf(false) }
+        var isRevealed by remember(enemy.name) { mutableStateOf(false) }
         val isConcealed = isNoSpoilers && isSpoiler && !isRevealed
 
         Column(modifier = Modifier.weight(1f)) {

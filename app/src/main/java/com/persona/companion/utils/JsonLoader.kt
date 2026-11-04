@@ -3,9 +3,10 @@ package com.persona.companion.utils
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
+import com.google.gson.JsonParser
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
-import com.persona.companion.models.Persona
+import com.persona.companion.models.*
 
 private const val TAG = "JsonLoader"
 
@@ -14,34 +15,27 @@ object JsonLoader {
 
     fun loadPersonas(context: Context, path: String): List<Persona> {
         return try {
-            Log.d(TAG, "Loading personas from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            Log.d(TAG, "JSON loaded, length: ${json.length}, first 100 chars: ${json.take(100)}")
-            
-            // Try to detect if it's an array or map format
-            val trimmed = json.trim()
-            val personas = if (trimmed.startsWith("[")) {
-                // Array format (P3 Reload style)
-                Log.d(TAG, "Detected array format")
+            Log.d(TAG, "Loading personas from stream: $path")
+            val jsonElement = context.assets.open(path).bufferedReader().use { reader ->
+                JsonParser.parseReader(reader)
+            }
+
+            val personas = if (jsonElement.isJsonArray) {
                 val type = TypeToken.getParameterized(List::class.java, Persona::class.java).type
-                val personaList: List<Persona> = gson.fromJson(json, type) ?: emptyList()
-                Log.d(TAG, "Parsed ${personaList.size} personas from array")
+                val personaList: List<Persona> = gson.fromJson(jsonElement, type) ?: emptyList()
                 personaList.sortedBy { it.level ?: 0 }
-            } else {
-                // Map format (traditional style)
-                Log.d(TAG, "Detected map format")
+            } else if (jsonElement.isJsonObject) {
                 val type = TypeToken.getParameterized(Map::class.java, String::class.java, Persona::class.java).type
-                val personaMap: Map<String, Persona> = gson.fromJson(json, type) ?: emptyMap()
-                Log.d(TAG, "Parsed ${personaMap.size} personas from map")
-                
+                val personaMap: Map<String, Persona> = gson.fromJson(jsonElement, type) ?: emptyMap()
                 personaMap.map { (name, persona) ->
                     persona.copy(name = name)
                 }.sortedBy { it.level ?: 0 }
+            } else {
+                emptyList()
             }
-            
-            Log.d(TAG, "Returning ${personas.size} personas")
+
             if (personas.isEmpty()) {
-                throw Exception("Parsed 0 personas - JSON format might be incorrect")
+                throw Exception("Parsed 0 personas from $path")
             }
             personas
         } catch (e: JsonSyntaxException) {
@@ -52,90 +46,85 @@ object JsonLoader {
             throw e
         }
     }
-    
-    fun loadEnemies(context: Context, path: String): List<com.persona.companion.models.Enemy> {
+
+    fun loadEnemies(context: Context, path: String): List<Enemy> {
         return try {
-            Log.d(TAG, "Loading enemies from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.Enemy::class.java).type
-            val enemies: List<com.persona.companion.models.Enemy> = gson.fromJson(json, type) ?: emptyList()
-            Log.d(TAG, "Loaded ${enemies.size} enemies")
-            enemies.sortedBy { it.level }
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, Enemy::class.java).type
+                val enemies: List<Enemy> = gson.fromJson(reader, type) ?: emptyList()
+                enemies.sortedBy { it.level }
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading enemies from '$path': ${e.message}", e)
             emptyList()
         }
     }
-    
-    fun loadBosses(context: Context, path: String): com.persona.companion.models.BossData {
+
+    fun loadBosses(context: Context, path: String): BossData {
         return try {
-            Log.d(TAG, "Loading bosses from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val bossData: com.persona.companion.models.BossData = gson.fromJson(json, com.persona.companion.models.BossData::class.java)
-            Log.d(TAG, "Loaded ${bossData.main_bosses.size} main bosses, ${bossData.mini_bosses.size} mini bosses")
-            bossData
+            context.assets.open(path).bufferedReader().use { reader ->
+                gson.fromJson(reader, BossData::class.java) ?: BossData(emptyList(), emptyList())
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading bosses from '$path': ${e.message}", e)
-            com.persona.companion.models.BossData(emptyList(), emptyList())
+            BossData(emptyList(), emptyList())
         }
     }
 
-    fun loadRequests(context: Context, path: String): List<com.persona.companion.models.Request> {
+    fun loadRequests(context: Context, path: String): List<Request> {
         return try {
-            Log.d(TAG, "Loading requests from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.Request::class.java).type
-            val requests: List<com.persona.companion.models.Request> = gson.fromJson(json, type) ?: emptyList()
-            Log.d(TAG, "Loaded ${requests.size} requests")
-            requests
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, Request::class.java).type
+                gson.fromJson(reader, type) ?: emptyList()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading requests from '$path': ${e.message}", e)
             emptyList()
         }
     }
 
-    fun loadNewsUpdates(context: Context, path: String): List<com.persona.companion.models.NewsUpdate> {
+    fun loadNewsUpdates(context: Context, path: String): List<NewsUpdate> {
         return try {
-            Log.d(TAG, "Loading news updates from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.NewsUpdate::class.java).type
-            gson.fromJson(json, type) ?: emptyList()
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, NewsUpdate::class.java).type
+                gson.fromJson(reader, type) ?: emptyList()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading news updates from '$path': ${e.message}", e)
             emptyList()
         }
     }
 
-    fun loadQuestGuides(context: Context, path: String): List<com.persona.companion.models.QuestGuideGiver> {
+    fun loadQuestGuides(context: Context, path: String): List<QuestGuideGiver> {
         return try {
-            Log.d(TAG, "Loading quest guides from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.QuestGuideGiver::class.java).type
-            gson.fromJson(json, type) ?: emptyList()
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, QuestGuideGiver::class.java).type
+                gson.fromJson(reader, type) ?: emptyList()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading quest guides from '$path': ${e.message}", e)
             emptyList()
         }
     }
 
-    fun loadBossGuides(context: Context, path: String): List<com.persona.companion.models.BossGuideGame> {
+    fun loadBossGuides(context: Context, path: String): List<BossGuideGame> {
         return try {
-            Log.d(TAG, "Loading boss guides from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.BossGuideGame::class.java).type
-            gson.fromJson(json, type) ?: emptyList()
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, BossGuideGame::class.java).type
+                gson.fromJson(reader, type) ?: emptyList()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading boss guides from '$path': ${e.message}", e)
             emptyList()
         }
     }
 
-    fun loadDayGuides(context: Context, path: String): List<com.persona.companion.models.DayGuideGame> {
+    fun loadDayGuides(context: Context, path: String): List<DayGuideGame> {
         return try {
-            Log.d(TAG, "Loading day guides from: $path")
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            val type = TypeToken.getParameterized(List::class.java, com.persona.companion.models.DayGuideGame::class.java).type
-            gson.fromJson(json, type) ?: emptyList()
+            context.assets.open(path).bufferedReader().use { reader ->
+                val type = TypeToken.getParameterized(List::class.java, DayGuideGame::class.java).type
+                gson.fromJson(reader, type) ?: emptyList()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error loading day guides from '$path': ${e.message}", e)
             emptyList()
