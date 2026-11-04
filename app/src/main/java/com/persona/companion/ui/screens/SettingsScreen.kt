@@ -23,6 +23,8 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.persona.companion.BuildConfig
+import com.persona.companion.ui.components.WhatsNewDialog
+import androidx.compose.material.icons.filled.NewReleases
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.ui.theme.*
 import com.persona.companion.ui.components.ImagesSettingsSection
@@ -47,6 +49,7 @@ fun SettingsScreen(
     var updateMessage by remember { mutableStateOf<String?>(null) }
     var showUpdateDialog by remember { mutableStateOf(false) }
     var updateInfo by remember { mutableStateOf<com.persona.companion.utils.UpdateInfo?>(null) }
+    var showWhatsNewDialog by remember { mutableStateOf(false) }
 
     Scaffold(
         containerColor = Background,
@@ -268,9 +271,18 @@ fun SettingsScreen(
 
             item {
                 SettingItem(
+                    icon = Icons.Default.NewReleases,
+                    title = "What's New in v${BuildConfig.VERSION_NAME}",
+                    description = "View updates, new features, and changes",
+                    onClick = { showWhatsNewDialog = true }
+                )
+            }
+
+            item {
+                SettingItem(
                     icon = Icons.Default.Info,
                     title = "About",
-                    description = "Version ${BuildConfig.VERSION_NAME} • Made with ❤️ for Persona fans",
+                    description = "Version ${BuildConfig.VERSION_NAME} • Made with  for Persona fans",
                     onClick = {}
                 )
             }
@@ -302,7 +314,7 @@ fun SettingsScreen(
                         )
                     }
                     Text(
-                        text = "☕",
+                        text = "Support",
                         style = MaterialTheme.typography.headlineMedium
                     )
                 }
@@ -350,6 +362,14 @@ fun SettingsScreen(
                     Text("Later")
                 }
             }
+        )
+    }
+
+    if (showWhatsNewDialog) {
+        WhatsNewDialog(
+            versionName = BuildConfig.VERSION_NAME,
+            versionCode = BuildConfig.VERSION_CODE,
+            onDismiss = { showWhatsNewDialog = false }
         )
     }
 }

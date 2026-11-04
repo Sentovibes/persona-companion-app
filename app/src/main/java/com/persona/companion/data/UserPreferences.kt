@@ -129,6 +129,10 @@ class UserPreferences(context: Context) {
         prefs.edit().putString("default_game_$seriesId", gameId).apply()
     }
 
+    // What's New version tracking
+    fun getLastSeenVersionCode(): Int = prefs.getInt("last_seen_version_code", 0)
+    fun setLastSeenVersionCode(versionCode: Int) = prefs.edit().putInt("last_seen_version_code", versionCode).apply()
+
     data class RecentItem(
         val seriesId: String,
         val gameId: String,

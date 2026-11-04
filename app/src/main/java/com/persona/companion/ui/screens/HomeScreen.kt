@@ -40,6 +40,8 @@ import com.persona.companion.utils.rememberTextScaleFactor
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.platform.LocalContext
 import com.persona.companion.data.UserPreferences
+import com.persona.companion.BuildConfig
+import com.persona.companion.ui.components.WhatsNewDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -49,6 +51,9 @@ fun HomeScreen(navController: NavController) {
     val deviceType = rememberDeviceType()
     val contentPadding = rememberContentPadding()
     val textScale = rememberTextScaleFactor()
+    var showWhatsNew by remember {
+        mutableStateOf(userPrefs.getLastSeenVersionCode() < BuildConfig.VERSION_CODE)
+    }
     
     Scaffold(
         containerColor = Background,
@@ -167,6 +172,17 @@ fun HomeScreen(navController: NavController) {
                 color = TextDisabled
             )
         }
+    }
+
+    if (showWhatsNew) {
+        WhatsNewDialog(
+            versionName = BuildConfig.VERSION_NAME,
+            versionCode = BuildConfig.VERSION_CODE,
+            onDismiss = {
+                userPrefs.setLastSeenVersionCode(BuildConfig.VERSION_CODE)
+                showWhatsNew = false
+            }
+        )
     }
 }
 
