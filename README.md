@@ -2,28 +2,28 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v7.2.2
+# Persona Companion App v8.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Google Play](https://img.shields.io/badge/Google_Play-Persona_Companion-green?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.persona.companion)
-[![Version](https://img.shields.io/badge/Version-7.2.2-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-8.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
-> The ultimate, all-in-one "Absolute Perfection" reference tool for the Persona series.
+> The comprehensive reference companion and fusion calculator for the Persona series.
 
-The Persona Companion App is a high-performance, native Android application built with Jetpack Compose and Material 3. It serves as a comprehensive reference toolkit for mainline Persona titles, providing detailed data on Personas, Enemies, Social Links, and Classroom solutions.
+The Persona Companion App is a high-performance, native Android application built with Jetpack Compose and Material 3, alongside a companion Web PWA. It serves as an authoritative reference toolkit for mainline Persona titles, providing detailed data on Personas, Enemies, Social Links, Quests, Items, Skills, and Classroom solutions.
 
 ---
 
 ## Supported Titles
 
-| Game | Features | Theme |
+| Game | Features | Theme Accent |
 | :--- | :--- | :--- |
-| Persona 3 Reload | Full Compendium, Episode Aigis, 101 Elizabeth Requests | Indigo Blue |
-| Persona 5 Royal | Confidants, Itemization, DLC, 43 Quests | Rebellion Red |
-| Persona 4 Golden | Quests, Social Links, Fusion, Shuffle Time | Investigation Yellow |
-| Persona 3 FES/P | Both MC Routes (Elizabeth & Theodore), 80/99 Requests | Sea Blue |
+| Persona 3 Reload | Full Compendium, Episode Aigis, 101 Elizabeth Requests, Monad Doors | Indigo Blue |
+| Persona 5 Royal | Confidants, Itemization, DLC, 43 Quests, Palace Strategies | Rebellion Red |
+| Persona 4 Golden | Quests, Social Links, Fusion, Shuffle Time, Classroom | Investigation Yellow |
+| Persona 3 FES / Portable | Both MC Routes (Elizabeth & Theodore), 80/99 Requests | Sea Blue |
 
 ---
 
@@ -31,13 +31,16 @@ The Persona Companion App is a high-performance, native Android application buil
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
 
-## v7.2.2: Official Production Release & Comprehensive Hub
-This production release brings high-rigor data verification, complete guide hubs, and performance optimizations across the entire franchise:
-- **Comprehensive Guides Hub**: Complete Jetpack Compose guides architecture across Guides Hub, Day-by-Day Calendar, Boss Prep Guides, and Quest Trackers.
-- **Cheapest Fusion Recipes & Cost Sorting**: Accurate fusion recipe calculator sorted by lowest Yen (¥) summoning costs, ingredient filtering, and full triangle fusion support.
-- **Expanded Rare Skills & Passives**: Complete database indexing and descriptions for rare skills, accessory passives, and Will Seed Ring abilities in Persona 5 and Royal.
-- **Authentic Bestiary & 100% Artwork**: Canonical encounter locations, resistances, and artwork across all 320 Personas and 1,503 shadows.
-- **Android 15 Certified**: Fully compliant with 16 KB native memory page sizes and zero runtime reflection overhead.
+## v8.0: Global Search, No Spoilers Mode & 100% Franchise Bestiary
+
+The v8.0 milestone introduces major utility, visual completion, and privacy tools:
+
+- **Unified Global Search**: Instant cross-database search across Personas, Skills, Enemies, Bosses, Quests, Items, Social Links, and Guides from any screen with live debounced indexing.
+- **No Spoilers Mode**: Social Link optimal dialogue answers and late-game boss encounters are concealed behind tap-to-reveal toggles.
+- **100% Franchise Bestiary Visuals (874 / 874 Enemies)**: Full artwork coverage across all 874 enemies and 320 Personas in Persona 3 Reload, Persona 4 Golden, and Persona 5 Royal, including Episode Aigis superbosses, Monad passages, and authentic boss fallbacks.
+- **Preferred Game Launchers**: Configure your default game per series or select "None" to choose freely on each session.
+- **In-App What's New Dialog**: Interactive popup on first launch highlighting new features, accessible anytime from Settings.
+- **Android 15 Certified**: 100% compliant with 16 KB native memory page sizes and low-latency navigation.
 
 ---
 
@@ -47,24 +50,24 @@ This production release brings high-rigor data verification, complete guide hubs
 - Phone Mode: Touch-optimized, compact layouts for mobile use.
 - Tablet Mode: Dual-pane navigation for large-screen efficiency.
 - Android TV: D-pad optimized navigation with scaled text and visuals.
-- Cast Mode: Direct data streaming to compatible TV devices via Chromecast.
+- Cast Mode: Direct data streaming to compatible TV displays.
 
 ### Comprehensive Databases
-- Persona Compendium: Full stats, skillsets, and fusion recipes.
-- Enemy Bestiary: Weaknesses, resistances, and standard/rare drop data.
-- Social Link Guides: Optimized dialogue choices and rank-up requirements.
-- Classroom Answers: Solutions for all supported titles and exam dates.
+- Persona Compendium: Full base stats, skillsets, and cheapest fusion recipes sorted by Yen (¥) summoning costs.
+- Enemy Bestiary: Elemental weaknesses, resistances, locations, and drop data.
+- Social Link Guides: Best dialogue choices and rank-up schedules.
+- Classroom Answers: Verified answers for all supported games and exam dates.
 
 ### Quality of Life
-- Favorites and History: Save frequently used entries for instant access.
-- OLED Dark Mode: Battery-optimized true black theme for night gaming.
-- Smart Filtering: Advanced search by Arcana, Level, DLC, or Element.
-- Automatic Updates: Built-in checker to stay current with the latest data.
+- Favorites and History: Quick-access pins for Personas and Shadows.
+- OLED Dark Mode: True midnight black theme for night gaming sessions.
+- Smart Filtering: Search and filter by Arcana, Level, DLC, or Element.
+- In-App Update Checker: Automatic notifications when new data or app builds release.
 
-### Web Experience (NEW)
-- **Universal Access**: Run the companion on any device with a modern browser.
-- **Responsive Design**: Supports Adaptive Rail navigation (Tablet/Desktop) and Stacked screens (Phone).
-- **Quest Tracking**: Mark requests as "Completed" directly in the web UI; state is persisted via `localStorage`.
+### Web Experience
+- **Universal Access**: Run the companion on any desktop or mobile browser.
+- **Responsive Layout**: Supports adaptive rail navigation and compact views.
+- **Quest Tracking**: Mark requests as completed directly in the web UI with local persistence.
 - **Offline Ready**: Local-first data architecture for fast, reliable reference.
 
 ---
@@ -72,32 +75,32 @@ This production release brings high-rigor data verification, complete guide hubs
 ## Installation
 
 ### Google Play Store (Official)
-The app is now officially available on the Google Play Store:
+The app is available on the Google Play Store:
 
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.persona.companion)
 
 Or open the store page directly: **[Persona Companion on Google Play](https://play.google.com/store/apps/details?id=com.persona.companion)**
 
 ### Android APK (Direct Download)
-1. Download the latest release from the GitHub Releases tab.
+1. Download the latest release APK from the GitHub Releases tab.
 2. Install the APK on an Android device (Android 8.0+ required).
 3. Optional: Enable HD Image Support via the Settings menu.
 
 ---
 
-## Web Version (Live site)
+## Web Version (Live Site)
 
-The companion now features a fully-fledged web application! This is perfect for having the compendium open on a second monitor or tablet while gaming.
+The companion includes a fully featured web application, ideal for having the compendium open on a second monitor or tablet while playing.
 
 ### Use Online
-If hosted on GitHub Pages, you can access the live web version immediately without downloading anything:
- **[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/)**
+Access the live web version immediately without installation:  
+**[Persona Companion Web](https://sentovibes.github.io/persona-companion-app/)**
 
 ### Launching Locally
 1. Clone the repository or download the source code.
-2. Navigate to the `web/` directory.
-3. Serve the directory using a simple local server (e.g., `npx http-server` or VS Code Live Server).
-4. No heavy backend required: it is a fast, local-first Single Page Application!
+2. Navigate to the `docs/` directory.
+3. Serve the directory using a simple local HTTP server (for example, `npx http-server docs` or VS Code Live Server).
+4. No heavy backend required: fast, local-first Single Page Application.
 
 ---
 
@@ -107,19 +110,22 @@ If hosted on GitHub Pages, you can access the live web version immediately witho
 # Clone the repository
 git clone https://github.com/Sentovibes/persona-companion-app.git
 
-# Build the Android APK
+# Build the Android debug APK
 ./gradlew assembleDebug
 ```
 
 ---
 
-## Roadmap: What's Next?
-- [ ] **Custom Persona Build Planner**: Save and customize your "Ultimate Builds" to your local roster with custom skill loadouts and stat allocations.
+## Roadmap: What is Next?
+- [ ] **Universal JSON Backup & Restore**: Cross-platform transfer of favorites, quest checkmarks, and notes between Android and Web PWA.
+- [ ] **Mayoido Antiques Weapon Fusion Directory**: Nihil weapon and heart item crafting tables for Persona 3 Reload and Episode Aigis.
+- [ ] **Skill Inheritance Rules Matrix**: Display incompatible elements and inheritance slot caps in the compendium.
+- [ ] **Custom Persona Build Planner**: Teammate 8-skill build planner with Jazz Jin and bike skill recommendations.
 
 ---
 
 ## Support the Project
-If this app helped you save a Social Link or find that one rare drop, consider buying the dev a coffee!
+If this app helped you save a Social Link or find that one rare drop, consider supporting development:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sentovibes)
 
