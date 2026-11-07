@@ -1885,6 +1885,20 @@ function buildSettingsScreen() {
                 <span>${S.velvetHex.connected?'LIVE':'OFF'}</span>
             </div>
         </div>
+    </div>
+    <div class="section-card" style="margin-top:12px">
+        <div class="section-title">Data & Backup</div>
+        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:12px">Export your favorites, completed requests, and preferences to JSON, or restore from a previous backup. Fully compatible with the Android Companion App.</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="action-btn" onclick="exportWebBackup()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--velvet-3);border:1px solid var(--hairline-strong);border-radius:6px;color:var(--text);font-size:0.85rem;cursor:pointer">
+                <span>Export Backup (JSON)</span>
+            </button>
+            <button class="action-btn" onclick="document.getElementById('webBackupInput').click()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--velvet-3);border:1px solid var(--hairline-strong);border-radius:6px;color:var(--text);font-size:0.85rem;cursor:pointer">
+                <span>Restore Backup (JSON)</span>
+            </button>
+            <input type="file" id="webBackupInput" accept=".json,application/json" style="display:none" onchange="importWebBackup(event)">
+        </div>
+        <div id="backupStatusMsg" style="font-size:0.8rem;margin-top:8px;color:var(--brass);display:none"></div>
     </div>`;
 }
 
@@ -1909,6 +1923,111 @@ function setDefaultGameWeb(seriesId, gameId) {
     localStorage.setItem('settings', JSON.stringify(S.settings));
     buildSettingsScreen();
 }
+
+function exportWebBackup() {
+    const backupData = {
+        schemaVersion: 1,
+        appVersion: "8.1",
+        versionCode: 64,
+        exportTimestamp: Date.now(),
+        favoritePersonas: Array.from(S.favorites || []).map(id => {
+            const parts = id.split('_');
+            return {
+                gameId: parts[0] || 'p5r',
+                personaName: parts.slice(1).join('_'),
+                addedTimestamp: Date.now()
+            };
+        }),
+        favoriteEnemies: [],
+        completedRequests: Array.from(S.completedRequests || []).map(name => {
+            return {
+                gameId: S.game || 'p5r',
+                name: name,
+                isCompleted: true
+            };
+        }),
+        preferences: {
+            noSpoilersMode: !!S.settings.noSpoilersMode,
+            p3pProtagonist: S.settings.p3pProtagonist || 'MALE',
+            showDlc: !!S.settings.showDlc,
+            showEpisodeAigis: !!S.settings.showEpisodeAigis,
+            defaultGame_p3: S.settings.defaultGame_p3 || 'none',
+            defaultGame_p4: S.settings.defaultGame_p4 || 'none',
+            defaultGame_p5: S.settings.defaultGame_p5 || 'none'
+        }
+    };
+    const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `persona_companion_backup_v1_${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    const msg = document.getElementById('backupStatusMsg');
+    if (msg) {
+        msg.textContent = 'Backup exported successfully!';
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 4000);
+    }
+}
+
+function importWebBackup(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            if (!data || typeof data !== 'object') throw new Error('Invalid JSON format');
+            
+            let restoredCount = 0;
+            // Restore favorites
+            if (Array.isArray(data.favoritePersonas)) {
+                if (!S.favorites) S.favorites = new Set();
+                data.favoritePersonas.forEach(f => {
+                    if (f && f.gameId && f.personaName) {
+                        S.favorites.add(`${f.gameId}_${f.personaName}`);
+                        restoredCount++;
+                    }
+                });
+                localStorage.setItem('favs', JSON.stringify(Array.from(S.favorites)));
+            }
+            
+            // Restore completed requests
+            if (Array.isArray(data.completedRequests)) {
+                if (!S.completedRequests) S.completedRequests = new Set();
+                data.completedRequests.forEach(r => {
+                    if (r && r.name && r.isCompleted) {
+                        S.completedRequests.add(r.name);
+                        restoredCount++;
+                    }
+                });
+                localStorage.setItem('completed_requests', JSON.stringify(Array.from(S.completedRequests)));
+            }
+            
+            // Restore preferences
+            if (data.preferences && typeof data.preferences === 'object') {
+                Object.assign(S.settings, data.preferences);
+                localStorage.setItem('settings', JSON.stringify(S.settings));
+            }
+            
+            const msg = document.getElementById('backupStatusMsg');
+            if (msg) {
+                msg.textContent = `Restored ${restoredCount} records successfully!`;
+                msg.style.display = 'block';
+                setTimeout(() => { msg.style.display = 'none'; }, 4000);
+            }
+            buildSettingsScreen();
+        } catch (err) {
+            alert('Failed to parse backup JSON: ' + err.message);
+        }
+    };
+    reader.readAsText(file);
+    event.target.value = '';
+}
+
 
 /* ── Misc ──────────────────────────────────────────────────────────────────── */
 function setSort(opt, color) { S.sort=opt; buildListScreen(); }

@@ -289,7 +289,7 @@ private fun SeriesCard(
             ) {
                 series.games.forEach { game ->
                     Surface(
-                        shape = RoundedCornerShape(999.dp),
+                        shape = RoundedCornerShape(6.dp),
                         color = Color.Black.copy(alpha = 0.30f),
                         border = BorderStroke(1.dp, Color.White.copy(alpha = 0.35f)),
                         modifier = Modifier.clickable {
@@ -309,7 +309,7 @@ private fun SeriesCard(
                 }
                 // 'All' button to pick other game editions
                 Surface(
-                    shape = RoundedCornerShape(999.dp),
+                    shape = RoundedCornerShape(6.dp),
                     color = Color.White.copy(alpha = 0.20f),
                     border = BorderStroke(1.dp, Color.White.copy(alpha = 0.40f)),
                     modifier = Modifier.clickable {
@@ -351,31 +351,36 @@ private fun QuickAccessButton(
 ) {
     val textScale = rememberTextScaleFactor()
     
-    Box(
-        modifier = modifier
-            .height(56.dp)
-            .clip(RoundedCornerShape(12.dp))
-            .background(SurfaceCard)
-            .clickable(onClick = onClick),
-        contentAlignment = Alignment.Center
+    Surface(
+        modifier = modifier.height(56.dp),
+        shape = RoundedCornerShape(10.dp),
+        color = SurfaceCard,
+        border = BorderStroke(1.dp, HairlineSoft)
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .clickable(onClick = onClick),
+            contentAlignment = Alignment.Center
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = label,
-                tint = TextPrimary,
-                modifier = Modifier.size(20.dp)
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = label,
-                style = MaterialTheme.typography.bodyMedium,
-                color = TextPrimary,
-                fontWeight = FontWeight.Medium
-            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = label,
+                    tint = TextPrimary,
+                    modifier = Modifier.size(20.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = TextPrimary,
+                    fontWeight = FontWeight.Medium
+                )
+            }
         }
     }
 }

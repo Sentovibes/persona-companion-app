@@ -689,7 +689,7 @@ body {
 .series-card-games { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
 .series-game-chip {
     border: 1px solid rgba(255,255,255,.35); background: rgba(0,0,0,.25); color: #fff;
-    font-size: .72rem; font-weight: 600; padding: 3px 11px; border-radius: 999px;
+    font-size: .72rem; font-weight: 600; padding: 3px 11px; border-radius: 6px;
     cursor: pointer; font-family: inherit; letter-spacing: .02em;
     transition: background .15s, border-color .15s;
 }
@@ -1541,7 +1541,7 @@ body {
 
 .quick-action-count {
     padding: 1px 7px;
-    border-radius: 999px;
+    border-radius: 4px;
     background: var(--velvet-3);
     color: var(--brass);
     font-size: 0.75rem;
@@ -1681,7 +1681,7 @@ body {
 
 .series-game-chip {
     padding: 3px 9px;
-    border-radius: 999px;
+    border-radius: 6px;
     background: rgba(0,0,0,0.32);
     border: 1px solid rgba(255,255,255,0.32);
     color: #fff;

@@ -1,7 +1,5 @@
 package com.persona.companion.utils
 
-import androidx.compose.ui.unit.sp
-
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -19,17 +17,34 @@ object ImageUtils {
      */
     fun loadImageFromAssets(context: Context, imagePath: String): Bitmap? {
         return try {
-            // Always check filesDir first (downloaded images)
+            // Check downloaded files first (webp then png)
             val downloadedFile = File(context.filesDir, imagePath)
             if (downloadedFile.exists()) {
                 return BitmapFactory.decodeFile(downloadedFile.absolutePath)
             }
+            val altExtPath = if (imagePath.endsWith(".webp")) {
+                imagePath.removeSuffix(".webp") + ".png"
+            } else {
+                imagePath.removeSuffix(".png") + ".webp"
+            }
+            val altDownloaded = File(context.filesDir, altExtPath)
+            if (altDownloaded.exists()) {
+                return BitmapFactory.decodeFile(altDownloaded.absolutePath)
+            }
+
             // Fallback: try assets (only works if images were bundled)
             if (BuildConfig.INCLUDE_IMAGES) {
-                val inputStream: InputStream = context.assets.open(imagePath)
-                val bitmap = BitmapFactory.decodeStream(inputStream)
-                inputStream.close()
-                bitmap
+                try {
+                    val inputStream: InputStream = context.assets.open(imagePath)
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    inputStream.close()
+                    bitmap
+                } catch (_: Exception) {
+                    val inputStream: InputStream = context.assets.open(altExtPath)
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    inputStream.close()
+                    bitmap
+                }
             } else {
                 null
             }
@@ -40,12 +55,20 @@ object ImageUtils {
     }
     
     /**
-     * Get image path for persona/enemy
-     * @param name The persona or enemy name
-     * @param isEnemy true for enemies, false for personas
-     * @param gameId Optional game ID for game-specific image handling
+     * Get primary image path for persona/enemy (.webp by default for 98.5% smaller footprint)
      */
     fun getImagePath(name: String, isEnemy: Boolean, gameId: String? = null): String {
+        return getImagePathWithExt(name, isEnemy, gameId, "webp")
+    }
+
+    /**
+     * Get fallback image path for legacy PNG assets
+     */
+    fun getImagePathPng(name: String, isEnemy: Boolean, gameId: String? = null): String {
+        return getImagePathWithExt(name, isEnemy, gameId, "png")
+    }
+
+    private fun getImagePathWithExt(name: String, isEnemy: Boolean, gameId: String?, extension: String): String {
         // Remove variant suffixes (A, B, C, etc.) for enemies
         var cleanName = name
         if (isEnemy && name.matches(Regex(".*\\s[A-Z]$"))) {
@@ -87,7 +110,7 @@ object ImageUtils {
         val folder = if (isEnemy) "enemies_shared" else "personas_shared"
         
         // All images are now in shared folders, looked up by name only
-        return "images/$folder/$safeName.png"
+        return "images/$folder/$safeName.$extension"
     }
     
     /**
@@ -95,14 +118,27 @@ object ImageUtils {
      */
     fun imageExists(context: Context, imagePath: String): Boolean {
         return try {
-            if (BuildConfig.INCLUDE_IMAGES) {
-                // Images bundled: check assets
-                context.assets.open(imagePath).close()
-                true
+            val file = File(context.filesDir, imagePath)
+            if (file.exists()) return true
+
+            val altExtPath = if (imagePath.endsWith(".webp")) {
+                imagePath.removeSuffix(".webp") + ".png"
             } else {
-                // Images not bundled: check downloaded files
-                val downloadedFile = File(context.filesDir, imagePath)
-                downloadedFile.exists()
+                imagePath.removeSuffix(".png") + ".webp"
+            }
+            val altFile = File(context.filesDir, altExtPath)
+            if (altFile.exists()) return true
+
+            if (BuildConfig.INCLUDE_IMAGES) {
+                try {
+                    context.assets.open(imagePath).close()
+                    true
+                } catch (_: Exception) {
+                    context.assets.open(altExtPath).close()
+                    true
+                }
+            } else {
+                false
             }
         } catch (e: Exception) {
             false

@@ -25,7 +25,7 @@ import java.util.zip.ZipException
 class ExtractionService(private val context: Context) {
     companion object {
         private const val TAG = "ExtractionService"
-        private const val BUFFER_SIZE = 8192 // 8 KB buffer for reading
+        private const val BUFFER_SIZE = 65536 // 8 KB buffer for reading
     }
     
     /**
@@ -235,11 +235,14 @@ class ExtractionService(private val context: Context) {
                 return false
             }
             
-            // Check file size
+            // Check file size (supports both full PNG pack and lightweight WebP pack)
             val actualSize = zipFile.length()
-            if (actualSize != expectedSize) {
-                Log.e(TAG, "ZIP file size mismatch: expected $expectedSize, got $actualSize")
+            if (actualSize <= 0) {
+                Log.e(TAG, "ZIP file is empty (0 bytes)")
                 return false
+            }
+            if (expectedSize > 0 && actualSize != expectedSize) {
+                Log.i(TAG, "ZIP file size differs from default CDN size (actual: $actualSize, default: $expectedSize). Proceeding with ZIP structure verification.")
             }
             
             // Check if file is a valid ZIP

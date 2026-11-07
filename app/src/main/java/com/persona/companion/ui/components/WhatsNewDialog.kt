@@ -8,6 +8,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
@@ -35,39 +37,33 @@ data class WhatsNewFeature(
 
 @Composable
 fun WhatsNewDialog(
-    versionName: String = "8.0",
-    versionCode: Int = 63,
+    versionName: String = "8.1",
+    versionCode: Int = 64,
     onDismiss: () -> Unit
 ) {
     val features = listOf(
         WhatsNewFeature(
-            title = "Unified Global Search",
-            description = "Search across Personas, Skills, Enemies, Bosses, Quests, Items, and Guides instantly from any screen.",
-            icon = Icons.Default.Search,
-            tag = "Search"
+            title = "Universal Backup & Restore",
+            description = "Export and restore your compendium favorites, completed quests, and preferences across Android and Web PWA via standardized JSON.",
+            icon = Icons.Default.Settings,
+            tag = "Backup"
         ),
         WhatsNewFeature(
-            title = "No Spoilers Mode",
-            description = "Optimal Social Link dialogue choices and late-game boss strategies are concealed behind tap-to-reveal toggles.",
-            icon = Icons.Default.VisibilityOff,
-            tag = "Privacy"
+            title = "High-Efficiency WebP Pipeline",
+            description = "Streamlined asset pipeline reduces memory and storage footprint by 98.5% with instant loading and zero memory pressure.",
+            icon = Icons.Default.Speed,
+            tag = "Performance"
         ),
         WhatsNewFeature(
-            title = "100% Bestiary Visuals",
-            description = "Verified high-resolution artwork coverage across all 874 enemies and 320 Personas in P3R, P4G, and P5R.",
-            icon = Icons.Default.Image,
+            title = "Skill Inheritance Rules",
+            description = "Directly inspect incompatible affinities and exact inherited skill slot formulas on Persona detail cards.",
+            icon = Icons.Default.AutoAwesome,
             tag = "Compendium"
         ),
         WhatsNewFeature(
-            title = "Preferred Game Launchers",
-            description = "Choose your preferred game for Persona 3, 4, or 5 to launch straight into your active playthrough.",
-            icon = Icons.Default.Settings,
-            tag = "Workflow"
-        ),
-        WhatsNewFeature(
-            title = "Android 15 Hardening",
-            description = "Certified 16 KB memory page-size architecture with optimized ProGuard rules and low-latency navigation.",
-            icon = Icons.Default.Speed,
+            title = "Android 15 Edge-to-Edge & Stability",
+            description = "Certified edge-to-edge system insets, concurrent search caching, and persistent Room database migrations.",
+            icon = Icons.Default.Shield,
             tag = "System"
         )
     )

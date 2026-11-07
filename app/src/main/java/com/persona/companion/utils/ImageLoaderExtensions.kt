@@ -1,88 +1,80 @@
 package com.persona.companion.utils
 
 import android.content.Context
-import android.util.Log
 import coil.request.ImageRequest
 import com.persona.companion.BuildConfig
 import com.persona.companion.R
 import java.io.File
 
 /**
- * Extension functions for Coil ImageRequest to load persona and enemy images.
- * 
- * These extensions handle:
- * - Loading images from assets when bundled (debug builds)
- * - Loading images from internal storage when downloaded (release builds)
- * - Falling back to placeholder images when not available
- */
-
-/**
  * Configure this ImageRequest to load a persona image.
- * 
- * @param context Android context
- * @param game Game identifier (not used - images are in shared folder)
- * @param name Persona name
- * @return This ImageRequest.Builder for chaining
+ * Prefers WebP (14.5MB total catalog) with automatic fallback to PNG.
  */
 fun ImageRequest.Builder.personaImage(
     context: Context,
     game: String,
     name: String
 ): ImageRequest.Builder {
-    val imagePath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
-    // Check downloaded files first, then fall back to assets
-    val downloadedFile = File(context.filesDir, imagePath)
+    val webpPath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
+    val pngPath = ImageUtils.getImagePathPng(name, isEnemy = false, gameId = game)
+
+    val downloadedWebp = File(context.filesDir, webpPath)
+    val downloadedPng = File(context.filesDir, pngPath)
+
     return when {
-        downloadedFile.exists() -> this.data(downloadedFile)
-        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$imagePath")
+        downloadedWebp.exists() -> this.data(downloadedWebp)
+        downloadedPng.exists() -> this.data(downloadedPng)
+        BuildConfig.INCLUDE_IMAGES -> {
+            // Assets bundled: try webp asset first
+            this.data("file:///android_asset/$webpPath")
+        }
         else -> this.data(R.drawable.placeholder_persona)
     }
 }
 
 /**
  * Configure this ImageRequest to load an enemy image.
- * 
- * @param context Android context
- * @param game Game identifier
- * @param name Enemy name
- * @return This ImageRequest.Builder for chaining
+ * Prefers WebP (14.5MB total catalog) with automatic fallback to PNG.
  */
 fun ImageRequest.Builder.enemyImage(
     context: Context,
     game: String,
     name: String
 ): ImageRequest.Builder {
-    val imagePath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
-    val downloadedFile = File(context.filesDir, imagePath)
+    val webpPath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
+    val pngPath = ImageUtils.getImagePathPng(name, isEnemy = true, gameId = game)
+
+    val downloadedWebp = File(context.filesDir, webpPath)
+    val downloadedPng = File(context.filesDir, pngPath)
+
     return when {
-        downloadedFile.exists() -> this.data(downloadedFile)
-        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$imagePath")
+        downloadedWebp.exists() -> this.data(downloadedWebp)
+        downloadedPng.exists() -> this.data(downloadedPng)
+        BuildConfig.INCLUDE_IMAGES -> {
+            this.data("file:///android_asset/$webpPath")
+        }
         else -> this.data(R.drawable.placeholder_enemy)
     }
 }
 
 /**
  * Get the file path for a persona image.
- * 
- * @param context Android context
- * @param game Game identifier
- * @param name Persona name
- * @return File object for the image (may not exist)
  */
 fun getPersonaImagePath(context: Context, game: String, name: String): File {
-    val imagePath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
-    return File(context.filesDir, imagePath)
+    val webpPath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
+    val webpFile = File(context.filesDir, webpPath)
+    if (webpFile.exists()) return webpFile
+    val pngPath = ImageUtils.getImagePathPng(name, isEnemy = false, gameId = game)
+    return File(context.filesDir, pngPath)
 }
 
 /**
  * Get the file path for an enemy image.
- * 
- * @param context Android context
- * @param game Game identifier
- * @param name Enemy name
- * @return File object for the image (may not exist)
  */
 fun getEnemyImagePath(context: Context, game: String, name: String): File {
-    val imagePath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
-    return File(context.filesDir, imagePath)
+    val webpPath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
+    val webpFile = File(context.filesDir, webpPath)
+    if (webpFile.exists()) return webpFile
+    val pngPath = ImageUtils.getImagePathPng(name, isEnemy = true, gameId = game)
+    return File(context.filesDir, pngPath)
 }

@@ -1,5 +1,6 @@
 package com.persona.companion.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -241,15 +242,19 @@ private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = ""
     val context = LocalContext.current
     val shouldLoadImages = rememberShouldLoadImages()
     
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(if (isCompact) 8.dp else 10.dp))
-            .background(SurfaceCard)
-            .clickable(onClick = onClick)
-            .padding(horizontal = if (isCompact) 12.dp else 16.dp, vertical = if (isCompact) 10.dp else 14.dp),
-        verticalAlignment = Alignment.CenterVertically
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(if (isCompact) 8.dp else 10.dp),
+        color = SurfaceCard,
+        border = BorderStroke(1.dp, HairlineSoft)
     ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(horizontal = if (isCompact) 12.dp else 16.dp, vertical = if (isCompact) 10.dp else 14.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
         // Persona image thumbnail (only if images are available)
         if (shouldLoadImages) {
             AsyncImage(
@@ -314,6 +319,7 @@ private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = ""
                 )
             }
         }
+    }
     }
 }
 

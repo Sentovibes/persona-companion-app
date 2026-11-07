@@ -1,5 +1,6 @@
 package com.persona.companion.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -301,16 +302,20 @@ fun EnemyCard(
     val context = LocalContext.current
     val shouldLoadImages = rememberShouldLoadImages()
     
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(if (isCompact) 8.dp else 12.dp))
-            .background(SurfaceCard)
-            .clickable(onClick = onClick)
-            .padding(if (isCompact) 12.dp else 16.dp),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(if (isCompact) 8.dp else 10.dp),
+        color = SurfaceCard,
+        border = BorderStroke(1.dp, HairlineSoft)
     ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(if (isCompact) 12.dp else 16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
         // Enemy image thumbnail (only if images are available)
         if (shouldLoadImages) {
             com.persona.companion.ui.components.ProfileImage(
@@ -414,5 +419,6 @@ fun EnemyCard(
                 )
             }
         }
+    }
     }
 }

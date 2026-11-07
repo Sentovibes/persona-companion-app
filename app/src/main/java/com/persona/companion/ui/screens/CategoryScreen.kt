@@ -2,6 +2,7 @@ package com.persona.companion.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -194,16 +195,21 @@ private fun CategoryRow(
 ) {
     val alpha = if (item.available) 1f else 0.45f
 
-    Row(
+    Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(SurfaceCard)
-            .clickable(enabled = item.available, onClick = onClick)
-            .alpha(alpha)
-            .padding(horizontal = 20.dp, vertical = 18.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .alpha(alpha),
+        shape = RoundedCornerShape(10.dp),
+        color = SurfaceCard,
+        border = BorderStroke(1.dp, HairlineSoft)
     ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(enabled = item.available, onClick = onClick)
+                .padding(horizontal = 20.dp, vertical = 18.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
         Icon(
             imageVector = item.icon,
             contentDescription = null,
@@ -260,6 +266,7 @@ private fun CategoryRow(
                 contentDescription = null,
                 tint = TextSecondary
             )
+        }
         }
     }
 }
