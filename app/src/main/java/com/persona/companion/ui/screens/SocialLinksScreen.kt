@@ -8,11 +8,18 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.ui.draw.alpha
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -56,6 +63,8 @@ fun SocialLinksScreen(
     // Re-load when gameId changes OR when protagonist preference changes (for P3P)
     val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
     val noSpoilersMode by userPrefs.noSpoilersModeFlow.collectAsState(initial = userPrefs.isNoSpoilersMode())
+    val pinnedLinks by userPrefs.pinnedSocialLinksFlow.collectAsState(initial = userPrefs.getPinnedSocialLinks())
+    val maxedLinks by userPrefs.maxedSocialLinksFlow.collectAsState(initial = userPrefs.getMaxedSocialLinks())
     val revealedSpoilers = remember { mutableStateMapOf<String, Boolean>() }
 
     val protagonist = if (gameId == "p3p") {
@@ -89,7 +98,7 @@ fun SocialLinksScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = TextPrimary)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Surface)
@@ -187,9 +196,21 @@ fun SocialLinksScreen(
                             }
                         } else {
                             SocialLinksList(
+                                gameId = gameId,
+                                isP5 = isP5,
                                 socialLinks = filteredLinks,
                                 themeColor = themeColor,
                                 noSpoilersMode = noSpoilersMode,
+                                searchActive = searchQuery.isNotBlank(),
+                                pinnedLinks = pinnedLinks,
+                                maxedLinks = maxedLinks,
+                                getPrefKey = { arcana -> userPrefs.getSocialLinkKey(gameId, arcana) },
+                                onTogglePin = { arcana ->
+                                    userPrefs.togglePinSocialLink(userPrefs.getSocialLinkKey(gameId, arcana))
+                                },
+                                onToggleMax = { arcana ->
+                                    userPrefs.toggleMaxedSocialLink(userPrefs.getSocialLinkKey(gameId, arcana))
+                                },
                                 revealedSpoilers = revealedSpoilers,
                                 onReveal = { arcana -> revealedSpoilers[arcana] = true },
                                 onSocialLinkClick = onSocialLinkClick
@@ -204,34 +225,196 @@ fun SocialLinksScreen(
 
 @Composable
 private fun SocialLinksList(
+    gameId: String,
+    isP5: Boolean,
     socialLinks: List<SocialLink>,
     themeColor: Color,
     noSpoilersMode: Boolean,
+    searchActive: Boolean,
+    pinnedLinks: Set<String>,
+    maxedLinks: Set<String>,
+    getPrefKey: (String) -> String,
+    onTogglePin: (String) -> Unit,
+    onToggleMax: (String) -> Unit,
     revealedSpoilers: Map<String, Boolean>,
     onReveal: (String) -> Unit,
     onSocialLinkClick: (String) -> Unit
 ) {
+    var showMaxedSection by remember { mutableStateOf(true) }
+
+    val pinnedList = remember(socialLinks, pinnedLinks, gameId) {
+        socialLinks.filter { pinnedLinks.contains(getPrefKey(it.arcana)) }
+    }
+    val maxedList = remember(socialLinks, pinnedLinks, maxedLinks, gameId) {
+        socialLinks.filter {
+            val key = getPrefKey(it.arcana)
+            !pinnedLinks.contains(key) && maxedLinks.contains(key)
+        }
+    }
+    val activeList = remember(socialLinks, pinnedLinks, maxedLinks, gameId) {
+        socialLinks.filter {
+            val key = getPrefKey(it.arcana)
+            !pinnedLinks.contains(key) && !maxedLinks.contains(key)
+        }
+    }
+
+    val hasGroups = pinnedList.isNotEmpty() || maxedList.isNotEmpty()
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 24.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        items(socialLinks, key = { it.arcana }) { socialLink ->
-            val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(
-                socialLink.arcana,
-                socialLink.characterName
-            )
-            val isRevealed = revealedSpoilers[socialLink.arcana] == true
-            val isConcealed = noSpoilersMode && isSpoiler && !isRevealed
+        if (pinnedList.isNotEmpty()) {
+            item(key = "header_pinned") {
+                SocialLinkSectionHeader(
+                    title = "PINNED",
+                    count = pinnedList.size,
+                    accentColor = AccentBrass
+                )
+            }
+            items(pinnedList, key = { "pinned_${it.arcana}" }) { socialLink ->
+                val prefKey = getPrefKey(socialLink.arcana)
+                val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(
+                    socialLink.arcana,
+                    socialLink.characterName
+                )
+                val isRevealed = revealedSpoilers[socialLink.arcana] == true
+                val isConcealed = noSpoilersMode && isSpoiler && !isRevealed
 
-            SocialLinkCard(
-                socialLink = socialLink,
-                themeColor = themeColor,
-                isConcealed = isConcealed,
-                onReveal = { onReveal(socialLink.arcana) },
-                onClick = { onSocialLinkClick(socialLink.arcana) }
-            )
+                SocialLinkCard(
+                    socialLink = socialLink,
+                    themeColor = themeColor,
+                    isPinned = true,
+                    isMaxed = maxedLinks.contains(prefKey),
+                    isConcealed = isConcealed,
+                    onTogglePin = { onTogglePin(socialLink.arcana) },
+                    onToggleMax = { onToggleMax(socialLink.arcana) },
+                    onReveal = { onReveal(socialLink.arcana) },
+                    onClick = { onSocialLinkClick(socialLink.arcana) }
+                )
+            }
         }
+
+        if (activeList.isNotEmpty()) {
+            if (hasGroups) {
+                item(key = "header_active") {
+                    SocialLinkSectionHeader(
+                        title = if (isP5) "CONFIDANTS" else "SOCIAL LINKS",
+                        count = activeList.size,
+                        accentColor = themeColor
+                    )
+                }
+            }
+            items(activeList, key = { "active_${it.arcana}" }) { socialLink ->
+                val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(
+                    socialLink.arcana,
+                    socialLink.characterName
+                )
+                val isRevealed = revealedSpoilers[socialLink.arcana] == true
+                val isConcealed = noSpoilersMode && isSpoiler && !isRevealed
+
+                SocialLinkCard(
+                    socialLink = socialLink,
+                    themeColor = themeColor,
+                    isPinned = false,
+                    isMaxed = false,
+                    isConcealed = isConcealed,
+                    onTogglePin = { onTogglePin(socialLink.arcana) },
+                    onToggleMax = { onToggleMax(socialLink.arcana) },
+                    onReveal = { onReveal(socialLink.arcana) },
+                    onClick = { onSocialLinkClick(socialLink.arcana) }
+                )
+            }
+        }
+
+        if (maxedList.isNotEmpty()) {
+            item(key = "header_maxed") {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable { showMaxedSection = !showMaxedSection }
+                        .padding(top = 8.dp, bottom = 2.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(width = 3.dp, height = 14.dp)
+                                .background(AccentGreen, RoundedCornerShape(2.dp))
+                        )
+                        Text(
+                            text = "MAXED (${maxedList.size})",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = AccentGreen,
+                            fontWeight = FontWeight.Bold,
+                            letterSpacing = 0.6.sp
+                        )
+                    }
+                    Icon(
+                        imageVector = if (showMaxedSection || searchActive) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                        contentDescription = if (showMaxedSection) "Collapse maxed" else "Expand maxed",
+                        tint = TextSecondary,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+            if (showMaxedSection || searchActive) {
+                items(maxedList, key = { "maxed_${it.arcana}" }) { socialLink ->
+                    val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(
+                        socialLink.arcana,
+                        socialLink.characterName
+                    )
+                    val isRevealed = revealedSpoilers[socialLink.arcana] == true
+                    val isConcealed = noSpoilersMode && isSpoiler && !isRevealed
+
+                    SocialLinkCard(
+                        socialLink = socialLink,
+                        themeColor = themeColor,
+                        isPinned = false,
+                        isMaxed = true,
+                        isConcealed = isConcealed,
+                        onTogglePin = { onTogglePin(socialLink.arcana) },
+                        onToggleMax = { onToggleMax(socialLink.arcana) },
+                        onReveal = { onReveal(socialLink.arcana) },
+                        onClick = { onSocialLinkClick(socialLink.arcana) }
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SocialLinkSectionHeader(
+    title: String,
+    count: Int,
+    accentColor: Color
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 6.dp, bottom = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(width = 3.dp, height = 14.dp)
+                .background(accentColor, RoundedCornerShape(2.dp))
+        )
+        Text(
+            text = "$title ($count)",
+            style = MaterialTheme.typography.labelLarge,
+            color = accentColor,
+            fontWeight = FontWeight.Bold,
+            letterSpacing = 0.6.sp
+        )
     }
 }
 
@@ -239,7 +422,11 @@ private fun SocialLinksList(
 private fun SocialLinkCard(
     socialLink: SocialLink,
     themeColor: Color,
+    isPinned: Boolean = false,
+    isMaxed: Boolean = false,
     isConcealed: Boolean = false,
+    onTogglePin: () -> Unit = {},
+    onToggleMax: () -> Unit = {},
     onReveal: () -> Unit = {},
     onClick: () -> Unit
 ) {
@@ -252,7 +439,7 @@ private fun SocialLinkCard(
                 .fillMaxWidth()
                 .clickable(onClick = onReveal),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(10.dp),
             border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
         ) {
             Row(
@@ -306,18 +493,25 @@ private fun SocialLinkCard(
         return
     }
 
+    val borderColor = when {
+        isPinned -> AccentBrass.copy(alpha = 0.5f)
+        isMaxed -> AccentGreen.copy(alpha = 0.25f)
+        else -> HairlineSoft
+    }
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .alpha(if (isMaxed && !isPinned) 0.72f else 1f)
             .clickable(onClick = onClick),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
-        shape = RoundedCornerShape(12.dp),
-        border = androidx.compose.foundation.BorderStroke(1.dp, Hairline)
+        shape = RoundedCornerShape(10.dp),
+        border = androidx.compose.foundation.BorderStroke(1.dp, borderColor)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(14.dp),
+                .padding(start = 14.dp, top = 12.dp, bottom = 12.dp, end = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -326,7 +520,6 @@ private fun SocialLinkCard(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    // Main Title: Character Name (if available) or Arcana
                     Text(
                         text = if (hasCharName) charName!! else socialLink.arcana,
                         style = MaterialTheme.typography.titleMedium,
@@ -335,7 +528,6 @@ private fun SocialLinkCard(
                         fontSize = 16.sp
                     )
 
-                    // Arcana Chip Badge
                     if (hasCharName) {
                         Box(
                             modifier = Modifier
@@ -346,17 +538,34 @@ private fun SocialLinkCard(
                         ) {
                             Text(
                                 text = socialLink.arcana.uppercase(),
-                                fontSize = 11.sp,
+                                fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = themeColor
                             )
                         }
                     }
+
+                    if (isMaxed) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(6.dp))
+                                .background(AccentGreen.copy(alpha = 0.15f))
+                                .border(1.dp, AccentGreen.copy(alpha = 0.4f), RoundedCornerShape(6.dp))
+                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                        ) {
+                            Text(
+                                text = "MAX",
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = AccentGreen
+                            )
+                        }
+                    }
                 }
 
-                // Subtitle Row: Location / Schedule
                 val subtitleText = socialLink.details?.location ?: socialLink.details?.schedule
                 if (!subtitleText.isNullOrBlank()) {
+                    Spacer(Modifier.height(3.dp))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -380,15 +589,42 @@ private fun SocialLinkCard(
                 }
             }
 
-            Spacer(modifier = Modifier.width(10.dp))
+            // Pin, Max, and Chevron controls
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(2.dp)
+            ) {
+                IconButton(
+                    onClick = onTogglePin,
+                    modifier = Modifier.size(36.dp)
+                ) {
+                    Icon(
+                        imageVector = if (isPinned) Icons.Filled.PushPin else Icons.Outlined.PushPin,
+                        contentDescription = if (isPinned) "Unpin" else "Pin to top",
+                        tint = if (isPinned) AccentBrass else TextDisabled,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
 
-            // Navigation Chevron
-            Icon(
-                imageVector = Icons.Default.ChevronRight,
-                contentDescription = "View",
-                tint = TextSecondary.copy(alpha = 0.5f),
-                modifier = Modifier.size(20.dp)
-            )
+                IconButton(
+                    onClick = onToggleMax,
+                    modifier = Modifier.size(36.dp)
+                ) {
+                    Icon(
+                        imageVector = if (isMaxed) Icons.Filled.CheckCircle else Icons.Outlined.CheckCircle,
+                        contentDescription = if (isMaxed) "Unmark maxed" else "Mark maxed",
+                        tint = if (isMaxed) AccentGreen else TextDisabled,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+
+                Icon(
+                    imageVector = Icons.Default.ChevronRight,
+                    contentDescription = "View",
+                    tint = TextSecondary.copy(alpha = 0.5f),
+                    modifier = Modifier.size(20.dp)
+                )
+            }
         }
     }
 }

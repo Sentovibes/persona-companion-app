@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Shield
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
@@ -42,6 +43,12 @@ fun WhatsNewDialog(
     onDismiss: () -> Unit
 ) {
     val features = listOf(
+        WhatsNewFeature(
+            title = "Pinned & Maxed Confidants",
+            description = "Pin active Social Links and Confidants to the top for instant hangout answers, and mark completed ones as Maxed.",
+            icon = Icons.Default.PushPin,
+            tag = "Community"
+        ),
         WhatsNewFeature(
             title = "Universal Backup & Restore",
             description = "Export and restore your compendium favorites, completed quests, and preferences across Android and Web PWA via standardized JSON.",

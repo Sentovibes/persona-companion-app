@@ -9,8 +9,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -83,6 +87,11 @@ fun SocialLinkDetailScreen(
     val characterName = socialLink?.characterName ?: com.persona.companion.utils.ConfidantHelper.getCharacterName(gameId, arcana)
     val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
     val noSpoilersMode by userPrefs.noSpoilersModeFlow.collectAsState(initial = userPrefs.isNoSpoilersMode())
+    val pinnedLinks by userPrefs.pinnedSocialLinksFlow.collectAsState(initial = userPrefs.getPinnedSocialLinks())
+    val maxedLinks by userPrefs.maxedSocialLinksFlow.collectAsState(initial = userPrefs.getMaxedSocialLinks())
+    val prefKey = remember(gameId, arcana) { userPrefs.getSocialLinkKey(gameId, arcana) }
+    val isPinned = pinnedLinks.contains(prefKey)
+    val isMaxed = maxedLinks.contains(prefKey)
     var isManuallyRevealed by remember(arcana) { mutableStateOf(false) }
     val isSpoiler = com.persona.companion.utils.SpoilerUtils.isSpoilerSocialLink(arcana, characterName)
     val isConcealed = noSpoilersMode && isSpoiler && !isManuallyRevealed
@@ -108,11 +117,25 @@ fun SocialLinkDetailScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back", tint = TextPrimary)
                     }
                 },
                 actions = {
                     if (socialLink != null && !isConcealed) {
+                        IconButton(onClick = { userPrefs.togglePinSocialLink(prefKey) }) {
+                            Icon(
+                                imageVector = if (isPinned) Icons.Filled.PushPin else Icons.Outlined.PushPin,
+                                contentDescription = if (isPinned) "Unpin" else "Pin to top",
+                                tint = if (isPinned) AccentBrass else TextSecondary
+                            )
+                        }
+                        IconButton(onClick = { userPrefs.toggleMaxedSocialLink(prefKey) }) {
+                            Icon(
+                                imageVector = if (isMaxed) Icons.Filled.CheckCircle else Icons.Outlined.CheckCircle,
+                                contentDescription = if (isMaxed) "Unmark maxed" else "Mark maxed",
+                                tint = if (isMaxed) AccentGreen else TextSecondary
+                            )
+                        }
                         IconButton(onClick = {
                             com.persona.companion.utils.ShareUtils.shareSocialLink(context, socialLink, gameName)
                         }) {
@@ -227,6 +250,26 @@ fun SocialLinkDetailScreen(
                                                 .padding(horizontal = 8.dp, vertical = 3.dp)
                                         ) {
                                             Text("P4G EXCLUSIVE", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = Persona4Yellow)
+                                        }
+                                    }
+
+                                    if (isPinned) {
+                                        Box(
+                                            modifier = Modifier
+                                                .background(AccentBrass.copy(alpha = 0.18f), RoundedCornerShape(6.dp))
+                                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                                        ) {
+                                            Text("PINNED", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = AccentBrass)
+                                        }
+                                    }
+
+                                    if (isMaxed) {
+                                        Box(
+                                            modifier = Modifier
+                                                .background(AccentGreen.copy(alpha = 0.18f), RoundedCornerShape(6.dp))
+                                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                                        ) {
+                                            Text("MAXED", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = AccentGreen)
                                         }
                                     }
                                 }

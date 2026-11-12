@@ -133,6 +133,89 @@ class UserPreferences(context: Context) {
     fun getLastSeenVersionCode(): Int = prefs.getInt("last_seen_version_code", 0)
     fun setLastSeenVersionCode(versionCode: Int) = prefs.edit().putInt("last_seen_version_code", versionCode).apply()
 
+    // Social Links / Confidants - Pinned & Maxed tracking
+    fun getSocialLinkKey(gameId: String, arcana: String): String {
+        return if (gameId == "p3p") {
+            "p3p_${getP3PProtagonist().name.lowercase()}_$arcana"
+        } else {
+            "${gameId}_$arcana"
+        }
+    }
+
+    fun getPinnedSocialLinks(): Set<String> =
+        prefs.getStringSet("pinned_social_links", emptySet())?.toSet() ?: emptySet()
+
+    fun isSocialLinkPinned(key: String): Boolean = getPinnedSocialLinks().contains(key)
+
+    fun togglePinSocialLink(key: String): Boolean {
+        val current = getPinnedSocialLinks().toMutableSet()
+        val nowPinned = if (current.contains(key)) {
+            current.remove(key)
+            false
+        } else {
+            current.add(key)
+            true
+        }
+        prefs.edit().putStringSet("pinned_social_links", current).apply()
+        return nowPinned
+    }
+
+    fun addPinnedSocialLink(key: String) {
+        val current = getPinnedSocialLinks().toMutableSet()
+        if (current.add(key)) {
+            prefs.edit().putStringSet("pinned_social_links", current).apply()
+        }
+    }
+
+    val pinnedSocialLinksFlow: Flow<Set<String>> = callbackFlow {
+        trySend(getPinnedSocialLinks())
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "pinned_social_links") trySend(getPinnedSocialLinks())
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
+
+    fun getMaxedSocialLinks(): Set<String> =
+        prefs.getStringSet("maxed_social_links", emptySet())?.toSet() ?: emptySet()
+
+    fun isSocialLinkMaxed(key: String): Boolean = getMaxedSocialLinks().contains(key)
+
+    fun toggleMaxedSocialLink(key: String): Boolean {
+        val current = getMaxedSocialLinks().toMutableSet()
+        val nowMaxed = if (current.contains(key)) {
+            current.remove(key)
+            false
+        } else {
+            current.add(key)
+            true
+        }
+        if (nowMaxed) {
+            val pinned = getPinnedSocialLinks().toMutableSet()
+            if (pinned.remove(key)) {
+                prefs.edit().putStringSet("pinned_social_links", pinned).apply()
+            }
+        }
+        prefs.edit().putStringSet("maxed_social_links", current).apply()
+        return nowMaxed
+    }
+
+    fun addMaxedSocialLink(key: String) {
+        val current = getMaxedSocialLinks().toMutableSet()
+        if (current.add(key)) {
+            prefs.edit().putStringSet("maxed_social_links", current).apply()
+        }
+    }
+
+    val maxedSocialLinksFlow: Flow<Set<String>> = callbackFlow {
+        trySend(getMaxedSocialLinks())
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "maxed_social_links") trySend(getMaxedSocialLinks())
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
+
     data class RecentItem(
         val seriesId: String,
         val gameId: String,

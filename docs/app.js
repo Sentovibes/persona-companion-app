@@ -129,7 +129,7 @@ const S = {
     guidesData:{ boss:null, quest:null, day:null },
     negoTab:'matrix', negoQuery:'', negoFilter:'all', negoData:null,
     negoRank: 1, negoFloorBlock: '',
-    detail:null, favorites:new Set(), completedRequests:new Set(),
+    detail:null, favorites:new Set(), completedRequests:new Set(), pinnedSl:new Set(), maxedSl:new Set(), showMaxedSl:true,
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
     fusion:{
@@ -151,6 +151,8 @@ const S = {
 document.addEventListener('DOMContentLoaded', () => {
     S.favorites = new Set(JSON.parse(localStorage.getItem('favs')||'[]'));
     S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
+    S.pinnedSl = new Set(JSON.parse(localStorage.getItem('pinned_sl')||'[]'));
+    S.maxedSl = new Set(JSON.parse(localStorage.getItem('maxed_sl')||'[]'));
     const saved = localStorage.getItem('settings');
     if (saved) S.settings = {...S.settings, ...JSON.parse(saved)};
     if (S.settings.vhAutoSync) {
@@ -1095,6 +1097,95 @@ function getSlCharacterName(gameId, arcana) {
     return null;
 }
 
+function getSlPrefKey(gameId, arcana) {
+    if (gameId === 'p3p') {
+        const mc = (S.settings.p3pProtagonist === 'FEMC' || S.protagonist === 'femc') ? 'femc' : 'male';
+        return `p3p_${mc}_${arcana}`;
+    }
+    return `${gameId}_${arcana}`;
+}
+
+function togglePinSl(arcana, ev) {
+    if (ev) ev.stopPropagation();
+    const key = getSlPrefKey(S.game, arcana);
+    if (S.pinnedSl.has(key)) {
+        S.pinnedSl.delete(key);
+    } else {
+        S.pinnedSl.add(key);
+    }
+    localStorage.setItem('pinned_sl', JSON.stringify(Array.from(S.pinnedSl)));
+    const series = SERIES.find(s => s.id === S.series);
+    renderSlList(series?.color || '#2196F3');
+    if (S.slDetail === arcana) buildSlDetailScreen();
+}
+
+function toggleMaxSl(arcana, ev) {
+    if (ev) ev.stopPropagation();
+    const key = getSlPrefKey(S.game, arcana);
+    if (S.maxedSl.has(key)) {
+        S.maxedSl.delete(key);
+    } else {
+        S.maxedSl.add(key);
+        if (S.pinnedSl.has(key)) {
+            S.pinnedSl.delete(key);
+            localStorage.setItem('pinned_sl', JSON.stringify(Array.from(S.pinnedSl)));
+        }
+    }
+    localStorage.setItem('maxed_sl', JSON.stringify(Array.from(S.maxedSl)));
+    const series = SERIES.find(s => s.id === S.series);
+    renderSlList(series?.color || '#2196F3');
+    if (S.slDetail === arcana) buildSlDetailScreen();
+}
+
+function toggleMaxedSlSection(color) {
+    S.showMaxedSl = !S.showMaxedSl;
+    renderSlList(color);
+}
+
+function renderSlRowHtml(arcana, data, color, SPOILER_SL_REGEX) {
+    const charName = getSlCharacterName(S.game, arcana);
+    const loc = data.Details?.Location || '';
+    const isSpoiler = SPOILER_SL_REGEX.test(arcana) || (charName && SPOILER_SL_REGEX.test(charName));
+    const isConcealed = S.settings.noSpoilersMode && isSpoiler && !window['revealed_sl_' + arcana];
+
+    if (isConcealed) {
+        return `
+        <div class="row-card" style="opacity:0.85" onclick="event.stopPropagation(); window['revealed_sl_${esc(arcana)}']=true; renderSlList('${color}');">
+            <div class="row-main">
+                <div style="display:flex;align-items:center;gap:8px">
+                    <span class="row-name" style="color:#E57373;font-size:1.02rem;font-weight:700">Concealed Confidant (Spoiler)</span>
+                    <span class="sort-chip" style="font-size:0.65rem;padding:2px 6px;background:rgba(229,115,115,0.2);color:#E57373">Reveal</span>
+                </div>
+                <div class="row-sub" style="margin-top:3px;color:var(--text3)">Plot-critical confidant hidden · Tap to view</div>
+            </div>
+        </div>`;
+    }
+
+    const key = getSlPrefKey(S.game, arcana);
+    const isPinned = S.pinnedSl.has(key);
+    const isMaxed = S.maxedSl.has(key);
+    const borderStyle = isPinned ? 'border-color:rgba(201,164,92,0.5);' : (isMaxed ? 'opacity:0.74;border-color:rgba(76,175,80,0.28);' : '');
+
+    const pinSvg = `<svg viewBox="0 0 24 24" width="16" height="16" fill="${isPinned ? '#C9A45C' : 'none'}" stroke="${isPinned ? '#C9A45C' : 'var(--text3)'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>`;
+    const checkSvg = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="${isMaxed ? '#4CAF50' : 'var(--text3)'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>`;
+
+    return `<div class="row-card" style="${borderStyle}" onclick="openSlDetail('${esc(arcana)}')">
+        <div class="row-main">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                <div class="row-name" style="font-size:1.02rem;font-weight:700">${charName ? esc(charName) : esc(arcana)}</div>
+                ${charName ? `<span class="skill-chip-tag" style="background:${color}22;color:${color};font-size:.75rem;padding:2px 7px;border-radius:4px;font-weight:700">${esc(arcana)}</span>` : ''}
+                ${isMaxed ? `<span style="background:rgba(76,175,80,0.16);color:#4CAF50;border:1px solid rgba(76,175,80,0.4);font-size:.65rem;padding:1px 6px;border-radius:4px;font-weight:700">MAX</span>` : ''}
+            </div>
+            ${loc ? `<div class="row-sub" style="margin-top:3px"><span style="color:var(--text3)">${esc(loc)}</span></div>` : ''}
+        </div>
+        <div style="display:flex;align-items:center;gap:4px">
+            <button class="icon-btn" title="${isPinned ? 'Unpin' : 'Pin to top'}" onclick="togglePinSl('${esc(arcana)}', event)" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px">${pinSvg}</button>
+            <button class="icon-btn" title="${isMaxed ? 'Unmark maxed' : 'Mark maxed'}" onclick="toggleMaxSl('${esc(arcana)}', event)" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px">${checkSvg}</button>
+            <div style="color:var(--text3);font-size:1.2rem;padding:0 4px">›</div>
+        </div>
+    </div>`;
+}
+
 function renderSlList(color) {
     const q = S.slQuery.toLowerCase();
     let items = S.slData||[];
@@ -1123,36 +1214,48 @@ function renderSlList(color) {
     const SPOILER_SL_REGEX = /jester|hunger|councillor|faith|judgment|judgement|akechi|maruki|adachi|kasumi|sumire|nyx|pharos|ryoji/i;
 
     if (!items.length) { document.getElementById('slContent').innerHTML = p3pHtml + `<div class="empty-state">No results</div>`; return; }
-    document.getElementById('slContent').innerHTML = p3pHtml + items.map(([arcana, data]) => {
-        const charName = getSlCharacterName(S.game, arcana);
-        const loc = data.Details?.Location || '';
-        const isSpoiler = SPOILER_SL_REGEX.test(arcana) || (charName && SPOILER_SL_REGEX.test(charName));
-        const isConcealed = S.settings.noSpoilersMode && isSpoiler && !window['revealed_sl_' + arcana];
 
-        if (isConcealed) {
-            return `
-            <div class="row-card" style="opacity:0.85" onclick="event.stopPropagation(); window['revealed_sl_${esc(arcana)}']=true; renderSlList('${color}');">
-                <div class="row-main">
-                    <div style="display:flex;align-items:center;gap:8px">
-                        <span class="row-name" style="color:#E57373;font-size:1.02rem;font-weight:700">Concealed Confidant (Spoiler)</span>
-                        <span class="sort-chip" style="font-size:0.65rem;padding:2px 6px;background:rgba(229,115,115,0.2);color:#E57373">Reveal</span>
-                    </div>
-                    <div class="row-sub" style="margin-top:3px;color:var(--text3)">Plot-critical confidant hidden · Tap to view</div>
-                </div>
-            </div>`;
+    const pinnedItems = items.filter(([arcana]) => S.pinnedSl.has(getSlPrefKey(S.game, arcana)));
+    const maxedItems = items.filter(([arcana]) => {
+        const key = getSlPrefKey(S.game, arcana);
+        return !S.pinnedSl.has(key) && S.maxedSl.has(key);
+    });
+    const activeItems = items.filter(([arcana]) => {
+        const key = getSlPrefKey(S.game, arcana);
+        return !S.pinnedSl.has(key) && !S.maxedSl.has(key);
+    });
+
+    const hasGroups = pinnedItems.length > 0 || maxedItems.length > 0;
+    const isP5 = S.series === 'p5';
+    let html = p3pHtml;
+
+    if (pinnedItems.length > 0) {
+        html += `<div class="arcana-header" style="margin-top:4px;margin-bottom:6px"><div class="arcana-bar" style="background:#C9A45C"></div><span style="color:#C9A45C;font-weight:700;font-size:.78rem;letter-spacing:.05em">PINNED (${pinnedItems.length})</span></div>`;
+        html += pinnedItems.map(([arcana, data]) => renderSlRowHtml(arcana, data, color, SPOILER_SL_REGEX)).join('');
+    }
+
+    if (activeItems.length > 0) {
+        if (hasGroups) {
+            html += `<div class="arcana-header" style="margin-top:12px;margin-bottom:6px"><div class="arcana-bar" style="background:${color}"></div><span style="color:${color};font-weight:700;font-size:.78rem;letter-spacing:.05em">${isP5 ? 'CONFIDANTS' : 'SOCIAL LINKS'} (${activeItems.length})</span></div>`;
         }
+        html += activeItems.map(([arcana, data]) => renderSlRowHtml(arcana, data, color, SPOILER_SL_REGEX)).join('');
+    }
 
-        return `<div class="row-card" onclick="openSlDetail('${esc(arcana)}')">
-            <div class="row-main">
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-                    <div class="row-name" style="font-size:1.02rem;font-weight:700">${charName ? esc(charName) : esc(arcana)}</div>
-                    ${charName ? `<span class="skill-chip-tag" style="background:${color}22;color:${color};font-size:.75rem;padding:2px 7px;border-radius:4px;font-weight:700">${esc(arcana)}</span>` : ''}
-                </div>
-                ${loc ? `<div class="row-sub" style="margin-top:3px"><span style="color:var(--text3)">${esc(loc)}</span></div>` : ''}
+    if (maxedItems.length > 0) {
+        const expanded = S.showMaxedSl || !!q;
+        html += `<div class="arcana-header" onclick="toggleMaxedSlSection('${color}')" style="margin-top:12px;margin-bottom:6px;cursor:pointer;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:8px">
+                <div class="arcana-bar" style="background:#4CAF50"></div>
+                <span style="color:#4CAF50;font-weight:700;font-size:.78rem;letter-spacing:.05em">MAXED (${maxedItems.length})</span>
             </div>
-            <div style="color:var(--text3);font-size:1.2rem;padding-right:4px">›</div>
+            <span style="font-size:.75rem;color:var(--text3)">${expanded ? 'Hide' : 'Show'}</span>
         </div>`;
-    }).join('');
+        if (expanded) {
+            html += maxedItems.map(([arcana, data]) => renderSlRowHtml(arcana, data, color, SPOILER_SL_REGEX)).join('');
+        }
+    }
+
+    document.getElementById('slContent').innerHTML = html;
 }
 
 /* Count total ranks across both auto and progression formats */
@@ -1202,7 +1305,19 @@ function buildSlDetailScreen() {
     const charName = getSlCharacterName(S.game, arcana);
     if (phoneEl) document.getElementById('slDetailTitlePhone').textContent = charName ? `${charName} (${arcana})` : arcana;
 
-    let html = '';
+    const prefKey = getSlPrefKey(S.game, arcana);
+    const isPinned = S.pinnedSl.has(prefKey);
+    const isMaxed = S.maxedSl.has(prefKey);
+
+    let html = `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+        <button class="sort-chip ${isPinned ? 'active' : ''}" onclick="togglePinSl('${esc(arcana)}', event)" style="${isPinned ? 'color:#C9A45C;border-color:#C9A45C;background:rgba(201,164,92,0.12)' : ''};padding:6px 12px;border-radius:6px;font-weight:600">
+            ${isPinned ? 'Pinned to Top' : 'Pin to Top'}
+        </button>
+        <button class="sort-chip ${isMaxed ? 'active' : ''}" onclick="toggleMaxSl('${esc(arcana)}', event)" style="${isMaxed ? 'color:#4CAF50;border-color:#4CAF50;background:rgba(76,175,80,0.12)' : ''};padding:6px 12px;border-radius:6px;font-weight:600">
+            ${isMaxed ? 'Maxed Out' : 'Mark Maxed'}
+        </button>
+    </div>`;
 
     // ── Details block (Schedule / Location / Trigger) ──────────────────────
     if (data.Details && typeof data.Details === 'object') {
@@ -1946,6 +2061,8 @@ function exportWebBackup() {
                 isCompleted: true
             };
         }),
+        pinnedSocialLinks: Array.from(S.pinnedSl || []),
+        maxedSocialLinks: Array.from(S.maxedSl || []),
         preferences: {
             noSpoilersMode: !!S.settings.noSpoilersMode,
             p3pProtagonist: S.settings.p3pProtagonist || 'MALE',
@@ -2007,6 +2124,18 @@ function importWebBackup(event) {
                 localStorage.setItem('completed_requests', JSON.stringify(Array.from(S.completedRequests)));
             }
             
+            // Restore pinned & maxed social links
+            if (Array.isArray(data.pinnedSocialLinks)) {
+                if (!S.pinnedSl) S.pinnedSl = new Set();
+                data.pinnedSocialLinks.forEach(k => { if (k) { S.pinnedSl.add(k); restoredCount++; } });
+                localStorage.setItem('pinned_sl', JSON.stringify(Array.from(S.pinnedSl)));
+            }
+            if (Array.isArray(data.maxedSocialLinks)) {
+                if (!S.maxedSl) S.maxedSl = new Set();
+                data.maxedSocialLinks.forEach(k => { if (k) { S.maxedSl.add(k); restoredCount++; } });
+                localStorage.setItem('maxed_sl', JSON.stringify(Array.from(S.maxedSl)));
+            }
+
             // Restore preferences
             if (data.preferences && typeof data.preferences === 'object') {
                 Object.assign(S.settings, data.preferences);

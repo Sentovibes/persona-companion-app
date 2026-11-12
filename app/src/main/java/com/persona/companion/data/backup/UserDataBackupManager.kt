@@ -23,6 +23,8 @@ data class BackupPayload(
     @SerializedName("recentPersonas") val recentPersonas: List<UserPreferences.RecentItem> = emptyList(),
     @SerializedName("recentEnemies") val recentEnemies: List<UserPreferences.RecentItem> = emptyList(),
     @SerializedName("completedRequests") val completedRequests: List<CompletedRequestEntry> = emptyList(),
+    @SerializedName("pinnedSocialLinks") val pinnedSocialLinks: Set<String> = emptySet(),
+    @SerializedName("maxedSocialLinks") val maxedSocialLinks: Set<String> = emptySet(),
     @SerializedName("preferences") val preferences: Map<String, String> = emptyMap()
 )
 
@@ -57,6 +59,8 @@ object UserDataBackupManager {
             recentPersonas = userPrefs.getRecentPersonas(),
             recentEnemies = userPrefs.getRecentEnemies(),
             completedRequests = completedList,
+            pinnedSocialLinks = userPrefs.getPinnedSocialLinks(),
+            maxedSocialLinks = userPrefs.getMaxedSocialLinks(),
             preferences = prefsMap
         )
     }
@@ -70,7 +74,7 @@ object UserDataBackupManager {
                     writer.write(jsonString)
                 }
             } ?: return@withContext Result.failure(Exception("Could not open destination file"))
-            Result.success(payload.favoritePersonas.size + payload.completedRequests.size)
+            Result.success(payload.favoritePersonas.size + payload.completedRequests.size + payload.pinnedSocialLinks.size + payload.maxedSocialLinks.size)
         } catch (e: Exception) {
             Result.failure(e)
         }
@@ -87,9 +91,11 @@ object UserDataBackupManager {
             val userPrefs = UserPreferences(context)
             val db = AppDatabase.getDatabase(context)
 
-            // Restore favorites
-            payload.favoritePersonas.forEach { userPrefs.addFavoritePersona(it) }
-            payload.favoriteEnemies.forEach { userPrefs.addFavoriteEnemy(it) }
+            // Restore favorites and social links state (null-safe for older v1 backups)
+            (payload.favoritePersonas ?: emptySet()).forEach { userPrefs.addFavoritePersona(it) }
+            (payload.favoriteEnemies ?: emptySet()).forEach { userPrefs.addFavoriteEnemy(it) }
+            (payload.pinnedSocialLinks ?: emptySet()).forEach { userPrefs.addPinnedSocialLink(it) }
+            (payload.maxedSocialLinks ?: emptySet()).forEach { userPrefs.addMaxedSocialLink(it) }
 
             // Restore preferences
             payload.preferences["p3p_protagonist"]?.let {
@@ -109,7 +115,7 @@ object UserDataBackupManager {
                 db.requestDao().updateCompletion(req.name, req.gameId, req.isCompleted)
             }
 
-            val totalRestored = payload.favoritePersonas.size + payload.completedRequests.size
+            val totalRestored = (payload.favoritePersonas?.size ?: 0) + (payload.completedRequests?.size ?: 0) + (payload.pinnedSocialLinks?.size ?: 0) + (payload.maxedSocialLinks?.size ?: 0)
             Result.success(totalRestored)
         } catch (e: Exception) {
             Result.failure(e)
