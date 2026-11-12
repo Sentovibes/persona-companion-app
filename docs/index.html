@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=648">
+    <link rel="stylesheet" href="styles.css?v=649">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
@@ -447,9 +447,12 @@
         <div class="vh-modal-box">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
                 <div style="font-size:1.05rem;font-weight:700;display:flex;align-items:center;gap:8px">
-                    <span>⚡ VelvetHex Live PC Sync</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="var(--brass)" aria-hidden="true"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+                    <span>VelvetHex Live PC Sync</span>
                 </div>
-                <button class="icon-btn" onclick="closeVhModal()" style="font-size:1.1rem;color:var(--text2)">✕</button>
+                <button class="icon-btn" onclick="closeVhModal()" aria-label="Close modal" style="color:var(--text2)">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
             </div>
             <p style="font-size:0.84rem;color:var(--text2);margin-bottom:14px;line-height:1.4">
                 Connect directly to your local VelvetHex save inspector running on PC to stream active save date, party stats, and unlock real-time 7-day classroom answer alerts.
@@ -475,6 +478,6 @@
     </div>
 
     <!-- LIBS -->
-    <script src="app.js?v=648"></script>
+    <script src="app.js?v=649"></script>
 </body>
 </html>

@@ -116,7 +116,10 @@ function normalizeListData(raw, type) {
     return [];
 }
 
-const CHEVRON_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+const CHEVRON_SVG = `<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+const CHEVRON_SM_SVG = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+const STAR_SVG = `<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>`;
+const CALENDAR_SVG = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`;
 
 /* ── State ─────────────────────────────────────────────────────────────────── */
 const S = {
@@ -479,7 +482,7 @@ function buildHome() {
             <div class="continue-card" onclick="applyHash('${last.join('/')}')">
                 <div class="continue-kicker">Continue</div>
                 <div class="continue-main">${cg.title} · ${secLabel}</div>
-                <div class="series-card-arrow">›</div>
+                <div class="series-card-arrow">${CHEVRON_SVG}</div>
             </div>`;
         }
     }
@@ -495,7 +498,7 @@ function buildHome() {
         <div class="series-card series-card--${s.id}" onclick="${cardAction}">
             ${s.id==='p5' ? `<div class="series-card-city-bg" style="background-image:url('assets/images/heroes/p5_city_bg.webp')"></div>` : ''}
             <div class="series-card-gradient"></div>
-            ${s.id==='p5' ? '<div class="series-card-star-badge">★</div>' : ''}
+            ${s.id==='p5' ? `<div class="series-card-star-badge">${STAR_SVG}</div>` : ''}
             <div class="series-card-bg-num">${s.id.replace('p','')}</div>
             <div class="series-card-hero-wrap">
                 <img src="${HERO_IMAGES[s.id]}" class="series-card-hero-img" alt="" loading="lazy">
@@ -508,7 +511,7 @@ function buildHome() {
                     ${s.games.map(g => `<button class="series-game-chip" onclick="event.stopPropagation(); selectGame('${s.id}','${g.id}')">${GAME_SHORT[g.id]||g.title}</button>`).join('')}
                 </div>
             </div>
-            <div class="series-card-arrow">›</div>
+            <div class="series-card-arrow">${CHEVRON_SVG}</div>
         </div>`;
     }).join('');
 }
@@ -523,7 +526,7 @@ function buildGameScreen(seriesId) {
         <button class="game-btn" onclick="selectGame('${S.series}','${g.id}')">
             <span class="game-btn-dot" style="background:${series.color}"></span>
             ${g.title}
-            <span class="game-btn-arrow">›</span>
+            <span class="game-btn-arrow">${CHEVRON_SVG}</span>
         </button>`).join('');
 }
 
@@ -779,7 +782,7 @@ function personaRow(name, p, color) {
         </div>
         <div class="row-meta">
             ${skills?`<div class="row-hint">${skills} skills</div>`:''}
-            <div class="row-chevron" style="color:${color}">›</div>
+            <div class="row-chevron" style="color:${color}">${CHEVRON_SVG}</div>
         </div>
     </div>`;
 }
@@ -1181,7 +1184,7 @@ function renderSlRowHtml(arcana, data, color, SPOILER_SL_REGEX) {
         <div style="display:flex;align-items:center;gap:4px">
             <button class="icon-btn" title="${isPinned ? 'Unpin' : 'Pin to top'}" onclick="togglePinSl('${esc(arcana)}', event)" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px">${pinSvg}</button>
             <button class="icon-btn" title="${isMaxed ? 'Unmark maxed' : 'Mark maxed'}" onclick="toggleMaxSl('${esc(arcana)}', event)" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px">${checkSvg}</button>
-            <div style="color:var(--text3);font-size:1.2rem;padding:0 4px">›</div>
+            <div class="row-chevron" style="color:var(--text3)">${CHEVRON_SVG}</div>
         </div>
     </div>`;
 }
@@ -1723,7 +1726,7 @@ function renderPersonaDetailHtml(name, p, color) {
         });
         html += `<div style="margin-top:10px">
             <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload('${esc(name)}', null)">
-                Inherit a Desired Skill (Find Fusion Route) ›
+                <span>Inherit a Desired Skill (Find Fusion Route)</span>${CHEVRON_SM_SVG}
             </button>
         </div>`;
         html += `</div>`;
@@ -1822,7 +1825,7 @@ function renderEnemyDetail(name, e, color, containerId) {
                 <div class="nego-row-badge"><span>Neutral Response [OK]:</span><span class="nego-badge-ok">${matrix.ok}</span></div>
                 <div class="nego-row-badge"><span>Worst Response [Hates]:</span><span class="nego-badge-bad">${matrix.bad}</span></div>
             </div>
-            <button class="slot-action-btn" style="width:100%;margin-top:10px;font-size:.82rem" onclick="openNegotiation()">Open Negotiation Guide ›</button>
+            <button class="slot-action-btn" style="width:100%;margin-top:10px;font-size:.82rem" onclick="openNegotiation()"><span>Open Negotiation Guide</span>${CHEVRON_SM_SVG}</button>
         </div>`;
     }
 
@@ -2449,7 +2452,7 @@ function renderFusionPersonaList(color) {
                     <div class="row-name">${name}</div>
                     <div class="row-sub">${arcana}</div>
                 </div>
-                <div class="row-hint" style="color:${color}">›</div>
+                <div class="row-chevron" style="color:${color}">${CHEVRON_SVG}</div>
             </div>`;
         }).join('');
 }
@@ -3120,7 +3123,7 @@ function renderForwardOutputListHtml(color) {
                         </div>
                         <div style="font-size:.82rem;color:${color}">${r.result.data.arcana||''} · Lv. ${r.result.data.level??'?'}</div>
                     </div>
-                    <div style="color:var(--text2);font-size:1.25rem">›</div>
+                    <div class="row-chevron" style="color:var(--text2)">${CHEVRON_SVG}</div>
                 </div>
             `).join('')}
         </div>`;
@@ -3157,7 +3160,7 @@ function renderForwardOutputList(color) {
                 </div>
                 <div style="font-size:.82rem;color:${color}">${r.result.data.arcana||''} · Lv. ${r.result.data.level??'?'}</div>
             </div>
-            <div style="color:var(--text2);font-size:1.25rem">›</div>
+            <div class="row-chevron" style="color:var(--text2)">${CHEVRON_SVG}</div>
         </div>
     `).join('');
 }
@@ -4727,7 +4730,7 @@ function renderItems(data, color) {
                     <div class="row-sub">${it.effect || it.description || ''}</div>
                 </div>
                 ${priceHint(it) ? `<div class="row-right"><div class="row-hp" style="font-size:.75rem">${priceHint(it)}</div></div>` : ''}
-                <div class="row-hint" style="color:${color}">›</div>
+                <div class="row-chevron" style="color:${color}">${CHEVRON_SVG}</div>
             </div>`).join('')}
     `).join('');
 }
@@ -4846,7 +4849,7 @@ function openSkill(name) {
             ${sk.note ? `<div class="info-row"><div class="info-label">Note</div><div class="info-val">${sk.note}</div></div>` : ''}
             <div style="margin-top:12px">
                 <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload(null, '${esc(sk.name)}')">
-                    Transfer to Persona (Find Fusion Route) ›
+                    <span>Transfer to Persona (Find Fusion Route)</span>${CHEVRON_SM_SVG}
                 </button>
             </div>
         </div>
@@ -5918,7 +5921,8 @@ function renderWeeklyClassroomOutlook(allQuestions, color) {
     <div class="weekly-outlook-box">
         <div class="weekly-outlook-header">
             <div class="weekly-outlook-title" style="color:${color}">
-                <span>📅 7-Day Classroom & Exam Outlook</span>
+                ${CALENDAR_SVG}
+                <span>7-Day Classroom & Exam Outlook</span>
                 ${isLive ? '<span class="velvethex-status-badge connected"><span class="velvethex-dot"></span>LIVE</span>' : '<span style="font-size:0.68rem;opacity:0.6;font-weight:400;text-transform:none">(Preview Mode)</span>'}
             </div>
             <div class="weekly-outlook-meta">${startDateStr} – ${endDateStr} (${totalQuestionsFound} scheduled)</div>
