@@ -1,6 +1,12 @@
 package com.persona.companion.ui.components
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -31,6 +37,18 @@ fun CastButton() {
     var connectionUrl by remember { mutableStateOf<String?>(null) }
     var qrCodeBitmap by remember { mutableStateOf<Bitmap?>(null) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
+
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) {
+        // Start cast server regardless of whether the user grants optional status notification visibility
+        try {
+            errorMessage = null
+            CastManager.startServer(context)
+        } catch (e: Exception) {
+            errorMessage = "Failed to start: ${e.message}"
+        }
+    }
     
     // Set up callbacks
     LaunchedEffect(Unit) {
@@ -75,12 +93,17 @@ fun CastButton() {
             errorMessage = errorMessage,
             onDismiss = { showDialog = false },
             onStartCasting = {
-                try {
-                    errorMessage = null
-                    // Start server directly - no service needed
-                    CastManager.startServer(context)
-                } catch (e: Exception) {
-                    errorMessage = "Failed to start: ${e.message}"
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                    ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                } else {
+                    try {
+                        errorMessage = null
+                        CastManager.startServer(context)
+                    } catch (e: Exception) {
+                        errorMessage = "Failed to start: ${e.message}"
+                    }
                 }
             },
             onStopCasting = {

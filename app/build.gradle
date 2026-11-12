@@ -78,7 +78,9 @@ android {
 
     aaptOptions {
         cruncherEnabled = false
-        ignoreAssetsPattern "!images:!images/*"
+        noCompress "webp"
+        // Bundle the lightweight 14MB WebP catalog directly while skipping legacy ~1GB PNGs
+        ignoreAssetsPattern "!*.png:!.svn:!.git:!.ds_store:!*.scc:<dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"
     }
     
     applicationVariants.all { variant ->
@@ -119,6 +121,21 @@ android {
         }
     }
 }
+
+// Sync the canonical WebP artwork catalog from docs/assets/images into app assets
+tasks.register('syncWebpPersonaImages', Copy) {
+    from '../docs/assets/images/personas'
+    into 'src/main/assets/images/personas_shared'
+    include '*.webp'
+}
+
+tasks.register('syncWebpEnemyImages', Copy) {
+    from '../docs/assets/images/enemies'
+    into 'src/main/assets/images/enemies_shared'
+    include '*.webp'
+}
+
+preBuild.dependsOn syncWebpPersonaImages, syncWebpEnemyImages
 
 dependencies {
     // Core

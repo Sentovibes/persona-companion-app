@@ -7,6 +7,7 @@
 -keep class com.persona.companion.data.database.** { *; }
 -keep class com.persona.companion.fusion.** { *; }
 -keep class com.persona.companion.data.repositories.** { *; }
+-keep class com.persona.companion.data.backup.** { *; }
 
 # Keep serialized fields
 -keepclassmembers,allowobfuscation class * {

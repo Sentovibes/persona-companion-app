@@ -76,7 +76,7 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
             Spacer(Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "HD Images",
+                    text = if (BuildConfig.INCLUDE_IMAGES) "Artwork Catalog" else "HD Images",
                     style = MaterialTheme.typography.bodyLarge,
                     color = TextPrimary
                 )
@@ -117,6 +117,13 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
                                 color = TextSecondary
                             )
                         }
+                    }
+                    BuildConfig.INCLUDE_IMAGES -> {
+                        Text(
+                            text = "Built-in WebP pack • Ready offline (962 artworks)",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = AccentGreen
+                        )
                     }
                     else -> {
                         val estimatedSizeMB = BuildConfig.IMAGES_ZIP_SIZE / 1_000_000
@@ -174,11 +181,11 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
             }
         }
 
-        // Action buttons
-        if (!isImporting) {
+        // Action buttons (hide external download prompt when WebP assets are built-in unless legacy cache exists)
+        if (!isImporting && (!BuildConfig.INCLUDE_IMAGES || downloadStatus.isDownloaded)) {
             Spacer(Modifier.height(12.dp))
 
-            if (!downloadStatus.isDownloaded || updateAvailable) {
+            if (!BuildConfig.INCLUDE_IMAGES && (!downloadStatus.isDownloaded || updateAvailable)) {
                 // Step 1: download link
                 Text(
                     text = buildAnnotatedString {
@@ -229,13 +236,15 @@ fun ImagesSettingsSection(vm: SettingsViewModel = viewModel()) {
                     }
                 }
 
-                Button(
-                    onClick = { filePickerLauncher.launch("*/*") },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Icon(Icons.Default.FolderOpen, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.width(4.dp))
-                    Text(if (downloadStatus.isDownloaded) "Re-import" else "Import")
+                if (!BuildConfig.INCLUDE_IMAGES) {
+                    Button(
+                        onClick = { filePickerLauncher.launch("*/*") },
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Icon(Icons.Default.FolderOpen, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.width(4.dp))
+                        Text(if (downloadStatus.isDownloaded) "Re-import" else "Import")
+                    }
                 }
             }
         }
