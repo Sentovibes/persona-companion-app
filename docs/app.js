@@ -1663,7 +1663,7 @@ function renderPersonaDetailHtml(name, p, color) {
         <div class="detail-hero-backdrop" style="background:radial-gradient(circle at 80% 40%, ${color}40 0%, transparent 70%)"></div>
         <div class="detail-hero-layout">
             <div class="detail-hero-left">
-                <div class="detail-level-box" style="background:${color}22;border-left:3px solid ${color}">
+                <div class="detail-level-box" style="background:${color}18;border:1px solid ${color}44">
                     <div class="detail-level-label" style="color:${color}">Lv.</div>
                     <div class="detail-level-num" style="color:${color}">${level}</div>
                 </div>
@@ -1690,7 +1690,7 @@ function renderPersonaDetailHtml(name, p, color) {
     if (p.unlock) html += `<div class="unlock-box"><div class="unlock-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div><div><div class="unlock-label">Unlock</div><div class="unlock-text">${p.unlock}</div></div></div>`;
 
     if (p.item || p.itemr) {
-        html += `<div class="section-card" style="border-left:3px solid #FFD700">
+        html += `<div class="section-card" style="border-color:rgba(255,215,0,0.32)">
             <div class="section-title" style="color:#FFD700">Itemization (Electric Chair / Transmute)</div>
             ${p.item ? `<div style="font-size:.88rem;color:var(--text);margin-bottom:4px">Item: <strong>${p.item}</strong></div>` : ''}
             ${p.itemr ? `<div style="font-size:.85rem;color:#FFD700">Fusion Alarm Item: <strong>${p.itemr}</strong></div>` : ''}
@@ -1698,7 +1698,7 @@ function renderPersonaDetailHtml(name, p, color) {
     }
 
     if (p.heart) {
-        html += `<div class="section-card" style="border-left:3px solid #E91E63">
+        html += `<div class="section-card" style="border-color:rgba(233,30,99,0.32)">
             <div class="section-title" style="color:#E91E63">Heart Item (Level Up Reward)</div>
             <div style="font-size:.88rem;color:var(--text)">Produces: <strong>${p.heart}</strong></div>
         </div>`;
@@ -1815,7 +1815,7 @@ function renderEnemyDetail(name, e, color, containerId) {
         }[personality] || { best: 'Serious', ok: 'Vague', bad: 'Kind', color: '#E57373' };
 
         html += `
-        <div class="section-card" style="border-left:4px solid ${matrix.color}">
+        <div class="section-card" style="border-color:${matrix.color}44">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
                 <div class="section-title" style="margin:0">Shadow Negotiation</div>
                 <span class="route-step-badge" style="background:${matrix.color}22;color:${matrix.color}">${personality}</span>
