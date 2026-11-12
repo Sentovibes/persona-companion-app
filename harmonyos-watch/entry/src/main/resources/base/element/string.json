@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Persona Companion Watch Reference"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Persona Companion Wearable Ability"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Persona Companion"
+    }
+  ]
+}
