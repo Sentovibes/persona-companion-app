@@ -1,7 +1,6 @@
 package com.persona.companion.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -105,7 +104,7 @@ fun NewsUpdatesScreen(
                     )
                 }
 
-                items(newsList) { item ->
+                items(newsList, key = { "${it.gameId}_${it.title}_${it.date}" }) { item ->
                     NewsUpdateCard(item = item, accentColor = accentColor)
                 }
             }
@@ -123,7 +122,6 @@ fun NewsUpdateCard(item: NewsUpdate, accentColor: Color) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { expanded = !expanded }
-            .animateContentSize()
     ) {
         Column(
             modifier = Modifier

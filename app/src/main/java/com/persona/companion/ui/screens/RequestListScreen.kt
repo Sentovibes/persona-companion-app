@@ -134,8 +134,7 @@ private fun RequestCard(
 
     Card(
         modifier = Modifier
-            .fillMaxWidth()
-            .animateContentSize(),
+            .fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         shape = RoundedCornerShape(12.dp),
         onClick = { expanded = !expanded }
@@ -202,7 +201,8 @@ private fun RequestCard(
                 color = TextSecondary
             )
 
-            if (expanded) {
+            AnimatedVisibility(visible = expanded) {
+            Column {
                 Spacer(modifier = Modifier.height(12.dp))
                 HorizontalDivider(color = Divider.copy(alpha = 0.5f))
                 Spacer(modifier = Modifier.height(12.dp))
@@ -256,6 +256,7 @@ private fun RequestCard(
                         fontStyle = androidx.compose.ui.text.font.FontStyle.Italic
                     )
                 }
+            }
             }
         }
     }

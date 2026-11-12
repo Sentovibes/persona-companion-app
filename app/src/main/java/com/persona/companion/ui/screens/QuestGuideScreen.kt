@@ -1,7 +1,6 @@
 package com.persona.companion.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -134,7 +133,7 @@ fun QuestGuideScreen(
                         .padding(horizontal = 16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    items(filteredQuests) { quest ->
+                    items(filteredQuests, key = { "${it.id}_${it.title}" }) { quest ->
                         QuestGuideCard(quest = quest, accentColor = accentColor)
                     }
                     item {
@@ -156,7 +155,6 @@ fun QuestGuideCard(quest: QuestGuideItem, accentColor: Color) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { expanded = !expanded }
-            .animateContentSize()
     ) {
         Column(
             modifier = Modifier
