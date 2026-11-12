@@ -1,21 +1,17 @@
 package com.persona.companion.ui.components
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.AutoAwesome
-import androidx.compose.material.icons.filled.Shield
-import androidx.compose.material.icons.filled.PushPin
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Image
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Speed
-import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material.icons.filled.ImportExport
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,11 +25,10 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.persona.companion.ui.theme.*
 
-data class WhatsNewFeature(
+data class WhatsNewItem(
     val title: String,
     val description: String,
-    val icon: ImageVector,
-    val tag: String
+    val icon: ImageVector
 )
 
 @Composable
@@ -42,36 +37,31 @@ fun WhatsNewDialog(
     versionCode: Int = 64,
     onDismiss: () -> Unit
 ) {
-    val features = listOf(
-        WhatsNewFeature(
-            title = "Pinned & Maxed Confidants",
-            description = "Pin active Social Links and Confidants to the top for instant hangout answers, and mark completed ones as Maxed.",
-            icon = Icons.Default.PushPin,
-            tag = "Community"
+    val items = listOf(
+        WhatsNewItem(
+            title = "Pin & Mark Maxed Social Links",
+            description = "Pin active Confidants and Social Links to the top so you can check hangout answers without scrolling. Mark finished ones as Maxed to move them out of the way.",
+            icon = Icons.Default.PushPin
         ),
-        WhatsNewFeature(
-            title = "Universal Backup & Restore",
-            description = "Export and restore your compendium favorites, completed quests, and preferences across Android and Web PWA via standardized JSON.",
-            icon = Icons.Default.Settings,
-            tag = "Backup"
+        WhatsNewItem(
+            title = "All 962 Artworks Included Offline",
+            description = "Persona and Enemy images now ship built into the app using WebP (~30 MB total), so you no longer need a separate 1 GB download.",
+            icon = Icons.Default.Image
         ),
-        WhatsNewFeature(
-            title = "High-Efficiency WebP Pipeline",
-            description = "Streamlined asset pipeline reduces memory and storage footprint by 98.5% with instant loading and zero memory pressure.",
-            icon = Icons.Default.Speed,
-            tag = "Performance"
+        WhatsNewItem(
+            title = "Export & Restore Backups",
+            description = "Save your favorites, pinned Social Links, completed requests, and settings to a file, or move them between Android and the Web app.",
+            icon = Icons.Default.ImportExport
         ),
-        WhatsNewFeature(
+        WhatsNewItem(
             title = "Skill Inheritance Rules",
-            description = "Directly inspect incompatible affinities and exact inherited skill slot formulas on Persona detail cards.",
-            icon = Icons.Default.AutoAwesome,
-            tag = "Compendium"
+            description = "See which skill types a Persona cannot inherit and how many inherited slots carry over directly on its detail screen.",
+            icon = Icons.Default.AutoAwesome
         ),
-        WhatsNewFeature(
-            title = "Android 15 Edge-to-Edge & Stability",
-            description = "Certified edge-to-edge system insets, concurrent search caching, and persistent Room database migrations.",
-            icon = Icons.Default.Shield,
-            tag = "System"
+        WhatsNewItem(
+            title = "UI & Crash Fixes",
+            description = "Sharper card borders across dark surfaces, smoother expandable lists, and fixes for Android 15 edge-to-edge display and layout crashes.",
+            icon = Icons.Default.CheckCircle
         )
     )
 
@@ -82,56 +72,46 @@ fun WhatsNewDialog(
         Surface(
             modifier = Modifier
                 .fillMaxWidth(0.92f)
-                .fillMaxHeight(0.82f),
-            shape = RoundedCornerShape(14.dp),
+                .heightIn(max = 620.dp),
+            shape = RoundedCornerShape(12.dp),
             color = SurfaceCard,
             border = BorderStroke(1.dp, HairlineStrong),
             shadowElevation = 8.dp
         ) {
             Column(
                 modifier = Modifier
-                    .fillMaxSize()
+                    .fillMaxWidth()
                     .padding(20.dp)
             ) {
-                // Header Row
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    Row(
+                        modifier = Modifier.weight(1f),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Text(
+                            text = "What's New in v$versionName",
+                            style = MaterialTheme.typography.titleLarge.copy(
+                                fontWeight = FontWeight.Bold
+                            ),
+                            color = TextPrimary
+                        )
+                        Surface(
+                            shape = RoundedCornerShape(4.dp),
+                            color = SurfaceRaised,
+                            border = BorderStroke(1.dp, Hairline)
                         ) {
                             Text(
-                                text = "What's New",
-                                style = MaterialTheme.typography.titleLarge.copy(
-                                    fontWeight = FontWeight.Bold,
-                                    letterSpacing = 0.5.sp
-                                ),
-                                color = TextPrimary
+                                text = "Build $versionCode",
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.SemiBold),
+                                color = AccentBrass,
+                                modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                             )
-                            // Version badge
-                            Surface(
-                                shape = RoundedCornerShape(4.dp),
-                                color = SurfaceRaised,
-                                border = BorderStroke(1.dp, Hairline)
-                            ) {
-                                Text(
-                                    text = "v$versionName (Build $versionCode)",
-                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                    color = AccentBrass,
-                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                )
-                            }
                         }
-                        Spacer(modifier = Modifier.height(2.dp))
-                        Text(
-                            text = "Latest updates and enhancements",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = TextSecondary
-                        )
                     }
 
                     IconButton(
@@ -152,25 +132,25 @@ fun WhatsNewDialog(
                     color = Divider
                 )
 
-                // Feature List
                 Column(
                     modifier = Modifier
-                        .weight(1f)
+                        .weight(1f, fill = false)
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
-                    features.forEach { feature ->
-                        FeatureItemRow(feature)
+                    items.forEachIndexed { index, item ->
+                        WhatsNewRow(item)
+                        if (index < items.lastIndex) {
+                            HorizontalDivider(
+                                thickness = 1.dp,
+                                color = HairlineSoft
+                            )
+                        }
                     }
                 }
 
-                HorizontalDivider(
-                    modifier = Modifier.padding(vertical = 14.dp),
-                    thickness = 1.dp,
-                    color = Divider
-                )
+                Spacer(modifier = Modifier.height(16.dp))
 
-                // Dismiss Button
                 Button(
                     onClick = onDismiss,
                     modifier = Modifier
@@ -183,10 +163,9 @@ fun WhatsNewDialog(
                     )
                 ) {
                     Text(
-                        text = "Got It",
+                        text = "Continue",
                         style = MaterialTheme.typography.bodyMedium.copy(
-                            fontWeight = FontWeight.Bold,
-                            letterSpacing = 0.5.sp
+                            fontWeight = FontWeight.Bold
                         )
                     )
                 }
@@ -196,64 +175,36 @@ fun WhatsNewDialog(
 }
 
 @Composable
-private fun FeatureItemRow(feature: WhatsNewFeature) {
-    Surface(
+private fun WhatsNewRow(item: WhatsNewItem) {
+    Row(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(8.dp),
-        color = SurfaceRaised,
-        border = BorderStroke(1.dp, HairlineSoft)
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Row(
+        Icon(
+            imageVector = item.icon,
+            contentDescription = null,
+            tint = AccentBrass,
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(12.dp),
-            verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Surface(
-                shape = RoundedCornerShape(6.dp),
-                color = Surface,
-                border = BorderStroke(1.dp, Hairline),
-                modifier = Modifier.size(36.dp)
-            ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = feature.icon,
-                        contentDescription = null,
-                        tint = AccentBrass,
-                        modifier = Modifier.size(20.dp)
-                    )
-                }
-            }
+                .padding(top = 2.dp)
+                .size(20.dp)
+        )
 
-            Column(modifier = Modifier.weight(1f)) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = feature.title,
-                        style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
-                        color = TextPrimary
-                    )
-                    Text(
-                        text = feature.tag.uppercase(),
-                        style = MaterialTheme.typography.labelSmall.copy(
-                            fontSize = 9.sp,
-                            fontWeight = FontWeight.Bold,
-                            letterSpacing = 0.5.sp
-                        ),
-                        color = TextDisabled
-                    )
-                }
-                Spacer(modifier = Modifier.height(3.dp))
-                Text(
-                    text = feature.description,
-                    style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp, lineHeight = 16.sp),
-                    color = TextSecondary
-                )
-            }
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = item.title,
+                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                color = TextPrimary
+            )
+            Spacer(modifier = Modifier.height(3.dp))
+            Text(
+                text = item.description,
+                style = MaterialTheme.typography.bodySmall.copy(
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp
+                ),
+                color = TextSecondary
+            )
         }
     }
 }
