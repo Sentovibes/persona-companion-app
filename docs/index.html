@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=650">
+    <link rel="stylesheet" href="styles.css?v=652">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
@@ -22,6 +22,9 @@
         <div class="rail-logo"><img src="icon.webp" alt="logo" style="width:40px;height:40px;border-radius:10px;"></div>
         <button class="rail-item" id="rail-home"     onclick="navigate('home')"     title="Home">
             <svg class="rail-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Home
+        </button>
+        <button class="rail-item" id="rail-search"   onclick="openGlobalSearch()"   title="Global Search (Ctrl+K)">
+            <svg class="rail-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>Search
         </button>
         <button class="rail-item" id="rail-personas" onclick="railNav('personas')"  title="Personas" style="display:none">
             <svg class="rail-icon" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>Personas
@@ -68,6 +71,9 @@
                 <img src="icon.webp" class="app-logo" alt="logo">
                 <div class="top-bar-title-home">PERSONA <span>COMPANION</span></div>
                 <div class="top-bar-actions">
+                    <button class="icon-btn" onclick="openGlobalSearch()" title="Global Search (Ctrl+K)" aria-label="Global Search">
+                        <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    </button>
                     <button class="velvethex-status-badge disconnected" id="topVhBadge" onclick="openVhModal()" title="VelvetHex Live PC Sync">
                         <span class="velvethex-dot"></span>
                         <span id="topVhLabel">PC Sync</span>
@@ -80,6 +86,10 @@
             <div class="home-content">
                 <div id="continueSlot"></div>
                 <div class="home-quick-actions" id="homeQuickActions">
+                    <button class="quick-action-btn" onclick="openGlobalSearch()">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <span>Search All</span>
+                    </button>
                     <button class="quick-action-btn" onclick="openFavoritesFromHome()">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         <span>Favorites</span>
@@ -88,6 +98,7 @@
                     <button class="quick-action-btn" onclick="openRecentFromHome()">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
                         <span>Recent</span>
+                        <span class="quick-action-count" id="homeRecentCount">0</span>
                     </button>
                 </div>
                 <div class="series-list" id="seriesList"></div>
@@ -402,6 +413,49 @@
             <div class="detail-content" id="negotiationContent" style="padding:14px 16px"></div>
         </div>
 
+        <!-- GLOBAL SEARCH -->
+        <div id="screen-search" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="closeGlobalSearch()">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title">Global Search</span>
+                <div class="top-bar-actions">
+                    <kbd class="kbd-hint">Ctrl+K</kbd>
+                </div>
+            </div>
+            <div class="search-screen-body">
+                <div class="search-wrap">
+                    <svg class="search-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input id="globalSearchInput" class="search-input" type="text" placeholder="Search personas, enemies, skills, items, quests, answers..." oninput="onGlobalSearch(this.value)">
+                    <button class="search-clear" id="globalSearchClear" onclick="clearGlobalSearch()" style="display:none">&#x2715;</button>
+                </div>
+                <div class="filter-scroll-row" id="globalSearchGameBar"></div>
+                <div class="filter-scroll-row" id="globalSearchCatBar"></div>
+                <div class="global-search-status" id="globalSearchStatus"></div>
+                <div class="list-content" id="globalSearchResults"></div>
+            </div>
+        </div>
+
+        <!-- SAVED FAVORITES & RECENT HISTORY -->
+        <div id="screen-saved" class="screen">
+            <div class="top-bar">
+                <button class="icon-btn back-btn" onclick="navigate('home')">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <span class="top-bar-title" id="savedScreenTitle">Favorites & History</span>
+                <div class="top-bar-actions">
+                    <button class="clear-history-btn" id="clearRecentBtn" onclick="clearRecentHistory()" style="display:none">Clear History</button>
+                </div>
+            </div>
+            <div class="tab-bar" id="savedTabBar">
+                <button class="tab-item active" id="savedTabFavorites" onclick="setSavedTab('favorites')">Favorites</button>
+                <button class="tab-item" id="savedTabRecent" onclick="setSavedTab('recent')">Recent</button>
+            </div>
+            <div class="sort-bar" id="savedTypeFilterBar"></div>
+            <div class="list-content saved-list-content" id="savedContent"></div>
+        </div>
+
         <!-- SETTINGS -->
         <div id="screen-settings" class="screen">
             <div class="top-bar">
@@ -478,6 +532,6 @@
     </div>
 
     <!-- LIBS -->
-    <script src="app.js?v=650"></script>
+    <script src="app.js?v=652"></script>
 </body>
 </html>

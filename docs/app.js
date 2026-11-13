@@ -123,7 +123,7 @@ const CALENDAR_SVG = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none
 
 /* ── State ─────────────────────────────────────────────────────────────────── */
 const S = {
-    screen:'home', series:null, game:null,
+    screen:'home', prevScreen:'home', series:null, game:null,
     listMode:null, // 'personas'|'enemies'|'classroom'|'items'|'skills'|'requests'
     sort:'arcana', enemyTab:'enemies', query:'',
     enemySort:'level', enemySortDir:1, favOnly:false, aigisOnly:false, hideCompletedReq:false,
@@ -133,6 +133,9 @@ const S = {
     negoTab:'matrix', negoQuery:'', negoFilter:'all', negoData:null,
     negoRank: 1, negoFloorBlock: '',
     detail:null, favorites:new Set(), completedRequests:new Set(), pinnedSl:new Set(), maxedSl:new Set(), showMaxedSl:true,
+    recents:{ personas:[], enemies:[] },
+    savedTab:'favorites', savedTypeFilter:'all',
+    globalSearch:{ query:'', game:'all', category:'all', indexing:false, entries:[], urlCache:{}, indexedKey:'' },
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
     fusion:{
@@ -156,10 +159,24 @@ document.addEventListener('DOMContentLoaded', () => {
     S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
     S.pinnedSl = new Set(JSON.parse(localStorage.getItem('pinned_sl')||'[]'));
     S.maxedSl = new Set(JSON.parse(localStorage.getItem('maxed_sl')||'[]'));
+    try {
+        const rec = JSON.parse(localStorage.getItem('recent_items')||'null');
+        if (rec && typeof rec === 'object') {
+            S.recents = {
+                personas: Array.isArray(rec.personas) ? rec.personas : [],
+                enemies: Array.isArray(rec.enemies) ? rec.enemies : []
+            };
+        }
+    } catch (_) {
+        S.recents = { personas:[], enemies:[] };
+    }
     const saved = localStorage.getItem('settings');
     if (saved) S.settings = {...S.settings, ...JSON.parse(saved)};
     if (S.settings.vhAutoSync) {
         startVhSync();
+    }
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
     }
     // Restore location: URL hash wins, then last visited, else home
     const h = location.hash && location.hash !== '#' ? location.hash : (localStorage.getItem('last_loc') || '');
@@ -174,6 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ── Deep links (#series/game/section) ─────────────────────────────────────── */
 function currentHash() {
+    if (S.screen === 'search') return 'search';
+    if (S.screen === 'saved') return S.savedTab === 'recent' ? 'recent' : 'favorites';
     if (!S.series) return '';
     if (S.screen === 'game' || !S.game) return S.series;
     let part = '';
@@ -189,6 +208,9 @@ function applyHash(h) {
         const clean = (h||'').replace(/^#/,'').trim();
         if (!clean || clean === 'home' || clean === '/') { navigate('home'); return; }
         if (clean === 'settings') { navigate('settings'); return; }
+        if (clean === 'search') { openGlobalSearch(); return; }
+        if (clean === 'favorites') { S.savedTab = 'favorites'; navigate('saved'); return; }
+        if (clean === 'recent') { S.savedTab = 'recent'; navigate('saved'); return; }
 
         const parts = clean.split('/').filter(Boolean);
         if (!parts.length) { navigate('home'); return; }
@@ -280,13 +302,27 @@ function initKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
         const ae = document.activeElement;
         const inInput = ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA');
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
+            openGlobalSearch();
+            return;
+        }
         if (e.key === '/' && !inInput) {
             const input = document.querySelector('.screen.active .search-input');
             if (input) { e.preventDefault(); input.focus(); input.select(); }
-        } else if (e.key === 'Escape' && inInput && ae.classList.contains('search-input')) {
-            ae.value = '';
-            ae.dispatchEvent(new Event('input'));
-            ae.blur();
+            else { e.preventDefault(); openGlobalSearch(); }
+        } else if (e.key === 'Escape') {
+            if (inInput && ae.classList.contains('search-input')) {
+                if (ae.value) {
+                    ae.value = '';
+                    ae.dispatchEvent(new Event('input'));
+                } else {
+                    ae.blur();
+                    if (S.screen === 'search') closeGlobalSearch();
+                }
+            } else if (S.screen === 'search') {
+                closeGlobalSearch();
+            }
         }
     });
 }
@@ -315,6 +351,9 @@ function initBackToTop() {
 function isTablet() { return window.innerWidth >= 840; }
 
 function navigate(to, payload) {
+    if (to === 'search' && S.screen !== 'search') {
+        S.prevScreen = S.screen || 'home';
+    }
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById('screen-'+to).classList.add('active');
     S.screen = to;
@@ -331,6 +370,8 @@ function navigate(to, payload) {
     if (to==='requests')    buildRequestsScreen();
     if (to==='guides')      buildGuidesScreen();
     if (to==='negotiation') buildNegotiationScreen();
+    if (to==='search')      buildGlobalSearchScreen();
+    if (to==='saved')       buildSavedScreen();
     if (to==='settings')    buildSettingsScreen();
     updateRailState(to);
     syncHash();
@@ -414,7 +455,7 @@ function updateRailState(screenName) {
 
     // Map screen → rail item id
     const screenToRail = {
-        home: 'rail-home', game: 'rail-home',
+        home: 'rail-home', game: 'rail-home', saved: 'rail-home', search: 'rail-search',
         list: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='classroom'?'rail-class':null,
         items: 'rail-items', skills: 'rail-skills', requests: 'rail-requests',
         detail: S.listMode==='personas'?'rail-personas':S.listMode==='enemies'?'rail-enemies':S.listMode==='items'?'rail-items':S.listMode==='skills'?'rail-skills':null,
@@ -447,28 +488,24 @@ const GAME_SHORT = { p3fes:'FES', p3p:'Portable', p3r:'Reload', p4:'Original', p
 const SECTION_LABELS = { personas:'Personas', enemies:'Enemies', classroom:'Classroom', items:'Items', skills:'Skills', requests:'Requests', fusion:'Fusion', sociallinks:'Social Links' };
 
 function openFavoritesFromHome() {
-    if (!S.game) {
-        S.series = 'p5';
-        S.game = 'p5r';
-    }
-    S.listMode = 'personas';
-    S.favOnly = true;
-    navigate('list');
+    S.savedTab = 'favorites';
+    navigate('saved');
 }
 
 function openRecentFromHome() {
-    const last = (localStorage.getItem('last_loc') || '').split('/').filter(Boolean);
-    if (last.length >= 2) {
-        applyHash(last.join('/'));
-    } else {
-        selectGame('p5', 'p5r');
-    }
+    S.savedTab = 'recent';
+    navigate('saved');
 }
 
 function buildHome() {
-    // Update favorites badge count
+    // Update favorites & recent badge counts
     const favCount = document.getElementById('homeFavCount');
     if (favCount) favCount.textContent = S.favorites.size;
+    const recentCount = document.getElementById('homeRecentCount');
+    if (recentCount) {
+        const totalRecent = (S.recents?.personas?.length || 0) + (S.recents?.enemies?.length || 0);
+        recentCount.textContent = totalRecent;
+    }
 
     // Continue card — jump straight back to the last visited game/section
     let continueHtml = '';
@@ -700,28 +737,33 @@ function onArcanaFilter(val) {
     loadAndRender(color);
 }
 
+/* ── Shared Content Filters ────────────────────────────────────────────────── */
+const DLC_NAMES_BY_GAME = {
+    p3r: new Set(['Arsene','Captain Kidd','Zorro','Carmen','Goemon','Johanna','Milady',
+                  'Robin Hood','Cendrillon','Satanael','Seiten Taisei A','Mercurius',
+                  'Hecate','Kamu Susano-o','Anat','Astarte','Loki A','Vanadis',
+                  'Izanagi','Magatsu-Izanagi','Kaguya']),
+    p5:  new Set(['Izanagi','Izanagi Picaro','Orpheus','Orpheus Picaro','Ariadne',
+                  'Ariadne Picaro','Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                  'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                  'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro']),
+    p5r: new Set(['Orpheus F','Orpheus F Picaro','Izanagi','Izanagi Picaro','Orpheus',
+                  'Orpheus Picaro','Raoul','Athena','Athena Picaro','Ariadne','Ariadne Picaro',
+                  'Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
+                  'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
+                  'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro',
+                  'Izanagi-no-Okami','Izanagi-no-Okami Picaro'])
+};
+const SPOILER_BOSS_REGEX = /adachi|sagiri|marie|kusumi|izanami|akechi|shido|yaldabaoth|maruki|azathoth|kadmon|lavenza|nyx|erebus|ryoji/i;
+
+function isDlcPersona(gameId, name, p) {
+    return Boolean((p && p.isDlc) || (DLC_NAMES_BY_GAME[gameId] && DLC_NAMES_BY_GAME[gameId].has(name)));
+}
+
 /* ── Personas ──────────────────────────────────────────────────────────────── */
 function renderPersonas(data, q, color, el) {
-    const DLC_NAMES = {
-        p3r: new Set(['Arsene','Captain Kidd','Zorro','Carmen','Goemon','Johanna','Milady',
-                      'Robin Hood','Cendrillon','Satanael','Seiten Taisei A','Mercurius',
-                      'Hecate','Kamu Susano-o','Anat','Astarte','Loki A','Vanadis',
-                      'Izanagi','Magatsu-Izanagi','Kaguya']),
-        p5:  new Set(['Izanagi','Izanagi Picaro','Orpheus','Orpheus Picaro','Ariadne',
-                      'Ariadne Picaro','Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
-                      'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
-                      'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro']),
-        p5r: new Set(['Orpheus F','Orpheus F Picaro','Izanagi','Izanagi Picaro','Orpheus',
-                      'Orpheus Picaro','Raoul','Athena','Athena Picaro','Ariadne','Ariadne Picaro',
-                      'Asterius','Asterius Picaro','Thanatos','Thanatos Picaro',
-                      'Magatsu-Izanagi','Magatsu-Izanagi Picaro','Kaguya','Kaguya Picaro',
-                      'Tsukiyomi','Tsukiyomi Picaro','Messiah','Messiah Picaro',
-                      'Izanagi-no-Okami','Izanagi-no-Okami Picaro'])
-    };
-    const gameDlc = DLC_NAMES[S.game] || new Set();
     const allEntries = Object.entries(data).filter(([name, p]) => {
-        const isDlc = p.isDlc || gameDlc.has(name);
-        if (!S.settings.showDlc && isDlc) return false;
+        if (!S.settings.showDlc && isDlcPersona(S.game, name, p)) return false;
         if (!S.settings.showEpisodeAigis && p.episodeAigis) return false;
         return true;
     });
@@ -826,7 +868,6 @@ function renderEnemies(data, q, color, el) {
         return ((a[1].level||0)-(b[1].level||0))*dir;
     });
     const countLine = (q || S.favOnly || S.aigisOnly) ? `<div class="result-count">${pool.length} of ${total} shown</div>` : '';
-    const SPOILER_BOSS_REGEX = /adachi|sagiri|marie|kusumi|izanami|akechi|shido|yaldabaoth|maruki|azathoth|kadmon|lavenza|nyx|erebus|ryoji/i;
     el.innerHTML = countLine + pool.map(([name,e])=>{
         const elems = ELEMENTS[S.series]||ELEMENTS.p5;
         const resists = e.resists ? parseResistSummary(e.resists, elems) : '';
@@ -1584,6 +1625,7 @@ function openPersona(name) {
     const key = `personas_${S.game}`;
     const data = S.rawData[key];
     if (!data||!data[name]) return;
+    recordRecent('persona', S.series, S.game, name);
     S.detail = {type:'persona', name, data:data[name]};
     if (isTablet()) {
         showListDetailPane();
@@ -1599,6 +1641,7 @@ function openEnemy(name, area) {
         ? (area ? data.find(e => e.name === name && e.area === area) : null) || data.find(e => e.name === name)
         : data[name];
     if (!enemy) return;
+    recordRecent('enemy', S.series, S.game, enemy.name || name);
     S.detail = {type:'enemy', name, data:enemy};
     if (isTablet()) {
         showListDetailPane();
@@ -1715,6 +1758,10 @@ function renderPersonaDetailHtml(name, p, color) {
             </div>`;
         });
         html += `</div>`;
+    }
+
+    if (p.inherits) {
+        html += renderInheritanceSection(p.inherits);
     }
 
     if (p.skills&&Object.keys(p.skills).length) {
@@ -2005,8 +2052,20 @@ function buildSettingsScreen() {
         </div>
     </div>
     <div class="section-card" style="margin-top:12px">
-        <div class="section-title">Data & Backup</div>
-        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:12px">Export your favorites, completed requests, and preferences to JSON, or restore from a previous backup. Fully compatible with the Android Companion App.</div>
+        <div class="section-title">Offline &amp; Artwork Cache</div>
+        <div style="font-size:0.82rem;color:var(--text2);line-height:1.45;margin-bottom:10px">
+            All Persona and Shadow artworks use bundled WebP sprites. Compendium JSONs and sprites cache automatically for offline access.
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+            <span id="swStatusLabel" style="font-size:0.78rem;color:var(--text3)">Checking offline worker...</span>
+            <button class="action-btn" onclick="refreshOfflineCache()" style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:var(--velvet-3);border:1px solid var(--hairline-strong);border-radius:6px;color:var(--text);font-size:0.82rem;cursor:pointer">
+                <span>Refresh Offline Cache</span>
+            </button>
+        </div>
+    </div>
+    <div class="section-card" style="margin-top:12px">
+        <div class="section-title">Data &amp; Backup</div>
+        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:12px">Export your favorites, recent history, completed requests, social links, and settings to JSON, or restore from a backup. Compatible with the Android Companion App.</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
             <button class="action-btn" onclick="exportWebBackup()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--velvet-3);border:1px solid var(--hairline-strong);border-radius:6px;color:var(--text);font-size:0.85rem;cursor:pointer">
                 <span>Export Backup (JSON)</span>
@@ -2018,6 +2077,7 @@ function buildSettingsScreen() {
         </div>
         <div id="backupStatusMsg" style="font-size:0.8rem;margin-top:8px;color:var(--brass);display:none"></div>
     </div>`;
+    updateSwStatusLabel();
 }
 
 function toggleSetting(key) {
@@ -2026,6 +2086,7 @@ function toggleSetting(key) {
     const el = document.getElementById('toggle-'+key);
     if (el) el.classList.toggle('on', S.settings[key]);
     Object.keys(S.rawData).forEach(k=>{ if(k.startsWith('personas_')) delete S.rawData[k]; });
+    if (S.globalSearch) S.globalSearch.indexedKey = '';
 }
 
 function setP3PProtagonist(val) {
@@ -2034,6 +2095,7 @@ function setP3PProtagonist(val) {
     document.getElementById('tog-male')?.classList.toggle('on', val==='MALE');
     document.getElementById('tog-femc')?.classList.toggle('on', val==='FEMC');
     S.slData = null; // force reload
+    if (S.globalSearch) S.globalSearch.indexedKey = '';
 }
 
 function setDefaultGameWeb(seriesId, gameId) {
@@ -2042,52 +2104,166 @@ function setDefaultGameWeb(seriesId, gameId) {
     buildSettingsScreen();
 }
 
-function exportWebBackup() {
+async function ensureGamePersonasLoaded(gameId) {
+    const key = `personas_${gameId}`;
+    if (S.rawData[key]) return S.rawData[key];
+    const path = PERSONA_PATHS[gameId];
+    if (!path) return null;
+    try {
+        const res = await fetch(path);
+        if (!res.ok) return null;
+        S.rawData[key] = await res.json();
+        return S.rawData[key];
+    } catch (_) {
+        return null;
+    }
+}
+
+async function getGameRequestsPool(gameId) {
+    const pool = [];
+    const mainKey = `requests_${gameId}_${gameId === 'p3r' ? 'main' : 'all'}`;
+    if (!S.rawData[mainKey] && REQUEST_PATHS[gameId]) {
+        try {
+            const res = await fetch(REQUEST_PATHS[gameId]);
+            if (res.ok) S.rawData[mainKey] = normalizeListData(await res.json(), 'requests');
+        } catch (_) {}
+    }
+    if (Array.isArray(S.rawData[mainKey])) pool.push(...S.rawData[mainKey]);
+
+    if (gameId === 'p3r') {
+        const aigisKey = 'requests_p3r_aigis';
+        if (!S.rawData[aigisKey]) {
+            try {
+                const res = await fetch('./data/requests/aigis_requests.json');
+                if (res.ok) S.rawData[aigisKey] = normalizeListData(await res.json(), 'requests');
+            } catch (_) {}
+        }
+        if (Array.isArray(S.rawData[aigisKey])) pool.push(...S.rawData[aigisKey]);
+    }
+    return pool;
+}
+
+function splitWebFavoriteKey(rawKey) {
+    const idx = rawKey.indexOf('_');
+    if (idx <= 0) return null;
+    return { gameId: rawKey.slice(0, idx), name: rawKey.slice(idx + 1) };
+}
+
+function parseBackupFavoriteToWebKey(entry) {
+    if (!entry) return null;
+    if (typeof entry === 'string') {
+        const clean = entry.trim();
+        if (!clean) return null;
+        const parts = clean.split('_');
+        if (parts.length >= 3 && ['p3', 'p4', 'p5'].includes(parts[0]) && PERSONA_PATHS[parts[1]]) {
+            return `${parts[1]}_${parts.slice(2).join('_')}`;
+        }
+        if (parts.length >= 2 && PERSONA_PATHS[parts[0]]) {
+            return clean;
+        }
+        return null;
+    }
+    if (typeof entry === 'object') {
+        const gameId = entry.gameId;
+        const name = entry.personaName || entry.enemyName || entry.name;
+        if (gameId && name) return `${gameId}_${name}`;
+    }
+    return null;
+}
+
+async function exportWebBackup() {
+    const msg = document.getElementById('backupStatusMsg');
+    if (msg) {
+        msg.textContent = 'Preparing backup...';
+        msg.style.display = 'block';
+    }
+
+    const favEntries = Array.from(S.favorites || []);
+    const reqEntries = Array.from(S.completedRequests || []);
+    const gameIdsToLoad = new Set();
+
+    favEntries.forEach(k => {
+        const parsed = splitWebFavoriteKey(k);
+        if (parsed) gameIdsToLoad.add(parsed.gameId);
+    });
+    const reqGamesToLoad = new Set();
+    reqEntries.forEach(k => {
+        const m = k.match(/^([^_]+)_req_(.+)$/);
+        if (m) reqGamesToLoad.add(m[1]);
+    });
+
+    await Promise.all([
+        ...Array.from(gameIdsToLoad).map(gid => ensureGamePersonasLoaded(gid)),
+        ...Array.from(reqGamesToLoad).map(gid => getGameRequestsPool(gid))
+    ]);
+
+    const favoritePersonas = [];
+    const favoriteEnemies = [];
+    favEntries.forEach(k => {
+        const parsed = splitWebFavoriteKey(k);
+        if (!parsed) return;
+        const seriesId = inferSeriesForGame(parsed.gameId);
+        const canonicalId = `${seriesId}_${parsed.gameId}_${parsed.name}`;
+        const personaMap = S.rawData[`personas_${parsed.gameId}`];
+        if (personaMap && Object.prototype.hasOwnProperty.call(personaMap, parsed.name)) {
+            favoritePersonas.push(canonicalId);
+        } else {
+            favoriteEnemies.push(canonicalId);
+        }
+    });
+
+    const completedRequests = reqEntries.map(k => {
+        const m = k.match(/^([^_]+)_req_(.+)$/);
+        if (!m) return null;
+        const gameId = m[1];
+        const reqToken = m[2];
+        const pool = [
+            ...(S.rawData[`requests_${gameId}_all`] || []),
+            ...(S.rawData[`requests_${gameId}_main`] || []),
+            ...(S.rawData[`requests_${gameId}_aigis`] || [])
+        ];
+        const matched = pool.find(r => String(r.id ?? r.name) === reqToken || r.name === reqToken);
+        return {
+            gameId,
+            name: matched ? matched.name : reqToken,
+            isCompleted: true
+        };
+    }).filter(Boolean);
+
     const backupData = {
         schemaVersion: 1,
         appVersion: "8.1",
-        versionCode: 64,
+        versionCode: 65,
         exportTimestamp: Date.now(),
-        favoritePersonas: Array.from(S.favorites || []).map(id => {
-            const parts = id.split('_');
-            return {
-                gameId: parts[0] || 'p5r',
-                personaName: parts.slice(1).join('_'),
-                addedTimestamp: Date.now()
-            };
-        }),
-        favoriteEnemies: [],
-        completedRequests: Array.from(S.completedRequests || []).map(name => {
-            return {
-                gameId: S.game || 'p5r',
-                name: name,
-                isCompleted: true
-            };
-        }),
+        favoritePersonas,
+        favoriteEnemies,
+        recentPersonas: (S.recents?.personas || []).slice(0, 50),
+        recentEnemies: (S.recents?.enemies || []).slice(0, 50),
+        completedRequests,
         pinnedSocialLinks: Array.from(S.pinnedSl || []),
         maxedSocialLinks: Array.from(S.maxedSl || []),
         preferences: {
-            noSpoilersMode: !!S.settings.noSpoilersMode,
-            p3pProtagonist: S.settings.p3pProtagonist || 'MALE',
-            showDlc: !!S.settings.showDlc,
-            showEpisodeAigis: !!S.settings.showEpisodeAigis,
-            defaultGame_p3: S.settings.defaultGame_p3 || 'none',
-            defaultGame_p4: S.settings.defaultGame_p4 || 'none',
-            defaultGame_p5: S.settings.defaultGame_p5 || 'none'
+            p3p_protagonist: S.settings.p3pProtagonist || 'MALE',
+            no_spoilers_mode: String(!!S.settings.noSpoilersMode),
+            default_game_p3: S.settings.defaultGame_p3 || 'none',
+            default_game_p4: S.settings.defaultGame_p4 || 'none',
+            default_game_p5: S.settings.defaultGame_p5 || 'none',
+            show_dlc: String(!!S.settings.showDlc),
+            show_episode_aigis: String(!!S.settings.showEpisodeAigis)
         }
     };
     const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `persona_companion_backup_v1_${Date.now()}.json`;
+    const dateStr = new Date().toISOString().split('T')[0];
+    a.download = `persona_companion_backup_${dateStr}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    const msg = document.getElementById('backupStatusMsg');
     if (msg) {
-        msg.textContent = 'Backup exported successfully!';
+        msg.textContent = 'Backup exported successfully.';
         msg.style.display = 'block';
         setTimeout(() => { msg.style.display = 'none'; }, 4000);
     }
@@ -2097,37 +2273,76 @@ function importWebBackup(event) {
     const file = event.target.files && event.target.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = function(e) {
+    reader.onload = async function(e) {
         try {
             const data = JSON.parse(e.target.result);
             if (!data || typeof data !== 'object') throw new Error('Invalid JSON format');
-            
+
             let restoredCount = 0;
-            // Restore favorites
-            if (Array.isArray(data.favoritePersonas)) {
-                if (!S.favorites) S.favorites = new Set();
-                data.favoritePersonas.forEach(f => {
-                    if (f && f.gameId && f.personaName) {
-                        S.favorites.add(`${f.gameId}_${f.personaName}`);
+            if (!S.favorites) S.favorites = new Set();
+
+            [data.favoritePersonas, data.favoriteEnemies].forEach(arr => {
+                if (!Array.isArray(arr)) return;
+                arr.forEach(item => {
+                    const key = parseBackupFavoriteToWebKey(item);
+                    if (key) {
+                        S.favorites.add(key);
                         restoredCount++;
                     }
                 });
-                localStorage.setItem('favs', JSON.stringify(Array.from(S.favorites)));
+            });
+            localStorage.setItem('favs', JSON.stringify(Array.from(S.favorites)));
+
+            if (Array.isArray(data.recentPersonas) || Array.isArray(data.recentEnemies)) {
+                const mergeRecent = (existing, incoming) => {
+                    const map = new Map();
+                    [...(incoming || []), ...(existing || [])].forEach(it => {
+                        if (!it || !it.gameId || !it.name) return;
+                        const k = `${it.gameId}_${it.name}`;
+                        const seriesId = it.seriesId || inferSeriesForGame(it.gameId);
+                        const prev = map.get(k);
+                        if (!prev || (it.timestamp || 0) > (prev.timestamp || 0)) {
+                            map.set(k, { seriesId, gameId: it.gameId, name: it.name, timestamp: it.timestamp || Date.now() });
+                        }
+                    });
+                    return Array.from(map.values())
+                        .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0))
+                        .slice(0, 50);
+                };
+                S.recents.personas = mergeRecent(S.recents.personas, data.recentPersonas);
+                S.recents.enemies = mergeRecent(S.recents.enemies, data.recentEnemies);
+                localStorage.setItem('recent_items', JSON.stringify(S.recents));
             }
-            
-            // Restore completed requests
+
             if (Array.isArray(data.completedRequests)) {
                 if (!S.completedRequests) S.completedRequests = new Set();
+                const reqGames = new Set();
+                data.completedRequests.forEach(r => { if (r && r.gameId) reqGames.add(r.gameId); });
+                await Promise.all(Array.from(reqGames).map(gid => getGameRequestsPool(gid)));
+
                 data.completedRequests.forEach(r => {
-                    if (r && r.name && r.isCompleted) {
-                        S.completedRequests.add(r.name);
+                    if (!r || !r.name) return;
+                    const gameId = r.gameId || 'p5r';
+                    const isDone = r.isCompleted !== false;
+                    const pool = [
+                        ...(S.rawData[`requests_${gameId}_all`] || []),
+                        ...(S.rawData[`requests_${gameId}_main`] || []),
+                        ...(S.rawData[`requests_${gameId}_aigis`] || [])
+                    ];
+                    const matched = pool.find(item => item.name === r.name || String(item.id) === r.name);
+                    const key = matched
+                        ? `${gameId}_req_${matched.id || matched.name}`
+                        : (r.name.includes('_req_') ? r.name : `${gameId}_req_${r.name}`);
+                    if (isDone) {
+                        S.completedRequests.add(key);
                         restoredCount++;
+                    } else {
+                        S.completedRequests.delete(key);
                     }
                 });
                 localStorage.setItem('completed_requests', JSON.stringify(Array.from(S.completedRequests)));
             }
-            
-            // Restore pinned & maxed social links
+
             if (Array.isArray(data.pinnedSocialLinks)) {
                 if (!S.pinnedSl) S.pinnedSl = new Set();
                 data.pinnedSocialLinks.forEach(k => { if (k) { S.pinnedSl.add(k); restoredCount++; } });
@@ -2139,19 +2354,42 @@ function importWebBackup(event) {
                 localStorage.setItem('maxed_sl', JSON.stringify(Array.from(S.maxedSl)));
             }
 
-            // Restore preferences
             if (data.preferences && typeof data.preferences === 'object') {
-                Object.assign(S.settings, data.preferences);
+                const p = data.preferences;
+                const readBool = (v) => (typeof v === 'boolean' ? v : String(v).toLowerCase() === 'true');
+                if (p.p3p_protagonist !== undefined) S.settings.p3pProtagonist = String(p.p3p_protagonist).toUpperCase();
+                else if (p.p3pProtagonist !== undefined) S.settings.p3pProtagonist = String(p.p3pProtagonist).toUpperCase();
+
+                if (p.no_spoilers_mode !== undefined) S.settings.noSpoilersMode = readBool(p.no_spoilers_mode);
+                else if (p.noSpoilersMode !== undefined) S.settings.noSpoilersMode = readBool(p.noSpoilersMode);
+
+                if (p.show_dlc !== undefined) S.settings.showDlc = readBool(p.show_dlc);
+                else if (p.showDlc !== undefined) S.settings.showDlc = readBool(p.showDlc);
+
+                if (p.show_episode_aigis !== undefined) S.settings.showEpisodeAigis = readBool(p.show_episode_aigis);
+                else if (p.showEpisodeAigis !== undefined) S.settings.showEpisodeAigis = readBool(p.showEpisodeAigis);
+
+                if (p.default_game_p3 !== undefined) S.settings.defaultGame_p3 = p.default_game_p3;
+                else if (p.defaultGame_p3 !== undefined) S.settings.defaultGame_p3 = p.defaultGame_p3;
+
+                if (p.default_game_p4 !== undefined) S.settings.defaultGame_p4 = p.default_game_p4;
+                else if (p.defaultGame_p4 !== undefined) S.settings.defaultGame_p4 = p.defaultGame_p4;
+
+                if (p.default_game_p5 !== undefined) S.settings.defaultGame_p5 = p.default_game_p5;
+                else if (p.defaultGame_p5 !== undefined) S.settings.defaultGame_p5 = p.defaultGame_p5;
+
                 localStorage.setItem('settings', JSON.stringify(S.settings));
+                S.slData = null;
+                S.globalSearch.indexedKey = '';
             }
-            
+
+            buildSettingsScreen();
             const msg = document.getElementById('backupStatusMsg');
             if (msg) {
-                msg.textContent = `Restored ${restoredCount} records successfully!`;
+                msg.textContent = `Restored ${restoredCount} records successfully.`;
                 msg.style.display = 'block';
                 setTimeout(() => { msg.style.display = 'none'; }, 4000);
             }
-            buildSettingsScreen();
         } catch (err) {
             alert('Failed to parse backup JSON: ' + err.message);
         }
@@ -5934,3 +6172,763 @@ function renderWeeklyClassroomOutlook(allQuestions, color) {
 }
 
 
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   GLOBAL SEARCH, SAVED HISTORY, SKILL INHERITANCE & OFFLINE WORKER
+   ══════════════════════════════════════════════════════════════════════════════ */
+const ALL_GAME_IDS = ['p3r', 'p3p', 'p3fes', 'p4g', 'p4', 'p5r', 'p5'];
+const GAME_META = {
+    p3fes: { seriesId:'p3', short:'P3 FES', title:'Persona 3 FES', color:'#1A6FCC' },
+    p3p:   { seriesId:'p3', short:'P3P',    title:'Persona 3 Portable', color:'#1A6FCC' },
+    p3r:   { seriesId:'p3', short:'P3R',    title:'Persona 3 Reload', color:'#1A6FCC' },
+    p4:    { seriesId:'p4', short:'P4',     title:'Persona 4', color:'#F5A800' },
+    p4g:   { seriesId:'p4', short:'P4G',    title:'Persona 4 Golden', color:'#F5A800' },
+    p5:    { seriesId:'p5', short:'P5',     title:'Persona 5', color:'#CC1A1A' },
+    p5r:   { seriesId:'p5', short:'P5R',    title:'Persona 5 Royal', color:'#CC1A1A' }
+};
+
+function escHtml(str) {
+    return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function inferSeriesForGame(gameId) {
+    return GAME_META[gameId]?.seriesId || 'p5';
+}
+
+function getGameMeta(gameId) {
+    return GAME_META[gameId] || { seriesId:'p5', short:String(gameId||'').toUpperCase(), title:gameId, color:'#C9A45C' };
+}
+
+/* ── Skill Inheritance Rules ──────────────────────────────────────────────── */
+const INHERITANCE_RULES = {
+    fire:     'Cannot inherit: Ice skills',
+    ice:      'Cannot inherit: Fire skills',
+    elec:     'Cannot inherit: Wind skills',
+    wind:     'Cannot inherit: Elec skills',
+    bless:    'Cannot inherit: Curse/Dark, Ailment, Physical skills',
+    light:    'Cannot inherit: Curse/Dark, Ailment, Physical skills',
+    curse:    'Cannot inherit: Bless/Light, Healing/Recovery skills',
+    dark:     'Cannot inherit: Bless/Light, Healing/Recovery skills',
+    phys:     'Cannot inherit: Magic attack skills',
+    physical: 'Cannot inherit: Magic attack skills',
+    ailment:  'Cannot inherit: Bless/Light, Healing skills',
+    recovery: 'Cannot inherit: Curse/Dark, Physical attack skills',
+    healing:  'Cannot inherit: Curse/Dark, Physical attack skills',
+    almighty: 'Can inherit all skill affinities'
+};
+
+function renderInheritanceSection(inheritsType) {
+    if (!inheritsType) return '';
+    const key = String(inheritsType).trim().toLowerCase();
+    const rule = INHERITANCE_RULES[key] || '';
+    return `
+    <div class="section-card">
+        <div class="section-title">Skill Inheritance</div>
+        <div class="inheritance-header">
+            <span style="font-size:.88rem;font-weight:600;color:var(--text)">Inheritance Affinity</span>
+            <span class="inheritance-badge">${escHtml(inheritsType)}</span>
+        </div>
+        ${rule ? `<div class="inheritance-rule">${escHtml(rule)}</div>` : ''}
+    </div>`;
+}
+
+/* ── Recent Viewing History ───────────────────────────────────────────────── */
+function saveRecents() {
+    localStorage.setItem('recent_items', JSON.stringify(S.recents));
+}
+
+function recordRecent(kind, seriesId, gameId, name) {
+    if (!gameId || !name) return;
+    if (!S.recents) S.recents = { personas:[], enemies:[] };
+    const bucket = kind === 'enemy' ? 'enemies' : 'personas';
+    const list = S.recents[bucket].filter(it => !(it.gameId === gameId && it.name === name));
+    list.unshift({
+        seriesId: seriesId || inferSeriesForGame(gameId),
+        gameId,
+        name,
+        timestamp: Date.now()
+    });
+    if (list.length > 50) list.length = 50;
+    S.recents[bucket] = list;
+    saveRecents();
+}
+
+function clearRecentHistory() {
+    S.recents = { personas:[], enemies:[] };
+    saveRecents();
+    buildSavedScreen();
+}
+
+/* ── Cross-Game Saved Favorites & Recent Screen ───────────────────────────── */
+function setSavedTab(tab) {
+    S.savedTab = tab === 'recent' ? 'recent' : 'favorites';
+    buildSavedScreen();
+    syncHash();
+}
+
+function setSavedTypeFilter(type) {
+    S.savedTypeFilter = type;
+    buildSavedScreen();
+}
+
+async function buildSavedScreen() {
+    const isRecent = S.savedTab === 'recent';
+    document.getElementById('savedScreenTitle').textContent = isRecent ? 'Recent History' : 'Favorites';
+    document.getElementById('savedTabFavorites')?.classList.toggle('active', !isRecent);
+    document.getElementById('savedTabRecent')?.classList.toggle('active', isRecent);
+    const clearBtn = document.getElementById('clearRecentBtn');
+    if (clearBtn) {
+        const hasRecents = (S.recents?.personas?.length || 0) + (S.recents?.enemies?.length || 0) > 0;
+        clearBtn.style.display = (isRecent && hasRecents) ? 'inline-block' : 'none';
+    }
+
+    const filterBar = document.getElementById('savedTypeFilterBar');
+    if (filterBar) {
+        filterBar.innerHTML = [
+            { id:'all', label:'All' },
+            { id:'personas', label:'Personas' },
+            { id:'enemies', label:'Enemies' }
+        ].map(f => `<button class="sort-chip ${S.savedTypeFilter === f.id ? 'active' : ''}" onclick="setSavedTypeFilter('${f.id}')">${f.label}</button>`).join('');
+    }
+
+    const el = document.getElementById('savedContent');
+    if (!el) return;
+
+    if (!isRecent) {
+        const favKeys = Array.from(S.favorites || []);
+        if (!favKeys.length) {
+            window._savedRenderedEntries = [];
+            el.innerHTML = `<div class="empty-state">No favorites yet. Open any Persona or Enemy and tap the heart icon to bookmark it here.</div>`;
+            return;
+        }
+        el.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div>Loading favorites...</div></div>`;
+        const gameIds = new Set();
+        favKeys.forEach(k => {
+            const p = splitWebFavoriteKey(k);
+            if (p) gameIds.add(p.gameId);
+        });
+        await Promise.all(Array.from(gameIds).flatMap(gid => [ensureGamePersonasLoaded(gid), ensureGameEnemiesLoaded(gid)]));
+
+        const resolved = [];
+        favKeys.forEach(k => {
+            const parsed = splitWebFavoriteKey(k);
+            if (!parsed) return;
+            const meta = getGameMeta(parsed.gameId);
+            const pMap = S.rawData[`personas_${parsed.gameId}`];
+            const eData = S.rawData[`enemies_${parsed.gameId}`];
+            if (pMap && Object.prototype.hasOwnProperty.call(pMap, parsed.name)) {
+                const p = pMap[parsed.name];
+                resolved.push({
+                    kind: 'persona', favKey: k, gameId: parsed.gameId, seriesId: meta.seriesId,
+                    shortGame: meta.short, color: meta.color, name: parsed.name,
+                    sub: `${p.arcana || p.race || 'Persona'} · Lv. ${p.level ?? p.lvl ?? '?'}`,
+                    imgUrl: getPersonaImageFilename(parsed.name)
+                });
+            } else {
+                const eList = Array.isArray(eData) ? eData : Object.entries(eData || {}).map(([n, v]) => ({ name: n, ...v }));
+                const enemy = eList.find(it => it.name === parsed.name);
+                const enemyTab = enemy?.isBoss ? 'main_bosses' : (enemy?.isMiniBoss ? 'mini_bosses' : 'enemies');
+                resolved.push({
+                    kind: 'enemy', favKey: k, gameId: parsed.gameId, seriesId: meta.seriesId,
+                    shortGame: meta.short, color: meta.color, name: parsed.name,
+                    area: enemy?.area || '', enemyTab,
+                    isBossOrMini: Boolean(enemy?.isBoss || enemy?.isMiniBoss),
+                    sub: enemy ? `${enemy.arcana || 'Shadow'} · Lv. ${enemy.level ?? '?'}` : 'Shadow / Enemy',
+                    imgUrl: getEnemyImageFilename(enemy?.persona_name || parsed.name, parsed.gameId)
+                });
+            }
+        });
+
+        const filtered = resolved.filter(it => {
+            if (S.savedTypeFilter === 'personas' && it.kind !== 'persona') return false;
+            if (S.savedTypeFilter === 'enemies' && it.kind !== 'enemy') return false;
+            return true;
+        }).sort((a, b) => a.name.localeCompare(b.name));
+
+        renderSavedEntriesList(filtered, false, el);
+        return;
+    }
+
+    const recentPersonas = (S.recents?.personas || []).map(it => {
+        const meta = getGameMeta(it.gameId);
+        return {
+            kind: 'persona', gameId: it.gameId, seriesId: it.seriesId || meta.seriesId,
+            shortGame: meta.short, color: meta.color, name: it.name, timestamp: it.timestamp || 0,
+            sub: `${meta.title} · Persona`, imgUrl: getPersonaImageFilename(it.name)
+        };
+    });
+    const recentEnemies = (S.recents?.enemies || []).map(it => {
+        const meta = getGameMeta(it.gameId);
+        return {
+            kind: 'enemy', gameId: it.gameId, seriesId: it.seriesId || meta.seriesId,
+            shortGame: meta.short, color: meta.color, name: it.name, timestamp: it.timestamp || 0,
+            isBossOrMini: true,
+            sub: `${meta.title} · Enemy`, imgUrl: getEnemyImageFilename(it.name, it.gameId)
+        };
+    });
+
+    const combined = [...recentPersonas, ...recentEnemies]
+        .filter(it => {
+            if (S.savedTypeFilter === 'personas' && it.kind !== 'persona') return false;
+            if (S.savedTypeFilter === 'enemies' && it.kind !== 'enemy') return false;
+            return true;
+        })
+        .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+    if (!combined.length) {
+        window._savedRenderedEntries = [];
+        el.innerHTML = `<div class="empty-state">No recent viewing history yet. Personas and enemies you inspect will appear here.</div>`;
+        return;
+    }
+    renderSavedEntriesList(combined, true, el);
+}
+
+function renderSavedEntriesList(entries, isRecentMode, el) {
+    window._savedRenderedEntries = entries;
+    if (!entries.length) {
+        el.innerHTML = `<div class="empty-state">No matching entries in this filter.</div>`;
+        return;
+    }
+    el.innerHTML = entries.map((it, idx) => {
+        const isSpoiler = it.kind === 'enemy' && it.isBossOrMini && SPOILER_BOSS_REGEX.test(it.name);
+        const conceal = S.settings.noSpoilersMode && isSpoiler && !window['revealed_' + it.name];
+        const titleText = conceal ? 'Concealed Boss (Spoiler)' : it.name;
+        const subText = conceal ? 'Late-game boss hidden by No Spoilers Mode' : it.sub;
+        const removeBtn = !isRecentMode && it.favKey ? `
+            <button class="saved-remove-btn" onclick="toggleSavedFavorite(event, ${idx})" title="Remove favorite" aria-label="Remove favorite">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#E57373"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>` : '';
+        return `
+        <div class="row-card" onclick="openSavedEntry(${idx})">
+            <div class="persona-avatar-box">
+                ${conceal ? `<div class="persona-avatar-fallback" style="display:flex;background:#2a1515;color:#E57373"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/></svg></div>` :
+                `<img src="${escHtml(it.imgUrl)}" class="persona-avatar-img" alt="" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="persona-avatar-fallback" style="display:none;background:${it.color}22;color:${it.color}">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                </div>`}
+            </div>
+            <div class="row-main">
+                <div class="row-name-line">
+                    <span class="row-name">${escHtml(titleText)}</span>
+                    <span class="saved-game-tag" style="color:${it.color};border-color:${it.color}44">${escHtml(it.shortGame)}</span>
+                </div>
+                <div class="row-sub">${escHtml(subText)}</div>
+            </div>
+            ${removeBtn}
+            <div class="row-chevron" style="color:${it.color}">${CHEVRON_SVG}</div>
+        </div>`;
+    }).join('');
+}
+
+function toggleSavedFavorite(evt, idx) {
+    evt.stopPropagation();
+    const it = window._savedRenderedEntries?.[idx];
+    if (!it || !it.favKey) return;
+    S.favorites.delete(it.favKey);
+    localStorage.setItem('favs', JSON.stringify(Array.from(S.favorites)));
+    buildSavedScreen();
+}
+
+async function ensureGameEnemiesLoaded(gameId) {
+    const key = `enemies_${gameId}`;
+    if (S.rawData[key]) return S.rawData[key];
+    const path = ENEMY_PATHS[gameId];
+    if (!path) return null;
+    try {
+        const res = await fetch(path);
+        if (!res.ok) return null;
+        S.rawData[key] = await res.json();
+        return S.rawData[key];
+    } catch (_) {
+        return null;
+    }
+}
+
+async function openSavedEntry(idx) {
+    const it = window._savedRenderedEntries?.[idx];
+    if (!it) return;
+    if (it.kind === 'enemy' && it.isBossOrMini && S.settings.noSpoilersMode && SPOILER_BOSS_REGEX.test(it.name) && !window['revealed_' + it.name]) {
+        window['revealed_' + it.name] = true;
+    }
+    S.series = it.seriesId || inferSeriesForGame(it.gameId);
+    S.game = it.gameId;
+    S.query = '';
+    S.favOnly = false;
+    S.aigisOnly = false;
+    S.arcanaFilter = '';
+    if (it.kind === 'persona') {
+        await ensureGamePersonasLoaded(it.gameId);
+        S.listMode = 'personas';
+        navigate('list');
+        openPersona(it.name);
+    } else {
+        const eData = await ensureGameEnemiesLoaded(it.gameId);
+        const eList = Array.isArray(eData) ? eData : Object.entries(eData || {}).map(([n, v]) => ({ name: n, ...v }));
+        const found = eList.find(e => e.name === it.name);
+        S.enemyTab = found?.isBoss ? 'main_bosses' : (found?.isMiniBoss ? 'mini_bosses' : (it.enemyTab || 'enemies'));
+        S.listMode = 'enemies';
+        navigate('list');
+        openEnemy(it.name, it.area || found?.area || '');
+    }
+}
+
+/* ── Unified Global Search ────────────────────────────────────────────────── */
+const GLOBAL_SEARCH_GAMES = [
+    { id:'all', label:'All Games' },
+    { id:'p3r', label:'P3R' },
+    { id:'p3p', label:'P3P' },
+    { id:'p3fes', label:'P3 FES' },
+    { id:'p4g', label:'P4G' },
+    { id:'p4', label:'P4' },
+    { id:'p5r', label:'P5R' },
+    { id:'p5', label:'P5' }
+];
+const GLOBAL_SEARCH_CATS = [
+    { id:'all', label:'All Types' },
+    { id:'persona', label:'Personas' },
+    { id:'enemy', label:'Enemies' },
+    { id:'skill', label:'Skills' },
+    { id:'item', label:'Items' },
+    { id:'request', label:'Requests' },
+    { id:'sociallink', label:'Social Links' },
+    { id:'classroom', label:'Classroom' }
+];
+
+function openGlobalSearch() {
+    navigate('search');
+    setTimeout(() => {
+        const inp = document.getElementById('globalSearchInput');
+        if (inp) { inp.focus(); inp.select(); }
+    }, 30);
+}
+
+function closeGlobalSearch() {
+    const dest = (S.prevScreen && S.prevScreen !== 'search') ? S.prevScreen : 'home';
+    navigate(dest);
+}
+
+function renderGlobalSearchFilters() {
+    const gameBar = document.getElementById('globalSearchGameBar');
+    if (gameBar) {
+        gameBar.innerHTML = GLOBAL_SEARCH_GAMES.map(g =>
+            `<button class="sort-chip ${S.globalSearch.game === g.id ? 'active' : ''}" onclick="setGlobalSearchGame('${g.id}')">${g.label}</button>`
+        ).join('');
+    }
+    const catBar = document.getElementById('globalSearchCatBar');
+    if (catBar) {
+        catBar.innerHTML = GLOBAL_SEARCH_CATS.map(c =>
+            `<button class="sort-chip ${S.globalSearch.category === c.id ? 'active' : ''}" onclick="setGlobalSearchCat('${c.id}')">${c.label}</button>`
+        ).join('');
+    }
+}
+
+function buildGlobalSearchScreen() {
+    const inp = document.getElementById('globalSearchInput');
+    if (inp) inp.value = S.globalSearch.query || '';
+    const clr = document.getElementById('globalSearchClear');
+    if (clr) clr.style.display = S.globalSearch.query ? 'block' : 'none';
+    renderGlobalSearchFilters();
+    renderGlobalSearchResults();
+    ensureGlobalSearchIndex();
+}
+
+function setGlobalSearchGame(g) {
+    S.globalSearch.game = g;
+    renderGlobalSearchFilters();
+    renderGlobalSearchResults();
+}
+
+function setGlobalSearchCat(c) {
+    S.globalSearch.category = c;
+    renderGlobalSearchFilters();
+    renderGlobalSearchResults();
+}
+
+function onGlobalSearch(val) {
+    S.globalSearch.query = val;
+    const clr = document.getElementById('globalSearchClear');
+    if (clr) clr.style.display = val ? 'block' : 'none';
+    debounceSearch(() => renderGlobalSearchResults());
+}
+
+function clearGlobalSearch() {
+    const inp = document.getElementById('globalSearchInput');
+    if (inp) { inp.value = ''; inp.focus(); }
+    onGlobalSearch('');
+}
+
+async function fetchJsonCached(url) {
+    if (!url) return null;
+    if (S.globalSearch.urlCache[url] !== undefined) return S.globalSearch.urlCache[url];
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            S.globalSearch.urlCache[url] = null;
+            return null;
+        }
+        const json = await res.json();
+        S.globalSearch.urlCache[url] = json;
+        return json;
+    } catch (_) {
+        S.globalSearch.urlCache[url] = null;
+        return null;
+    }
+}
+
+async function ensureGlobalSearchIndex() {
+    const configKey = `${S.settings.showDlc}_${S.settings.showEpisodeAigis}_${S.settings.p3pProtagonist}`;
+    if (S.globalSearch.indexedKey === configKey || S.globalSearch.indexing) return;
+
+    S.globalSearch.indexing = true;
+    const statusEl = document.getElementById('globalSearchStatus');
+    if (statusEl) statusEl.textContent = 'Indexing compendium across all 7 games...';
+
+    const urls = new Set();
+    const p3pSlPath = S.settings.p3pProtagonist === 'FEMC'
+        ? './data/social-links/p3p_femc_social_links.json'
+        : './data/social-links/p3p_male_social_links.json';
+
+    ALL_GAME_IDS.forEach(gid => {
+        [PERSONA_PATHS[gid], ENEMY_PATHS[gid], SKILL_PATHS[gid], ITEM_PATHS[gid], REQUEST_PATHS[gid], CLASSROOM_PATHS[gid]]
+            .forEach(u => { if (u) urls.add(u); });
+        urls.add(gid === 'p3p' ? p3pSlPath : SL_PATHS[gid]);
+    });
+    if (S.settings.showEpisodeAigis) urls.add('./data/requests/aigis_requests.json');
+
+    await Promise.allSettled(Array.from(urls).map(u => fetchJsonCached(u)));
+
+    const entries = [];
+    for (const gid of ALL_GAME_IDS) {
+        const meta = getGameMeta(gid);
+
+        const pRaw = S.globalSearch.urlCache[PERSONA_PATHS[gid]];
+        if (pRaw && typeof pRaw === 'object') {
+            S.rawData[`personas_${gid}`] = S.rawData[`personas_${gid}`] || pRaw;
+            Object.entries(pRaw).forEach(([name, p]) => {
+                if (!S.settings.showDlc && isDlcPersona(gid, name, p)) return;
+                if (!S.settings.showEpisodeAigis && p.episodeAigis) return;
+                const arcana = p.arcana || p.race || 'Persona';
+                const lv = p.level ?? p.lvl ?? '?';
+                entries.push({
+                    category:'persona', catLabel:'Persona', gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:name, subtitle:`${arcana} · Lv. ${lv}`,
+                    searchBlob:`${name} ${arcana} ${p.trait || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        const eRaw = S.globalSearch.urlCache[ENEMY_PATHS[gid]];
+        if (eRaw) {
+            S.rawData[`enemies_${gid}`] = S.rawData[`enemies_${gid}`] || eRaw;
+            const eArr = Array.isArray(eRaw) ? eRaw : Object.entries(eRaw).map(([name, val]) => ({ name, ...val }));
+            eArr.forEach(e => {
+                if (!e || !e.name) return;
+                if (gid === 'p3r' && !S.settings.showEpisodeAigis && e.episodeAigis) return;
+                const enemyTab = e.isBoss ? 'main_bosses' : (e.isMiniBoss ? 'mini_bosses' : 'enemies');
+                entries.push({
+                    category:'enemy', catLabel: e.isBoss ? 'Boss' : (e.isMiniBoss ? 'Mini-Boss' : 'Enemy'),
+                    gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:e.name, area:e.area || '', enemyTab,
+                    isBossOrMini: Boolean(e.isBoss || e.isMiniBoss),
+                    subtitle:`${e.arcana || 'Shadow'} · Lv. ${e.level ?? '?'}`,
+                    searchBlob:`${e.name} ${e.arcana || ''} ${e.area || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        const skRaw = S.globalSearch.urlCache[SKILL_PATHS[gid]];
+        if (skRaw) {
+            const skList = normalizeListData(skRaw, 'skills');
+            S.rawData[`skills_${gid}`] = S.rawData[`skills_${gid}`] || skList;
+            skList.forEach(sk => {
+                if (!sk || !sk.name) return;
+                entries.push({
+                    category:'skill', catLabel:'Skill', gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:sk.name, subtitle:`${sk.element || sk.type || 'Skill'}${sk.cost ? ' · ' + sk.cost : ''}`,
+                    searchBlob:`${sk.name} ${sk.element || ''} ${sk.effect || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        const itRaw = S.globalSearch.urlCache[ITEM_PATHS[gid]];
+        if (itRaw) {
+            const itList = normalizeListData(itRaw, 'items');
+            S.rawData[`items_${gid}`] = S.rawData[`items_${gid}`] || itList;
+            itList.forEach(it => {
+                if (!it || !it.name) return;
+                entries.push({
+                    category:'item', catLabel:'Item', gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:it.name, subtitle:it.category || it.effect || 'Item',
+                    searchBlob:`${it.name} ${it.category || ''} ${it.effect || ''} ${it.description || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        const reqRaw = S.globalSearch.urlCache[REQUEST_PATHS[gid]];
+        if (reqRaw) {
+            const reqList = normalizeListData(reqRaw, 'requests');
+            const mainKey = `requests_${gid}_${gid === 'p3r' ? 'main' : 'all'}`;
+            S.rawData[mainKey] = S.rawData[mainKey] || reqList;
+            reqList.forEach(req => {
+                if (!req || !req.name) return;
+                entries.push({
+                    category:'request', catLabel:'Request', gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:req.name, p3rMode:'main', subtitle:req.reward || req.giver || 'Quest',
+                    searchBlob:`${req.name} ${req.giver || ''} ${req.reward || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        if (gid === 'p3r' && S.settings.showEpisodeAigis) {
+            const aigisRaw = S.globalSearch.urlCache['./data/requests/aigis_requests.json'];
+            if (aigisRaw) {
+                const aigisList = normalizeListData(aigisRaw, 'requests');
+                S.rawData['requests_p3r_aigis'] = S.rawData['requests_p3r_aigis'] || aigisList;
+                aigisList.forEach(req => {
+                    if (!req || !req.name) return;
+                    entries.push({
+                        category:'request', catLabel:'Aigis Request', gameId:'p3r', shortGame:'P3R', color:meta.color,
+                        title:req.name, p3rMode:'aigis', subtitle:req.reward || 'Episode Aigis',
+                        searchBlob:`${req.name} ${req.giver || ''} ${req.reward || ''}`.toLowerCase()
+                    });
+                });
+            }
+        }
+
+        const slUrl = gid === 'p3p' ? p3pSlPath : SL_PATHS[gid];
+        const slRaw = S.globalSearch.urlCache[slUrl];
+        if (slRaw && typeof slRaw === 'object') {
+            Object.entries(slRaw).forEach(([arcana, data]) => {
+                if (arcana.startsWith('EXTRA:')) return;
+                if (data['P5R Exclusive'] && gid === 'p5') return;
+                if (data['P4G Exclusive'] && gid === 'p4') return;
+                const charName = getSlCharacterName(gid, arcana);
+                entries.push({
+                    category:'sociallink', catLabel:meta.seriesId === 'p5' ? 'Confidant' : 'Social Link',
+                    gameId:gid, shortGame:meta.short, color:meta.color,
+                    title: charName ? `${charName} (${arcana})` : arcana,
+                    arcana,
+                    subtitle:`${meta.title} · ${arcana} Arcana`,
+                    searchBlob:`${arcana} ${charName || ''} ${data.name || ''}`.toLowerCase()
+                });
+            });
+        }
+
+        const clsRaw = S.globalSearch.urlCache[CLASSROOM_PATHS[gid]];
+        if (clsRaw) {
+            const clsList = flattenClassroom(clsRaw);
+            clsList.forEach(qa => {
+                entries.push({
+                    category:'classroom', catLabel:'Classroom', gameId:gid, shortGame:meta.short, color:meta.color,
+                    title:qa.Question || qa.Date || 'Classroom Question',
+                    queryToken: qa.Question || qa.Date || '',
+                    subtitle:`${qa.Date ? qa.Date + ' · ' : ''}Answer: ${qa.Answer || '-'}`,
+                    searchBlob:`${qa.Date || ''} ${qa.Question || ''} ${qa.Answer || ''}`.toLowerCase()
+                });
+            });
+        }
+    }
+
+    S.globalSearch.entries = entries;
+    S.globalSearch.indexedKey = configKey;
+    S.globalSearch.indexing = false;
+    if (S.screen === 'search') renderGlobalSearchResults();
+}
+
+function renderGlobalSearchResults() {
+    const statusEl = document.getElementById('globalSearchStatus');
+    const resultsEl = document.getElementById('globalSearchResults');
+    if (!statusEl || !resultsEl) return;
+
+    const q = (S.globalSearch.query || '').trim().toLowerCase();
+    const totalIndexed = S.globalSearch.entries.length;
+    if (!q) {
+        window._searchRenderedResults = [];
+        statusEl.textContent = S.globalSearch.indexing
+            ? 'Indexing compendium across all 7 games...'
+            : `${totalIndexed.toLocaleString()} entries indexed across 7 games.`;
+        resultsEl.innerHTML = `<div class="empty-state">Type a Persona, Shadow, Skill, Item, Request, Confidant, or Classroom question to search across all games.</div>`;
+        return;
+    }
+
+    const scored = [];
+    for (const item of S.globalSearch.entries) {
+        if (S.globalSearch.game !== 'all' && item.gameId !== S.globalSearch.game) continue;
+        if (S.globalSearch.category !== 'all' && item.category !== S.globalSearch.category) continue;
+        if (!item.searchBlob.includes(q)) continue;
+
+        const titleLc = item.title.toLowerCase();
+        let score = 5;
+        if (titleLc === q) score = 100;
+        else if (titleLc.startsWith(q)) score = 60;
+        else if (titleLc.includes(' ' + q)) score = 35;
+        else if (titleLc.includes(q)) score = 20;
+        scored.push({ score, item });
+    }
+
+    scored.sort((a, b) => (b.score - a.score) || a.item.title.localeCompare(b.item.title));
+    const capped = scored.slice(0, 80).map(s => s.item);
+    window._searchRenderedResults = capped;
+
+    statusEl.textContent = scored.length > capped.length
+        ? `Showing top ${capped.length} of ${scored.length} matches`
+        : `${scored.length} match${scored.length === 1 ? '' : 'es'} found`;
+
+    if (!capped.length) {
+        resultsEl.innerHTML = `<div class="empty-state">No matches found for "${escHtml(S.globalSearch.query.trim())}".</div>`;
+        return;
+    }
+
+    resultsEl.innerHTML = capped.map((it, idx) => {
+        const isSpoiler = it.category === 'enemy' && it.isBossOrMini && SPOILER_BOSS_REGEX.test(it.title);
+        const conceal = S.settings.noSpoilersMode && isSpoiler && !window['revealed_' + it.title];
+        const titleText = conceal ? 'Concealed Boss (Spoiler)' : it.title;
+        const subText = conceal ? 'Late-game boss hidden by No Spoilers Mode' : it.subtitle;
+        return `
+        <div class="row-card" onclick="openGlobalSearchResult(${idx})">
+            <div class="row-main">
+                <div class="row-name-line">
+                    <span class="row-name">${escHtml(titleText)}</span>
+                    <span class="saved-game-tag" style="color:${it.color};border-color:${it.color}44">${escHtml(it.shortGame)}</span>
+                    <span class="saved-game-tag">${escHtml(it.catLabel)}</span>
+                </div>
+                <div class="row-sub">${escHtml(subText)}</div>
+            </div>
+            <div class="row-chevron" style="color:${it.color}">${CHEVRON_SVG}</div>
+        </div>`;
+    }).join('');
+}
+
+async function openGlobalSearchResult(idx) {
+    const it = window._searchRenderedResults?.[idx];
+    if (!it) return;
+    if (it.category === 'enemy' && it.isBossOrMini && S.settings.noSpoilersMode && SPOILER_BOSS_REGEX.test(it.title) && !window['revealed_' + it.title]) {
+        window['revealed_' + it.title] = true;
+    }
+
+    S.series = inferSeriesForGame(it.gameId);
+    S.game = it.gameId;
+    S.favOnly = false;
+    S.aigisOnly = false;
+    S.arcanaFilter = '';
+
+    if (it.category === 'persona') {
+        await ensureGamePersonasLoaded(it.gameId);
+        S.query = '';
+        S.listMode = 'personas';
+        navigate('list');
+        openPersona(it.title);
+    } else if (it.category === 'enemy') {
+        await ensureGameEnemiesLoaded(it.gameId);
+        S.query = '';
+        S.enemyTab = it.enemyTab || 'enemies';
+        S.listMode = 'enemies';
+        navigate('list');
+        openEnemy(it.title, it.area || '');
+    } else if (it.category === 'skill') {
+        if (!S.rawData[`skills_${it.gameId}`] && SKILL_PATHS[it.gameId]) {
+            const raw = await fetchJsonCached(SKILL_PATHS[it.gameId]);
+            if (raw) S.rawData[`skills_${it.gameId}`] = normalizeListData(raw, 'skills');
+        }
+        S.skillQuery = '';
+        S.listMode = 'skills';
+        navigate('skills');
+        openSkill(it.title);
+        if (!isTablet()) document.getElementById('skillDetailContentWrap')?.scrollIntoView({ behavior: 'smooth' });
+    } else if (it.category === 'item') {
+        if (!S.rawData[`items_${it.gameId}`] && ITEM_PATHS[it.gameId]) {
+            const raw = await fetchJsonCached(ITEM_PATHS[it.gameId]);
+            if (raw) S.rawData[`items_${it.gameId}`] = normalizeListData(raw, 'items');
+        }
+        S.itemQuery = '';
+        S.listMode = 'items';
+        navigate('items');
+        openItem(it.title);
+        if (!isTablet()) document.getElementById('itemDetailContentWrap')?.scrollIntoView({ behavior: 'smooth' });
+    } else if (it.category === 'request') {
+        if (it.gameId === 'p3r') S.p3rRequestMode = it.p3rMode || 'main';
+        await getGameRequestsPool(it.gameId);
+        S.requestQuery = '';
+        S.listMode = 'requests';
+        navigate('requests');
+        openRequest(it.title);
+        if (!isTablet()) document.getElementById('requestDetailContentWrap')?.scrollIntoView({ behavior: 'smooth' });
+    } else if (it.category === 'sociallink') {
+        if (it.gameId === 'p3p') {
+            SL_PATHS['p3p'] = S.settings.p3pProtagonist === 'FEMC'
+                ? './data/social-links/p3p_femc_social_links.json'
+                : './data/social-links/p3p_male_social_links.json';
+        }
+        const raw = await fetchJsonCached(SL_PATHS[it.gameId]);
+        if (raw) {
+            S.slData = Object.entries(raw).filter(([arcana, data]) => {
+                if (arcana.startsWith('EXTRA:')) return false;
+                if (data['P5R Exclusive'] && it.gameId === 'p5') return false;
+                if (data['P4G Exclusive'] && it.gameId === 'p4') return false;
+                return true;
+            });
+        }
+        S.slQuery = '';
+        navigate('sociallinks');
+        openSlDetail(it.arcana);
+    } else if (it.category === 'classroom') {
+        S.query = it.queryToken || '';
+        S.listMode = 'classroom';
+        navigate('list');
+    }
+}
+
+/* ── Service Worker & Offline Cache Utilities ─────────────────────────────── */
+async function updateSwStatusLabel() {
+    const label = document.getElementById('swStatusLabel');
+    if (!label) return;
+    if (!('serviceWorker' in navigator)) {
+        label.textContent = 'Offline caching unavailable in this browser.';
+        return;
+    }
+    if (!location.protocol.startsWith('http')) {
+        label.textContent = 'Offline cache activates when served over HTTP/HTTPS.';
+        return;
+    }
+    try {
+        const reg = await navigator.serviceWorker.getRegistration('./sw.js');
+        if (reg && (reg.active || reg.waiting || reg.installing)) {
+            const cacheKeys = 'caches' in window ? await caches.keys() : [];
+            const activeCache = cacheKeys.find(k => k.startsWith('persona-companion-'));
+            if (activeCache) {
+                const c = await caches.open(activeCache);
+                const cachedCount = (await c.keys()).length;
+                label.textContent = `Offline worker active (${cachedCount} cached files)`;
+            } else {
+                label.textContent = 'Offline worker active';
+            }
+        } else {
+            label.textContent = 'Offline worker registering...';
+        }
+    } catch (_) {
+        label.textContent = 'Offline worker active';
+    }
+}
+
+async function refreshOfflineCache() {
+    const label = document.getElementById('swStatusLabel');
+    if (label) label.textContent = 'Refreshing offline cache...';
+    try {
+        if ('caches' in window) {
+            const keys = await caches.keys();
+            await Promise.all(keys.filter(k => k.startsWith('persona-companion-')).map(k => caches.delete(k)));
+        }
+        if ('serviceWorker' in navigator) {
+            const reg = await navigator.serviceWorker.getRegistration('./sw.js');
+            if (reg) await reg.update();
+        }
+        location.reload();
+    } catch (e) {
+        if (label) label.textContent = 'Refresh failed: ' + (e.message || 'Unknown error');
+    }
+}
