@@ -6,48 +6,41 @@ import android.graphics.BitmapFactory
 import android.util.Log
 import com.persona.companion.BuildConfig
 import java.io.File
-import java.io.InputStream
 
 object ImageUtils {
     private const val TAG = "ImageUtils"
     
     /**
-     * Load image from assets (debug) or downloaded files (release)
-     * Returns null if image doesn't exist
+     * Load bundled artwork from assets, falling back to legacy local files if present.
+     * Returns null if image doesn't exist.
      */
     fun loadImageFromAssets(context: Context, imagePath: String): Bitmap? {
         return try {
-            // Check downloaded files first (webp then png)
-            val downloadedFile = File(context.filesDir, imagePath)
-            if (downloadedFile.exists()) {
-                return BitmapFactory.decodeFile(downloadedFile.absolutePath)
-            }
             val altExtPath = if (imagePath.endsWith(".webp")) {
                 imagePath.removeSuffix(".webp") + ".png"
             } else {
                 imagePath.removeSuffix(".png") + ".webp"
             }
-            val altDownloaded = File(context.filesDir, altExtPath)
-            if (altDownloaded.exists()) {
-                return BitmapFactory.decodeFile(altDownloaded.absolutePath)
-            }
 
-            // Fallback: try assets (only works if images were bundled)
             if (BuildConfig.INCLUDE_IMAGES) {
                 try {
-                    val inputStream: InputStream = context.assets.open(imagePath)
-                    val bitmap = BitmapFactory.decodeStream(inputStream)
-                    inputStream.close()
-                    bitmap
+                    context.assets.open(imagePath).use { BitmapFactory.decodeStream(it) }?.let { return it }
                 } catch (_: Exception) {
-                    val inputStream: InputStream = context.assets.open(altExtPath)
-                    val bitmap = BitmapFactory.decodeStream(inputStream)
-                    inputStream.close()
-                    bitmap
+                    try {
+                        context.assets.open(altExtPath).use { BitmapFactory.decodeStream(it) }?.let { return it }
+                    } catch (_: Exception) {}
                 }
-            } else {
-                null
             }
+
+            val legacyFile = File(context.filesDir, imagePath)
+            if (legacyFile.exists()) {
+                return BitmapFactory.decodeFile(legacyFile.absolutePath)
+            }
+            val altLegacy = File(context.filesDir, altExtPath)
+            if (altLegacy.exists()) {
+                return BitmapFactory.decodeFile(altLegacy.absolutePath)
+            }
+            null
         } catch (e: Exception) {
             Log.d(TAG, "Image not found: $imagePath")
             null
@@ -118,28 +111,25 @@ object ImageUtils {
      */
     fun imageExists(context: Context, imagePath: String): Boolean {
         return try {
-            val file = File(context.filesDir, imagePath)
-            if (file.exists()) return true
-
             val altExtPath = if (imagePath.endsWith(".webp")) {
                 imagePath.removeSuffix(".webp") + ".png"
             } else {
                 imagePath.removeSuffix(".png") + ".webp"
             }
-            val altFile = File(context.filesDir, altExtPath)
-            if (altFile.exists()) return true
 
             if (BuildConfig.INCLUDE_IMAGES) {
                 try {
                     context.assets.open(imagePath).close()
-                    true
+                    return true
                 } catch (_: Exception) {
-                    context.assets.open(altExtPath).close()
-                    true
+                    try {
+                        context.assets.open(altExtPath).close()
+                        return true
+                    } catch (_: Exception) {}
                 }
-            } else {
-                false
             }
+
+            File(context.filesDir, imagePath).exists() || File(context.filesDir, altExtPath).exists()
         } catch (e: Exception) {
             false
         }

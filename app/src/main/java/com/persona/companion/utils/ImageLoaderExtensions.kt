@@ -8,7 +8,7 @@ import java.io.File
 
 /**
  * Configure this ImageRequest to load a persona image.
- * Prefers WebP (14.5MB total catalog) with automatic fallback to PNG.
+ * Prefers bundled WebP artwork, with fallback to legacy local files if present.
  */
 fun ImageRequest.Builder.personaImage(
     context: Context,
@@ -18,23 +18,20 @@ fun ImageRequest.Builder.personaImage(
     val webpPath = ImageUtils.getImagePath(name, isEnemy = false, gameId = game)
     val pngPath = ImageUtils.getImagePathPng(name, isEnemy = false, gameId = game)
 
-    val downloadedWebp = File(context.filesDir, webpPath)
-    val downloadedPng = File(context.filesDir, pngPath)
+    val legacyWebp = File(context.filesDir, webpPath)
+    val legacyPng = File(context.filesDir, pngPath)
 
     return when {
-        downloadedWebp.exists() -> this.data(downloadedWebp)
-        downloadedPng.exists() -> this.data(downloadedPng)
-        BuildConfig.INCLUDE_IMAGES -> {
-            // Assets bundled: try webp asset first
-            this.data("file:///android_asset/$webpPath")
-        }
+        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$webpPath")
+        legacyWebp.exists() -> this.data(legacyWebp)
+        legacyPng.exists() -> this.data(legacyPng)
         else -> this.data(R.drawable.placeholder_persona)
     }
 }
 
 /**
  * Configure this ImageRequest to load an enemy image.
- * Prefers WebP (14.5MB total catalog) with automatic fallback to PNG.
+ * Prefers bundled WebP artwork, with fallback to legacy local files if present.
  */
 fun ImageRequest.Builder.enemyImage(
     context: Context,
@@ -44,15 +41,13 @@ fun ImageRequest.Builder.enemyImage(
     val webpPath = ImageUtils.getImagePath(name, isEnemy = true, gameId = game)
     val pngPath = ImageUtils.getImagePathPng(name, isEnemy = true, gameId = game)
 
-    val downloadedWebp = File(context.filesDir, webpPath)
-    val downloadedPng = File(context.filesDir, pngPath)
+    val legacyWebp = File(context.filesDir, webpPath)
+    val legacyPng = File(context.filesDir, pngPath)
 
     return when {
-        downloadedWebp.exists() -> this.data(downloadedWebp)
-        downloadedPng.exists() -> this.data(downloadedPng)
-        BuildConfig.INCLUDE_IMAGES -> {
-            this.data("file:///android_asset/$webpPath")
-        }
+        BuildConfig.INCLUDE_IMAGES -> this.data("file:///android_asset/$webpPath")
+        legacyWebp.exists() -> this.data(legacyWebp)
+        legacyPng.exists() -> this.data(legacyPng)
         else -> this.data(R.drawable.placeholder_enemy)
     }
 }

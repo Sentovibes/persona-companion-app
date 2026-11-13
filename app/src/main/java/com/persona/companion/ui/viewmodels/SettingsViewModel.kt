@@ -1,21 +1,21 @@
 package com.persona.companion.ui.viewmodels
 
 import android.app.Application
-import android.content.Context
-import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.persona.companion.data.AppPreferences
-import com.persona.companion.data.ImageDownloadManager
-import com.persona.companion.data.imagedownload.DownloadPhase
-import com.persona.companion.data.imagedownload.DownloadProgress
-import com.persona.companion.data.imagedownload.DownloadStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import java.io.File
+
+data class LegacyImagesStatus(
+    val exists: Boolean = false,
+    val fileCount: Int = 0,
+    val storageSizeBytes: Long = 0L
+)
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -24,69 +24,41 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     private val _settings = MutableStateFlow(prefs.getSettings())
     val settings = _settings.asStateFlow()
 
-    private val _downloadStatus = MutableStateFlow(DownloadStatus(false, null, null, 0L))
-    val downloadStatus = _downloadStatus.asStateFlow()
+    private val _legacyImagesStatus = MutableStateFlow(LegacyImagesStatus())
+    val legacyImagesStatus = _legacyImagesStatus.asStateFlow()
 
-    private val _downloadProgress = MutableStateFlow<DownloadProgress?>(null)
-    val downloadProgress = _downloadProgress.asStateFlow()
-
-    private val _isDownloading = MutableStateFlow(false)
-    val isDownloading = _isDownloading.asStateFlow()
-
-    private val _errorMessage = MutableStateFlow<String?>(null)
-    val errorMessage = _errorMessage.asStateFlow()
+    private val _statusMessage = MutableStateFlow<String?>(null)
+    val statusMessage = _statusMessage.asStateFlow()
 
     init {
-        refreshDownloadStatus()
+        refreshLegacyImagesStatus()
     }
 
-    fun refreshDownloadStatus() {
-        viewModelScope.launch {
-            val status = withContext(Dispatchers.IO) {
-                ImageDownloadManager.getDownloadStatus(getApplication())
-            }
-            _downloadStatus.value = status
+    fun refreshLegacyImagesStatus() {
+        viewModelScope.launch(Dispatchers.IO) {
+            _legacyImagesStatus.value = scanLegacyImagesDir()
         }
     }
 
-    fun importFromUri(context: Context, uri: Uri) {
-        _isDownloading.value = true
-        _errorMessage.value = null
-        _downloadProgress.value = null
+    fun clearLegacyImages() {
         viewModelScope.launch(Dispatchers.IO) {
-            val result = ImageDownloadManager.importFromUri(context, uri) { progress ->
-                _downloadProgress.value = progress
-                if (progress.phase == DownloadPhase.COMPLETE) {
-                    _isDownloading.value = false
-                    val status = ImageDownloadManager.getDownloadStatus(context)
-                    _downloadStatus.value = status
-                } else if (progress.phase == DownloadPhase.ERROR) {
-                    _isDownloading.value = false
-                    _errorMessage.value = progress.error
+            try {
+                val imagesDir = File(getApplication<Application>().filesDir, "images")
+                if (imagesDir.exists()) {
+                    imagesDir.deleteRecursively()
                 }
-            }
-            result.onFailure { error ->
-                _isDownloading.value = false
-                _errorMessage.value = error.message ?: "Import failed"
-            }
-        }
-    }
-
-    fun deleteImages() {
-        viewModelScope.launch(Dispatchers.IO) {
-            val result = ImageDownloadManager.deleteImages(getApplication())
-            result.onSuccess {
-                val status = ImageDownloadManager.getDownloadStatus(getApplication())
-                _downloadStatus.value = status
-                _errorMessage.value = null
-            }.onFailure { error ->
-                _errorMessage.value = error.message ?: "Failed to delete images"
+                val legacyPrefs = getApplication<Application>().getSharedPreferences("image_download_prefs", 0)
+                legacyPrefs.edit().clear().apply()
+                _legacyImagesStatus.value = scanLegacyImagesDir()
+                _statusMessage.value = "Legacy image cache cleared."
+            } catch (e: Exception) {
+                _statusMessage.value = e.message ?: "Failed to clear legacy image cache"
             }
         }
     }
 
-    fun clearError() {
-        _errorMessage.value = null
+    fun clearStatusMessage() {
+        _statusMessage.value = null
     }
 
     fun toggleDlc(show: Boolean) {
@@ -97,5 +69,23 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     fun toggleEpisodeAigis(show: Boolean) {
         prefs.setShowEpisodeAigis(show)
         _settings.update { it.copy(showEpisodeAigis = show) }
+    }
+
+    private fun scanLegacyImagesDir(): LegacyImagesStatus {
+        val imagesDir = File(getApplication<Application>().filesDir, "images")
+        if (!imagesDir.exists() || !imagesDir.isDirectory) {
+            return LegacyImagesStatus()
+        }
+        var count = 0
+        var totalBytes = 0L
+        imagesDir.walkTopDown().filter { it.isFile }.forEach { file ->
+            count++
+            totalBytes += file.length()
+        }
+        return LegacyImagesStatus(
+            exists = count > 0,
+            fileCount = count,
+            storageSizeBytes = totalBytes
+        )
     }
 }

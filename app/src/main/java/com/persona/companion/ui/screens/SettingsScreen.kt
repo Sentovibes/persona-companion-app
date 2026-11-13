@@ -36,7 +36,6 @@ import com.persona.companion.ui.components.ImagesSettingsSection
 import com.persona.companion.ui.viewmodels.SettingsViewModel
 import com.persona.companion.utils.UpdateChecker
 import kotlinx.coroutines.launch
-import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -194,7 +193,7 @@ fun SettingsScreen(
             item {
                 Spacer(Modifier.height(16.dp))
                 Text(
-                    text = "HD Images",
+                    text = "Artwork",
                     style = MaterialTheme.typography.titleMedium,
                     color = TextPrimary,
                     modifier = Modifier.padding(vertical = 8.dp)
@@ -203,69 +202,6 @@ fun SettingsScreen(
 
             item {
                 ImagesSettingsSection(vm = vm)
-            }
-            
-            // Debug info button (only in debug builds)
-            if (BuildConfig.ENABLE_DEBUG_FEATURES) {
-                item {
-                    var debugInfo by remember { mutableStateOf<String?>(null) }
-                    var showDebugDialog by remember { mutableStateOf(false) }
-                    
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(SurfaceCard)
-                            .clickable {
-                                val debugFile = File(context.getExternalFilesDir(null), "import_debug.txt")
-                                debugInfo = if (debugFile.exists()) {
-                                    debugFile.readText()
-                                } else {
-                                    "No debug file found. Import images first."
-                                }
-                                showDebugDialog = true
-                            }
-                            .padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Show Import Debug Info",
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = TextPrimary
-                            )
-                            Spacer(Modifier.height(4.dp))
-                            Text(
-                                text = "View detailed import diagnostics",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = TextSecondary
-                            )
-                        }
-                    }
-                    
-                    if (showDebugDialog) {
-                        AlertDialog(
-                            onDismissRequest = { showDebugDialog = false },
-                            title = { Text("Import Debug Info") },
-                            text = {
-                                androidx.compose.foundation.lazy.LazyColumn {
-                                    item {
-                                        Text(
-                                            text = debugInfo ?: "",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace
-                                        )
-                                    }
-                                }
-                            },
-                            confirmButton = {
-                                TextButton(onClick = { showDebugDialog = false }) {
-                                    Text("Close")
-                                }
-                            }
-                        )
-                    }
-                }
             }
 
             item {
@@ -344,7 +280,7 @@ fun SettingsScreen(
                 SettingItem(
                     icon = Icons.Default.Info,
                     title = "About",
-                    description = "Version ${BuildConfig.VERSION_NAME} • Made with  for Persona fans",
+                    description = "Version ${BuildConfig.VERSION_NAME} • Made for Persona fans",
                     onClick = {}
                 )
             }
@@ -376,8 +312,9 @@ fun SettingsScreen(
                         )
                     }
                     Text(
-                        text = "Support",
-                        style = MaterialTheme.typography.headlineMedium
+                        text = "Ko-fi",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = AccentBrass
                     )
                 }
             }

@@ -42,10 +42,12 @@ class RequestRepository(
                 } else emptyList()
 
                 if (baseJson.isNotEmpty() || aigisJson.isNotEmpty()) {
-                    // Completion is user state living in the same table — carry it across the resync by name
-                    val completedNames = requestDao.getRequestsForGameSync(gameId)
+                    // Completion is user state living in the same table (plus any imported pending quests) — carry across resync by name
+                    val pendingKey = "pending_completed_requests_$gameId"
+                    val pendingCompleted = syncPrefs.getStringSet(pendingKey, emptySet()) ?: emptySet()
+                    val completedNames = (requestDao.getRequestsForGameSync(gameId)
                         .filter { it.isCompleted }
-                        .map { it.name }
+                        .map { it.name } + pendingCompleted)
                         .toSet()
 
                     fun toEntity(req: com.persona.companion.models.Request, sortOrder: Int, aigis: Boolean): RequestEntity {
@@ -87,7 +89,10 @@ class RequestRepository(
 
                     requestDao.deleteForGame(gameId)
                     requestDao.insertAll(entities)
-                    syncPrefs.edit().putInt(syncKey, com.persona.companion.BuildConfig.VERSION_CODE).apply()
+                    syncPrefs.edit()
+                        .putInt(syncKey, com.persona.companion.BuildConfig.VERSION_CODE)
+                        .remove(pendingKey)
+                        .apply()
                     Log.d("RequestRepository", "Synced ${entities.size} requests to DB (${aigisJson.size} Aigis)")
                 }
             }

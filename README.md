@@ -93,8 +93,7 @@ Or open the store page directly: **[Persona Companion on Google Play](https://pl
 
 ### Android APK (Direct Download)
 1. Download the latest release APK from the GitHub Releases tab.
-2. Install the APK on an Android device (Android 8.0+ required).
-3. Optional: Enable HD Image Support via the Settings menu.
+2. Install the APK on an Android device (Android 8.0+ required) with the full WebP artwork catalog bundled offline.
 
 ---
 
@@ -127,9 +126,9 @@ git clone https://github.com/Sentovibes/persona-companion-app.git
 ---
 
 ## Roadmap: What is Next?
-- [ ] **Universal JSON Backup & Restore**: Cross-platform transfer of favorites, quest checkmarks, and notes between Android and Web PWA.
+- [x] **Universal JSON Backup & Restore**: Cross-platform transfer of favorites, quest checkmarks, and notes between Android and Web PWA.
 - [ ] **Mayoido Antiques Weapon Fusion Directory**: Nihil weapon and heart item crafting tables for Persona 3 Reload and Episode Aigis.
-- [ ] **Skill Inheritance Rules Matrix**: Display incompatible elements and inheritance slot caps in the compendium.
+- [x] **Skill Inheritance Rules Matrix**: Display incompatible elements and inheritance slot caps in the compendium.
 - [ ] **Custom Persona Build Planner**: Teammate 8-skill build planner with Jazz Jin and bike skill recommendations.
 
 ---

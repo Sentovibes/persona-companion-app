@@ -4,16 +4,12 @@ import android.app.UiModeManager
 import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.persona.companion.BuildConfig
-import com.persona.companion.data.ImageDownloadManager
 
 /**
  * Device type classification
@@ -99,15 +95,8 @@ object DeviceUtils {
      * Check if images should be loaded for this device
      * Now checks if images are actually available (bundled or downloaded)
      */
-    fun shouldLoadImages(context: Context): Boolean {
-        // Check if images are bundled in the APK
-        if (BuildConfig.INCLUDE_IMAGES) {
-            return true
-        }
-        
-        // Check if images have been downloaded (use ImageDownloadManager)
-        return ImageDownloadManager.areImagesDownloaded(context)
-    }
+    @Suppress("UNUSED_PARAMETER")
+    fun shouldLoadImages(context: Context): Boolean = BuildConfig.INCLUDE_IMAGES
     
     /**
      * Get appropriate image resolution for device
@@ -155,17 +144,7 @@ fun rememberScreenSize(): ScreenSize {
  * Loads asynchronously on IO dispatcher to avoid blocking the main thread.
  */
 @Composable
-fun rememberShouldLoadImages(): Boolean {
-    val context = LocalContext.current
-    // Default to false until the IO check completes — avoids blocking composition
-    var result by remember { mutableStateOf(BuildConfig.INCLUDE_IMAGES) }
-    androidx.compose.runtime.LaunchedEffect(Unit) {
-        result = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-            DeviceUtils.shouldLoadImages(context)
-        }
-    }
-    return result
-}
+fun rememberShouldLoadImages(): Boolean = BuildConfig.INCLUDE_IMAGES
 
 /**
  * Get content padding based on device type
