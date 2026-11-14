@@ -2,11 +2,11 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v8.1
+# Persona Companion App v8.1.1
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Google Play](https://img.shields.io/badge/Google_Play-Persona_Companion-green?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.persona.companion)
-[![Version](https://img.shields.io/badge/Version-8.1-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-8.1.1-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
@@ -33,6 +33,7 @@ The Persona Companion App is a high-performance, native Android application buil
 
 ## v8.1: Built-in WebP Artworks, Pinned Confidants & Universal Backup
 
+- **v8.1.1 Hotfix**: Removed stale P3 FES compendium merge from Persona 3 Reload and added unique index-qualified list keys to prevent Compose duplicate-key crashes when Episode Aigis is enabled.
 - **Built-in WebP Compendium**: Migrated all 962 Persona & Enemy visuals to a compact 14.1 MB WebP catalog bundled directly offline inside the app (zero external 1 GB download required).
 - **Pinned & Maxed Confidants**: Pin active Social Links and Confidants to the top for instant hangout answers, and mark completed ones as Maxed across Android and Web PWA.
 - **Universal JSON Backup & Restore**: Export and import favorites, completed quests, pinned/maxed confidants, and settings seamlessly between Android and the Web PWA.
