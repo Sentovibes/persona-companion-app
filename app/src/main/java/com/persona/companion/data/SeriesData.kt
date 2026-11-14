@@ -50,7 +50,6 @@ object SeriesData {
                     itemPath = "data/items/p3r_items.json",
                     socialLinkPath = "data/social-links/p3r_social_links.json",
                     requestPath = "data/requests/p3r_requests.json",
-                    aigisDataPath = "data/persona3/personas.json",
                     aigisRequestPath = "data/requests/aigis_requests.json",
                     aigisItemPath = "data/items/p3fes_items.json"
                 )

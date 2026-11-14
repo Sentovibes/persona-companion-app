@@ -5,7 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -134,7 +134,7 @@ fun PersonaListScreen(
                                     item {
                                         ArcanaHeader(arcana, series.color)
                                     }
-                                    items(personas, key = { it.name }) { persona ->
+                                    itemsIndexed(personas, key = { index, persona -> "${arcana}_${persona.name}_$index" }) { _, persona ->
                                         PersonaRow(
                                             persona     = persona,
                                             accentColor = series.color,
@@ -152,7 +152,7 @@ fun PersonaListScreen(
                             }
                             else -> {
                                 // Flat list for level/name sorting
-                                items(state.filtered, key = { it.name }) { persona ->
+                                itemsIndexed(state.filtered, key = { index, persona -> "${persona.name}_$index" }) { _, persona ->
                                     PersonaRow(
                                         persona     = persona,
                                         accentColor = series.color,

@@ -70,7 +70,8 @@ class PersonaListViewModel(application: Application) : AndroidViewModel(applicat
                     try {
                         val aigisPersonas = repo.getPersonas(aigisDataPath)
                         Log.d(TAG, "Loaded ${aigisPersonas.size} Aigis personas")
-                        all.addAll(aigisPersonas)
+                        val existingNames = all.mapTo(HashSet()) { it.name }
+                        all.addAll(aigisPersonas.filter { existingNames.add(it.name) })
                     } catch (e: Exception) {
                         Log.e(TAG, "Error loading Aigis personas", e)
                     }
