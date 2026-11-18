@@ -5,11 +5,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -22,8 +25,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.navigation.NavController
 import com.persona.companion.R
 import com.persona.companion.data.SeriesData
@@ -33,9 +40,12 @@ import com.persona.companion.ui.components.AdaptiveSeriesLayout
 import com.persona.companion.ui.components.CastButton
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
+import com.persona.companion.utils.JsonLoader
 import com.persona.companion.utils.rememberContentPadding
 import com.persona.companion.utils.rememberDeviceType
 import com.persona.companion.utils.rememberTextScaleFactor
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.platform.LocalContext
@@ -53,6 +63,51 @@ fun HomeScreen(navController: NavController) {
     val textScale = rememberTextScaleFactor()
     var showWhatsNew by remember {
         mutableStateOf(userPrefs.getLastSeenVersionCode() < BuildConfig.VERSION_CODE)
+    }
+
+    var favCount by remember { mutableStateOf(0) }
+    var recentCount by remember { mutableStateOf(0) }
+    var latestContinue by remember { mutableStateOf<Triple<UserPreferences.RecentItem, Boolean, String?>?>(null) }
+    var refreshTrigger by remember { mutableStateOf(0) }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                refreshTrigger++
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    LaunchedEffect(refreshTrigger) {
+        val favs = userPrefs.getFavoritePersonas().size + userPrefs.getFavoriteEnemies().size
+        val recPersonas = userPrefs.getRecentPersonas()
+        val recEnemies = userPrefs.getRecentEnemies()
+        favCount = favs
+        recentCount = recPersonas.size + recEnemies.size
+
+        val topPersona = recPersonas.firstOrNull()
+        val topEnemy = recEnemies.firstOrNull()
+        val usePersona = when {
+            topPersona != null && topEnemy != null -> topPersona.timestamp >= topEnemy.timestamp
+            topPersona != null -> true
+            else -> false
+        }
+        if (topPersona == null && topEnemy == null) {
+            latestContinue = null
+        } else if (usePersona && topPersona != null) {
+            latestContinue = Triple(topPersona, false, null)
+        } else if (topEnemy != null) {
+            val resolvedArea = withContext(Dispatchers.IO) {
+                val game = SeriesData.findGame(topEnemy.seriesId, topEnemy.gameId)
+                val base = game?.enemyPath?.let { JsonLoader.loadEnemies(context, it) }.orEmpty()
+                val aigis = game?.aigisEnemyPath?.let { JsonLoader.loadEnemies(context, it) }.orEmpty()
+                (base + aigis).firstOrNull { it.name == topEnemy.name }?.area
+            }
+            latestContinue = Triple(topEnemy, true, resolvedArea)
+        }
     }
     
     Scaffold(
@@ -80,7 +135,8 @@ fun HomeScreen(navController: NavController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(horizontal = contentPadding),
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = contentPadding, vertical = 12.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -118,15 +174,90 @@ fun HomeScreen(navController: NavController) {
                 QuickAccessButton(
                     icon = Icons.Default.Favorite,
                     label = "Favorites",
+                    badgeCount = favCount,
                     onClick = { navController.navigate(Screen.Favorites.route) },
                     modifier = Modifier.weight(1f)
                 )
                 QuickAccessButton(
                     icon = Icons.Default.History,
                     label = "Recent",
+                    badgeCount = recentCount,
                     onClick = { navController.navigate(Screen.RecentlyViewed.route) },
                     modifier = Modifier.weight(1f)
                 )
+            }
+
+            val continueData = latestContinue
+            if (continueData != null) {
+                val (recentItem, isEnemy, enemyArea) = continueData
+                val seriesColor = SeriesData.findSeries(recentItem.seriesId)?.color ?: AccentBlue
+                if (!isEnemy || !enemyArea.isNullOrBlank()) {
+                    Spacer(modifier = Modifier.height(14.dp))
+                    Surface(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(10.dp),
+                        color = SurfaceCard,
+                        border = BorderStroke(1.dp, seriesColor.copy(alpha = 0.4f))
+                    ) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable {
+                                    if (isEnemy && !enemyArea.isNullOrBlank()) {
+                                        navController.navigate(
+                                            Screen.EnemyDetail.createRoute(
+                                                recentItem.seriesId,
+                                                recentItem.gameId,
+                                                recentItem.name,
+                                                enemyArea
+                                            )
+                                        )
+                                    } else {
+                                        navController.navigate(
+                                            Screen.PersonaDetail.createRoute(
+                                                recentItem.seriesId,
+                                                recentItem.gameId,
+                                                recentItem.name
+                                            )
+                                        )
+                                    }
+                                }
+                                .padding(horizontal = 14.dp, vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.PlayArrow,
+                                contentDescription = null,
+                                tint = seriesColor,
+                                modifier = Modifier.size(20.dp)
+                            )
+                            Spacer(modifier = Modifier.width(10.dp))
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = "CONTINUE",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = seriesColor,
+                                    fontWeight = FontWeight.Bold,
+                                    letterSpacing = 0.8.sp
+                                )
+                                Text(
+                                    text = "${recentItem.name} · ${getGameShortTitle(recentItem.gameId)}",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = TextPrimary,
+                                    fontWeight = FontWeight.SemiBold,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                            Icon(
+                                imageVector = Icons.Default.ChevronRight,
+                                contentDescription = "Resume",
+                                tint = TextSecondary,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
+                    }
+                }
             }
 
             Spacer(modifier = Modifier.height(if (deviceType == DeviceType.TV) 40.dp else 24.dp))
@@ -346,6 +477,7 @@ private fun getGameShortTitle(gameId: String): String = when (gameId) {
 private fun QuickAccessButton(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     label: String,
+    badgeCount: Int = 0,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -371,15 +503,30 @@ private fun QuickAccessButton(
                     imageVector = icon,
                     contentDescription = label,
                     tint = TextPrimary,
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier.size(18.dp)
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(6.dp))
                 Text(
                     text = label,
                     style = MaterialTheme.typography.bodyMedium,
                     color = TextPrimary,
                     fontWeight = FontWeight.Medium
                 )
+                if (badgeCount > 0) {
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = SurfaceRaised
+                    ) {
+                        Text(
+                            text = if (badgeCount > 99) "99+" else "$badgeCount",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = TextSecondary,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(horizontal = 5.dp, vertical = 1.dp)
+                        )
+                    }
+                }
             }
         }
     }

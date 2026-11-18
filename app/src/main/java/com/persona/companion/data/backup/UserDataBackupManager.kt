@@ -29,6 +29,7 @@ data class BackupPayload(
     @SerializedName("completedRequests") val completedRequests: List<CompletedRequestEntry> = emptyList(),
     @SerializedName("pinnedSocialLinks") val pinnedSocialLinks: Set<String> = emptySet(),
     @SerializedName("maxedSocialLinks") val maxedSocialLinks: Set<String> = emptySet(),
+    @SerializedName("ownedPersonas") val ownedPersonas: Set<String> = emptySet(),
     @SerializedName("preferences") val preferences: Map<String, String> = emptyMap()
 )
 
@@ -82,6 +83,7 @@ object UserDataBackupManager {
             completedRequests = dbCompleted + pendingCompleted,
             pinnedSocialLinks = userPrefs.getPinnedSocialLinks(),
             maxedSocialLinks = userPrefs.getMaxedSocialLinks(),
+            ownedPersonas = userPrefs.getOwnedPersonas(),
             preferences = prefsMap
         )
     }
@@ -100,7 +102,8 @@ object UserDataBackupManager {
                     payload.favoriteEnemies.size +
                     payload.completedRequests.size +
                     payload.pinnedSocialLinks.size +
-                    payload.maxedSocialLinks.size
+                    payload.maxedSocialLinks.size +
+                    payload.ownedPersonas.size
             )
         } catch (e: Exception) {
             Result.failure(e)
@@ -153,6 +156,13 @@ object UserDataBackupManager {
             rootObj.getAsJsonArray("maxedSocialLinks")?.forEach { elem ->
                 if (elem.isJsonPrimitive && elem.asString.isNotBlank()) {
                     userPrefs.addMaxedSocialLink(elem.asString)
+                    restoredCount++
+                }
+            }
+
+            rootObj.getAsJsonArray("ownedPersonas")?.forEach { elem ->
+                normalizeFavoriteId(elem)?.let {
+                    userPrefs.addOwnedPersona(it)
                     restoredCount++
                 }
             }

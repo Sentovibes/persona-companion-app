@@ -1,3 +1,34 @@
+# Release Notes: v8.2.0 (In-Game Affinity Matrix, Compendium Checklist & QoL)
+
+Version: **8.2.0**  
+Phone Version Code: **67**  
+Release Type: **Feature & Quality-of-Life Release**  
+
+---
+
+## Highlights & New Features
+
+### 1. In-Game Elemental Affinity Matrix & Repaired Element Icons
+- **Persona & Enemy Affinity Grid**: Replaced plain resistance text on Enemy detail screens (including multi-phase bosses and enemy parts) and Persona detail screens with a game-accurate elemental matrix (`Wk`, `Rs`, `Nu`, `Rp`, `Dr`, `-`) matching each title's canonical element order (P3 10-element, P4 8-element, P5 10-element).
+- **Boss Weakness & Resistance Chips**: Replaced raw text in Boss Strategy guides with color-coded element chips and icons while preserving multi-target/phase labels.
+- **Complete Vector Icons**: Replaced truncated element VectorDrawables (`Light`, `Dark`, `Nuke`, `Almighty`, `Ailment`, `Recovery`, `Support`) and added dedicated icons for `Slash`, `Gun`/`Pierce`, and `Passive`.
+
+### 2. Compendium Ownership Checklist
+- **Registration Tracking**: Mark any Persona as Registered from the Persona list or detail screen, with completion progress (`X / Y Registered`) and `All / Owned / Missing` quick filters.
+- **Fusion Filter & Badges**: Filter Reverse Lookup fusion recipes to **Owned Only** ingredients and see `Owned` tags directly on ingredient rows.
+- **Backup Parity**: Compendium ownership syncs with JSON export/restore backups.
+
+### 3. Cross-Screen Deep Linking & Inline Skill Details
+- **Persona to Fusion**: Added a **Fuse** shortcut in the Persona detail top bar to jump straight to that Persona's Reverse Lookup recipes.
+- **Skill Learners & Fusion Ingredients**: Tapping any Persona under **LEARNED BY** in the Skill list or any ingredient in a Fusion recipe now opens its Persona detail screen.
+- **Expandable Skills**: Skill rows on Persona detail screens show element icons and expand inline to display element, SP/HP cost, and effect description.
+
+### 4. Classroom Search & Home Quick-Resume
+- **Classroom Search & Month Filters**: Filter classroom and exam answers by keyword, date, month (`Apr` to `Feb`), or `Exams`.
+- **Home Continue Card & Counts**: Resume your most recently viewed Persona or Enemy directly from Home with live `Favorites` and `Recent` counts.
+
+---
+
 # Release Notes: v8.0 (Global Search, No Spoilers Mode & 100% Franchise Bestiary)
 
 Version: **8.0**  

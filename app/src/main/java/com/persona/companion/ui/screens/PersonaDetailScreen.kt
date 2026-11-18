@@ -1,18 +1,22 @@
 package com.persona.companion.ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -21,6 +25,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,11 +36,17 @@ import com.persona.companion.R
 import com.persona.companion.data.PersonaRepository
 import com.persona.companion.data.SeriesData
 import com.persona.companion.data.UserPreferences
+import com.persona.companion.data.repositories.SkillRepository
 import com.persona.companion.models.Persona
 import com.persona.companion.models.PersonaSeries
+import com.persona.companion.models.Skill
+import com.persona.companion.navigation.Screen
 import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.AffinityElementMatrix
 import com.persona.companion.ui.components.FullImageDialog
 import com.persona.companion.ui.components.ProfileImage
+import com.persona.companion.ui.components.elementIconRes
+import com.persona.companion.ui.components.elementIconTint
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
@@ -61,15 +72,23 @@ fun PersonaDetailScreen(
     val shouldLoadImages = rememberShouldLoadImages()
 
     var persona by remember { mutableStateOf<com.persona.companion.models.Persona?>(null) }
+    var skillsMap by remember { mutableStateOf<Map<String, Skill>>(emptyMap()) }
 
-    LaunchedEffect(personaName, game.dataPath) {
+    LaunchedEffect(personaName, game.dataPath, game.skillPath) {
         persona = withContext(kotlinx.coroutines.Dispatchers.IO) {
             PersonaRepository(context).getPersonaByName(game.dataPath, personaName)
+        }
+        val path = game.skillPath
+        if (!path.isNullOrBlank()) {
+            skillsMap = withContext(kotlinx.coroutines.Dispatchers.IO) {
+                SkillRepository(context).getSkills(path).associateBy { it.name.lowercase() }
+            }
         }
     }
 
     val personaId = persona?.let { FilterUtils.getPersonaId(seriesId, gameId, it) } ?: ""
-    var isFavorite by remember { mutableStateOf(userPrefs.isFavoritePersona(personaId)) }
+    var isFavorite by remember(personaId) { mutableStateOf(personaId.isNotEmpty() && userPrefs.isFavoritePersona(personaId)) }
+    var isOwned by remember(personaId) { mutableStateOf(personaId.isNotEmpty() && userPrefs.isPersonaOwned(personaId)) }
     var showFullImage by remember { mutableStateOf(false) }
     
     // Track view in history
@@ -92,6 +111,28 @@ fun PersonaDetailScreen(
                 actions = {
                     val p = persona
                     if (p != null) {
+                        TextButton(
+                            onClick = {
+                                navController.navigate(Screen.Fusion.createRoute(seriesId, gameId, p.name))
+                            }
+                        ) {
+                            Text(
+                                text = "Fuse",
+                                color = series.color,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                        IconButton(onClick = {
+                            if (personaId.isNotEmpty()) {
+                                isOwned = userPrefs.toggleOwnedPersona(personaId)
+                            }
+                        }) {
+                            Icon(
+                                imageVector = if (isOwned) Icons.Default.CheckCircle else Icons.Outlined.CheckCircle,
+                                contentDescription = if (isOwned) "Registered in Compendium" else "Mark as Registered",
+                                tint = if (isOwned) Color(0xFF4CAF50) else TextSecondary
+                            )
+                        }
                         IconButton(onClick = {
                             com.persona.companion.utils.ShareUtils.sharePersona(
                                 context,
@@ -140,6 +181,7 @@ fun PersonaDetailScreen(
                     persona = p,
                     series = series,
                     gameId = gameId,
+                    skillsMap = skillsMap,
                     onImageClick = { showFullImage = true }
                 )
             },
@@ -163,7 +205,13 @@ fun PersonaDetailScreen(
 }
 
 @Composable
-private fun PersonaStatsContent(persona: Persona, series: PersonaSeries, gameId: String = "", onImageClick: () -> Unit = {}) {
+private fun PersonaStatsContent(
+    persona: Persona,
+    series: PersonaSeries,
+    gameId: String = "",
+    skillsMap: Map<String, Skill> = emptyMap(),
+    onImageClick: () -> Unit = {}
+) {
     HeroSection(persona, series.color, gameId, onImageClick)
     
     Spacer(modifier = Modifier.height(16.dp))
@@ -191,12 +239,17 @@ private fun PersonaStatsContent(persona: Persona, series: PersonaSeries, gameId:
         SectionHeader("Skills")
         Spacer(modifier = Modifier.height(8.dp))
         persona.skills.forEach { (skillName, skillLevel) ->
-            SkillRow(skillName, skillLevel, series.color)
+            SkillRow(
+                name = skillName,
+                level = skillLevel,
+                accentColor = series.color,
+                skillInfo = skillsMap[skillName.lowercase()]
+            )
             Spacer(modifier = Modifier.height(8.dp))
         }
     }
 
-    AffinitiesSection(persona)
+    AffinitiesSection(persona, gameId)
 }
 
 @Composable
@@ -309,91 +362,139 @@ private fun StatBar(label: String, value: Int, maxValue: Int, accentColor: Color
 }
 
 @Composable
-private fun SkillRow(name: String, level: Double, accentColor: Color) {
-    Row(modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).background(SurfaceCard).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(text = name, style = MaterialTheme.typography.bodyMedium, color = TextPrimary, modifier = Modifier.weight(1f))
-        val label = when {
-            level < 1.0 -> "Innate"
-            level >= 100 -> "Special"
-            else -> "Lv. ${level.toInt()}"
-        }
-        val labelColor = when {
-            level < 1.0 -> accentColor
-            level >= 100 -> Color(0xFFFFD700) // Gold for special skills
-            else -> TextSecondary
-        }
-        Text(text = label, style = MaterialTheme.typography.labelSmall, color = labelColor)
+private fun SkillRow(
+    name: String,
+    level: Double,
+    accentColor: Color,
+    skillInfo: Skill? = null
+) {
+    var expanded by remember(name) { mutableStateOf(false) }
+    val label = when {
+        level < 1.0 -> "Innate"
+        level >= 100 -> "Special"
+        else -> "Lv. ${level.toInt()}"
     }
-}
-
-@Composable
-private fun AffinitiesSection(persona: Persona) {
-    Column(modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(SurfaceCard).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        SectionHeader("Affinities")
-        AffinityRow("Weak", persona.weaknesses, Color(0xFFE57373))
-        AffinityRow("Resists", persona.resistances, Color(0xFF81C784))
-        AffinityRow("Null", persona.nullifies, Color(0xFFB0BEC5))
-        AffinityRow("Repel", persona.repels, Color(0xFF64B5F6))
-        AffinityRow("Absorb", persona.absorbs, Color(0xFFFFD54F))
+    val labelColor = when {
+        level < 1.0 -> accentColor
+        level >= 100 -> Color(0xFFFFD700)
+        else -> TextSecondary
     }
-}
+    val elemIcon = skillInfo?.let { elementIconRes(it.element) }
 
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun AffinityRow(label: String, elements: List<String>, chipColor: Color) {
-    if (elements.isEmpty()) return
-
-    Column {
-        Text(text = label, style = MaterialTheme.typography.labelSmall, color = TextSecondary)
-        FlowRow(
-            modifier = Modifier.padding(top = 4.dp),
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .background(SurfaceCard)
+            .let { mod ->
+                if (skillInfo != null) mod.clickable { expanded = !expanded } else mod
+            }
+            .padding(horizontal = 16.dp, vertical = 14.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            elements.forEach { element ->
-                val iconRes = when (element) {
-                    "Fire" -> com.persona.companion.R.drawable.ic_fire
-                    "Ice" -> com.persona.companion.R.drawable.ic_ice
-                    "Elec" -> com.persona.companion.R.drawable.ic_elec
-                    "Wind", "Force" -> com.persona.companion.R.drawable.ic_wind
-                    "Light" -> com.persona.companion.R.drawable.ic_light
-                    "Dark" -> com.persona.companion.R.drawable.ic_dark
-                    "Almighty" -> com.persona.companion.R.drawable.ic_almighty
-                    "Psy" -> com.persona.companion.R.drawable.ic_psy
-                    "Nuclear" -> com.persona.companion.R.drawable.ic_nuke
-                    "Phys", "Slash", "Strike", "Pierce" -> com.persona.companion.R.drawable.ic_phys
-                    "Recovery" -> com.persona.companion.R.drawable.ic_recovery
-                    "Support" -> com.persona.companion.R.drawable.ic_support
-                    "Ailment" -> com.persona.companion.R.drawable.ic_ailment
-                    else -> null
-                }
+            if (elemIcon != null) {
+                Icon(
+                    painter = painterResource(id = elemIcon),
+                    contentDescription = skillInfo.element,
+                    tint = elementIconTint(skillInfo.element),
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(Modifier.width(10.dp))
+            }
+            Text(
+                text = name,
+                style = MaterialTheme.typography.bodyMedium,
+                color = TextPrimary,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.weight(1f)
+            )
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelSmall,
+                color = labelColor,
+                fontWeight = FontWeight.SemiBold
+            )
+            if (skillInfo != null) {
+                Spacer(Modifier.width(6.dp))
+                Icon(
+                    imageVector = if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                    contentDescription = if (expanded) "Collapse skill details" else "Expand skill details",
+                    tint = TextSecondary,
+                    modifier = Modifier.size(18.dp)
+                )
+            }
+        }
 
-                Surface(
-                    shape = RoundedCornerShape(6.dp),
-                    color = chipColor.copy(alpha = 0.2f)
-                ) {
+        if (skillInfo != null) {
+            AnimatedVisibility(visible = expanded) {
+                Column(modifier = Modifier.padding(top = 10.dp)) {
+                    HorizontalDivider(color = Divider.copy(alpha = 0.4f))
+                    Spacer(Modifier.height(8.dp))
                     Row(
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        if (iconRes != null) {
-                            Icon(
-                                painter = androidx.compose.ui.res.painterResource(id = iconRes),
-                                contentDescription = null,
-                                tint = chipColor,
-                                modifier = Modifier.size(12.dp)
+                        Surface(
+                            shape = RoundedCornerShape(6.dp),
+                            color = accentColor.copy(alpha = 0.16f)
+                        ) {
+                            Text(
+                                text = skillInfo.element,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = accentColor,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
                             )
                         }
+                        if (skillInfo.cost > 0 && skillInfo.costType.isNotBlank()) {
+                            val costColor = if (skillInfo.costType == "SP") Color(0xFF00CEC9) else Color(0xFFFF6B6B)
+                            Text(
+                                text = "${skillInfo.cost} ${skillInfo.costType}",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = costColor,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                    if (skillInfo.effect.isNotBlank()) {
+                        Spacer(Modifier.height(6.dp))
                         Text(
-                            text = element,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = chipColor
+                            text = skillInfo.effect,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextSecondary
                         )
                     }
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun AffinitiesSection(persona: Persona, gameId: String) {
+    val grouped = remember(persona, gameId) {
+        buildMap<String, List<String>> {
+            if (persona.weaknesses.isNotEmpty()) put("Weak", persona.weaknesses)
+            if (persona.resistances.isNotEmpty()) put("Resist", persona.resistances)
+            if (persona.nullifies.isNotEmpty()) put("Null", persona.nullifies)
+            if (persona.repels.isNotEmpty()) put("Repel", persona.repels)
+            if (persona.absorbs.isNotEmpty()) put("Absorb", persona.absorbs)
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(SurfaceCard)
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        SectionHeader("Affinities")
+        AffinityElementMatrix(gameId = gameId, grouped = grouped)
     }
 }
 

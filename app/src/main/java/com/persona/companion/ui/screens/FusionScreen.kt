@@ -43,6 +43,7 @@ fun FusionScreen(
     seriesId: String,
     gameId: String,
     dataPath: String,
+    initialPersonaName: String? = null,
     onBack: () -> Unit,
     onPersonaClick: (String) -> Unit = {},
     viewModel: FusionViewModel = viewModel()
@@ -50,8 +51,8 @@ fun FusionScreen(
     val context = LocalContext.current
     val state by viewModel.state.collectAsState()
 
-    LaunchedEffect(dataPath) {
-        viewModel.loadData(context, seriesId, gameId, dataPath)
+    LaunchedEffect(dataPath, initialPersonaName) {
+        viewModel.loadData(context, seriesId, gameId, dataPath, initialPersonaName)
     }
 
     Scaffold(
@@ -136,7 +137,10 @@ fun FusionScreen(
                     } else {
                         FusionResultsView(
                             viewModel = viewModel,
-                            state = state
+                            state = state,
+                            seriesId = seriesId,
+                            gameId = gameId,
+                            onPersonaClick = onPersonaClick
                         )
                     }
                 }
@@ -1578,11 +1582,19 @@ fun FusionTypeSelectionView(
 @Composable
 fun FusionResultsView(
     viewModel: FusionViewModel,
-    state: com.persona.companion.ui.viewmodels.FusionState
+    state: com.persona.companion.ui.viewmodels.FusionState,
+    seriesId: String,
+    gameId: String,
+    onPersonaClick: (String) -> Unit = {}
 ) {
+    val context = LocalContext.current
+    val userPrefs = remember { com.persona.companion.data.UserPreferences(context) }
+    val ownedPersonaIds by userPrefs.ownedPersonasFlow.collectAsState(initial = userPrefs.getOwnedPersonas())
     val target = state.selectedPersona ?: return
     val totalCount = state.fusionRecipes.size
-    val displayedRecipes = viewModel.getFilteredAndSortedRecipes()
+    val displayedRecipes = remember(state.fusionRecipes, state.recipeSearchQuery, state.recipeSortOrder, state.ownedOnlyFilter, ownedPersonaIds) {
+        viewModel.getFilteredAndSortedRecipes(ownedPersonaIds, seriesId, gameId)
+    }
 
     LazyColumn(
         modifier = Modifier
@@ -1650,6 +1662,23 @@ fun FusionResultsView(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
+                    item {
+                        FilterChip(
+                            selected = state.ownedOnlyFilter,
+                            onClick = { viewModel.toggleOwnedOnlyFilter() },
+                            label = {
+                                Text(
+                                    "Owned Only",
+                                    fontWeight = if (state.ownedOnlyFilter) FontWeight.Bold else FontWeight.Normal,
+                                    fontSize = 12.sp
+                                )
+                            },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = Color(0xFF4CAF50).copy(alpha = 0.2f),
+                                selectedLabelColor = Color(0xFF4CAF50)
+                            )
+                        )
+                    }
                     items(RecipeSortOrder.values()) { order ->
                         val selected = state.recipeSortOrder == order
                         FilterChip(
@@ -1681,7 +1710,11 @@ fun FusionResultsView(
                 ) {
                     Box(modifier = Modifier.padding(28.dp), contentAlignment = Alignment.Center) {
                         Text(
-                            text = if (totalCount == 0) "No fusion combinations available." else "No recipes match \"${state.recipeSearchQuery}\".",
+                            text = when {
+                                totalCount == 0 -> "No fusion combinations available."
+                                state.ownedOnlyFilter -> "No recipes using only your registered Compendium personas."
+                                else -> "No recipes match \"${state.recipeSearchQuery}\"."
+                            },
                             color = TextSecondary,
                             style = MaterialTheme.typography.bodyMedium
                         )
@@ -1691,7 +1724,15 @@ fun FusionResultsView(
         } else {
             itemsIndexed(displayedRecipes) { index, recipe ->
                 val isCheapest = (index == 0 && state.recipeSortOrder == RecipeSortOrder.CHEAPEST)
-                FusionRecipeCard(recipe = recipe, viewModel = viewModel, isCheapest = isCheapest)
+                FusionRecipeCard(
+                    recipe = recipe,
+                    viewModel = viewModel,
+                    isCheapest = isCheapest,
+                    seriesId = seriesId,
+                    gameId = gameId,
+                    ownedPersonaIds = ownedPersonaIds,
+                    onPersonaClick = onPersonaClick
+                )
             }
         }
     }
@@ -1701,7 +1742,11 @@ fun FusionResultsView(
 fun FusionRecipeCard(
     recipe: FusionRecipe,
     viewModel: FusionViewModel,
-    isCheapest: Boolean = false
+    isCheapest: Boolean = false,
+    seriesId: String = "",
+    gameId: String = "",
+    ownedPersonaIds: Set<String> = emptySet(),
+    onPersonaClick: (String) -> Unit = {}
 ) {
     val cost = viewModel.getRecipeCost(recipe)
     Card(
@@ -1733,13 +1778,47 @@ fun FusionRecipeCard(
                 if (i > 0) {
                     Text("+", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold, modifier = Modifier.padding(vertical = 2.dp))
                 }
+                val isOwned = seriesId.isNotBlank() && gameId.isNotBlank() &&
+                    ownedPersonaIds.contains("${seriesId}_${gameId}_${p.name}")
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(6.dp))
+                        .clickable { onPersonaClick(p.name) }
+                        .padding(vertical = 3.dp, horizontal = 2.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(p.name, fontWeight = FontWeight.Bold, color = TextPrimary)
-                    Text("${p.arcana} Lv. ${p.level}", color = TextSecondary, fontSize = 12.sp)
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(p.name, fontWeight = FontWeight.Bold, color = TextPrimary)
+                        if (isOwned) {
+                            Surface(
+                                color = Color(0xFF4CAF50).copy(alpha = 0.16f),
+                                shape = RoundedCornerShape(4.dp)
+                            ) {
+                                Text(
+                                    text = "Owned",
+                                    color = Color(0xFF4CAF50),
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(horizontal = 5.dp, vertical = 1.dp)
+                                )
+                            }
+                        }
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text("${p.arcana} Lv. ${p.level}", color = TextSecondary, fontSize = 12.sp)
+                        Icon(
+                            Icons.Default.ChevronRight,
+                            contentDescription = "View ${p.name}",
+                            tint = TextSecondary,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
                 }
             }
             Spacer(modifier = Modifier.height(8.dp))

@@ -9,9 +9,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Image
-import androidx.compose.material.icons.filled.ImportExport
-import androidx.compose.material.icons.filled.PushPin
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -33,35 +33,35 @@ data class WhatsNewItem(
 
 @Composable
 fun WhatsNewDialog(
-    versionName: String = "8.1",
-    versionCode: Int = 64,
+    versionName: String = "8.2.0",
+    versionCode: Int = 67,
     onDismiss: () -> Unit
 ) {
     val items = listOf(
         WhatsNewItem(
-            title = "Pin & Mark Maxed Social Links",
-            description = "Pin active Confidants and Social Links to the top so you can check hangout answers without scrolling. Mark finished ones as Maxed to move them out of the way.",
-            icon = Icons.Default.PushPin
-        ),
-        WhatsNewItem(
-            title = "All 962 Artworks Included Offline",
-            description = "Persona and Enemy images now ship built into the app using WebP (~30 MB total), so you no longer need a separate 1 GB download.",
-            icon = Icons.Default.Image
-        ),
-        WhatsNewItem(
-            title = "Export & Restore Backups",
-            description = "Save your favorites, pinned Social Links, completed requests, and settings to a file, or move them between Android and the Web app.",
-            icon = Icons.Default.ImportExport
-        ),
-        WhatsNewItem(
-            title = "Skill Inheritance Rules",
-            description = "See which skill types a Persona cannot inherit and how many inherited slots carry over directly on its detail screen.",
+            title = "In-Game Affinity Matrix",
+            description = "Persona and Enemy detail screens now display the full element grid with game icons and Wk/Rs/Nu/Rp/Dr tags, alongside element chips on Boss guides.",
             icon = Icons.Default.AutoAwesome
         ),
         WhatsNewItem(
-            title = "UI & Crash Fixes",
-            description = "Sharper card borders across dark surfaces, smoother expandable lists, and fixes for Android 15 edge-to-edge display and layout crashes.",
+            title = "Compendium Ownership Checklist",
+            description = "Mark Personas as Registered from the list or detail screen, track completion progress, and filter fusion recipes to Owned ingredients only.",
             icon = Icons.Default.CheckCircle
+        ),
+        WhatsNewItem(
+            title = "Cross-Screen Deep Linking",
+            description = "Jump straight from a Persona to its Fusion recipes, tap Skill learners or Fusion ingredients to inspect them, and expand Skills inline.",
+            icon = Icons.Default.Link
+        ),
+        WhatsNewItem(
+            title = "Classroom Search & Month Filters",
+            description = "Search classroom questions or answers by keyword and jump straight to any month or exam period.",
+            icon = Icons.Default.Search
+        ),
+        WhatsNewItem(
+            title = "Home Continue Card & Quick Counts",
+            description = "Resume your last viewed Persona or Enemy directly from Home with live Favorites and Recent counts.",
+            icon = Icons.Default.History
         )
     )
 

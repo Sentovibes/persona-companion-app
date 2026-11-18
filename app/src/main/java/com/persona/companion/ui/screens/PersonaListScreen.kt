@@ -10,9 +10,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -52,6 +54,8 @@ fun PersonaListScreen(
     val series  = SeriesData.findSeries(seriesId) ?: return
     val game    = SeriesData.findGame(seriesId, gameId) ?: return
     val state   by vm.state.collectAsState()
+    val ownedPersonas by userPrefs.ownedPersonasFlow.collectAsState(initial = userPrefs.getOwnedPersonas())
+    var ownershipFilter by remember { mutableStateOf("ALL") } // "ALL", "OWNED", "MISSING"
     var showFilterSheet by remember { mutableStateOf(false) }
 
     LaunchedEffect(game.dataPath, game.aigisDataPath) {
@@ -96,13 +100,71 @@ fun PersonaListScreen(
                 accentColor = series.color
             )
 
+            // Compendium registration progress & quick filter
+            val totalCount = state.personas.size
+            val ownedCount = remember(state.personas, ownedPersonas, seriesId, gameId) {
+                state.personas.count { p ->
+                    ownedPersonas.contains(com.persona.companion.utils.FilterUtils.getPersonaId(seriesId, gameId, p))
+                }
+            }
+            val displayedPersonas = remember(state.filtered, ownershipFilter, ownedPersonas, seriesId, gameId) {
+                when (ownershipFilter) {
+                    "OWNED" -> state.filtered.filter { p ->
+                        ownedPersonas.contains(com.persona.companion.utils.FilterUtils.getPersonaId(seriesId, gameId, p))
+                    }
+                    "MISSING" -> state.filtered.filter { p ->
+                        !ownedPersonas.contains(com.persona.companion.utils.FilterUtils.getPersonaId(seriesId, gameId, p))
+                    }
+                    else -> state.filtered
+                }
+            }
+
+            if (totalCount > 0 && !state.isLoading) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "$ownedCount / $totalCount Registered",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = if (ownedCount == totalCount) Color(0xFF4CAF50) else TextSecondary,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        listOf("ALL" to "All", "OWNED" to "Owned", "MISSING" to "Missing").forEach { (key, label) ->
+                            val selected = ownershipFilter == key
+                            Surface(
+                                shape = RoundedCornerShape(6.dp),
+                                color = if (selected) series.color.copy(alpha = 0.2f) else SurfaceCard,
+                                border = BorderStroke(
+                                    1.dp,
+                                    if (selected) series.color.copy(alpha = 0.6f) else HairlineSoft
+                                ),
+                                modifier = Modifier.clickable { ownershipFilter = key }
+                            ) {
+                                Text(
+                                    text = label,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = if (selected) series.color else TextSecondary,
+                                    fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
             when {
                 state.isLoading -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator(color = series.color)
                     }
                 }
-                state.filtered.isEmpty() -> {
+                displayedPersonas.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(16.dp)) {
                             Text("No personas found", color = TextSecondary)
@@ -129,16 +191,19 @@ fun PersonaListScreen(
                         when (state.sortBy) {
                             com.persona.companion.ui.viewmodels.SortOption.ARCANA -> {
                                 // Group by arcana
-                                val grouped = state.filtered.groupBy { it.arcana ?: "Unknown" }.entries.sortedBy { it.key }
+                                val grouped = displayedPersonas.groupBy { it.arcana ?: "Unknown" }.entries.sortedBy { it.key }
                                 grouped.forEach { (arcana, personas) ->
                                     item {
                                         ArcanaHeader(arcana, series.color)
                                     }
                                     itemsIndexed(personas, key = { index, persona -> "${arcana}_${persona.name}_$index" }) { _, persona ->
+                                        val personaId = com.persona.companion.utils.FilterUtils.getPersonaId(seriesId, gameId, persona)
                                         PersonaRow(
                                             persona     = persona,
                                             accentColor = series.color,
                                             gameId      = gameId,
+                                            isOwned     = ownedPersonas.contains(personaId),
+                                            onToggleOwned = { userPrefs.toggleOwnedPersona(personaId) },
                                             onClick     = {
                                                 navController.navigate(
                                                     Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
@@ -152,11 +217,14 @@ fun PersonaListScreen(
                             }
                             else -> {
                                 // Flat list for level/name sorting
-                                itemsIndexed(state.filtered, key = { index, persona -> "${persona.name}_$index" }) { _, persona ->
+                                itemsIndexed(displayedPersonas, key = { index, persona -> "${persona.name}_$index" }) { _, persona ->
+                                    val personaId = com.persona.companion.utils.FilterUtils.getPersonaId(seriesId, gameId, persona)
                                     PersonaRow(
                                         persona     = persona,
                                         accentColor = series.color,
                                         gameId      = gameId,
+                                        isOwned     = ownedPersonas.contains(personaId),
+                                        onToggleOwned = { userPrefs.toggleOwnedPersona(personaId) },
                                         onClick     = {
                                             navController.navigate(
                                                 Screen.PersonaDetail.createRoute(seriesId, gameId, persona.name)
@@ -238,7 +306,15 @@ private fun ArcanaHeader(arcana: String, accentColor: Color) {
 }
 
 @Composable
-private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = "", onClick: () -> Unit, isCompact: Boolean = false) {
+private fun PersonaRow(
+    persona: Persona,
+    accentColor: Color,
+    gameId: String = "",
+    isOwned: Boolean = false,
+    onToggleOwned: () -> Unit = {},
+    onClick: () -> Unit,
+    isCompact: Boolean = false
+) {
     val context = LocalContext.current
     val shouldLoadImages = rememberShouldLoadImages()
     
@@ -308,7 +384,7 @@ private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = ""
             }
         }
 
-        // Skill count hint
+        // Skill count hint & Compendium check toggle
         if (!isCompact) {
             val skillCount = persona.skills?.size ?: 0
             if (skillCount > 0) {
@@ -317,7 +393,19 @@ private fun PersonaRow(persona: Persona, accentColor: Color, gameId: String = ""
                     style = MaterialTheme.typography.labelSmall,
                     color = TextDisabled
                 )
+                Spacer(Modifier.width(4.dp))
             }
+        }
+        IconButton(
+            onClick = onToggleOwned,
+            modifier = Modifier.size(32.dp)
+        ) {
+            Icon(
+                imageVector = if (isOwned) Icons.Default.CheckCircle else Icons.Outlined.CheckCircle,
+                contentDescription = if (isOwned) "Registered in Compendium" else "Mark as Registered",
+                tint = if (isOwned) Color(0xFF4CAF50) else TextDisabled.copy(alpha = 0.5f),
+                modifier = Modifier.size(20.dp)
+            )
         }
     }
     }

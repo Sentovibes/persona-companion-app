@@ -3,10 +3,13 @@ package com.persona.companion.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -91,17 +94,136 @@ fun ClassroomAnswersScreen(
     }
 }
 
+private val CLASSROOM_MONTHS = listOf(
+    "Apr" to listOf("4/", "Apr"),
+    "May" to listOf("5/", "May"),
+    "Jun" to listOf("6/", "Jun"),
+    "Jul" to listOf("7/", "Jul"),
+    "Aug" to listOf("8/", "Aug"),
+    "Sep" to listOf("9/", "Sep"),
+    "Oct" to listOf("10/", "Oct"),
+    "Nov" to listOf("11/", "Nov"),
+    "Dec" to listOf("12/", "Dec"),
+    "Jan" to listOf("1/", "Jan"),
+    "Feb" to listOf("2/", "Feb")
+)
+
+private fun matchesMonthFilter(question: ClassroomQuestion, filter: String): Boolean {
+    if (filter == "All") return true
+    if (filter == "Exams") return question.type != QuestionType.CLASS
+    val tokens = CLASSROOM_MONTHS.firstOrNull { it.first == filter }?.second ?: return true
+    return tokens.any { token ->
+        if (token.endsWith("/")) {
+            question.date.trim().startsWith(token)
+        } else {
+            question.date.contains(token, ignoreCase = true)
+        }
+    }
+}
+
 @Composable
 private fun ClassroomQuestionsList(
     questions: List<ClassroomQuestion>
 ) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        items(questions) { question ->
-            ClassroomQuestionCard(question = question)
+    var searchQuery by remember { mutableStateOf("") }
+    var selectedFilter by remember { mutableStateOf("All") }
+
+    val availableFilters = remember(questions) {
+        buildList {
+            add("All")
+            if (questions.any { it.type != QuestionType.CLASS }) add("Exams")
+            CLASSROOM_MONTHS.forEach { (label, _) ->
+                if (questions.any { matchesMonthFilter(it, label) }) {
+                    add(label)
+                }
+            }
+        }
+    }
+
+    val filteredQuestions = remember(questions, searchQuery, selectedFilter) {
+        val q = searchQuery.trim()
+        questions.filter { item ->
+            matchesMonthFilter(item, selectedFilter) && (
+                q.isEmpty() ||
+                item.question.contains(q, ignoreCase = true) ||
+                item.answer.contains(q, ignoreCase = true) ||
+                item.date.contains(q, ignoreCase = true) ||
+                (item.subject?.contains(q, ignoreCase = true) == true)
+            )
+        }
+    }
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        OutlinedTextField(
+            value = searchQuery,
+            onValueChange = { searchQuery = it },
+            placeholder = { Text("Search question, answer, or date (e.g. 4/18)...", color = TextSecondary) },
+            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = TextSecondary) },
+            trailingIcon = {
+                if (searchQuery.isNotEmpty()) {
+                    IconButton(onClick = { searchQuery = "" }) {
+                        Icon(Icons.Default.Close, contentDescription = "Clear", tint = TextSecondary)
+                    }
+                }
+            },
+            singleLine = true,
+            shape = RoundedCornerShape(10.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 10.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = AccentBlue,
+                unfocusedBorderColor = Divider,
+                focusedTextColor = TextPrimary,
+                unfocusedTextColor = TextPrimary
+            )
+        )
+
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            items(availableFilters) { filter ->
+                val selected = selectedFilter == filter
+                FilterChip(
+                    selected = selected,
+                    onClick = { selectedFilter = filter },
+                    label = {
+                        Text(
+                            text = filter,
+                            fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                            fontSize = 12.sp
+                        )
+                    },
+                    colors = FilterChipDefaults.filterChipColors(
+                        selectedContainerColor = AccentBlue.copy(alpha = 0.2f),
+                        selectedLabelColor = AccentBlue
+                    )
+                )
+            }
+        }
+
+        if (filteredQuestions.isEmpty()) {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "No matching classroom questions.",
+                    color = TextSecondary,
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
+        } else {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                items(filteredQuestions) { question ->
+                    ClassroomQuestionCard(question = question)
+                }
+            }
         }
     }
 }

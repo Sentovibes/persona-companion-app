@@ -43,6 +43,48 @@ class UserPreferences(context: Context) {
         prefs.edit().putStringSet("favorite_personas", favorites).apply()
     }
     fun isFavoritePersona(personaId: String): Boolean = getFavoritePersonas().contains(personaId)
+
+    // Compendium Ownership (Registered Personas)
+    fun getOwnedPersonas(): Set<String> =
+        prefs.getStringSet("owned_personas", emptySet())?.toSet() ?: emptySet()
+
+    fun isPersonaOwned(personaId: String): Boolean = getOwnedPersonas().contains(personaId)
+
+    fun addOwnedPersona(personaId: String) {
+        val owned = getOwnedPersonas().toMutableSet()
+        if (owned.add(personaId)) {
+            prefs.edit().putStringSet("owned_personas", owned).apply()
+        }
+    }
+
+    fun removeOwnedPersona(personaId: String) {
+        val owned = getOwnedPersonas().toMutableSet()
+        if (owned.remove(personaId)) {
+            prefs.edit().putStringSet("owned_personas", owned).apply()
+        }
+    }
+
+    fun toggleOwnedPersona(personaId: String): Boolean {
+        val owned = getOwnedPersonas().toMutableSet()
+        val nowOwned = if (owned.contains(personaId)) {
+            owned.remove(personaId)
+            false
+        } else {
+            owned.add(personaId)
+            true
+        }
+        prefs.edit().putStringSet("owned_personas", owned).apply()
+        return nowOwned
+    }
+
+    val ownedPersonasFlow: Flow<Set<String>> = callbackFlow {
+        trySend(getOwnedPersonas())
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "owned_personas") trySend(getOwnedPersonas())
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        awaitClose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
     
     // Favorites - Enemies
     fun getFavoriteEnemies(): Set<String> = prefs.getStringSet("favorite_enemies", emptySet()) ?: emptySet()

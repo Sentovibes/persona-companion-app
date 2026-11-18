@@ -108,3 +108,11 @@ incoming_images/*
 *.pem
 .freebuff/
 scratch/
+
+# Agent artifacts
+DEFERRED_VERIFICATION.md
+handoff.md
+audit_report.md
+*_walkthrough.md
+*.agent.log
+mcp_config.json

@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.persona.companion.data.SeriesData
 import com.persona.companion.models.BossGuideItem
+import com.persona.companion.ui.components.AffinityTextChips
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.JsonLoader
 
@@ -156,12 +157,10 @@ fun BossDetailScreen(
                                     fontWeight = FontWeight.Bold
                                 )
                             }
-                            Spacer(modifier = Modifier.height(6.dp))
-                            Text(
-                                text = boss.weaknesses,
-                                color = if (boss.weaknesses.contains("None", ignoreCase = true)) TextSecondary else TagIce,
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Bold
+                            Spacer(modifier = Modifier.height(8.dp))
+                            AffinityTextChips(
+                                rawText = boss.weaknesses,
+                                isWeakness = true
                             )
                         }
                     }
@@ -182,12 +181,10 @@ fun BossDetailScreen(
                                     fontWeight = FontWeight.Bold
                                 )
                             }
-                            Spacer(modifier = Modifier.height(6.dp))
-                            Text(
-                                text = boss.resistances,
-                                color = if (boss.resistances.contains("None", ignoreCase = true)) TextSecondary else TagFire,
-                                fontSize = 14.sp,
-                                fontWeight = FontWeight.Bold
+                            Spacer(modifier = Modifier.height(8.dp))
+                            AffinityTextChips(
+                                rawText = boss.resistances,
+                                isWeakness = false
                             )
                         }
                     }

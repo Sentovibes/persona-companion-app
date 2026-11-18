@@ -69,8 +69,15 @@ sealed class Screen(val route: String) {
         }
     }
     
-    object Fusion : Screen("fusion/{seriesId}/{gameId}") {
-        fun createRoute(seriesId: String, gameId: String) = "fusion/$seriesId/$gameId"
+    object Fusion : Screen("fusion/{seriesId}/{gameId}?targetPersona={targetPersona}") {
+        fun createRoute(seriesId: String, gameId: String, targetPersona: String? = null): String {
+            return if (targetPersona.isNullOrBlank()) {
+                "fusion/$seriesId/$gameId"
+            } else {
+                val safeName = java.net.URLEncoder.encode(targetPersona, "UTF-8")
+                "fusion/$seriesId/$gameId?targetPersona=$safeName"
+            }
+        }
     }
     
     object EnemyList : Screen("enemy_list/{seriesId}/{gameId}") {
@@ -244,11 +251,18 @@ fun NavGraph(navController: NavHostController) {
             route = Screen.Fusion.route,
             arguments = listOf(
                 navArgument("seriesId") { type = NavType.StringType },
-                navArgument("gameId")   { type = NavType.StringType }
+                navArgument("gameId")   { type = NavType.StringType },
+                navArgument("targetPersona") {
+                    type = NavType.StringType
+                    nullable = true
+                    defaultValue = null
+                }
             )
         ) { back ->
             val seriesId = back.arguments?.getString("seriesId") ?: return@composable
             val gameId   = back.arguments?.getString("gameId")   ?: return@composable
+            val targetPersonaRaw = back.arguments?.getString("targetPersona")
+            val targetPersona = targetPersonaRaw?.let { java.net.URLDecoder.decode(it, "UTF-8") }
             
             // Get the data path for this game
             val game = com.persona.companion.data.SeriesData.findGame(seriesId, gameId)
@@ -258,6 +272,7 @@ fun NavGraph(navController: NavHostController) {
                 seriesId = seriesId,
                 gameId = gameId,
                 dataPath = dataPath,
+                initialPersonaName = targetPersona,
                 onBack = { navController.popBackStack() },
                 onPersonaClick = { name ->
                     navController.navigate(Screen.PersonaDetail.createRoute(seriesId, gameId, name))
@@ -394,7 +409,10 @@ fun NavGraph(navController: NavHostController) {
                 gameName = game?.title ?: "",
                 skillPath = game?.skillPath,
                 personaPath = game?.dataPath,
-                onBack = { navController.popBackStack() }
+                onBack = { navController.popBackStack() },
+                onPersonaClick = { personaName ->
+                    navController.navigate(Screen.PersonaDetail.createRoute(seriesId, gameId, personaName))
+                }
             )
         }
 

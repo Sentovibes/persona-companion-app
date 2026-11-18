@@ -41,8 +41,10 @@ import com.persona.companion.cast.CastManager
 import com.persona.companion.data.UserPreferences
 import com.persona.companion.models.Enemy
 import com.persona.companion.ui.components.AdaptiveDetailLayout
+import com.persona.companion.ui.components.AffinityGroupedSection
 import com.persona.companion.ui.components.FullImageDialog
 import com.persona.companion.ui.components.ProfileImage
+import com.persona.companion.utils.ResistanceUtils
 import com.persona.companion.ui.theme.*
 import com.persona.companion.utils.DeviceType
 import com.persona.companion.utils.FilterUtils
@@ -325,11 +327,14 @@ private fun EnemyStatsContent(
     }
     
     // Resistances
-    SectionCard(title = "Resistances", textScale = textScale) {
-        Text(
-            text = parseResistances(enemy.resists, gameId),
-            style = MaterialTheme.typography.bodyMedium,
-            color = TextPrimary
+    SectionCard(title = "Affinities & Resistances", textScale = textScale) {
+        val grouped = remember(enemy.resists, gameId) {
+            ResistanceUtils.formatResistancesGrouped(enemy.resists, gameId)
+        }
+        AffinityGroupedSection(
+            grouped = grouped,
+            gameId = gameId,
+            emptyText = "No special resistances"
         )
     }
     
@@ -359,16 +364,19 @@ private fun EnemyStatsContent(
                 
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Resistances",
+                    text = "Affinities & Resistances",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = TextSecondary,
-                    modifier = Modifier.padding(bottom = 4.dp)
+                    modifier = Modifier.padding(bottom = 6.dp)
                 )
-                Text(
-                    text = parseResistances(phase.resists, gameId),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = TextPrimary
+                val phaseGrouped = remember(phase.resists, gameId) {
+                    ResistanceUtils.formatResistancesGrouped(phase.resists, gameId)
+                }
+                AffinityGroupedSection(
+                    grouped = phaseGrouped,
+                    gameId = gameId,
+                    emptyText = "No special resistances"
                 )
                 
                 if (phase.skills.isNotEmpty()) {
@@ -440,16 +448,19 @@ private fun EnemyStatsContent(
                 
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Resistances",
+                    text = "Affinities & Resistances",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = TextSecondary,
-                    modifier = Modifier.padding(bottom = 4.dp)
+                    modifier = Modifier.padding(bottom = 6.dp)
                 )
-                Text(
-                    text = parseResistances(part.resists, gameId),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = TextPrimary
+                val partGrouped = remember(part.resists, gameId) {
+                    ResistanceUtils.formatResistancesGrouped(part.resists, gameId)
+                }
+                AffinityGroupedSection(
+                    grouped = partGrouped,
+                    gameId = gameId,
+                    emptyText = "No special resistances"
                 )
                 
                 if (!part.skills.isNullOrEmpty()) {

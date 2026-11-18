@@ -2,11 +2,11 @@
   <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWlpYTNqYzZra2cwc3oxM2czMjMxaXoyajY1YXkxcG45OHRkdDluOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/raGZMvPBIKclfNP4t0/giphy.gif" width="800" alt="Persona Series Transition" />
 </p>
 
-# Persona Companion App v8.1.1
+# Persona Companion App v8.2.0
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Google Play](https://img.shields.io/badge/Google_Play-Persona_Companion-green?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.persona.companion)
-[![Version](https://img.shields.io/badge/Version-8.1.1-blue.svg)]()
+[![Version](https://img.shields.io/badge/Version-8.2.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![Support](https://img.shields.io/badge/Support-Ko--fi-red.svg)](https://ko-fi.com/sentovibes)
 
@@ -30,6 +30,13 @@ The Persona Companion App is a high-performance, native Android application buil
 <p align="center">
   <img src="https://media1.tenor.com/m/zsjPmz0e7QwAAAAC/persona-5-take-your-heart.gif" width="600" alt="Take Your Heart" />
 </p>
+
+## v8.2.0: In-Game Affinity Matrix, Compendium Checklist & QoL
+
+- **In-Game Elemental Affinity Matrix**: Persona and Enemy detail screens now show the full element table (`Wk`, `Rs`, `Nu`, `Rp`, `Dr`, `-`) in each game's canonical element order, paired with complete element VectorDrawable icons (`Slash`, `Gun`/`Pierce`, `Passive`, `Light`, `Dark`, `Nuke`, `Almighty`, and more) and element chips on Boss guides.
+- **Compendium Ownership Checklist**: Mark Personas as Registered from the list or detail screen, track completion progress (`X / Y Registered`), filter fusion recipes to **Owned Only** ingredients, and sync registration via JSON backups.
+- **Cross-Screen Deep Linking**: Jump from a Persona straight to its Reverse Lookup fusion recipes (`Fuse`), tap Skill learners or recipe ingredients to open Persona details, and expand Skills inline for element, cost, and effect.
+- **Classroom Search & Home Resume**: Filter classroom and exam answers by keyword, month, or exam type, and resume your last viewed Persona or Enemy from the Home `CONTINUE` card with live Favorites/Recent counts.
 
 ## v8.1: Built-in WebP Artworks, Pinned Confidants & Universal Backup
 

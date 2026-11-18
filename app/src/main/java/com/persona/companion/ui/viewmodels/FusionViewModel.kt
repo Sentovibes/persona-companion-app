@@ -95,6 +95,7 @@ data class FusionState(
     val fusionRecipes: List<FusionRecipe> = emptyList(),
     val recipeSortOrder: RecipeSortOrder = RecipeSortOrder.CHEAPEST,
     val recipeSearchQuery: String = "",
+    val ownedOnlyFilter: Boolean = false,
     val calculatorMode: CalculatorMode = CalculatorMode.REVERSE,
     // Forward Fusion state
     val selectedIngredients: List<Persona?> = listOf(null, null, null),
@@ -123,7 +124,13 @@ class FusionViewModel : ViewModel() {
 
     private var fusionCalculator: FusionCalculator? = null
 
-    fun loadData(context: Context, seriesId: String, gameId: String, dataPath: String) {
+    fun loadData(
+        context: Context,
+        seriesId: String,
+        gameId: String,
+        dataPath: String,
+        initialPersonaName: String? = null
+    ) {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, errorMessage = null)
 
@@ -236,11 +243,17 @@ class FusionViewModel : ViewModel() {
                     isTriangular = isTriangular
                 )
 
+                val sortedPersonas = personas.sortedBy { it.name }
                 _state.value = _state.value.copy(
-                    personas = personas.sortedBy { it.name },
+                    personas = sortedPersonas,
                     allAvailableSkills = allSkills,
                     isLoading = false
                 )
+                if (!initialPersonaName.isNullOrBlank() && _state.value.selectedPersona == null) {
+                    sortedPersonas.find { it.name.equals(initialPersonaName, ignoreCase = true) }?.let {
+                        selectPersona(it)
+                    }
+                }
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -658,10 +671,18 @@ class FusionViewModel : ViewModel() {
         _state.value = _state.value.copy(recipeSearchQuery = query)
     }
 
-    fun getFilteredAndSortedRecipes(): List<FusionRecipe> {
+    fun toggleOwnedOnlyFilter() {
+        _state.value = _state.value.copy(ownedOnlyFilter = !_state.value.ownedOnlyFilter)
+    }
+
+    fun getFilteredAndSortedRecipes(
+        ownedPersonaIds: Set<String> = emptySet(),
+        seriesId: String = "",
+        gameId: String = ""
+    ): List<FusionRecipe> {
         val raw = _state.value.fusionRecipes
         val query = _state.value.recipeSearchQuery.trim()
-        val filtered = if (query.isBlank()) {
+        val queryFiltered = if (query.isBlank()) {
             raw
         } else {
             raw.filter { recipe ->
@@ -670,6 +691,15 @@ class FusionViewModel : ViewModel() {
                     (p.arcana?.contains(query, ignoreCase = true) == true)
                 }
             }
+        }
+        val filtered = if (_state.value.ownedOnlyFilter && seriesId.isNotBlank() && gameId.isNotBlank()) {
+            queryFiltered.filter { recipe ->
+                recipe.personas.all { p ->
+                    ownedPersonaIds.contains("${seriesId}_${gameId}_${p.name}")
+                }
+            }
+        } else {
+            queryFiltered
         }
         return when (_state.value.recipeSortOrder) {
             RecipeSortOrder.CHEAPEST -> filtered.sortedBy { getRecipeCost(it) }
@@ -686,6 +716,7 @@ class FusionViewModel : ViewModel() {
             fusionRecipes = emptyList(),
             recipeSortOrder = RecipeSortOrder.CHEAPEST,
             recipeSearchQuery = "",
+            ownedOnlyFilter = false,
             selectedIngredients = listOf(null, null, null),
             forwardResult = null,
             forwardSourcePersona = null,

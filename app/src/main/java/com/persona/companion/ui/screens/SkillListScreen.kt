@@ -62,7 +62,8 @@ fun SkillListScreen(
     gameName: String,
     skillPath: String?,
     personaPath: String?,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onPersonaClick: (String) -> Unit = {}
 ) {
     val viewModel: SkillViewModel = viewModel()
     val skills by viewModel.skills.collectAsState()
@@ -214,7 +215,8 @@ fun SkillListScreen(
                         SkillCard(
                             skill = skill,
                             viewModel = viewModel,
-                            personaPath = personaPath
+                            personaPath = personaPath,
+                            onPersonaClick = onPersonaClick
                         )
                     }
                 }
@@ -228,7 +230,8 @@ fun SkillListScreen(
 private fun SkillCard(
     skill: Skill,
     viewModel: SkillViewModel,
-    personaPath: String?
+    personaPath: String?,
+    onPersonaClick: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
     val elemColor = elementColors[skill.element] ?: AccentBlue
@@ -242,10 +245,13 @@ private fun SkillCard(
         "Almighty" -> com.persona.companion.R.drawable.ic_almighty
         "Psy" -> com.persona.companion.R.drawable.ic_psy
         "Nuclear" -> com.persona.companion.R.drawable.ic_nuke
-        "Phys", "Slash", "Strike", "Pierce" -> com.persona.companion.R.drawable.ic_phys
+        "Slash" -> com.persona.companion.R.drawable.ic_slash
+        "Gun", "Pierce" -> com.persona.companion.R.drawable.ic_gun
+        "Phys", "Strike" -> com.persona.companion.R.drawable.ic_phys
         "Recovery" -> com.persona.companion.R.drawable.ic_recovery
         "Support" -> com.persona.companion.R.drawable.ic_support
         "Ailment" -> com.persona.companion.R.drawable.ic_ailment
+        "Passive" -> com.persona.companion.R.drawable.ic_passive
         else -> null
     }
 
@@ -352,7 +358,7 @@ private fun SkillCard(
                         ) {
                             learners.forEach { learner ->
                                 SuggestionChip(
-                                    onClick = { },
+                                    onClick = { onPersonaClick(learner.name) },
                                     label = { Text(learner.name, fontSize = 10.sp) },
                                     shape = RoundedCornerShape(8.dp),
                                     colors = SuggestionChipDefaults.suggestionChipColors(
