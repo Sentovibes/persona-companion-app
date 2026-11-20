@@ -7145,7 +7145,7 @@ async function openGlobalSearchResult(idx) {
 }
 
 /* ── Service Worker & Offline Cache Utilities ─────────────────────────────── */
-const APP_BUILD_VERSION = '656';
+const APP_BUILD_VERSION = '657';
 
 function initAutoUpdatingServiceWorker() {
     const hadController = !!navigator.serviceWorker.controller;

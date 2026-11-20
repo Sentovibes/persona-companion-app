@@ -1,10 +1,10 @@
-const CACHE_NAME = 'persona-companion-v656';
+const CACHE_NAME = 'persona-companion-v657';
 
 const PRECACHE_URLS = [
     './',
     './index.html',
-    './styles.css?v=656',
-    './app.js?v=656',
+    './styles.css?v=657',
+    './app.js?v=657',
     './manifest.json',
     './icon.webp'
 ];
@@ -25,13 +25,26 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-    event.waitUntil(
-        caches.keys()
-            .then((keys) => Promise.all(
-                keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-            ))
-            .then(() => self.clients.claim())
-    );
+    event.waitUntil((async () => {
+        const keys = await caches.keys();
+        const oldKeys = keys.filter((key) => key !== CACHE_NAME);
+        const hadOldCaches = oldKeys.some((key) => key.startsWith('persona-companion-'));
+        await Promise.all(oldKeys.map((key) => caches.delete(key)));
+        await self.clients.claim();
+
+        // Force-refresh all open tabs that were still running an older cached build
+        if (hadOldCaches) {
+            const windowClients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+            await Promise.all(
+                windowClients.map((client) => {
+                    if (client && 'navigate' in client) {
+                        return client.navigate(client.url).catch(() => {});
+                    }
+                    return Promise.resolve();
+                })
+            );
+        }
+    })());
 });
 
 self.addEventListener('message', (event) => {

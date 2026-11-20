@@ -7,11 +7,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=656">
+    <link rel="stylesheet" href="styles.css?v=657">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="apple-touch-icon" href="icon.webp">
     <meta name="theme-color" content="#0D0D12">
+    <script>
+        (function() {
+            var CURRENT_VER = '657';
+            var prev = localStorage.getItem('pc_web_build_ver');
+            if (prev !== CURRENT_VER) {
+                localStorage.setItem('pc_web_build_ver', CURRENT_VER);
+                if ('caches' in window) {
+                    caches.keys().then(function(keys) {
+                        keys.forEach(function(k) {
+                            if (k.indexOf('persona-companion-') === 0 && k !== 'persona-companion-v' + CURRENT_VER) {
+                                caches.delete(k);
+                            }
+                        });
+                    });
+                }
+            }
+        })();
+    </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="6b5ab9f1-6ef3-4ffb-871b-ba8aa104c51a"></script>
 </head>
 <body>
@@ -545,6 +563,6 @@
     </div>
 
     <!-- LIBS -->
-    <script src="app.js?v=656"></script>
+    <script src="app.js?v=657"></script>
 </body>
 </html>
