@@ -539,20 +539,15 @@ function buildHome() {
     document.getElementById('continueSlot').innerHTML = continueHtml;
 
     const SERIES_LOGOS = { p3:'assets/p3r_logo.png', p4:'assets/p4g_logo.png', p5:'assets/p5r_logo.png' };
-    const HERO_IMAGES = { p3:'assets/images/heroes/p3_hero.webp', p4:'assets/images/heroes/p4_hero.webp', p5:'assets/images/heroes/p5_hero.webp' };
 
     document.getElementById('seriesList').innerHTML = SERIES.map(s => {
         const defaultGame = S.settings['defaultGame_' + s.id] || 'none';
         const cardAction = (defaultGame && defaultGame !== 'none') ? `selectGame('${s.id}','${defaultGame}')` : `openGameScreen('${s.id}')`;
         return `
         <div class="series-card series-card--${s.id}" onclick="${cardAction}">
-            ${s.id==='p5' ? `<div class="series-card-city-bg" style="background-image:url('assets/images/heroes/p5_city_bg.webp')"></div>` : ''}
             <div class="series-card-gradient"></div>
             ${s.id==='p5' ? `<div class="series-card-star-badge">${STAR_SVG}</div>` : ''}
             <div class="series-card-bg-num">${s.id.replace('p','')}</div>
-            <div class="series-card-hero-wrap">
-                <img src="${HERO_IMAGES[s.id]}" class="series-card-hero-img" alt="" loading="lazy">
-            </div>
             <div class="series-card-content">
                 <img class="series-card-logo" src="${SERIES_LOGOS[s.id]}" alt="${s.title}"
                      onerror="this.outerHTML='<div class=&quot;series-card-title&quot;>${s.title}</div>'">
