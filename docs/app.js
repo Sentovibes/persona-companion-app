@@ -126,20 +126,21 @@ const S = {
     screen:'home', prevScreen:'home', series:null, game:null,
     listMode:null, // 'personas'|'enemies'|'classroom'|'items'|'skills'|'requests'
     sort:'arcana', enemyTab:'enemies', query:'',
-    enemySort:'level', enemySortDir:1, favOnly:false, aigisOnly:false, hideCompletedReq:false,
+    enemySort:'level', enemySortDir:1, favOnly:false, ownedFilter:'all', aigisOnly:false, hideCompletedReq:false,
+    classroomFilter:'all',
     itemQuery:'', skillQuery:'', requestQuery:'',
     guideTab:'boss', guideQuery:'', guideBossFilter:'all', guideGiverFilter:'all', guideMonthFilter:'all',
     guidesData:{ boss:null, quest:null, day:null },
     negoTab:'matrix', negoQuery:'', negoFilter:'all', negoData:null,
     negoRank: 1, negoFloorBlock: '',
-    detail:null, favorites:new Set(), completedRequests:new Set(), pinnedSl:new Set(), maxedSl:new Set(), showMaxedSl:true,
+    detail:null, favorites:new Set(), ownedPersonas:new Set(), completedRequests:new Set(), pinnedSl:new Set(), maxedSl:new Set(), showMaxedSl:true,
     recents:{ personas:[], enemies:[] },
     savedTab:'favorites', savedTypeFilter:'all',
     globalSearch:{ query:'', game:'all', category:'all', indexing:false, entries:[], urlCache:{}, indexedKey:'' },
     rawData:{},
     slData:null, slQuery:'', slDetail:null,
     fusion:{
-        personas:null, query:'', selected:null, recipes:null,
+        personas:null, query:'', selected:null, recipes:null, ownedOnly:false,
         mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null, null, null],
         forwardSource:null, forwardQuery:'', activePickerSlot:null,
         skillRouteTarget:null, skillRouteSkill:null, skillRouteSkills:[], skillsList:null,
@@ -156,6 +157,7 @@ const S = {
 /* ── Boot ──────────────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     S.favorites = new Set(JSON.parse(localStorage.getItem('favs')||'[]'));
+    S.ownedPersonas = new Set(JSON.parse(localStorage.getItem('owned_personas')||'[]'));
     S.completedRequests = new Set(JSON.parse(localStorage.getItem('completed_requests')||'[]'));
     S.pinnedSl = new Set(JSON.parse(localStorage.getItem('pinned_sl')||'[]'));
     S.maxedSl = new Set(JSON.parse(localStorage.getItem('maxed_sl')||'[]'));
@@ -350,7 +352,18 @@ function initBackToTop() {
 /* ── Navigation ────────────────────────────────────────────────────────────── */
 function isTablet() { return window.innerWidth >= 840; }
 
+function openMobilePane(paneId) {
+    const pane = document.getElementById(paneId);
+    if (pane && !isTablet()) pane.classList.add('mobile-open');
+}
+
+function closeMobilePane(paneId) {
+    const pane = document.getElementById(paneId);
+    if (pane) pane.classList.remove('mobile-open');
+}
+
 function navigate(to, payload) {
+    document.querySelectorAll('.pane-detail.mobile-open').forEach(p => p.classList.remove('mobile-open'));
     if (to === 'search' && S.screen !== 'search') {
         S.prevScreen = S.screen || 'home';
     }
@@ -570,8 +583,8 @@ function buildGameScreen(seriesId) {
 function selectGame(seriesId, gameId) {
     S.series = seriesId; S.game = gameId;
     S.query=''; S.sort='arcana'; S.enemyTab='enemies';
-    S.enemySort='level'; S.enemySortDir=1; S.favOnly=false; S.hideCompletedReq=false;
-    S.fusion = { personas:null, query:'', selected:null, recipes:null, mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null,null,null], forwardSource:null, forwardQuery:'', activePickerSlot:null, skillRouteTarget:null, skillRouteSkill:null, skillRouteSkills:[], skillsList:null }; // reset on game change
+    S.enemySort='level'; S.enemySortDir=1; S.favOnly=false; S.ownedFilter='all'; S.classroomFilter='all'; S.hideCompletedReq=false;
+    S.fusion = { personas:null, query:'', selected:null, recipes:null, ownedOnly:false, mode:'reverse', forwardSubTab:'chamber', forwardSlots:[null,null,null], forwardSource:null, forwardQuery:'', activePickerSlot:null, skillRouteTarget:null, skillRouteSkill:null, skillRouteSkills:[], skillsList:null }; // reset on game change
     navigate('category');
 }
 
@@ -760,7 +773,45 @@ function isDlcPersona(gameId, name, p) {
     return Boolean((p && p.isDlc) || (DLC_NAMES_BY_GAME[gameId] && DLC_NAMES_BY_GAME[gameId].has(name)));
 }
 
-/* ── Personas ──────────────────────────────────────────────────────────────── */
+/* ── Personas & Compendium Registration ────────────────────────────────────── */
+function isPersonaOwned(gameId, name) {
+    if (!S.ownedPersonas || !gameId || !name) return false;
+    const seriesId = inferSeriesForGame(gameId);
+    return S.ownedPersonas.has(`${gameId}_${name}`) || S.ownedPersonas.has(`${seriesId}_${gameId}_${name}`);
+}
+
+function toggleOwnedPersona(name, ev) {
+    if (ev) ev.stopPropagation();
+    if (!S.game || !name) return;
+    const seriesId = S.series || inferSeriesForGame(S.game);
+    const shortKey = `${S.game}_${name}`;
+    const canonicalKey = `${seriesId}_${S.game}_${name}`;
+    const currentlyOwned = isPersonaOwned(S.game, name);
+    if (currentlyOwned) {
+        S.ownedPersonas.delete(shortKey);
+        S.ownedPersonas.delete(canonicalKey);
+    } else {
+        S.ownedPersonas.add(shortKey);
+    }
+    localStorage.setItem('owned_personas', JSON.stringify(Array.from(S.ownedPersonas)));
+
+    const series = SERIES.find(s => s.id === S.series);
+    const color = series?.color || '#2196F3';
+    if (S.screen === 'list' && S.listMode === 'personas') {
+        renderList(S.rawData[`personas_${S.game}`] || {}, color);
+    }
+    if (S.detail && S.detail.type === 'persona' && S.detail.name === name) {
+        if (isTablet()) renderPersonaDetail(S.detail.name, S.detail.data, color);
+        else renderPersonaDetail(S.detail.name, S.detail.data, color, 'detailContentPhone');
+    }
+}
+
+function setOwnedFilter(mode) {
+    S.ownedFilter = mode;
+    const series = SERIES.find(s => s.id === S.series);
+    renderList(S.rawData[`personas_${S.game}`] || {}, series?.color || '#2196F3');
+}
+
 function renderPersonas(data, q, color, el) {
     const allEntries = Object.entries(data).filter(([name, p]) => {
         if (!S.settings.showDlc && isDlcPersona(S.game, name, p)) return false;
@@ -768,13 +819,42 @@ function renderPersonas(data, q, color, el) {
         return true;
     });
     const total = allEntries.length;
+    const ownedCount = allEntries.filter(([name]) => isPersonaOwned(S.game, name)).length;
+    const ownedPct = total ? Math.round((ownedCount / total) * 100) : 0;
+
+    const compendiumBarHtml = `
+        <div class="compendium-bar" style="margin-left:0;margin-right:0;margin-top:4px">
+            <div class="compendium-top">
+                <div class="compendium-stats">Compendium: <strong>${ownedCount} / ${total}</strong> Registered (${ownedPct}%)</div>
+                <div class="compendium-filters">
+                    <button class="compendium-pill ${S.ownedFilter==='all'?'active':''}" onclick="setOwnedFilter('all')">All</button>
+                    <button class="compendium-pill ${S.ownedFilter==='owned'?'active':''}" onclick="setOwnedFilter('owned')">Registered (${ownedCount})</button>
+                    <button class="compendium-pill ${S.ownedFilter==='missing'?'active':''}" onclick="setOwnedFilter('missing')">Missing (${total - ownedCount})</button>
+                </div>
+            </div>
+            <div class="req-progress-bar"><div class="req-progress-fill" style="width:${ownedPct}%;background:${color}"></div></div>
+        </div>`;
+
     let items = allEntries.filter(([name, p]) =>
         !q || name.toLowerCase().includes(q) || (p.arcana||p.race||'').toLowerCase().includes(q));
     if (S.arcanaFilter) items = items.filter(([name, p]) => (p.arcana||p.race||'').toLowerCase() === S.arcanaFilter.toLowerCase());
     if (S.favOnly) items = items.filter(([name])=>S.favorites.has(`${S.game}_${name}`));
-    if (!items.length) { showEmpty(S.favOnly ? 'No favorites yet — open a persona and tap the heart' : 'No personas found'); return; }
+    if (S.ownedFilter === 'owned') items = items.filter(([name]) => isPersonaOwned(S.game, name));
+    else if (S.ownedFilter === 'missing') items = items.filter(([name]) => !isPersonaOwned(S.game, name));
 
-    let html = (q || S.favOnly) ? `<div class="result-count">${items.length} of ${total} shown</div>` : '';
+    if (!items.length) {
+        const emptyMsg = S.favOnly
+            ? 'No favorites yet. Open a persona and tap the heart icon.'
+            : S.ownedFilter === 'owned'
+                ? 'No personas registered yet. Tap the check button on any persona row to mark it registered.'
+                : S.ownedFilter === 'missing'
+                    ? 'Compendium 100% registered for the current filters.'
+                    : 'No personas found';
+        el.innerHTML = compendiumBarHtml + `<div class="empty-state">${emptyMsg}</div>`;
+        return;
+    }
+
+    let html = compendiumBarHtml + ((q || S.favOnly || S.ownedFilter !== 'all' || S.arcanaFilter) ? `<div class="result-count">${items.length} of ${total} shown</div>` : '');
     if (S.sort==='arcana') {
         const grouped = {};
         items.forEach(([name,p]) => {
@@ -802,6 +882,7 @@ function personaRow(name, p, color) {
     const skills = p.skills ? Object.keys(p.skills).length : 0;
     const weakRow = renderWeaknessRow(p, S.game);
     const isFav = S.favorites.has(`${S.game}_${name}`);
+    const isOwned = isPersonaOwned(S.game, name);
     const imgUrl = getPersonaImageFilename(name);
     return `<div class="row-card persona-row-card" onclick="openPersona('${esc(name)}')">
         <div class="persona-avatar-box">
@@ -824,6 +905,9 @@ function personaRow(name, p, color) {
         </div>
         <div class="row-meta">
             ${skills?`<div class="row-hint">${skills} skills</div>`:''}
+            <button class="reg-check-btn ${isOwned?'registered':''}" onclick="toggleOwnedPersona('${esc(name)}', event)" title="${isOwned?'Registered in Compendium':'Mark Registered in Compendium'}" aria-label="${isOwned?'Registered in Compendium':'Mark Registered in Compendium'}">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </button>
             <div class="row-chevron" style="color:${color}">${CHEVRON_SVG}</div>
         </div>
     </div>`;
@@ -984,20 +1068,56 @@ function flattenClassroom(data) {
     return items;
 }
 
+function setClassroomFilter(filterVal) {
+    S.classroomFilter = filterVal;
+    const series = SERIES.find(s=>s.id===S.series);
+    renderList(S.rawData[`classroom_${S.game}`]||{}, series?.color||'#2196F3');
+}
+
 function renderClassroom(data, q, el) {
     const MONTH_NAMES = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+    const MONTH_SHORT = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const series = SERIES.find(s=>s.id===S.series);
     const color = series?.color||'#2196F3';
     const all = flattenClassroom(data);
-    let items = all;
-    if (q) items = items.filter(qa=>(qa.Question||'').toLowerCase().includes(q)||(qa.Answer||'').toLowerCase().includes(q));
-    if (!items.length) { showEmpty('No answers found'); return; }
 
-    let html = '';
-    if (!q) {
+    const availableMonths = [];
+    const seenMonths = new Set();
+    all.forEach(qa => {
+        const m = qa.Date ? parseInt(qa.Date.split('/')[0], 10) : null;
+        if (m && !seenMonths.has(m)) {
+            seenMonths.add(m);
+            availableMonths.push(m);
+        }
+    });
+
+    const curFilter = S.classroomFilter || 'all';
+    const filterBarHtml = `
+        <div class="filter-scroll-row" style="padding:4px 0 10px">
+            <button class="sort-chip ${curFilter==='all'?'active':''}" style="${curFilter==='all'?`color:${color};background:${color}22`:''}" onclick="setClassroomFilter('all')">All (${all.length})</button>
+            <button class="sort-chip ${curFilter==='exams'?'active':''}" style="${curFilter==='exams'?'color:#FF7043;background:#FF704322':''}" onclick="setClassroomFilter('exams')">Exams</button>
+            ${availableMonths.map(m => {
+                const key = 'm_' + m;
+                const active = curFilter === key;
+                return `<button class="sort-chip ${active?'active':''}" style="${active?`color:${color};background:${color}22`:''}" onclick="setClassroomFilter('${key}')">${MONTH_SHORT[m]||('M'+m)}</button>`;
+            }).join('')}
+        </div>`;
+
+    let items = all;
+    if (curFilter === 'exams') {
+        items = items.filter(qa => (qa.Kind||'').toLowerCase() === 'exam');
+    } else if (curFilter.startsWith('m_')) {
+        const targetM = parseInt(curFilter.slice(2), 10);
+        items = items.filter(qa => (qa.Date ? parseInt(qa.Date.split('/')[0], 10) : null) === targetM);
+    }
+    if (q) items = items.filter(qa=>(qa.Question||'').toLowerCase().includes(q)||(qa.Answer||'').toLowerCase().includes(q)||(qa.Date||'').toLowerCase().includes(q));
+    if (!items.length) { el.innerHTML = filterBarHtml + `<div class="empty-state">No answers found</div>`; return; }
+
+    let html = filterBarHtml;
+    if (!q && curFilter === 'all') {
         html += renderWeeklyClassroomOutlook(all, color);
     }
-    if (q) html += `<div class="result-count">${items.length} of ${all.length} shown</div>`;
+    if (q || curFilter !== 'all') html += `<div class="result-count">${items.length} of ${all.length} shown</div>`;
     let lastMonth = null;
     items.forEach(qa=>{
         const month = qa.Date ? parseInt(qa.Date.split('/')[0], 10) : null;
@@ -1700,6 +1820,7 @@ function renderPersonaDetailHtml(name, p, color) {
     const level = p.level??p.lvl??'?';
     const arcana = p.arcana||p.race||'Unknown';
     const imgUrl = getPersonaImageFilename(name);
+    const isOwned = isPersonaOwned(S.game, name);
 
     let html = `
     <div class="detail-hero detail-hero--enhanced" style="--hero-color:${color}">
@@ -1721,16 +1842,25 @@ function renderPersonaDetailHtml(name, p, color) {
                 <img src="${imgUrl}" class="detail-hero-photo" alt="${name}" onerror="this.parentElement.style.display='none'">
             </div>
         </div>
-        <div class="detail-hero-actions">
+        <div class="detail-hero-actions" style="flex-wrap:wrap">
             <button class="hero-action-btn" onclick="openFusionForPersona('${esc(name)}')">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
                 Fusion Recipes
+            </button>
+            <button class="hero-action-btn" style="${isOwned?'background:rgba(76,175,80,0.16);border-color:rgba(76,175,80,0.45);color:#4CAF50':''}" onclick="toggleOwnedPersona('${esc(name)}', event)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                ${isOwned ? 'Registered' : 'Register'}
             </button>
         </div>
     </div>`;
 
     if (p.description) html += `<div class="desc-box">${p.description}</div>`;
     if (p.unlock) html += `<div class="unlock-box"><div class="unlock-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="#FFD700"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div><div><div class="unlock-label">Unlock</div><div class="unlock-text">${p.unlock}</div></div></div>`;
+
+    html += `<div class="section-card">
+        <div class="section-title">Elemental Affinities</div>
+        ${renderPersonaAffinityMatrixHtml(p, S.game)}
+    </div>`;
 
     if (p.item || p.itemr) {
         html += `<div class="section-card" style="border-color:rgba(255,215,0,0.32)">
@@ -1765,11 +1895,17 @@ function renderPersonaDetailHtml(name, p, color) {
     }
 
     if (p.skills&&Object.keys(p.skills).length) {
-        html += `<div class="section-card"><div class="section-title">Skills (${Object.keys(p.skills).length})</div>`;
+        html += `<div class="section-card"><div class="section-title">Skills (${Object.keys(p.skills).length}) <span style="font-size:.72rem;font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0">· Tap a skill to inspect</span></div>`;
         Object.entries(p.skills).forEach(([skill,lvl])=>{
             const label = lvl<1?'Innate':lvl>=100?'Special':`Lv. ${Math.floor(lvl)}`;
             const lcolor = lvl<1?color:lvl>=100?'#FFD700':'var(--text2)';
-            html += `<div class="skill-row"><div class="skill-name">${skill}</div><div class="skill-level" style="color:${lcolor}">${label}</div></div>`;
+            html += `<div class="skill-row-wrap" data-skill="${esc(skill)}">
+                <div class="skill-row skill-row--interactive" onclick="toggleInlineSkillDetail(this.parentElement, '${esc(skill)}')">
+                    <div class="skill-name">${skill}</div>
+                    <div class="skill-level" style="color:${lcolor}">${label}</div>
+                </div>
+                <div class="skill-expand-box"></div>
+            </div>`;
         });
         html += `<div style="margin-top:10px">
             <button class="slot-action-btn" style="width:100%;padding:10px 14px;font-size:.85rem;font-weight:700;color:${color}" onclick="setSkillRoutePreload('${esc(name)}', null)">
@@ -1779,24 +1915,6 @@ function renderPersonaDetailHtml(name, p, color) {
         html += `</div>`;
     }
 
-    const aff = parsePersonaAffinities(p, S.game);
-    const affinities = [
-        {label:'Weak',    list:aff.weak,   color:'#E57373'},
-        {label:'Resists', list:aff.resist, color:'#81C784'},
-        {label:'Null',    list:aff.null_,  color:'#B0BEC5'},
-        {label:'Repel',   list:aff.repel,  color:'#64B5F6'},
-        {label:'Absorb',  list:aff.absorb, color:'#FFD54F'},
-    ].filter(a=>a.list&&a.list.length);
-
-    if (affinities.length) {
-        html += `<div class="section-card"><div class="section-title">Elemental Affinities</div>`;
-        affinities.forEach(a=>{
-            html += `<div class="affinity-group"><div class="affinity-label">${a.label}</div>
-                <div class="chips">${a.list.map(e=>`<span class="chip" style="background:${a.color}22;color:${a.color}">${e}</span>`).join('')}</div>
-            </div>`;
-        });
-        html += `</div>`;
-    }
     return html;
 }
 
@@ -1890,15 +2008,23 @@ function renderEnemyDetail(name, e, color, containerId) {
         html += `</div>`;
     }
 
-    // Resistances
+    // Resistances (In-Game Elemental Affinity Matrix)
     if (e.resists) {
-        html += `<div class="section-card"><div class="section-title">Resistances</div><div class="resist-text">${parseResists(e.resists, elems)}</div></div>`;
+        html += `<div class="section-card"><div class="section-title">Elemental Affinities</div>${renderResistStringMatrixHtml(e.resists, elems)}</div>`;
     }
 
     // Skills
     if (e.skills && e.skills.length) {
-        html += `<div class="section-card"><div class="section-title">Skills</div>`;
-        e.skills.forEach(s => html += `<div class="skill-row"><div class="skill-name">${s}</div></div>`);
+        html += `<div class="section-card"><div class="section-title">Skills (${e.skills.length}) <span style="font-size:.72rem;font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0">· Tap a skill to inspect</span></div>`;
+        e.skills.forEach(s => {
+            html += `<div class="skill-row-wrap" data-skill="${esc(s)}">
+                <div class="skill-row skill-row--interactive" onclick="toggleInlineSkillDetail(this.parentElement, '${esc(s)}')">
+                    <div class="skill-name">${s}</div>
+                    <div class="skill-level" style="color:var(--text3)">Inspect</div>
+                </div>
+                <div class="skill-expand-box"></div>
+            </div>`;
+        });
         html += `</div>`;
     }
 
@@ -1910,8 +2036,8 @@ function renderEnemyDetail(name, e, color, containerId) {
                 <div class="section-title" style="color:${color}">Phase: ${ph.name}</div>
                 ${ph.hp ? `<div class="info-row"><div class="info-label">HP</div><div class="info-val">${ph.hp}</div></div>` : ''}
                 ${ph.sp ? `<div class="info-row"><div class="info-label">SP</div><div class="info-val">${ph.sp}</div></div>` : ''}
-                ${ph.resists ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Resistances</div><div class="resist-text">${parseResists(ph.resists, elems)}</div></div>` : ''}
-                ${ph.skills && ph.skills.length ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Skills</div>${ph.skills.map(s=>`<div class="skill-row" style="font-size:.85rem"><div class="skill-name">${s}</div></div>`).join('')}</div>` : ''}
+                ${ph.resists ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Elemental Affinities</div>${renderResistStringMatrixHtml(ph.resists, elems)}</div>` : ''}
+                ${ph.skills && ph.skills.length ? `<div style="margin-top:10px"><div class="section-title" style="font-size:.875rem;opacity:.8">Skills</div>${ph.skills.map(s=>`<div class="skill-row-wrap" data-skill="${esc(s)}"><div class="skill-row skill-row--interactive" style="font-size:.85rem" onclick="toggleInlineSkillDetail(this.parentElement, '${esc(s)}')"><div class="skill-name">${s}</div><div class="skill-level" style="color:var(--text3)">Inspect</div></div><div class="skill-expand-box"></div></div>`).join('')}</div>` : ''}
             </div>`;
         });
     }
@@ -1966,6 +2092,116 @@ function parseResists(str, elems) {
         const colors={Weak:'#E57373',Null:'#B0BEC5',Drain:'#FFD54F',Repel:'#64B5F6',Resist:'#81C784',Strong:'#81C784'};
         return `<span class="chip" style="background:${colors[r]||'#555'}22;color:${colors[r]||'#aaa'}">${elems[i]}: ${r}</span>`;
     }).filter(Boolean).join(' ')||'No special resistances';
+}
+
+function getCanonicalElementsForGame(gameId, pOrStrLen) {
+    const g = (gameId || S.game || '').toLowerCase();
+    if (g.startsWith('p3')) return ['Slash','Strike','Pierce','Fire','Ice','Elec','Wind','Light','Dark','Almighty'];
+    if (g.startsWith('p4')) return pOrStrLen === 7
+        ? ['Phys','Fire','Ice','Elec','Wind','Light','Dark']
+        : ['Phys','Fire','Ice','Elec','Wind','Light','Dark','Almighty'];
+    return ['Phys','Gun','Fire','Ice','Elec','Wind','Psy','Nuke','Bless','Curse'];
+}
+
+function renderAffinityMatrixCellsHtml(elems, statusByElem) {
+    const colsClass = elems.length <= 8 ? 'cols-8' : 'cols-10';
+    const meta = {
+        wk:   { code: 'Wk', cls: 'affinity-val--wk',   title: 'Weak' },
+        rs:   { code: 'Rs', cls: 'affinity-val--rs',   title: 'Resist' },
+        nu:   { code: 'Nu', cls: 'affinity-val--nu',   title: 'Null' },
+        rp:   { code: 'Rp', cls: 'affinity-val--rp',   title: 'Repel' },
+        dr:   { code: 'Dr', cls: 'affinity-val--dr',   title: 'Drain / Absorb' },
+        norm: { code: '-',  cls: 'affinity-val--norm', title: 'Normal' }
+    };
+    return `<div class="affinity-matrix-grid ${colsClass}">` +
+        elems.map(elName => {
+            const st = statusByElem[elName.toLowerCase()] || 'norm';
+            const m = meta[st] || meta.norm;
+            return `<div class="affinity-cell" title="${elName}: ${m.title}">
+                <div class="affinity-elem-head">${elName}</div>
+                <div class="affinity-val ${m.cls}">${m.code}</div>
+            </div>`;
+        }).join('') +
+        `</div>`;
+}
+
+function renderPersonaAffinityMatrixHtml(p, gameId) {
+    const aff = parsePersonaAffinities(p, gameId);
+    const resistStr = typeof p.resists === 'string' ? p.resists : '';
+    const elems = getCanonicalElementsForGame(gameId, resistStr.length || 10);
+    const statusByElem = {};
+    const assign = (list, code) => {
+        (list || []).forEach(e => {
+            const k = String(e).toLowerCase();
+            statusByElem[k] = code;
+            if (k === 'electric') statusByElem['elec'] = code;
+            if (k === 'physical') statusByElem['phys'] = code;
+            if (k === 'nuclear')  statusByElem['nuke'] = code;
+            if (k === 'psychic' || k === 'psycho') statusByElem['psy'] = code;
+        });
+    };
+    assign(aff.weak, 'wk');
+    assign(aff.resist, 'rs');
+    assign(aff.null_, 'nu');
+    assign(aff.repel, 'rp');
+    assign(aff.absorb, 'dr');
+    return renderAffinityMatrixCellsHtml(elems, statusByElem);
+}
+
+function renderResistStringMatrixHtml(resistStr, elemsFallback) {
+    const str = typeof resistStr === 'string' ? resistStr : '';
+    const elems = (Array.isArray(elemsFallback) && elemsFallback.length)
+        ? elemsFallback
+        : getCanonicalElementsForGame(S.game, str.length);
+    const statusByElem = {};
+    const codeMap = { w:'wk', s:'rs', r:'rs', n:'nu', '_':'nu', p:'rp', d:'dr', a:'dr' };
+    str.split('').forEach((c, i) => {
+        if (i >= elems.length) return;
+        const st = c === 'R' ? 'rp' : (codeMap[c.toLowerCase()] || 'norm');
+        statusByElem[elems[i].toLowerCase()] = st;
+    });
+    return renderAffinityMatrixCellsHtml(elems, statusByElem);
+}
+
+async function toggleInlineSkillDetail(wrapEl, skillName) {
+    if (!wrapEl) return;
+    if (wrapEl.classList.contains('expanded')) {
+        wrapEl.classList.remove('expanded');
+        return;
+    }
+    wrapEl.classList.add('expanded');
+    const box = wrapEl.querySelector('.skill-expand-box');
+    if (!box) return;
+    if (box.dataset.loaded === '1') return;
+
+    box.innerHTML = `<span style="color:var(--text3)">Loading skill details...</span>`;
+    const key = `skills_${S.game}`;
+    if (!S.rawData[key] && SKILL_PATHS[S.game]) {
+        try {
+            const r = await fetch(SKILL_PATHS[S.game]);
+            if (r.ok) S.rawData[key] = normalizeListData(await r.json(), 'skills');
+        } catch (_) {}
+    }
+    const pool = S.rawData[key] || [];
+    const sk = pool.find(s => (s.name || '').toLowerCase() === (skillName || '').toLowerCase());
+    box.dataset.loaded = '1';
+    if (!sk) {
+        box.innerHTML = `<div style="color:var(--text3)">Passive or special skill (${skillName}).</div>`;
+        return;
+    }
+    const elem = sk.element || sk.type || 'Skill';
+    const cost = sk.cost ? `<span class="skill-cost-tag">Cost: ${sk.cost}</span>` : '';
+    const eff = sk.effect || sk.description || 'No description listed.';
+    box.innerHTML = `
+        <div class="skill-meta-tags">
+            <span class="skill-elem-tag">${elem}</span>
+            ${cost}
+        </div>
+        <div>${eff}</div>
+        <div style="margin-top:6px;display:flex;gap:8px">
+            <button class="compendium-pill" onclick="event.stopPropagation(); S.listMode='skills'; navigate('skills'); setTimeout(()=>openSkill('${esc(sk.name)}'), 120)">Open in Skills</button>
+            <button class="compendium-pill" onclick="event.stopPropagation(); setSkillRoutePreload(null, '${esc(sk.name)}')">Skill Fusion Route</button>
+        </div>`;
 }
 
 /* ── Settings ──────────────────────────────────────────────────────────────── */
@@ -2065,7 +2301,7 @@ function buildSettingsScreen() {
     </div>
     <div class="section-card" style="margin-top:12px">
         <div class="section-title">Data &amp; Backup</div>
-        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:12px">Export your favorites, recent history, completed requests, social links, and settings to JSON, or restore from a backup. Compatible with the Android Companion App.</div>
+        <div style="font-size:0.8rem;color:var(--text3);margin-bottom:12px">Export your favorites, registered compendium checklist, recent history, completed requests, social links, and settings to JSON, or restore from a backup. Compatible with the Android Companion App (v8.2+).</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
             <button class="action-btn" onclick="exportWebBackup()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--velvet-3);border:1px solid var(--hairline-strong);border-radius:6px;color:var(--text);font-size:0.85rem;cursor:pointer">
                 <span>Export Backup (JSON)</span>
@@ -2076,6 +2312,16 @@ function buildSettingsScreen() {
             <input type="file" id="webBackupInput" accept=".json,application/json" style="display:none" onchange="importWebBackup(event)">
         </div>
         <div id="backupStatusMsg" style="font-size:0.8rem;margin-top:8px;color:var(--brass);display:none"></div>
+    </div>
+    <div class="section-card" style="margin-top:12px">
+        <div class="section-title">About &amp; Legal</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div style="font-size:0.82rem;color:var(--text2)">Persona Companion Web v8.2.0 · Offline-first reference tool</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <a href="privacy.html" style="font-size:0.82rem;font-weight:600;color:var(--brass);text-decoration:none">Privacy Policy</a>
+                <a href="https://github.com/Sentovibes/persona-companion-app" target="_blank" rel="noopener" style="font-size:0.82rem;font-weight:600;color:var(--text2);text-decoration:none">GitHub</a>
+            </div>
+        </div>
     </div>`;
     updateSwStatusLabel();
 }
@@ -2230,13 +2476,23 @@ async function exportWebBackup() {
         };
     }).filter(Boolean);
 
+    const ownedPersonas = Array.from(S.ownedPersonas || []).map(k => {
+        const parts = String(k).split('_');
+        if (parts.length >= 3 && ['p3','p4','p5'].includes(parts[0])) return k;
+        const parsed = splitWebFavoriteKey(k);
+        if (!parsed) return null;
+        const seriesId = inferSeriesForGame(parsed.gameId);
+        return `${seriesId}_${parsed.gameId}_${parsed.name}`;
+    }).filter(Boolean);
+
     const backupData = {
         schemaVersion: 1,
-        appVersion: "8.1",
-        versionCode: 65,
+        appVersion: "8.2.0",
+        versionCode: 67,
         exportTimestamp: Date.now(),
         favoritePersonas,
         favoriteEnemies,
+        ownedPersonas,
         recentPersonas: (S.recents?.personas || []).slice(0, 50),
         recentEnemies: (S.recents?.enemies || []).slice(0, 50),
         completedRequests,
@@ -2341,6 +2597,18 @@ function importWebBackup(event) {
                     }
                 });
                 localStorage.setItem('completed_requests', JSON.stringify(Array.from(S.completedRequests)));
+            }
+
+            if (Array.isArray(data.ownedPersonas)) {
+                if (!S.ownedPersonas) S.ownedPersonas = new Set();
+                data.ownedPersonas.forEach(item => {
+                    const key = parseBackupFavoriteToWebKey(item);
+                    if (key) {
+                        S.ownedPersonas.add(key);
+                        restoredCount++;
+                    }
+                });
+                localStorage.setItem('owned_personas', JSON.stringify(Array.from(S.ownedPersonas)));
             }
 
             if (Array.isArray(data.pinnedSocialLinks)) {
@@ -2717,6 +2985,89 @@ function selectFusionPersona(name) {
     }
 }
 
+function toggleFusionOwnedOnly() {
+    S.fusion.ownedOnly = !S.fusion.ownedOnly;
+    const series = SERIES.find(s=>s.id===S.series);
+    const color = series?.color||'#2196F3';
+    if (isTablet()) showFusionDetailPane(color);
+    else renderFusionResults(color);
+}
+
+function renderFusionRecipesListHtml(recipes, color, isPane) {
+    if (!recipes || !recipes.length) {
+        return `<div class="empty-state" style="${isPane?'':'margin-top:24px'}">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
+    }
+    const ownedOnly = !!S.fusion.ownedOnly;
+    const filtered = ownedOnly
+        ? recipes.filter(combo => combo.every(ing => isPersonaOwned(S.game, ing.name)))
+        : recipes;
+
+    const filterHeaderHtml = `
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:${isPane?'8px 0 6px':'8px 16px 6px'}">
+            <div class="fusion-count" style="padding:0">${filtered.length}${ownedOnly ? ` of ${recipes.length}` : ''} recipe${filtered.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''} · cheapest first</div>
+            <button class="compendium-pill ${ownedOnly?'active':''}" onclick="toggleFusionOwnedOnly()">Owned Ingredients Only</button>
+        </div>`;
+
+    if (!filtered.length) {
+        return filterHeaderHtml + `<div class="empty-state">No recipes match Owned Ingredients Only. Register more personas in the Compendium or turn off the filter.</div>`;
+    }
+
+    return filterHeaderHtml + filtered.map((combo, idx) => {
+        const cost = getRecipeTotalCost(combo);
+        const isCheapest = idx === 0;
+        const cheapestBadge = isCheapest ? `<div style="font-size:10px;font-weight:bold;color:#4CAF50;margin-bottom:4px;width:100%">★ CHEAPEST OPTION</div>` : '';
+        const costHtml = `<div class="fusion-cost" style="display:flex;justify-content:flex-end;width:100%;margin-top:6px;font-size:11px;font-weight:bold;color:${isCheapest?'#4CAF50':'#FFD700'}">Total Cost: ¥ ${cost.toLocaleString()}</div>`;
+        const marginStyle = isPane ? 'margin:0 0 8px;' : '';
+        if (combo.length === 2) {
+            return `<div class="fusion-recipe-card" style="${marginStyle}flex-direction:column;align-items:stretch;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                ${cheapestBadge}
+                <div style="display:flex;align-items:center;width:100%">
+                    ${combo.map((ing, i) => {
+                        const ingOwned = isPersonaOwned(S.game, ing.name);
+                        return `
+                        ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
+                        <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
+                            <div class="fusion-ing-avatar-box">
+                                <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div style="min-width:0">
+                                <div class="fusion-ing-name" style="color:${color};display:flex;align-items:center;gap:5px;flex-wrap:wrap">
+                                    <span>${ing.name}</span>
+                                    ${ingOwned ? `<span class="owned-badge">Owned</span>` : ''}
+                                </div>
+                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                            </div>
+                        </div>`;
+                    }).join('')}
+                </div>
+                ${costHtml}
+            </div>`;
+        } else {
+            return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="${marginStyle}${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
+                ${cheapestBadge}
+                ${combo.map((ing, i) => {
+                    const ingOwned = isPersonaOwned(S.game, ing.name);
+                    return `
+                    ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
+                    <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
+                        <div class="fusion-ing-avatar-box" style="display:inline-flex;vertical-align:middle;margin-right:6px">
+                            <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        <div style="display:inline-block;vertical-align:middle">
+                            <div class="fusion-ing-name" style="color:${color};display:flex;align-items:center;gap:5px;flex-wrap:wrap">
+                                <span>${ing.name}</span>
+                                ${ingOwned ? `<span class="owned-badge">Owned</span>` : ''}
+                            </div>
+                            <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
+                        </div>
+                    </div>`;
+                }).join('')}
+                ${costHtml}
+            </div>`;
+        }
+    }).join('');
+}
+
 function showFusionDetailPane(color) {
     const { selected, recipes } = S.fusion;
     if (!selected) return;
@@ -2739,6 +3090,7 @@ function showFusionDetailPane(color) {
             <div class="fusion-selected-name">${selected.name}</div>
             <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
         </div>
+        <button class="compendium-pill" onclick="jumpToPersona('${esc(selected.name)}')">Persona Details</button>
     </div>`;
 
     if (p.unlock) {
@@ -2748,52 +3100,7 @@ function showFusionDetailPane(color) {
         </div>`;
     }
 
-    if (!recipes || !recipes.length) {
-        html += `<div class="empty-state">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
-    } else {
-        html += `<div class="fusion-count" style="padding:8px 0 4px">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''} · cheapest first</div>`;
-        html += recipes.map((combo, idx) => {
-            const cost = getRecipeTotalCost(combo);
-            const isCheapest = idx === 0;
-            const cheapestBadge = isCheapest ? `<div style="font-size:10px;font-weight:bold;color:#4CAF50;margin-bottom:4px;width:100%">★ CHEAPEST OPTION</div>` : '';
-            const costHtml = `<div class="fusion-cost" style="display:flex;justify-content:flex-end;width:100%;margin-top:6px;font-size:11px;font-weight:bold;color:${isCheapest?'#4CAF50':'#FFD700'}">Total Cost: ¥ ${cost.toLocaleString()}</div>`;
-            if (combo.length === 2) {
-                return `<div class="fusion-recipe-card" style="margin:0 0 8px;flex-direction:column;align-items:stretch;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
-                    ${cheapestBadge}
-                    <div style="display:flex;align-items:center;width:100%">
-                        ${combo.map((ing, i) => `
-                            ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
-                            <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                                <div class="fusion-ing-avatar-box">
-                                    <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                                </div>
-                                <div>
-                                    <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                    <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                                </div>
-                            </div>`).join('')}
-                    </div>
-                    ${costHtml}
-                </div>`;
-            } else {
-                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="margin:0 0 8px;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
-                    ${cheapestBadge}
-                    ${combo.map((ing, i) => `
-                        ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
-                        <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-avatar-box" style="display:inline-flex;vertical-align:middle;margin-right:6px">
-                                <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                            </div>
-                            <div style="display:inline-block;vertical-align:middle">
-                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                            </div>
-                        </div>`).join('')}
-                    ${costHtml}
-                </div>`;
-            }
-        }).join('');
-    }
+    html += renderFusionRecipesListHtml(recipes, color, true);
     el.innerHTML = html;
     el.scrollTop = 0;
 }
@@ -2816,6 +3123,7 @@ function renderFusionResults(color) {
             <div class="fusion-selected-name">${selected.name}</div>
             <div class="fusion-selected-sub" style="color:${color}">${arcana} · Lv. ${level}</div>
         </div>
+        <button class="compendium-pill" onclick="jumpToPersona('${esc(selected.name)}')">Details</button>
         <button class="icon-btn" onclick="clearFusionSelection()" title="Clear">✕</button>
     </div>`;
 
@@ -2826,52 +3134,7 @@ function renderFusionResults(color) {
         </div>`;
     }
 
-    if (!recipes || !recipes.length) {
-        html += `<div class="empty-state" style="margin-top:24px">No two-persona recipes exist — in-game this persona comes from triangle or conditional fusion${!S.settings.showDlc?' (DLC personas are also hidden)':''}</div>`;
-    } else {
-        html += `<div class="fusion-count">${recipes.length} recipe${recipes.length!==1?'s':''} found${S.fusion.isTriangle?' · triangle fusion (3 personas)':''} · cheapest first</div>`;
-        html += recipes.map((combo, idx) => {
-            const cost = getRecipeTotalCost(combo);
-            const isCheapest = idx === 0;
-            const cheapestBadge = isCheapest ? `<div style="font-size:10px;font-weight:bold;color:#4CAF50;margin-bottom:4px;width:100%">★ CHEAPEST OPTION</div>` : '';
-            const costHtml = `<div class="fusion-cost" style="display:flex;justify-content:flex-end;width:100%;margin-top:6px;font-size:11px;font-weight:bold;color:${isCheapest?'#4CAF50':'#FFD700'}">Total Cost: ¥ ${cost.toLocaleString()}</div>`;
-            if (combo.length === 2) {
-                return `<div class="fusion-recipe-card" style="flex-direction:column;align-items:stretch;${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
-                    ${cheapestBadge}
-                    <div style="display:flex;align-items:center;width:100%">
-                        ${combo.map((ing, i) => `
-                            ${i>0?`<div class="fusion-plus" style="color:${color}">+</div>`:''}
-                            <div class="fusion-ingredient" onclick="selectFusionPersona('${esc(ing.name)}')">
-                                <div class="fusion-ing-avatar-box">
-                                    <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                                </div>
-                                <div>
-                                    <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                    <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                                </div>
-                            </div>`).join('')}
-                    </div>
-                    ${costHtml}
-                </div>`;
-            } else {
-                return `<div class="fusion-recipe-card fusion-recipe-card--vertical" style="${isCheapest?'border-color:rgba(76,175,80,0.6);':''}">
-                    ${cheapestBadge}
-                    ${combo.map((ing, i) => `
-                        ${i>0?`<div class="fusion-plus-v" style="color:${color}">+</div>`:''}
-                        <div class="fusion-ingredient-v" onclick="selectFusionPersona('${esc(ing.name)}')">
-                            <div class="fusion-ing-avatar-box" style="display:inline-flex;vertical-align:middle;margin-right:6px">
-                                <img src="${getPersonaImageFilename(ing.name)}" class="fusion-ing-avatar-img" alt="${esc(ing.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                            </div>
-                            <div style="display:inline-block;vertical-align:middle">
-                                <div class="fusion-ing-name" style="color:${color}">${ing.name}</div>
-                                <div class="fusion-ing-sub">${ing.data.arcana||ing.data.race||'Unknown'} · Lv. ${ing.data.level??ing.data.lvl??'?'}</div>
-                            </div>
-                        </div>`).join('')}
-                    ${costHtml}
-                </div>`;
-            }
-        }).join('');
-    }
+    html += renderFusionRecipesListHtml(recipes, color, false);
     el.innerHTML = html;
     el.scrollTop = 0;
 }
@@ -4991,6 +5254,7 @@ function openItem(name) {
     document.getElementById('itemDetailPlaceholder').style.display = 'none';
     document.getElementById('itemDetailContentWrap').style.display = 'flex';
     document.getElementById('itemDetailTitle').textContent = it.name;
+    openMobilePane('itemDetailPane');
     
     let html = `
         <div class="section-card">
@@ -5073,6 +5337,7 @@ function openSkill(name) {
     document.getElementById('skillDetailPlaceholder').style.display = 'none';
     document.getElementById('skillDetailContentWrap').style.display = 'flex';
     document.getElementById('skillDetailTitle').textContent = sk.name;
+    openMobilePane('skillDetailPane');
 
     let html = `
         <div class="section-card">
@@ -5229,6 +5494,7 @@ function openRequest(name) {
     document.getElementById('requestDetailPlaceholder').style.display = 'none';
     document.getElementById('requestDetailContentWrap').style.display = 'flex';
     document.getElementById('requestDetailTitle').textContent = req.name;
+    openMobilePane('requestDetailPane');
     
     const id = `${S.game}_req_${req.id || req.name}`;
     const isDone = S.completedRequests.has(id);

@@ -1,10 +1,10 @@
-const CACHE_NAME = 'persona-companion-v652';
+const CACHE_NAME = 'persona-companion-v653';
 
 const PRECACHE_URLS = [
     './',
     './index.html',
-    './styles.css?v=652',
-    './app.js?v=652',
+    './styles.css?v=653',
+    './app.js?v=653',
     './manifest.json',
     './icon.webp'
 ];
