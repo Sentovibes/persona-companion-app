@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startVhSync();
     }
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-        navigator.serviceWorker.register('./sw.js').catch(() => {});
+        initAutoUpdatingServiceWorker();
     }
     // Restore location: URL hash wins, then last visited, else home
     const h = location.hash && location.hash !== '#' ? location.hash : (localStorage.getItem('last_loc') || '');
@@ -7145,6 +7145,73 @@ async function openGlobalSearchResult(idx) {
 }
 
 /* ── Service Worker & Offline Cache Utilities ─────────────────────────────── */
+const APP_BUILD_VERSION = '656';
+
+function initAutoUpdatingServiceWorker() {
+    const hadController = !!navigator.serviceWorker.controller;
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (hadController && !refreshing) {
+            refreshing = true;
+            location.reload();
+        }
+    });
+
+    navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
+        .then((reg) => {
+            if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            reg.addEventListener('updatefound', () => {
+                const newWorker = reg.installing;
+                if (!newWorker) return;
+                newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                    }
+                });
+            });
+            checkOnlineUpdate(reg);
+        })
+        .catch(() => {});
+
+    window.addEventListener('online', () => checkOnlineUpdate());
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') checkOnlineUpdate();
+    });
+}
+
+async function checkOnlineUpdate(existingReg) {
+    if (!navigator.onLine || !location.protocol.startsWith('http')) return;
+    try {
+        const reg = existingReg || await navigator.serviceWorker.getRegistration('./sw.js');
+        if (reg) {
+            await reg.update().catch(() => {});
+            if (reg.waiting) {
+                reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                return;
+            }
+        }
+        const res = await fetch(`./sw.js?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) return;
+        const text = await res.text();
+        const match = text.match(/persona-companion-v(\d+)/);
+        const remoteVer = match ? match[1] : null;
+        if (remoteVer && remoteVer !== APP_BUILD_VERSION) {
+            const lastReloaded = sessionStorage.getItem('pc_auto_updated_v');
+            if (lastReloaded !== remoteVer) {
+                sessionStorage.setItem('pc_auto_updated_v', remoteVer);
+                if ('caches' in window) {
+                    const keys = await caches.keys();
+                    await Promise.all(
+                        keys.filter(k => k.startsWith('persona-companion-') && k !== `persona-companion-v${remoteVer}`)
+                            .map(k => caches.delete(k))
+                    );
+                }
+                location.reload();
+            }
+        }
+    } catch (_) {}
+}
+
 async function updateSwStatusLabel() {
     const label = document.getElementById('swStatusLabel');
     if (!label) return;

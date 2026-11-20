@@ -1,19 +1,26 @@
-const CACHE_NAME = 'persona-companion-v654';
+const CACHE_NAME = 'persona-companion-v656';
 
 const PRECACHE_URLS = [
     './',
     './index.html',
-    './styles.css?v=654',
-    './app.js?v=654',
+    './styles.css?v=656',
+    './app.js?v=656',
     './manifest.json',
     './icon.webp'
 ];
 
 self.addEventListener('install', (event) => {
+    self.skipWaiting();
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => cache.addAll(PRECACHE_URLS))
-            .then(() => self.skipWaiting())
+        caches.open(CACHE_NAME).then((cache) =>
+            Promise.all(
+                PRECACHE_URLS.map((url) =>
+                    fetch(url, { cache: 'reload' })
+                        .then((res) => (res && res.ok ? cache.put(url, res) : null))
+                        .catch(() => null)
+                )
+            )
+        )
     );
 });
 
@@ -39,18 +46,23 @@ self.addEventListener('fetch', (event) => {
 
     const url = new URL(req.url);
     if (url.origin !== self.location.origin) return;
-    if (url.pathname.endsWith('/sw.js')) return;
+    if (url.pathname.endsWith('/sw.js')) {
+        event.respondWith(fetch(req, { cache: 'no-store' }).catch(() => caches.match(req)));
+        return;
+    }
 
-    // App shell documents: network-first with cache fallback
-    const isShell = req.mode === 'navigate' ||
+    // App shell & HTML/JS/CSS/JSON: always network-first (bypassing browser HTTP cache) when online,
+    // falling back to Cache Storage only when offline.
+    const isAlwaysFresh = req.mode === 'navigate' ||
         url.pathname.endsWith('/') ||
-        url.pathname.endsWith('/index.html') ||
-        url.pathname.endsWith('/app.js') ||
-        url.pathname.endsWith('/styles.css');
+        url.pathname.endsWith('.html') ||
+        url.pathname.endsWith('.js') ||
+        url.pathname.endsWith('.css') ||
+        url.pathname.endsWith('.json');
 
-    if (isShell) {
+    if (isAlwaysFresh) {
         event.respondWith(
-            fetch(req)
+            fetch(req, { cache: 'no-cache' })
                 .then((res) => {
                     if (res && res.ok) {
                         const copy = res.clone();
@@ -58,38 +70,25 @@ self.addEventListener('fetch', (event) => {
                     }
                     return res;
                 })
-                .catch(() => caches.match(req).then((cached) => cached || caches.match('./index.html')))
+                .catch(() =>
+                    caches.match(req)
+                        .then((cached) => cached || caches.match(req, { ignoreSearch: true }))
+                        .then((cached) => cached || (req.mode === 'navigate' ? caches.match('./index.html') : null))
+                )
         );
         return;
     }
 
-    // Compendium JSON data: stale-while-revalidate for fast offline/online response
-    if (url.pathname.includes('/data/')) {
-        event.respondWith(
-            caches.open(CACHE_NAME).then((cache) =>
-                cache.match(req).then((cached) => {
-                    const networkFetch = fetch(req).then((res) => {
-                        if (res && res.ok) cache.put(req, res.clone());
-                        return res;
-                    }).catch(() => cached);
-                    return cached || networkFetch;
-                })
-            )
-        );
-        return;
-    }
-
-    // Images and static assets: cache-first
+    // Images and static sprites: stale-while-revalidate when online, cached when offline
     event.respondWith(
-        caches.match(req).then((cached) => {
-            if (cached) return cached;
-            return fetch(req).then((res) => {
-                if (res && res.ok) {
-                    const copy = res.clone();
-                    caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
-                }
-                return res;
-            });
-        })
+        caches.open(CACHE_NAME).then((cache) =>
+            cache.match(req).then((cached) => {
+                const netFetch = fetch(req).then((res) => {
+                    if (res && res.ok) cache.put(req, res.clone());
+                    return res;
+                }).catch(() => cached);
+                return cached || netFetch;
+            })
+        )
     );
 });
