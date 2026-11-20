@@ -7,232 +7,596 @@
     <link rel="icon" href="icon.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --velvet-0: #0D0D12;
             --velvet-1: #14141B;
             --velvet-2: #1B1B24;
-            --velvet-3: #23232E;
-            --brass: #C9A45C;
-            --brass-dim: rgba(201, 164, 92, 0.16);
+            --hairline-soft: rgba(180, 190, 230, 0.06);
+            --hairline: rgba(180, 190, 230, 0.10);
+            --hairline-strong: rgba(180, 190, 230, 0.18);
             --text: #ECECF1;
-            --text2: #9C9CAD;
-            --text3: #5A5A6B;
-            --border: rgba(180, 190, 230, 0.1);
+            --text2: #A0A0B2;
+            --text3: #727285;
+            --brass: #C9A45C;
+            --font-display: 'Barlow Condensed', 'Roboto', system-ui, sans-serif;
+            --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            color-scheme: dark;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: var(--font-body);
             background-color: var(--velvet-0);
             color: var(--text);
             line-height: 1.65;
-            padding: 2rem 1rem;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--velvet-1);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+
+        ::selection {
+            background: rgba(201, 164, 92, 0.28);
+            color: #fff;
         }
-        header {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .badge {
-            display: inline-block;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            background: var(--brass-dim);
-            color: var(--brass);
-            padding: 0.25rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-        }
-        h1 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: 0.03em;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-        }
-        .updated {
-            color: var(--text3);
-            font-size: 0.9rem;
-        }
-        h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--brass);
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.02em;
-        }
-        p {
-            color: var(--text2);
-            margin-bottom: 1rem;
-            font-size: 0.98rem;
-        }
-        ul {
-            list-style: disc;
-            padding-left: 1.5rem;
-            margin-bottom: 1.25rem;
-            color: var(--text2);
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        strong {
-            color: var(--text);
-        }
-        .card {
-            background-color: var(--velvet-2);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem;
-            margin: 1.25rem 0;
-        }
-        .card h3 {
-            color: var(--text);
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
-        }
-        .card p {
-            margin-bottom: 0;
-            font-size: 0.92rem;
-        }
+
         a {
             color: var(--brass);
             text-decoration: none;
+            transition: color 120ms ease, opacity 120ms ease;
         }
+
         a:hover {
             text-decoration: underline;
+            text-underline-offset: 3px;
         }
+
+        /* Top bar */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            height: 56px;
+            background: var(--velvet-1);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .topbar-inner {
+            max-width: 1040px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .brand:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand img {
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            border: 1px solid var(--hairline);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text2);
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+            background: var(--velvet-2);
+            border-color: var(--hairline);
+            text-decoration: none;
+        }
+
+        /* Document layout */
+        .layout {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+            display: grid;
+            grid-template-columns: 200px minmax(0, 680px);
+            gap: 56px;
+            align-items: start;
+        }
+
+        /* Left rail */
+        .rail {
+            position: sticky;
+            top: 84px;
+        }
+
+        .meta-list {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--hairline);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .meta-row {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .meta-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text3);
+        }
+
+        .meta-value {
+            font-size: 0.875rem;
+            color: var(--text2);
+        }
+
+        .toc-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text3);
+            margin-bottom: 10px;
+        }
+
+        .toc {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .toc a {
+            display: block;
+            padding: 5px 0;
+            font-size: 0.875rem;
+            color: var(--text2);
+            transition: color 120ms ease;
+        }
+
+        .toc a:hover {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        /* Reading column */
+        .doc-header {
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .lede {
+            font-size: 1.02rem;
+            color: var(--text2);
+            max-width: 60ch;
+        }
+
+        section {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--hairline-soft);
+            scroll-margin-top: 76px;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text);
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: var(--text2);
+            font-size: 0.96rem;
+            margin-bottom: 14px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.84em;
+            color: var(--text);
+            background: var(--velvet-2);
+            border: 1px solid var(--hairline);
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        /* Spec tables */
+        .table-wrap {
+            margin-top: 16px;
+            border: 1px solid var(--hairline);
+            border-radius: 6px;
+            overflow-x: auto;
+            background: var(--velvet-1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        thead th {
+            background: var(--velvet-2);
+            color: var(--text3);
+            font-size: 0.74rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        tbody td {
+            padding: 14px;
+            color: var(--text2);
+            vertical-align: top;
+            border-bottom: 1px solid var(--hairline-soft);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .col-key {
+            width: 34%;
+            color: var(--text);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .perm-name {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--brass);
+            margin-bottom: 3px;
+        }
+
+        .perm-sub {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--text3);
+            font-weight: 400;
+            white-space: normal;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 24px;
+            border-top: 1px solid var(--hairline);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.88rem;
-            color: var(--text3);
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 12px;
+            font-size: 0.84rem;
+            color: var(--text3);
         }
-        @media (max-width: 600px) {
-            .container { padding: 1.5rem; }
-            h1 { font-size: 1.8rem; }
+
+        @media (max-width: 820px) {
+            .layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 32px 20px 64px;
+            }
+
+            .rail {
+                position: static;
+            }
+
+            .meta-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 16px 28px;
+                margin-bottom: 0;
+            }
+
+            .toc-block {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            .col-key {
+                white-space: normal;
+                width: 38%;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #111;
+            }
+
+            .topbar, .rail {
+                display: none;
+            }
+
+            .layout {
+                display: block;
+                padding: 0;
+            }
+
+            p, tbody td, .lede {
+                color: #222;
+            }
+
+            h1, h2, .col-key, code {
+                color: #000;
+            }
+
+            .table-wrap, thead th, code {
+                background: #fff;
+                border-color: #ccc;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <span class="badge">Legal & Transparency</span>
-            <h1>Privacy Policy for Persona Companion</h1>
-            <p class="updated">Effective Date: September 1, 2026</p>
-        </header>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="https://sentovibes.github.io/persona-companion-app/">
+                <img src="icon.webp" alt="Persona Companion icon" width="24" height="24">
+                <span>Persona Companion</span>
+            </a>
+            <a class="back-link" href="https://sentovibes.github.io/persona-companion-app/">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                <span>Back to app</span>
+            </a>
+        </div>
+    </header>
 
-        <section>
-            <h2>Overview</h2>
-            <p>
-                <strong>Persona Companion</strong> ("we", "our", or "the app") is designed as an offline reference and utility guide for fans of the Persona video game series. We respect your privacy and are committed to protecting it.
-            </p>
-            <p>
-                <strong>We do not collect, sell, or transmit any personal identifiable information (PII).</strong> The app operates primarily offline on your device.
-            </p>
-        </section>
-
-        <section>
-            <h2>Information We Do NOT Collect</h2>
-            <ul>
-                <li>We do not collect names, emails, phone numbers, or physical addresses.</li>
-                <li>We do not collect financial, payment, or banking information.</li>
-                <li>We do not track precise or approximate GPS location.</li>
-                <li>We do not create user profiles or track your identity across apps or websites.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Permissions & On-Device Features</h2>
-            <p>The app requests the following Android permissions strictly for local app functionality:</p>
-            
-            <div class="card">
-                <h3>📷 Camera Permission (Optional / AI Scanner)</h3>
-                <p>Used exclusively for the on-device AI Screen Scanner & OCR feature to recognize in-game text and enemies. All optical character recognition (OCR) and machine learning processing occurs 100% locally on your device via Google ML Kit / TensorFlow Lite. No images, video frames, or scanner data are ever uploaded or transmitted over the internet.</p>
+    <main class="layout">
+        <aside class="rail" aria-label="Document metadata and navigation">
+            <div class="meta-list">
+                <div class="meta-row">
+                    <span class="meta-label">Effective</span>
+                    <span class="meta-value">November 20, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Applies to</span>
+                    <span class="meta-value">Android &amp; Web App</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Developer</span>
+                    <span class="meta-value">Sentovibes</span>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🌐 Internet Access</h3>
-                <p>Used solely to download optional high-definition image asset packs from GitHub Releases / CDN and to power the optional local Wi-Fi casting feature (displaying guides on your local TV or secondary screen via local HTTP/WebSocket server). We do not send your data to external analytics servers.</p>
+            <div class="toc-block">
+                <div class="toc-label">On this page</div>
+                <ul class="toc">
+                    <li><a href="#scope">Scope</a></li>
+                    <li><a href="#no-collection">Data not collected</a></li>
+                    <li><a href="#permissions">Android permissions</a></li>
+                    <li><a href="#storage">Storage &amp; backups</a></li>
+                    <li><a href="#third-party">Third-party services</a></li>
+                    <li><a href="#children">Children's privacy</a></li>
+                    <li><a href="#contact">Disclaimer &amp; contact</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <article>
+            <div class="doc-header">
+                <h1>Privacy Policy</h1>
+                <p class="lede">
+                    Persona Companion is an offline reference guide for Persona 3, Persona 4, and Persona 5. It does not collect, store, sell, or share personal information.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>🔔 Notifications & Foreground Service</h3>
-                <p>Used strictly to keep the local display cast server or active asset download service running smoothly when placed in the background.</p>
-            </div>
-        </section>
+            <section id="scope">
+                <h2>1. Scope</h2>
+                <p>
+                    This policy covers the Persona Companion Android application and the companion Web App hosted at <a href="https://sentovibes.github.io/persona-companion-app/">sentovibes.github.io/persona-companion-app</a>. Both work offline without an account or login.
+                </p>
+            </section>
 
-        <section>
-            <h2>Data Storage & Local Preferences</h2>
-            <p>
-                All user data — including saved favorites, tracked fusion checklists, social link notes, and app preferences — is stored strictly locally on your device using Android Room Database and SharedPreferences. You can clear this data at any time through your device's Application Settings ("Clear Data" / "Clear Cache") or by uninstalling the application.
-            </p>
-        </section>
+            <section id="no-collection">
+                <h2>2. Data We Do Not Collect</h2>
+                <p>
+                    Persona Companion does not ask for or gather names, email addresses, phone numbers, account credentials, payment details, GPS location, advertising IDs, or cross-app browsing history. There is no user registration and no remote backend storing user profiles.
+                </p>
+            </section>
 
-        <section>
-            <h2>Third-Party Services & Advertising</h2>
-            <p>
-                Persona Companion <strong>does not contain advertising</strong> (no AdMob or third-party ad networks) and contains no third-party tracking or behavioral analytics SDKs.
-            </p>
-        </section>
+            <section id="permissions">
+                <h2>3. Android Permissions</h2>
+                <p>
+                    All persona and enemy artwork ships inside the app package. The Android build requests only the permissions below:
+                </p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Permission</th>
+                                <th scope="col">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-key">
+                                    <span class="perm-name">INTERNET</span>
+                                    <span class="perm-sub">Network access</span>
+                                </td>
+                                <td>
+                                    Runs the optional local Wi-Fi Cast server (HTTP/WebSocket on your local network to view guides on a TV or second screen), checks the public GitHub Releases API when you tap "Check for Updates" in Settings, and opens external links you tap (GitHub or Ko-fi). No personal data is sent.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-key">
+                                    <span class="perm-name">FOREGROUND_SERVICE</span>
+                                    <span class="perm-name">POST_NOTIFICATIONS</span>
+                                    <span class="perm-sub">Background cast &amp; status</span>
+                                </td>
+                                <td>
+                                    Keeps the local Wi-Fi Cast server active while the app is backgrounded and shows an ongoing notification so you can see and stop the active session.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-key">
+                                    <span class="perm-name">WAKE_LOCK</span>
+                                    <span class="perm-sub">Cast session stability</span>
+                                </td>
+                                <td>
+                                    Prevents the device from suspending the local Wi-Fi Cast server while a casting session is running.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <section>
-            <h2>Children's Privacy</h2>
-            <p>
-                Persona Companion does not knowingly collect or solicit any personal information from children under the age of 13. Because our application does not collect any personal data whatsoever, it is fully compliant with COPPA and Google Play Family Policy requirements.
-            </p>
-        </section>
+            <section id="storage">
+                <h2>4. Local Storage &amp; Backups</h2>
+                <p>
+                    Saved favorites, compendium checklists, completed requests, Social Link progress, recent history, and settings stay on your device.
+                </p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Platform</th>
+                                <th scope="col">How data is stored and removed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-key">Android App</td>
+                                <td>
+                                    Stored locally in Android Room Database and SharedPreferences. You can export or restore a <code>persona_companion_backup.json</code> file through Android's system file picker. Standard Android system backup (<code>allowBackup</code>) may back up local data if enabled in your device settings. To erase everything, clear storage in Android Settings or uninstall the app.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-key">Web App</td>
+                                <td>
+                                    Stored in your browser's <code>localStorage</code>, with static files cached offline via a Service Worker. Supports JSON backup export and import compatible with the Android app, plus an optional user-configured connection to a local Velvet Hook server on your own machine or LAN. Clearing site data in your browser removes all stored state.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <section>
-            <h2>Disclaimer</h2>
-            <p>
-                Persona Companion is a fan-made reference tool and is not affiliated with, endorsed, sponsored, or specifically approved by ATLUS or SEGA. Persona, Persona 3, Persona 4, and Persona 5 are trademarks and/or registered trademarks of ATLUS Co., Ltd. and SEGA Corporation.
-            </p>
-        </section>
+            <section id="third-party">
+                <h2>5. Third-Party Services &amp; Analytics</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Platform</th>
+                                <th scope="col">Ads, analytics, and external requests</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-key">Android App</td>
+                                <td>
+                                    No ads, no analytics, no crash-reporting SDKs, and no third-party trackers.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-key">Web App</td>
+                                <td>
+                                    No ads. Uses Umami Cloud (<code>cloud.umami.is</code>) for cookieless aggregate page-view counts without personal data or cross-site tracking, and loads web fonts from Google Fonts (<code>fonts.googleapis.com</code>).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <section>
-            <h2>Changes to This Policy</h2>
-            <p>
-                We may update our Privacy Policy periodically to reflect app updates or regulatory compliance. Any changes will be posted to this page with an updated effective date.
-            </p>
-        </section>
+            <section id="children">
+                <h2>6. Children's Privacy</h2>
+                <p>
+                    Persona Companion does not knowingly collect personal information from children under 13. Because no personal data is collected or transmitted, the app complies with COPPA and Google Play Families Policy requirements.
+                </p>
+            </section>
 
-        <section>
-            <h2>Contact Us</h2>
-            <p>
-                If you have questions or suggestions regarding this Privacy Policy, please contact us or open an issue on our official repository:
-            </p>
-            <p>
-                GitHub: <a href="https://github.com/Sentovibes/persona-companion-app" target="_blank" rel="noopener">github.com/Sentovibes/persona-companion-app</a>
-            </p>
-        </section>
+            <section id="contact">
+                <h2>7. Disclaimer, Changes &amp; Contact</h2>
+                <p>
+                    Persona Companion is a fan-made reference tool and is not affiliated with, endorsed by, or sponsored by ATLUS or SEGA. Persona, Persona 3, Persona 4, and Persona 5 are trademarks of ATLUS Co., Ltd. and SEGA Corporation.
+                </p>
+                <p>
+                    If this policy changes in a future release, the updated version will be published here with a new effective date. For questions or privacy requests, open an issue on GitHub at <a href="https://github.com/Sentovibes/persona-companion-app" target="_blank" rel="noopener">github.com/Sentovibes/persona-companion-app</a>.
+                </p>
+            </section>
+        </article>
+    </main>
 
-        <footer>
-            <span>Persona Companion © 2026 Sentovibes</span>
-            <a href="https://sentovibes.github.io/persona-companion-app/">Back to Web App</a>
-        </footer>
-    </div>
+    <footer>
+        <span>Persona Companion &copy; 2026 Sentovibes</span>
+        <a href="https://github.com/Sentovibes/persona-companion-app" target="_blank" rel="noopener">GitHub Repository</a>
+    </footer>
 </body>
 </html>

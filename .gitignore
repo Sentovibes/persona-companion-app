@@ -1,8 +1,11 @@
-
 # Built application files
 *.apk
 *.ap_
 *.aab
+*.hap
+*.app
+*.hsp
+*.har
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -24,25 +27,48 @@ gradle-app.setting
 !gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.jar
 
+# HarmonyOS / DevEco Studio build & local files
+harmonyos-watch/.hvigor/
+harmonyos-watch/oh_modules/
+harmonyos-watch/.idea/
+harmonyos-watch/build/
+harmonyos-watch/entry/build/
+
 # Local configuration file (sdk path, etc)
 local.properties
+.env
+.env.*
 
-# Android Studio
+# Android Studio / IDEs
 *.iml
 .idea/
-.DS_Store
+/.vscode/
 /captures
 .externalNativeBuild
 .cxx
 
-# Keystore files (except debug keystore)
+# Keystore & signing files (keep app/debug.keystore for local debug builds)
 *.jks
+*.keystore
+!app/debug.keystore
+*.pem
+*.p12
+*.cer
+*.p7b
+*.csr
 release.keystore
 adi-registration.properties
 app/src/main/assets/adi-registration.properties
 
-# Logs
+# Logs, profilers & test captures
 *.log
+*.hprof
+*.trace
+*.prof
+import_logs.txt
+image_load_logs.txt
+screen*.png
+vm_active.png
 
 # OS files
 Thumbs.db
@@ -54,6 +80,14 @@ Thumbs.db
 /*.png
 /*.jpg
 /*.jpeg
+/*.py
+/*.ps1
+/*.sh
+
+# Local one-off helper scripts not needed to build the app
+app/*.py
+__pycache__/
+*.pyc
 
 # Keep assets
 !app/src/main/assets/**/*.json
@@ -61,16 +95,12 @@ Thumbs.db
 !app/src/main/res/**/*.png
 !app/src/main/res/**/*.jpg
 
-# Large files
+# Large files & generated asset copies
 images.zip
 *.zip
 app/src/main/assets/images/
-.interface-design/
-*.apk
-import_logs.txt
-image_load_logs.txt
 
-# Node
+# Node & scraper local artifacts
 node_modules/
 scraper/node_modules/
 scraper/chrome_profile/
@@ -80,10 +110,14 @@ scraper/done.json
 scraper/failed.json
 scraper/test_abaddon.jpg
 /extras/
-/.vscode/
 
 # Backups and temp data
 *.backup
+*.bak
+*.tmp
+*.orig
+*.swp
+*~
 *_backup.json
 *_old.json
 *_new.json
@@ -94,22 +128,25 @@ scraper/test_abaddon.jpg
 *_converted.json
 *_regular_only.json
 *_before_*.json
+
+# Local-only tooling, screenshots, and test workspaces
 store_screenshots/
 testsprite_tests/
-
-# Teamwork and agent workspaces
-.agents/
+.interface-design/
+.freebuff/
+scratch/
 
 # Incoming raw images inbox
 incoming_images/*
 !incoming_images/README.md
 
-# Certificates and scratch directories
-*.pem
-.freebuff/
-scratch/
-
-# Agent artifacts
+# AI / agent local workspaces & artifacts
+.agents/
+.claude/
+.cursor/
+.windsurf/
+.gemini/
+.codex/
 DEFERRED_VERIFICATION.md
 handoff.md
 audit_report.md

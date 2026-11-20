@@ -1,63 +1,44 @@
 # Privacy Policy for Persona Companion
 
-**Effective Date:** September 1, 2026  
+**Effective Date:** November 20, 2026  
+**Applies to:** Persona Companion (Android App & Web App)  
 **Developer:** Sentovibes  
-**Repository:** [https://github.com/Sentovibes/persona-companion-app](https://github.com/Sentovibes/persona-companion-app)  
-**Hosted Privacy Policy URL:** [https://sentovibes.github.io/persona-companion-app/privacy.html](https://sentovibes.github.io/persona-companion-app/privacy.html)
+**Hosted URL:** [https://sentovibes.github.io/persona-companion-app/privacy.html](https://sentovibes.github.io/persona-companion-app/privacy.html)
 
----
+## 1. Scope
+Persona Companion is an offline reference guide for Persona 3, Persona 4, and Persona 5. This policy covers the Android application and the companion Web App hosted at `sentovibes.github.io/persona-companion-app`. Both work offline without an account or login, and neither collects, stores, sells, or shares personal information.
 
-## 1. Overview
-**Persona Companion** ("we", "our", or "the app") is an offline reference and utility guide application designed for fans of the Persona video game series (Persona 3, Persona 4, and Persona 5). We respect your privacy and are committed to transparency.
+## 2. Data We Do Not Collect
+Persona Companion does not ask for or gather names, email addresses, phone numbers, account credentials, payment details, GPS location, advertising IDs, or cross-app browsing history. There is no user registration and no remote backend storing user profiles.
 
-**Persona Companion does not collect, store, share, or sell any personal identifiable information (PII).**
+## 3. Android Permissions
+All persona and enemy artwork ships inside the app package. The Android build requests only the permissions below:
 
----
+| Permission | Purpose |
+| --- | --- |
+| `INTERNET` | Runs the optional local Wi-Fi Cast server (HTTP/WebSocket on your local network to view guides on a TV or second screen), checks the public GitHub Releases API when you tap "Check for Updates" in Settings, and opens external links you tap (GitHub or Ko-fi). No personal data is sent. |
+| `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE`, `POST_NOTIFICATIONS` | Keeps the local Wi-Fi Cast server active while the app is backgrounded and shows an ongoing notification so you can see and stop the active session. |
+| `WAKE_LOCK` | Prevents the device from suspending the local Wi-Fi Cast server while a casting session is running. |
 
-## 2. Information We Do NOT Collect
-- **Personal Identifiers:** We do not collect names, email addresses, phone numbers, or account credentials.
-- **Financial Information:** We do not collect payment details, credit card numbers, or billing info.
-- **Location Data:** We do not track or request coarse or precise GPS location.
-- **User Activity Tracking:** We do not track cross-app browsing habits, user profiles, or behavioral analytics.
+## 4. Local Storage & Backups
+Saved favorites, compendium checklists, completed requests, Social Link progress, recent history, and settings stay on your device.
 
----
+| Platform | How data is stored and removed |
+| --- | --- |
+| Android App | Stored locally in Android Room Database and SharedPreferences. You can export or restore a `persona_companion_backup.json` file through Android's system file picker. Standard Android system backup (`allowBackup`) may back up local data if enabled in your device settings. To erase everything, clear storage in Android Settings or uninstall the app. |
+| Web App | Stored in your browser's `localStorage`, with static files cached offline via a Service Worker. Supports JSON backup export and import compatible with the Android app, plus an optional user-configured connection to a local Velvet Hook server on your own machine or LAN. Clearing site data in your browser removes all stored state. |
 
-## 3. Permissions & Device Capabilities
+## 5. Third-Party Services & Analytics
 
-### 📷 Camera (`android.permission.CAMERA`)
-- **Purpose:** Used strictly for the optional on-device AI Screen Scanner & OCR feature to recognize in-game Persona screens, weaknesses, and stats.
-- **Processing:** 100% on-device using Google ML Kit and TensorFlow Lite. No images, photos, or video streams are ever uploaded or transmitted externally.
-
-### 🌐 Internet (`android.permission.INTERNET`)
-- **Purpose:** Used solely for downloading optional high-definition image packs (hosted on GitHub Releases CDN) and running the local Wi-Fi casting server (allowing you to project guides to a local smart TV or secondary browser via local HTTP/WebSocket).
-- **Processing:** No personal user data is sent over the network.
-
-### 🔔 Foreground Service & Notifications
-- **Purpose:** Used to ensure uninterrupted background downloading of asset packs and persistent local network casting.
-
----
-
-## 4. Data Storage & Local Persistence
-All user preferences, favorites, tracked fusion checklists, and progress markers are stored locally on your device via Android Room Database and SharedPreferences. You can delete all data at any time by clearing application data in Android Settings or uninstalling the app.
-
----
-
-## 5. Third-Party Services & Ads
-- **No Ads:** Persona Companion is completely ad-free.
-- **No Third-Party Analytics / Trackers:** We do not integrate tracking SDKs.
-
----
+| Platform | Ads, analytics, and external requests |
+| --- | --- |
+| Android App | No ads, no analytics, no crash-reporting SDKs, and no third-party trackers. |
+| Web App | No ads. Uses Umami Cloud (`cloud.umami.is`) for cookieless aggregate page-view counts without personal data or cross-site tracking, and loads web fonts from Google Fonts (`fonts.googleapis.com`). |
 
 ## 6. Children's Privacy
-Persona Companion does not knowingly collect any personal information from children under the age of 13. Since no personal data is collected or transmitted, our app complies with COPPA and Google Play Family Policies.
+Persona Companion does not knowingly collect personal information from children under 13. Because no personal data is collected or transmitted, the app complies with COPPA and Google Play Families Policy requirements.
 
----
+## 7. Disclaimer, Changes & Contact
+Persona Companion is a fan-made reference tool and is not affiliated with, endorsed by, or sponsored by ATLUS or SEGA. Persona, Persona 3, Persona 4, and Persona 5 are trademarks of ATLUS Co., Ltd. and SEGA Corporation.
 
-## 7. Legal Disclaimer
-Persona Companion is a fan-made reference tool and is not affiliated with, endorsed, sponsored, or specifically approved by ATLUS or SEGA. Persona, Persona 3, Persona 4, and Persona 5 are trademarks and/or registered trademarks of ATLUS Co., Ltd. and SEGA Corporation.
-
----
-
-## 8. Contact Information
-If you have questions or suggestions regarding this Privacy Policy, please reach out via GitHub Issues at:  
-[https://github.com/Sentovibes/persona-companion-app](https://github.com/Sentovibes/persona-companion-app)
+If this policy changes in a future release, the updated version will be published here with a new effective date. For questions or privacy requests, open an issue on GitHub at [github.com/Sentovibes/persona-companion-app](https://github.com/Sentovibes/persona-companion-app).
